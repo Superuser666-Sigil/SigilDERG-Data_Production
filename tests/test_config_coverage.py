@@ -10,19 +10,19 @@ def test_crate_metadata_to_dict():
     """Test CrateMetadata.to_dict method (line 62 coverage)"""
     metadata = CrateMetadata(
         name="test-crate",
-        version="1.0.0", 
+        version="1.0.0",
         description="A test crate",
         repository="https://github.com/test/crate",
         keywords=["test", "crate"],
         categories=["testing"],
         readme="# Test Crate\nThis is a test.",
         downloads=1000,
-        github_stars=50
+        github_stars=50,
     )
-    
+
     # Call the to_dict method to cover line 62
     metadata_dict = metadata.to_dict()
-    
+
     # Verify the result is a dictionary with expected keys
     assert isinstance(metadata_dict, dict)
     assert metadata_dict["name"] == "test-crate"
@@ -45,11 +45,11 @@ def test_crate_metadata_to_dict_with_defaults():
         keywords=[],
         categories=[],
         readme="",
-        downloads=0
+        downloads=0,
     )
-    
+
     metadata_dict = metadata.to_dict()
-    
+
     # Check that default values are properly serialized
     assert isinstance(metadata_dict, dict)
     assert metadata_dict["github_stars"] == 0  # default value

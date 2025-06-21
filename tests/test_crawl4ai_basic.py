@@ -4,9 +4,10 @@ Simple test to verify Crawl4AI is working correctly.
 Rule Zero compliant validation before proceeding with complex tests.
 """
 
-import pytest
 import sys
 from pathlib import Path
+
+import pytest
 
 # Add the project root to Python path for imports
 project_root = Path(__file__).parent.parent
@@ -19,6 +20,7 @@ def test_crawl4ai_import():
     """Test that Crawl4AI can be imported without errors"""
     try:
         from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
+
         assert AsyncWebCrawler is not None
         assert BrowserConfig is not None
         assert CrawlerRunConfig is not None
@@ -33,22 +35,18 @@ async def test_crawl4ai_basic_functionality():
         from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
 
         # Configure browser for headless operation
-        browser_config = BrowserConfig(
-            headless=True,
-            browser_type="chromium"
-        )
+        browser_config = BrowserConfig(headless=True, browser_type="chromium")
 
         # Configure crawler
         crawler_config = CrawlerRunConfig(
             word_count_threshold=10,
-            screenshot=False  # Disable screenshot for faster test
+            screenshot=False,  # Disable screenshot for faster test
         )
 
         # Test actual crawling
         async with AsyncWebCrawler(config=browser_config) as crawler:
             result = await crawler.arun(
-                url="https://example.com",
-                config=crawler_config
+                url="https://example.com", config=crawler_config
             )
 
             # Validate results
@@ -56,8 +54,10 @@ async def test_crawl4ai_basic_functionality():
             assert result.success is True
             assert result.markdown is not None
             assert len(result.markdown) > 0
-            domain_check = ("Example Domain" in result.markdown or
-                            "example" in result.markdown.lower())
+            domain_check = (
+                "Example Domain" in result.markdown
+                or "example" in result.markdown.lower()
+            )
             assert domain_check
 
     except Exception as e:

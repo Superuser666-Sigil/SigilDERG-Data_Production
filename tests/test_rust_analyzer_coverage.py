@@ -26,7 +26,7 @@ def test_analyze_rust_content_whitespace_only():
     # This should NOT trigger the empty case since it has content
     assert result["loc"] == 2  # 2 lines (corrected from test output)
     assert "functions" in result
-    assert "types" in result  
+    assert "types" in result
     assert "traits" in result
 
 

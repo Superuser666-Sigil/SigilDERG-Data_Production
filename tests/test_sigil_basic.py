@@ -2,9 +2,10 @@
 Simple test to verify pytest works with sigil_compliant_analyzer
 """
 
-from sigil_compliant_analyzer import TrustVerdict, SacredChainTrace, CanonEntry
 import sys
 from pathlib import Path
+
+from sigil_compliant_analyzer import CanonEntry, SacredChainTrace, TrustVerdict
 
 # Add the project root to Python path for imports
 project_root = Path(__file__).parent.parent
@@ -28,7 +29,7 @@ def test_sacred_chain_trace_basic():
         irl_score=8.0,
         execution_id="test",
         timestamp="2024-01-01T00:00:00Z",
-        canon_version="1.0"
+        canon_version="1.0",
     )
     assert trace.input_data == "test"
 
@@ -40,7 +41,7 @@ def test_canon_entry_basic():
         version="1.0",
         authority_level=5,
         content_hash="hash",
-        last_validated="2024-01-01T00:00:00Z"
+        last_validated="2024-01-01T00:00:00Z",
     )
     assert entry.source == "test"
     assert entry.is_valid() is True

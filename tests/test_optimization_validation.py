@@ -2,8 +2,8 @@
 """
 Test script to validate the code optimization and atomic unit separation
 """
-import sys
 import os
+import sys
 
 # Add the workspace to the path
 sys.path.append(os.path.dirname(__file__))
@@ -37,8 +37,7 @@ def test_atomic_utilities():
         }
         """
 
-        content_analysis = RustCodeAnalyzer.analyze_rust_content(
-            test_rust_code)
+        content_analysis = RustCodeAnalyzer.analyze_rust_content(test_rust_code)
         assert content_analysis["loc"] > 0
         assert "main" in content_analysis["functions"]
         assert "MyStruct" in content_analysis["types"]
@@ -50,7 +49,8 @@ def test_atomic_utilities():
             "src/main.rs",
             "tests/test.rs",
             "examples/example.rs",
-            "benches/bench.rs"]
+            "benches/bench.rs",
+        ]
         structure = RustCodeAnalyzer.detect_project_structure(test_files)
         assert structure["has_tests"]
         assert structure["has_examples"]
@@ -59,7 +59,8 @@ def test_atomic_utilities():
 
         # Test metrics aggregation
         aggregated = RustCodeAnalyzer.aggregate_metrics(
-            metrics, content_analysis, structure)
+            metrics, content_analysis, structure
+        )
         assert aggregated["loc"] == content_analysis["loc"]
         assert aggregated["has_tests"]
         print("✅ RustCodeAnalyzer.aggregate_metrics() works")
@@ -77,7 +78,8 @@ def test_atomic_utilities():
 
         # Test GitHub repo info extraction
         repo_info = HTTPClientUtils.extract_github_repo_info(
-            "https://github.com/serde-rs/serde")
+            "https://github.com/serde-rs/serde"
+        )
         assert repo_info == ("serde-rs", "serde")
         print("✅ HTTPClientUtils.extract_github_repo_info() works")
 
@@ -118,9 +120,7 @@ def test_atomic_utilities():
         sections = MetadataExtractor.extract_readme_sections(test_readme)
         # Accept 'intro' as a valid section if no explicit header is present
         assert (
-            "my_crate" in sections
-            or "My Crate" in sections
-            or "intro" in sections
+            "my_crate" in sections or "My Crate" in sections or "intro" in sections
         ), f"Expected section 'my_crate', 'My Crate', or 'intro' in {sections.keys()}"
         print("✅ MetadataExtractor.extract_readme_sections() works")
 
@@ -146,8 +146,8 @@ def test_original_functionality():
     print("\n=== Testing Original Functionality Preserved ===")
     try:
         # Import the main components
-        from rust_crate_pipeline.config import PipelineConfig
         from rust_crate_pipeline.analysis import SourceAnalyzer
+        from rust_crate_pipeline.config import PipelineConfig
 
         # Test that the refactored methods still work
         _ = PipelineConfig()
@@ -157,9 +157,9 @@ def test_original_functionality():
 
         # We can't test the actual tarball parsing without a real tarball,
         # but we can test that the methods exist and are callable
-        assert hasattr(SourceAnalyzer, 'analyze_crate_tarball')
-        assert hasattr(SourceAnalyzer, 'analyze_github_tarball')
-        assert hasattr(SourceAnalyzer, 'analyze_local_directory')
+        assert hasattr(SourceAnalyzer, "analyze_crate_tarball")
+        assert hasattr(SourceAnalyzer, "analyze_github_tarball")
+        assert hasattr(SourceAnalyzer, "analyze_local_directory")
         print("✅ SourceAnalyzer methods are still available")
     except ImportError as e:
         print(f"❌ Required module missing: {e}")

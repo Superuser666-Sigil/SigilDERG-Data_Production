@@ -607,3 +607,44 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Ready to analyze the Rust ecosystem! 🦀✨
 
 📦 **Get started today:** [Install from PyPI](https://pypi.org/project/rust-crate-pipeline/)
+
+## 🛡️ Rule Zero Validation & Checkpointing (2025-06-21)
+
+This project enforces Rule Zero rigor for all code and data changes. The following validation and checkpointing process was performed on **2025-06-21**:
+
+- **DB Hash Validation:**
+  - The canonical SQLite DB (`sigil_rag_cache.db`) was validated against its SHA256 hash (`sigil_rag_cache.hash`) using the script:
+    ```bash
+    python scripts/validate_db_hash.py --db sigil_rag_cache.db --expected-hash $(cat sigil_rag_cache.hash)
+    ```
+  - The pre-commit hook automatically reads the hash value and validates the DB before every commit.
+- **Environment Metadata:**
+  - Metadata was cached to the DB using `scripts/cache_env_metadata.py` for traceability.
+- **Rule Zero Lookup Table:**
+  - The Rule Zero quick lookup table was generated with `scripts/generate_rule_zero_lookup.py`.
+- **Checkpoint Commit:**
+  - All code, config, and uncommitted changes were committed with the message:
+    > Rule Zero checkpoint: full codebase and config state as of 2025-06-21, including all dev branch uncommitted and untracked changes. Patch saved as rule_zero_checkpoint_devbranch_20250621.patch for traceability.
+  - Patch file: `rule_zero_checkpoint_devbranch_20250621.patch`
+  - Tag: `rule_zero_checkpoint_2025-06-21`
+  - Branch: `dev` (pushed to remote)
+
+**To repeat this process:**
+1. Ensure all changes are staged.
+2. Validate the DB hash:
+   ```bash
+   python scripts/validate_db_hash.py --db sigil_rag_cache.db --expected-hash $(cat sigil_rag_cache.hash)
+   ```
+3. Run environment and lookup scripts:
+   ```bash
+   python scripts/cache_env_metadata.py
+   python scripts/generate_rule_zero_lookup.py
+   ```
+4. Commit and tag:
+   ```bash
+   git commit -am "Rule Zero checkpoint: ..."
+   git tag rule_zero_checkpoint_YYYY-MM-DD
+   git push origin dev --tags
+   ```
+
+This ensures full transparency, traceability, and repeatability in line with Rule Zero principles.

@@ -7,38 +7,42 @@ Tests all aspects of Crawl4AI integration with the Rust Crate Pipeline
 import asyncio
 import os
 import sys
+from typing import Callable, Dict, List, Tuple
 
 # Add the workspace root to Python path for module imports
 workspace_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, workspace_root)
 
 
-def test_enhanced_scraping_initialization():
+def test_enhanced_scraping_initialization() -> bool:
     """Test the enhanced scraping module initialization."""
     print("🧪 Testing Enhanced Scraping Module Initialization...")
     try:
         from enhanced_scraping import CrateDocumentationScraper, EnhancedScraper
+
         print("✅ Enhanced scraping imports successful")
-        
+
         # Initialization should succeed if Crawl4AI is installed
         scraper = EnhancedScraper()
         print("✅ EnhancedScraper initialized successfully.")
-        
+        assert scraper is not None
+
         crate_scraper = CrateDocumentationScraper()
         print("✅ CrateDocumentationScraper initialized successfully.")
-        
+        assert crate_scraper is not None
+
         return True
     except Exception as e:
         print(f"❌ Enhanced Scraping Module initialization failed: {e}")
         return False
 
 
-def test_pipeline_config_integration():
+def test_pipeline_config_integration() -> bool:
     """Test Crawl4AI integration in pipeline configuration."""
     print("\n🧪 Testing Pipeline Configuration Integration...")
     try:
         from rust_crate_pipeline.config import PipelineConfig
-        
+
         # Default config should have Crawl4AI enabled
         config = PipelineConfig()
         assert config.enable_crawl4ai is True
@@ -49,23 +53,23 @@ def test_pipeline_config_integration():
         config = PipelineConfig(crawl4ai_model=model_path)
         assert config.crawl4ai_model == model_path
         print("✅ PipelineConfig with custom Crawl4AI model created.")
-        
+
         return True
     except Exception as e:
         print(f"❌ Pipeline Configuration Integration failed: {e}")
         return False
 
 
-def test_cli_integration():
+def test_cli_integration() -> bool:
     """Test CLI integration with Crawl4AI options."""
     print("\n🧪 Testing CLI Integration...")
     try:
         from rust_crate_pipeline.main import parse_arguments
-        
+
         # Test --disable-crawl4ai flag
-        test_args_disable = ['--disable-crawl4ai', '--limit', '1']
+        test_args_disable = ["--disable-crawl4ai", "--limit", "1"]
         original_argv = sys.argv
-        sys.argv = ['main.py'] + test_args_disable
+        sys.argv = ["main.py"] + test_args_disable
         try:
             args = parse_arguments()
             assert args.disable_crawl4ai is True
@@ -75,34 +79,36 @@ def test_cli_integration():
 
         # Test --crawl4ai-model argument
         model_path = "/another/fake/model.gguf"
-        test_args_model = ['--crawl4ai-model', model_path, '--limit', '1']
-        sys.argv = ['main.py'] + test_args_model
+        test_args_model = ["--crawl4ai-model", model_path, "--limit", "1"]
+        sys.argv = ["main.py"] + test_args_model
         try:
             args = parse_arguments()
             assert args.crawl4ai_model == model_path
             print("✅ CLI parsing for --crawl4ai-model successful.")
         finally:
             sys.argv = original_argv
-            
+
         return True
     except Exception as e:
         print(f"❌ CLI Integration failed: {e}")
         return False
 
 
-async def test_async_scraping_functionality():
+async def test_async_scraping_functionality() -> bool:
     """Test async scraping functionality with a live URL."""
     print("\n🧪 Testing Async Scraping Functionality...")
-    # This test requires a network connection and a valid GGUF model path
-    # It may be skipped in certain CI environments
-    model_path = os.path.expanduser("~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf")
+    # This test requires a network connection and a valid GGUF model path.
+    # It may be skipped in certain CI environments.
+    model_path = os.path.expanduser(
+        "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
+    )
     if not os.path.exists(model_path):
         print("⚠️  SKIPPING: GGUF model not found at", model_path)
-        return True # Skip test if model is not present
+        return True  # Skip test if model is not present
 
     try:
         from enhanced_scraping import EnhancedScraper, EnhancedScrapingResult
-        
+
         # Use a well-known, stable URL for testing
         url = "https://docs.rs/serde/latest/serde/"
         print(f"Scraping URL: {url}")
@@ -128,19 +134,19 @@ async def test_async_scraping_functionality():
         return False
 
 
-def main():
+def main() -> bool:
     """Run all integration tests."""
     print("🚀 Crawl4AI Integration Test Suite")
     print("=" * 50)
 
     # Define synchronous tests
-    sync_tests = [
+    sync_tests: List[Tuple[str, Callable[[], bool]]] = [
         ("Enhanced Scraping Initialization", test_enhanced_scraping_initialization),
         ("Pipeline Configuration Integration", test_pipeline_config_integration),
         ("CLI Integration", test_cli_integration),
     ]
 
-    results = {}
+    results: Dict[str, bool] = {}
     all_passed = True
 
     # Run synchronous tests
@@ -188,4 +194,5 @@ def main():
 
 if __name__ == "__main__":
     success = main()
-    sys.exit(0 if success else 1)
+    if not success:
+        sys.exit(1)

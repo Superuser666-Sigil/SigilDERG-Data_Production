@@ -25,6 +25,7 @@ def mock_init(self, config):
 # Patch the LLMEnricher temporarily
 try:
     from rust_crate_pipeline.ai_processing import LLMEnricher
+
     original_init = LLMEnricher.__init__
     LLMEnricher.__init__ = mock_init
 
@@ -55,7 +56,8 @@ try:
                 len(crates) -
                 len(ml_crates)} crates ({
                 100 -
-                ml_percentage:.1f}%)")
+                ml_percentage:.1f}%)"
+        )
         print(f"🚀 Balanced dataset ready! {len(crates)} total crates")
 
 finally:

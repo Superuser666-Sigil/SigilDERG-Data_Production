@@ -3,9 +3,10 @@ Simple integration test and demonstration for Crawl4AI in both pipelines
 """
 
 import logging
-import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+import sys
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Configure minimal logging
 logging.basicConfig(level=logging.WARNING)
@@ -18,6 +19,7 @@ def test_enhanced_scraping_demo():
     """Test Enhanced Scraping Module demo"""
     try:
         from enhanced_scraping import EnhancedScraper
+
         scraper = EnhancedScraper()  # Correct constructor - no enable_crawl4ai param
         print("   ✅ Module imported and initialized (Crawl4AI: enabled by default)")
         assert scraper is not None
@@ -40,9 +42,10 @@ test_enhanced_scraping_demo()
 print("\n⚙️  2. Testing Configuration with Crawl4AI...")
 try:
     from rust_crate_pipeline.config import PipelineConfig
+
     config = PipelineConfig(
         enable_crawl4ai=True,
-        crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
+        crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
     )
     print("   ✅ Config created:")
     print(f"      - Enable Crawl4AI: {config.enable_crawl4ai}")
@@ -53,18 +56,21 @@ except Exception as e:
 # Test 3: Standard Pipeline Integration (Skip AI for testing)
 print("\n🔧 3. Testing Standard Pipeline Integration...")
 try:
-    from rust_crate_pipeline.config import PipelineConfig
+    import os
+
     # Import only the necessary components to avoid LLM model loading
     import sys
-    import os
+
+    from rust_crate_pipeline.config import PipelineConfig
+
     sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
     # Test just the enhanced scraper integration
     from enhanced_scraping import CrateDocumentationScraper
+
     config = PipelineConfig(
-        enable_crawl4ai=True,
-        model_path="dummy_path"  # Won't be used in this test
-    )      # Test the enhanced scraper directly
+        enable_crawl4ai=True, model_path="dummy_path"  # Won't be used in this test
+    )  # Test the enhanced scraper directly
     enhanced_scraper = CrateDocumentationScraper()  # Correct constructor
     enhanced_available = True  # It was created successfully
     print("   ✅ Standard pipeline components initialized:")
@@ -80,8 +86,7 @@ try:
     from sigil_enhanced_pipeline import SigilCompliantPipeline
 
     config = PipelineConfig(
-        enable_crawl4ai=True,
-        model_path="dummy_path"  # Won't be used in this test
+        enable_crawl4ai=True, model_path="dummy_path"  # Won't be used in this test
     )
     pipeline = SigilCompliantPipeline(config, skip_ai=True, limit=1)
     enhanced_available = pipeline.enhanced_scraper is not None
@@ -94,9 +99,13 @@ except Exception as e:
 print("\n💻 5. Testing CLI Integration...")
 try:
     import subprocess
-    result = subprocess.run([
-        sys.executable, "-m", "rust_crate_pipeline.main", "--help"
-    ], capture_output=True, text=True, cwd=os.getcwd())
+
+    result = subprocess.run(
+        [sys.executable, "-m", "rust_crate_pipeline.main", "--help"],
+        capture_output=True,
+        text=True,
+        cwd=os.getcwd(),
+    )
 
     if "--enable-crawl4ai" in result.stdout:
         print("   ✅ CLI integration successful:")
@@ -123,8 +132,10 @@ print("   Standard Pipeline with Crawl4AI:")
 print("   python -m rust_crate_pipeline.main --enable-crawl4ai --limit 5")
 print()
 print("   Sigil Pipeline with Crawl4AI:")
-sigil_cmd = ("   python -m rust_crate_pipeline.main --enable-sigil-protocol "
-             "--enable-crawl4ai --skip-ai --limit 3")
+sigil_cmd = (
+    "   python -m rust_crate_pipeline.main --enable-sigil-protocol "
+    "--enable-crawl4ai --skip-ai --limit 3"
+)
 print(sigil_cmd)
 print()
 print("   Disable Crawl4AI:")

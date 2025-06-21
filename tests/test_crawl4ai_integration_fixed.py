@@ -4,38 +4,46 @@ Comprehensive Crawl4AI Integration Test Suite
 Tests all aspects of Crawl4AI integration with the Rust Crate Pipeline
 """
 
-import sys
-import os
 import asyncio
+import os
+import sys
 
 # Add the workspace root to Python path for module imports
 workspace_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, workspace_root)
+
 
 def test_enhanced_scraping():
     """Test the enhanced scraping module"""
     print("🧪 Testing Enhanced Scraping Module...")
     try:
         from enhanced_scraping import CrateDocumentationScraper, EnhancedScraper
+
         print("✅ Enhanced scraping imports successful")
         scraper = EnhancedScraper(enable_crawl4ai=True)
-        print(f"✅ Enhanced scraper initialized (Crawl4AI enabled: {scraper.enable_crawl4ai})")
+        print(
+            f"✅ Enhanced scraper initialized (Crawl4AI enabled: {scraper.enable_crawl4ai})"
+        )
         crate_scraper = CrateDocumentationScraper(enable_crawl4ai=True)
+        assert crate_scraper is not None
         print("✅ Crate documentation scraper initialized")
         return True
     except Exception as e:
         print(f"❌ Enhanced Scraping Module failed with exception: {e}")
         return False
 
+
 def test_standard_pipeline_integration():
     """Test Crawl4AI integration in standard pipeline"""
     print("\n🧪 Testing Standard Pipeline Integration...")
     try:
         from rust_crate_pipeline.config import PipelineConfig
+
         config = PipelineConfig(
             enable_crawl4ai=True,
-            crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
+            crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
         )
+        assert config is not None
         print("✅ PipelineConfig with Crawl4AI created")
         print("✅ Standard pipeline configuration successful")
         return True
@@ -43,15 +51,18 @@ def test_standard_pipeline_integration():
         print(f"❌ Standard Pipeline Integration failed with exception: {e}")
         return False
 
+
 def test_sigil_pipeline_integration():
     """Test Crawl4AI integration in Sigil pipeline"""
     print("\n🧪 Testing Sigil Pipeline Integration...")
     try:
         from rust_crate_pipeline.config import PipelineConfig
+
         config = PipelineConfig(
             enable_crawl4ai=True,
-            crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
+            crawl4ai_model="~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
         )
+        assert config is not None
         print("✅ PipelineConfig with Crawl4AI created")
         print("✅ Sigil pipeline configuration successful")
         return True
@@ -59,20 +70,22 @@ def test_sigil_pipeline_integration():
         print(f"❌ Sigil Pipeline Integration failed with exception: {e}")
         return False
 
+
 def test_cli_integration():
     """Test CLI integration with Crawl4AI options"""
     print("\n🧪 Testing CLI Integration...")
     try:
         from rust_crate_pipeline.main import parse_arguments
+
         test_args = [
-            '--enable-crawl4ai',
-            '--crawl4ai-model',
-            '~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf',
-            '--limit',
-            '1'
+            "--enable-crawl4ai",
+            "--crawl4ai-model",
+            "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf",
+            "--limit",
+            "1",
         ]
         original_argv = sys.argv
-        sys.argv = ['main.py'] + test_args
+        sys.argv = ["main.py"] + test_args
         try:
             args = parse_arguments()
             print("✅ CLI parsing successful:")
@@ -86,15 +99,17 @@ def test_cli_integration():
         print(f"❌ CLI Integration failed with exception: {e}")
         return False
 
+
 async def test_async_functionality():
     """Test async functionality with basic scraping"""
     try:
         from enhanced_scraping import EnhancedScraper
-        scraper = EnhancedScraper(enable_crawl4ai=False)  # Use basic scraping for testing
-        
+
+        scraper = EnhancedScraper(enable_crawl4ai=False)  # Use basic scraping
+
         # Test with a simple public URL using the correct method
         result = await scraper.scrape_documentation("https://httpbin.org/html")
-        
+
         # Just verify that we got some result back without errors
         print("✅ Async scraping successful:")
         print("   - URL: https://httpbin.org/html")
@@ -104,6 +119,7 @@ async def test_async_functionality():
     except Exception as e:
         print(f"❌ Async Functionality failed with exception: {e}")
         return False
+
 
 def main():
     """Run all integration tests"""
@@ -153,14 +169,22 @@ def main():
     if passed == total:
         print("🎉 All tests passed! Crawl4AI integration is successful!")
         print("\n📋 Ready for use:")
-        print("   - Standard Pipeline: python -m rust_crate_pipeline --enable-crawl4ai")
-        print("   - Sigil Pipeline: python -m rust_crate_pipeline --enable-sigil-protocol --enable-crawl4ai")
-        print("   - Disable Crawl4AI: python -m rust_crate_pipeline --disable-crawl4ai")
+        print(
+            "   - Standard Pipeline: " "python -m rust_crate_pipeline --enable-crawl4ai"
+        )
+        print(
+            "   - Sigil Pipeline: "
+            "python -m rust_crate_pipeline "
+            "--enable-sigil-protocol --enable-crawl4ai"
+        )
+        print(
+            "   - Disable Crawl4AI: " "python -m rust_crate_pipeline --disable-crawl4ai"
+        )
     else:
         print("⚠️  Some tests failed. Review the errors above.")
 
     return passed == total
 
+
 if __name__ == "__main__":
     success = main()
-    sys.exit(0 if success else 1)

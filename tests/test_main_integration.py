@@ -3,8 +3,8 @@
 Minimal test to verify Sigil pipeline integration works in the main pipeline
 """
 
-import sys
 import os
+import sys
 import tempfile
 
 # Add project to path
@@ -30,7 +30,7 @@ def test_pipeline_integration():
                 config,
                 output_dir=temp_dir,
                 limit=1,
-                skip_ai=True  # Ensure model is not loaded
+                skip_ai=True,  # Ensure model is not loaded
             )
 
             print("✅ Sigil pipeline created with main config")
@@ -41,8 +41,9 @@ def test_pipeline_integration():
             # Test that it can run
             result = sigil_pipeline.run()
 
-            assert isinstance(result, tuple) and len(
-                result) == 2, "Sigil pipeline return type differs from expected"
+            assert (
+                isinstance(result, tuple) and len(result) == 2
+            ), "Sigil pipeline return type differs from expected"
 
             print("✅ Sigil pipeline executed successfully")
             print(f"   - Processed {len(result[0])} crates")
@@ -59,6 +60,7 @@ def test_pipeline_integration():
     except Exception as e:
         print(f"❌ Integration test failed: {e}")
         import traceback
+
         traceback.print_exc()
         assert False, f"Unexpected error: {e}"
 
@@ -80,10 +82,11 @@ def test_compatibility_interface():
             # standard_pipeline = CrateDataPipeline(config)  # Commented out to avoid
             # model loading
             sigil_pipeline = SigilCompliantPipeline(
-                config, output_dir=temp_dir, skip_ai=True)
+                config, output_dir=temp_dir, skip_ai=True
+            )
 
-            essential_methods = ['run']
-            essential_attributes = ['config', 'crates']
+            essential_methods = ["run"]
+            essential_attributes = ["config", "crates"]
 
             # Only test Sigil pipeline interface to avoid model loading
             for method in essential_methods:
@@ -141,9 +144,9 @@ def test_cli_argument_parsing():
                 args = parse_arguments()
                 print(f"✅ Test case {i + 1}: {' '.join(test_args)}")
                 print(
-                    f"   - Enable Sigil: {getattr(args, 'enable_sigil_protocol', False)}")
-                print(
-                    f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}")
+                    f"   - Enable Sigil: {getattr(args, 'enable_sigil_protocol', False)}"
+                )
+                print(f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}")
                 print(f"   - Skip AI: {getattr(args, 'skip_ai', False)}")
                 print(f"   - Limit: {getattr(args, 'limit', 'None')}")
 

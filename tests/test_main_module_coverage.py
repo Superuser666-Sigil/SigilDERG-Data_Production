@@ -3,9 +3,9 @@
 Test for rust_crate_pipeline.__main__ to achieve 100% coverage
 """
 
+import os
 import subprocess
 import sys
-import os
 
 
 def test_main_module_entry_point():
@@ -17,13 +17,13 @@ def test_main_module_entry_point():
         cwd=os.path.dirname(os.path.dirname(__file__)),
         capture_output=True,
         text=True,
-        timeout=10
+        timeout=10,
     )
-    
+
     # Should either succeed or fail gracefully (not crash)
     # The important thing is that the entry point is executed
     assert result.returncode in [0, 1, 2]  # Various help/error codes are OK
-    
+
     # If it succeeds, should contain help text
     if result.returncode == 0:
         assert "usage:" in result.stdout.lower() or "help" in result.stdout.lower()
@@ -36,10 +36,10 @@ def test_main_module_version():
         cwd=os.path.dirname(os.path.dirname(__file__)),
         capture_output=True,
         text=True,
-        timeout=10
+        timeout=10,
     )
-    
-    # Should either succeed or show some version info  
+
+    # Should either succeed or show some version info
     # The goal is to execute the __main__.py entry point
     assert result.returncode in [0, 1, 2]
 

@@ -9,7 +9,8 @@ def test_logging():
 
     try:
         from rust_crate_pipeline.main import configure_logging
-        configure_logging('INFO')
+
+        configure_logging("INFO")
 
         import logging
         import os
@@ -21,8 +22,11 @@ def test_logging():
         logging.debug("🐛 DEBUG message (may not appear in console)")
 
         # Check if log file was created
-        log_files = [f for f in os.listdir('.') if f.startswith(
-            'crate_enrichment_') and f.endswith('.log')]
+        log_files = [
+            f
+            for f in os.listdir(".")
+            if f.startswith("crate_enrichment_") and f.endswith(".log")
+        ]
 
         assert log_files, "No log file found - logging setup failed"
 
@@ -38,7 +42,7 @@ def test_logging():
 
         # Show last few lines of log file
         print("\n📖 Last few lines of log file:")
-        with open(latest_log, 'r', encoding='utf-8') as f:
+        with open(latest_log, "r", encoding="utf-8") as f:
             lines = f.readlines()
             for line in lines[-5:]:
                 print(f"   {line.strip()}")

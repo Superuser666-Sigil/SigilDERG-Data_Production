@@ -1,22 +1,20 @@
 #!/usr/bin/env python3
 """Quick test to verify the balanced crate dataset works correctly."""
 
-import sys
 import os
+import sys
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
 def test_balanced_crates():
     """Test the balanced crate dataset without loading the model."""
     try:
+        from rust_crate_pipeline.config import PipelineConfig
         from rust_crate_pipeline.pipeline import CrateDataPipeline
 
-        class TestConfig:
-            def __init__(self):
-                self.n_workers = 4
-                self.batch_size = 10
-
-        config = TestConfig()
+        # Use a real PipelineConfig for type safety
+        config = PipelineConfig(n_workers=4, batch_size=10)
         pipeline = CrateDataPipeline.__new__(CrateDataPipeline)
         pipeline.config = config
 
@@ -30,8 +28,7 @@ def test_balanced_crates():
         assert len(unique_crates) == len(crates), f"Duplicates found: {duplicates}"
         print("   ✅ No duplicates found")
 
-        ml_ai_start = crates.index(
-            "tokenizers") if "tokenizers" in crates else -1
+        ml_ai_start = crates.index("tokenizers") if "tokenizers" in crates else -1
         assert ml_ai_start != -1, "ML/AI section not found"
         ml_crates = crates[ml_ai_start:]
         ml_percentage = (len(ml_crates) / len(crates)) * 100

@@ -4,11 +4,11 @@ Test script to validate Sigil enhanced pipeline integration
 Runs without requiring AI models for development environment testing
 """
 
-import sys
-import os
-import logging
-import tempfile
 import json
+import logging
+import os
+import sys
+import tempfile
 from pathlib import Path
 
 # Add the project root to Python path
@@ -21,11 +21,8 @@ def test_basic_imports():
     print("🔍 Testing imports...")
     try:
         from rust_crate_pipeline.config import PipelineConfig
+
         print("✅ PipelineConfig imported successfully")
-        from sigil_enhanced_pipeline import SigilCompliantPipeline, SigilEnrichedCrate
-        print("✅ Sigil components imported successfully")
-        from rust_crate_pipeline.main import main as pipeline_main
-        print("✅ Main pipeline imported successfully")
     except ImportError as e:
         print(f"❌ Required module missing: {e}")
         assert False, f"Required module missing: {e}"
@@ -43,21 +40,20 @@ def test_sigil_pipeline_initialization():
     try:
         from rust_crate_pipeline.config import PipelineConfig
         from sigil_enhanced_pipeline import SigilCompliantPipeline
+
         config = PipelineConfig()
         import tempfile
+
         with tempfile.TemporaryDirectory() as temp_dir:
             pipeline = SigilCompliantPipeline(
-                config,
-                output_dir=temp_dir,
-                limit=2,
-                skip_ai=True
+                config, output_dir=temp_dir, limit=2, skip_ai=True
             )
             print(
                 f"✅ Pipeline initialized with output_dir: {
-                    pipeline.output_dir}")
+                    pipeline.output_dir}"
+            )
             print(f"✅ Pipeline crate list has {len(pipeline.crates)} crates")
-            print(
-                f"✅ Canon registry has {len(pipeline.canon_registry)} sources")
+            print(f"✅ Canon registry has {len(pipeline.canon_registry)} sources")
     except ImportError as e:
         print(f"❌ Required module missing: {e}")
         assert False, f"Required module missing: {e}"
@@ -84,10 +80,13 @@ def test_basic_crate_processing():
                 config,
                 output_dir=temp_dir,
                 limit=1,  # Just test one crate
-                skip_ai=True
+                skip_ai=True,
             )
 
             # Test basic enriched crate creation
+            # Accessing protected member _create_basic_enriched_crate for integration test purposes.
+            # This is necessary to validate internal crate creation logic not exposed via public API.
+            # If possible, refactor to expose a public test hook or factory method.
             test_crate = pipeline._create_basic_enriched_crate("serde")
 
             print(f"✅ Created basic enriched crate for: {test_crate.name}")
@@ -106,6 +105,7 @@ def test_basic_crate_processing():
     except Exception as e:
         print(f"❌ Failed basic crate processing: {e}")
         import traceback
+
         traceback.print_exc()
         assert False, f"Failed basic crate processing: {e}"
 
@@ -125,7 +125,7 @@ def test_pipeline_run_basic():
                 config,
                 output_dir=temp_dir,
                 limit=2,  # Process 2 crates for testing
-                skip_ai=True
+                skip_ai=True,
             )
 
             # Run the pipeline
@@ -138,14 +138,14 @@ def test_pipeline_run_basic():
             # Check output files
             output_files = list(Path(temp_dir).glob("*.json"))
             if output_files:
-                print(
-                    f"✅ Output files created: {[f.name for f in output_files]}")
+                print(f"✅ Output files created: {[f.name for f in output_files]}")
 
                 # Validate JSON content
-                with open(output_files[0], 'r') as f:
+                with open(output_files[0], "r") as f:
                     data = json.load(f)
                     print(
-                        f"✅ JSON data valid - {data['total_crates']} crates in output")
+                        f"✅ JSON data valid - {data['total_crates']} crates in output"
+                    )
             else:
                 print("⚠️ No output files found")
 
@@ -154,6 +154,7 @@ def test_pipeline_run_basic():
     except Exception as e:
         print(f"❌ Failed pipeline run: {e}")
         import traceback
+
         traceback.print_exc()
         assert False, f"Failed pipeline run: {e}"
 
@@ -167,11 +168,7 @@ def test_cli_integration():
         from rust_crate_pipeline.main import parse_arguments
 
         # Test basic arguments
-        test_args = [
-            "--limit", "1",
-            "--skip-ai",
-            "--enable-sigil-protocol"
-        ]
+        test_args = ["--limit", "1", "--skip-ai", "--enable-sigil-protocol"]
 
         # Mock sys.argv for testing
         original_argv = sys.argv
@@ -187,7 +184,8 @@ def test_cli_integration():
                     getattr(
                         args,
                         'enable_sigil_protocol',
-                        False)}")
+                        False)}"
+            )
 
             assert True, "CLI integration test completed successfully"
 
@@ -214,10 +212,13 @@ def test_mock_sacred_chain():
                 config,
                 output_dir=temp_dir,
                 limit=1,
-                skip_ai=False  # Test compatibility mode
+                skip_ai=False,  # Test compatibility mode
             )
 
             # Test mock Sacred Chain creation
+            # Accessing protected member _create_mock_sacred_chain_crate for integration test purposes.
+            # This is necessary to validate mock Sacred Chain creation logic not exposed via public API.
+            # If possible, refactor to expose a public test hook or factory method.
             mock_crate = pipeline._create_mock_sacred_chain_crate("tokio")
 
             print(f"✅ Mock Sacred Chain created for: {mock_crate.name}")
@@ -234,6 +235,7 @@ def test_mock_sacred_chain():
     except Exception as e:
         print(f"❌ Failed mock Sacred Chain test: {e}")
         import traceback
+
         traceback.print_exc()
         assert False, f"Failed mock Sacred Chain test: {e}"
 
@@ -243,22 +245,23 @@ def test_typing_quick_lookup_access():
     print("\n🔎 Testing Rule Zero typing quick lookup access in Sigil pipeline...")
     from rust_crate_pipeline.config import PipelineConfig
     from sigil_enhanced_pipeline import SigilCompliantPipeline
+
     config = PipelineConfig()
     import tempfile
+
     with tempfile.TemporaryDirectory() as temp_dir:
         pipeline = SigilCompliantPipeline(
-            config,
-            output_dir=temp_dir,
-            limit=1,
-            skip_ai=True
+            config, output_dir=temp_dir, limit=1, skip_ai=True
         )
-        lookup = getattr(pipeline, 'typing_quick_lookup', None)
+        lookup = getattr(pipeline, "typing_quick_lookup", None)
         assert lookup is not None, "Quick lookup should be loaded"
-        assert 'entries' in lookup, "Quick lookup should have 'entries' key"
+        assert "entries" in lookup, "Quick lookup should have 'entries' key"
         print(f"✅ Quick lookup loaded with {len(lookup['entries'])} entries")
         # Check for a known error entry
-        errors = [e['error'] for e in lookup['entries']]
-        assert any('type annotation' in err or 'typing' in err for err in errors), "Should contain type annotation errors"
+        errors = [e["error"] for e in lookup["entries"]]
+        assert any(
+            "type annotation" in err or "typing" in err for err in errors
+        ), "Should contain type annotation errors"
         print("✅ Type annotation error entries present in quick lookup")
 
 
