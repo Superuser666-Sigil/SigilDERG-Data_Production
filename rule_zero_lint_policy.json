@@ -1,0 +1,21 @@
+{
+    "policy_name": "Rule Zero Canonical Lint Policy",
+    "description": "Only E501 (line too long) warnings are permitted to remain if they are the sole remaining flake8 errors after autopep8 (max-line-length=88) and do not affect runtime or maintainability. All other flake8 and all dmypy errors must be resolved.",
+    "enforcement": {
+        "flake8": {
+            "allow_only": ["E501"],
+            "max_line_length": 88,
+            "autopep8_required": true
+        },
+        "dmypy": {
+            "allow_only": [],
+            "all_errors_must_be_resolved": true
+        }
+    },
+    "last_updated": "2025-06-21T00:00:00Z",
+    "enforced_by": [
+        "pre-commit hook",
+        "CI pipeline",
+        "Rule Zero validation scripts"
+    ]
+}

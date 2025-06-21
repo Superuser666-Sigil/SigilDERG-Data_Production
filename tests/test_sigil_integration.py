@@ -164,7 +164,6 @@ def test_cli_integration():
 
     try:
         # Test that the argument parsing works
-        import argparse
         from rust_crate_pipeline.main import parse_arguments
 
         # Test basic arguments
@@ -239,6 +238,30 @@ def test_mock_sacred_chain():
         assert False, f"Failed mock Sacred Chain test: {e}"
 
 
+def test_typing_quick_lookup_access():
+    """Test that the Rule Zero typing quick lookup is loaded and accessible in the Sigil pipeline."""
+    print("\n🔎 Testing Rule Zero typing quick lookup access in Sigil pipeline...")
+    from rust_crate_pipeline.config import PipelineConfig
+    from sigil_enhanced_pipeline import SigilCompliantPipeline
+    config = PipelineConfig()
+    import tempfile
+    with tempfile.TemporaryDirectory() as temp_dir:
+        pipeline = SigilCompliantPipeline(
+            config,
+            output_dir=temp_dir,
+            limit=1,
+            skip_ai=True
+        )
+        lookup = getattr(pipeline, 'typing_quick_lookup', None)
+        assert lookup is not None, "Quick lookup should be loaded"
+        assert 'entries' in lookup, "Quick lookup should have 'entries' key"
+        print(f"✅ Quick lookup loaded with {len(lookup['entries'])} entries")
+        # Check for a known error entry
+        errors = [e['error'] for e in lookup['entries']]
+        assert any('type annotation' in err or 'typing' in err for err in errors), "Should contain type annotation errors"
+        print("✅ Type annotation error entries present in quick lookup")
+
+
 def main():
     """Run all integration tests"""
     print("🧪 Sigil Enhanced Pipeline Integration Tests")
@@ -254,6 +277,7 @@ def main():
         ("Pipeline Run Tests", test_pipeline_run_basic),
         ("CLI Integration Tests", test_cli_integration),
         ("Mock Sacred Chain Tests", test_mock_sacred_chain),
+        ("Typing Quick Lookup Tests", test_typing_quick_lookup_access),
     ]
 
     passed = 0

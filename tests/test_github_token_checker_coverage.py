@@ -10,8 +10,7 @@ import os
 import sys
 import subprocess
 import pytest
-from unittest.mock import patch, Mock, MagicMock
-from typing import Any
+from unittest.mock import patch, Mock
 import requests
 from rust_crate_pipeline.github_token_checker import (
     check_github_token_quick,

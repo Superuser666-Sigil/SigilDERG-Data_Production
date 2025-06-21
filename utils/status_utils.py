@@ -12,7 +12,9 @@ This module provides Rule Zero-aligned status reporting with:
 import sys
 import time
 import platform
-from typing import Optional, Callable, Any, Dict
+from typing import Any
+
+from collections.abc import Callable
 from functools import wraps
 import logging
 
@@ -88,8 +90,8 @@ def with_retry(
     max_attempts: int = 3,
     delay: float = 1.0,
     backoff_factor: float = 2.0,
-    exceptions: tuple = (Exception,)
-) -> Callable:
+    exceptions: tuple[type[BaseException], ...] = (Exception,)
+) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     """
     Decorator for adding retry logic with exponential backoff.
     
@@ -99,65 +101,59 @@ def with_retry(
         backoff_factor: Multiplier for delay on each retry
         exceptions: Tuple of exceptions to catch and retry on
     """
-    def decorator(func: Callable) -> Callable:
+    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
-            last_exception = None
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
+            last_exception: BaseException | None = None
             current_delay = delay
-            
             for attempt in range(max_attempts):
                 try:
                     if attempt > 0:
                         print(f"{status.running} Retry attempt {attempt}/{max_attempts-1} for {func.__name__}")
                         time.sleep(current_delay)
                         current_delay *= backoff_factor
-                    
                     result = func(*args, **kwargs)
                     if attempt > 0:
                         print(f"{status.success} {func.__name__} succeeded on retry {attempt}")
                     return result
-                    
                 except exceptions as e:
                     last_exception = e
                     if attempt < max_attempts - 1:
                         print(f"{status.warning} {func.__name__} failed (attempt {attempt+1}/{max_attempts}): {str(e)}")
                     else:
                         print(f"{status.error} {func.__name__} failed after {max_attempts} attempts: {str(e)}")
-            
             # If we get here, all attempts failed
-            raise last_exception
-        
+            if last_exception is not None:
+                raise last_exception
+            raise Exception("Unknown error in with_retry")
         return wrapper
     return decorator
 
 
-def timed_operation(operation_name: str = "") -> Callable:
+def timed_operation(operation_name: str = "") -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     """
     Decorator for timing operations with clear status indicators.
     
     Args:
         operation_name: Human-readable name for the operation
     """
-    def decorator(func: Callable) -> Callable:
+    def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
-        def wrapper(*args, **kwargs) -> Any:
+        def wrapper(*args: Any, **kwargs: Any) -> Any:
             name = operation_name or func.__name__
             print(f"{status.running} Starting {name}...")
             start_time = time.time()
-            
             try:
                 result = func(*args, **kwargs)
                 end_time = time.time()
                 duration = end_time - start_time
                 print(f"{status.success} {name} completed in {duration:.2f}s")
                 return result
-                
             except Exception as e:
                 end_time = time.time()
                 duration = end_time - start_time
                 print(f"{status.error} {name} failed after {duration:.2f}s: {str(e)}")
                 raise
-        
         return wrapper
     return decorator
 
@@ -165,8 +161,8 @@ def timed_operation(operation_name: str = "") -> Callable:
 def status_report(
     task: str,
     success: bool,
-    duration: Optional[float] = None,
-    details: Optional[str] = None,
+    duration: float | None = None,
+    details: str | None = None,
     level: str = "INFO"
 ) -> None:
     """
@@ -212,7 +208,7 @@ class ProgressTracker:
         self.current_step = 0
         self.operation_name = operation_name
         self.start_time = time.time()
-        self.step_times = []
+        self.step_times: list[float] = []
     
     def step(self, step_name: str = "") -> None:
         """Mark completion of a step."""
@@ -246,10 +242,10 @@ class ProgressTracker:
 
 
 def safe_execute(
-    func: Callable,
+    func: Callable[..., Any],
     error_message: str = "Operation failed",
     success_message: str = "Operation completed",
-    **kwargs
+    **kwargs: Any
 ) -> tuple[bool, Any]:
     """
     Safely execute a function with error handling and status reporting.
@@ -266,7 +262,7 @@ def safe_execute(
         return False, None
 
 
-def platform_info() -> Dict[str, str]:
+def platform_info() -> dict[str, str]:
     """Get platform information for debugging."""
     return {
         "platform": platform.system(),

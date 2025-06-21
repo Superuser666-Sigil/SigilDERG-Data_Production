@@ -20,6 +20,7 @@ import uuid
 
 from rust_crate_pipeline.config import PipelineConfig, EnrichedCrate
 from rust_crate_pipeline.network import CrateAPIClient, GitHubBatchClient
+from rust_crate_pipeline.utils.file_utils import load_rule_zero_typing_quick_lookup
 
 # Enhanced scraping integration
 try:
@@ -74,6 +75,9 @@ class SigilCompliantPipeline:
         self.github_client = GitHubBatchClient(config)
         self.execution_log: List[Dict[str, Any]] = []
         self.canon_registry = self._initialize_canon_registry()
+
+        # Load Rule Zero typing quick lookup for RAG/compliance
+        self.typing_quick_lookup = load_rule_zero_typing_quick_lookup()
 
         # Initialize enhanced scraping if available
         self.enhanced_scraper = None

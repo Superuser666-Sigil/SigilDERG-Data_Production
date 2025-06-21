@@ -7,7 +7,6 @@ try:
     print("✅ Crawl4AI imported successfully")
     print(f"Version: {crawl4ai.__version__}")
 
-    from crawl4ai import AsyncWebCrawler
 
     print("✅ AsyncWebCrawler imported successfully")
 

@@ -4,7 +4,9 @@ import time
 import logging
 import shutil
 import argparse
-from typing import Dict, Any, TYPE_CHECKING
+import os
+import subprocess
+from typing import Any, TYPE_CHECKING
 
 from .config import PipelineConfig
 from .pipeline import CrateDataPipeline
@@ -225,20 +227,86 @@ def check_disk_space() -> None:
         logging.warning("Low disk space! This may affect performance.")
 
 
+def enforce_rule_zero_reinforcement() -> None:
+    """
+    Enforce Rule Zero rigor by validating the canonical DB hash/signature before pipeline actions.
+    Allows override for local dev, but enforces in CI/prod. Logs all events for traceability.
+    """
+    # Only enforce in CI/prod unless explicitly enabled
+    enforce = os.environ.get("ENFORCE_RULE_ZERO", "false").lower() == "true" or \
+        os.environ.get("CI", "false").lower() == "true" or \
+        os.environ.get("PRODUCTION", "false").lower() == "true"
+    if not enforce:
+        logging.info("Rule Zero DB hash/signature check skipped (dev mode or override)")
+        return
+
+    # Detect project root robustly (works in subdirs, CI, etc.)
+    try:
+        result = subprocess.run(["git", "rev-parse", "--show-toplevel"],
+                                capture_output=True, text=True, check=True)
+        project_root = result.stdout.strip()
+    except Exception as e:
+        logging.critical(f"Failed to detect project root for Rule Zero validation: {e}")
+        sys.exit(1)
+
+    db_path = os.path.join(project_root, "sigil_rag_cache.db")
+    hash_path = os.path.join(project_root, "sigil_rag_cache.hash")
+
+    # Validate DB hash/signature using the provided script with explicit arguments
+    try:
+        logging.info("Validating Rule Zero DB hash/signature...")
+        result = subprocess.run([
+            sys.executable, os.path.join(project_root, "scripts", "validate_db_hash.py"),
+            "--db", db_path,
+            "--expected-hash", hash_path
+        ], capture_output=True, text=True, check=False)
+        if result.returncode != 0:
+            logging.error(
+                f"Rule Zero DB hash/signature validation failed: {result.stdout}\n{result.stderr}")
+            # Allow manual override with justification
+            if os.environ.get("RULE_ZERO_OVERRIDE", ""):
+                logging.warning(
+                    "Manual override of Rule Zero DB hash/signature validation enabled.")
+                logging.warning(
+                    f"Override justification: {
+                        os.environ.get('RULE_ZERO_OVERRIDE')}")
+            else:
+                logging.critical(
+                    "Rule Zero DB hash/signature validation failed and no override provided. Exiting.")
+                sys.exit(1)
+        else:
+            logging.info("Rule Zero DB hash/signature validation successful.")
+    except Exception as e:
+        logging.critical(
+            f"Exception during Rule Zero DB hash/signature validation: {e}")
+        sys.exit(1)
+
+    # Log environment metadata for traceability
+    try:
+        subprocess.run([
+            sys.executable, os.path.join(project_root, "scripts", "cache_env_metadata.py")
+        ], capture_output=True, text=True, check=False)
+    except Exception as e:
+        logging.warning(f"Failed to cache environment metadata: {e}")
+
+
 def main() -> None:
+    # Enforce Rule Zero rigor before any pipeline action
+    enforce_rule_zero_reinforcement()
+
     # Setup production environment first for optimal logging
     logging.debug("Starting main() function - setting up production environment")
-    prod_config: Dict[str, Any] = setup_production_environment()
+    prod_config: dict[str, Any] = setup_production_environment()
     logging.debug(f"Production environment setup complete: {bool(prod_config)}")
 
     logging.debug("Parsing command line arguments")
     args = parse_arguments()
     logging.debug(f"Arguments parsed: {vars(args)}")
-    
+
     logging.debug(f"Configuring logging with level: {args.log_level}")
     configure_logging(args.log_level)
     logging.info("Logging configuration complete")
-    
+
     logging.debug("Checking disk space")
     check_disk_space()
     logging.debug("Disk space check complete")
@@ -253,7 +321,7 @@ def main() -> None:
     try:
         # Create config from command line arguments
         logging.debug("Building configuration from arguments")
-        config_kwargs: Dict[str, Any] = {}
+        config_kwargs: dict[str, Any] = {}
 
         # Apply production optimizations if available
         if prod_config:
@@ -279,13 +347,13 @@ def main() -> None:
         if args.checkpoint_interval:
             logging.debug(f"Setting checkpoint_interval to {args.checkpoint_interval}")
             config_kwargs["checkpoint_interval"] = args.checkpoint_interval
-            
+
         # Load config file if provided
         if args.config_file:
             logging.debug(f"Loading config file: {args.config_file}")
             import json
 
-            with open(args.config_file, "r") as f:
+            with open(args.config_file) as f:
                 file_config = json.load(f)
                 logging.debug(f"Config file loaded: {file_config}")
                 config_kwargs.update(file_config)  # type: ignore
@@ -315,7 +383,7 @@ def main() -> None:
 
         # Pass additional arguments to pipeline
         logging.debug("Building pipeline kwargs")
-        pipeline_kwargs: Dict[str, Any] = {}
+        pipeline_kwargs: dict[str, Any] = {}
         if args.output_dir:
             logging.debug(f"Setting output_dir to {args.output_dir}")
             pipeline_kwargs["output_dir"] = args.output_dir
@@ -337,8 +405,10 @@ def main() -> None:
         # Sigil Protocol integration - handle pipeline creation properly
         if hasattr(args, "enable_sigil_protocol") and args.enable_sigil_protocol:
             logging.info("Sigil Protocol mode requested")
-            logging.debug(f"Sigil available: {_sigil_available}, SigilCompliantPipeline: {SigilCompliantPipeline is not None}")
-            
+            logging.debug(
+                f"Sigil available: {_sigil_available}, SigilCompliantPipeline: {
+                    SigilCompliantPipeline is not None}")
+
             # Import Sigil enhanced pipeline
             if _sigil_available and SigilCompliantPipeline is not None:
                 logging.info("Creating Sigil Protocol compliant pipeline")
@@ -352,7 +422,7 @@ def main() -> None:
                 logging.debug("About to run Sigil pipeline - this is synchronous")
                 result = sigil_pipeline.run()  # type: ignore[misc]
                 logging.debug(f"Sigil pipeline run() returned: {result}")
-                
+
                 if result:
                     logging.info("Sigil pipeline completed successfully")
                 else:
@@ -360,7 +430,7 @@ def main() -> None:
             else:
                 logging.warning("Sigil enhanced pipeline not available")
                 logging.info("Falling back to standard pipeline")
-                
+
                 logging.debug("Creating standard pipeline as Sigil fallback")
                 standard_pipeline = CrateDataPipeline(config)
                 logging.debug("Standard pipeline created, about to run asynchronously")
@@ -372,7 +442,7 @@ def main() -> None:
                     standard_pipeline.run()
                 )  # type: ignore[misc,assignment]
                 logging.debug(f"Standard pipeline asyncio.run() returned: {result}")
-                
+
                 if result:
                     logging.info("Standard pipeline completed successfully")
                 else:
@@ -391,7 +461,7 @@ def main() -> None:
                 standard_pipeline.run()
             )  # type: ignore[misc,assignment]
             logging.debug(f"Standard pipeline asyncio.run() returned: {result}")
-            
+
             if result:
                 logging.info("Standard pipeline completed successfully")
             else:

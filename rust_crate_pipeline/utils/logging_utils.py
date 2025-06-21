@@ -4,11 +4,10 @@ import time
 import psutil
 import logging
 from functools import wraps
-from typing import Optional
 
 
 def configure_logging(
-    log_dir: Optional[str] = None, log_level: int = logging.INFO
+    log_dir: str | None = None, log_level: int = logging.INFO
 ) -> logging.Logger:
     """
     Configure global logging with file and console handlers

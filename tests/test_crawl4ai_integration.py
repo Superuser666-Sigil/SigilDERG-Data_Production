@@ -22,7 +22,7 @@ def test_enhanced_scraping_initialization():
         
         # Initialization should succeed if Crawl4AI is installed
         scraper = EnhancedScraper()
-        print(f"✅ EnhancedScraper initialized successfully.")
+        print("✅ EnhancedScraper initialized successfully.")
         
         crate_scraper = CrateDocumentationScraper()
         print("✅ CrateDocumentationScraper initialized successfully.")

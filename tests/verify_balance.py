@@ -2,7 +2,6 @@
 """Final verification of the balanced crate list"""
 
 # Quick check without duplicate
-import rust_crate_pipeline.pipeline as pipeline_module
 from rust_crate_pipeline.pipeline import CrateDataPipeline
 
 

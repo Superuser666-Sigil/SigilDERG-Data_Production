@@ -31,7 +31,7 @@ keywords = ["rust", "crates", "metadata", "ai", "analysis", "pipeline", "depende
 
 dependencies = [
     "requests>=2.28.0",
-    "requests-cache>=1.0.0",  # Added Rule Zero: ensure caching library is a runtime dependency
+    "requests-cache>=1.0.0",
     "beautifulsoup4>=4.11.0",
     "tqdm>=4.64.0",
     "llama-cpp-python>=0.2.0",
@@ -121,3 +121,7 @@ module = [
     "llama_cpp.*",
 ]
 ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["openai.*"]
+ignore_errors = true

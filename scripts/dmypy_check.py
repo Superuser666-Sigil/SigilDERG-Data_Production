@@ -25,7 +25,7 @@ def run_dmypy_command(args: List[str], timeout: int = 300) -> tuple[int, str, st
     """Run dmypy command with timeout and capture output"""
     try:
         result = subprocess.run(
-            ["python", "-m", "mypy.dmypy"] + args,
+            [sys.executable, "-m", "mypy.dmypy"] + args,
             capture_output=True,
             text=True,
             timeout=timeout

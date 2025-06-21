@@ -6,7 +6,7 @@ import time
 import logging
 import requests
 from bs4 import BeautifulSoup, Tag
-from typing import Any, Dict, List, Optional
+from typing import Any
 from .config import PipelineConfig
 
 # Import utilities
@@ -51,7 +51,7 @@ class GitHubBatchClient:
         except Exception:
             pass
 
-    def get_repo_stats(self, owner: str, repo: str) -> Dict[str, Any]:
+    def get_repo_stats(self, owner: str, repo: str) -> dict[str, Any]:
         """Get repository statistics"""
         try:
             url = f"https://api.github.com/repos/{owner}/{repo}"
@@ -69,12 +69,12 @@ class GitHubBatchClient:
             return {}
 
     def batch_get_repo_stats(
-        self, repo_list: List[str]
-    ) -> Dict[str, Dict[str, Any]]:
+        self, repo_list: list[str]
+    ) -> dict[str, dict[str, Any]]:
         """Get statistics for multiple repositories in a batch"""
         self.check_rate_limit()
 
-        results: Dict[str, Dict[str, Any]] = {}
+        results: dict[str, dict[str, Any]] = {}
         for repo_url in repo_list:
             # Extract owner/repo from URL
             match = re.search(r"github\.com/([^/]+)/([^/\.]+)", repo_url)
@@ -100,7 +100,7 @@ class CrateAPIClient:
         self.session = requests.Session()
         self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.0"})
 
-    def fetch_crate_metadata(self, crate_name: str) -> Optional[Dict[str, Any]]:
+    def fetch_crate_metadata(self, crate_name: str) -> dict[str, Any] | None:
         """Fetch metadata with retry logic"""
         for attempt in range(self.config.max_retries):
             try:
@@ -116,7 +116,7 @@ class CrateAPIClient:
                 time.sleep(wait)
         return None
 
-    def _fetch_metadata(self, crate_name: str) -> Optional[Dict[str, Any]]:
+    def _fetch_metadata(self, crate_name: str) -> dict[str, Any] | None:
         """Enhanced metadata fetching that tries multiple sources"""
         # First try crates.io (primary source)
         try:
@@ -138,7 +138,7 @@ class CrateAPIClient:
                     f"{latest}/dependencies"
                 )
                 deps_response = self.session.get(deps_url)
-                deps: List[Dict[str, Any]] = (
+                deps: list[dict[str, Any]] = (
                     deps_response.json().get("dependencies", [])
                     if deps_response.ok
                     else []
@@ -167,7 +167,7 @@ class CrateAPIClient:
                         owner, repo_name = match.groups()
                         repo_name = repo_name.split(".")[0]  # Handle .git extensions
                         gh_url = f"https://api.github.com/repos/{owner}/{repo_name}"
-                        gh_headers: Dict[str, str] = {}
+                        gh_headers: dict[str, str] = {}
                         if self.config.github_token:
                             gh_headers["Authorization"] = (
                                 f"token {self.config.github_token}"
@@ -203,14 +203,14 @@ class CrateAPIClient:
                                 )
 
                 # Extract code snippets and sections (simplified)
-                code_snippets: List[str] = (
+                code_snippets: list[str] = (
                     []
                 )  # Simplified - would normally extract from readme
-                readme_sections: Dict[str, str] = (
+                readme_sections: dict[str, str] = (
                     {}
                 )  # Simplified - would normally parse sections
 
-                result: Dict[str, Any] = {
+                result: dict[str, Any] = {
                     "name": crate_name,
                     "version": latest,
                     "description": crate_data.get("description", ""),
@@ -251,7 +251,7 @@ class CrateAPIClient:
                 description = desc_elem.text.strip() if desc_elem else ""
 
                 # Find repository link
-                repo_link: Optional[str] = None
+                repo_link: str | None = None
                 for a in soup.select("a"):
                     href = a.get("href")
                     if href and isinstance(href, str) and "github.com" in href:
@@ -290,7 +290,7 @@ class CrateAPIClient:
         try:
             # This is a simplification - GitHub's search API requires
             # authentication
-            gh_search_headers: Dict[str, str] = {}
+            gh_search_headers: dict[str, str] = {}
             if self.config.github_token:
                 gh_search_headers["Authorization"] = (
                     f"token {self.config.github_token}"

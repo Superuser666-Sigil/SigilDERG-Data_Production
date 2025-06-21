@@ -3,7 +3,6 @@
 Additional tests for utils/rust_code_analyzer.py to achieve 100% coverage
 """
 
-import pytest
 from utils.rust_code_analyzer import RustCodeAnalyzer
 
 

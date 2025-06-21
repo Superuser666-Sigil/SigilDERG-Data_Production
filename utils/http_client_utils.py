@@ -6,7 +6,7 @@ import time
 import logging
 import requests
 from requests_cache import CachedSession  # Ensure runtime dependency installed
-from typing import Dict, Optional, Any, List
+from typing import Any
 import re
 
 
@@ -23,8 +23,8 @@ class HTTPClientUtils:
     @staticmethod
     def fetch_with_retry(session: requests.Session,                         url: str,
                          max_retries: int = 3,
-                         headers: Optional[Dict[str, str]] = None
-                         ) -> Optional[requests.Response]:
+                         headers: dict[str, str] | None = None
+                         ) -> requests.Response | None:
         """Fetch URL with exponential backoff retry - atomic unit"""
         for attempt in range(max_retries):
             try:
@@ -50,7 +50,7 @@ class HTTPClientUtils:
         return None
 
     @staticmethod
-    def extract_github_repo_info(repo_url: str) -> Optional[tuple[str, str]]:
+    def extract_github_repo_info(repo_url: str) -> tuple[str, str] | None:
         """Extract owner/repo from GitHub URL - atomic unit"""
         if not repo_url or "github.com" not in repo_url:
             return None
@@ -65,7 +65,7 @@ class HTTPClientUtils:
         return None
 
     @staticmethod
-    def get_github_headers(token: Optional[str] = None) -> Dict[str, str]:
+    def get_github_headers(token: str | None = None) -> dict[str, str]:
         """Get standardized GitHub API headers - atomic unit"""
         headers = {"Accept": "application/vnd.github.v3+json"}
         if token:
@@ -77,7 +77,7 @@ class MetadataExtractor:
     """Atomic unit for extracting metadata from different sources"""
 
     @staticmethod
-    def extract_code_snippets(readme: str) -> List[str]:
+    def extract_code_snippets(readme: str) -> list[str]:
         """Extract Rust code snippets from markdown README - atomic unit"""
         if not readme:
             return []        # Find Rust code blocks
@@ -87,7 +87,7 @@ class MetadataExtractor:
         )
         matches = re.findall(pattern, readme)
 
-        snippets: List[str] = []
+        snippets: list[str] = []
         for code in matches:
             code_str = code.strip('`').strip()
             if len(code_str) > 10:
@@ -96,12 +96,12 @@ class MetadataExtractor:
         return snippets[:5]  # Limit to 5 snippets
 
     @staticmethod
-    def extract_readme_sections(readme: str) -> Dict[str, str]:
+    def extract_readme_sections(readme: str) -> dict[str, str]:
         """Extract sections from README based on markdown headers - atomic unit"""
         if not readme:
             return {}
 
-        sections: Dict[str, str] = {}
+        sections: dict[str, str] = {}
         current_section = "intro"
         current_content: list[str] = []
 
@@ -127,7 +127,7 @@ class MetadataExtractor:
         return sections
 
     @staticmethod
-    def create_empty_metadata() -> Dict[str, Any]:
+    def create_empty_metadata() -> dict[str, Any]:
         """Create standardized empty metadata structure - atomic unit"""
         return {
             "name": "",

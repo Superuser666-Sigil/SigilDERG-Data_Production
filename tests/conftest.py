@@ -5,7 +5,6 @@ Rule Zero-aligned: maximum performance, minimal overhead.
 """
 
 import pytest
-import os
 
 
 def pytest_addoption(parser):

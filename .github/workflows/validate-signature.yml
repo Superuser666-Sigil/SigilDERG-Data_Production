@@ -1,0 +1,30 @@
+# This workflow validates the signature of the SQLite RAG cache using the public key.
+# The private key must be stored in the GitHub repository secrets as SIGIL_SEAL_PRIVATE_KEY.
+
+name: Validate DB Signature
+
+on:
+  push:
+    paths:
+      - '**/sigil_rag_cache.db'
+      - '.github/workflows/validate-signature.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-signature:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate DB signature
+        run: |
+          pip install cryptography
+          python scripts/validate_signature.py \
+            --db sigil_rag_cache.db \
+            --public-key sigil_seal_public.pem

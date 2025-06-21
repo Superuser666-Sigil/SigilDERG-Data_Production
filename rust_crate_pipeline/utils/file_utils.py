@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 from datetime import datetime
-from typing import List, Dict
+from typing import Any
 
 
 def create_output_dir(base_name: str = "crate_data") -> str:
@@ -22,7 +22,7 @@ def create_output_dir(base_name: str = "crate_data") -> str:
     return output_dir
 
 
-def save_checkpoint(data: List[Dict], prefix: str, output_dir: str) -> str:
+def save_checkpoint(data: list[dict], prefix: str, output_dir: str) -> str:
     """
     Save processing checkpoint with status metadata
 
@@ -74,3 +74,23 @@ def disk_space_check(min_free_gb: float = 1.0) -> bool:
         return free_gb >= min_free_gb
     except Exception:
         return True  # Assume OK if check fails
+
+
+def load_rule_zero_typing_quick_lookup(path: str | None = None) -> dict[str, Any]:
+    """
+    Load the Rule Zero Python Typing & PEP8 Quick Lookup Table as a dict.
+
+    Args:
+        path: Optional path to the quick lookup JSON file.
+
+    Returns:
+        Dictionary with quick lookup entries.
+    """
+    if not path:
+        path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../rule_zero_typing_quick_lookup.json'))
+    try:
+        with open(path, encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"Failed to load Rule Zero typing quick lookup: {e}")
+        return {}

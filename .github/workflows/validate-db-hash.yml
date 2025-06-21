@@ -1,0 +1,27 @@
+# This workflow validates the canonical hash of the SQLite RAG cache against a secret value.
+# The canonical hash must be stored in the GitHub repository secrets as SIGIL_RAG_DB_HASH.
+
+name: Validate DB Hash
+
+on:
+  push:
+    paths:
+      - '**/sigil_rag_cache.db'
+      - '.github/workflows/validate-db-hash.yml'
+  workflow_dispatch:
+
+jobs:
+  validate-db-hash:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Compute DB hash and validate
+        run: |
+          python scripts/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "${{ secrets.SIGIL_RAG_DB_HASH }}"

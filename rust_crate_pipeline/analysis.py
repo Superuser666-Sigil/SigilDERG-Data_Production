@@ -5,7 +5,7 @@ import tarfile
 import requests
 import logging
 import tempfile
-from typing import Dict, List, Any
+from typing import Any
 import os
 import sys
 import time
@@ -36,7 +36,7 @@ except ImportError as e:
             )
             self.code_content = code_content
 
-        def analyze(self) -> Dict[str, Any]:
+        def analyze(self) -> dict[str, Any]:
             return {
                 "functions": [],
                 "structs": [],
@@ -47,23 +47,23 @@ except ImportError as e:
             }
 
         @staticmethod
-        def create_empty_metrics() -> Dict[str, Any]:
+        def create_empty_metrics() -> dict[str, Any]:
             return {}
 
         @staticmethod
-        def detect_project_structure(files: List[str]) -> Dict[str, bool]:
+        def detect_project_structure(files: list[str]) -> dict[str, bool]:
             return {}
 
         @staticmethod
-        def analyze_rust_content(content: str) -> Dict[str, Any]:
+        def analyze_rust_content(content: str) -> dict[str, Any]:
             return {}
 
         @staticmethod
         def aggregate_metrics(
-            metrics: Dict[str, Any],
-            content_analysis: Dict[str, Any],
-            structure: Dict[str, bool],
-        ) -> Dict[str, Any]:
+            metrics: dict[str, Any],
+            content_analysis: dict[str, Any],
+            structure: dict[str, bool],
+        ) -> dict[str, Any]:
             return metrics
 
 
@@ -75,7 +75,7 @@ LIB_RS_URL = "https://lib.rs/crates"
 
 class SourceAnalyzer:
     @staticmethod
-    def analyze_crate_source(crate: EnrichedCrate) -> Dict[str, Any]:
+    def analyze_crate_source(crate: EnrichedCrate) -> dict[str, Any]:
         """Orchestrate source analysis from multiple sources."""
         repo_url = crate.repository
 
@@ -120,7 +120,7 @@ class SourceAnalyzer:
         }
 
     @staticmethod
-    def _analyze_tarball_content(content: bytes) -> Dict[str, Any]:
+    def _analyze_tarball_content(content: bytes) -> dict[str, Any]:
         """Shared logic to analyze tarball content from any source."""
         metrics = RustCodeAnalyzer.create_empty_metrics()
         try:
@@ -155,22 +155,22 @@ class SourceAnalyzer:
         return metrics
 
     @staticmethod
-    def analyze_crate_tarball(content: bytes) -> Dict[str, Any]:
+    def analyze_crate_tarball(content: bytes) -> dict[str, Any]:
         """Analyze a .crate tarball from crates.io."""
         return SourceAnalyzer._analyze_tarball_content(content)
 
     @staticmethod
-    def analyze_github_tarball(content: bytes) -> Dict[str, Any]:
+    def analyze_github_tarball(content: bytes) -> dict[str, Any]:
         """Analyze a GitHub tarball."""
         return SourceAnalyzer._analyze_tarball_content(content)
 
     @staticmethod
-    def analyze_local_directory(directory: str) -> Dict[str, Any]:
+    def analyze_local_directory(directory: str) -> dict[str, Any]:
         """Analyze source code from a local directory."""
         metrics = RustCodeAnalyzer.create_empty_metrics()
         try:
-            rust_files: List[str] = []
-            all_paths: List[str] = []
+            rust_files: list[str] = []
+            all_paths: list[str] = []
             for root, dirs, files in os.walk(directory):
                 # Exclude target and .git directories
                 dirs[:] = [d for d in dirs if d not in ["target", ".git"]]
@@ -185,7 +185,7 @@ class SourceAnalyzer:
 
             for file_path in rust_files:
                 try:
-                    with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
+                    with open(file_path, encoding="utf-8", errors="ignore") as f:
                         content = f.read()
                     analysis = RustCodeAnalyzer.analyze_rust_content(content)
                     metrics = RustCodeAnalyzer.aggregate_metrics(
@@ -199,7 +199,7 @@ class SourceAnalyzer:
         return metrics
 
     @staticmethod
-    def analyze_crate_source_from_repo(repo_url: str) -> Dict[str, Any]:
+    def analyze_crate_source_from_repo(repo_url: str) -> dict[str, Any]:
         """Clone and analyze a crate's source code from a repository."""
         with tempfile.TemporaryDirectory() as temp_dir:
             try:
@@ -230,9 +230,9 @@ class SourceAnalyzer:
 
 class SecurityAnalyzer:
     @staticmethod
-    def check_security_metrics(crate: EnrichedCrate) -> Dict[str, Any]:
+    def check_security_metrics(crate: EnrichedCrate) -> dict[str, Any]:
         """Check security metrics for a crate (placeholder)."""
-        security_data: Dict[str, Any] = {
+        security_data: dict[str, Any] = {
             "advisories": [],
             "vulnerability_count": 0,
             "cargo_audit": None,
@@ -246,7 +246,7 @@ class SecurityAnalyzer:
 
 class UserBehaviorAnalyzer:
     @staticmethod
-    def _get_github_headers() -> Dict[str, str]:
+    def _get_github_headers() -> dict[str, str]:
         """Get headers for GitHub API requests, including auth if available."""
         headers = {"Accept": "application/vnd.github.v3+json"}
         if token := os.environ.get("GITHUB_TOKEN"):
@@ -254,9 +254,9 @@ class UserBehaviorAnalyzer:
         return headers
 
     @staticmethod
-    def fetch_user_behavior_data(crate: EnrichedCrate) -> Dict[str, Any]:
+    def fetch_user_behavior_data(crate: EnrichedCrate) -> dict[str, Any]:
         """Fetch user behavior data from GitHub and crates.io."""
-        result: Dict[str, Any] = {
+        result: dict[str, Any] = {
             "issues": [],
             "pull_requests": [],
             "version_adoption": {},
@@ -280,7 +280,7 @@ class UserBehaviorAnalyzer:
 
     @staticmethod
     def _fetch_github_activity(
-        owner: str, repo: str, headers: Dict[str, str], result: Dict[str, Any]
+        owner: str, repo: str, headers: dict[str, str], result: dict[str, Any]
     ) -> None:
         """Fetch issues, PRs, and commit activity from GitHub."""
         try:
@@ -325,7 +325,7 @@ class UserBehaviorAnalyzer:
             logging.warning(f"Error fetching GitHub data for {owner}/{repo}: {e}")
 
     @staticmethod
-    def _fetch_crates_io_versions(crate_name: str, result: Dict[str, Any]) -> None:
+    def _fetch_crates_io_versions(crate_name: str, result: dict[str, Any]) -> None:
         """Fetch version adoption data from crates.io."""
         try:
             versions_url = f"{CRATES_IO_API_URL}/{crate_name}/versions"
@@ -346,10 +346,10 @@ class UserBehaviorAnalyzer:
 
 class DependencyAnalyzer:
     @staticmethod
-    def analyze_dependencies(crates: List[EnrichedCrate]) -> Dict[str, Any]:
+    def analyze_dependencies(crates: list[EnrichedCrate]) -> dict[str, Any]:
         """Analyze dependencies within a given list of crates."""
         crate_names = {crate.name for crate in crates}
-        dependency_graph: Dict[str, List[str]] = {
+        dependency_graph: dict[str, list[str]] = {
             crate.name: [
                 dep_id
                 for dep in crate.dependencies
@@ -358,7 +358,7 @@ class DependencyAnalyzer:
             for crate in crates
         }
 
-        reverse_deps: Dict[str, List[str]] = {}
+        reverse_deps: dict[str, list[str]] = {}
         for crate_name, deps in dependency_graph.items():
             for dep in deps:
                 if dep:  # Ensure dep is not None

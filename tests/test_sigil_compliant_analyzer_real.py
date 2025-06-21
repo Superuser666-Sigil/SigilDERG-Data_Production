@@ -10,15 +10,11 @@ Based on Crawl4AI best practices for local model deployment.
 """
 
 import pytest
-import asyncio
 import json
-import tempfile
 import os
 import sys
 from datetime import datetime, timezone
-from typing import Dict, Any, List, Optional
-from unittest.mock import Mock, patch, AsyncMock
-from dataclasses import asdict
+from unittest.mock import Mock
 from pathlib import Path
 
 # Add the project root to Python path for imports
@@ -340,7 +336,7 @@ class TestSigilCompliantPipelineWithCrawl4AI:
                     assert isinstance(extracted, (dict, list))
                     print(f"✅ LLM extraction successful: {extracted}")
                 else:
-                    print(f"⚠️  LLM extraction failed or no content extracted")
+                    print("⚠️  LLM extraction failed or no content extracted")
                     
             except Exception as e:
                 print(f"⚠️  LLM test failed (expected if model not running): {e}")

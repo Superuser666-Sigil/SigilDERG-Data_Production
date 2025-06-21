@@ -97,7 +97,7 @@ async def test_async_functionality():
         
         # Just verify that we got some result back without errors
         print("✅ Async scraping successful:")
-        print(f"   - URL: https://httpbin.org/html")
+        print("   - URL: https://httpbin.org/html")
         print(f"   - Result type: {type(result).__name__}")
         print("   - Async functionality confirmed")
         return True

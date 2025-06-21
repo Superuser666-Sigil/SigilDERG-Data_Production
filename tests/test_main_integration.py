@@ -70,7 +70,6 @@ def test_compatibility_interface():
 
     try:
         from rust_crate_pipeline.config import PipelineConfig
-        from rust_crate_pipeline.pipeline import CrateDataPipeline
         from sigil_enhanced_pipeline import SigilCompliantPipeline
 
         config = PipelineConfig()

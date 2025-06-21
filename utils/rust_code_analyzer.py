@@ -3,14 +3,14 @@
 Atomic Rust code analysis utilities - extracted from duplicate code patterns
 """
 import re
-from typing import Dict, List, Any
+from typing import Any
 
 
 class RustCodeAnalyzer:
     """Atomic unit for analyzing Rust source code patterns"""
 
     @staticmethod
-    def create_empty_metrics() -> Dict[str, Any]:
+    def create_empty_metrics() -> dict[str, Any]:
         """Create standardized empty metrics structure"""
         return {
             "file_count": 0,
@@ -25,7 +25,7 @@ class RustCodeAnalyzer:
         }
 
     @staticmethod
-    def analyze_rust_content(content: str) -> Dict[str, Any]:
+    def analyze_rust_content(content: str) -> dict[str, Any]:
         """Analyze a single Rust file's content - atomic unit for content analysis"""
         if not content:
             return {"loc": 0, "functions": [], "types": [], "traits": []}
@@ -46,7 +46,7 @@ class RustCodeAnalyzer:
         }
 
     @staticmethod
-    def detect_project_structure(file_list: List[str]) -> Dict[str, bool]:
+    def detect_project_structure(file_list: list[str]) -> dict[str, bool]:
         """Detect project structure patterns - atomic unit for structure detection"""
         structure = {
             "has_tests": False,
@@ -65,12 +65,12 @@ class RustCodeAnalyzer:
         return structure
 
     @staticmethod
-    def aggregate_metrics(metrics: Dict[str,
+    def aggregate_metrics(metrics: dict[str,
                                         Any],
-                          content_analysis: Dict[str,
+                          content_analysis: dict[str,
                                                  Any],
-                          structure: Dict[str,
-                                          bool]) -> Dict[str,
+                          structure: dict[str,
+                                          bool]) -> dict[str,
                                                          Any]:
         """Aggregate analysis results - atomic unit for combining results"""
         metrics["loc"] += content_analysis["loc"]

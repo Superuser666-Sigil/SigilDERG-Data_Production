@@ -1,0 +1,55 @@
+{
+  "title": "Rule Zero Python Typing & PEP8 Quick Lookup Table",
+  "description": "Quick reference for common Python type annotation errors, causes, and best practices (PEP8, PEP 484, PEP 585, PEP 604, mypy)",
+  "last_updated": "2025-06-21",
+  "entries": [
+    {
+      "error": "Missing return type annotation",
+      "cause": "Function or method lacks an explicit return type annotation.",
+      "fix": "Add an explicit return type (e.g., '-> None' if nothing is returned).",
+      "best_practice": "All functions should have explicit return type annotations."
+    },
+    {
+      "error": "Use of legacy typing (typing.List, typing.Tuple, etc.)",
+      "cause": "Using typing.List, typing.Dict, etc. in Python 3.9+.",
+      "fix": "Use built-in generics (list[str], dict[str, int], etc.) for Python 3.9+.",
+      "best_practice": "Prefer built-in generics for Python 3.9+; use typing.List, etc. only for older versions."
+    },
+    {
+      "error": "Union types (Union[X, Y])",
+      "cause": "Using typing.Union instead of the modern union operator.",
+      "fix": "Use 'X | Y' for unions in Python 3.10+.",
+      "best_practice": "Use '|' for unions in Python 3.10+; otherwise, use Union."
+    },
+    {
+      "error": "Returning Any from a function with a more specific return type",
+      "cause": "Return value does not match the declared return type.",
+      "fix": "Ensure return values match the declared type; avoid returning Any unless necessary.",
+      "best_practice": "Avoid using Any unless absolutely necessary."
+    },
+    {
+      "error": "Import errors for untyped modules",
+      "cause": "Third-party module lacks type hints/stubs.",
+      "fix": "Install type stubs (e.g., 'pip install types-requests') or use '# type: ignore'.",
+      "best_practice": "Use type stubs or # type: ignore for third-party modules lacking type hints."
+    },
+    {
+      "error": "Type comments and forward references",
+      "cause": "Legacy code or circular imports require type comments or forward references.",
+      "fix": "Use type comments or 'from __future__ import annotations' for forward references.",
+      "best_practice": "Use type comments and forward references only when necessary."
+    },
+    {
+      "error": "Incompatible types in assignments or function arguments",
+      "cause": "Assigned value or argument does not match the expected type.",
+      "fix": "Ensure types match exactly, or use typing.cast() for explicit conversions.",
+      "best_practice": "Explicitly cast types when needed; keep types consistent."
+    },
+    {
+      "error": "Formatting/PEP8 violations in type annotations",
+      "cause": "Improper spacing, alignment, or formatting in type annotations.",
+      "fix": "Follow PEP8: one space after ':', no space before colon, align multiline signatures.",
+      "best_practice": "Follow PEP8 for all type annotation formatting."
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 import os
 import warnings
 from dataclasses import dataclass, field, asdict
-from typing import Optional, Dict, Any, List
+from typing import Any
 
 # Filter Pydantic deprecation warnings from dependencies
 # Rule Zero Compliance: Suppress third-party warnings while maintaining awareness
@@ -42,33 +42,33 @@ class CrateMetadata:
     version: str
     description: str
     repository: str
-    keywords: List[str]
-    categories: List[str]
+    keywords: list[str]
+    categories: list[str]
     readme: str
     downloads: int
     github_stars: int = 0
-    dependencies: List[Dict[str, Any]] = field(default_factory=list)
-    features: Dict[str, List[str]] = field(default_factory=dict)
-    code_snippets: List[str] = field(default_factory=list)
-    readme_sections: Dict[str, str] = field(default_factory=dict)
-    librs_downloads: Optional[int] = None
+    dependencies: list[dict[str, Any]] = field(default_factory=list)
+    features: dict[str, list[str]] = field(default_factory=dict)
+    code_snippets: list[str] = field(default_factory=list)
+    readme_sections: dict[str, str] = field(default_factory=dict)
+    librs_downloads: int | None = None
     source: str = "crates.io"
     # Enhanced scraping fields
-    enhanced_scraping: Dict[str, Any] = field(default_factory=dict)
-    enhanced_features: List[str] = field(default_factory=list)
-    enhanced_dependencies: List[str] = field(default_factory=list)
+    enhanced_scraping: dict[str, Any] = field(default_factory=dict)
+    enhanced_features: list[str] = field(default_factory=list)
+    enhanced_dependencies: list[str] = field(default_factory=list)
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return asdict(self)
 
 
 @dataclass
 class EnrichedCrate(CrateMetadata):
-    readme_summary: Optional[str] = None
-    feature_summary: Optional[str] = None
-    use_case: Optional[str] = None
-    score: Optional[float] = None
-    factual_counterfactual: Optional[str] = None
-    source_analysis: Optional[Dict[str, Any]] = None
-    user_behavior: Optional[Dict[str, Any]] = None
-    security: Optional[Dict[str, Any]] = None
+    readme_summary: str | None = None
+    feature_summary: str | None = None
+    use_case: str | None = None
+    score: float | None = None
+    factual_counterfactual: str | None = None
+    source_analysis: dict[str, Any] | None = None
+    user_behavior: dict[str, Any] | None = None
+    security: dict[str, Any] | None = None

@@ -4,7 +4,7 @@ import time
 import logging
 import json
 import asyncio
-from typing import List, Dict, Optional, Any
+from typing import Any
 
 from .config import PipelineConfig, CrateMetadata, EnrichedCrate
 from .network import CrateAPIClient, GitHubBatchClient
@@ -36,11 +36,11 @@ class CrateDataPipeline:
         self.enricher = LLMEnricher(config)
         self.crates = self._get_crate_list()
         self.output_dir = self._create_output_dir()
-        self.enhanced_scraper: Optional[CrateDocumentationScraper] = (
+        self.enhanced_scraper: CrateDocumentationScraper | None = (
             self._initialize_enhanced_scraper()
         )
 
-    def _initialize_enhanced_scraper(self) -> Optional[CrateDocumentationScraper]:
+    def _initialize_enhanced_scraper(self) -> CrateDocumentationScraper | None:
         """Initializes the CrateDocumentationScraper if available and enabled."""
         if (
             not ENHANCED_SCRAPING_AVAILABLE
@@ -63,7 +63,7 @@ class CrateDataPipeline:
         os.makedirs(output_dir, exist_ok=True)
         return output_dir
 
-    def _get_crate_list(self) -> List[str]:
+    def _get_crate_list(self) -> list[str]:
         """
         Loads the list of crates to process from an external file.
         This approach is more modular and easier to maintain than a hardcoded list.
@@ -72,7 +72,7 @@ class CrateDataPipeline:
             os.path.dirname(__file__), "crate_list.txt"
         )
         try:
-            with open(crate_list_path, "r") as f:
+            with open(crate_list_path) as f:
                 crates = [line.strip() for line in f if line.strip()]
             logging.info(f"Loaded {len(crates)} crates from {crate_list_path}")
             if not crates:
@@ -82,7 +82,7 @@ class CrateDataPipeline:
             logging.error(f"Crate list file not found at: {crate_list_path}")
             return []
 
-    def get_crate_list(self) -> List[str]:
+    def get_crate_list(self) -> list[str]:
         """
         Public method to get the list of crates.
         Returns the already loaded crate list or loads it if not available.
@@ -93,15 +93,15 @@ class CrateDataPipeline:
             return self._get_crate_list()
 
     async def fetch_metadata_batch(
-        self, crate_names: List[str]
-    ) -> List[CrateMetadata]:
+        self, crate_names: list[str]
+    ) -> list[CrateMetadata]:
         """
         Fetches metadata for a batch of crates using asyncio-based parallel processing.
         """
 
         async def fetch_single_crate_safe(
             crate_name: str,
-        ) -> Optional[CrateMetadata]:
+        ) -> CrateMetadata | None:
             try:
                 loop = asyncio.get_running_loop()
                 data = await loop.run_in_executor(
@@ -141,7 +141,7 @@ class CrateDataPipeline:
         )
         return results
 
-    async def enrich_batch(self, batch: List[CrateMetadata]) -> List[EnrichedCrate]:
+    async def enrich_batch(self, batch: list[CrateMetadata]) -> list[EnrichedCrate]:
         """Enriches a batch of crates with GitHub stats, enhanced scraping, and AI."""
         # Update GitHub stats
         github_repos = [
@@ -163,7 +163,7 @@ class CrateDataPipeline:
 
     async def _enrich_single_crate(
         self, crate: CrateMetadata
-    ) -> Optional[EnrichedCrate]:
+    ) -> EnrichedCrate | None:
         """Helper to enrich a single crate with scraping and AI analysis."""
         try:
             # Enhanced scraping if available
@@ -204,7 +204,7 @@ class CrateDataPipeline:
     def _integrate_scraping_results(
         self,
         crate: CrateMetadata,
-        scraping_results: Dict[str, EnhancedScrapingResult],
+        scraping_results: dict[str, EnhancedScrapingResult],
     ) -> None:
         """
         Integrates enhanced scraping results into the crate metadata.
@@ -244,11 +244,11 @@ class CrateDataPipeline:
             ):
                 crate.code_snippets.extend(structured_data["examples"])
 
-    def analyze_dependencies(self, crates: List[EnrichedCrate]) -> Dict[str, Any]:
+    def analyze_dependencies(self, crates: list[EnrichedCrate]) -> dict[str, Any]:
         """Analyze dependencies between crates."""
         return DependencyAnalyzer.analyze_dependencies(crates)
 
-    def save_checkpoint(self, data: List[EnrichedCrate], prefix: str):
+    def save_checkpoint(self, data: list[EnrichedCrate], prefix: str):
         """Saves a processing checkpoint to a file."""
         timestamp = time.strftime("%Y%m%d-%H%M%S")
         filename = os.path.join(self.output_dir, f"{prefix}_{timestamp}.jsonl")
@@ -261,7 +261,7 @@ class CrateDataPipeline:
         return filename
 
     def save_final_output(
-        self, data: List[EnrichedCrate], dependency_data: Dict[str, Any]
+        self, data: list[EnrichedCrate], dependency_data: dict[str, Any]
     ):
         """Saves the final enriched data and analysis reports."""
         timestamp = time.strftime("%Y%m%d-%H%M%S")
@@ -288,8 +288,8 @@ class CrateDataPipeline:
 
     def _generate_summary_report(
         self,
-        data: List[EnrichedCrate],
-        dependency_data: Dict[str, Any],
+        data: list[EnrichedCrate],
+        dependency_data: dict[str, Any],
         timestamp: str,
     ):
         """Generates a summary report of the pipeline run."""
@@ -318,7 +318,7 @@ class CrateDataPipeline:
         with open(summary_path, "w") as f:
             json.dump(summary, f, indent=2)
 
-    async def run(self) -> Optional[tuple[List[EnrichedCrate], Dict[str, Any]]]:
+    async def run(self) -> tuple[list[EnrichedCrate], dict[str, Any]] | None:
         """Main pipeline execution flow."""
         start_time = time.time()
         if not self.crates:
@@ -327,7 +327,7 @@ class CrateDataPipeline:
 
         logging.info(f"Processing {len(self.crates)} crates...")
 
-        all_enriched: List[EnrichedCrate] = []
+        all_enriched: list[EnrichedCrate] = []
         batch_size = self.config.batch_size
         crate_batches = [
             self.crates[i : i + batch_size]

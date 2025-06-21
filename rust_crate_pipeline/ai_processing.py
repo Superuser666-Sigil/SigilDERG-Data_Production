@@ -2,7 +2,9 @@
 import re
 import time
 import logging
-from typing import Callable, Optional, List, TypedDict
+from typing import TypedDict
+
+from collections.abc import Callable
 
 from .config import PipelineConfig, CrateMetadata, EnrichedCrate
 
@@ -84,7 +86,7 @@ class LLMEnricher:
             return content
 
         # Split into sections based on markdown headers
-        sections: List[Section] = []
+        sections: list[Section] = []
         current_section: Section = {
             "heading": "Introduction",
             "content": "",
@@ -183,7 +185,7 @@ class LLMEnricher:
 
         elif task == "factual_pairs":
             # For factual pairs, ensure proper formatting
-            pairs: List[str] = []
+            pairs: list[str] = []
             facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL)
             counterfacts = re.findall(
                 r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", output, re.DOTALL
@@ -205,7 +207,7 @@ class LLMEnricher:
 
     def run_llama(
         self, prompt: str, temp: float = 0.2, max_tokens: int = 256
-    ) -> Optional[str]:
+    ) -> str | None:
         """Run the LLM with customizable parameters per task"""
         try:
             token_count = self.estimate_tokens(prompt)
@@ -236,7 +238,7 @@ class LLMEnricher:
         temp: float = 0.2,
         max_tokens: int = 256,
         retries: int = 4,  # Increased from 2 to 4 for better success rates
-    ) -> Optional[str]:
+    ) -> str | None:
         """Run LLM with validation and automatic retry on failure"""
         result = None
         for attempt in range(retries):
@@ -515,7 +517,7 @@ class LLMEnricher:
 
     def batch_process_prompts(
         self, prompts: list[tuple[str, float, int]], batch_size: int = 4
-    ) -> list[Optional[str]]:
+    ) -> list[str | None]:
         """
         L4 GPU-optimized batch processing for multiple prompts.
         Processes prompts in batches to maximize GPU utilization.
@@ -524,12 +526,12 @@ class LLMEnricher:
             prompts: List of (prompt, temperature, max_tokens) tuples
             batch_size: Number of prompts to process simultaneously
         """
-        results: List[Optional[str]] = []
+        results: list[str | None] = []
 
         # Process in batches optimized for L4's capabilities
         for i in range(0, len(prompts), batch_size):
             batch = prompts[i : i + batch_size]
-            batch_results: List[Optional[str]] = []
+            batch_results: list[str | None] = []
 
             for prompt, temp, max_tokens in batch:
                 try:
@@ -576,7 +578,7 @@ class LLMEnricher:
             return new_prompt
 
         # Build context from most recent and most relevant history
-        context_parts: List[str] = []
+        context_parts: list[str] = []
         tokens_used = 0
 
         # Prioritize recent context (better cache hits)
