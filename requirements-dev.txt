@@ -1,0 +1,67 @@
+# Development Dependencies for Rust Crate Pipeline
+# Install with: pip install -r requirements-dev.txt
+
+# Testing frameworks and utilities
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.0
+pytest-asyncio>=0.21.0
+pytest-timeout>=2.1.0
+pytest-xdist>=3.3.0  # Parallel test execution
+coverage>=7.2.0
+
+# Code formatting and linting
+black>=23.0.0
+isort>=5.12.0
+flake8>=6.0.0
+mypy>=1.5.0
+pylint>=2.17.0
+bandit>=1.7.5  # Security linting
+
+# Documentation
+sphinx>=7.0.0
+sphinx-rtd-theme>=1.3.0
+sphinx-autodoc-typehints>=1.24.0
+
+# Type checking and development tools
+pre-commit>=3.3.0
+twine>=4.0.0  # For PyPI publishing
+build>=0.10.0  # Modern Python build tool
+wheel>=0.40.0
+
+# Jupyter notebook support (for data analysis)
+jupyter>=1.0.0
+ipykernel>=6.25.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+seaborn>=0.12.0
+
+# Database development and debugging
+sqlite-utils>=3.34.0
+
+# Performance profiling
+py-spy>=0.3.14
+memory-profiler>=0.61.0
+
+# Mock and testing utilities
+responses>=0.23.0  # HTTP request mocking
+factory-boy>=3.3.0  # Test data generation
+faker>=19.0.0  # Fake data generation
+
+# API development and testing
+httpx>=0.24.0  # Modern HTTP client for testing
+respx>=0.20.0  # HTTPX request mocking
+
+# Environment and configuration management
+python-dotenv>=1.0.0
+pydantic>=2.0.0  # Data validation
+
+# Git hooks and workflow
+gitpython>=3.1.0
+
+# Optional: Static analysis tools
+vulture>=2.9.0  # Dead code detection
+radon>=6.0.0  # Code complexity analysis
+
+# Requests cache for caching HTTP requests
+requests-cache>=1.0.0

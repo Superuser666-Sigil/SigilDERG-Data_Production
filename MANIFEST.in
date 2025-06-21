@@ -1,0 +1,11 @@
+include README.md
+include LICENSE
+include requirements.txt
+include *.md
+include *.txt
+recursive-include rust_crate_pipeline *.py
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
+global-exclude *.so
+global-exclude .git*

@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  rust-crate-pipeline:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: rust-pipeline
+    restart: unless-stopped
+    volumes:
+      - ./output:/app/output:rw
+      - ./logs:/app/logs:rw
+      - ./cache:/app/cache:rw
+      - ./models:/app/models:rw
+      - ./data:/app/data:rw
+      # Mount local models directory for LLM inference
+      - ${HOME}/models:/app/models:ro
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - OUTPUT_DIR=/app/output
+      - CACHE_DIR=/app/cache
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      # Crawl4AI configuration for headless browser operation
+      - CRAWL4AI_HEADLESS=true
+      - CRAWL4AI_BROWSER_PATH=/usr/bin/chromium
+      - DISPLAY=:99
+      # LLM model configuration for direct llama.cpp inference
+      - MODEL_PATH=${MODEL_PATH:-/app/models/deepseek-coder-6.7b-instruct.Q4_K_M.gguf}
+      - LLM_MODEL_PATH=${LLM_MODEL_PATH:-/app/models/deepseek-coder-6.7b-instruct.Q4_K_M.gguf}
+      - LLM_CONTEXT_SIZE=${LLM_CONTEXT_SIZE:-4096}
+      - LLM_MAX_TOKENS=${LLM_MAX_TOKENS:-512}
+      - LLM_TEMPERATURE=${LLM_TEMPERATURE:-0.1}
+    networks:
+      - rust-pipeline-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import rust_crate_pipeline; from rust_crate_pipeline.config import PipelineConfig; PipelineConfig(); print('OK')"]
+      interval: 60s
+      timeout: 15s
+      retries: 3
+      start_period: 120s
+    command: 
+      - --limit=1000
+      - --batch-size=10
+      - --output-dir=/app/output
+      - --log-level=INFO
+    # Resource allocation for better performance with LLM inference
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 8G
+        reservations:
+          cpus: '2.0'
+          memory: 4G
+
+  # Optional: Add a monitoring/log viewing service
+  log-viewer:
+    image: amir20/dozzle:latest
+    container_name: rust-pipeline-logs
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - "8081:8080"  # Changed to avoid conflict with main app
+    environment:
+      DOZZLE_FILTER: "name=rust-pipeline"
+    networks:
+      - rust-pipeline-network
+    profiles:
+      - monitoring
+
+networks:
+  rust-pipeline-network:
+    driver: bridge
+
+volumes:
+  rust-pipeline-output:
+    driver: local
+  rust-pipeline-cache:
+    driver: local
