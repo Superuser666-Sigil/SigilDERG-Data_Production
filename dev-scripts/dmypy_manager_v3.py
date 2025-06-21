@@ -61,7 +61,7 @@ def setup_logging(verbose: bool = False) -> None:
 
 # --- Utility: Version Info ---
 def get_tool_version() -> str:
-    return "1.5.1"  # Rule Zero canonical version
+    return "1.2.5-dev.20250621"  # Dev branch: experimental, not a formal release
 
 
 def get_dmypy_version() -> str:
@@ -292,9 +292,9 @@ def sign_audit_payload(payload: Dict[str, Any]) -> str:
     return base64.b64encode(signature).decode()
 
 
-def record_audit_pass(directory: str, reason: str | None = None) -> None:
+def record_audit_pass(directory: str) -> None:
     """
-    Record a successful audit in the log and as a signed checkpoint file, with a reason for the checkpoint.
+    Record a successful audit in the log and as a signed checkpoint file.
     """
     audit_payload = {
         "directory": directory,
@@ -302,14 +302,13 @@ def record_audit_pass(directory: str, reason: str | None = None) -> None:
         "commit_hash": COMMIT_HASH,
         "tool_version": get_tool_version(),
         "status": "passed",
-        "reason": reason or "Checkpoint: Rule Zero continuous development milestone."
     }
     signature = sign_audit_payload(audit_payload)
     audit_payload["signature"] = signature
     # Write to audit_passed.json in the project root
     with open("audit_passed.json", "w", encoding="utf-8") as f:
         json.dump(audit_payload, f, indent=2)
-    logging.info(f"Rule Zero audit PASSED for {directory} (signed, checkpointed) | Reason: {audit_payload['reason']}")
+    logging.info(f"Rule Zero audit PASSED for {directory} (signed, checkpointed)")
 
 
 # --- Main CLI Entrypoint ---
@@ -377,12 +376,4 @@ Provenance and auditability are enforced in all outputs.
 
 
 if __name__ == "__main__":
-    # Calculate hours since initial dev branch init (placeholder: replace with actual timestamp if available)
-    INITIAL_DEV_BRANCH_TIMESTAMP = 1718600000  # Replace with actual branch init epoch if known
-    hours_since_init = (time.time() - INITIAL_DEV_BRANCH_TIMESTAMP) / 3600 + 9.5
-    checkpoint_reason = (
-        f"Checkpoint: {hours_since_init:.2f} hours since initial dev branch init, "
-        "reflecting sustained, disciplined Rule Zero-aligned continuous development."
-    )
-    record_audit_pass(directory=".", reason=checkpoint_reason)
     main()

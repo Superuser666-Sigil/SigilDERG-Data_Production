@@ -2,13 +2,13 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyPI Package](https://img.shields.io/badge/PyPI-v1.5.1-green.svg)](https://pypi.org/project/rust-crate-pipeline/)
+[![PyPI Package](https://img.shields.io/badge/PyPI-v1.2.5-green.svg)](https://pypi.org/project/rust-crate-pipeline/)
 [![Docker Ready](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com/)
 [![Rule Zero Compliant](https://img.shields.io/badge/Rule%20Zero-Compliant-gold.svg)](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/SYSTEM_AUDIT_REPORT.md)
 
 A production-ready, Rule Zero-compliant pipeline for comprehensive Rust crate analysis, featuring **AI-powered insights**, **enhanced web scraping with Crawl4AI**, dependency mapping, and automated data enrichment. Designed for researchers, developers, and data scientists studying the Rust ecosystem.
 
-**🆕 New in v1.5.1**: Model path standardization, improved GGUF configuration consistency, and enhanced Rule Zero alignment.
+**🆕 Dev branch:** This branch was initiated from version 1.2.5 (the last official release). It may contain features and changes not present in 1.2.5. Use with caution; for stable use, see the `main` branch or PyPI.
 
 📦 **Available on PyPI:** [rust-crate-pipeline](https://pypi.org/project/rust-crate-pipeline/)
 
@@ -119,9 +119,9 @@ python3 -m rust_crate_pipeline \
 
 ## 🎯 Features
 
-*Available in the latest version: [rust-crate-pipeline v1.5.1](https://pypi.org/project/rust-crate-pipeline/)*
+*Available in the last official release: [rust-crate-pipeline v1.2.5](https://pypi.org/project/rust-crate-pipeline/)*
 
-### 🌐 Enhanced Web Scraping (New in v1.5.0)
+### 🌐 Enhanced Web Scraping (Experimental in dev branch)
 
 - **Crawl4AI Integration**: Advanced web scraping with AI-powered content extraction
 - **JavaScript Rendering**: Playwright-powered browser automation for dynamic content
@@ -156,27 +156,15 @@ python3 -m rust_crate_pipeline \
 
 ## � Recent Updates
 
-### Version 1.5.1 - Configuration Standardization (Latest)
-- 🔧 **Model Path Consistency**: Standardized all configuration to use GGUF model paths (`~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf`)
-- ⚖️ **Rule Zero Alignment**: Enhanced compliance with Rule Zero principles for transparency and validation
-- 📝 **Documentation Updates**: Comprehensive updates to reflect proper model configuration practices
-- 🧪 **Test Standardization**: Updated all test files to use consistent GGUF model paths
-- 🚀 **CLI Consistency**: Ensured all CLI defaults and help text reflect correct model paths
+### Dev Branch (Unreleased)
+- 🚧 **Experimental and in-progress features.**
+- ⚠️ **Not a formal release.**
+- For the last stable release, see v1.2.5 below.
 
-### Version 1.5.0 - Enhanced Web Scraping
-- 🚀 **Crawl4AI Integration**: Advanced web scraping with AI-powered content extraction
-- 🌐 **JavaScript Rendering**: Playwright-powered browser automation for dynamic content
-- 🧠 **LLM-Enhanced Parsing**: AI-powered README and documentation analysis
-- 📊 **Structured Data Extraction**: Intelligent parsing of docs.rs and technical documentation
-- ⚡ **Async Processing**: High-performance concurrent web scraping
-- 🛡️ **Graceful Fallbacks**: Automatic degradation to basic scraping when needed
-
-### Version 1.4.0 - Rule Zero Compliance
-- 🏆 **Rule Zero Certification**: Complete alignment audit and compliance verification
-- 🧪 **100% Test Coverage**: All 22 tests passing with comprehensive validation
-- 🔄 **Thread-Free Architecture**: Pure asyncio implementation for better performance
-- 📦 **PyPI Integration**: Official package availability with easy installation
-- 🐳 **Docker Support**: Full containerization with production-ready configurations
+### Version 1.2.5 - Dev Branch Initiation
+- 🏁 **Dev branch created from this version.**
+- 🐞 **Stable, production-ready baseline.**
+- 📦 **PyPI release: v1.2.5**
 
 *For complete version history, see [CHANGELOG.md](CHANGELOG.md)*
 
@@ -608,30 +596,25 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 📦 **Get started today:** [Install from PyPI](https://pypi.org/project/rust-crate-pipeline/)
 
+# ⚠️ Dev Branch Notice (2025-06-21)
+
+**This is the `dev` branch. The pre-commit hook is currently bypassed for troubleshooting. Signature validation and cryptographic audit enforcement are temporarily disabled. Hash validation is performed, but full Rule Zero cryptographic rigor (signing and verification) is not enforced in this branch.**
+
+**For full Rule Zero compliance, refer to the `main` branch.**
+
+---
+
 ## 🛡️ Rule Zero Validation & Checkpointing (2025-06-21)
 
-This project enforces Rule Zero rigor for all code and data changes. The following validation and checkpointing process was performed on **2025-06-21**:
+**Dev branch status:**
+- The pre-commit hook is currently bypassed (`git commit --no-verify`) for troubleshooting signature validation and automation issues.
+- Only hash validation is enforced; cryptographic signature validation is not enforced in this branch.
+- The main branch enforces full Rule Zero rigor (hash + signature, atomic update, and verification).
+- All other Rule Zero processes (environment metadata, lookup table, checkpoint tagging) remain in place.
 
-- **DB Hash Validation:**
-  - The canonical SQLite DB (`sigil_rag_cache.db`) was validated against its SHA256 hash (`sigil_rag_cache.hash`) using the script:
-    ```bash
-    python scripts/validate_db_hash.py --db sigil_rag_cache.db --expected-hash $(cat sigil_rag_cache.hash)
-    ```
-  - The pre-commit hook automatically reads the hash value and validates the DB before every commit.
-- **Environment Metadata:**
-  - Metadata was cached to the DB using `scripts/cache_env_metadata.py` for traceability.
-- **Rule Zero Lookup Table:**
-  - The Rule Zero quick lookup table was generated with `scripts/generate_rule_zero_lookup.py`.
-- **Checkpoint Commit:**
-  - All code, config, and uncommitted changes were committed with the message:
-    > Rule Zero checkpoint: full codebase and config state as of 2025-06-21, including all dev branch uncommitted and untracked changes. Patch saved as rule_zero_checkpoint_devbranch_20250621.patch for traceability.
-  - Patch file: `rule_zero_checkpoint_devbranch_20250621.patch`
-  - Tag: `rule_zero_checkpoint_2025-06-21`
-  - Branch: `dev` (pushed to remote)
-
-**To repeat this process:**
-1. Ensure all changes are staged.
-2. Validate the DB hash:
+**To repeat the dev branch process:**
+1. Stage all changes.
+2. Validate the DB hash (no signature check):
    ```bash
    python scripts/validate_db_hash.py --db sigil_rag_cache.db --expected-hash $(cat sigil_rag_cache.hash)
    ```
@@ -640,11 +623,10 @@ This project enforces Rule Zero rigor for all code and data changes. The followi
    python scripts/cache_env_metadata.py
    python scripts/generate_rule_zero_lookup.py
    ```
-4. Commit and tag:
+4. Commit (bypassing pre-commit):
    ```bash
-   git commit -am "Rule Zero checkpoint: ..."
-   git tag rule_zero_checkpoint_YYYY-MM-DD
-   git push origin dev --tags
+   git commit --no-verify -am "Dev branch: bypass pre-commit for troubleshooting"
+   git push origin dev
    ```
 
-This ensures full transparency, traceability, and repeatability in line with Rule Zero principles.
+**For full Rule Zero cryptographic validation, use the `main` branch.**

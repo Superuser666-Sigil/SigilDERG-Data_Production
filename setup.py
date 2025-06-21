@@ -10,7 +10,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="rust-crate-pipeline",
-    version="1.5.1",    author="SuperUser666-Sigil",
+    version="1.2.5-dev.20250621",    author="SuperUser666-Sigil",
     author_email="miragemodularframework@gmail.com",    description=(
         "A comprehensive system for gathering, enriching, and analyzing "
         "metadata for Rust crates using AI-powered insights"
