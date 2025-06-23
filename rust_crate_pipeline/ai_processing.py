@@ -41,7 +41,9 @@ class LLMEnricher:
     def _load_model(self):
         """Optimized for GCP g2-standard-4 with L4 GPU (24GB VRAM)"""
         if not _ai_dependencies_available:
-            raise ImportError("Cannot load model: AI dependencies not available")
+            raise ImportError(
+                "Cannot load model: AI dependencies not available"
+            )
 
         return Llama(  # type: ignore
             model_path=self.config.model_path,
@@ -104,7 +106,9 @@ class LLMEnricher:
                 priority = 5  # Default priority
 
                 # Assign priority based on content type
-                if re.search(r"\b(usage|example|getting started)\b", heading, re.I):
+                if re.search(
+                    r"\b(usage|example|getting started)\b", heading, re.I
+                ):
                     priority = 10
                 elif re.search(r"\b(feature|overview|about)\b", heading, re.I):
                     priority = 9
@@ -123,7 +127,9 @@ class LLMEnricher:
 
                 # Boost priority if code block is found
                 if "```rust" in line or "```no_run" in line:
-                    current_section["priority"] = max(current_section["priority"], 8)
+                    current_section["priority"] = max(
+                        current_section["priority"], 8
+                    )
 
         # Add the last section
         if current_section["content"].strip():
@@ -143,7 +149,9 @@ class LLMEnricher:
             if tokens_used + section_tokens <= max_tokens:
                 result += section_text
                 tokens_used += section_tokens
-            elif tokens_used < max_tokens - 100:  # If we can fit a truncated version
+            elif (
+                tokens_used < max_tokens - 100
+            ):  # If we can fit a truncated version
                 # Take what we can
                 remaining_tokens = max_tokens - tokens_used
                 truncated_text = self.tokenizer.decode(
@@ -186,7 +194,9 @@ class LLMEnricher:
         elif task == "factual_pairs":
             # For factual pairs, ensure proper formatting
             pairs: list[str] = []
-            facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL)
+            facts = re.findall(
+                r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL
+            )
             counterfacts = re.findall(
                 r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", output, re.DOTALL
             )
@@ -194,15 +204,17 @@ class LLMEnricher:
             # Pair them up
             for i in range(min(len(facts), len(counterfacts))):
                 pairs.append(
-                    f'✅ Factual: {facts[i].strip()}\n'
-                    f'❌ Counterfactual: {counterfacts[i].strip()}'
+                    f"✅ Factual: {facts[i].strip()}\n"
+                    f"❌ Counterfactual: {counterfacts[i].strip()}"
                 )
 
             return "\n\n".join(pairs)
 
         else:
             # General cleaning - more permissive than before
-            lines = [line.strip() for line in output.splitlines() if line.strip()]
+            lines = [
+                line.strip() for line in output.splitlines() if line.strip()
+            ]
             return "\n".join(lines)
 
     def run_llama(
@@ -212,7 +224,9 @@ class LLMEnricher:
         try:
             token_count = self.estimate_tokens(prompt)
             if token_count > self.config.prompt_token_margin:
-                logging.warning(f"Prompt too long ({token_count} tokens). Truncating.")
+                logging.warning(
+                    f"Prompt too long ({token_count} tokens). Truncating."
+                )
                 prompt = self.truncate_content(
                     prompt, self.config.prompt_token_margin - 100
                 )
@@ -320,7 +334,8 @@ class LLMEnricher:
             "Unknown",
         ]
         return any(
-            category.lower() == result.strip().lower() for category in valid_categories
+            category.lower() == result.strip().lower()
+            for category in valid_categories
         )
 
     def validate_factual_pairs(self, result: str) -> bool:
@@ -328,7 +343,9 @@ class LLMEnricher:
         if not result:
             return False
 
-        facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", result, re.DOTALL)
+        facts = re.findall(
+            r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", result, re.DOTALL
+        )
         counterfacts = re.findall(
             r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", result, re.DOTALL
         )
@@ -361,7 +378,9 @@ class LLMEnricher:
                 crate, enriched.readme_summary or ""
             )
             enriched.score = self.score_crate(crate)
-            enriched.factual_counterfactual = self.generate_factual_pairs(crate)
+            enriched.factual_counterfactual = self.generate_factual_pairs(
+                crate
+            )
 
             return enriched
         except Exception as e:
@@ -378,7 +397,9 @@ class LLMEnricher:
             feature_text = ""
             for feature_name, deps in list(crate.features.items())[:8]:
                 deps_str = ", ".join(deps) if deps else "none"
-                feature_text += f"- {feature_name} (dependencies: {deps_str})\n"
+                feature_text += (
+                    f"- {feature_name} (dependencies: {deps_str})\n"
+                )
 
             prompt = (
                 "<|system|>You are a Rust programming expert analyzing crate "
@@ -400,13 +421,17 @@ class LLMEnricher:
             )
             return "Feature summary not available."
 
-    def classify_use_case(self, crate: CrateMetadata, readme_summary: str) -> str:
+    def classify_use_case(
+        self, crate: CrateMetadata, readme_summary: str
+    ) -> str:
         """Classify the use case of a crate with rich context"""
         try:
             # Calculate available tokens for prompt
             available_prompt_tokens = self.config.model_token_limit - 200
 
-            joined = ", ".join(crate.keywords[:10]) if crate.keywords else "None"
+            joined = (
+                ", ".join(crate.keywords[:10]) if crate.keywords else "None"
+            )
             key_deps = [
                 dep.get("crate_id")
                 for dep in crate.dependencies[:5]
@@ -556,7 +581,9 @@ class LLMEnricher:
                     result = self.clean_output(choice_text)
                     batch_results.append(result)
                 except Exception as e:
-                    logging.error(f"LLM batch processing error: {e}", exc_info=True)
+                    logging.error(
+                        f"LLM batch processing error: {e}", exc_info=True
+                    )
                     batch_results.append(None)
 
             results.extend(batch_results)

@@ -12,19 +12,23 @@ commands = [
     ["flake8", "tests/"],
     ["pylint", "tests/"],
     ["python", "dev-scripts/dmypy_manager_v3.py"],
-    ["pytest", "--cov=."]
+    ["pytest", "--cov=."],
 ]
+
 
 def run_and_log(cmd):
     with log_path.open("a", encoding="utf-8") as log:
         log.write(f"\nRunning: {' '.join(cmd)}\n")
         try:
-            result = subprocess.run(cmd, capture_output=True, text=True, shell=False)
+            result = subprocess.run(
+                cmd, capture_output=True, text=True, shell=False
+            )
             log.write(result.stdout)
             log.write(result.stderr)
             log.write("\n---\n")
         except Exception as e:
             log.write(f"ERROR: {e}\n---\n")
+
 
 # Clear previous log
 if log_path.exists():

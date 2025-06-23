@@ -10,14 +10,20 @@ import subprocess
 import pytest
 
 LOOKUP_PATH = os.path.abspath("rule_zero_lookup.json")
-SCRIPT_PATH = os.path.abspath(os.path.join("scripts", "generate_rule_zero_lookup.py"))
+SCRIPT_PATH = os.path.abspath(
+    os.path.join("scripts", "generate_rule_zero_lookup.py")
+)
 
 
 @pytest.mark.order(1)
 def test_generate_rule_zero_lookup_runs():
     """Script runs without error and produces a JSON file."""
-    result = subprocess.run(["python", SCRIPT_PATH], capture_output=True, text=True)
-    assert result.returncode == 0, f"Script failed: {result.stdout}\n{result.stderr}"
+    result = subprocess.run(
+        ["python", SCRIPT_PATH], capture_output=True, text=True
+    )
+    assert (
+        result.returncode == 0
+    ), f"Script failed: {result.stdout}\n{result.stderr}"
     assert os.path.exists(LOOKUP_PATH), "Lookup table was not generated."
 
 
@@ -32,7 +38,9 @@ def test_lookup_table_json_valid():
     assert isinstance(
         data["environment_metadata"], list
     ), "environment_metadata should be a list."
-    assert "rule_zero_policies" in data, "Missing rule_zero_policies in lookup table."
+    assert (
+        "rule_zero_policies" in data
+    ), "Missing rule_zero_policies in lookup table."
     assert isinstance(
         data["rule_zero_policies"], list
     ), "rule_zero_policies should be a list."
@@ -54,7 +62,9 @@ def test_environment_metadata_content():
         "timestamp",
     ]
     for field in required_fields:
-        assert field in entry, f"Missing field in environment metadata: {field}"
+        assert (
+            field in entry
+        ), f"Missing field in environment metadata: {field}"
 
 
 @pytest.mark.order(4)

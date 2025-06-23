@@ -76,7 +76,9 @@ def disk_space_check(min_free_gb: float = 1.0) -> bool:
         return True  # Assume OK if check fails
 
 
-def load_rule_zero_typing_quick_lookup(path: str | None = None) -> dict[str, Any]:
+def load_rule_zero_typing_quick_lookup(
+    path: str | None = None,
+) -> dict[str, Any]:
     """
     Load the Rule Zero Python Typing & PEP8 Quick Lookup Table as a dict.
 
@@ -87,9 +89,14 @@ def load_rule_zero_typing_quick_lookup(path: str | None = None) -> dict[str, Any
         Dictionary with quick lookup entries.
     """
     if not path:
-        path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../rule_zero_typing_quick_lookup.json'))
+        path = os.path.abspath(
+            os.path.join(
+                os.path.dirname(__file__),
+                "../../rule_zero_typing_quick_lookup.json",
+            )
+        )
     try:
-        with open(path, encoding='utf-8') as f:
+        with open(path, encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
         print(f"Failed to load Rule Zero typing quick lookup: {e}")

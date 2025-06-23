@@ -16,7 +16,10 @@ try:
     import sys
 
     sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-    from enhanced_scraping import CrateDocumentationScraper, EnhancedScrapingResult
+    from enhanced_scraping import (
+        CrateDocumentationScraper,
+        EnhancedScrapingResult,
+    )
 
     ENHANCED_SCRAPING_AVAILABLE = True
 except ImportError:
@@ -59,7 +62,9 @@ class CrateDataPipeline:
     def _create_output_dir(self) -> str:
         """Creates a timestamped output directory for pipeline results."""
         timestamp = time.strftime("%Y%m%d-%H%M%S")
-        output_dir = os.path.join(self.config.output_path, f"crate_data_{timestamp}")
+        output_dir = os.path.join(
+            self.config.output_path, f"crate_data_{timestamp}"
+        )
         os.makedirs(output_dir, exist_ok=True)
         return output_dir
 
@@ -87,7 +92,7 @@ class CrateDataPipeline:
         Public method to get the list of crates.
         Returns the already loaded crate list or loads it if not available.
         """
-        if hasattr(self, 'crates') and self.crates:
+        if hasattr(self, "crates") and self.crates:
             return self.crates
         else:
             return self._get_crate_list()
@@ -141,7 +146,9 @@ class CrateDataPipeline:
         )
         return results
 
-    async def enrich_batch(self, batch: list[CrateMetadata]) -> list[EnrichedCrate]:
+    async def enrich_batch(
+        self, batch: list[CrateMetadata]
+    ) -> list[EnrichedCrate]:
         """Enriches a batch of crates with GitHub stats, enhanced scraping, and AI."""
         # Update GitHub stats
         github_repos = [
@@ -157,7 +164,9 @@ class CrateDataPipeline:
                     crate.github_stars = stats.get("stargazers_count", 0)
 
         # Asynchronously enhance with scraping and AI
-        enrichment_tasks = [self._enrich_single_crate(crate) for crate in batch]
+        enrichment_tasks = [
+            self._enrich_single_crate(crate) for crate in batch
+        ]
         enriched_results = await asyncio.gather(*enrichment_tasks)
         return [result for result in enriched_results if result]
 
@@ -227,7 +236,9 @@ class CrateDataPipeline:
             if source == "docs_rs" and result.quality_score > 0.7:
                 if not crate.readme or len(result.content) > len(crate.readme):
                     crate.readme = result.content
-                    logging.info(f"Updated README for {crate.name} from {source}")
+                    logging.info(
+                        f"Updated README for {crate.name} from {source}"
+                    )
 
             # Extract additional metadata from structured data
             structured_data = result.structured_data or {}
@@ -244,7 +255,9 @@ class CrateDataPipeline:
             ):
                 crate.code_snippets.extend(structured_data["examples"])
 
-    def analyze_dependencies(self, crates: list[EnrichedCrate]) -> dict[str, Any]:
+    def analyze_dependencies(
+        self, crates: list[EnrichedCrate]
+    ) -> dict[str, Any]:
         """Analyze dependencies between crates."""
         return DependencyAnalyzer.analyze_dependencies(crates)
 
@@ -309,7 +322,9 @@ class CrateDataPipeline:
                 key=lambda x: x.get("score", 0),
                 reverse=True,
             )[:10],
-            "most_depended_upon": dependency_data.get("most_depended", [])[:10],
+            "most_depended_upon": dependency_data.get("most_depended", [])[
+                :10
+            ],
         }
 
         summary_path = os.path.join(

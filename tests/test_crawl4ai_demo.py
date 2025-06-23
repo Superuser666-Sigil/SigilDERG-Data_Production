@@ -6,7 +6,9 @@ import logging
 import os
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+)
 
 # Configure minimal logging
 logging.basicConfig(level=logging.WARNING)
@@ -20,8 +22,12 @@ def test_enhanced_scraping_demo():
     try:
         from enhanced_scraping import EnhancedScraper
 
-        scraper = EnhancedScraper()  # Correct constructor - no enable_crawl4ai param
-        print("   ✅ Module imported and initialized (Crawl4AI: enabled by default)")
+        scraper = (
+            EnhancedScraper()
+        )  # Correct constructor - no enable_crawl4ai param
+        print(
+            "   ✅ Module imported and initialized (Crawl4AI: enabled by default)"
+        )
         assert scraper is not None
     except ImportError as e:
         print(f"   ❌ Required module missing: {e}")
@@ -69,7 +75,8 @@ try:
     from enhanced_scraping import CrateDocumentationScraper
 
     config = PipelineConfig(
-        enable_crawl4ai=True, model_path="dummy_path"  # Won't be used in this test
+        enable_crawl4ai=True,
+        model_path="dummy_path",  # Won't be used in this test
     )  # Test the enhanced scraper directly
     enhanced_scraper = CrateDocumentationScraper()  # Correct constructor
     enhanced_available = True  # It was created successfully
@@ -86,7 +93,8 @@ try:
     from sigil_enhanced_pipeline import SigilCompliantPipeline
 
     config = PipelineConfig(
-        enable_crawl4ai=True, model_path="dummy_path"  # Won't be used in this test
+        enable_crawl4ai=True,
+        model_path="dummy_path",  # Won't be used in this test
     )
     pipeline = SigilCompliantPipeline(config, skip_ai=True, limit=1)
     enhanced_available = pipeline.enhanced_scraper is not None

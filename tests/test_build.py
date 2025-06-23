@@ -25,17 +25,23 @@ def test_balanced_crates():
 
         unique_crates = set(crates)
         duplicates = [c for c in unique_crates if crates.count(c) > 1]
-        assert len(unique_crates) == len(crates), f"Duplicates found: {duplicates}"
+        assert len(unique_crates) == len(
+            crates
+        ), f"Duplicates found: {duplicates}"
         print("   ✅ No duplicates found")
 
-        ml_ai_start = crates.index("tokenizers") if "tokenizers" in crates else -1
+        ml_ai_start = (
+            crates.index("tokenizers") if "tokenizers" in crates else -1
+        )
         assert ml_ai_start != -1, "ML/AI section not found"
         ml_crates = crates[ml_ai_start:]
         ml_percentage = (len(ml_crates) / len(crates)) * 100
         print(f"   📈 ML/AI crates: {len(ml_crates)} ({ml_percentage:.1f}%)")
         other_crates_count = len(crates) - len(ml_crates)
         other_percentage = 100 - ml_percentage
-        print(f"   📈 Other crates: {other_crates_count} ({other_percentage:.1f}%)")
+        print(
+            f"   📈 Other crates: {other_crates_count} ({other_percentage:.1f}%)"
+        )
         assert ml_percentage < 20, "Dataset still unbalanced"
         print("   ✅ Dataset successfully balanced!")
     except ImportError as e:

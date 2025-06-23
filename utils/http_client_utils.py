@@ -5,8 +5,8 @@ Atomic HTTP client utilities - extracted from duplicate network patterns
 import time
 import logging
 import requests
-from requests_cache import CachedSession  # Ensure runtime dependency installed
-from typing import Any
+from requests_cache import CachedSession
+from typing import Dict, Optional, Any
 import re
 
 
@@ -23,8 +23,8 @@ class HTTPClientUtils:
     @staticmethod
     def fetch_with_retry(session: requests.Session,                         url: str,
                          max_retries: int = 3,
-                         headers: dict[str, str] | None = None
-                         ) -> requests.Response | None:
+                         headers: Optional[Dict[str, str]] = None
+                         ) -> Optional[requests.Response]:
         """Fetch URL with exponential backoff retry - atomic unit"""
         for attempt in range(max_retries):
             try:
@@ -50,7 +50,7 @@ class HTTPClientUtils:
         return None
 
     @staticmethod
-    def extract_github_repo_info(repo_url: str) -> tuple[str, str] | None:
+    def extract_github_repo_info(repo_url: str) -> Optional[tuple[str, str]]:
         """Extract owner/repo from GitHub URL - atomic unit"""
         if not repo_url or "github.com" not in repo_url:
             return None
@@ -65,7 +65,7 @@ class HTTPClientUtils:
         return None
 
     @staticmethod
-    def get_github_headers(token: str | None = None) -> dict[str, str]:
+    def get_github_headers(token: Optional[str] = None) -> Dict[str, str]:
         """Get standardized GitHub API headers - atomic unit"""
         headers = {"Accept": "application/vnd.github.v3+json"}
         if token:
@@ -87,21 +87,20 @@ class MetadataExtractor:
         )
         matches = re.findall(pattern, readme)
 
-        snippets: list[str] = []
+        snippets = []
         for code in matches:
-            code_str = code.strip('`').strip()
-            if len(code_str) > 10:
-                snippets.append(code_str)
+            if len(code.strip()) > 10:  # Only include non-trivial snippets
+                snippets.append(code.strip())
 
         return snippets[:5]  # Limit to 5 snippets
 
     @staticmethod
-    def extract_readme_sections(readme: str) -> dict[str, str]:
+    def extract_readme_sections(readme: str) -> Dict[str, str]:
         """Extract sections from README based on markdown headers - atomic unit"""
         if not readme:
             return {}
 
-        sections: dict[str, str] = {}
+        sections: Dict[str, str] = {}
         current_section = "intro"
         current_content: list[str] = []
 
@@ -127,7 +126,7 @@ class MetadataExtractor:
         return sections
 
     @staticmethod
-    def create_empty_metadata() -> dict[str, Any]:
+    def create_empty_metadata() -> Dict[str, Any]:
         """Create standardized empty metadata structure - atomic unit"""
         return {
             "name": "",

@@ -4,6 +4,7 @@ Script to generate a Rule Zero runtime lookup table from the canonical DB for de
 - Outputs a JSON lookup table for fast runtime access by agents or future models.
 - Ensures the lookup table is always up-to-date and traceable.
 """
+
 import sqlite3
 import json
 import os
@@ -11,23 +12,29 @@ import os
 DB_PATH = os.path.abspath("sigil_rag_cache.db")
 LOOKUP_PATH = os.path.abspath("rule_zero_lookup.json")
 
+
 # Example: fetch all environment metadata and enforcement rules
 def fetch_rule_zero_data(conn):
     data = {}
     # Fetch environment metadata
     try:
-        cur = conn.execute("SELECT * FROM environment_metadata ORDER BY timestamp DESC")
-        data['environment_metadata'] = [dict(row) for row in cur.fetchall()]
+        cur = conn.execute(
+            "SELECT * FROM environment_metadata ORDER BY timestamp DESC"
+        )
+        data["environment_metadata"] = [dict(row) for row in cur.fetchall()]
     except Exception as e:
-        data['environment_metadata'] = f"Error: {e}"
+        data["environment_metadata"] = f"Error: {e}"
     # Fetch Rule Zero policies
     try:
-        cur = conn.execute("SELECT * FROM rule_zero_policies ORDER BY enforcement_rank DESC, last_updated DESC")
-        data['rule_zero_policies'] = [dict(row) for row in cur.fetchall()]
+        cur = conn.execute(
+            "SELECT * FROM rule_zero_policies ORDER BY enforcement_rank DESC, last_updated DESC"
+        )
+        data["rule_zero_policies"] = [dict(row) for row in cur.fetchall()]
     except Exception as e:
-        data['rule_zero_policies'] = f"Error: {e}"
+        data["rule_zero_policies"] = f"Error: {e}"
     # Add more tables/logic as needed for other Rule Zero rigor
     return data
+
 
 def main():
     if not os.path.exists(DB_PATH):
@@ -49,6 +56,7 @@ def main():
     except Exception as e:
         print(f"JSON validation failed: {e}")
         raise
+
 
 if __name__ == "__main__":
     main()

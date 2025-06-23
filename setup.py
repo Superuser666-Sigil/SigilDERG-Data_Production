@@ -5,21 +5,23 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = [
-        line.strip() for line in fh if line.strip() and not line.startswith("#")
+        line.strip()
+        for line in fh
+        if line.strip() and not line.startswith("#")
     ]
 
 setup(
     name="rust-crate-pipeline",
-    version="1.2.5-dev.20250621",    author="SuperUser666-Sigil",
-    author_email="miragemodularframework@gmail.com",    description=(
+    version="1.2.5-dev.20250621",
+    author="SuperUser666-Sigil",
+    author_email="miragemodularframework@gmail.com",
+    description=(
         "A comprehensive system for gathering, enriching, and analyzing "
         "metadata for Rust crates using AI-powered insights"
     ),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=(
-        "https://github.com/Superuser666-Sigil/SigilDERG-Data_Production"
-    ),
+    url=("https://github.com/Superuser666-Sigil/SigilDERG-Data_Production"),
     project_urls={
         "PyPI": "https://pypi.org/project/rust-crate-pipeline/",
         "Bug Tracker": (

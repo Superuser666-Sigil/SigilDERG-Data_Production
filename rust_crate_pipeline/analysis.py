@@ -84,7 +84,9 @@ class SourceAnalyzer:
             url = f"{CRATES_IO_API_URL}/{crate.name}/{crate.version}/download"
             response = requests.get(url, stream=True, timeout=30)
             response.raise_for_status()
-            logging.info(f"Successfully downloaded {crate.name} from crates.io")
+            logging.info(
+                f"Successfully downloaded {crate.name} from crates.io"
+            )
             return SourceAnalyzer.analyze_crate_tarball(response.content)
         except requests.RequestException as e:
             logging.warning(f"Failed to download from crates.io: {e}")
@@ -96,21 +98,31 @@ class SourceAnalyzer:
                 owner, repo_name = match.groups()
                 repo_name = repo_name.replace(".git", "")
                 try:
-                    github_url = f"{GITHUB_API_URL}/{owner}/{repo_name}/tarball"
+                    github_url = (
+                        f"{GITHUB_API_URL}/{owner}/{repo_name}/tarball"
+                    )
                     response = requests.get(github_url, timeout=30)
                     response.raise_for_status()
-                    logging.info(f"Successfully downloaded {crate.name} from GitHub")
-                    return SourceAnalyzer.analyze_github_tarball(response.content)
+                    logging.info(
+                        f"Successfully downloaded {crate.name} from GitHub"
+                    )
+                    return SourceAnalyzer.analyze_github_tarball(
+                        response.content
+                    )
                 except requests.RequestException as e:
                     logging.warning(f"Failed to analyze from GitHub: {e}")
 
         # Method 3: Fallback to cloning from the repository directly
         if repo_url:
             try:
-                logging.info(f"Attempting to clone repository for {crate.name}")
+                logging.info(
+                    f"Attempting to clone repository for {crate.name}"
+                )
                 return SourceAnalyzer.analyze_crate_source_from_repo(repo_url)
             except Exception as e:
-                logging.error(f"Failed to clone and analyze repository {repo_url}: {e}")
+                logging.error(
+                    f"Failed to clone and analyze repository {repo_url}: {e}"
+                )
 
         return {
             "error": "Could not analyze crate from any available source.",
@@ -138,9 +150,13 @@ class SourceAnalyzer:
                         file_content = tar.extractfile(member)
                         if file_content:
                             try:
-                                content_str = file_content.read().decode("utf-8")
-                                analysis = RustCodeAnalyzer.analyze_rust_content(
-                                    content_str
+                                content_str = file_content.read().decode(
+                                    "utf-8"
+                                )
+                                analysis = (
+                                    RustCodeAnalyzer.analyze_rust_content(
+                                        content_str
+                                    )
                                 )
                                 metrics = RustCodeAnalyzer.aggregate_metrics(
                                     metrics, analysis, structure
@@ -185,7 +201,9 @@ class SourceAnalyzer:
 
             for file_path in rust_files:
                 try:
-                    with open(file_path, encoding="utf-8", errors="ignore") as f:
+                    with open(
+                        file_path, encoding="utf-8", errors="ignore"
+                    ) as f:
                         content = f.read()
                     analysis = RustCodeAnalyzer.analyze_rust_content(content)
                     metrics = RustCodeAnalyzer.aggregate_metrics(
@@ -194,7 +212,9 @@ class SourceAnalyzer:
                 except Exception as e:
                     logging.warning(f"Error analyzing file {file_path}: {e}")
         except Exception as e:
-            metrics["error"] = f"Failed to analyze local directory {directory}: {e}"
+            metrics["error"] = (
+                f"Failed to analyze local directory {directory}: {e}"
+            )
             logging.error(metrics["error"])
         return metrics
 
@@ -212,7 +232,10 @@ class SourceAnalyzer:
                     timeout=120,
                 )
                 return SourceAnalyzer.analyze_local_directory(temp_dir)
-            except (subprocess.CalledProcessError, subprocess.TimeoutExpired) as e:
+            except (
+                subprocess.CalledProcessError,
+                subprocess.TimeoutExpired,
+            ) as e:
                 error_output = ""
                 if hasattr(e, "stderr") and e.stderr:
                     error_output = e.stderr.decode("utf-8", "ignore")
@@ -273,7 +296,9 @@ class UserBehaviorAnalyzer:
         repo = repo.replace(".git", "")
 
         headers = UserBehaviorAnalyzer._get_github_headers()
-        UserBehaviorAnalyzer._fetch_github_activity(owner, repo, headers, result)
+        UserBehaviorAnalyzer._fetch_github_activity(
+            owner, repo, headers, result
+        )
         UserBehaviorAnalyzer._fetch_crates_io_versions(crate.name, result)
 
         return result
@@ -284,7 +309,9 @@ class UserBehaviorAnalyzer:
     ) -> None:
         """Fetch issues, PRs, and commit activity from GitHub."""
         try:
-            issues_url = f"{GITHUB_API_URL}/{owner}/{repo}/issues?state=all&per_page=30"
+            issues_url = (
+                f"{GITHUB_API_URL}/{owner}/{repo}/issues?state=all&per_page=30"
+            )
             issues_resp = requests.get(issues_url, headers=headers, timeout=30)
             issues_resp.raise_for_status()
 
@@ -293,17 +320,21 @@ class UserBehaviorAnalyzer:
                 data_list = (
                     result["pull_requests"] if is_pr else result["issues"]
                 )
-                data_list.append({
-                    "number": item["number"],
-                    "title": item["title"],
-                    "state": item["state"],
-                    "created_at": item["created_at"],
-                    "closed_at": item["closed_at"],
-                    "url": item["html_url"],
-                })
+                data_list.append(
+                    {
+                        "number": item["number"],
+                        "title": item["title"],
+                        "state": item["state"],
+                        "created_at": item["created_at"],
+                        "closed_at": item["closed_at"],
+                        "url": item["html_url"],
+                    }
+                )
 
             # Fetch commit activity (retries on 202)
-            activity_url = f"{GITHUB_API_URL}/{owner}/{repo}/stats/commit_activity"
+            activity_url = (
+                f"{GITHUB_API_URL}/{owner}/{repo}/stats/commit_activity"
+            )
             for _ in range(3):  # Retry up to 3 times
                 activity_resp = requests.get(
                     activity_url, headers=headers, timeout=60
@@ -322,10 +353,14 @@ class UserBehaviorAnalyzer:
                     activity_resp.raise_for_status()
 
         except requests.RequestException as e:
-            logging.warning(f"Error fetching GitHub data for {owner}/{repo}: {e}")
+            logging.warning(
+                f"Error fetching GitHub data for {owner}/{repo}: {e}"
+            )
 
     @staticmethod
-    def _fetch_crates_io_versions(crate_name: str, result: dict[str, Any]) -> None:
+    def _fetch_crates_io_versions(
+        crate_name: str, result: dict[str, Any]
+    ) -> None:
         """Fetch version adoption data from crates.io."""
         try:
             versions_url = f"{CRATES_IO_API_URL}/{crate_name}/versions"

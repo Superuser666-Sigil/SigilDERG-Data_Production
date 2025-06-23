@@ -1,6 +1,7 @@
 import hashlib
 import os
 
+
 def compute_db_hash(db_path: str) -> str:
     BUF_SIZE = 65536
     sha256 = hashlib.sha256()
@@ -12,6 +13,7 @@ def compute_db_hash(db_path: str) -> str:
             sha256.update(data)
     return sha256.hexdigest()
 
+
 def main():
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     db_path = os.path.join(repo_root, "sigil_rag_cache.db")
@@ -20,6 +22,7 @@ def main():
     with open(hash_path, "w") as f:
         f.write(new_hash + "\n")
     print(f"Updated {hash_path} with hash: {new_hash}")
+
 
 if __name__ == "__main__":
     main()

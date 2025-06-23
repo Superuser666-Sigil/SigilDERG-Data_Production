@@ -7,25 +7,33 @@ from typing import NoReturn
 # Basic logging setup for the script itself
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s',
-    stream=sys.stdout
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    stream=sys.stdout,
 )
+
 
 def die(message: str) -> NoReturn:
     """Log a critical error and exit."""
     logging.critical(message)
     sys.exit(1)
 
+
 def find_project_root() -> str:
     """Find the git project root robustly."""
     try:
         result = subprocess.run(
             ["git", "rev-parse", "--show-toplevel"],
-            capture_output=True, text=True, check=True, encoding='utf-8'
+            capture_output=True,
+            text=True,
+            check=True,
+            encoding="utf-8",
         )
         return result.stdout.strip()
     except (subprocess.CalledProcessError, FileNotFoundError) as e:
-        die(f"Failed to find project root. Is this a git repository? Error: {e}")
+        die(
+            f"Failed to find project root. Is this a git repository? Error: {e}"
+        )
+
 
 def main() -> None:
     """
@@ -40,7 +48,9 @@ def main() -> None:
 
     db_path = os.path.join(project_root, "sigil_rag_cache.db")
     hash_path = os.path.join(project_root, "sigil_rag_cache.hash")
-    validator_script = os.path.join(project_root, "scripts", "validate_db_hash.py")
+    validator_script = os.path.join(
+        project_root, "scripts", "validate_db_hash.py"
+    )
 
     if not os.path.exists(validator_script):
         die(f"Core validation script not found: {validator_script}")
@@ -55,10 +65,15 @@ def main() -> None:
             [
                 sys.executable,
                 validator_script,
-                "--db", db_path,
-                "--expected-hash", hash_path
+                "--db",
+                db_path,
+                "--expected-hash",
+                hash_path,
             ],
-            capture_output=True, text=True, check=False, encoding='utf-8'
+            capture_output=True,
+            text=True,
+            check=False,
+            encoding="utf-8",
         )
 
         if result.returncode == 0:
@@ -73,6 +88,7 @@ def main() -> None:
 
     except Exception as e:
         die(f"An unexpected exception occurred during validation: {e}")
+
 
 if __name__ == "__main__":
     main()

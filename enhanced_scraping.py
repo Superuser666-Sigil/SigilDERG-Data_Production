@@ -37,14 +37,17 @@ class EnhancedScraper:
 
     def __init__(self, llm_model: Optional[str] = None):
         self.llm_model = (
-            llm_model or "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
+            llm_model
+            or "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
         )
         self.logger = logging.getLogger(__name__)
         try:
             self.crawler = AsyncWebCrawler()
             self.logger.info("✅ Crawl4AI crawler initialized successfully")
         except Exception as e:
-            self.logger.error(f"❌ Failed to initialize Crawl4AI: {e}", exc_info=True)
+            self.logger.error(
+                f"❌ Failed to initialize Crawl4AI: {e}", exc_info=True
+            )
             # Raise a specific error to signal that the scraper is non-operational
             raise ScrapingError("Failed to initialize Crawl4AI crawler") from e
 
@@ -84,20 +87,32 @@ class EnhancedScraper:
 
             if not result_container or not result_container.results:
                 error_message = "Crawl returned no results"
-                self.logger.error(f"Crawl4AI failed for {url}: {error_message}")
-                raise ScrapingError(f"Crawl4AI failed for {url}: {error_message}")
+                self.logger.error(
+                    f"Crawl4AI failed for {url}: {error_message}"
+                )
+                raise ScrapingError(
+                    f"Crawl4AI failed for {url}: {error_message}"
+                )
 
             result = result_container.results[0]
 
             if not result.success:
-                error_message = result.error_message or "Crawl was not successful"
-                self.logger.error(f"Crawl4AI failed for {url}: {error_message}")
-                raise ScrapingError(f"Crawl4AI failed for {url}: {error_message}")
+                error_message = (
+                    result.error_message or "Crawl was not successful"
+                )
+                self.logger.error(
+                    f"Crawl4AI failed for {url}: {error_message}"
+                )
+                raise ScrapingError(
+                    f"Crawl4AI failed for {url}: {error_message}"
+                )
 
             markdown_content = result.markdown or ""
 
             # Extract structured data
-            structured_data = self._process_extracted_content(result.extracted_content)
+            structured_data = self._process_extracted_content(
+                result.extracted_content
+            )
 
             # Calculate quality score
             quality_score = self._calculate_quality_score(
@@ -138,7 +153,9 @@ class EnhancedScraper:
                 )
                 return {"raw_content": content}
 
-        self.logger.warning(f"Unexpected content type from Crawl4AI: {type(content)}")
+        self.logger.warning(
+            f"Unexpected content type from Crawl4AI: {type(content)}"
+        )
         return {"raw_content": str(content)}
 
     def _calculate_quality_score(
@@ -186,7 +203,9 @@ class CrateDocumentationScraper:
         try:
             self.scraper = EnhancedScraper()
         except ScrapingError as e:
-            logging.error(f"Failed to initialize CrateDocumentationScraper: {e}")
+            logging.error(
+                f"Failed to initialize CrateDocumentationScraper: {e}"
+            )
             # Propagate the error to prevent usage of a non-functional scraper
             raise
 
@@ -207,10 +226,14 @@ class CrateDocumentationScraper:
         for source, url in urls.items():
             if url:
                 try:
-                    result = await self.scraper.scrape_documentation(url, source)
+                    result = await self.scraper.scrape_documentation(
+                        url, source
+                    )
                     results[source] = result
                 except ScrapingError as e:
-                    logging.error(f"Failed to scrape {source} for {crate_name}: {e}")
+                    logging.error(
+                        f"Failed to scrape {source} for {crate_name}: {e}"
+                    )
                     # Create an error result to indicate failure for this source
                     results[source] = EnhancedScrapingResult(
                         url=url,

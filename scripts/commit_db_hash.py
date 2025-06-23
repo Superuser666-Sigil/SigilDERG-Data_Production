@@ -29,7 +29,10 @@ def main():
     print(f"Wrote canonical hash to {HASH_FILE}: {hash_val}")
     # Stage and commit the hash file, bypassing .gitignore
     subprocess.run(["git", "add", "-f", HASH_FILE], check=True)
-    subprocess.run(["git", "commit", "-m", f"Update canonical DB hash: {hash_val}"], check=True)
+    subprocess.run(
+        ["git", "commit", "-m", f"Update canonical DB hash: {hash_val}"],
+        check=True,
+    )
     subprocess.run(["git", "push"], check=True)
 
 

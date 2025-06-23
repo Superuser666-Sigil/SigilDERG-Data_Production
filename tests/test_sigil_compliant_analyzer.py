@@ -34,7 +34,12 @@ sys.path.insert(0, str(project_root))
 
 try:
     # Try to import Crawl4AI components, but make it optional for testing
-    from crawl4ai import AsyncWebCrawler, CrawlResult, LLMConfig, LLMExtractionStrategy
+    from crawl4ai import (
+        AsyncWebCrawler,
+        CrawlResult,
+        LLMConfig,
+        LLMExtractionStrategy,
+    )
 
     CRAWL4AI_AVAILABLE = True
     print("✅ Crawl4AI available for integration testing")
@@ -184,7 +189,9 @@ class TestCodexNexus:
     def test_register_canon(self):
         """Test registering canon entries"""
         codex = CodexNexus()
-        codex.register_canon("crates.io", "https://crates.io", "Rust registry", 9)
+        codex.register_canon(
+            "crates.io", "https://crates.io", "Rust registry", 9
+        )
 
         assert "crates.io" in codex.canon_entries
         entry = codex.canon_entries["crates.io"]
@@ -216,7 +223,9 @@ class TestCodexNexus:
 
 
 # Only run pipeline tests if imports are possible (after fixing Crawl4AI setup)
-@pytest.mark.skipif(not CRAWL4AI_AVAILABLE, reason="Crawl4AI not properly configured")
+@pytest.mark.skipif(
+    not CRAWL4AI_AVAILABLE, reason="Crawl4AI not properly configured"
+)
 class TestSigilCompliantPipelineWithCrawl4AI:
     """Test the main SigilCompliantPipeline class with real Crawl4AI integration"""
 
@@ -271,7 +280,9 @@ class TestSigilCompliantPipelineWithCrawl4AI:
         config = local_llm_config
         assert config is not None
         assert config.api_token == "no-token-needed"
-        assert "localhost" in config.base_url or "gcp" in config.base_url.lower()
+        assert (
+            "localhost" in config.base_url or "gcp" in config.base_url.lower()
+        )
 
     @pytest.mark.asyncio
     async def test_basic_crawl4ai_functionality(self, local_llm_config):
@@ -291,7 +302,9 @@ class TestSigilCompliantPipelineWithCrawl4AI:
             # If successful, check content
             if result.success:
                 assert len(result.markdown) > 0
-                print(f"✅ Successfully crawled {len(result.markdown)} characters")
+                print(
+                    f"✅ Successfully crawled {len(result.markdown)} characters"
+                )
             else:
                 print(
                     f"⚠️  Crawl failed: {result.error_message if hasattr(result, 'error_message') else 'Unknown error'}"
@@ -333,7 +346,8 @@ class TestSigilCompliantPipelineWithCrawl4AI:
         async with AsyncWebCrawler(verbose=True) as crawler:
             try:
                 result = await crawler.arun(
-                    url="https://docs.rs/serde", extraction_strategy=extraction_strategy
+                    url="https://docs.rs/serde",
+                    extraction_strategy=extraction_strategy,
                 )
 
                 if result.success and result.extracted_content:
@@ -344,7 +358,9 @@ class TestSigilCompliantPipelineWithCrawl4AI:
                     print("⚠️  LLM extraction failed or no content extracted")
 
             except Exception as e:
-                print(f"⚠️  LLM test failed (expected if model not running): {e}")
+                print(
+                    f"⚠️  LLM test failed (expected if model not running): {e}"
+                )
                 pytest.skip(f"LLM integration requires running model: {e}")
 
 

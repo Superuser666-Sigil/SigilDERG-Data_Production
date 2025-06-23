@@ -24,7 +24,11 @@ def run_command(
     try:
         if isinstance(cmd, str):
             result = subprocess.run(
-                cmd, shell=True, capture_output=True, text=True, check=check_return
+                cmd,
+                shell=True,
+                capture_output=True,
+                text=True,
+                check=check_return,
             )
         else:
             result = subprocess.run(
@@ -136,7 +140,13 @@ def test_docker_container() -> bool:
     tests: List[Dict[str, Any]] = [
         {
             "name": "Container health test",
-            "cmd": ["docker", "run", "--rm", "rust-crate-pipeline:latest", "test"],
+            "cmd": [
+                "docker",
+                "run",
+                "--rm",
+                "rust-crate-pipeline:latest",
+                "test",
+            ],
             "description": "Testing basic container functionality",
         },
         {
@@ -187,7 +197,13 @@ def test_docker_container() -> bool:
         },
         {
             "name": "Help command",
-            "cmd": ["docker", "run", "--rm", "rust-crate-pipeline:latest", "--help"],
+            "cmd": [
+                "docker",
+                "run",
+                "--rm",
+                "rust-crate-pipeline:latest",
+                "--help",
+            ],
             "description": "Testing help functionality",
         },
     ]

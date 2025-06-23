@@ -26,7 +26,10 @@ def test_main_module_entry_point():
 
     # If it succeeds, should contain help text
     if result.returncode == 0:
-        assert "usage:" in result.stdout.lower() or "help" in result.stdout.lower()
+        assert (
+            "usage:" in result.stdout.lower()
+            or "help" in result.stdout.lower()
+        )
 
 
 def test_main_module_version():

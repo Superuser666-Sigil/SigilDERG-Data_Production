@@ -10,13 +10,15 @@ ENV_INFO = {
     "processor": "1 Processor(s) Installed.",
     "bios_version": "AMI F.23, 1/17/2025",
     "enforcement_rank": 10,  # Highest for dev enforcement
-    "timestamp": datetime.now(timezone.utc).isoformat()
+    "timestamp": datetime.now(timezone.utc).isoformat(),
 }
+
 
 def cache_env_metadata(db_path: str = "sigil_rag_cache.db"):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute("""
+    cur.execute(
+        """
     CREATE TABLE IF NOT EXISTS environment_metadata (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         label TEXT NOT NULL,
@@ -28,7 +30,8 @@ def cache_env_metadata(db_path: str = "sigil_rag_cache.db"):
         enforcement_rank INTEGER NOT NULL,
         timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
     )
-    """)
+    """
+    )
     cur.execute(
         """
         INSERT INTO environment_metadata (label, os_name, os_version, system_type, processor, bios_version, enforcement_rank, timestamp)
@@ -42,12 +45,13 @@ def cache_env_metadata(db_path: str = "sigil_rag_cache.db"):
             ENV_INFO["processor"],
             ENV_INFO["bios_version"],
             ENV_INFO["enforcement_rank"],
-            ENV_INFO["timestamp"]
-        )
+            ENV_INFO["timestamp"],
+        ),
     )
     conn.commit()
     conn.close()
     print("Dev environment metadata cached to DB.")
+
 
 if __name__ == "__main__":
     cache_env_metadata()

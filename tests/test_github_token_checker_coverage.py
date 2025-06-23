@@ -39,7 +39,8 @@ class TestCheckGithubTokenQuick:
         assert message == "GITHUB_TOKEN seems too short - may be invalid"
 
     @patch.dict(
-        os.environ, {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"}
+        os.environ,
+        {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"},
     )
     @patch("requests.get")
     def test_valid_token_success(self, mock_get):
@@ -47,7 +48,9 @@ class TestCheckGithubTokenQuick:
         # Mock successful API response
         mock_response = Mock()
         mock_response.status_code = 200
-        mock_response.json.return_value = {"resources": {"core": {"remaining": 4500}}}
+        mock_response.json.return_value = {
+            "resources": {"core": {"remaining": 4500}}
+        }
         mock_get.return_value = mock_response
 
         is_valid, message = check_github_token_quick()
@@ -55,7 +58,8 @@ class TestCheckGithubTokenQuick:
         assert "Token valid, 4500 API calls remaining" in message
 
     @patch.dict(
-        os.environ, {"GITHUB_TOKEN": "ghp_invalid_token_1234567890123456789012345"}
+        os.environ,
+        {"GITHUB_TOKEN": "ghp_invalid_token_1234567890123456789012345"},
     )
     @patch("requests.get")
     def test_invalid_token_401(self, mock_get):
@@ -69,7 +73,8 @@ class TestCheckGithubTokenQuick:
         assert message == "GitHub token is invalid or expired"
 
     @patch.dict(
-        os.environ, {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"}
+        os.environ,
+        {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"},
     )
     @patch("requests.get")
     def test_api_error_other_status(self, mock_get):
@@ -83,7 +88,8 @@ class TestCheckGithubTokenQuick:
         assert "GitHub API returned status code: 500" in message
 
     @patch.dict(
-        os.environ, {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"}
+        os.environ,
+        {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"},
     )
     @patch("requests.get")
     def test_requests_exception(self, mock_get):
@@ -95,7 +101,8 @@ class TestCheckGithubTokenQuick:
         assert "API request failed: Network error" in message
 
     @patch.dict(
-        os.environ, {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"}
+        os.environ,
+        {"GITHUB_TOKEN": "ghp_1234567890123456789012345678901234567890"},
     )
     @patch("requests.get")
     def test_general_exception(self, mock_get):
@@ -120,7 +127,9 @@ class TestPromptForTokenSetup:
         # Verify the prompt was displayed
         mock_print.assert_called()
         print_calls = [call[0][0] for call in mock_print.call_args_list]
-        assert any("[KEY] GitHub Token Required" in call for call in print_calls)
+        assert any(
+            "[KEY] GitHub Token Required" in call for call in print_calls
+        )
         assert any(
             "[WARNING] Running with limited GitHub API access" in call
             for call in print_calls
@@ -143,7 +152,8 @@ class TestPromptForTokenSetup:
         # Verify the stop message was displayed
         print_calls = [call[0][0] for call in mock_print.call_args_list]
         assert any(
-            "[STOP] Please set up your GitHub token" in call for call in print_calls
+            "[STOP] Please set up your GitHub token" in call
+            for call in print_calls
         )
 
     @patch("builtins.input", return_value="no")
@@ -175,7 +185,10 @@ class TestCheckAndSetupGithubToken:
     @patch("logging.debug")
     def test_valid_token_already_set(self, mock_debug, mock_check):
         """Test when token is already valid"""
-        mock_check.return_value = (True, "Token valid, 5000 API calls remaining")
+        mock_check.return_value = (
+            True,
+            "Token valid, 5000 API calls remaining",
+        )
 
         result = check_and_setup_github_token()
         assert result is True
@@ -196,7 +209,9 @@ class TestCheckAndSetupGithubToken:
 
         result = check_and_setup_github_token()
         assert result is True
-        mock_warning.assert_called_once_with("GitHub token issue: Token is invalid")
+        mock_warning.assert_called_once_with(
+            "GitHub token issue: Token is invalid"
+        )
         mock_prompt.assert_called_once()
 
     @patch("rust_crate_pipeline.github_token_checker.check_github_token_quick")
@@ -217,12 +232,17 @@ class TestCheckAndSetupGithubToken:
     @patch("rust_crate_pipeline.github_token_checker.check_github_token_quick")
     @patch("logging.warning")
     @patch("logging.error")
-    @patch("sys.stdin.isatty", return_value=False)  # Non-interactive environment
+    @patch(
+        "sys.stdin.isatty", return_value=False
+    )  # Non-interactive environment
     def test_invalid_token_non_interactive(
         self, mock_isatty, mock_error, mock_warning, mock_check
     ):
         """Test invalid token in non-interactive environment"""
-        mock_check.return_value = (False, "GITHUB_TOKEN environment variable not set")
+        mock_check.return_value = (
+            False,
+            "GITHUB_TOKEN environment variable not set",
+        )
 
         result = check_and_setup_github_token()
         assert result is False

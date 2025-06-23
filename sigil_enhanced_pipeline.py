@@ -20,16 +20,20 @@ import uuid
 
 from rust_crate_pipeline.config import PipelineConfig, EnrichedCrate
 from rust_crate_pipeline.network import CrateAPIClient, GitHubBatchClient
-from rust_crate_pipeline.utils.file_utils import load_rule_zero_typing_quick_lookup
+from rust_crate_pipeline.utils.file_utils import (
+    load_rule_zero_typing_quick_lookup,
+)
 
 # Enhanced scraping integration
 try:
     import enhanced_scraping  # noqa: F401
+
     ENHANCED_SCRAPING_AVAILABLE = True
 except ImportError:
     ENHANCED_SCRAPING_AVAILABLE = False
     logging.warning(
-        "Enhanced scraping not available in Sigil pipeline - " "using basic methods"
+        "Enhanced scraping not available in Sigil pipeline - "
+        "using basic methods"
     )
 
 
@@ -97,7 +101,9 @@ class SigilCompliantPipeline:
                 )
 
         # Handle additional pipeline arguments
-        self.output_dir: str = kwargs.get("output_dir", self._create_output_dir())
+        self.output_dir: str = kwargs.get(
+            "output_dir", self._create_output_dir()
+        )
         self.limit: int | None = kwargs.get("limit", None)
         self.crate_list: str | None = kwargs.get("crate_list", None)
         self.skip_ai: bool = kwargs.get("skip_ai", False)
@@ -182,7 +188,10 @@ class SigilCompliantPipeline:
 
             # Step 7: IRL confidence calculation
             irl_confidence = self._calculate_irl_confidence(
-                canon_sources, reasoning_trace, quality_assessment, trust_verdict
+                canon_sources,
+                reasoning_trace,
+                quality_assessment,
+                trust_verdict,
             )
             reasoning_trace.append(f"IRL confidence: {irl_confidence:.3f}")
 
@@ -201,7 +210,9 @@ class SigilCompliantPipeline:
 
             # Step 9: Verify integrity and log
             if not enriched_crate.verify_integrity():
-                raise ValueError(f"Integrity verification failed for {execution_id}")
+                raise ValueError(
+                    f"Integrity verification failed for {execution_id}"
+                )
 
             execution_time = time.time() - start_time
             self._log_execution(
@@ -253,7 +264,9 @@ class SigilCompliantPipeline:
             raise ValueError(f"Invalid crate name length: {len(canonical)}")
 
         if canonical.startswith("-") or canonical.endswith("-"):
-            raise ValueError("Invalid crate name format: cannot start/end with hyphen")
+            raise ValueError(
+                "Invalid crate name format: cannot start/end with hyphen"
+            )
 
         return canonical
 
@@ -272,7 +285,9 @@ class SigilCompliantPipeline:
                     )
 
             except Exception as e:
-                logging.warning(f"Canon source {source_name} validation failed: {e}")
+                logging.warning(
+                    f"Canon source {source_name} validation failed: {e}"
+                )
 
         if len(available_sources) < 2:
             raise ValueError(
@@ -290,7 +305,9 @@ class SigilCompliantPipeline:
             )
 
             if not metadata:
-                raise ValueError(f"No metadata available for crate: {crate_name}")
+                raise ValueError(
+                    f"No metadata available for crate: {crate_name}"
+                )
 
             # Validate required fields
             required_fields = ["name", "version", "description"]
@@ -324,7 +341,9 @@ class SigilCompliantPipeline:
             return primary_data
 
         except Exception as e:
-            logging.error(f"Primary data extraction failed for {crate_name}: {e}")
+            logging.error(
+                f"Primary data extraction failed for {crate_name}: {e}"
+            )
             # Return minimal viable data structure
             return {
                 "name": crate_name,
@@ -363,8 +382,12 @@ class SigilCompliantPipeline:
                     enrichment_data.update(
                         {
                             "github_forks": gh_data.get("forks_count", 0),
-                            "github_issues": gh_data.get("open_issues_count", 0),
-                            "github_watchers": gh_data.get("watchers_count", 0),
+                            "github_issues": gh_data.get(
+                                "open_issues_count", 0
+                            ),
+                            "github_watchers": gh_data.get(
+                                "watchers_count", 0
+                            ),
                             "github_language": gh_data.get("language", ""),
                             "github_created": gh_data.get("created_at", ""),
                             "github_updated": gh_data.get("updated_at", ""),
@@ -381,8 +404,12 @@ class SigilCompliantPipeline:
             enrichment_data.update(
                 {
                     "readme_length": len(primary_data.get("readme", "")),
-                    "code_snippet_count": len(primary_data.get("code_snippets", [])),
-                    "dependency_count": len(primary_data.get("dependencies", [])),
+                    "code_snippet_count": len(
+                        primary_data.get("code_snippets", [])
+                    ),
+                    "dependency_count": len(
+                        primary_data.get("dependencies", [])
+                    ),
                     "feature_count": len(primary_data.get("features", [])),
                     "keyword_count": len(primary_data.get("keywords", [])),
                     "category_count": len(primary_data.get("categories", [])),
@@ -401,7 +428,14 @@ class SigilCompliantPipeline:
                 "tensor",
                 "deep-learning",
             ]
-            web_indicators = ["web", "http", "api", "server", "client", "async"]
+            web_indicators = [
+                "web",
+                "http",
+                "api",
+                "server",
+                "client",
+                "async",
+            ]
             crypto_indicators = [
                 "crypto",
                 "cryptography",
@@ -434,7 +468,9 @@ class SigilCompliantPipeline:
                 else "general"
             )
             enrichment_data["primary_domain"] = primary_domain
-            enrichment_data["domain_confidence"] = domain_scores.get(primary_domain, 0)
+            enrichment_data["domain_confidence"] = domain_scores.get(
+                primary_domain, 0
+            )
 
         except Exception as e:
             logging.warning(f"Secondary analysis failed for {crate_name}: {e}")
@@ -515,7 +551,9 @@ class SigilCompliantPipeline:
                 from dateutil.parser import parse
 
                 updated_date = parse(github_updated)
-                days_since_update = (datetime.now(timezone.utc) - updated_date).days
+                days_since_update = (
+                    datetime.now(timezone.utc) - updated_date
+                ).days
 
                 if days_since_update < 30:
                     maintenance_score += 2.0
@@ -775,7 +813,9 @@ class SigilCompliantPipeline:
 
     def run(self) -> Tuple[List[SigilEnrichedCrate], Dict[str, Any]]:
         """Main pipeline execution - compatible interface with CrateDataPipeline"""
-        logging.info(f"Starting Sigil Protocol pipeline with {len(self.crates)} crates")
+        logging.info(
+            f"Starting Sigil Protocol pipeline with {len(self.crates)} crates"
+        )
 
         if self.skip_ai:
             logging.info(
@@ -830,7 +870,9 @@ class SigilCompliantPipeline:
                 logging.info(f"Mock Sacred Chain created for {crate_name}")
 
             except Exception as e:
-                logging.error(f"Failed to create mock processing for {crate_name}: {e}")
+                logging.error(
+                    f"Failed to create mock processing for {crate_name}: {e}"
+                )
                 continue
 
         # Save results
@@ -843,9 +885,14 @@ class SigilCompliantPipeline:
                 duration:.2f}s"
         )
 
-        return all_enriched, {"analysis_type": "compatibility", "sacred_chain": "mock"}
+        return all_enriched, {
+            "analysis_type": "compatibility",
+            "sacred_chain": "mock",
+        }
 
-    def _create_basic_enriched_crate(self, crate_name: str) -> SigilEnrichedCrate:
+    def _create_basic_enriched_crate(
+        self, crate_name: str
+    ) -> SigilEnrichedCrate:
         """Create basic enriched crate without AI processing"""
         try:
             metadata = self.crate_client.fetch_crate_metadata(crate_name)
@@ -873,7 +920,9 @@ class SigilCompliantPipeline:
                 trust_verdict="DEFER",  # No AI analysis
                 irl_confidence=0.5,  # Neutral confidence
                 canon_sources_used=["crates.io"],
-                reasoning_trace=[f"Basic metadata extraction for {crate_name}"],
+                reasoning_trace=[
+                    f"Basic metadata extraction for {crate_name}"
+                ],
             )
 
             return enriched
@@ -896,12 +945,16 @@ class SigilCompliantPipeline:
                 reasoning_trace=[f"Error processing {crate_name}: {str(e)}"],
             )
 
-    def _create_mock_sacred_chain_crate(self, crate_name: str) -> SigilEnrichedCrate:
+    def _create_mock_sacred_chain_crate(
+        self, crate_name: str
+    ) -> SigilEnrichedCrate:
         """Create mock Sacred Chain result for testing"""
         basic_crate = self._create_basic_enriched_crate(crate_name)
 
         # Enhance with mock Sacred Chain data
-        basic_crate.sacred_chain_id = f"mock-sacred-{crate_name}-{uuid.uuid4().hex[:8]}"
+        basic_crate.sacred_chain_id = (
+            f"mock-sacred-{crate_name}-{uuid.uuid4().hex[:8]}"
+        )
         basic_crate.trust_verdict = "ALLOW"  # Mock positive verdict
         basic_crate.irl_confidence = 0.8  # Mock high confidence
         basic_crate.canon_sources_used = ["crates.io", "github.com"]
@@ -916,7 +969,9 @@ class SigilCompliantPipeline:
 
         return basic_crate
 
-    def _save_results(self, enriched_crates: List[SigilEnrichedCrate], mode: str):
+    def _save_results(
+        self, enriched_crates: List[SigilEnrichedCrate], mode: str
+    ):
         """Save results to output directory"""
         try:
             results = {
@@ -926,7 +981,9 @@ class SigilCompliantPipeline:
                 "crates": [asdict(crate) for crate in enriched_crates],
             }
 
-            output_file = os.path.join(self.output_dir, f"sigil_results_{mode}.json")
+            output_file = os.path.join(
+                self.output_dir, f"sigil_results_{mode}.json"
+            )
             with open(output_file, "w") as f:
                 json.dump(results, f, indent=2)
 
@@ -949,9 +1006,7 @@ class SigilCompliantPipeline:
         verdicts = [log["trust_verdict"] for log in self.execution_log]
         confidences = [log["irl_confidence"] for log in self.execution_log]
 
-        verdict_distribution = {
-            v: verdicts.count(v) for v in set(verdicts)
-        }
+        verdict_distribution = {v: verdicts.count(v) for v in set(verdicts)}
         average_confidence = (
             sum(confidences) / total_executions if total_executions else 0.0
         )
@@ -980,7 +1035,9 @@ async def batch_process_crates_with_sigil(
     pipeline = SigilCompliantPipeline(config)
     results = []
 
-    print(f"🔒 Starting Sigil-compliant batch processing of {len(crate_list)} crates")
+    print(
+        f"🔒 Starting Sigil-compliant batch processing of {len(crate_list)} crates"
+    )
     print("Rule Zero: No code can be stubbed, no TODOs left behind")
     print("=" * 70)
 
@@ -988,7 +1045,9 @@ async def batch_process_crates_with_sigil(
         print(f"\n[{i}/{len(crate_list)}] Processing {crate_name}...")
 
         try:
-            enriched_crate = await pipeline.process_crate_with_sacred_chain(crate_name)
+            enriched_crate = await pipeline.process_crate_with_sacred_chain(
+                crate_name
+            )
             results.append(enriched_crate)
 
             print(
@@ -1020,7 +1079,10 @@ async def main():
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s - %(levelname)s - %(message)s",
-        handlers=[logging.FileHandler("sigil_pipeline.log"), logging.StreamHandler()],
+        handlers=[
+            logging.FileHandler("sigil_pipeline.log"),
+            logging.StreamHandler(),
+        ],
     )
 
     try:

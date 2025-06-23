@@ -18,7 +18,10 @@ def test_enhanced_scraping_initialization() -> bool:
     """Test the enhanced scraping module initialization."""
     print("🧪 Testing Enhanced Scraping Module Initialization...")
     try:
-        from enhanced_scraping import CrateDocumentationScraper, EnhancedScraper
+        from enhanced_scraping import (
+            CrateDocumentationScraper,
+            EnhancedScraper,
+        )
 
         print("✅ Enhanced scraping imports successful")
 
@@ -141,8 +144,14 @@ def main() -> bool:
 
     # Define synchronous tests
     sync_tests: List[Tuple[str, Callable[[], bool]]] = [
-        ("Enhanced Scraping Initialization", test_enhanced_scraping_initialization),
-        ("Pipeline Configuration Integration", test_pipeline_config_integration),
+        (
+            "Enhanced Scraping Initialization",
+            test_enhanced_scraping_initialization,
+        ),
+        (
+            "Pipeline Configuration Integration",
+            test_pipeline_config_integration,
+        ),
         ("CLI Integration", test_cli_integration),
     ]
 

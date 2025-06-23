@@ -110,7 +110,9 @@ def test_ollama_connection():
             return False
 
     except requests.exceptions.ConnectionError:
-        print("[ERROR] Ollama not running or not accessible at localhost:11434")
+        print(
+            "[ERROR] Ollama not running or not accessible at localhost:11434"
+        )
         print("   Make sure Ollama is installed and running:")
         print("   1. Install Ollama from https://ollama.ai/")
         print("   2. Run: ollama serve")
@@ -176,7 +178,9 @@ def main():
         print("\n[SUCCESS] All setup steps completed successfully!")
         print("\nNext steps:")
         print("1. Review the integration plan: CRAWL4AI_INTEGRATION_PLAN.md")
-        print("2. Test the starter script: python crawl4ai_integration_starter.py")
+        print(
+            "2. Test the starter script: python crawl4ai_integration_starter.py"
+        )
         print("3. Begin integrating with your existing pipeline")
     else:
         print("\n⚠️  Some setup steps failed. Please review the errors above.")

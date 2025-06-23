@@ -53,7 +53,9 @@ def test_sigil_pipeline_initialization():
                     pipeline.output_dir}"
             )
             print(f"✅ Pipeline crate list has {len(pipeline.crates)} crates")
-            print(f"✅ Canon registry has {len(pipeline.canon_registry)} sources")
+            print(
+                f"✅ Canon registry has {len(pipeline.canon_registry)} sources"
+            )
     except ImportError as e:
         print(f"❌ Required module missing: {e}")
         assert False, f"Required module missing: {e}"
@@ -138,7 +140,9 @@ def test_pipeline_run_basic():
             # Check output files
             output_files = list(Path(temp_dir).glob("*.json"))
             if output_files:
-                print(f"✅ Output files created: {[f.name for f in output_files]}")
+                print(
+                    f"✅ Output files created: {[f.name for f in output_files]}"
+                )
 
                 # Validate JSON content
                 with open(output_files[0], "r") as f:
@@ -242,7 +246,9 @@ def test_mock_sacred_chain():
 
 def test_typing_quick_lookup_access():
     """Test that the Rule Zero typing quick lookup is loaded and accessible in the Sigil pipeline."""
-    print("\n🔎 Testing Rule Zero typing quick lookup access in Sigil pipeline...")
+    print(
+        "\n🔎 Testing Rule Zero typing quick lookup access in Sigil pipeline..."
+    )
     from rust_crate_pipeline.config import PipelineConfig
     from sigil_enhanced_pipeline import SigilCompliantPipeline
 
@@ -301,7 +307,9 @@ def main():
     print(f"🎯 Test Results: {passed}/{total} tests passed")
 
     if passed == total:
-        print("🎉 All tests passed! Sigil pipeline integration is working correctly.")
+        print(
+            "🎉 All tests passed! Sigil pipeline integration is working correctly."
+        )
         return 0
     else:
         print("⚠️ Some tests failed. Check output above for details.")

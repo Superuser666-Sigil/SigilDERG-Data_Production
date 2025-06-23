@@ -107,7 +107,9 @@ def test_compatibility_interface():
             sigil_result = sigil_pipeline.run()
 
             if isinstance(sigil_result, tuple) and len(sigil_result) == 2:
-                print("✅ Sigil pipeline returns tuple(list, dict) as expected")
+                print(
+                    "✅ Sigil pipeline returns tuple(list, dict) as expected"
+                )
                 print(f"   - First element type: {type(sigil_result[0])}")
                 print(f"   - Second element type: {type(sigil_result[1])}")
             else:
@@ -146,7 +148,9 @@ def test_cli_argument_parsing():
                 print(
                     f"   - Enable Sigil: {getattr(args, 'enable_sigil_protocol', False)}"
                 )
-                print(f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}")
+                print(
+                    f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}"
+                )
                 print(f"   - Skip AI: {getattr(args, 'skip_ai', False)}")
                 print(f"   - Limit: {getattr(args, 'limit', 'None')}")
 

@@ -34,10 +34,10 @@ class TrustVerdict(Enum):
     DENY = "DENY"
     DEFER = "DEFER"
     FLAG = "FLAG"
-    
+
     def __str__(self):
         return self.value
-    
+
     def to_json(self):
         return self.value
 
@@ -61,8 +61,8 @@ class SacredChainTrace:
         """Generate complete audit log entry"""
         # Convert the dataclass to dict and handle enum serialization
         data_dict = asdict(self)
-        data_dict['verdict'] = self.verdict.value  # Convert enum to string
-        
+        data_dict["verdict"] = self.verdict.value  # Convert enum to string
+
         return json.dumps(
             {
                 "execution_id": self.execution_id,
@@ -129,7 +129,9 @@ class CodexNexus:
         self.canon_entries[key] = canon_entry
         self.authority_chain.append(f"{timestamp}:{key}:{authority_level}")
 
-        logging.info(f"Canon registered: {key} with authority {authority_level}")
+        logging.info(
+            f"Canon registered: {key} with authority {authority_level}"
+        )
         return True
 
     def get_canon(self, key: str) -> Optional[CanonEntry]:
@@ -184,7 +186,10 @@ class IRLEngine:
             with open(audit_file, "w") as f:
                 # Convert each trace to a dictionary before dumping
                 json.dump(
-                    [json.loads(trace.to_audit_log()) for trace in self.execution_log],
+                    [
+                        json.loads(trace.to_audit_log())
+                        for trace in self.execution_log
+                    ],
                     f,
                     indent=2,
                 )
@@ -240,7 +245,9 @@ class IRLEngine:
         }
 
         # Step 7: IRL confidence score with explanation
-        irl_score = self._calculate_irl_score(context_sources, reasoning_steps, verdict)
+        irl_score = self._calculate_irl_score(
+            context_sources, reasoning_steps, verdict
+        )
 
         # Create complete Sacred Chain trace
         trace = SacredChainTrace(
@@ -258,7 +265,9 @@ class IRLEngine:
 
         # Verify integrity before storing
         if not trace.verify_integrity():
-            raise ValueError(f"Sacred Chain integrity check failed for {execution_id}")
+            raise ValueError(
+                f"Sacred Chain integrity check failed for {execution_id}"
+            )
 
         self.execution_log.append(trace)
         logging.info(
@@ -350,7 +359,9 @@ class IRLEngine:
         quality_score = self._synthesize_quality_score(
             basic_metadata, doc_analysis, sentiment, ecosystem
         )
-        reasoning_steps.append(f"Synthesized quality score: {quality_score:.2f}/10")
+        reasoning_steps.append(
+            f"Synthesized quality score: {quality_score:.2f}/10"
+        )
 
         return (
             reasoning_steps,
@@ -444,7 +455,9 @@ class IRLEngine:
                     pass
 
         except Exception as e:
-            logging.error(f"Documentation analysis failed for {crate_name}: {e}")
+            logging.error(
+                f"Documentation analysis failed for {crate_name}: {e}"
+            )
 
         # Fallback with minimal viable data
         return {
@@ -457,7 +470,9 @@ class IRLEngine:
             "error": "Analysis failed, using fallback values",
         }
 
-    async def _analyze_community_sentiment(self, crate_name: str) -> Dict[str, Any]:
+    async def _analyze_community_sentiment(
+        self, crate_name: str
+    ) -> Dict[str, Any]:
         """Production-ready community sentiment analysis"""
         assert self.crawler is not None
         try:
@@ -495,7 +510,8 @@ class IRLEngine:
                     )
 
                     config = CrawlerRunConfig(
-                        extraction_strategy=extraction_strategy, page_timeout=20000
+                        extraction_strategy=extraction_strategy,
+                        page_timeout=20000,
                     )
 
                     result = await self.crawler.arun(
@@ -543,7 +559,9 @@ class IRLEngine:
             return sentiment_data
 
         except Exception as e:
-            logging.error(f"Community sentiment analysis failed for {crate_name}: {e}")
+            logging.error(
+                f"Community sentiment analysis failed for {crate_name}: {e}"
+            )
 
         # Fallback data
         return {
@@ -555,7 +573,9 @@ class IRLEngine:
             "error": "Sentiment analysis failed",
         }
 
-    async def _analyze_ecosystem_position(self, crate_name: str) -> Dict[str, Any]:
+    async def _analyze_ecosystem_position(
+        self, crate_name: str
+    ) -> Dict[str, Any]:
         """Production-ready ecosystem analysis"""
         assert self.crawler is not None
         try:
@@ -594,8 +614,10 @@ class IRLEngine:
                     if isinstance(result, CrawlResult):
                         ecosystem_data = json.loads(result.extracted_content)
                         # Basic validation
-                        if ("category" in ecosystem_data and
-                                "maturity" in ecosystem_data):
+                        if (
+                            "category" in ecosystem_data
+                            and "maturity" in ecosystem_data
+                        ):
                             return ecosystem_data
                 except json.JSONDecodeError:
                     pass
@@ -650,7 +672,9 @@ class IRLEngine:
         final_score = min(10.0, sum(scores))
         return final_score
 
-    def _generate_traceable_suggestion(self, reasoning_steps: List[str]) -> str:
+    def _generate_traceable_suggestion(
+        self, reasoning_steps: List[str]
+    ) -> str:
         """Generate suggestion with complete traceability"""
         if not reasoning_steps:
             return "No analysis performed - insufficient reasoning steps"
@@ -660,7 +684,9 @@ class IRLEngine:
         for step in reasoning_steps:
             if "quality score:" in step.lower():
                 try:
-                    quality_match = float(step.split(":")[-1].strip().split("/")[0])
+                    quality_match = float(
+                        step.split(":")[-1].strip().split("/")[0]
+                    )
                     break
                 except BaseException:
                     pass
@@ -707,7 +733,10 @@ class IRLEngine:
             for step in reasoning_steps
             for indicator in error_indicators
         ):
-            return TrustVerdict.FLAG, "Error indicators present in reasoning steps"
+            return (
+                TrustVerdict.FLAG,
+                "Error indicators present in reasoning steps",
+            )
 
         # Decision based on confidence level in suggestion
         if "HIGH CONFIDENCE" in suggestion:
@@ -775,13 +804,19 @@ class SigilCompliantPipeline:
         In a real system, this might be loaded from a secure config store.
         """
         self.codex.register_canon(
-            "crates.io", "https://crates.io", "Official Rust package registry", 9
+            "crates.io",
+            "https://crates.io",
+            "Official Rust package registry",
+            9,
         )
         self.codex.register_canon(
             "docs.rs", "https://docs.rs", "Official documentation hosting", 8
         )
         self.codex.register_canon(
-            "github.com", "https://github.com", "Primary source code hosting", 7
+            "github.com",
+            "https://github.com",
+            "Primary source code hosting",
+            7,
         )
         self.codex.register_canon(
             "community",
@@ -790,7 +825,9 @@ class SigilCompliantPipeline:
             5,
         )
 
-    async def run_analysis(self, crate_names: List[str]) -> List[SacredChainTrace]:
+    async def run_analysis(
+        self, crate_names: List[str]
+    ) -> List[SacredChainTrace]:
         """
         Runs the full analysis for a list of crate names.
         """
@@ -799,8 +836,10 @@ class SigilCompliantPipeline:
             self.irl_engine = irl_engine
             for crate_name in crate_names:
                 try:
-                    trace = await self.irl_engine.analyze_crate_with_sacred_chain(
-                        crate_name
+                    trace = (
+                        await self.irl_engine.analyze_crate_with_sacred_chain(
+                            crate_name
+                        )
                     )
                     results.append(trace)
                 except Exception as e:
@@ -809,7 +848,9 @@ class SigilCompliantPipeline:
                     )
         return results
 
-    def generate_final_report(self, traces: List[SacredChainTrace]) -> Dict[str, Any]:
+    def generate_final_report(
+        self, traces: List[SacredChainTrace]
+    ) -> Dict[str, Any]:
         """
         Generates a comprehensive final report from the analysis traces.
         """
@@ -822,14 +863,14 @@ class SigilCompliantPipeline:
         }
         return report
 
-    def get_audit_summary(self, traces: List[SacredChainTrace]) -> Dict[str, Any]:
+    def get_audit_summary(
+        self, traces: List[SacredChainTrace]
+    ) -> Dict[str, Any]:
         """
         Creates a summary of the audit trail from the analysis traces.
         """
         summary = {
-            "total_verdicts": {
-                verdict.value: 0 for verdict in TrustVerdict
-            },
+            "total_verdicts": {verdict.value: 0 for verdict in TrustVerdict},
             "average_irl_score": 0.0,
             "canon_versions_used": list(
                 set(trace.canon_version for trace in traces if trace)
@@ -839,7 +880,7 @@ class SigilCompliantPipeline:
             return summary
 
         for trace in traces:
-            if hasattr(trace.verdict, 'value'):
+            if hasattr(trace.verdict, "value"):
                 summary["total_verdicts"][trace.verdict.value] += 1
             else:
                 # Handle case where verdict might be a string

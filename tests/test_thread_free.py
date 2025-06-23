@@ -72,7 +72,9 @@ async def test_async_pipeline():
                     f"⚠️  Async fetch test skipped (expected in test environment): {e}"
                 )
             post_processing_threads = monitor_threads()
-            print(f"📊 Post-processing thread count: {post_processing_threads}")
+            print(
+                f"📊 Post-processing thread count: {post_processing_threads}"
+            )
             thread_increase = post_processing_threads - initial_threads
             print(f"\n📈 Thread count change: +{thread_increase}")
             assert (
@@ -102,7 +104,10 @@ async def test_sigil_async_pipeline():
         from sigil_enhanced_pipeline import SigilCompliantPipeline
 
         config = PipelineConfig(
-            enable_crawl4ai=False, model_path="dummy_path", batch_size=2, n_workers=2
+            enable_crawl4ai=False,
+            model_path="dummy_path",
+            batch_size=2,
+            n_workers=2,
         )
         print("✅ PipelineConfig created")
 
@@ -121,7 +126,9 @@ async def test_sigil_async_pipeline():
         assert (
             thread_increase <= 1
         ), f"WARNING: {thread_increase} additional threads created"
-        print("✅ SUCCESS: Sigil pipeline operates without thread proliferation")
+        print(
+            "✅ SUCCESS: Sigil pipeline operates without thread proliferation"
+        )
     except ImportError as e:
         print(f"❌ Required module missing: {e}")
         assert False, f"Required module missing: {e}"
@@ -157,9 +164,13 @@ def test_threading_imports():
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
                     if "ThreadPoolExecutor" in content:
-                        threading_usage.append(f"{file_path}: ThreadPoolExecutor")
+                        threading_usage.append(
+                            f"{file_path}: ThreadPoolExecutor"
+                        )
                     if "concurrent.futures" in content:
-                        threading_usage.append(f"{file_path}: concurrent.futures")
+                        threading_usage.append(
+                            f"{file_path}: concurrent.futures"
+                        )
             except UnicodeDecodeError:
                 print(f"⚠️  Could not read {file_path} due to encoding issues")
                 continue

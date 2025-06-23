@@ -66,10 +66,14 @@ def prompt_for_token_setup():
     print("\n" + "=" * 60)
 
     # Ask if user wants to continue without token (limited functionality)
-    response = input("\nContinue without GitHub token? (y/N): ").strip().lower()
+    response = (
+        input("\nContinue without GitHub token? (y/N): ").strip().lower()
+    )
 
     if response in ["y", "yes"]:
-        print("[WARNING] Running with limited GitHub API access (60 requests/hour)")
+        print(
+            "[WARNING] Running with limited GitHub API access (60 requests/hour)"
+        )
         print("   You may encounter rate limit warnings.")
         return True
     else:
@@ -90,7 +94,9 @@ def check_and_setup_github_token():
 
     # Check if we're in a non-interactive environment
     if not sys.stdin.isatty():
-        logging.error("GitHub token not configured and running in non-interactive mode")
+        logging.error(
+            "GitHub token not configured and running in non-interactive mode"
+        )
         logging.error("Set GITHUB_TOKEN environment variable before running")
         return False
 

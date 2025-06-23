@@ -98,7 +98,9 @@ class CrateAPIClient:
         self.config = config
         # Simple session without dependency on HTTPClientUtils
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.0"})
+        self.session.headers.update(
+            {"User-Agent": "SigilDERG-Data-Production/1.0"}
+        )
 
     def fetch_crate_metadata(self, crate_name: str) -> dict[str, Any] | None:
         """Fetch metadata with retry logic"""
@@ -120,7 +122,9 @@ class CrateAPIClient:
         """Enhanced metadata fetching that tries multiple sources"""
         # First try crates.io (primary source)
         try:
-            r = self.session.get(f"https://crates.io/api/v1/crates/{crate_name}")
+            r = self.session.get(
+                f"https://crates.io/api/v1/crates/{crate_name}"
+            )
             if r.ok:
                 data = r.json()
                 crate_data = data["crate"]
@@ -153,7 +157,8 @@ class CrateAPIClient:
                     version_data = versions_response.json().get("version", {})
                     features_dict = version_data.get("features", {})
                     features = [
-                        {"name": k, "dependencies": v} for k, v in features_dict.items()
+                        {"name": k, "dependencies": v}
+                        for k, v in features_dict.items()
                     ]
 
                 # Repository info and GitHub stars
@@ -165,8 +170,12 @@ class CrateAPIClient:
                     match = re.search(r"github.com/([^/]+)/([^/]+)", repo)
                     if match:
                         owner, repo_name = match.groups()
-                        repo_name = repo_name.split(".")[0]  # Handle .git extensions
-                        gh_url = f"https://api.github.com/repos/{owner}/{repo_name}"
+                        repo_name = repo_name.split(".")[
+                            0
+                        ]  # Handle .git extensions
+                        gh_url = (
+                            f"https://api.github.com/repos/{owner}/{repo_name}"
+                        )
                         gh_headers: dict[str, str] = {}
                         if self.config.github_token:
                             gh_headers["Authorization"] = (
@@ -184,7 +193,9 @@ class CrateAPIClient:
                     lib_rs_url = f"https://lib.rs/crates/{crate_name}"
                     lib_rs_response = self.session.get(lib_rs_url)
                     if lib_rs_response.ok:
-                        soup = BeautifulSoup(lib_rs_response.text, "html.parser")
+                        soup = BeautifulSoup(
+                            lib_rs_response.text, "html.parser"
+                        )
                         # Get README from lib.rs if not already available
                         if not readme:
                             readme_div = soup.find("div", class_="readme")

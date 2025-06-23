@@ -17,7 +17,10 @@ def test_enhanced_scraping():
     """Test the enhanced scraping module"""
     print("🧪 Testing Enhanced Scraping Module...")
     try:
-        from enhanced_scraping import CrateDocumentationScraper, EnhancedScraper
+        from enhanced_scraping import (
+            CrateDocumentationScraper,
+            EnhancedScraper,
+        )
 
         print("✅ Enhanced scraping imports successful")
         scraper = EnhancedScraper(enable_crawl4ai=True)
@@ -89,9 +92,15 @@ def test_cli_integration():
         try:
             args = parse_arguments()
             print("✅ CLI parsing successful:")
-            print(f"   - Enable Crawl4AI: {getattr(args, 'enable_crawl4ai', True)}")
-            print(f"   - Crawl4AI Model: {getattr(args, 'crawl4ai_model', 'default')}")
-            print(f"   - Disable Crawl4AI: {getattr(args, 'disable_crawl4ai', False)}")
+            print(
+                f"   - Enable Crawl4AI: {getattr(args, 'enable_crawl4ai', True)}"
+            )
+            print(
+                f"   - Crawl4AI Model: {getattr(args, 'crawl4ai_model', 'default')}"
+            )
+            print(
+                f"   - Disable Crawl4AI: {getattr(args, 'disable_crawl4ai', False)}"
+            )
             return True
         finally:
             sys.argv = original_argv
@@ -170,7 +179,8 @@ def main():
         print("🎉 All tests passed! Crawl4AI integration is successful!")
         print("\n📋 Ready for use:")
         print(
-            "   - Standard Pipeline: " "python -m rust_crate_pipeline --enable-crawl4ai"
+            "   - Standard Pipeline: "
+            "python -m rust_crate_pipeline --enable-crawl4ai"
         )
         print(
             "   - Sigil Pipeline: "
@@ -178,7 +188,8 @@ def main():
             "--enable-sigil-protocol --enable-crawl4ai"
         )
         print(
-            "   - Disable Crawl4AI: " "python -m rust_crate_pipeline --disable-crawl4ai"
+            "   - Disable Crawl4AI: "
+            "python -m rust_crate_pipeline --disable-crawl4ai"
         )
     else:
         print("⚠️  Some tests failed. Review the errors above.")

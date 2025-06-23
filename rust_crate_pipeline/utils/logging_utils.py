@@ -25,7 +25,9 @@ def configure_logging(
     # Console handler
     console_handler = logging.StreamHandler()
     console_handler.setLevel(log_level)
-    console_format = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+    console_format = logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s"
+    )
     console_handler.setFormatter(console_format)
     logger.addHandler(console_handler)
 
@@ -55,7 +57,9 @@ def log_execution_time(func):
         start_time = time.time()
         result = func(*args, **kwargs)
         end_time = time.time()
-        logging.info(f"{func.__name__} executed in {end_time - start_time:.2f} seconds")
+        logging.info(
+            f"{func.__name__} executed in {end_time - start_time:.2f} seconds"
+        )
         return result
 
     return wrapper

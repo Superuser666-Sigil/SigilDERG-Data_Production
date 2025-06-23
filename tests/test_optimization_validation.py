@@ -37,7 +37,9 @@ def test_atomic_utilities():
         }
         """
 
-        content_analysis = RustCodeAnalyzer.analyze_rust_content(test_rust_code)
+        content_analysis = RustCodeAnalyzer.analyze_rust_content(
+            test_rust_code
+        )
         assert content_analysis["loc"] > 0
         assert "main" in content_analysis["functions"]
         assert "MyStruct" in content_analysis["types"]
@@ -120,7 +122,9 @@ def test_atomic_utilities():
         sections = MetadataExtractor.extract_readme_sections(test_readme)
         # Accept 'intro' as a valid section if no explicit header is present
         assert (
-            "my_crate" in sections or "My Crate" in sections or "intro" in sections
+            "my_crate" in sections
+            or "My Crate" in sections
+            or "intro" in sections
         ), f"Expected section 'my_crate', 'My Crate', or 'intro' in {sections.keys()}"
         print("✅ MetadataExtractor.extract_readme_sections() works")
 

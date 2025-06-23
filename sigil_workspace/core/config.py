@@ -16,7 +16,8 @@ class WorkspaceConfig(BaseModel):
 
     # Rule Zero Settings
     enable_sacred_chain: bool = Field(
-        default=True, description="Enable Sacred Chain traceability for all operations"
+        default=True,
+        description="Enable Sacred Chain traceability for all operations",
     )
     audit_level: str = Field(
         default="FULL", description="Audit level: MINIMAL, STANDARD, FULL"
@@ -28,7 +29,8 @@ class WorkspaceConfig(BaseModel):
         description="Minimum confidence score for operations",
     )
     require_reasoning_trace: bool = Field(
-        default=True, description="Require explicit reasoning for all decisions"
+        default=True,
+        description="Require explicit reasoning for all decisions",
     )
 
     # Processing Settings
@@ -42,7 +44,9 @@ class WorkspaceConfig(BaseModel):
         default=300, gt=0, description="Default timeout for operations"
     )
     max_retries: int = Field(
-        default=3, ge=0, description="Maximum retry attempts for failed operations"
+        default=3,
+        ge=0,
+        description="Maximum retry attempts for failed operations",
     )
 
     # AI Settings
@@ -61,8 +65,12 @@ class WorkspaceConfig(BaseModel):
     output_directory: str = Field(
         default="./output", description="Directory for output files"
     )
-    log_directory: str = Field(default="./logs", description="Directory for log files")
-    cache_enabled: bool = Field(default=True, description="Enable request caching")
+    log_directory: str = Field(
+        default="./logs", description="Directory for log files"
+    )
+    cache_enabled: bool = Field(
+        default=True, description="Enable request caching"
+    )
     cache_ttl: int = Field(
         default=3600, ge=0, description="Cache time-to-live in seconds"
     )
@@ -116,7 +124,11 @@ class WorkspaceConfig(BaseModel):
                 # Convert string values to appropriate types
                 field_type = cls.model_fields[config_key].annotation
                 if field_type is bool:
-                    config_data[config_key] = value.lower() in ("true", "1", "yes")
+                    config_data[config_key] = value.lower() in (
+                        "true",
+                        "1",
+                        "yes",
+                    )
                 elif field_type is int:
                     config_data[config_key] = int(value)
                 elif field_type is float:
@@ -164,8 +176,13 @@ class SacredChainConfig:
         if self.hash_algorithm not in ["sha256", "sha512", "blake2b"]:
             errors.append("hash_algorithm must be sha256, sha512, or blake2b")
 
-        if self.confidence_score_precision < 1 or self.confidence_score_precision > 10:
-            errors.append("confidence_score_precision must be between 1 and 10")
+        if (
+            self.confidence_score_precision < 1
+            or self.confidence_score_precision > 10
+        ):
+            errors.append(
+                "confidence_score_precision must be between 1 and 10"
+            )
 
         if not (
             0

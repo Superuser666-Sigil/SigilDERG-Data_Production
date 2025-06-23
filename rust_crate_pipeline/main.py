@@ -20,6 +20,7 @@ SigilCompliantPipeline = None
 try:
     sys.path.append(".")  # Add current directory to path
     from sigil_enhanced_pipeline import SigilCompliantPipeline
+
     _sigil_available = True
 except ImportError:
     _sigil_available = False
@@ -119,7 +120,9 @@ Examples:
     )
 
     parser.add_argument(
-        "--skip-source-analysis", action="store_true", help="Skip source code analysis"
+        "--skip-source-analysis",
+        action="store_true",
+        help="Skip source code analysis",
     )
 
     # Enhanced scraping with Crawl4AI
@@ -170,7 +173,9 @@ Examples:
     )
 
     parser.add_argument(
-        "--config-file", type=str, help="JSON config file to override default settings"
+        "--config-file",
+        type=str,
+        help="JSON config file to override default settings",
     )
 
     return parser.parse_args()
@@ -190,9 +195,12 @@ def configure_logging(log_level: str = "INFO") -> None:
 
     # Create formatters
     detailed_formatter = logging.Formatter(
-        "%(asctime)s [%(levelname)s] %(name)s: %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
+        "%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+        datefmt="%Y-%m-%d %H:%M:%S",
     )
-    simple_formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+    simple_formatter = logging.Formatter(
+        "%(asctime)s [%(levelname)s] %(message)s"
+    )
 
     # Console handler
     console_handler = logging.StreamHandler()
@@ -203,7 +211,9 @@ def configure_logging(log_level: str = "INFO") -> None:
     # File handler with unique timestamp
     log_filename = f"crate_enrichment_{time.strftime('%Y%m%d-%H%M%S')}.log"
     try:
-        file_handler = logging.FileHandler(log_filename, mode="w", encoding="utf-8")
+        file_handler = logging.FileHandler(
+            log_filename, mode="w", encoding="utf-8"
+        )
         file_handler.setLevel(logging.DEBUG)  # Always capture DEBUG+ to file
         file_handler.setFormatter(detailed_formatter)
         root_logger.addHandler(file_handler)
@@ -239,17 +249,24 @@ def enforce_rule_zero_reinforcement() -> None:
         or os.environ.get("PRODUCTION", "false").lower() == "true"
     )
     if not enforce:
-        logging.info("Rule Zero DB hash/signature check skipped (dev mode or override)")
+        logging.info(
+            "Rule Zero DB hash/signature check skipped (dev mode or override)"
+        )
         return
 
     # Detect project root robustly (works in subdirs, CI, etc.)
     try:
-        result = subprocess.run([
-            "git", "rev-parse", "--show-toplevel"
-        ], capture_output=True, text=True, check=True)
+        result = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
         project_root: str = result.stdout.strip()
     except Exception as e:
-        logging.critical(f"Failed to detect project root for Rule Zero validation: {e}")
+        logging.critical(
+            f"Failed to detect project root for Rule Zero validation: {e}"
+        )
         sys.exit(1)
 
     db_path: str = os.path.join(project_root, "sigil_rag_cache.db")
@@ -258,35 +275,56 @@ def enforce_rule_zero_reinforcement() -> None:
     # Validate DB hash/signature using the provided script with explicit arguments
     try:
         logging.info("Validating Rule Zero DB hash/signature...")
-        result = subprocess.run([
-            sys.executable, os.path.join(project_root, "audits", "validate_db_hash.py"),
-            "--db", db_path,
-            "--expected-hash", hash_path
-        ], capture_output=True, text=True, check=False)
+        result = subprocess.run(
+            [
+                sys.executable,
+                os.path.join(project_root, "audits", "validate_db_hash.py"),
+                "--db",
+                db_path,
+                "--expected-hash",
+                hash_path,
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
         if result.returncode != 0:
             logging.error(
-                f"Rule Zero DB hash/signature validation failed: {result.stdout}\n{result.stderr}")
+                f"Rule Zero DB hash/signature validation failed: {result.stdout}\n{result.stderr}"
+            )
             # Allow manual override with justification
             override_justification = os.environ.get("RULE_ZERO_OVERRIDE", "")
             if override_justification:
-                logging.warning("Manual override of Rule Zero DB hash/signature validation enabled.")
-                logging.warning(f"Override justification: {override_justification}")
+                logging.warning(
+                    "Manual override of Rule Zero DB hash/signature validation enabled."
+                )
+                logging.warning(
+                    f"Override justification: {override_justification}"
+                )
             else:
                 logging.critical(
-                    "Rule Zero DB hash/signature validation failed and no override provided. Exiting.")
+                    "Rule Zero DB hash/signature validation failed and no override provided. Exiting."
+                )
                 sys.exit(1)
         else:
             logging.info("Rule Zero DB hash/signature validation successful.")
     except Exception as e:
         logging.critical(
-            f"Exception during Rule Zero DB hash/signature validation: {e}")
+            f"Exception during Rule Zero DB hash/signature validation: {e}"
+        )
         sys.exit(1)
 
     # Log environment metadata for traceability
     try:
-        subprocess.run([
-            sys.executable, os.path.join(project_root, "scripts", "cache_env_metadata.py")
-        ], capture_output=True, text=True, check=False)
+        subprocess.run(
+            [
+                sys.executable,
+                os.path.join(project_root, "scripts", "cache_env_metadata.py"),
+            ],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
     except Exception as e:
         logging.warning(f"Failed to cache environment metadata: {e}")
 
@@ -296,9 +334,13 @@ def main() -> None:
     enforce_rule_zero_reinforcement()
 
     # Setup production environment first for optimal logging
-    logging.debug("Starting main() function - setting up production environment")
+    logging.debug(
+        "Starting main() function - setting up production environment"
+    )
     prod_config: dict[str, Any] = setup_production_environment()
-    logging.debug(f"Production environment setup complete: {bool(prod_config)}")
+    logging.debug(
+        f"Production environment setup complete: {bool(prod_config)}"
+    )
 
     logging.debug("Parsing command line arguments")
     args = parse_arguments()
@@ -327,11 +369,15 @@ def main() -> None:
         # Apply production optimizations if available
         if prod_config:
             logging.debug(f"Applying production config: {prod_config}")
-            config_kwargs.update({
-                "max_retries": prod_config.get("max_retries", 3),
-                "batch_size": prod_config.get("batch_size", 10),
-                "checkpoint_interval": prod_config.get("checkpoint_interval", 10),
-            })
+            config_kwargs.update(
+                {
+                    "max_retries": prod_config.get("max_retries", 3),
+                    "batch_size": prod_config.get("batch_size", 10),
+                    "checkpoint_interval": prod_config.get(
+                        "checkpoint_interval", 10
+                    ),
+                }
+            )
 
         if args.batch_size:
             logging.debug(f"Setting batch_size to {args.batch_size}")
@@ -346,7 +392,9 @@ def main() -> None:
             logging.debug(f"Setting max_tokens to {args.max_tokens}")
             config_kwargs["max_tokens"] = args.max_tokens
         if args.checkpoint_interval:
-            logging.debug(f"Setting checkpoint_interval to {args.checkpoint_interval}")
+            logging.debug(
+                f"Setting checkpoint_interval to {args.checkpoint_interval}"
+            )
             config_kwargs["checkpoint_interval"] = args.checkpoint_interval
 
         # Load config file if provided
@@ -404,23 +452,31 @@ def main() -> None:
         logging.debug(f"Pipeline kwargs: {pipeline_kwargs}")
 
         # Sigil Protocol integration - handle pipeline creation properly
-        if hasattr(args, "enable_sigil_protocol") and args.enable_sigil_protocol:
+        if (
+            hasattr(args, "enable_sigil_protocol")
+            and args.enable_sigil_protocol
+        ):
             logging.info("Sigil Protocol mode requested")
             logging.debug(
                 f"Sigil available: {_sigil_available}, SigilCompliantPipeline: {
-                    SigilCompliantPipeline is not None}")
+                    SigilCompliantPipeline is not None}"
+            )
 
             # Import Sigil enhanced pipeline
             if _sigil_available and SigilCompliantPipeline is not None:
                 logging.info("Creating Sigil Protocol compliant pipeline")
-                sigil_pipeline = SigilCompliantPipeline(config, **pipeline_kwargs)
+                sigil_pipeline = SigilCompliantPipeline(
+                    config, **pipeline_kwargs
+                )
                 logging.info(
                     "Starting Sigil Protocol compliant pipeline with "
                     "Sacred Chain processing"
                 )
 
                 # Run Sigil pipeline (synchronous)
-                logging.debug("About to run Sigil pipeline - this is synchronous")
+                logging.debug(
+                    "About to run Sigil pipeline - this is synchronous"
+                )
                 result = sigil_pipeline.run()  # type: ignore[misc]
                 logging.debug(f"Sigil pipeline run() returned: {result}")
 
@@ -434,34 +490,46 @@ def main() -> None:
 
                 logging.debug("Creating standard pipeline as Sigil fallback")
                 standard_pipeline = CrateDataPipeline(config)
-                logging.debug("Standard pipeline created, about to run asynchronously")
+                logging.debug(
+                    "Standard pipeline created, about to run asynchronously"
+                )
 
                 # Run standard pipeline (asynchronous)
                 import asyncio
+
                 logging.debug("Starting asyncio.run() for standard pipeline")
                 result = asyncio.run(
                     standard_pipeline.run()
                 )  # type: ignore[misc,assignment]
-                logging.debug(f"Standard pipeline asyncio.run() returned: {result}")
+                logging.debug(
+                    f"Standard pipeline asyncio.run() returned: {result}"
+                )
 
                 if result:
                     logging.info("Standard pipeline completed successfully")
                 else:
-                    logging.warning("Standard pipeline completed with no results")
+                    logging.warning(
+                        "Standard pipeline completed with no results"
+                    )
         else:
             logging.info("Standard pipeline mode")
             logging.debug("Creating standard pipeline")
             standard_pipeline = CrateDataPipeline(config)
             logging.info(f"Starting pipeline with {len(vars(args))} arguments")
-            logging.debug("Standard pipeline created, about to run asynchronously")
+            logging.debug(
+                "Standard pipeline created, about to run asynchronously"
+            )
 
             # Run standard pipeline (asynchronous)
             import asyncio
+
             logging.debug("Starting asyncio.run() for standard pipeline")
             result = asyncio.run(
                 standard_pipeline.run()
             )  # type: ignore[misc,assignment]
-            logging.debug(f"Standard pipeline asyncio.run() returned: {result}")
+            logging.debug(
+                f"Standard pipeline asyncio.run() returned: {result}"
+            )
 
             if result:
                 logging.info("Standard pipeline completed successfully")
@@ -472,7 +540,9 @@ def main() -> None:
 
     except Exception as e:
         logging.critical(f"Pipeline failed: {str(e)}")
-        logging.debug(f"Exception details: {type(e).__name__}: {str(e)}", exc_info=True)
+        logging.debug(
+            f"Exception details: {type(e).__name__}: {str(e)}", exc_info=True
+        )
         sys.exit(1)
 
 
