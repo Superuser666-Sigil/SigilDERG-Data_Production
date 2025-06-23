@@ -15,16 +15,18 @@ class HTTPClientUtils:
 
     @staticmethod
     def create_cached_session(
-            cache_name: str,
-            cache_ttl: int) -> CachedSession:
+        cache_name: str, cache_ttl: int
+    ) -> CachedSession:
         """Create a standardized cached session - atomic unit"""
         return CachedSession(cache_name, expire_after=cache_ttl)
 
     @staticmethod
-    def fetch_with_retry(session: requests.Session,                         url: str,
-                         max_retries: int = 3,
-                         headers: Optional[Dict[str, str]] = None
-                         ) -> Optional[requests.Response]:
+    def fetch_with_retry(
+        session: requests.Session,
+        url: str,
+        max_retries: int = 3,
+        headers: Optional[Dict[str, str]] = None,
+    ) -> Optional[requests.Response]:
         """Fetch URL with exponential backoff retry - atomic unit"""
         for attempt in range(max_retries):
             try:
@@ -35,16 +37,18 @@ class HTTPClientUtils:
                     logging.warning(
                         f"HTTP {
                             response.status_code} for {url} on attempt {
-                            attempt + 1}")
+                            attempt + 1}"
+                    )
             except Exception as e:
                 logging.warning(
                     f"Attempt {
                         attempt +
                         1} failed for {url}: {
-                        str(e)}")
+                        str(e)}"
+                )
 
             if attempt < max_retries - 1:  # Don't sleep on the last attempt
-                wait_time = 2 ** attempt
+                wait_time = 2**attempt
                 time.sleep(wait_time)
 
         return None
@@ -59,7 +63,7 @@ class HTTPClientUtils:
         if match:
             owner, repo_name = match.groups()
             # Handle .git extensions
-            repo_name = repo_name.split('.')[0]
+            repo_name = repo_name.split(".")[0]
             return owner, repo_name
 
         return None
@@ -80,7 +84,7 @@ class MetadataExtractor:
     def extract_code_snippets(readme: str) -> list[str]:
         """Extract Rust code snippets from markdown README - atomic unit"""
         if not readme:
-            return []        # Find Rust code blocks
+            return []  # Find Rust code blocks
         pattern = (
             r"```(?:rust|(?:no_run|ignore|compile_fail|mdbook-runnable)?)"
             r"\s*([\s\S]*?)```"
@@ -104,24 +108,26 @@ class MetadataExtractor:
         current_section = "intro"
         current_content: list[str] = []
 
-        lines = readme.split('\n')
+        lines = readme.split("\n")
         for line in lines:
-            if line.startswith('#'):
+            if line.startswith("#"):
                 # Save previous section
                 if current_content:
-                    sections[current_section] = '\n'.join(
-                        current_content).strip()
+                    sections[current_section] = "\n".join(
+                        current_content
+                    ).strip()
 
                 # Start new section
-                current_section = line.strip(
-                    '#').strip().lower().replace(' ', '_')
+                current_section = (
+                    line.strip("#").strip().lower().replace(" ", "_")
+                )
                 current_content = []
             else:
                 current_content.append(line)
 
         # Save final section
         if current_content:
-            sections[current_section] = '\n'.join(current_content).strip()
+            sections[current_section] = "\n".join(current_content).strip()
 
         return sections
 
@@ -142,5 +148,5 @@ class MetadataExtractor:
             "code_snippets": [],
             "features": [],
             "readme_sections": {},
-            "source": "unknown"
+            "source": "unknown",
         }
