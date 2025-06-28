@@ -1,6 +1,6 @@
 # Rust Crate Pipeline Dockerfile
-# Version: 1.3.5
-# Updated: June 27, 2025
+# Version: 1.4.5
+# Updated: June 28, 2025
 # Changes: Enhanced scraping support with Crawl4AI and Playwright
 
 FROM python:3.12-slim

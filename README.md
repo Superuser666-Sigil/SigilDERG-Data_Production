@@ -9,6 +9,8 @@ The Rust Crate Pipeline is designed to collect, process, and enrich metadata fro
 ## Features
 
 - **Enhanced Web Scraping**: Automated collection of crate metadata from crates.io using Crawl4AI with Playwright
+- **Optional Sanitization**: PII/secret stripping now opt-in via `Sanitizer(enabled=True)`—data remains unaltered by default.
+- **Robust Serialization**: Built-in helper converts all complex objects (e.g., `MarkdownGenerationResult`) to JSON-safe formats.
 - **AI Enrichment**: Local and Azure OpenAI-powered analysis of crate descriptions, features, and documentation
 - **Multi-Provider LLM Support**: Unified LLM processor supporting OpenAI, Azure OpenAI, Ollama, LM Studio, and LiteLLM
 - **Cargo Testing**: Automated cargo build, test, and audit execution for comprehensive crate analysis
@@ -338,6 +340,11 @@ docker run -it -v $(pwd):/app rust-crate-pipeline
 ```
 
 ## Recent Improvements
+
+### Version 1.4.5
+- **Sanitization Toggle** – default off; opt-in for redaction.
+- **JSON Serializer** – universal helper prevents non-serializable errors.
+- **Version bump & Docker update**
 
 ### Version 1.4.0
 - **Security**: Robust Ed25519/RSA cryptographic signing and provenance

@@ -1,12 +1,16 @@
 from typing import Dict, List, Tuple, Optional, Any
 """Version information for rust-crate-pipeline."""
 
-__version__ = "1.4.4"
+__version__ = "1.4.5"
 __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
 __author__ = "SigilDERG Team"
 __email__ = "sigilderg@example.com"
 
 # Release history
+# 1.4.5 - Feature Release
+#         - Sanitizer now disabled by default; optional via `enabled=True`.
+#         - Robust JSON serialization for MarkdownGenerationResult and others.
+#         - Removed default PII stripping; crate data preserved.
 # 1.4.4 - Security Release
 #         - Added PII and secret sanitization to the pipeline.
 # 1.4.3 - In-progress
