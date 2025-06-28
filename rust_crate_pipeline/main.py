@@ -468,7 +468,7 @@ def main() -> None:
                 logging.info("Falling back to standard pipeline")
 
                 logging.debug("Creating standard pipeline as Sigil fallback")
-                standard_pipeline = CrateDataPipeline(config)
+                standard_pipeline = CrateDataPipeline(config, **pipeline_kwargs)
                 logging.debug("Standard pipeline created, about to run asynchronously")
 
                 # Run standard pipeline (asynchronous)
@@ -487,7 +487,7 @@ def main() -> None:
         else:
             logging.info("Standard pipeline mode")
             logging.debug("Creating standard pipeline")
-            standard_pipeline = CrateDataPipeline(config)
+            standard_pipeline = CrateDataPipeline(config, **pipeline_kwargs)
             logging.info(f"Starting pipeline with {len(vars(args))} arguments")
             logging.debug("Standard pipeline created, about to run asynchronously")
 

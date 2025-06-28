@@ -34,10 +34,21 @@ except ImportError:
     logging.warning("Enhanced scraping not available - using basic methods")
 
 
+class CustomJSONEncoder(json.JSONEncoder):
+    """Custom JSON encoder to handle non-serializable objects"""
+    def default(self, obj):
+        if hasattr(obj, 'to_dict'):
+            return obj.to_dict()
+        elif hasattr(obj, '__dict__'):
+            return obj.__dict__
+        else:
+            return str(obj)
+
+
 class CrateDataPipeline:
     """Orchestrates the entire data collection, enrichment, and analysis pipeline."""
 
-    def __init__(self, config: PipelineConfig) -> None:
+    def __init__(self, config: PipelineConfig, crate_list: "List[str] | None" = None, **kwargs) -> None:
         self.config = config
         self.api_client = CrateAPIClient(config)
         self.github_client = GitHubBatchClient(config)
@@ -60,7 +71,13 @@ class CrateDataPipeline:
         # Initialize cargo analyzer
         self.cargo_analyzer = CrateAnalyzer(".")
         
-        self.crates = self._get_crate_list()
+        # Use provided crate_list or load from file
+        if crate_list:
+            self.crates = crate_list
+            logging.info(f"Using provided crate list: {len(crate_list)} crates")
+        else:
+            self.crates = self._get_crate_list()
+        
         self.output_dir = self._create_output_dir()
         self.enhanced_scraper: Any = (
             self._initialize_enhanced_scraper()
@@ -280,7 +297,7 @@ class CrateDataPipeline:
 
         with open(filename, "w") as f:
             for item in data:
-                f.write(json.dumps(item.to_dict()) + "\n")
+                f.write(json.dumps(item.to_dict(), cls=CustomJSONEncoder) + "\n")
 
         logging.info(f"Saved checkpoint to {filename}")
         return filename
@@ -297,7 +314,7 @@ class CrateDataPipeline:
         )
         with open(final_output_path, "w") as f:
             for item in data:
-                f.write(json.dumps(item.to_dict()) + "\n")
+                f.write(json.dumps(item.to_dict(), cls=CustomJSONEncoder) + "\n")
 
         # Save dependency analysis
         dep_file_path = os.path.join(

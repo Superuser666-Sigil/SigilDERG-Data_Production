@@ -1,5 +1,5 @@
-# This workflow validates the canonical hash of the SQLite RAG cache against a secret value.
-# The canonical hash must be stored in the GitHub repository secrets as SIGIL_RAG_DB_HASH.
+# This workflow validates the canonical hash of the SQLite RAG cache.
+# The hash is stored in sigil_rag_cache.hash and should match the database.
 
 name: Validate DB Hash
 
@@ -7,6 +7,7 @@ on:
   push:
     paths:
       - '**/sigil_rag_cache.db'
+      - '**/sigil_rag_cache.hash'
       - '.github/workflows/validate-db-hash.yml'
   workflow_dispatch:
 
@@ -22,22 +23,14 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Check for required secrets
-        run: |
-          if [ -z "${{ secrets.SIGIL_RAG_DB_HASH }}" ]; then
-            echo "⚠️  SIGIL_RAG_DB_HASH secret not found. Skipping validation."
-            echo "To enable validation, add the expected hash to repository secrets."
-            exit 0
-          fi
-
-      - name: Compute DB hash and validate
+      - name: Validate DB hash
         run: |
           if [ ! -f "sigil_rag_cache.db" ]; then
             echo "❌ Database file not found"
             exit 1
           fi
-          if [ -z "${{ secrets.SIGIL_RAG_DB_HASH }}" ]; then
-            echo "⚠️  Skipping hash validation - secret not configured"
-            exit 0
+          if [ ! -f "sigil_rag_cache.hash" ]; then
+            echo "❌ Hash file not found"
+            exit 1
           fi
-          python audits/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "${{ secrets.SIGIL_RAG_DB_HASH }}"
+          python audits/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "$(cat sigil_rag_cache.hash)"
