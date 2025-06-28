@@ -452,3 +452,17 @@ python run_pipeline_with_llm.py --llm-provider anthropic --llm-model claude-3-so
 - Run `python test_unified_llm.py` to verify provider support and configuration.
 
 For more, see [`README_LLM_PROVIDERS.md`](./README_LLM_PROVIDERS.md) and the CLI help output. 
+
+## Public RAG Database Hash Verification
+
+The canonical hash of the RAG SQLite database (`sigil_rag_cache.db`) is stored in the public file `sigil_rag_cache.hash`.
+
+- **Purpose:** Anyone can verify the integrity of the RAG database by comparing its SHA256 hash to the value in `sigil_rag_cache.hash`.
+- **How to verify:**
+
+```sh
+python audits/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "$(cat sigil_rag_cache.hash)"
+```
+
+- **CI/CD:** The GitHub Actions workflow `.github/workflows/validate-db-hash.yml` automatically checks this on every push.
+- **No secrets required:** The hash is public and verifiable by anyone.
