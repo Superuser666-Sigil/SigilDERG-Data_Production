@@ -1,0 +1,2659 @@
+[
+  {
+    "execution_id": "exec-d74c5438-460eaa50-1751110797",
+    "timestamp": "2025-06-28T11:39:57.687143+00:00",
+    "sacred_chain": {
+      "input_data": "blake3",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'blake3' -> 'blake3'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "blake3",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#arrayref@0.3.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayref-0.3.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "arrayref",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayref-0.3.9\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libarrayref-5e1cf234cde9f425.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#constant_time_eq@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\constant_time_eq-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "constant_time_eq",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\constant_time_eq-0.3.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libconstant_time_eq-42f63db839fefdce.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libshlex-27ba53e6f2866fee.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libshlex-27ba53e6f2866fee.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#arrayvec@0.7.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayvec-0.7.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "arrayvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayvec-0.7.6\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libarrayvec-c3304eea33f86c86.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.19\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcc-0ed1623597a85e2c.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcc-0ed1623597a85e2c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-20218c6530ecdeba\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-20218c6530ecdeba\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "linked_libs": [
+                "static=blake3_sse2_sse41_avx2_assembly",
+                "static=blake3_avx512_assembly"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-086154bb8d0e63ec\\out",
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-086154bb8d0e63ec\\out"
+              ],
+              "cfgs": [
+                "blake3_sse2_ffi",
+                "blake3_sse41_ffi",
+                "blake3_avx2_ffi",
+                "blake3_avx512_ffi"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-086154bb8d0e63ec\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libblake3-2174c753f0ff1609.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libshlex-27ba53e6f2866fee.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libshlex-27ba53e6f2866fee.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.19\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcc-0ed1623597a85e2c.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcc-0ed1623597a85e2c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#arrayvec@0.7.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayvec-0.7.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "arrayvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayvec-0.7.6\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libarrayvec-c3304eea33f86c86.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#constant_time_eq@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\constant_time_eq-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "constant_time_eq",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\constant_time_eq-0.3.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libconstant_time_eq-42f63db839fefdce.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#arrayref@0.3.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayref-0.3.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "arrayref",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\arrayref-0.3.9\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\deps\\libarrayref-5e1cf234cde9f425.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-d88a26504dcf1ac1\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-d88a26504dcf1ac1\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "linked_libs": [
+                "static=blake3_sse2_sse41_avx2_assembly",
+                "static=blake3_avx512_assembly"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-2a1ec0540968092e\\out",
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-2a1ec0540968092e\\out"
+              ],
+              "cfgs": [
+                "blake3_sse2_ffi",
+                "blake3_sse41_ffi",
+                "blake3_avx2_ffi",
+                "blake3_avx512_ffi"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\target\\debug\\build\\blake3-2a1ec0540968092e\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: struct `ChunkState` has a public `len` method, but no `is_empty` method\n  --> src\\guts.rs:21:5\n   |\n21 |     pub fn len(&self) -> usize {\n   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_without_is_empty\n   = note: `#[warn(clippy::len_without_is_empty)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_without_is_empty",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::len_without_is_empty)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::len_without_is_empty",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "struct `ChunkState` has a public `len` method, but no `is_empty` method",
+                "spans": [
+                  {
+                    "byte_end": 580,
+                    "byte_start": 554,
+                    "column_end": 31,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\guts.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 21,
+                    "line_start": 21,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 5,
+                        "text": "    pub fn len(&self) -> usize {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: manually reimplementing `div_ceil`\n   --> src\\hazmat.rs:374:5\n    |\n374 |     ((input_len + 1) / 2).next_power_of_two()\n    |     ^^^^^^^^^^^^^^^^^^^^^ help: consider using `.div_ceil()`: `input_len.div_ceil(2)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_div_ceil\n    = note: `#[warn(clippy::manual_div_ceil)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_div_ceil",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::manual_div_ceil)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using `.div_ceil()`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 17148,
+                        "byte_start": 17127,
+                        "column_end": 26,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\hazmat.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 374,
+                        "line_start": 374,
+                        "suggested_replacement": "input_len.div_ceil(2)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 5,
+                            "text": "    ((input_len + 1) / 2).next_power_of_two()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_div_ceil",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "manually reimplementing `div_ceil`",
+                "spans": [
+                  {
+                    "byte_end": 17148,
+                    "byte_start": 17127,
+                    "column_end": 26,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\hazmat.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 374,
+                    "line_start": 374,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 5,
+                        "text": "    ((input_len + 1) / 2).next_power_of_two()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\hazmat.rs:436:9\n    |\n436 |         &left_child,\n    |         ^^^^^^^^^^^ help: change this to: `left_child`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 19109,
+                        "byte_start": 19098,
+                        "column_end": 20,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\hazmat.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 436,
+                        "line_start": 436,
+                        "suggested_replacement": "left_child",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 20,
+                            "highlight_start": 9,
+                            "text": "        &left_child,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 19109,
+                    "byte_start": 19098,
+                    "column_end": 20,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\hazmat.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 436,
+                    "line_start": 436,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 9,
+                        "text": "        &left_child,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\hazmat.rs:437:9\n    |\n437 |         &right_child,\n    |         ^^^^^^^^^^^^ help: change this to: `right_child`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 19131,
+                        "byte_start": 19119,
+                        "column_end": 21,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\hazmat.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 437,
+                        "line_start": 437,
+                        "suggested_replacement": "right_child",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 9,
+                            "text": "        &right_child,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 19131,
+                    "byte_start": 19119,
+                    "column_end": 21,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\hazmat.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 437,
+                    "line_start": 437,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 9,
+                        "text": "        &right_child,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (9/7)\n   --> src\\platform.rs:205:5\n    |\n205 | /     pub fn hash_many<const N: usize>(\n206 | |         &self,\n207 | |         inputs: &[&[u8; N]],\n208 | |         key: &CVWords,\n...   |\n214 | |         out: &mut [u8],\n215 | |     ) {\n    | |_____^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n    = note: `#[warn(clippy::too_many_arguments)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::too_many_arguments)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (9/7)",
+                "spans": [
+                  {
+                    "byte_end": 7764,
+                    "byte_start": 7500,
+                    "column_end": 6,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 215,
+                    "line_start": 205,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 5,
+                        "text": "    pub fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "        &self,"
+                      },
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 1,
+                        "text": "        inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "        key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "        counter: u64,"
+                      },
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 1,
+                        "text": "        increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "        flags: u8,"
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "        flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "        flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 1,
+                        "text": "        out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    ) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this operation will always return zero. This is likely not the intended outcome\n   --> src\\platform.rs:520:52\n    |\n520 |     out[0] = u32::from_le_bytes(*array_ref!(bytes, 0 * 4, 4));\n    |                                                    ^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op\n    = note: `#[deny(clippy::erasing_op)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::erasing_op)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::erasing_op",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this operation will always return zero. This is likely not the intended outcome",
+                "spans": [
+                  {
+                    "byte_end": 16382,
+                    "byte_start": 16377,
+                    "column_end": 57,
+                    "column_start": 52,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 520,
+                    "line_start": 520,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 52,
+                        "text": "    out[0] = u32::from_le_bytes(*array_ref!(bytes, 0 * 4, 4));"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this operation has no effect\n   --> src\\platform.rs:521:52\n    |\n521 |     out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));\n    |                                                    ^^^^^ help: consider reducing it to: `4`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op\n    = note: `#[warn(clippy::identity_op)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::identity_op)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider reducing it to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16445,
+                        "byte_start": 16440,
+                        "column_end": 57,
+                        "column_start": 52,
+                        "expansion": null,
+                        "file_name": "src\\platform.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 521,
+                        "line_start": 521,
+                        "suggested_replacement": "4",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 57,
+                            "highlight_start": 52,
+                            "text": "    out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::identity_op",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this operation has no effect",
+                "spans": [
+                  {
+                    "byte_end": 16445,
+                    "byte_start": 16440,
+                    "column_end": 57,
+                    "column_start": 52,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 521,
+                    "line_start": 521,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 52,
+                        "text": "    out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this operation will always return zero. This is likely not the intended outcome\n   --> src\\platform.rs:534:52\n    |\n534 |     out[0] = u32::from_le_bytes(*array_ref!(bytes, 0 * 4, 4));\n    |                                                    ^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::erasing_op",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this operation will always return zero. This is likely not the intended outcome",
+                "spans": [
+                  {
+                    "byte_end": 17005,
+                    "byte_start": 17000,
+                    "column_end": 57,
+                    "column_start": 52,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 534,
+                    "line_start": 534,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 52,
+                        "text": "    out[0] = u32::from_le_bytes(*array_ref!(bytes, 0 * 4, 4));"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this operation has no effect\n   --> src\\platform.rs:535:52\n    |\n535 |     out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));\n    |                                                    ^^^^^ help: consider reducing it to: `4`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider reducing it to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 17068,
+                        "byte_start": 17063,
+                        "column_end": 57,
+                        "column_start": 52,
+                        "expansion": null,
+                        "file_name": "src\\platform.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 535,
+                        "line_start": 535,
+                        "suggested_replacement": "4",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 57,
+                            "highlight_start": 52,
+                            "text": "    out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::identity_op",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this operation has no effect",
+                "spans": [
+                  {
+                    "byte_end": 17068,
+                    "byte_start": 17063,
+                    "column_end": 57,
+                    "column_start": 52,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 535,
+                    "line_start": 535,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 52,
+                        "text": "    out[1] = u32::from_le_bytes(*array_ref!(bytes, 1 * 4, 4));"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this operation will always return zero. This is likely not the intended outcome\n   --> src\\platform.rs:556:26\n    |\n556 |     *array_mut_ref!(out, 0 * 4, 4) = words[0].to_le_bytes();\n    |                          ^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::erasing_op",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this operation will always return zero. This is likely not the intended outcome",
+                "spans": [
+                  {
+                    "byte_end": 18117,
+                    "byte_start": 18112,
+                    "column_end": 31,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 556,
+                    "line_start": 556,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 26,
+                        "text": "    *array_mut_ref!(out, 0 * 4, 4) = words[0].to_le_bytes();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this operation has no effect\n   --> src\\platform.rs:557:26\n    |\n557 |     *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();\n    |                          ^^^^^ help: consider reducing it to: `4`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider reducing it to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18178,
+                        "byte_start": 18173,
+                        "column_end": 31,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\platform.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 557,
+                        "line_start": 557,
+                        "suggested_replacement": "4",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 26,
+                            "text": "    *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::identity_op",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this operation has no effect",
+                "spans": [
+                  {
+                    "byte_end": 18178,
+                    "byte_start": 18173,
+                    "column_end": 31,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 557,
+                    "line_start": 557,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 26,
+                        "text": "    *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this operation will always return zero. This is likely not the intended outcome\n   --> src\\platform.rs:570:26\n    |\n570 |     *array_mut_ref!(out, 0 * 4, 4) = words[0].to_le_bytes();\n    |                          ^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#erasing_op",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::erasing_op",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this operation will always return zero. This is likely not the intended outcome",
+                "spans": [
+                  {
+                    "byte_end": 18724,
+                    "byte_start": 18719,
+                    "column_end": 31,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 570,
+                    "line_start": 570,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 26,
+                        "text": "    *array_mut_ref!(out, 0 * 4, 4) = words[0].to_le_bytes();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this operation has no effect\n   --> src\\platform.rs:571:26\n    |\n571 |     *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();\n    |                          ^^^^^ help: consider reducing it to: `4`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#identity_op",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider reducing it to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18785,
+                        "byte_start": 18780,
+                        "column_end": 31,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\platform.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 571,
+                        "line_start": 571,
+                        "suggested_replacement": "4",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 26,
+                            "text": "    *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::identity_op",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this operation has no effect",
+                "spans": [
+                  {
+                    "byte_end": 18785,
+                    "byte_start": 18780,
+                    "column_end": 31,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\platform.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 571,
+                    "line_start": 571,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 26,
+                        "text": "    *array_mut_ref!(out, 1 * 4, 4) = words[1].to_le_bytes();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (8/7)\n  --> src\\ffi_avx2.rs:7:1\n   |\n7  | / pub unsafe fn hash_many<const N: usize>(\n8  | |     inputs: &[&[u8; N]],\n9  | |     key: &CVWords,\n10 | |     counter: u64,\n...  |\n15 | |     out: &mut [u8],\n16 | | ) {\n   | |_^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (8/7)",
+                "spans": [
+                  {
+                    "byte_end": 440,
+                    "byte_start": 220,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\ffi_avx2.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 16,
+                    "line_start": 7,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "    counter: u64,"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    flags: u8,"
+                      },
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 1,
+                        "text": "    flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": ") {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (8/7)\n  --> src\\ffi_avx512.rs:45:1\n   |\n45 | / pub unsafe fn hash_many<const N: usize>(\n46 | |     inputs: &[&[u8; N]],\n47 | |     key: &CVWords,\n48 | |     counter: u64,\n...  |\n53 | |     out: &mut [u8],\n54 | | ) {\n   | |_^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (8/7)",
+                "spans": [
+                  {
+                    "byte_end": 1252,
+                    "byte_start": 1032,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\ffi_avx512.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 54,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "    counter: u64,"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    flags: u8,"
+                      },
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 1,
+                        "text": "    flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": ") {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (8/7)\n   --> src\\portable.rs:153:1\n    |\n153 | / pub fn hash_many<const N: usize>(\n154 | |     inputs: &[&[u8; N]],\n155 | |     key: &CVWords,\n156 | |     mut counter: u64,\n...   |\n161 | |     out: &mut [u8],\n162 | | ) {\n    | |_^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (8/7)",
+                "spans": [
+                  {
+                    "byte_end": 4421,
+                    "byte_start": 4204,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\portable.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 162,
+                    "line_start": 153,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 1,
+                        "text": "pub fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "    mut counter: u64,"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    flags: u8,"
+                      },
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 1,
+                        "text": "    flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": ") {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (8/7)\n  --> src\\ffi_sse2.rs:45:1\n   |\n45 | / pub unsafe fn hash_many<const N: usize>(\n46 | |     inputs: &[&[u8; N]],\n47 | |     key: &CVWords,\n48 | |     counter: u64,\n...  |\n53 | |     out: &mut [u8],\n54 | | ) {\n   | |_^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (8/7)",
+                "spans": [
+                  {
+                    "byte_end": 1239,
+                    "byte_start": 1019,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\ffi_sse2.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 54,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "    counter: u64,"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    flags: u8,"
+                      },
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 1,
+                        "text": "    flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": ") {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this function has too many arguments (8/7)\n  --> src\\ffi_sse41.rs:45:1\n   |\n45 | / pub unsafe fn hash_many<const N: usize>(\n46 | |     inputs: &[&[u8; N]],\n47 | |     key: &CVWords,\n48 | |     counter: u64,\n...  |\n53 | |     out: &mut [u8],\n54 | | ) {\n   | |_^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#too_many_arguments",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::too_many_arguments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this function has too many arguments (8/7)",
+                "spans": [
+                  {
+                    "byte_end": 1247,
+                    "byte_start": 1027,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\ffi_sse41.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 54,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn hash_many<const N: usize>("
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    inputs: &[&[u8; N]],"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    key: &CVWords,"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "    counter: u64,"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    increment_counter: IncrementCounter,"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    flags: u8,"
+                      },
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 1,
+                        "text": "    flags_start: u8,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    flags_end: u8,"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    out: &mut [u8],"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": ") {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: you are deriving `Hash` but have implemented `PartialEq` explicitly\n   --> src\\lib.rs:241:23\n    |\n241 | #[derive(Clone, Copy, Hash, Eq)]\n    |                       ^^^^\n    |\nnote: `PartialEq` implemented here\n   --> src\\lib.rs:345:1\n    |\n345 | impl PartialEq for Hash {\n    | ^^^^^^^^^^^^^^^^^^^^^^^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#derived_hash_with_manual_eq\n    = note: `#[deny(clippy::derived_hash_with_manual_eq)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`PartialEq` implemented here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12427,
+                        "byte_start": 12404,
+                        "column_end": 24,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 345,
+                        "line_start": 345,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 24,
+                            "highlight_start": 1,
+                            "text": "impl PartialEq for Hash {"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#derived_hash_with_manual_eq",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::derived_hash_with_manual_eq)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::derived_hash_with_manual_eq",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "you are deriving `Hash` but have implemented `PartialEq` explicitly",
+                "spans": [
+                  {
+                    "byte_end": 9040,
+                    "byte_start": 9036,
+                    "column_end": 27,
+                    "column_start": 23,
+                    "expansion": {
+                      "def_site_span": {
+                        "byte_end": 7905,
+                        "byte_start": 7891,
+                        "column_end": 19,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "C:\\Users\\davet\\.rustup\\toolchains\\stable-x86_64-pc-windows-msvc\\lib/rustlib/src/rust\\library\\core\\src\\hash\\mod.rs",
+                        "is_primary": false,
+                        "label": null,
+                        "line_end": 251,
+                        "line_start": 251,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 19,
+                            "highlight_start": 5,
+                            "text": "    pub macro Hash($item:item) {"
+                          }
+                        ]
+                      },
+                      "macro_decl_name": "#[derive(Hash)]",
+                      "span": {
+                        "byte_end": 9040,
+                        "byte_start": 9036,
+                        "column_end": 27,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": false,
+                        "label": null,
+                        "line_end": 241,
+                        "line_start": 241,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 23,
+                            "text": "#[derive(Clone, Copy, Hash, Eq)]"
+                          }
+                        ]
+                      }
+                    },
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 241,
+                    "line_start": 241,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 23,
+                        "text": "#[derive(Clone, Copy, Hash, Eq)]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:856:43\n    |\n856 |         compress_subtree_wide::<J>(input, &key, chunk_counter, flags, platform, &mut cv_array);\n    |                                           ^^^^ help: change this to: `key`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30137,
+                        "byte_start": 30133,
+                        "column_end": 47,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 856,
+                        "line_start": 856,
+                        "suggested_replacement": "key",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 43,
+                            "text": "        compress_subtree_wide::<J>(input, &key, chunk_counter, flags, platform, &mut cv_array);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 30137,
+                    "byte_start": 30133,
+                    "column_end": 47,
+                    "column_start": 43,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 856,
+                    "line_start": 856,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 47,
+                        "highlight_start": 43,
+                        "text": "        compress_subtree_wide::<J>(input, &key, chunk_counter, flags, platform, &mut cv_array);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj9oc1vr_/blake3-1.8.2#blake3@1.8.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "blake3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj9oc1vr_\\blake3-1.8.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: usage of a legacy numeric method\n    --> src\\lib.rs:1801:33\n     |\n1801 |         let max_position = u64::max_value() as i128;\n     |                                 ^^^^^^^^^^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants\n     = note: `#[warn(clippy::legacy_numeric_constants)]` on by default\nhelp: use the associated constant instead\n     |\n1801 -         let max_position = u64::max_value() as i128;\n1801 +         let max_position = u64::MAX as i128;\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::legacy_numeric_constants)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the associated constant instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 71932,
+                        "byte_start": 71921,
+                        "column_end": 44,
+                        "column_start": 33,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1801,
+                        "line_start": 1801,
+                        "suggested_replacement": "MAX",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 33,
+                            "text": "        let max_position = u64::max_value() as i128;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::legacy_numeric_constants",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "usage of a legacy numeric method",
+                "spans": [
+                  {
+                    "byte_end": 71932,
+                    "byte_start": 71921,
+                    "column_end": 44,
+                    "column_start": 33,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1801,
+                    "line_start": 1801,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 33,
+                        "text": "        let max_position = u64::max_value() as i128;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 69
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "blake3",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-d74c5438-460eaa50-1751110797",
+      "timestamp": "2025-06-28T11:39:57.687143+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

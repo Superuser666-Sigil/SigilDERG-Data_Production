@@ -1,0 +1,2326 @@
+[
+  {
+    "execution_id": "exec-16d34b5e-6f192ecd-1751108513",
+    "timestamp": "2025-06-28T11:01:53.818098+00:00",
+    "sacred_chain": {
+      "input_data": "failure",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'failure' -> 'failure'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "failure",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@0.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-0.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-0.1.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcfg_if-ed0f126ae572bba9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-xid@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_xid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libunicode_xid-3c2ce44be83bcd93.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libunicode_xid-3c2ce44be83bcd93.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_demangle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.16\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\librustc_demangle-08f636113b0b1d14.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-638f96ee0e68a925\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-638f96ee0e68a925\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-dd84671efdbee084\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-dd84671efdbee084\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-e17c05f84dc0ff08\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-e17c05f84dc0ff08\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-34f4d36cc285ca15\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-34f4d36cc285ca15\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_dyn_trait"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-22cd18b917164a52\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "freebsd11",
+                "libc_priv_mod_use",
+                "libc_union",
+                "libc_const_size_of",
+                "libc_align",
+                "libc_core_cvoid",
+                "libc_packedN"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-24218a53afd52286\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-827164d79085415a\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_proc_macro",
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-66b250ce939c408a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "libc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\liblibc-de956a67d0fc08be.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.0.52",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.0.52\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.0.52\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcc-daa286b3f9525097.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcc-daa286b3f9525097.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libproc_macro2-1cfa91795232837f.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libproc_macro2-1cfa91795232837f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libquote-1c26fe5237c42fcc.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libquote-1c26fe5237c42fcc.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-68f00645d0d8ae53\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-68f00645d0d8ae53\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "empty"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-11492643bb4261bc\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libbacktrace_sys-ca3953ea36fde7f6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace@0.3.46",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-0.3.46\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-0.3.46\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys",
+                "dbghelp",
+                "default",
+                "dladdr",
+                "libbacktrace",
+                "libunwind",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libbacktrace-c2b11f7625444b55.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsyn-bad1dcec610529bc.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsyn-bad1dcec610529bc.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#synstructure@0.12.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\synstructure-0.12.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "synstructure",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\synstructure-0.12.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsynstructure-60eb3cf026d4bb88.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsynstructure-60eb3cf026d4bb88.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "failure_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unexpected `cfg` condition value: `small-error`\n  --> src\\lib.rs:26:13\n   |\n26 | #![cfg_attr(feature = \"small-error\", feature(extern_types, allocator_api))]\n   |             ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`\n   = help: consider adding `small-error` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\nnote: the lint level is defined here\n  --> src\\lib.rs:25:9\n   |\n25 | #![deny(warnings)]\n   |         ^^^^^^^^\n   = note: `#[deny(unexpected_cfgs)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `small-error` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1125,
+                        "byte_start": 1117,
+                        "column_end": 17,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 25,
+                        "line_start": 25,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 9,
+                            "text": "#![deny(warnings)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(unexpected_cfgs)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unexpected `cfg` condition value: `small-error`",
+                "spans": [
+                  {
+                    "byte_end": 1163,
+                    "byte_start": 1140,
+                    "column_end": 36,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 26,
+                    "line_start": 26,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"small-error\", feature(extern_types, allocator_api))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unexpected `cfg` condition value: `small-error`\n  --> src\\error\\mod.rs:11:12\n   |\n11 | #[cfg_attr(feature = \"small-error\", path = \"./error_impl_small.rs\")]\n   |            ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`\n   = help: consider adding `small-error` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `small-error` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unexpected `cfg` condition value: `small-error`",
+                "spans": [
+                  {
+                    "byte_end": 209,
+                    "byte_start": 186,
+                    "column_end": 35,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\error\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 11,
+                    "line_start": 11,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 12,
+                        "text": "#[cfg_attr(feature = \"small-error\", path = \"./error_impl_small.rs\")]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-34f4d36cc285ca15\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-34f4d36cc285ca15\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_proc_macro",
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\proc-macro2-66b250ce939c408a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-xid@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_xid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libunicode_xid-3c2ce44be83bcd93.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libunicode_xid-3c2ce44be83bcd93.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.0.52",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.0.52\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.0.52\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcc-daa286b3f9525097.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcc-daa286b3f9525097.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-e17c05f84dc0ff08\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-e17c05f84dc0ff08\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-638f96ee0e68a925\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-638f96ee0e68a925\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-dd84671efdbee084\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-dd84671efdbee084\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@0.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-0.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-0.1.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libcfg_if-ed0f126ae572bba9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_demangle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.16\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\librustc_demangle-08f636113b0b1d14.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.12\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libproc_macro2-1cfa91795232837f.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libproc_macro2-1cfa91795232837f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\syn-827164d79085415a\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "freebsd11",
+                "libc_priv_mod_use",
+                "libc_union",
+                "libc_const_size_of",
+                "libc_align",
+                "libc_core_cvoid",
+                "libc_packedN"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\libc-24218a53afd52286\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-68f00645d0d8ae53\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-68f00645d0d8ae53\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_dyn_trait"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\failure_derive-22cd18b917164a52\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libquote-1c26fe5237c42fcc.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libquote-1c26fe5237c42fcc.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.69",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "libc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.69\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\liblibc-de956a67d0fc08be.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "empty"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\build\\backtrace-sys-11492643bb4261bc\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsyn-bad1dcec610529bc.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsyn-bad1dcec610529bc.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace-sys@0.1.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-sys-0.1.37\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libbacktrace_sys-ca3953ea36fde7f6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#synstructure@0.12.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\synstructure-0.12.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "synstructure",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\synstructure-0.12.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsynstructure-60eb3cf026d4bb88.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libsynstructure-60eb3cf026d4bb88.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#backtrace@0.3.46",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-0.3.46\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\backtrace-0.3.46\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "backtrace-sys",
+                "dbghelp",
+                "default",
+                "dladdr",
+                "libbacktrace",
+                "libunwind",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\libbacktrace-c2b11f7625444b55.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#failure_derive@0.1.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "failure_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\failure_derive-0.1.7\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\target\\debug\\deps\\failure_derive-27a50dbe029e9877.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unexpected `cfg` condition value: `small-error`\n  --> src\\lib.rs:26:13\n   |\n26 | #![cfg_attr(feature = \"small-error\", feature(extern_types, allocator_api))]\n   |             ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`\n   = help: consider adding `small-error` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\nnote: the lint level is defined here\n  --> src\\lib.rs:25:9\n   |\n25 | #![deny(warnings)]\n   |         ^^^^^^^^\n   = note: `#[deny(unexpected_cfgs)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `small-error` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1125,
+                        "byte_start": 1117,
+                        "column_end": 17,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 25,
+                        "line_start": 25,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 9,
+                            "text": "#![deny(warnings)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(unexpected_cfgs)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unexpected `cfg` condition value: `small-error`",
+                "spans": [
+                  {
+                    "byte_end": 1163,
+                    "byte_start": 1140,
+                    "column_end": 36,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 26,
+                    "line_start": 26,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"small-error\", feature(extern_types, allocator_api))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unexpected `cfg` condition value: `small-error`\n  --> src\\error\\mod.rs:11:12\n   |\n11 | #[cfg_attr(feature = \"small-error\", path = \"./error_impl_small.rs\")]\n   |            ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`\n   = help: consider adding `small-error` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `backtrace`, `default`, `derive`, `failure_derive`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `small-error` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unexpected `cfg` condition value: `small-error`",
+                "spans": [
+                  {
+                    "byte_end": 209,
+                    "byte_start": 186,
+                    "column_end": 35,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\error\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 11,
+                    "line_start": 11,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 12,
+                        "text": "#[cfg_attr(feature = \"small-error\", path = \"./error_impl_small.rs\")]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: match expression looks like `matches!` macro\n  --> src\\backtrace\\internal.rs:87:14\n   |\n87 |           _ => match get_var(GENERAL_BACKTRACE) {\n   |  ______________^\n88 | |             Some(ref val) if val != \"0\" => true,\n89 | |             _                           => false,\n90 | |         }\n   | |_________^ help: try: `matches!(get_var(GENERAL_BACKTRACE), Some(ref val) if val != \"0\")`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro\n   = note: `#[deny(clippy::match_like_matches_macro)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::match_like_matches_macro)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2699,
+                        "byte_start": 2556,
+                        "column_end": 10,
+                        "column_start": 14,
+                        "expansion": null,
+                        "file_name": "src\\backtrace\\internal.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 90,
+                        "line_start": 87,
+                        "suggested_replacement": "matches!(get_var(GENERAL_BACKTRACE), Some(ref val) if val != \"0\")",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 48,
+                            "highlight_start": 14,
+                            "text": "        _ => match get_var(GENERAL_BACKTRACE) {"
+                          },
+                          {
+                            "highlight_end": 49,
+                            "highlight_start": 1,
+                            "text": "            Some(ref val) if val != \"0\" => true,"
+                          },
+                          {
+                            "highlight_end": 50,
+                            "highlight_start": 1,
+                            "text": "            _                           => false,"
+                          },
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 1,
+                            "text": "        }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::match_like_matches_macro",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "match expression looks like `matches!` macro",
+                "spans": [
+                  {
+                    "byte_end": 2699,
+                    "byte_start": 2556,
+                    "column_end": 10,
+                    "column_start": 14,
+                    "expansion": null,
+                    "file_name": "src\\backtrace\\internal.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 90,
+                    "line_start": 87,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 48,
+                        "highlight_start": 14,
+                        "text": "        _ => match get_var(GENERAL_BACKTRACE) {"
+                      },
+                      {
+                        "highlight_end": 49,
+                        "highlight_start": 1,
+                        "text": "            Some(ref val) if val != \"0\" => true,"
+                      },
+                      {
+                        "highlight_end": 50,
+                        "highlight_start": 1,
+                        "text": "            _                           => false,"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this expression creates a reference which is immediately dereferenced by the compiler\n  --> src\\error\\mod.rs:95:50\n   |\n95 |         self.imp.failure().backtrace().unwrap_or(&self.imp.backtrace())\n   |                                                  ^^^^^^^^^^^^^^^^^^^^^ help: change this to: `self.imp.backtrace()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n   = note: `#[deny(clippy::needless_borrow)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_borrow)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2941,
+                        "byte_start": 2920,
+                        "column_end": 71,
+                        "column_start": 50,
+                        "expansion": null,
+                        "file_name": "src\\error\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 95,
+                        "line_start": 95,
+                        "suggested_replacement": "self.imp.backtrace()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 71,
+                            "highlight_start": 50,
+                            "text": "        self.imp.failure().backtrace().unwrap_or(&self.imp.backtrace())"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 2941,
+                    "byte_start": 2920,
+                    "column_end": 71,
+                    "column_start": 50,
+                    "expansion": null,
+                    "file_name": "src\\error\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 95,
+                    "line_start": 95,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 71,
+                        "highlight_start": 50,
+                        "text": "        self.imp.failure().backtrace().unwrap_or(&self.imp.backtrace())"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp5ln5zfsk/failure-0.1.8#failure@0.1.8",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "failure",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp5ln5zfsk\\failure-0.1.8\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: using `map` over `inspect`\n   --> src\\lib.rs:294:19\n    |\n294 |         self.fail.map(|fail| {\n    |                   ^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_inspect\n    = note: `#[deny(clippy::manual_inspect)]` implied by `#[deny(warnings)]`\nhelp: try\n    |\n294 ~         self.fail.inspect(|fail| {\n295 ~             self.fail = fail.cause();\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_inspect",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::manual_inspect)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9577,
+                        "byte_start": 9574,
+                        "column_end": 22,
+                        "column_start": 19,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 294,
+                        "line_start": 294,
+                        "suggested_replacement": "inspect",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 22,
+                            "highlight_start": 19,
+                            "text": "        self.fail.map(|fail| {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9641,
+                        "byte_start": 9624,
+                        "column_end": 17,
+                        "column_start": 38,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 296,
+                        "line_start": 295,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 38,
+                            "text": "            self.fail = fail.cause();"
+                          },
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 1,
+                            "text": "            fail"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_inspect",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "using `map` over `inspect`",
+                "spans": [
+                  {
+                    "byte_end": 9577,
+                    "byte_start": 9574,
+                    "column_end": 22,
+                    "column_start": 19,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 294,
+                    "line_start": 294,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 19,
+                        "text": "        self.fail.map(|fail| {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 13
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "failure",
+                    "version": "0.1.8",
+                    "source": null,
+                    "checksum": null,
+                    "dependencies": [
+                      {
+                        "name": "backtrace",
+                        "version": "0.3.46",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "failure_derive",
+                        "version": "0.1.7",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2020-0036",
+                    "package": "failure",
+                    "title": "failure is officially deprecated/unmaintained",
+                    "description": "The `failure` crate is officially end-of-life: it has been marked as deprecated\nby the former maintainer, who has announced that there will be no updates or\nmaintenance work on it going forward.\n\nThe following are some suggested actively developed alternatives to switch to:\n\n- [`anyhow`](https://crates.io/crates/anyhow)\n- [`eyre`](https://crates.io/crates/eyre)\n- [`fehler`](https://crates.io/crates/fehler)\n- [`snafu`](https://crates.io/crates/snafu)\n- [`thiserror`](https://crates.io/crates/thiserror)",
+                    "date": "2020-05-02",
+                    "aliases": [
+                      "CVE-2019-25010",
+                      "CVE-2020-25575",
+                      "GHSA-jq66-xh47-j9f3",
+                      "GHSA-r98r-j25q-rmpr"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/rust-lang-nursery/failure/pull/347",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "unsound": [
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "failure",
+                    "version": "0.1.8",
+                    "source": null,
+                    "checksum": null,
+                    "dependencies": [
+                      {
+                        "name": "backtrace",
+                        "version": "0.3.46",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "failure_derive",
+                        "version": "0.1.7",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2019-0036",
+                    "package": "failure",
+                    "title": "Type confusion if __private_get_type_id__ is overridden",
+                    "description": "Safe Rust code can implement malfunctioning `__private_get_type_id__` and cause\ntype confusion when downcasting, which is an undefined behavior.\n\nUsers who derive `Fail` trait are not affected.",
+                    "date": "2019-11-13",
+                    "aliases": [
+                      "CVE-2019-25010",
+                      "CVE-2020-25575",
+                      "GHSA-jq66-xh47-j9f3",
+                      "GHSA-r98r-j25q-rmpr"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [
+                      "unsound"
+                    ],
+                    "cvss": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+                    "informational": "unsound",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/rust-lang-nursery/failure/issues/336",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [],
+                    "functions": {
+                      "failure::Fail::__private_get_type_id__": [
+                        ">=0.1.0"
+                      ]
+                    }
+                  },
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "failure",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-16d34b5e-6f192ecd-1751108513",
+      "timestamp": "2025-06-28T11:01:53.818098+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

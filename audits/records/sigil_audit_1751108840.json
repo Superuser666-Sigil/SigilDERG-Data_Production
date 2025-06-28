@@ -1,0 +1,2312 @@
+[
+  {
+    "execution_id": "exec-a5254025-b9dc3abf-1751108836",
+    "timestamp": "2025-06-28T11:07:16.031132+00:00",
+    "sacred_chain": {
+      "input_data": "walkdir",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'walkdir' -> 'walkdir'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "walkdir",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 2.6666666666666665,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-e8e607e3652a8546\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_x86_64_msvc-3e6e4ddbeeceebc3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_targets-b5624e17f0a1ad8b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.59.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Console",
+                "Win32_System_SystemInformation",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_sys-f272f30cfd0c22cf.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#winapi-util@0.1.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-util-0.1.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "winapi_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-util-0.1.9\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwinapi_util-0493862f64e4e493.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#same-file@1.0.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\same-file-1.0.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "same_file",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\same-file-1.0.6\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libsame_file-c6faaafa2e36a38f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwalkdir-be29ee2d5864441d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\build\\windows_x86_64_msvc-e8e607e3652a8546\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_x86_64_msvc-3e6e4ddbeeceebc3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_targets-b5624e17f0a1ad8b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.59.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Console",
+                "Win32_System_SystemInformation",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwindows_sys-f272f30cfd0c22cf.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#winapi-util@0.1.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-util-0.1.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "winapi_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\winapi-util-0.1.9\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwinapi_util-0493862f64e4e493.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#same-file@1.0.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\same-file-1.0.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "same_file",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\same-file-1.0.6\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libsame_file-c6faaafa2e36a38f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this `if` statement can be collapsed\n   --> src\\lib.rs:885:9\n    |\n885 | /         if self.opts.contents_first {\n886 | |             if self.depth < self.deferred_dirs.len() {\n...   |\n897 | |         }\n    | |_________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if\n    = note: `#[warn(clippy::collapsible_if)]` on by default\nhelp: collapse nested if block\n    |\n885 ~         if self.opts.contents_first && self.depth < self.deferred_dirs.len() {\n886 +             // Unwrap is safe here because we've guaranteed that\n887 +             // `self.deferred_dirs.len()` can never be less than 1\n888 +             let deferred: DirEntry = self\n889 +                 .deferred_dirs\n890 +                 .pop()\n891 +                 .expect(\"BUG: deferred_dirs should be non-empty\");\n892 +             if !self.skippable() {\n893 +                 return Some(deferred);\n894 +             }\n895 +         }\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::collapsible_if)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "collapse nested if block",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 31463,
+                        "byte_start": 30936,
+                        "column_end": 10,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 897,
+                        "line_start": 885,
+                        "suggested_replacement": "if self.opts.contents_first && self.depth < self.deferred_dirs.len() {\n            // Unwrap is safe here because we've guaranteed that\n            // `self.deferred_dirs.len()` can never be less than 1\n            let deferred: DirEntry = self\n                .deferred_dirs\n                .pop()\n                .expect(\"BUG: deferred_dirs should be non-empty\");\n            if !self.skippable() {\n                return Some(deferred);\n            }\n        }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 9,
+                            "text": "        if self.opts.contents_first {"
+                          },
+                          {
+                            "highlight_end": 55,
+                            "highlight_start": 1,
+                            "text": "            if self.depth < self.deferred_dirs.len() {"
+                          },
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 1,
+                            "text": "                // Unwrap is safe here because we've guaranteed that"
+                          },
+                          {
+                            "highlight_end": 71,
+                            "highlight_start": 1,
+                            "text": "                // `self.deferred_dirs.len()` can never be less than 1"
+                          },
+                          {
+                            "highlight_end": 46,
+                            "highlight_start": 1,
+                            "text": "                let deferred: DirEntry = self"
+                          },
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 1,
+                            "text": "                    .deferred_dirs"
+                          },
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 1,
+                            "text": "                    .pop()"
+                          },
+                          {
+                            "highlight_end": 71,
+                            "highlight_start": 1,
+                            "text": "                    .expect(\"BUG: deferred_dirs should be non-empty\");"
+                          },
+                          {
+                            "highlight_end": 39,
+                            "highlight_start": 1,
+                            "text": "                if !self.skippable() {"
+                          },
+                          {
+                            "highlight_end": 43,
+                            "highlight_start": 1,
+                            "text": "                    return Some(deferred);"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          },
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 1,
+                            "text": "            }"
+                          },
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 1,
+                            "text": "        }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::collapsible_if",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this `if` statement can be collapsed",
+                "spans": [
+                  {
+                    "byte_end": 31463,
+                    "byte_start": 30936,
+                    "column_end": 10,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 897,
+                    "line_start": 885,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 9,
+                        "text": "        if self.opts.contents_first {"
+                      },
+                      {
+                        "highlight_end": 55,
+                        "highlight_start": 1,
+                        "text": "            if self.depth < self.deferred_dirs.len() {"
+                      },
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 1,
+                        "text": "                // Unwrap is safe here because we've guaranteed that"
+                      },
+                      {
+                        "highlight_end": 71,
+                        "highlight_start": 1,
+                        "text": "                // `self.deferred_dirs.len()` can never be less than 1"
+                      },
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 1,
+                        "text": "                let deferred: DirEntry = self"
+                      },
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 1,
+                        "text": "                    .deferred_dirs"
+                      },
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 1,
+                        "text": "                    .pop()"
+                      },
+                      {
+                        "highlight_end": 71,
+                        "highlight_start": 1,
+                        "text": "                    .expect(\"BUG: deferred_dirs should be non-empty\");"
+                      },
+                      {
+                        "highlight_end": 39,
+                        "highlight_start": 1,
+                        "text": "                if !self.skippable() {"
+                      },
+                      {
+                        "highlight_end": 43,
+                        "highlight_start": 1,
+                        "text": "                    return Some(deferred);"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "            }"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\dent.rs:23:5\n   |\n23 | /// Therefore, the value is stored and its access is guaranteed to be cheap and\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\n   = note: `#[warn(clippy::doc_lazy_continuation)]` on by default\nhelp: indent this line\n   |\n23 | ///   Therefore, the value is stored and its access is guaranteed to be cheap and\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_lazy_continuation)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 657,
+                        "byte_start": 657,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\dent.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 23,
+                        "line_start": 23,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// Therefore, the value is stored and its access is guaranteed to be cheap and"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 657,
+                    "byte_start": 657,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\dent.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 23,
+                    "line_start": 23,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// Therefore, the value is stored and its access is guaranteed to be cheap and"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\dent.rs:24:5\n   |\n24 | /// successful.\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: indent this line\n   |\n24 | ///   successful.\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 737,
+                        "byte_start": 737,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\dent.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 24,
+                        "line_start": 24,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// successful."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 737,
+                    "byte_start": 737,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\dent.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 24,
+                    "line_start": 24,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// successful."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\dent.rs:27:5\n   |\n27 | /// operations except for [`path`] operate on the link target. Otherwise, all\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: indent this line\n   |\n27 | ///   operations except for [`path`] operate on the link target. Otherwise, all\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 888,
+                        "byte_start": 888,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\dent.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 27,
+                        "line_start": 27,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// operations except for [`path`] operate on the link target. Otherwise, all"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 888,
+                    "byte_start": 888,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\dent.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 27,
+                    "line_start": 27,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// operations except for [`path`] operate on the link target. Otherwise, all"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\dent.rs:28:5\n   |\n28 | /// operations operate on the symbolic link.\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: indent this line\n   |\n28 | ///   operations operate on the symbolic link.\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 966,
+                        "byte_start": 966,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\dent.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 28,
+                        "line_start": 28,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// operations operate on the symbolic link."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 966,
+                    "byte_start": 966,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\dent.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 28,
+                    "line_start": 28,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// operations operate on the symbolic link."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\error.rs:14:5\n   |\n14 | /// root.\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: indent this line\n   |\n14 | ///   root.\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 366,
+                        "byte_start": 366,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 14,
+                        "line_start": 14,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// root."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 366,
+                    "byte_start": 366,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 14,
+                    "line_start": 14,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// root."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item without indentation\n  --> src\\error.rs:17:5\n   |\n17 | /// case, there is no underlying IO error.\n   |     ^\n   |\n   = help: if this is supposed to be its own paragraph, add a blank line\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: indent this line\n   |\n17 | ///   case, there is no underlying IO error.\n   |     ++\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this is supposed to be its own paragraph, add a blank line",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "indent this line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 510,
+                        "byte_start": 510,
+                        "column_end": 5,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 17,
+                        "line_start": 17,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 5,
+                            "highlight_start": 5,
+                            "text": "/// case, there is no underlying IO error."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item without indentation",
+                "spans": [
+                  {
+                    "byte_end": 510,
+                    "byte_start": 510,
+                    "column_end": 5,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 17,
+                    "line_start": 17,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 5,
+                        "highlight_start": 5,
+                        "text": "/// case, there is no underlying IO error."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc quote line without `>` marker\n  --> src\\error.rs:97:9\n   |\n97 |     /// error.\n   |         ^\n   |\n   = help: if this not intended to be a quote at all, escape it with `\\>`\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation\nhelp: add markers to start of line\n   |\n97 |     /// > error.\n   |         +\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if this not intended to be a quote at all, escape it with `\\>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_lazy_continuation",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "add markers to start of line",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3700,
+                        "byte_start": 3700,
+                        "column_end": 9,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 97,
+                        "line_start": 97,
+                        "suggested_replacement": "> ",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 9,
+                            "text": "    /// error."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_lazy_continuation",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc quote line without `>` marker",
+                "spans": [
+                  {
+                    "byte_end": 3700,
+                    "byte_start": 3700,
+                    "column_end": 9,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 97,
+                    "line_start": 97,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 9,
+                        "text": "    /// error."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: very complex type used. Consider factoring parts into `type` definitions\n   --> src\\lib.rs:245:13\n    |\n245 |       sorter: Option<\n    |  _____________^\n246 | |         Box<\n247 | |             dyn FnMut(&DirEntry, &DirEntry) -> Ordering\n248 | |                 + Send\n...   |\n251 | |         >,\n252 | |     >,\n    | |_____^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#type_complexity\n    = note: `#[warn(clippy::type_complexity)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#type_complexity",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::type_complexity)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::type_complexity",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "very complex type used. Consider factoring parts into `type` definitions",
+                "spans": [
+                  {
+                    "byte_end": 7637,
+                    "byte_start": 7471,
+                    "column_end": 6,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 252,
+                    "line_start": 245,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 13,
+                        "text": "    sorter: Option<"
+                      },
+                      {
+                        "highlight_end": 13,
+                        "highlight_start": 1,
+                        "text": "        Box<"
+                      },
+                      {
+                        "highlight_end": 56,
+                        "highlight_start": 1,
+                        "text": "            dyn FnMut(&DirEntry, &DirEntry) -> Ordering"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "                + Send"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "                + Sync"
+                      },
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 1,
+                        "text": "                + 'static,"
+                      },
+                      {
+                        "highlight_end": 11,
+                        "highlight_start": 1,
+                        "text": "        >,"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    >,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: usage of a legacy numeric constant\n   --> src\\lib.rs:296:28\n    |\n296 |                 max_depth: ::std::usize::MAX,\n    |                            ^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants\n    = note: `#[warn(clippy::legacy_numeric_constants)]` on by default\nhelp: use the associated constant instead\n    |\n296 -                 max_depth: ::std::usize::MAX,\n296 +                 max_depth: usize::MAX,\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::legacy_numeric_constants)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the associated constant instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9295,
+                        "byte_start": 9278,
+                        "column_end": 45,
+                        "column_start": 28,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 296,
+                        "line_start": 296,
+                        "suggested_replacement": "usize::MAX",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 45,
+                            "highlight_start": 28,
+                            "text": "                max_depth: ::std::usize::MAX,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::legacy_numeric_constants",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "usage of a legacy numeric constant",
+                "spans": [
+                  {
+                    "byte_end": 9295,
+                    "byte_start": 9278,
+                    "column_end": 45,
+                    "column_start": 28,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 296,
+                    "line_start": 296,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 28,
+                        "text": "                max_depth: ::std::usize::MAX,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: large size difference between variants\n   --> src\\lib.rs:661:1\n    |\n661 | / enum DirList {\n662 | |     /// An opened handle.\n663 | |     ///\n664 | |     /// This includes the depth of the handle itself.\n...   |\n672 | |     Opened { depth: usize, it: result::Result<ReadDir, Option<Error>> },\n    | |     ------------------------------------------------------------------- the largest variant contains at least 632 bytes\n...   |\n676 | |     Closed(vec::IntoIter<Result<DirEntry>>),\n    | |     --------------------------------------- the second-largest variant contains at least 32 bytes\n677 | | }\n    | |_^ the entire enum is at least 632 bytes\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant\n    = note: `#[warn(clippy::large_enum_variant)]` on by default\nhelp: consider boxing the large fields to reduce the total size of the enum\n    |\n672 -     Opened { depth: usize, it: result::Result<ReadDir, Option<Error>> },\n672 +     Opened { depth: usize, it: Box<result::Result<ReadDir, Option<Error>>> },\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::large_enum_variant)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider boxing the large fields to reduce the total size of the enum",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 23150,
+                        "byte_start": 23112,
+                        "column_end": 70,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 672,
+                        "line_start": 672,
+                        "suggested_replacement": "Box<result::Result<ReadDir, Option<Error>>>",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 70,
+                            "highlight_start": 32,
+                            "text": "    Opened { depth: usize, it: result::Result<ReadDir, Option<Error>> },"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::large_enum_variant",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "large size difference between variants",
+                "spans": [
+                  {
+                    "byte_end": 23295,
+                    "byte_start": 22606,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": "the entire enum is at least 632 bytes",
+                    "line_end": 677,
+                    "line_start": 661,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "enum DirList {"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "    /// An opened handle."
+                      },
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "    ///"
+                      },
+                      {
+                        "highlight_end": 54,
+                        "highlight_start": 1,
+                        "text": "    /// This includes the depth of the handle itself."
+                      },
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "    ///"
+                      },
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 1,
+                        "text": "    /// If there was an error with the initial [`fs::read_dir`] call, then it"
+                      },
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 1,
+                        "text": "    /// is stored here. (We use an [`Option<...>`] to make yielding the error"
+                      },
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 1,
+                        "text": "    /// exactly once simpler.)"
+                      },
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "    ///"
+                      },
+                      {
+                        "highlight_end": 83,
+                        "highlight_start": 1,
+                        "text": "    /// [`fs::read_dir`]: https://doc.rust-lang.org/stable/std/fs/fn.read_dir.html"
+                      },
+                      {
+                        "highlight_end": 86,
+                        "highlight_start": 1,
+                        "text": "    /// [`Option<...>`]: https://doc.rust-lang.org/stable/std/option/enum.Option.html"
+                      },
+                      {
+                        "highlight_end": 73,
+                        "highlight_start": 1,
+                        "text": "    Opened { depth: usize, it: result::Result<ReadDir, Option<Error>> },"
+                      },
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 1,
+                        "text": "    /// A closed handle."
+                      },
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "    ///"
+                      },
+                      {
+                        "highlight_end": 62,
+                        "highlight_start": 1,
+                        "text": "    /// All remaining directory entries are read into memory."
+                      },
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 1,
+                        "text": "    Closed(vec::IntoIter<Result<DirEntry>>),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 23152,
+                    "byte_start": 23085,
+                    "column_end": 72,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 632 bytes",
+                    "line_end": 672,
+                    "line_start": 672,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 5,
+                        "text": "    Opened { depth: usize, it: result::Result<ReadDir, Option<Error>> },"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 23292,
+                    "byte_start": 23253,
+                    "column_end": 44,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the second-largest variant contains at least 32 bytes",
+                    "line_end": 676,
+                    "line_start": 676,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 5,
+                        "text": "    Closed(vec::IntoIter<Result<DirEntry>>),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: dereferencing a tuple pattern where every element takes a reference\n   --> src\\lib.rs:916:18\n    |\n916 |                 (&Ok(ref a), &Ok(ref b)) => cmp(a, b),\n    |                  ^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference\n    = note: `#[warn(clippy::needless_borrowed_reference)]` on by default\nhelp: try removing the `&` and `ref` parts\n    |\n916 -                 (&Ok(ref a), &Ok(ref b)) => cmp(a, b),\n916 +                 (Ok(a), &Ok(ref b)) => cmp(a, b),\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrowed_reference)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try removing the `&` and `ref` parts",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 32282,
+                        "byte_start": 32278,
+                        "column_end": 26,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 916,
+                        "line_start": 916,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 22,
+                            "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 32275,
+                        "byte_start": 32274,
+                        "column_end": 19,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 916,
+                        "line_start": 916,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 19,
+                            "highlight_start": 18,
+                            "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrowed_reference",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "dereferencing a tuple pattern where every element takes a reference",
+                "spans": [
+                  {
+                    "byte_end": 32284,
+                    "byte_start": 32274,
+                    "column_end": 28,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 916,
+                    "line_start": 916,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 18,
+                        "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: dereferencing a tuple pattern where every element takes a reference\n   --> src\\lib.rs:916:30\n    |\n916 |                 (&Ok(ref a), &Ok(ref b)) => cmp(a, b),\n    |                              ^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference\nhelp: try removing the `&` and `ref` parts\n    |\n916 -                 (&Ok(ref a), &Ok(ref b)) => cmp(a, b),\n916 +                 (&Ok(ref a), Ok(b)) => cmp(a, b),\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try removing the `&` and `ref` parts",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 32294,
+                        "byte_start": 32290,
+                        "column_end": 38,
+                        "column_start": 34,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 916,
+                        "line_start": 916,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 34,
+                            "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 32287,
+                        "byte_start": 32286,
+                        "column_end": 31,
+                        "column_start": 30,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 916,
+                        "line_start": 916,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 30,
+                            "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrowed_reference",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "dereferencing a tuple pattern where every element takes a reference",
+                "spans": [
+                  {
+                    "byte_end": 32296,
+                    "byte_start": 32286,
+                    "column_end": 40,
+                    "column_start": 30,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 916,
+                    "line_start": 916,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 40,
+                        "highlight_start": 30,
+                        "text": "                (&Ok(ref a), &Ok(ref b)) => cmp(a, b),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:924:42\n    |\n924 |             let ancestor = Ancestor::new(&dent)\n    |                                          ^^^^^ help: change this to: `dent`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 32641,
+                        "byte_start": 32636,
+                        "column_end": 47,
+                        "column_start": 42,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 924,
+                        "line_start": 924,
+                        "suggested_replacement": "dent",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 42,
+                            "text": "            let ancestor = Ancestor::new(&dent)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 32641,
+                    "byte_start": 32636,
+                    "column_end": 47,
+                    "column_start": 42,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 924,
+                    "line_start": 924,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 47,
+                        "highlight_start": 42,
+                        "text": "            let ancestor = Ancestor::new(&dent)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_nldo95/walkdir-2.5.0#walkdir@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "walkdir",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_nldo95\\walkdir-2.5.0\\target\\debug\\deps\\libwalkdir-8702e762fdfba9fd.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 14
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "walkdir",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-a5254025-b9dc3abf-1751108836",
+      "timestamp": "2025-06-28T11:07:16.031132+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

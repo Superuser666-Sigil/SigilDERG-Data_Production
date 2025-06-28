@@ -1,0 +1,1065 @@
+[
+  {
+    "execution_id": "exec-46e90a09-7e4cbdf4-1751108170",
+    "timestamp": "2025-06-28T10:56:10.831229+00:00",
+    "sacred_chain": {
+      "input_data": "futures-timer",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'futures-timer' -> 'futures-timer'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "futures-timer",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.0,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `assert_timer_heap_consistent`\n   --> src\\native\\heap.rs:164:18\n    |\n164 |         if !cfg!(assert_timer_heap_consistent) {\n    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(assert_timer_heap_consistent)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(assert_timer_heap_consistent)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(assert_timer_heap_consistent)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(assert_timer_heap_consistent)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `assert_timer_heap_consistent`",
+                "spans": [
+                  {
+                    "byte_end": 5211,
+                    "byte_start": 5183,
+                    "column_end": 46,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\native\\heap.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 164,
+                    "line_start": 164,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 18,
+                        "text": "        if !cfg!(assert_timer_heap_consistent) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: use of deprecated method `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead\n   --> src\\native\\atomic_waker.rs:107:26\n    |\n107 |         match self.state.compare_and_swap(WAITING, REGISTERING, Acquire) {\n    |                          ^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(deprecated)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(deprecated)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "deprecated",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "use of deprecated method `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead",
+                "spans": [
+                  {
+                    "byte_end": 4053,
+                    "byte_start": 4037,
+                    "column_end": 42,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\native\\atomic_waker.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 107,
+                    "line_start": 107,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 26,
+                        "text": "        match self.state.compare_and_swap(WAITING, REGISTERING, Acquire) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: trait `AssertSync` is never used\n  --> src\\native\\atomic_waker.rs:45:15\n   |\n45 |         trait AssertSync: Sync {}\n   |               ^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(dead_code)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "dead_code",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "trait `AssertSync` is never used",
+                "spans": [
+                  {
+                    "byte_end": 1737,
+                    "byte_start": 1727,
+                    "column_end": 25,
+                    "column_start": 15,
+                    "expansion": null,
+                    "file_name": "src\\native\\atomic_waker.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 45,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 15,
+                        "text": "        trait AssertSync: Sync {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\target\\debug\\deps\\libfutures_timer-cd9470594d7f15a1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `assert_timer_heap_consistent`\n   --> src\\native\\heap.rs:164:18\n    |\n164 |         if !cfg!(assert_timer_heap_consistent) {\n    |                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(assert_timer_heap_consistent)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(assert_timer_heap_consistent)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(assert_timer_heap_consistent)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(assert_timer_heap_consistent)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `assert_timer_heap_consistent`",
+                "spans": [
+                  {
+                    "byte_end": 5211,
+                    "byte_start": 5183,
+                    "column_end": 46,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\native\\heap.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 164,
+                    "line_start": 164,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 18,
+                        "text": "        if !cfg!(assert_timer_heap_consistent) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: use of deprecated method `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead\n   --> src\\native\\atomic_waker.rs:107:26\n    |\n107 |         match self.state.compare_and_swap(WAITING, REGISTERING, Acquire) {\n    |                          ^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(deprecated)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(deprecated)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "deprecated",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "use of deprecated method `std::sync::atomic::AtomicUsize::compare_and_swap`: Use `compare_exchange` or `compare_exchange_weak` instead",
+                "spans": [
+                  {
+                    "byte_end": 4053,
+                    "byte_start": 4037,
+                    "column_end": 42,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\native\\atomic_waker.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 107,
+                    "line_start": 107,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 26,
+                        "text": "        match self.state.compare_and_swap(WAITING, REGISTERING, Acquire) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: trait `AssertSync` is never used\n  --> src\\native\\atomic_waker.rs:45:15\n   |\n45 |         trait AssertSync: Sync {}\n   |               ^^^^^^^^^^\n   |\n   = note: `#[warn(dead_code)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(dead_code)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "dead_code",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "trait `AssertSync` is never used",
+                "spans": [
+                  {
+                    "byte_end": 1737,
+                    "byte_start": 1727,
+                    "column_end": 25,
+                    "column_start": 15,
+                    "expansion": null,
+                    "file_name": "src\\native\\atomic_waker.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 45,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 15,
+                        "text": "        trait AssertSync: Sync {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: casting raw pointers to the same type and constness is unnecessary (`*mut native::arc_list::Node<T>` -> `*mut native::arc_list::Node<T>`)\n  --> src\\native\\arc_list.rs:39:40\n   |\n39 |                     drop(Arc::from_raw(node as *mut Node<T>));\n   |                                        ^^^^^^^^^^^^^^^^^^^^ help: try: `node`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast\n   = note: `#[warn(clippy::unnecessary_cast)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::unnecessary_cast)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1353,
+                        "byte_start": 1333,
+                        "column_end": 60,
+                        "column_start": 40,
+                        "expansion": null,
+                        "file_name": "src\\native\\arc_list.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 39,
+                        "line_start": 39,
+                        "suggested_replacement": "node",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 60,
+                            "highlight_start": 40,
+                            "text": "                    drop(Arc::from_raw(node as *mut Node<T>));"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_cast",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "casting raw pointers to the same type and constness is unnecessary (`*mut native::arc_list::Node<T>` -> `*mut native::arc_list::Node<T>`)",
+                "spans": [
+                  {
+                    "byte_end": 1353,
+                    "byte_start": 1333,
+                    "column_end": 60,
+                    "column_start": 40,
+                    "expansion": null,
+                    "file_name": "src\\native\\arc_list.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 39,
+                    "line_start": 39,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 60,
+                        "highlight_start": 40,
+                        "text": "                    drop(Arc::from_raw(node as *mut Node<T>));"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant pattern matching, consider using `is_some()`\n   --> src\\native\\arc_list.rs:102:19\n    |\n102 |         while let Some(_) = self.pop() {\n    |         ----------^^^^^^^------------- help: try: `while self.pop().is_some()`\n    |\n    = note: this will change drop order of the result, as well as all temporaries\n    = note: add `#[allow(clippy::redundant_pattern_matching)]` if this is important\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching\n    = note: `#[warn(clippy::redundant_pattern_matching)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this will change drop order of the result, as well as all temporaries",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "add `#[allow(clippy::redundant_pattern_matching)]` if this is important",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_pattern_matching)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3350,
+                        "byte_start": 3320,
+                        "column_end": 39,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\native\\arc_list.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 102,
+                        "line_start": 102,
+                        "suggested_replacement": "while self.pop().is_some()",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 39,
+                            "highlight_start": 9,
+                            "text": "        while let Some(_) = self.pop() {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_pattern_matching",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant pattern matching, consider using `is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 3337,
+                    "byte_start": 3330,
+                    "column_end": 26,
+                    "column_start": 19,
+                    "expansion": null,
+                    "file_name": "src\\native\\arc_list.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 102,
+                    "line_start": 102,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 19,
+                        "text": "        while let Some(_) = self.pop() {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: call to `std::mem::forget` with a value that does not implement `Drop`. Forgetting such a type is the same as dropping it\n  --> src\\native\\global.rs:87:5\n   |\n87 |     mem::forget(me.clone());\n   |     ^^^^^^^^^^^^^^^^^^^^^^^\n   |\nnote: argument has type `std::mem::ManuallyDrop<std::sync::Arc<std::thread::Thread>>`\n  --> src\\native\\global.rs:87:17\n   |\n87 |     mem::forget(me.clone());\n   |                 ^^^^^^^^^^\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#forget_non_drop\n   = note: `#[warn(clippy::forget_non_drop)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "argument has type `std::mem::ManuallyDrop<std::sync::Arc<std::thread::Thread>>`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2339,
+                        "byte_start": 2329,
+                        "column_end": 27,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\native\\global.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 87,
+                        "line_start": 87,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 17,
+                            "text": "    mem::forget(me.clone());"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#forget_non_drop",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::forget_non_drop)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::forget_non_drop",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "call to `std::mem::forget` with a value that does not implement `Drop`. Forgetting such a type is the same as dropping it",
+                "spans": [
+                  {
+                    "byte_end": 2340,
+                    "byte_start": 2317,
+                    "column_end": 28,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\native\\global.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 87,
+                    "line_start": 87,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 5,
+                        "text": "    mem::forget(me.clone());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: writing `&mut Vec` instead of `&mut [_]` involves a new object where a slice will do\n   --> src\\native\\heap.rs:208:23\n    |\n208 | fn set_index<T>(slab: &mut Vec<SlabSlot<T>>, slab_slot: usize, val: T) {\n    |                       ^^^^^^^^^^^^^^^^^^^^^ help: change this to: `&mut [SlabSlot<T>]`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg\n    = note: `#[warn(clippy::ptr_arg)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_arg",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::ptr_arg)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6560,
+                        "byte_start": 6539,
+                        "column_end": 44,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\native\\heap.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 208,
+                        "line_start": 208,
+                        "suggested_replacement": "&mut [SlabSlot<T>]",
+                        "suggestion_applicability": "Unspecified",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 23,
+                            "text": "fn set_index<T>(slab: &mut Vec<SlabSlot<T>>, slab_slot: usize, val: T) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::ptr_arg",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "writing `&mut Vec` instead of `&mut [_]` involves a new object where a slice will do",
+                "spans": [
+                  {
+                    "byte_end": 6560,
+                    "byte_start": 6539,
+                    "column_end": 44,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\native\\heap.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 208,
+                    "line_start": 208,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 23,
+                        "text": "fn set_index<T>(slab: &mut Vec<SlabSlot<T>>, slab_slot: usize, val: T) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpu6o14fen/futures-timer-3.0.3#futures-timer@3.0.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_timer",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpu6o14fen\\futures-timer-3.0.3\\target\\debug\\deps\\libfutures_timer-dc93932351758a91.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 86
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "futures-timer",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-46e90a09-7e4cbdf4-1751108170",
+      "timestamp": "2025-06-28T10:56:10.831229+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

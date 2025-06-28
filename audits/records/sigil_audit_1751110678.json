@@ -1,0 +1,1796 @@
+[
+  {
+    "execution_id": "exec-fcf6eee0-f5654707-1751110671",
+    "timestamp": "2025-06-28T11:37:51.183954+00:00",
+    "sacred_chain": {
+      "input_data": "strum_macros",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'strum_macros' -> 'strum_macros'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "strum_macros",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.6666666666666665,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libunicode_ident-a9a384b336f6bb79.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heck@0.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heck-0.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "heck",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heck-0.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libheck-88c4a8fdaaceed29.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\build\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-15ab6800fc85e5bd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-15ab6800fc85e5bd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "host_os=\"windows\""
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-0e6f9310c8b30083\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-3b1f514462257677\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libproc_macro2-55f7902deb1fb11d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libquote-ff02503fee78ce6a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "rustversion",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libsyn-1c9d4e9671ade059.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libstrum_macros-b2b3f681b9717761.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\proc-macro2-3b1f514462257677\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libunicode_ident-a9a384b336f6bb79.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\build\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-15ab6800fc85e5bd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-15ab6800fc85e5bd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heck@0.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heck-0.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "heck",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heck-0.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libheck-88c4a8fdaaceed29.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libproc_macro2-55f7902deb1fb11d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "host_os=\"windows\""
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\build\\rustversion-0e6f9310c8b30083\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libquote-ff02503fee78ce6a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "rustversion",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustversion-1.0.21\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\rustversion-d5408a2b808eb648.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libsyn-1c9d4e9671ade059.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: empty line after doc comment\n   --> src\\lib.rs:814:1\n    |\n814 | / /// ```\n815 | |\n    | |_^\n816 |   #[proc_macro_derive(EnumProperty, attributes(strum))]\n817 |   pub fn enum_properties(input: proc_macro::TokenStream) -> proc_macro::TokenStream {\n    |   ---------------------- the comment documents this function\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#empty_line_after_doc_comments\n    = note: `#[warn(clippy::empty_line_after_doc_comments)]` on by default\n    = help: if the empty line is unintentional, remove it\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#empty_line_after_doc_comments",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::empty_line_after_doc_comments)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if the empty line is unintentional, remove it",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 29205,
+                        "byte_start": 29204,
+                        "column_end": 1,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 815,
+                        "line_start": 814,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 8,
+                            "highlight_start": 8,
+                            "text": "/// ```"
+                          },
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::empty_line_after_doc_comments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "empty line after doc comment",
+                "spans": [
+                  {
+                    "byte_end": 29282,
+                    "byte_start": 29260,
+                    "column_end": 23,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the comment documents this function",
+                    "line_end": 817,
+                    "line_start": 817,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "pub fn enum_properties(input: proc_macro::TokenStream) -> proc_macro::TokenStream {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 29205,
+                    "byte_start": 29197,
+                    "column_end": 1,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 815,
+                    "line_start": 814,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "/// ```"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: use of `char::is_digit` with literal radix of 10\n   --> src\\helpers\\case_style.rs:169:12\n    |\n169 |         if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {\n    |            ^^^^^^^^^^^^^^ help: try: `c.is_ascii_digit()`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#is_digit_ascii_radix\n    = note: `#[warn(clippy::is_digit_ascii_radix)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#is_digit_ascii_radix",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::is_digit_ascii_radix)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5769,
+                        "byte_start": 5755,
+                        "column_end": 26,
+                        "column_start": 12,
+                        "expansion": null,
+                        "file_name": "src\\helpers\\case_style.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 169,
+                        "line_start": 169,
+                        "suggested_replacement": "c.is_ascii_digit()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 12,
+                            "text": "        if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::is_digit_ascii_radix",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "use of `char::is_digit` with literal radix of 10",
+                "spans": [
+                  {
+                    "byte_end": 5769,
+                    "byte_start": 5755,
+                    "column_end": 26,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\helpers\\case_style.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 169,
+                    "line_start": 169,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 12,
+                        "text": "        if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: use of `char::is_digit` with literal radix of 10\n   --> src\\helpers\\case_style.rs:169:43\n    |\n169 |         if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {\n    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `output[pos - 1].is_ascii_digit()`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#is_digit_ascii_radix\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#is_digit_ascii_radix",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5814,
+                        "byte_start": 5786,
+                        "column_end": 71,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\helpers\\case_style.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 169,
+                        "line_start": 169,
+                        "suggested_replacement": "output[pos - 1].is_ascii_digit()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 71,
+                            "highlight_start": 43,
+                            "text": "        if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::is_digit_ascii_radix",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "use of `char::is_digit` with literal radix of 10",
+                "spans": [
+                  {
+                    "byte_end": 5814,
+                    "byte_start": 5786,
+                    "column_end": 71,
+                    "column_start": 43,
+                    "expansion": null,
+                    "file_name": "src\\helpers\\case_style.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 169,
+                    "line_start": 169,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 71,
+                        "highlight_start": 43,
+                        "text": "        if c.is_digit(10) && pos != 0 && !output[pos - 1].is_digit(10) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unnecessary closure used to substitute value for `Option::None`\n  --> src\\macros\\enum_discriminants.rs:37:29\n   |\n37 |       let discriminants_vis = type_properties\n   |  _____________________________^\n38 | |         .discriminant_vis\n39 | |         .as_ref()\n40 | |         .unwrap_or_else(|| &vis);\n   | |________________________________^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_lazy_evaluations\n   = note: `#[warn(clippy::unnecessary_lazy_evaluations)]` on by default\nhelp: use `unwrap_or` instead\n   |\n40 -         .unwrap_or_else(|| &vis);\n40 +         .unwrap_or(&vis);\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_lazy_evaluations",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::unnecessary_lazy_evaluations)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use `unwrap_or` instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1470,
+                        "byte_start": 1447,
+                        "column_end": 33,
+                        "column_start": 10,
+                        "expansion": null,
+                        "file_name": "src\\macros\\enum_discriminants.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 40,
+                        "line_start": 40,
+                        "suggested_replacement": "unwrap_or(&vis)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 10,
+                            "text": "        .unwrap_or_else(|| &vis);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_lazy_evaluations",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unnecessary closure used to substitute value for `Option::None`",
+                "spans": [
+                  {
+                    "byte_end": 1470,
+                    "byte_start": 1378,
+                    "column_end": 33,
+                    "column_start": 29,
+                    "expansion": null,
+                    "file_name": "src\\macros\\enum_discriminants.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 40,
+                    "line_start": 37,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 29,
+                        "text": "    let discriminants_vis = type_properties"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "        .discriminant_vis"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "        .as_ref()"
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "        .unwrap_or_else(|| &vis);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n  --> src\\macros\\enum_discriminants.rs:40:28\n   |\n40 |         .unwrap_or_else(|| &vis);\n   |                            ^^^^ help: change this to: `vis`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n   = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1469,
+                        "byte_start": 1465,
+                        "column_end": 32,
+                        "column_start": 28,
+                        "expansion": null,
+                        "file_name": "src\\macros\\enum_discriminants.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 40,
+                        "line_start": 40,
+                        "suggested_replacement": "vis",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 32,
+                            "highlight_start": 28,
+                            "text": "        .unwrap_or_else(|| &vis);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 1469,
+                    "byte_start": 1465,
+                    "column_end": 32,
+                    "column_start": 28,
+                    "expansion": null,
+                    "file_name": "src\\macros\\enum_discriminants.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 40,
+                    "line_start": 40,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 28,
+                        "text": "        .unwrap_or_else(|| &vis);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: useless conversion to the same type: `proc_macro2::TokenStream`\n  --> src\\macros\\enum_is.rs:41:8\n   |\n41 |       Ok(quote! {\n   |  ________^\n42 | |         impl #impl_generics #enum_name  #ty_generics #where_clause {\n43 | |             #(#variants)*\n...  |\n46 | |     .into())\n   | |___________^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion\n   = note: `#[warn(clippy::useless_conversion)]` on by default\nhelp: consider removing `.into()`\n   |\n41 ~     Ok(quote! {\n42 +         impl #impl_generics #enum_name  #ty_generics #where_clause {\n43 +             #(#variants)*\n44 +         }\n45 ~     })\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::useless_conversion)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider removing `.into()`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1532,
+                        "byte_start": 1401,
+                        "column_end": 12,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\macros\\enum_is.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 46,
+                        "line_start": 41,
+                        "suggested_replacement": "quote! {\n        impl #impl_generics #enum_name  #ty_generics #where_clause {\n            #(#variants)*\n        }\n    }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 16,
+                            "highlight_start": 8,
+                            "text": "    Ok(quote! {"
+                          },
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 1,
+                            "text": "        impl #impl_generics #enum_name  #ty_generics #where_clause {"
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "            #(#variants)*"
+                          },
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 1,
+                            "text": "        }"
+                          },
+                          {
+                            "highlight_end": 6,
+                            "highlight_start": 1,
+                            "text": "    }"
+                          },
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 1,
+                            "text": "    .into())"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::useless_conversion",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "useless conversion to the same type: `proc_macro2::TokenStream`",
+                "spans": [
+                  {
+                    "byte_end": 1532,
+                    "byte_start": 1401,
+                    "column_end": 12,
+                    "column_start": 8,
+                    "expansion": null,
+                    "file_name": "src\\macros\\enum_is.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 46,
+                    "line_start": 41,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 16,
+                        "highlight_start": 8,
+                        "text": "    Ok(quote! {"
+                      },
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 1,
+                        "text": "        impl #impl_generics #enum_name  #ty_generics #where_clause {"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "            #(#variants)*"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    }"
+                      },
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 1,
+                        "text": "    .into())"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unneeded `return` statement\n  --> src\\macros\\enum_try_as.rs:68:21\n   |\n68 |                     return None;\n   |                     ^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return\n   = note: `#[warn(clippy::needless_return)]` on by default\nhelp: remove `return`\n   |\n68 -                     return None;\n68 +                     None\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_return)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove `return`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2995,
+                        "byte_start": 2984,
+                        "column_end": 32,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\macros\\enum_try_as.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 68,
+                        "line_start": 68,
+                        "suggested_replacement": "None",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 32,
+                            "highlight_start": 21,
+                            "text": "                    return None;"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 2996,
+                        "byte_start": 2995,
+                        "column_end": 33,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\macros\\enum_try_as.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 68,
+                        "line_start": 68,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 32,
+                            "text": "                    return None;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_return",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unneeded `return` statement",
+                "spans": [
+                  {
+                    "byte_end": 2995,
+                    "byte_start": 2984,
+                    "column_end": 32,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\macros\\enum_try_as.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 68,
+                    "line_start": 68,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 21,
+                        "text": "                    return None;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant pattern matching, consider using `is_some()`\n  --> src\\macros\\strings\\as_ref_str.rs:30:16\n   |\n30 |         if let Some(..) = variant_properties.transparent {\n   |         -------^^^^^^^^--------------------------------- help: try: `if variant_properties.transparent.is_some()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching\n   = note: `#[warn(clippy::redundant_pattern_matching)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_pattern_matching)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 872,
+                        "byte_start": 824,
+                        "column_end": 57,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\macros\\strings\\as_ref_str.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 30,
+                        "line_start": 30,
+                        "suggested_replacement": "if variant_properties.transparent.is_some()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 57,
+                            "highlight_start": 9,
+                            "text": "        if let Some(..) = variant_properties.transparent {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_pattern_matching",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant pattern matching, consider using `is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 839,
+                    "byte_start": 831,
+                    "column_end": 24,
+                    "column_start": 16,
+                    "expansion": null,
+                    "file_name": "src\\macros\\strings\\as_ref_str.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 30,
+                    "line_start": 30,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 16,
+                        "text": "        if let Some(..) = variant_properties.transparent {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant pattern matching, consider using `is_some()`\n  --> src\\macros\\strings\\display.rs:28:16\n   |\n28 |         if let Some(..) = variant_properties.transparent {\n   |         -------^^^^^^^^--------------------------------- help: try: `if variant_properties.transparent.is_some()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_pattern_matching",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 927,
+                        "byte_start": 879,
+                        "column_end": 57,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\macros\\strings\\display.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 28,
+                        "line_start": 28,
+                        "suggested_replacement": "if variant_properties.transparent.is_some()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 57,
+                            "highlight_start": 9,
+                            "text": "        if let Some(..) = variant_properties.transparent {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_pattern_matching",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant pattern matching, consider using `is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 894,
+                    "byte_start": 886,
+                    "column_end": 24,
+                    "column_start": 16,
+                    "expansion": null,
+                    "file_name": "src\\macros\\strings\\display.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 28,
+                    "line_start": 28,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 16,
+                        "text": "        if let Some(..) = variant_properties.transparent {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp73i5_r31/strum_macros-0.27.1#strum_macros@0.27.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "strum_macros",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp73i5_r31\\strum_macros-0.27.1\\target\\debug\\deps\\libstrum_macros-e3551e5d6eedff87.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 7
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "strum_macros",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-fcf6eee0-f5654707-1751110671",
+      "timestamp": "2025-06-28T11:37:51.183954+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

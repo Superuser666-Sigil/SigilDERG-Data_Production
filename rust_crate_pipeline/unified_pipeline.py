@@ -19,6 +19,7 @@ from .scraping import UnifiedScraper, ScrapingResult
 from .crate_analysis import CrateAnalyzer
 from rust_crate_pipeline.utils.sanitization import Sanitizer
 from rust_crate_pipeline.version import __version__
+from utils.serialization_utils import to_serializable
 
 # Import Azure OpenAI enricher if available
 try:
@@ -26,7 +27,7 @@ try:
     AZURE_OPENAI_AVAILABLE = True
 except ImportError:
     AZURE_OPENAI_AVAILABLE = False
-    AzureOpenAIEnricher = None  # type: ignore  # Fallback for type checkers; see below
+    AzureOpenAIEnricher = None
 
 # Import unified LLM processor
 try:
@@ -34,14 +35,13 @@ try:
     UNIFIED_LLM_AVAILABLE = True
 except ImportError:
     UNIFIED_LLM_AVAILABLE = False
-    UnifiedLLMProcessor = None  # type: ignore
-    create_llm_processor_from_args = None  # type: ignore
-    LLMConfig = None  # type: ignore
+    UnifiedLLMProcessor = None
+    create_llm_processor_from_args = None
+    LLMConfig = None
 
 if TYPE_CHECKING:
-    from .azure_ai_processing import AzureOpenAIEnricher  # type: ignore[import]
-    from .unified_llm_processor import UnifiedLLMProcessor, LLMConfig  # type: ignore[import]
-    from .config import CrateMetadata, EnrichedCrate
+    from .azure_ai_processing import AzureOpenAIEnricher
+    from .unified_llm_processor import UnifiedLLMProcessor, LLMConfig
 
 
 class UnifiedSigilPipeline:
@@ -52,7 +52,7 @@ class UnifiedSigilPipeline:
         self.irl_engine: Optional[IRLEngine] = None
         self.scraper: Optional[UnifiedScraper] = None
         self.canon_registry: CanonRegistry = CanonRegistry()
-        self.sanitizer = Sanitizer()
+        self.sanitizer = Sanitizer(enabled=False)
         
         # Initialize AI components
         self.ai_enricher: Optional[Any] = None
@@ -93,7 +93,7 @@ class UnifiedSigilPipeline:
             elif AZURE_OPENAI_AVAILABLE and self.config.use_azure_openai:
                 try:
                     if AzureOpenAIEnricher is not None:
-                        self.ai_enricher = AzureOpenAIEnricher(self.config)  # type: ignore
+                        self.ai_enricher = AzureOpenAIEnricher(self.config)
                         self.logger.info("✅ Azure OpenAI Enricher initialized successfully")
                     else:
                         self.logger.warning("⚠️  AzureOpenAIEnricher is None at runtime; skipping initialization.")
@@ -355,9 +355,6 @@ class UnifiedSigilPipeline:
         try:
             self.logger.info(f"🤖 Adding unified LLM enrichment for {crate_name}")
             
-            # Import here to avoid circular dependency at module level
-            from .models.crate_metadata import CrateMetadata
-            
             # Get scraped data from trace
             scraped_data = trace.audit_info.get('sanitized_documentation', {})
             crates_io_data = scraped_data.get('crates.io', {}).get('data', {})
@@ -405,9 +402,6 @@ class UnifiedSigilPipeline:
             
         try:
             self.logger.info(f"🤖 Adding Azure OpenAI enrichment for {crate_name}")
-            
-            # Import here to avoid circular dependency at module level
-            from .models.crate_metadata import CrateMetadata
             
             # Get scraped data from trace
             scraped_data = trace.audit_info.get('sanitized_documentation', {})
@@ -460,16 +454,18 @@ class UnifiedSigilPipeline:
             
             report_path = output_dir / f"{crate_name}_analysis_report.json"
             
-            report_data = trace.to_dict()
+            report_data = to_serializable(trace.to_dict())
 
             # Manually handle MarkdownGenerationResult
-            if 'llm_enrichment' in report_data.get('audit_info', {}):
-                enrichment = report_data['audit_info']['llm_enrichment']
-                if not isinstance(enrichment, (dict, list, str, int, float, bool, type(None))):
-                    report_data['audit_info']['llm_enrichment'] = str(enrichment)
+            enrichment_path = report_data.get('audit_info', {}).get('llm_enrichment')
+            if enrichment_path is not None and not isinstance(
+                enrichment_path, (dict, list, str, int, float, bool, type(None))
+            ):
+                # Fallback: convert to string to guarantee JSON serialization
+                report_data['audit_info']['llm_enrichment'] = str(enrichment_path)
             
             with open(report_path, "w", encoding="utf-8") as f:
-                json.dump(report_data, f, indent=4)
+                json.dump(report_data, f, indent=4, default=str)
 
             self.logger.info(f"📊 Analysis report generated at {report_path}")
             

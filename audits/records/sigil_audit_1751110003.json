@@ -1,0 +1,2255 @@
+[
+  {
+    "execution_id": "exec-7893b23b-12e79423-1751109988",
+    "timestamp": "2025-06-28T11:26:28.122354+00:00",
+    "sacred_chain": {
+      "input_data": "pickledb",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'pickledb' -> 'pickledb'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "pickledb",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#itoa@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "itoa",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libitoa-9942240d9166be73.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ryu@1.0.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ryu-1.0.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ryu",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ryu-1.0.9\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libryu-f0d99f7fac690d89.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-xid@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_xid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.2\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libunicode_xid-4343715d9f50f30e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libunicode_xid-4343715d9f50f30e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-5604142b89d94ddb\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-5604142b89d94ddb\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-d4824bfb784b9afd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-d4824bfb784b9afd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-556d6736de68a0fd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-556d6736de68a0fd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-4eacee0e388e1ad5\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-4eacee0e388e1ad5\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-99a52f187a1b3d1a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-99a52f187a1b3d1a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-27117319edeea263\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "limb_width_64"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-fcde28c5412d99b5\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-775c8b67b1464c4a\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_proc_macro",
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-574d7c6d287daace\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "underscore_consts",
+                "ptr_addr_of"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-57e9ef5016070ecd\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libproc_macro2-9f0a9fd7f940688e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libproc_macro2-9f0a9fd7f940688e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libquote-d05654aad3a27219.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libquote-d05654aad3a27219.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libsyn-f4b5e2e224325088.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libsyn-f4b5e2e224325088.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "serde_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libserde-87a1953bad1bc99a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde_json",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libserde_json-bb1cbb18bb1d432d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "json"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libpickledb-0c99cc1bcc613f5b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-99a52f187a1b3d1a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-99a52f187a1b3d1a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_proc_macro",
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\proc-macro2-574d7c6d287daace\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-xid@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_xid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-xid-0.2.2\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libunicode_xid-4343715d9f50f30e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libunicode_xid-4343715d9f50f30e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-d4824bfb784b9afd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-d4824bfb784b9afd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-4eacee0e388e1ad5\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-4eacee0e388e1ad5\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-5604142b89d94ddb\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-5604142b89d94ddb\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-556d6736de68a0fd\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-556d6736de68a0fd\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ryu@1.0.9",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ryu-1.0.9\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ryu",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ryu-1.0.9\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libryu-f0d99f7fac690d89.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#itoa@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "itoa",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libitoa-9942240d9166be73.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libproc_macro2-9f0a9fd7f940688e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libproc_macro2-9f0a9fd7f940688e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\syn-27117319edeea263\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "underscore_consts",
+                "ptr_addr_of"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_derive-57e9ef5016070ecd\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde-775c8b67b1464c4a\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "limb_width_64"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\build\\serde_json-fcde28c5412d99b5\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libquote-d05654aad3a27219.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libquote-d05654aad3a27219.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.91",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.91\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libsyn-f4b5e2e224325088.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libsyn-f4b5e2e224325088.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "serde_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.136\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\serde_derive-f8e3f75ad78bd8aa.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.136",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.136\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libserde-87a1953bad1bc99a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_json@1.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde_json",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_json-1.0.79\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libserde_json-bb1cbb18bb1d432d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\pickledb.rs:45:9\n   |\n45 |     ///    [PickleDb::load()](#method.load) to understand the different policy options\n   |         ^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n   = note: `#[warn(clippy::doc_overindented_list_items)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_overindented_list_items)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1814,
+                        "byte_start": 1811,
+                        "column_end": 12,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 45,
+                        "line_start": 45,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 9,
+                            "text": "    ///    [PickleDb::load()](#method.load) to understand the different policy options"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1814,
+                    "byte_start": 1811,
+                    "column_end": 12,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 45,
+                    "line_start": 45,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 9,
+                        "text": "    ///    [PickleDb::load()](#method.load) to understand the different policy options"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\pickledb.rs:80:9\n   |\n80 |     ///    [PickleDb::load()](#method.load) to understand the different policy options\n   |         ^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3133,
+                        "byte_start": 3130,
+                        "column_end": 12,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 80,
+                        "line_start": 80,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 9,
+                            "text": "    ///    [PickleDb::load()](#method.load) to understand the different policy options"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3133,
+                    "byte_start": 3130,
+                    "column_end": 12,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 80,
+                    "line_start": 80,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 9,
+                        "text": "    ///    [PickleDb::load()](#method.load) to understand the different policy options"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unnecessary use of `get(key).is_some()`\n   --> src\\pickledb.rs:543:18\n    |\n543 |         self.map.get(key).is_some() || self.list_map.get(key).is_some()\n    |                  ^^^^^^^^^^^^^^^^^^ help: replace it with: `contains_key(key)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check\n    = note: `#[warn(clippy::unnecessary_get_then_check)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::unnecessary_get_then_check)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 20767,
+                        "byte_start": 20749,
+                        "column_end": 36,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 543,
+                        "line_start": 543,
+                        "suggested_replacement": "contains_key(key)",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 18,
+                            "text": "        self.map.get(key).is_some() || self.list_map.get(key).is_some()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_get_then_check",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unnecessary use of `get(key).is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 20767,
+                    "byte_start": 20749,
+                    "column_end": 36,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 543,
+                    "line_start": 543,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 18,
+                        "text": "        self.map.get(key).is_some() || self.list_map.get(key).is_some()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unnecessary use of `get(key).is_some()`\n   --> src\\pickledb.rs:543:54\n    |\n543 |         self.map.get(key).is_some() || self.list_map.get(key).is_some()\n    |                                                      ^^^^^^^^^^^^^^^^^^ help: replace it with: `contains_key(key)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 20803,
+                        "byte_start": 20785,
+                        "column_end": 72,
+                        "column_start": 54,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 543,
+                        "line_start": 543,
+                        "suggested_replacement": "contains_key(key)",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 72,
+                            "highlight_start": 54,
+                            "text": "        self.map.get(key).is_some() || self.list_map.get(key).is_some()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_get_then_check",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unnecessary use of `get(key).is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 20803,
+                    "byte_start": 20785,
+                    "column_end": 72,
+                    "column_start": 54,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 543,
+                    "line_start": 543,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 54,
+                        "text": "        self.map.get(key).is_some() || self.list_map.get(key).is_some()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: iterating on a map's keys\n   --> src\\pickledb.rs:553:13\n    |\n553 | /             self.map\n554 | |                 .iter()\n555 | |                 .map(|(key, _)| key.clone())\n    | |____________________________________________^ help: try: `self.map.keys().map(|key| key.clone())`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#iter_kv_map\n    = note: `#[warn(clippy::iter_kv_map)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#iter_kv_map",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::iter_kv_map)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21145,
+                        "byte_start": 21068,
+                        "column_end": 45,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 555,
+                        "line_start": 553,
+                        "suggested_replacement": "self.map.keys().map(|key| key.clone())",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 13,
+                            "text": "            self.map"
+                          },
+                          {
+                            "highlight_end": 24,
+                            "highlight_start": 1,
+                            "text": "                .iter()"
+                          },
+                          {
+                            "highlight_end": 45,
+                            "highlight_start": 1,
+                            "text": "                .map(|(key, _)| key.clone())"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::iter_kv_map",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "iterating on a map's keys",
+                "spans": [
+                  {
+                    "byte_end": 21145,
+                    "byte_start": 21068,
+                    "column_end": 45,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 555,
+                    "line_start": 553,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 13,
+                        "text": "            self.map"
+                      },
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 1,
+                        "text": "                .iter()"
+                      },
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 1,
+                        "text": "                .map(|(key, _)| key.clone())"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: iterating on a map's keys\n   --> src\\pickledb.rs:557:13\n    |\n557 | /             self.list_map\n558 | |                 .iter()\n559 | |                 .map(|(key, _)| key.clone())\n    | |____________________________________________^ help: try: `self.list_map.keys().map(|key| key.clone())`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#iter_kv_map\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#iter_kv_map",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21283,
+                        "byte_start": 21201,
+                        "column_end": 45,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 559,
+                        "line_start": 557,
+                        "suggested_replacement": "self.list_map.keys().map(|key| key.clone())",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 13,
+                            "text": "            self.list_map"
+                          },
+                          {
+                            "highlight_end": 24,
+                            "highlight_start": 1,
+                            "text": "                .iter()"
+                          },
+                          {
+                            "highlight_end": 45,
+                            "highlight_start": 1,
+                            "text": "                .map(|(key, _)| key.clone())"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::iter_kv_map",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "iterating on a map's keys",
+                "spans": [
+                  {
+                    "byte_end": 21283,
+                    "byte_start": 21201,
+                    "column_end": 45,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 559,
+                    "line_start": 557,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 13,
+                        "text": "            self.list_map"
+                      },
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 1,
+                        "text": "                .iter()"
+                      },
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 1,
+                        "text": "                .map(|(key, _)| key.clone())"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unnecessary use of `get(name).is_some()`\n   --> src\\pickledb.rs:652:23\n    |\n652 |         self.list_map.get(name).is_some()\n    |                       ^^^^^^^^^^^^^^^^^^^ help: replace it with: `contains_key(name)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_get_then_check",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 24736,
+                        "byte_start": 24717,
+                        "column_end": 42,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\pickledb.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 652,
+                        "line_start": 652,
+                        "suggested_replacement": "contains_key(name)",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 23,
+                            "text": "        self.list_map.get(name).is_some()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_get_then_check",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unnecessary use of `get(name).is_some()`",
+                "spans": [
+                  {
+                    "byte_end": 24736,
+                    "byte_start": 24717,
+                    "column_end": 42,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\pickledb.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 652,
+                    "line_start": 652,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 23,
+                        "text": "        self.list_map.get(name).is_some()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: manual implementation of `ok`\n  --> src\\serialization.rs:56:9\n   |\n56 | /         match serde_json::from_str(std::str::from_utf8(ser_data).unwrap()) {\n57 | |             Ok(val) => Some(val),\n58 | |             Err(_) => None,\n59 | |         }\n   | |_________^ help: replace with: `serde_json::from_str(std::str::from_utf8(ser_data).unwrap()).ok()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_ok_err\n   = note: `#[warn(clippy::manual_ok_err)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_ok_err",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::manual_ok_err)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1563,
+                        "byte_start": 1423,
+                        "column_end": 10,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\serialization.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 59,
+                        "line_start": 56,
+                        "suggested_replacement": "serde_json::from_str(std::str::from_utf8(ser_data).unwrap()).ok()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 77,
+                            "highlight_start": 9,
+                            "text": "        match serde_json::from_str(std::str::from_utf8(ser_data).unwrap()) {"
+                          },
+                          {
+                            "highlight_end": 34,
+                            "highlight_start": 1,
+                            "text": "            Ok(val) => Some(val),"
+                          },
+                          {
+                            "highlight_end": 28,
+                            "highlight_start": 1,
+                            "text": "            Err(_) => None,"
+                          },
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 1,
+                            "text": "        }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_ok_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "manual implementation of `ok`",
+                "spans": [
+                  {
+                    "byte_end": 1563,
+                    "byte_start": 1423,
+                    "column_end": 10,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\serialization.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 59,
+                    "line_start": 56,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 77,
+                        "highlight_start": 9,
+                        "text": "        match serde_json::from_str(std::str::from_utf8(ser_data).unwrap()) {"
+                      },
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 1,
+                        "text": "            Ok(val) => Some(val),"
+                      },
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 1,
+                        "text": "            Err(_) => None,"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpco8_mfdq/pickledb-0.5.1#pickledb@0.5.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pickledb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "json"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpco8_mfdq\\pickledb-0.5.1\\target\\debug\\deps\\libpickledb-063d0a5b2abc76fb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 45
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "serde_cbor",
+                    "version": "0.11.2",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "2bef2ebfde456fb76bbcf9f59315333decc4fda0b2b44b420243c11e0f5ec1f5",
+                    "dependencies": [
+                      {
+                        "name": "half",
+                        "version": "1.8.2",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "serde",
+                        "version": "1.0.136",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2021-0127",
+                    "package": "serde_cbor",
+                    "title": "serde_cbor is unmaintained",
+                    "description": "The `serde_cbor` crate is unmaintained. The author has archived the github repository.\n\nAlternatives proposed by the author:\n\n * [`ciborium`](https://crates.io/crates/ciborium)\n * [`minicbor`](https://crates.io/crates/minicbor)",
+                    "date": "2021-08-15",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/pyfisch/cbor",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "yaml-rust",
+                    "version": "0.4.5",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "56c1936c4cc7a1c9ab21a1ebb602eb942ba868cbd44a99cb7cdc5892335e1c85",
+                    "dependencies": [
+                      {
+                        "name": "linked-hash-map",
+                        "version": "0.5.4",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0320",
+                    "package": "yaml-rust",
+                    "title": "yaml-rust is unmaintained.",
+                    "description": "The maintainer seems [unreachable](https://github.com/chyh1990/yaml-rust/issues/197).\n\nMany issues and pull requests have been submitted over the years\nwithout any [response](https://github.com/chyh1990/yaml-rust/issues/160).\n\n## Alternatives\n\nConsider switching to the actively maintained `yaml-rust2` fork of the original project:\n\n- [yaml-rust2](https://github.com/Ethiraric/yaml-rust2)\n- [yaml-rust2 @ crates.io](https://crates.io/crates/yaml-rust2)",
+                    "date": "2024-03-20",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/rustsec/advisory-db/issues/1921",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "pickledb",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-7893b23b-12e79423-1751109988",
+      "timestamp": "2025-06-28T11:26:28.122354+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

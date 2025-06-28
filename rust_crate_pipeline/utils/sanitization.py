@@ -32,23 +32,34 @@ def download_spacy_model_if_not_present(model="en_core_web_sm"):
         log.info(f"Successfully downloaded SpaCy model '{model}'.")
 
 class Sanitizer:
-    """A class to handle PII and secret sanitization."""
+    """Utility to optionally scrub PII/secret-esque tokens.
 
-    def __init__(self):
-        # Ensure spaCy model is available
-        download_spacy_model_if_not_present()
+    By default sanitisation is now **disabled** because Rust crates' public
+    metadata should not contain PII.  Pass ``enabled=True`` if you still want
+    the behaviour (e.g. for tests).
+    """
 
-        # Set up Presidio Analyzer
-        provider = NlpEngineProvider()
-        nlp_engine = provider.create_engine()
-        self.analyzer = AnalyzerEngine(
-            nlp_engine=nlp_engine,
-            supported_languages=["en"]
-        )
+    def __init__(self, *, enabled: bool = False):
+        self.enabled = enabled
+
+        if self.enabled:
+            # Heavy-weight models are only loaded if sanitisation requested
+            download_spacy_model_if_not_present()
+
+            # Set up Presidio Analyzer
+            provider = NlpEngineProvider()
+            nlp_engine = provider.create_engine()
+            self.analyzer = AnalyzerEngine(
+                nlp_engine=nlp_engine,
+                supported_languages=["en"]
+            )
 
     def sanitize_text(self, text: str) -> str:
         """Sanitizes a single string of text."""
         if not isinstance(text, str):
+            return text
+
+        if not self.enabled:
             return text
 
         # PII sanitization
@@ -64,6 +75,9 @@ class Sanitizer:
 
     def sanitize_data(self, data: Any) -> Any:
         """Recursively sanitizes a data structure (dict, list, string)."""
+        if not self.enabled:
+            return data
+
         if isinstance(data, dict):
             return {key: self.sanitize_data(value) for key, value in data.items()}
         elif isinstance(data, list):

@@ -39,8 +39,8 @@ import sys
 import json
 from pathlib import Path
 from typing import List, Optional
-from dataclasses import asdict
 import time
+from utils.serialization_utils import to_serializable
 
 # Add the project root to the path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -322,8 +322,10 @@ async def main() -> None:
             
             # Save enriched data
             output_file = output_dir / f"{crate_name}_enriched.json"
+            # Robust serialization handling – use dataclass helper to_dict() and convert via to_serializable
+            enriched_data = to_serializable(enriched_crate.to_dict())  # type: ignore[attr-defined]
             with open(output_file, "w", encoding="utf-8") as f:
-                json.dump(asdict(enriched_crate), f, indent=4)
+                json.dump(enriched_data, f, indent=4, default=str)
             
             logger.info(f"Successfully processed and saved: {output_file}")
             

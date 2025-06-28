@@ -1,0 +1,1176 @@
+[
+  {
+    "execution_id": "exec-2b5a7b41-25888756-1751108625",
+    "timestamp": "2025-06-28T11:03:45.158667+00:00",
+    "sacred_chain": {
+      "input_data": "getopts",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'getopts' -> 'getopts'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "getopts",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\target\\debug\\deps\\libunicode_width-b4ce6ad8677b3dfb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\target\\debug\\deps\\libgetopts-32a24508ad197dcc.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\target\\debug\\deps\\libunicode_width-b4ce6ad8677b3dfb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant field names in struct initialization\n   --> src\\lib.rs:870:21\n    |\n870 |                     hasarg: hasarg,\n    |                     ^^^^^^^^^^^^^^ help: replace it with: `hasarg`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n    = note: `#[warn(clippy::redundant_field_names)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_field_names)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28791,
+                        "byte_start": 28777,
+                        "column_end": 35,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 870,
+                        "line_start": 870,
+                        "suggested_replacement": "hasarg",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 21,
+                            "text": "                    hasarg: hasarg,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 28791,
+                    "byte_start": 28777,
+                    "column_end": 35,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 870,
+                    "line_start": 870,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 21,
+                        "text": "                    hasarg: hasarg,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant field names in struct initialization\n   --> src\\lib.rs:871:21\n    |\n871 |                     occur: occur,\n    |                     ^^^^^^^^^^^^ help: replace it with: `occur`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28825,
+                        "byte_start": 28813,
+                        "column_end": 33,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 871,
+                        "line_start": 871,
+                        "suggested_replacement": "occur",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 21,
+                            "text": "                    occur: occur,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 28825,
+                    "byte_start": 28813,
+                    "column_end": 33,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 871,
+                    "line_start": 871,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 21,
+                        "text": "                    occur: occur,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:531:87\n    |\n531 | ...                   } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {\n    |                                                                                 ^^ help: change this to: `n`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18432,
+                        "byte_start": 18430,
+                        "column_end": 89,
+                        "column_start": 87,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 531,
+                        "line_start": 531,
+                        "suggested_replacement": "n",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 89,
+                            "highlight_start": 87,
+                            "text": "                            } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 18432,
+                    "byte_start": 18430,
+                    "column_end": 89,
+                    "column_start": 87,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 531,
+                    "line_start": 531,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 89,
+                        "highlight_start": 87,
+                        "text": "                            } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: manual implementation of `str::repeat` using iterators\n   --> src\\lib.rs:609:40\n    |\n609 |         let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());\n    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `\" \".repeat(24)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_str_repeat\n    = note: `#[warn(clippy::manual_str_repeat)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_str_repeat",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::manual_str_repeat)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21251,
+                        "byte_start": 21211,
+                        "column_end": 80,
+                        "column_start": 40,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 609,
+                        "line_start": 609,
+                        "suggested_replacement": "\" \".repeat(24)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 80,
+                            "highlight_start": 40,
+                            "text": "        let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_str_repeat",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "manual implementation of `str::repeat` using iterators",
+                "spans": [
+                  {
+                    "byte_end": 21251,
+                    "byte_start": 21211,
+                    "column_end": 80,
+                    "column_start": 40,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 609,
+                    "line_start": 609,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 80,
+                        "highlight_start": 40,
+                        "text": "        let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: implementation of inherent method `to_string(&self) -> String` for type `Name`\n   --> src\\lib.rs:830:5\n    |\n830 | /     fn to_string(&self) -> String {\n831 | |         match *self {\n832 | |             Short(ch) => ch.to_string(),\n833 | |             Long(ref s) => s.to_string(),\n834 | |         }\n835 | |     }\n    | |_____^\n    |\n    = help: implement trait `Display` for type `Name` instead\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inherent_to_string\n    = note: `#[warn(clippy::inherent_to_string)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "implement trait `Display` for type `Name` instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inherent_to_string",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::inherent_to_string)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::inherent_to_string",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "implementation of inherent method `to_string(&self) -> String` for type `Name`",
+                "spans": [
+                  {
+                    "byte_end": 27743,
+                    "byte_start": 27591,
+                    "column_end": 6,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 835,
+                    "line_start": 830,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 5,
+                        "text": "    fn to_string(&self) -> String {"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "        match *self {"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "            Short(ch) => ch.to_string(),"
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "            Long(ref s) => s.to_string(),"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: match expression looks like `matches!` macro\n   --> src\\lib.rs:930:23\n    |\n930 |               .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {\n    |  _______________________^\n931 | |                 Some(id) if !self.vals[id].is_empty() => true,\n932 | |                 _ => false,\n933 | |             })\n    | |_____________^ help: try: `matches!(find_opt(&self.opts, &Name::from_str(&nm)), Some(id) if !self.vals[id].is_empty())`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro\n    = note: `#[warn(clippy::match_like_matches_macro)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::match_like_matches_macro)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30722,
+                        "byte_start": 30567,
+                        "column_end": 14,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 933,
+                        "line_start": 930,
+                        "suggested_replacement": "matches!(find_opt(&self.opts, &Name::from_str(&nm)), Some(id) if !self.vals[id].is_empty())",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 73,
+                            "highlight_start": 23,
+                            "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                          },
+                          {
+                            "highlight_end": 63,
+                            "highlight_start": 1,
+                            "text": "                Some(id) if !self.vals[id].is_empty() => true,"
+                          },
+                          {
+                            "highlight_end": 28,
+                            "highlight_start": 1,
+                            "text": "                _ => false,"
+                          },
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 1,
+                            "text": "            })"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::match_like_matches_macro",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "match expression looks like `matches!` macro",
+                "spans": [
+                  {
+                    "byte_end": 30722,
+                    "byte_start": 30567,
+                    "column_end": 14,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 933,
+                    "line_start": 930,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 73,
+                        "highlight_start": 23,
+                        "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                      },
+                      {
+                        "highlight_end": 63,
+                        "highlight_start": 1,
+                        "text": "                Some(id) if !self.vals[id].is_empty() => true,"
+                      },
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 1,
+                        "text": "                _ => false,"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "            })"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:930:66\n    |\n930 |             .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {\n    |                                                                  ^^^ help: change this to: `nm`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30613,
+                        "byte_start": 30610,
+                        "column_end": 69,
+                        "column_start": 66,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 930,
+                        "line_start": 930,
+                        "suggested_replacement": "nm",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 66,
+                            "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 30613,
+                    "byte_start": 30610,
+                    "column_end": 69,
+                    "column_start": 66,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 930,
+                    "line_start": 930,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 66,
+                        "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:975:49\n    |\n975 |             .filter_map(|nm| match self.opt_val(&nm) {\n    |                                                 ^^^ help: change this to: `nm`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 32017,
+                        "byte_start": 32014,
+                        "column_end": 52,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 975,
+                        "line_start": 975,
+                        "suggested_replacement": "nm",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 52,
+                            "highlight_start": 49,
+                            "text": "            .filter_map(|nm| match self.opt_val(&nm) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 32017,
+                    "byte_start": 32014,
+                    "column_end": 52,
+                    "column_start": 49,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 975,
+                    "line_start": 975,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 52,
+                        "highlight_start": 49,
+                        "text": "            .filter_map(|nm| match self.opt_val(&nm) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: accessing first element with `arg.as_bytes().get(0)`\n    --> src\\lib.rs:1164:5\n     |\n1164 |     arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1\n     |     ^^^^^^^^^^^^^^^^^^^^^ help: try: `arg.as_bytes().first()`\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#get_first\n     = note: `#[warn(clippy::get_first)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#get_first",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::get_first)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 37893,
+                        "byte_start": 37872,
+                        "column_end": 26,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1164,
+                        "line_start": 1164,
+                        "suggested_replacement": "arg.as_bytes().first()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 5,
+                            "text": "    arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::get_first",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "accessing first element with `arg.as_bytes().get(0)`",
+                "spans": [
+                  {
+                    "byte_end": 37893,
+                    "byte_start": 37872,
+                    "column_end": 26,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1164,
+                    "line_start": 1164,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 5,
+                        "text": "    arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjyyja2vm/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjyyja2vm\\getopts-0.2.23\\target\\debug\\deps\\libgetopts-3ff0019679ebaff8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 6
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "getopts",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-2b5a7b41-25888756-1751108625",
+      "timestamp": "2025-06-28T11:03:45.158667+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

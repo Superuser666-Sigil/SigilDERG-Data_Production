@@ -1,0 +1,3951 @@
+[
+  {
+    "execution_id": "exec-e0603c49-b492c2e5-1751109266",
+    "timestamp": "2025-06-28T11:14:26.289026+00:00",
+    "sacred_chain": {
+      "input_data": "http",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'http' -> 'http'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "http",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libfnv-3d8ef674e6ff6ec4.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#itoa@1.0.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "itoa",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libitoa-aa54887879f3eb74.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytes@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytes",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libbytes-f604d5fb3747b6ad.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libhttp-031816aa9ce1bdf7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libfnv-3d8ef674e6ff6ec4.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytes@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytes",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.5.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libbytes-f604d5fb3747b6ad.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#itoa@1.0.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "itoa",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\itoa-1.0.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\target\\debug\\deps\\libitoa-aa54887879f3eb74.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: `?Sized` bound is ignored because of a `Sized` requirement\n    --> src\\header\\map.rs:1456:38\n     |\n1456 |         K: Hash + Into<HeaderName> + ?Sized,\n     |                                      ^^^^^^\n     |\nnote: `K` cannot be unsized because of the bound\n    --> src\\header\\map.rs:1456:19\n     |\n1456 |         K: Hash + Into<HeaderName> + ?Sized,\n     |                   ^^^^^^^^^^^^^^^^\n     = note: ...because `Into` has the bound `Sized`\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized\nnote: the lint level is defined here\n    --> src\\lib.rs:156:9\n     |\n156  | #![deny(warnings, missing_docs, missing_debug_implementations)]\n     |         ^^^^^^^^\n     = note: `#[deny(clippy::needless_maybe_sized)]` implied by `#[deny(warnings)]`\nhelp: change the bounds that require `Sized`, or remove the `?Sized` bound\n     |\n1456 -         K: Hash + Into<HeaderName> + ?Sized,\n1456 +         K: Hash + Into<HeaderName>,\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`K` cannot be unsized because of the bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 45117,
+                        "byte_start": 45101,
+                        "column_end": 35,
+                        "column_start": 19,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1456,
+                        "line_start": 1456,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 19,
+                            "text": "        K: Hash + Into<HeaderName> + ?Sized,"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "...because `Into` has the bound `Sized`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6239,
+                        "byte_start": 6231,
+                        "column_end": 17,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 156,
+                        "line_start": 156,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 9,
+                            "text": "#![deny(warnings, missing_docs, missing_debug_implementations)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_maybe_sized)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change the bounds that require `Sized`, or remove the `?Sized` bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 45126,
+                        "byte_start": 45117,
+                        "column_end": 44,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1456,
+                        "line_start": 1456,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 35,
+                            "text": "        K: Hash + Into<HeaderName> + ?Sized,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_maybe_sized",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "`?Sized` bound is ignored because of a `Sized` requirement",
+                "spans": [
+                  {
+                    "byte_end": 45126,
+                    "byte_start": 45120,
+                    "column_end": 44,
+                    "column_start": 38,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1456,
+                    "line_start": 1456,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 38,
+                        "text": "        K: Hash + Into<HeaderName> + ?Sized,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3692:10\n     |\n3692 |     impl<'a> Sealed for &'a HeaderName {\n     |          ^^              ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\n     = note: `#[deny(clippy::needless_lifetimes)]` implied by `#[deny(warnings)]`\nhelp: elide the lifetimes\n     |\n3692 -     impl<'a> Sealed for &'a HeaderName {\n3692 +     impl Sealed for &HeaderName {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_lifetimes)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 109309,
+                        "byte_start": 109305,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3692,
+                        "line_start": 3692,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> Sealed for &'a HeaderName {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 109325,
+                        "byte_start": 109322,
+                        "column_end": 29,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3692,
+                        "line_start": 3692,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 26,
+                            "text": "    impl<'a> Sealed for &'a HeaderName {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 109308,
+                    "byte_start": 109306,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3692,
+                    "line_start": 3692,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> Sealed for &'a HeaderName {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 109324,
+                    "byte_start": 109322,
+                    "column_end": 28,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3692,
+                    "line_start": 3692,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 26,
+                        "text": "    impl<'a> Sealed for &'a HeaderName {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3712:10\n     |\n3712 |     impl<'a> IntoHeaderName for &'a HeaderName {}\n     |          ^^                      ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3712 -     impl<'a> IntoHeaderName for &'a HeaderName {}\n3712 +     impl IntoHeaderName for &HeaderName {}\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 109895,
+                        "byte_start": 109891,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3712,
+                        "line_start": 3712,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> IntoHeaderName for &'a HeaderName {}"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 109919,
+                        "byte_start": 109916,
+                        "column_end": 37,
+                        "column_start": 34,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3712,
+                        "line_start": 3712,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 37,
+                            "highlight_start": 34,
+                            "text": "    impl<'a> IntoHeaderName for &'a HeaderName {}"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 109894,
+                    "byte_start": 109892,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3712,
+                    "line_start": 3712,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> IntoHeaderName for &'a HeaderName {}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 109918,
+                    "byte_start": 109916,
+                    "column_end": 36,
+                    "column_start": 34,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3712,
+                    "line_start": 3712,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 34,
+                        "text": "    impl<'a> IntoHeaderName for &'a HeaderName {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3802:10\n     |\n3802 |     impl<'a> Sealed for &'a HeaderName {\n     |          ^^              ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3802 -     impl<'a> Sealed for &'a HeaderName {\n3802 +     impl Sealed for &HeaderName {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 112655,
+                        "byte_start": 112651,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3802,
+                        "line_start": 3802,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> Sealed for &'a HeaderName {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 112671,
+                        "byte_start": 112668,
+                        "column_end": 29,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3802,
+                        "line_start": 3802,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 26,
+                            "text": "    impl<'a> Sealed for &'a HeaderName {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 112654,
+                    "byte_start": 112652,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3802,
+                    "line_start": 3802,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> Sealed for &'a HeaderName {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 112670,
+                    "byte_start": 112668,
+                    "column_end": 28,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3802,
+                    "line_start": 3802,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 26,
+                        "text": "    impl<'a> Sealed for &'a HeaderName {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3818:10\n     |\n3818 |     impl<'a> AsHeaderName for &'a HeaderName {}\n     |          ^^                    ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3818 -     impl<'a> AsHeaderName for &'a HeaderName {}\n3818 +     impl AsHeaderName for &HeaderName {}\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 113080,
+                        "byte_start": 113076,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3818,
+                        "line_start": 3818,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> AsHeaderName for &'a HeaderName {}"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 113102,
+                        "byte_start": 113099,
+                        "column_end": 35,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3818,
+                        "line_start": 3818,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 32,
+                            "text": "    impl<'a> AsHeaderName for &'a HeaderName {}"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 113079,
+                    "byte_start": 113077,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3818,
+                    "line_start": 3818,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> AsHeaderName for &'a HeaderName {}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 113101,
+                    "byte_start": 113099,
+                    "column_end": 34,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3818,
+                    "line_start": 3818,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 32,
+                        "text": "    impl<'a> AsHeaderName for &'a HeaderName {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3820:10\n     |\n3820 |     impl<'a> Sealed for &'a str {\n     |          ^^              ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3820 -     impl<'a> Sealed for &'a str {\n3820 +     impl Sealed for &str {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 113129,
+                        "byte_start": 113125,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3820,
+                        "line_start": 3820,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> Sealed for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 113145,
+                        "byte_start": 113142,
+                        "column_end": 29,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3820,
+                        "line_start": 3820,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 26,
+                            "text": "    impl<'a> Sealed for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 113128,
+                    "byte_start": 113126,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3820,
+                    "line_start": 3820,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> Sealed for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 113144,
+                    "byte_start": 113142,
+                    "column_end": 28,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3820,
+                    "line_start": 3820,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 26,
+                        "text": "    impl<'a> Sealed for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3838:10\n     |\n3838 |     impl<'a> AsHeaderName for &'a str {}\n     |          ^^                    ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3838 -     impl<'a> AsHeaderName for &'a str {}\n3838 +     impl AsHeaderName for &str {}\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 113670,
+                        "byte_start": 113666,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3838,
+                        "line_start": 3838,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> AsHeaderName for &'a str {}"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 113692,
+                        "byte_start": 113689,
+                        "column_end": 35,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3838,
+                        "line_start": 3838,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 32,
+                            "text": "    impl<'a> AsHeaderName for &'a str {}"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 113669,
+                    "byte_start": 113667,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3838,
+                    "line_start": 3838,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> AsHeaderName for &'a str {}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 113691,
+                    "byte_start": 113689,
+                    "column_end": 34,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3838,
+                    "line_start": 3838,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 32,
+                        "text": "    impl<'a> AsHeaderName for &'a str {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3858:10\n     |\n3858 |     impl<'a> Sealed for &'a String {\n     |          ^^              ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3858 -     impl<'a> Sealed for &'a String {\n3858 +     impl Sealed for &String {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 114161,
+                        "byte_start": 114157,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3858,
+                        "line_start": 3858,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> Sealed for &'a String {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 114177,
+                        "byte_start": 114174,
+                        "column_end": 29,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3858,
+                        "line_start": 3858,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 26,
+                            "text": "    impl<'a> Sealed for &'a String {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 114160,
+                    "byte_start": 114158,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3858,
+                    "line_start": 3858,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> Sealed for &'a String {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 114176,
+                    "byte_start": 114174,
+                    "column_end": 28,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3858,
+                    "line_start": 3858,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 26,
+                        "text": "    impl<'a> Sealed for &'a String {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\map.rs:3874:10\n     |\n3874 |     impl<'a> AsHeaderName for &'a String {}\n     |          ^^                    ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n3874 -     impl<'a> AsHeaderName for &'a String {}\n3874 +     impl AsHeaderName for &String {}\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 114572,
+                        "byte_start": 114568,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3874,
+                        "line_start": 3874,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "    impl<'a> AsHeaderName for &'a String {}"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 114594,
+                        "byte_start": 114591,
+                        "column_end": 35,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\header\\map.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 3874,
+                        "line_start": 3874,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 32,
+                            "text": "    impl<'a> AsHeaderName for &'a String {}"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 114571,
+                    "byte_start": 114569,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3874,
+                    "line_start": 3874,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "    impl<'a> AsHeaderName for &'a String {}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 114593,
+                    "byte_start": 114591,
+                    "column_end": 34,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\header\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 3874,
+                    "line_start": 3874,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 32,
+                        "text": "    impl<'a> AsHeaderName for &'a String {}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\name.rs:1442:6\n     |\n1442 | impl<'a> PartialEq<HeaderName> for &'a HeaderName {\n     |      ^^                             ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n1442 - impl<'a> PartialEq<HeaderName> for &'a HeaderName {\n1442 + impl PartialEq<HeaderName> for &HeaderName {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 65132,
+                        "byte_start": 65128,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1442,
+                        "line_start": 1442,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<HeaderName> for &'a HeaderName {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 65163,
+                        "byte_start": 65160,
+                        "column_end": 40,
+                        "column_start": 37,
+                        "expansion": null,
+                        "file_name": "src\\header\\name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1442,
+                        "line_start": 1442,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 37,
+                            "text": "impl<'a> PartialEq<HeaderName> for &'a HeaderName {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 65131,
+                    "byte_start": 65129,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\name.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1442,
+                    "line_start": 1442,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<HeaderName> for &'a HeaderName {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 65162,
+                    "byte_start": 65160,
+                    "column_end": 39,
+                    "column_start": 37,
+                    "expansion": null,
+                    "file_name": "src\\header\\name.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1442,
+                    "line_start": 1442,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 39,
+                        "highlight_start": 37,
+                        "text": "impl<'a> PartialEq<HeaderName> for &'a HeaderName {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\header\\name.rs:1496:6\n     |\n1496 | impl<'a> PartialEq<HeaderName> for &'a str {\n     |      ^^                             ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n1496 - impl<'a> PartialEq<HeaderName> for &'a str {\n1496 + impl PartialEq<HeaderName> for &str {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 66529,
+                        "byte_start": 66525,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1496,
+                        "line_start": 1496,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<HeaderName> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 66560,
+                        "byte_start": 66557,
+                        "column_end": 40,
+                        "column_start": 37,
+                        "expansion": null,
+                        "file_name": "src\\header\\name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1496,
+                        "line_start": 1496,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 37,
+                            "text": "impl<'a> PartialEq<HeaderName> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 66528,
+                    "byte_start": 66526,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\name.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1496,
+                    "line_start": 1496,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<HeaderName> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 66559,
+                    "byte_start": 66557,
+                    "column_end": 39,
+                    "column_start": 37,
+                    "expansion": null,
+                    "file_name": "src\\header\\name.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1496,
+                    "line_start": 1496,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 39,
+                        "highlight_start": 37,
+                        "text": "impl<'a> PartialEq<HeaderName> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\header\\value.rs:728:6\n    |\n728 | impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {\n    |      ^^                              ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n728 - impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {\n728 + impl PartialEq<HeaderValue> for &HeaderValue {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 20320,
+                        "byte_start": 20316,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 728,
+                        "line_start": 728,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 20352,
+                        "byte_start": 20349,
+                        "column_end": 41,
+                        "column_start": 38,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 728,
+                        "line_start": 728,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 38,
+                            "text": "impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 20319,
+                    "byte_start": 20317,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 728,
+                    "line_start": 728,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 20351,
+                    "byte_start": 20349,
+                    "column_end": 40,
+                    "column_start": 38,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 728,
+                    "line_start": 728,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 40,
+                        "highlight_start": 38,
+                        "text": "impl<'a> PartialEq<HeaderValue> for &'a HeaderValue {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\header\\value.rs:735:6\n    |\n735 | impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {\n    |      ^^                               ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n735 - impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {\n735 + impl PartialOrd<HeaderValue> for &HeaderValue {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 20470,
+                        "byte_start": 20466,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 735,
+                        "line_start": 735,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 20503,
+                        "byte_start": 20500,
+                        "column_end": 42,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 735,
+                        "line_start": 735,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 39,
+                            "text": "impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 20469,
+                    "byte_start": 20467,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 735,
+                    "line_start": 735,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 20502,
+                    "byte_start": 20500,
+                    "column_end": 41,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 735,
+                    "line_start": 735,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 39,
+                        "text": "impl<'a> PartialOrd<HeaderValue> for &'a HeaderValue {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\header\\value.rs:762:6\n    |\n762 | impl<'a> PartialEq<HeaderValue> for &'a str {\n    |      ^^                              ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n762 - impl<'a> PartialEq<HeaderValue> for &'a str {\n762 + impl PartialEq<HeaderValue> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21058,
+                        "byte_start": 21054,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 762,
+                        "line_start": 762,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<HeaderValue> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 21090,
+                        "byte_start": 21087,
+                        "column_end": 41,
+                        "column_start": 38,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 762,
+                        "line_start": 762,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 38,
+                            "text": "impl<'a> PartialEq<HeaderValue> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 21057,
+                    "byte_start": 21055,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 762,
+                    "line_start": 762,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<HeaderValue> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 21089,
+                    "byte_start": 21087,
+                    "column_end": 40,
+                    "column_start": 38,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 762,
+                    "line_start": 762,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 40,
+                        "highlight_start": 38,
+                        "text": "impl<'a> PartialEq<HeaderValue> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\header\\value.rs:769:6\n    |\n769 | impl<'a> PartialOrd<HeaderValue> for &'a str {\n    |      ^^                               ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n769 - impl<'a> PartialOrd<HeaderValue> for &'a str {\n769 + impl PartialOrd<HeaderValue> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21199,
+                        "byte_start": 21195,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 769,
+                        "line_start": 769,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialOrd<HeaderValue> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 21232,
+                        "byte_start": 21229,
+                        "column_end": 42,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\header\\value.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 769,
+                        "line_start": 769,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 39,
+                            "text": "impl<'a> PartialOrd<HeaderValue> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 21198,
+                    "byte_start": 21196,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 769,
+                    "line_start": 769,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialOrd<HeaderValue> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 21231,
+                    "byte_start": 21229,
+                    "column_end": 41,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\header\\value.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 769,
+                    "line_start": 769,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 39,
+                        "text": "impl<'a> PartialOrd<HeaderValue> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\method.rs:197:6\n    |\n197 | impl<'a> PartialEq<Method> for &'a Method {\n    |      ^^                         ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n197 - impl<'a> PartialEq<Method> for &'a Method {\n197 + impl PartialEq<Method> for &Method {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5357,
+                        "byte_start": 5353,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\method.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 197,
+                        "line_start": 197,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<Method> for &'a Method {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5384,
+                        "byte_start": 5381,
+                        "column_end": 36,
+                        "column_start": 33,
+                        "expansion": null,
+                        "file_name": "src\\method.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 197,
+                        "line_start": 197,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 33,
+                            "text": "impl<'a> PartialEq<Method> for &'a Method {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 5356,
+                    "byte_start": 5354,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\method.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 197,
+                    "line_start": 197,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<Method> for &'a Method {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 5383,
+                    "byte_start": 5381,
+                    "column_end": 35,
+                    "column_start": 33,
+                    "expansion": null,
+                    "file_name": "src\\method.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 197,
+                    "line_start": 197,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 33,
+                        "text": "impl<'a> PartialEq<Method> for &'a Method {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\method.rs:225:6\n    |\n225 | impl<'a> PartialEq<Method> for &'a str {\n    |      ^^                         ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n225 - impl<'a> PartialEq<Method> for &'a str {\n225 + impl PartialEq<Method> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5887,
+                        "byte_start": 5883,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\method.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 225,
+                        "line_start": 225,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<Method> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5914,
+                        "byte_start": 5911,
+                        "column_end": 36,
+                        "column_start": 33,
+                        "expansion": null,
+                        "file_name": "src\\method.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 225,
+                        "line_start": 225,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 33,
+                            "text": "impl<'a> PartialEq<Method> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 5886,
+                    "byte_start": 5884,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\method.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 225,
+                    "line_start": 225,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<Method> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 5913,
+                    "byte_start": 5911,
+                    "column_end": 35,
+                    "column_start": 33,
+                    "expansion": null,
+                    "file_name": "src\\method.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 225,
+                    "line_start": 225,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 33,
+                        "text": "impl<'a> PartialEq<Method> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this seems like a manual implementation of the non-exhaustive pattern\n   --> src\\request.rs:168:1\n    |\n168 | / pub struct Parts {\n169 | |     /// The request's method\n170 | |     pub method: Method,\n...   |\n184 | |     _priv: (),\n185 | | }\n    | |_^\n    |\nhelp: remove this field\n   --> src\\request.rs:184:5\n    |\n184 |     _priv: (),\n    |     ^^^^^^^^^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive\n    = note: `#[deny(clippy::manual_non_exhaustive)]` implied by `#[deny(warnings)]`\nhelp: use the `#[non_exhaustive]` attribute instead\n    |\n168 + #[non_exhaustive]\n169 | pub struct Parts {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove this field",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4492,
+                        "byte_start": 4483,
+                        "column_end": 14,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\request.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 184,
+                        "line_start": 184,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 5,
+                            "text": "    _priv: (),"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::manual_non_exhaustive)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the `#[non_exhaustive]` attribute instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4166,
+                        "byte_start": 4166,
+                        "column_end": 1,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\request.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 168,
+                        "line_start": 168,
+                        "suggested_replacement": "#[non_exhaustive]\n",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": "pub struct Parts {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_non_exhaustive",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this seems like a manual implementation of the non-exhaustive pattern",
+                "spans": [
+                  {
+                    "byte_end": 4495,
+                    "byte_start": 4166,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\request.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 185,
+                    "line_start": 168,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "pub struct Parts {"
+                      },
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 1,
+                        "text": "    /// The request's method"
+                      },
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 1,
+                        "text": "    pub method: Method,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "    /// The request's URI"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "    pub uri: Uri,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 30,
+                        "highlight_start": 1,
+                        "text": "    /// The request's version"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "    pub version: Version,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 30,
+                        "highlight_start": 1,
+                        "text": "    /// The request's headers"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    pub headers: HeaderMap<HeaderValue>,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "    /// The request's extensions"
+                      },
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 1,
+                        "text": "    pub extensions: Extensions,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    _priv: (),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this seems like a manual implementation of the non-exhaustive pattern\n   --> src\\response.rs:190:1\n    |\n190 | / pub struct Parts {\n191 | |     /// The response's status\n192 | |     pub status: StatusCode,\n...   |\n203 | |     _priv: (),\n204 | | }\n    | |_^\n    |\nhelp: remove this field\n   --> src\\response.rs:203:5\n    |\n203 |     _priv: (),\n    |     ^^^^^^^^^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive\nhelp: use the `#[non_exhaustive]` attribute instead\n    |\n190 + #[non_exhaustive]\n191 | pub struct Parts {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove this field",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5113,
+                        "byte_start": 5104,
+                        "column_end": 14,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\response.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 203,
+                        "line_start": 203,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 5,
+                            "text": "    _priv: (),"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the `#[non_exhaustive]` attribute instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4824,
+                        "byte_start": 4824,
+                        "column_end": 1,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\response.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 190,
+                        "line_start": 190,
+                        "suggested_replacement": "#[non_exhaustive]\n",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": "pub struct Parts {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_non_exhaustive",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this seems like a manual implementation of the non-exhaustive pattern",
+                "spans": [
+                  {
+                    "byte_end": 5116,
+                    "byte_start": 4824,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\response.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 204,
+                    "line_start": 190,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "pub struct Parts {"
+                      },
+                      {
+                        "highlight_end": 30,
+                        "highlight_start": 1,
+                        "text": "    /// The response's status"
+                      },
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 1,
+                        "text": "    pub status: StatusCode,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 1,
+                        "text": "    /// The response's version"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "    pub version: Version,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 1,
+                        "text": "    /// The response's headers"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    pub headers: HeaderMap<HeaderValue>,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 1,
+                        "text": "    /// The response's extensions"
+                      },
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 1,
+                        "text": "    pub extensions: Extensions,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    _priv: (),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\uri\\authority.rs:305:6\n    |\n305 | impl<'a> PartialEq<Authority> for &'a str {\n    |      ^^                            ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n305 - impl<'a> PartialEq<Authority> for &'a str {\n305 + impl PartialEq<Authority> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9900,
+                        "byte_start": 9896,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\authority.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 305,
+                        "line_start": 305,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<Authority> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9930,
+                        "byte_start": 9927,
+                        "column_end": 39,
+                        "column_start": 36,
+                        "expansion": null,
+                        "file_name": "src\\uri\\authority.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 305,
+                        "line_start": 305,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 39,
+                            "highlight_start": 36,
+                            "text": "impl<'a> PartialEq<Authority> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 9899,
+                    "byte_start": 9897,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\uri\\authority.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 305,
+                    "line_start": 305,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<Authority> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 9929,
+                    "byte_start": 9927,
+                    "column_end": 38,
+                    "column_start": 36,
+                    "expansion": null,
+                    "file_name": "src\\uri\\authority.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 305,
+                    "line_start": 305,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 36,
+                        "text": "impl<'a> PartialEq<Authority> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\uri\\authority.rs:363:6\n    |\n363 | impl<'a> PartialOrd<Authority> for &'a str {\n    |      ^^                             ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n363 - impl<'a> PartialOrd<Authority> for &'a str {\n363 + impl PartialOrd<Authority> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11638,
+                        "byte_start": 11634,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\authority.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 363,
+                        "line_start": 363,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialOrd<Authority> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 11669,
+                        "byte_start": 11666,
+                        "column_end": 40,
+                        "column_start": 37,
+                        "expansion": null,
+                        "file_name": "src\\uri\\authority.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 363,
+                        "line_start": 363,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 37,
+                            "text": "impl<'a> PartialOrd<Authority> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 11637,
+                    "byte_start": 11635,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\uri\\authority.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 363,
+                    "line_start": 363,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialOrd<Authority> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 11668,
+                    "byte_start": 11666,
+                    "column_end": 39,
+                    "column_start": 37,
+                    "expansion": null,
+                    "file_name": "src\\uri\\authority.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 363,
+                    "line_start": 363,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 39,
+                        "highlight_start": 37,
+                        "text": "impl<'a> PartialOrd<Authority> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\uri\\path.rs:386:6\n    |\n386 | impl<'a> PartialEq<PathAndQuery> for &'a str {\n    |      ^^                               ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n386 - impl<'a> PartialEq<PathAndQuery> for &'a str {\n386 + impl PartialEq<PathAndQuery> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11004,
+                        "byte_start": 11000,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\path.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 386,
+                        "line_start": 386,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<PathAndQuery> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 11037,
+                        "byte_start": 11034,
+                        "column_end": 42,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\uri\\path.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 386,
+                        "line_start": 386,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 39,
+                            "text": "impl<'a> PartialEq<PathAndQuery> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 11003,
+                    "byte_start": 11001,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\uri\\path.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 386,
+                    "line_start": 386,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<PathAndQuery> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 11036,
+                    "byte_start": 11034,
+                    "column_end": 41,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\uri\\path.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 386,
+                    "line_start": 386,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 39,
+                        "text": "impl<'a> PartialEq<PathAndQuery> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\uri\\path.rs:449:6\n    |\n449 | impl<'a> PartialOrd<PathAndQuery> for &'a str {\n    |      ^^                                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n449 - impl<'a> PartialOrd<PathAndQuery> for &'a str {\n449 + impl PartialOrd<PathAndQuery> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12460,
+                        "byte_start": 12456,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\path.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 449,
+                        "line_start": 449,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialOrd<PathAndQuery> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 12494,
+                        "byte_start": 12491,
+                        "column_end": 43,
+                        "column_start": 40,
+                        "expansion": null,
+                        "file_name": "src\\uri\\path.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 449,
+                        "line_start": 449,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 43,
+                            "highlight_start": 40,
+                            "text": "impl<'a> PartialOrd<PathAndQuery> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 12459,
+                    "byte_start": 12457,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\uri\\path.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 449,
+                    "line_start": 449,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialOrd<PathAndQuery> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 12493,
+                    "byte_start": 12491,
+                    "column_end": 42,
+                    "column_start": 40,
+                    "expansion": null,
+                    "file_name": "src\\uri\\path.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 449,
+                    "line_start": 449,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 40,
+                        "text": "impl<'a> PartialOrd<PathAndQuery> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this seems like a manual implementation of the non-exhaustive pattern\n   --> src\\uri\\mod.rs:106:1\n    |\n106 | / pub struct Parts {\n107 | |     /// The scheme component of a URI\n108 | |     pub scheme: Option<Scheme>,\n...   |\n117 | |     _priv: (),\n118 | | }\n    | |_^\n    |\nhelp: remove this field\n   --> src\\uri\\mod.rs:117:5\n    |\n117 |     _priv: (),\n    |     ^^^^^^^^^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive\nhelp: use the `#[non_exhaustive]` attribute instead\n    |\n106 + #[non_exhaustive]\n107 | pub struct Parts {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove this field",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3443,
+                        "byte_start": 3434,
+                        "column_end": 14,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 117,
+                        "line_start": 117,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 5,
+                            "text": "    _priv: (),"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the `#[non_exhaustive]` attribute instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3132,
+                        "byte_start": 3132,
+                        "column_end": 1,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\uri\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 106,
+                        "line_start": 106,
+                        "suggested_replacement": "#[non_exhaustive]\n",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": "pub struct Parts {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_non_exhaustive",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this seems like a manual implementation of the non-exhaustive pattern",
+                "spans": [
+                  {
+                    "byte_end": 3446,
+                    "byte_start": 3132,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\uri\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 118,
+                    "line_start": 106,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "pub struct Parts {"
+                      },
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 1,
+                        "text": "    /// The scheme component of a URI"
+                      },
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 1,
+                        "text": "    pub scheme: Option<Scheme>,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "    /// The authority component of a URI"
+                      },
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 1,
+                        "text": "    pub authority: Option<Authority>,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 43,
+                        "highlight_start": 1,
+                        "text": "    /// The origin-form component of a URI"
+                      },
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 1,
+                        "text": "    pub path_and_query: Option<PathAndQuery>,"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 1,
+                        "text": "    /// Allow extending in the future"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    _priv: (),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp2rfxtkfp/http-1.3.1#http@1.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "http",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp2rfxtkfp\\http-1.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n    --> src\\uri\\mod.rs:1004:6\n     |\n1004 | impl<'a> PartialEq<Uri> for &'a str {\n     |      ^^                      ^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n     |\n1004 - impl<'a> PartialEq<Uri> for &'a str {\n1004 + impl PartialEq<Uri> for &str {\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28518,
+                        "byte_start": 28514,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\uri\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1004,
+                        "line_start": 1004,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<Uri> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 28542,
+                        "byte_start": 28539,
+                        "column_end": 33,
+                        "column_start": 30,
+                        "expansion": null,
+                        "file_name": "src\\uri\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1004,
+                        "line_start": 1004,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 30,
+                            "text": "impl<'a> PartialEq<Uri> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 28517,
+                    "byte_start": 28515,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\uri\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1004,
+                    "line_start": 1004,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<Uri> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 28541,
+                    "byte_start": 28539,
+                    "column_end": 32,
+                    "column_start": 30,
+                    "expansion": null,
+                    "file_name": "src\\uri\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1004,
+                    "line_start": 1004,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 30,
+                        "text": "impl<'a> PartialEq<Uri> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 29
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "http",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-e0603c49-b492c2e5-1751109266",
+      "timestamp": "2025-06-28T11:14:26.289026+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

@@ -1,0 +1,4371 @@
+[
+  {
+    "execution_id": "exec-af048a49-1226e10d-1751110631",
+    "timestamp": "2025-06-28T11:37:11.652859+00:00",
+    "sacred_chain": {
+      "input_data": "proc-macro-error",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'proc-macro-error' -> 'proc-macro-error'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "proc-macro-error",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a2748a30e65cf098.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#version_check@0.9.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\version_check-0.9.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "version_check",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\version_check-0.9.5\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libversion_check-793d72f0c6a3aed0.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libversion_check-793d72f0c6a3aed0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-54e62d42019224f4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-54e62d42019224f4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-2ab442f711364942\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-218359eb0afe4286\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-218359eb0afe4286\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "syn",
+                "syn-error"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-9db8808f2b558779\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-9db8808f2b558779\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-78e1c84046038122\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-a28c31aa055ae303\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_fallback"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-336f539cbaedbcc1\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-025ee8646249b132.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-48f6a64c4183c19c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-19f090e539281a02.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-19f090e539281a02.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-5e7318827567dfa5.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-5e7318827567dfa5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "proc_macro_error_attr",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libsyn-81b23f39abd92013.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:274:17\n    |\n274 | #![cfg_attr(not(use_fallback), feature(proc_macro_diagnostic))]\n    |                 ^^^^^^^^^^^^\n    |\n    = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 10952,
+                    "byte_start": 10940,
+                    "column_end": 29,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 274,
+                    "line_start": 274,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 17,
+                        "text": "#![cfg_attr(not(use_fallback), feature(proc_macro_diagnostic))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:298:7\n    |\n298 | #[cfg(use_fallback)]\n    |       ^^^^^^^^^^^^\n    |\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 11450,
+                    "byte_start": 11438,
+                    "column_end": 19,
+                    "column_start": 7,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 298,
+                    "line_start": 298,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 7,
+                        "text": "#[cfg(use_fallback)]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:302:11\n    |\n302 | #[cfg(not(use_fallback))]\n    |           ^^^^^^^^^^^^\n    |\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 11513,
+                    "byte_start": 11501,
+                    "column_end": 23,
+                    "column_start": 11,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 302,
+                    "line_start": 302,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 11,
+                        "text": "#[cfg(not(use_fallback))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: panic message is not a string literal\n   --> src\\lib.rs:472:12\n    |\n472 |     panic!(AbortNow)\n    |     ------ ^^^^^^^^\n    |     |\n    |     help: use std::panic::panic_any instead: `std::panic::panic_any`\n    |\n    = note: this usage of `panic!()` is deprecated; it will be a hard error in Rust 2021\n    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>\n    = note: `#[warn(non_fmt_panics)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this usage of `panic!()` is deprecated; it will be a hard error in Rust 2021",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(non_fmt_panics)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use std::panic::panic_any instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16366,
+                        "byte_start": 16360,
+                        "column_end": 11,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "std::panic::panic_any",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 11,
+                            "highlight_start": 5,
+                            "text": "    panic!(AbortNow)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "non_fmt_panics",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "panic message is not a string literal",
+                "spans": [
+                  {
+                    "byte_end": 16375,
+                    "byte_start": 16367,
+                    "column_end": 20,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 472,
+                    "line_start": 472,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 12,
+                        "text": "    panic!(AbortNow)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "syn",
+                "syn-error"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro_error-ffcde41256ef17a5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-8ecdc549423c9909\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro2-78e1c84046038122\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#version_check@0.9.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\version_check-0.9.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "version_check",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\version_check-0.9.5\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libversion_check-793d72f0c6a3aed0.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libversion_check-793d72f0c6a3aed0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a2748a30e65cf098.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-54e62d42019224f4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-54e62d42019224f4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-19f090e539281a02.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-19f090e539281a02.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro2-025ee8646249b132.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-218359eb0afe4286\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-218359eb0afe4286\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "syn_disable_nightly_tests"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\syn-2ab442f711364942\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-5e7318827567dfa5.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-5e7318827567dfa5.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libquote-48f6a64c4183c19c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-attr-a28c31aa055ae303\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro-error-attr@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "proc_macro_error_attr",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro-error-attr-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\proc_macro_error_attr-5d67d36fec705e56.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@1.0.109",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-1.0.109\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "quote",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libsyn-81b23f39abd92013.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "syn",
+                "syn-error"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-02b1eb6ea315493f\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-02b1eb6ea315493f\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "use_fallback"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\build\\proc-macro-error-0f4b57412c50287b\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:274:17\n    |\n274 | #![cfg_attr(not(use_fallback), feature(proc_macro_diagnostic))]\n    |                 ^^^^^^^^^^^^\n    |\n    = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 10952,
+                    "byte_start": 10940,
+                    "column_end": 29,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 274,
+                    "line_start": 274,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 17,
+                        "text": "#![cfg_attr(not(use_fallback), feature(proc_macro_diagnostic))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:298:7\n    |\n298 | #[cfg(use_fallback)]\n    |       ^^^^^^^^^^^^\n    |\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 11450,
+                    "byte_start": 11438,
+                    "column_end": 19,
+                    "column_start": 7,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 298,
+                    "line_start": 298,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 7,
+                        "text": "#[cfg(use_fallback)]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `use_fallback`\n   --> src\\lib.rs:302:11\n    |\n302 | #[cfg(not(use_fallback))]\n    |           ^^^^^^^^^^^^\n    |\n    = help: consider using a Cargo feature instead\n    = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n             [lints.rust]\n             unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }\n    = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(use_fallback)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(use_fallback)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `use_fallback`",
+                "spans": [
+                  {
+                    "byte_end": 11513,
+                    "byte_start": 11501,
+                    "column_end": 23,
+                    "column_start": 11,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 302,
+                    "line_start": 302,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 11,
+                        "text": "#[cfg(not(use_fallback))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:62:5\n   |\n62 | //!     attribute must be placed *before* (above) it, like this:\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n   = note: `#[warn(clippy::doc_overindented_list_items)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_overindented_list_items)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2701,
+                        "byte_start": 2697,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 62,
+                        "line_start": 62,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     attribute must be placed *before* (above) it, like this:"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 2701,
+                    "byte_start": 2697,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 62,
+                    "line_start": 62,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     attribute must be placed *before* (above) it, like this:"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:77:5\n   |\n77 | //!     `#[proc_macro_error(proc_macro_hack)]` instead.\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3133,
+                        "byte_start": 3129,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 77,
+                        "line_start": 77,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     `#[proc_macro_error(proc_macro_hack)]` instead."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3133,
+                    "byte_start": 3129,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 77,
+                    "line_start": 77,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     `#[proc_macro_error(proc_macro_hack)]` instead."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:82:5\n   |\n82 | //!     and `assert_unwind_safe` will be applied automatically.\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3287,
+                        "byte_start": 3283,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 82,
+                        "line_start": 82,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     and `assert_unwind_safe` will be applied automatically."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3287,
+                    "byte_start": 3283,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 82,
+                    "line_start": 82,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     and `assert_unwind_safe` will be applied automatically."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:87:5\n   |\n87 | //!     If none of `#[proc_macro]`, `#[proc_macro_derive]` nor `#[proc_macro_attribute]` are\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3460,
+                        "byte_start": 3456,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 87,
+                        "line_start": 87,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     If none of `#[proc_macro]`, `#[proc_macro_derive]` nor `#[proc_macro_attribute]` are"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3460,
+                    "byte_start": 3456,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 87,
+                    "line_start": 87,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     If none of `#[proc_macro]`, `#[proc_macro_derive]` nor `#[proc_macro_attribute]` are"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:88:5\n   |\n88 | //!     present it will panic. It's the intention - this crate is supposed to be used only with\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3553,
+                        "byte_start": 3549,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 88,
+                        "line_start": 88,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     present it will panic. It's the intention - this crate is supposed to be used only with"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3553,
+                    "byte_start": 3549,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 88,
+                    "line_start": 88,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     present it will panic. It's the intention - this crate is supposed to be used only with"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:89:5\n   |\n89 | //!     proc-macros.\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3649,
+                        "byte_start": 3645,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 89,
+                        "line_start": 89,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     proc-macros."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3649,
+                    "byte_start": 3645,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 89,
+                    "line_start": 89,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     proc-macros."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:94:5\n   |\n94 | //!     `proc_macro::TokenStream`.\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3838,
+                        "byte_start": 3834,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 94,
+                        "line_start": 94,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     `proc_macro::TokenStream`."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3838,
+                    "byte_start": 3834,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 94,
+                    "line_start": 94,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     `proc_macro::TokenStream`."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:101:5\n    |\n101 | //!     but you believe it's correct, you can use this setting to bypass the check.\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4066,
+                        "byte_start": 4062,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 101,
+                        "line_start": 101,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     but you believe it's correct, you can use this setting to bypass the check."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 4066,
+                    "byte_start": 4062,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 101,
+                    "line_start": 101,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     but you believe it's correct, you can use this setting to bypass the check."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:102:5\n    |\n102 | //!     You would need this for code that uses `lazy_static` or `thread_local` with\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4150,
+                        "byte_start": 4146,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 102,
+                        "line_start": 102,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     You would need this for code that uses `lazy_static` or `thread_local` with"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 4150,
+                    "byte_start": 4146,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 102,
+                    "line_start": 102,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     You would need this for code that uses `lazy_static` or `thread_local` with"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:103:5\n    |\n103 | //!     `Cell/RefCell` inside (and the like).\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4234,
+                        "byte_start": 4230,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 103,
+                        "line_start": 103,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     `Cell/RefCell` inside (and the like)."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 4234,
+                    "byte_start": 4230,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 103,
+                    "line_start": 103,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     `Cell/RefCell` inside (and the like)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:106:5\n    |\n106 | //!     marked as `#[proc_macro]`, `#[proc_macro_derive]` or `#[proc_macro_attribute]`.\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4366,
+                        "byte_start": 4362,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 106,
+                        "line_start": 106,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     marked as `#[proc_macro]`, `#[proc_macro_derive]` or `#[proc_macro_attribute]`."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 4366,
+                    "byte_start": 4362,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 106,
+                    "line_start": 106,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     marked as `#[proc_macro]`, `#[proc_macro_derive]` or `#[proc_macro_attribute]`."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:140:5\n    |\n140 | //!     Expands to [`!`] (never type).\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5760,
+                        "byte_start": 5756,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 140,
+                        "line_start": 140,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     Expands to [`!`] (never type)."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 5760,
+                    "byte_start": 5756,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 140,
+                    "line_start": 140,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     Expands to [`!`] (never type)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:149:5\n    |\n149 | //!     looking for other errors to report.\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6031,
+                        "byte_start": 6027,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 149,
+                        "line_start": 149,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     looking for other errors to report."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 6031,
+                    "byte_start": 6027,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 149,
+                    "line_start": 149,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     looking for other errors to report."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:150:5\n    |\n150 | //!     The compilation will fail nonetheless. Expands to [`()`] (unit type).\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6075,
+                        "byte_start": 6071,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 150,
+                        "line_start": 150,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     The compilation will fail nonetheless. Expands to [`()`] (unit type)."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 6075,
+                    "byte_start": 6071,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 150,
+                    "line_start": 150,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     The compilation will fail nonetheless. Expands to [`()`] (unit type)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:159:5\n    |\n159 | //!     because of warnings.\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6409,
+                        "byte_start": 6405,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 159,
+                        "line_start": 159,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     because of warnings."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 6409,
+                    "byte_start": 6405,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 159,
+                    "line_start": 159,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     because of warnings."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n   --> src\\lib.rs:160:5\n    |\n160 | //!     Expands to [`()`] (unit type).\n    |     ^^^^ help: try using `  ` (2 spaces)\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6438,
+                        "byte_start": 6434,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 160,
+                        "line_start": 160,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     Expands to [`()`] (unit type)."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 6438,
+                    "byte_start": 6434,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 160,
+                    "line_start": 160,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     Expands to [`()`] (unit type)."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: initializer for `thread_local` value can be made `const`\n   --> src\\dummy.rs:122:55\n    |\n122 |     static DUMMY_IMPL: RefCell<Option<TokenStream>> = RefCell::new(None);\n    |                                                       ^^^^^^^^^^^^^^^^^^ help: replace with: `const { RefCell::new(None) }`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local\n    = note: `#[warn(clippy::missing_const_for_thread_local)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::missing_const_for_thread_local)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3434,
+                        "byte_start": 3416,
+                        "column_end": 73,
+                        "column_start": 55,
+                        "expansion": null,
+                        "file_name": "src\\dummy.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 122,
+                        "line_start": 122,
+                        "suggested_replacement": "const { RefCell::new(None) }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 73,
+                            "highlight_start": 55,
+                            "text": "    static DUMMY_IMPL: RefCell<Option<TokenStream>> = RefCell::new(None);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_const_for_thread_local",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "initializer for `thread_local` value can be made `const`",
+                "spans": [
+                  {
+                    "byte_end": 3434,
+                    "byte_start": 3416,
+                    "column_end": 73,
+                    "column_start": 55,
+                    "expansion": null,
+                    "file_name": "src\\dummy.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 122,
+                    "line_start": 122,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 73,
+                        "highlight_start": 55,
+                        "text": "    static DUMMY_IMPL: RefCell<Option<TokenStream>> = RefCell::new(None);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\diagnostic.rs:270:85\n    |\n270 |                 .map(|(span_range, msg)| diag_to_tokens(*span_range, &Level::Error, &msg, &[])),\n    |                                                                                     ^^^^ help: change this to: `msg`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8416,
+                        "byte_start": 8412,
+                        "column_end": 89,
+                        "column_start": 85,
+                        "expansion": null,
+                        "file_name": "src\\diagnostic.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 270,
+                        "line_start": 270,
+                        "suggested_replacement": "msg",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 89,
+                            "highlight_start": 85,
+                            "text": "                .map(|(span_range, msg)| diag_to_tokens(*span_range, &Level::Error, &msg, &[])),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 8416,
+                    "byte_start": 8412,
+                    "column_end": 89,
+                    "column_start": 85,
+                    "expansion": null,
+                    "file_name": "src\\diagnostic.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 270,
+                    "line_start": 270,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 89,
+                        "highlight_start": 85,
+                        "text": "                .map(|(span_range, msg)| diag_to_tokens(*span_range, &Level::Error, &msg, &[])),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: initializer for `thread_local` value can be made `const`\n  --> src\\imp\\fallback.rs:29:52\n   |\n29 |     static ERR_STORAGE: RefCell<Vec<Diagnostic>> = RefCell::new(Vec::new());\n   |                                                    ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace with: `const { RefCell::new(Vec::new()) }`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 708,
+                        "byte_start": 684,
+                        "column_end": 76,
+                        "column_start": 52,
+                        "expansion": null,
+                        "file_name": "src\\imp\\fallback.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 29,
+                        "line_start": 29,
+                        "suggested_replacement": "const { RefCell::new(Vec::new()) }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 76,
+                            "highlight_start": 52,
+                            "text": "    static ERR_STORAGE: RefCell<Vec<Diagnostic>> = RefCell::new(Vec::new());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_const_for_thread_local",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "initializer for `thread_local` value can be made `const`",
+                "spans": [
+                  {
+                    "byte_end": 708,
+                    "byte_start": 684,
+                    "column_end": 76,
+                    "column_start": 52,
+                    "expansion": null,
+                    "file_name": "src\\imp\\fallback.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 29,
+                    "line_start": 29,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 76,
+                        "highlight_start": 52,
+                        "text": "    static ERR_STORAGE: RefCell<Vec<Diagnostic>> = RefCell::new(Vec::new());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant closure\n   --> src\\lib.rs:336:49\n    |\n336 |         let first = spans.next().unwrap_or_else(|| Span::call_site());\n    |                                                 ^^^^^^^^^^^^^^^^^^^^ help: replace the closure with the function itself: `Span::call_site`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure\n    = note: `#[warn(clippy::redundant_closure)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_closure)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the closure with the function itself",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12564,
+                        "byte_start": 12544,
+                        "column_end": 69,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 336,
+                        "line_start": 336,
+                        "suggested_replacement": "Span::call_site",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 49,
+                            "text": "        let first = spans.next().unwrap_or_else(|| Span::call_site());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_closure",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant closure",
+                "spans": [
+                  {
+                    "byte_end": 12564,
+                    "byte_start": 12544,
+                    "column_end": 69,
+                    "column_start": 49,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 336,
+                    "line_start": 336,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 49,
+                        "text": "        let first = spans.next().unwrap_or_else(|| Span::call_site());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: initializer for `thread_local` value can be made `const`\n   --> src\\lib.rs:476:47\n    |\n476 |     static ENTERED_ENTRY_POINT: Cell<usize> = Cell::new(0);\n    |                                               ^^^^^^^^^^^^ help: replace with: `const { Cell::new(0) }`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16454,
+                        "byte_start": 16442,
+                        "column_end": 59,
+                        "column_start": 47,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 476,
+                        "line_start": 476,
+                        "suggested_replacement": "const { Cell::new(0) }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 59,
+                            "highlight_start": 47,
+                            "text": "    static ENTERED_ENTRY_POINT: Cell<usize> = Cell::new(0);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_const_for_thread_local",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "initializer for `thread_local` value can be made `const`",
+                "spans": [
+                  {
+                    "byte_end": 16454,
+                    "byte_start": 16442,
+                    "column_end": 59,
+                    "column_start": 47,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 476,
+                    "line_start": 476,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 59,
+                        "highlight_start": 47,
+                        "text": "    static ENTERED_ENTRY_POINT: Cell<usize> = Cell::new(0);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: using `clone` on type `Span` which implements the `Copy` trait\n   --> src\\lib.rs:549:24\n    |\n549 |                 first: self.clone().into(),\n    |                        ^^^^^^^^^^^^ help: try dereferencing it: `(*self)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy\n    = note: `#[warn(clippy::clone_on_copy)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::clone_on_copy)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try dereferencing it",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18816,
+                        "byte_start": 18804,
+                        "column_end": 36,
+                        "column_start": 24,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 549,
+                        "line_start": 549,
+                        "suggested_replacement": "(*self)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 24,
+                            "text": "                first: self.clone().into(),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::clone_on_copy",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "using `clone` on type `Span` which implements the `Copy` trait",
+                "spans": [
+                  {
+                    "byte_end": 18816,
+                    "byte_start": 18804,
+                    "column_end": 36,
+                    "column_start": 24,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 549,
+                    "line_start": 549,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 24,
+                        "text": "                first: self.clone().into(),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: using `clone` on type `Span` which implements the `Copy` trait\n   --> src\\lib.rs:550:23\n    |\n550 |                 last: self.clone().into(),\n    |                       ^^^^^^^^^^^^ help: try dereferencing it: `(*self)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#clone_on_copy",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try dereferencing it",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18859,
+                        "byte_start": 18847,
+                        "column_end": 35,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 550,
+                        "line_start": 550,
+                        "suggested_replacement": "(*self)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 23,
+                            "text": "                last: self.clone().into(),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::clone_on_copy",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "using `clone` on type `Span` which implements the `Copy` trait",
+                "spans": [
+                  {
+                    "byte_end": 18859,
+                    "byte_start": 18847,
+                    "column_end": 35,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 550,
+                    "line_start": 550,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 23,
+                        "text": "                last: self.clone().into(),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this seems like a manual implementation of the non-exhaustive pattern\n  --> src\\diagnostic.rs:13:1\n   |\n13 | / pub enum Level {\n14 | |     Error,\n15 | |     Warning,\n16 | |     #[doc(hidden)]\n17 | |     NonExhaustive,\n18 | | }\n   | |_^\n   |\nhelp: remove this variant\n  --> src\\diagnostic.rs:17:5\n   |\n17 |     NonExhaustive,\n   |     ^^^^^^^^^^^^^\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive\n   = note: `#[warn(clippy::manual_non_exhaustive)]` on by default\nhelp: use the `#[non_exhaustive]` attribute instead\n   |\n13 + #[non_exhaustive]\n14 | pub enum Level {\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove this variant",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 365,
+                        "byte_start": 352,
+                        "column_end": 18,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\diagnostic.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 17,
+                        "line_start": 17,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 5,
+                            "text": "    NonExhaustive,"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_non_exhaustive",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::manual_non_exhaustive)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the `#[non_exhaustive]` attribute instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 288,
+                        "byte_start": 288,
+                        "column_end": 1,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\diagnostic.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 13,
+                        "line_start": 13,
+                        "suggested_replacement": "#[non_exhaustive]\n",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": "pub enum Level {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_non_exhaustive",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this seems like a manual implementation of the non-exhaustive pattern",
+                "spans": [
+                  {
+                    "byte_end": 368,
+                    "byte_start": 288,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\diagnostic.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 18,
+                    "line_start": 13,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 17,
+                        "highlight_start": 1,
+                        "text": "pub enum Level {"
+                      },
+                      {
+                        "highlight_end": 11,
+                        "highlight_start": 1,
+                        "text": "    Error,"
+                      },
+                      {
+                        "highlight_end": 13,
+                        "highlight_start": 1,
+                        "text": "    Warning,"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    #[doc(hidden)]"
+                      },
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 1,
+                        "text": "    NonExhaustive,"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: panic message is not a string literal\n   --> src\\lib.rs:472:12\n    |\n472 |     panic!(AbortNow)\n    |     ------ ^^^^^^^^\n    |     |\n    |     help: use std::panic::panic_any instead: `std::panic::panic_any`\n    |\n    = note: this usage of `panic!()` is deprecated; it will be a hard error in Rust 2021\n    = note: for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>\n    = note: `#[warn(non_fmt_panics)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this usage of `panic!()` is deprecated; it will be a hard error in Rust 2021",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "for more information, see <https://doc.rust-lang.org/nightly/edition-guide/rust-2021/panic-macro-consistency.html>",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(non_fmt_panics)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use std::panic::panic_any instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16366,
+                        "byte_start": 16360,
+                        "column_end": 11,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "std::panic::panic_any",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 11,
+                            "highlight_start": 5,
+                            "text": "    panic!(AbortNow)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "non_fmt_panics",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "panic message is not a string literal",
+                "spans": [
+                  {
+                    "byte_end": 16375,
+                    "byte_start": 16367,
+                    "column_end": 20,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 472,
+                    "line_start": 472,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 12,
+                        "text": "    panic!(AbortNow)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpf52m6ehf/proc-macro-error-1.0.4#proc-macro-error@1.0.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro_error",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "syn",
+                "syn-error"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpf52m6ehf\\proc-macro-error-1.0.4\\target\\debug\\deps\\libproc_macro_error-60b1cb773d216470.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 29
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "proc-macro-error",
+                    "version": "1.0.4",
+                    "source": null,
+                    "checksum": null,
+                    "dependencies": [
+                      {
+                        "name": "proc-macro-error-attr",
+                        "version": "1.0.4",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "proc-macro2",
+                        "version": "1.0.95",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "quote",
+                        "version": "1.0.40",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "serde_derive",
+                        "version": "1.0.107",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "syn",
+                        "version": "1.0.109",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "toml",
+                        "version": "0.5.2",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "trybuild",
+                        "version": "1.0.64",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "version_check",
+                        "version": "0.9.5",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0370",
+                    "package": "proc-macro-error",
+                    "title": "proc-macro-error is unmaintained",
+                    "description": "proc-macro-error's maintainer seems to be unreachable, with no commits for 2 years, no releases pushed for 4 years, and no activity on the GitLab repo or response to email.\n\nproc-macro-error also depends on `syn 1.x`, which may be bringing duplicate dependencies into dependant build trees.\n\n## Possible Alternative(s)\n\n- [manyhow](https://crates.io/crates/manyhow)\n- [proc-macro-error2](https://crates.io/crates/proc-macro-error2)\n- [proc-macro2-diagnostics](https://github.com/SergioBenitez/proc-macro2-diagnostics)",
+                    "date": "2024-09-01",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://gitlab.com/CreepySkeleton/proc-macro-error/-/issues/20",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "proc-macro-error",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-af048a49-1226e10d-1751110631",
+      "timestamp": "2025-06-28T11:37:11.652859+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]
