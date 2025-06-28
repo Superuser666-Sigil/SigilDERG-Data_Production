@@ -1,6 +1,18 @@
 {
   "environment_metadata": [
     {
+      "id": 12,
+      "label": "dev",
+      "os_name": "Microsoft Windows 11 Pro",
+      "os_version": "10.0.26100 N/A Build 26100",
+      "system_type": "x64-based PC",
+      "processor": "1 Processor(s) Installed.",
+      "bios_version": "AMI F.23, 1/17/2025",
+      "enforcement_rank": 10,
+      "timestamp": "2025-06-28T02:22:41.048132+00:00",
+      "commit_hash": null
+    },
+    {
       "id": 11,
       "label": "dev",
       "os_name": "Microsoft Windows 11 Pro",
@@ -133,5 +145,62 @@
       "commit_hash": "6c52bd7db876d9676db9e3d6147ab7be29bccaee"
     }
   ],
-  "rule_zero_policies": []
+  "rule_zero_policies": [
+    {
+      "policy_name": "enforcement_reproducibility",
+      "policy_type": "enforcement",
+      "description": "Every decision must be reproducible, explainable, bound to input/Canon/memory scope, and signed by runtime authority",
+      "policy_json": "{\"enforcement_requirements\": [\"Reproducible decisions\", \"Explainable logic\", \"Bound to input, Canon, and memory scope\", \"Signed by runtime authority\", \"No hallucination - only audit and justification\"], \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 10,
+      "last_updated": "2025-06-27T21:10:53.078236"
+    },
+    {
+      "policy_name": "core_trust_law",
+      "policy_type": "foundational",
+      "description": "Every output must be traceable to its source, understandable in its logic, and defensible in its action",
+      "policy_json": "{\"rule\": \"Rule Zero\", \"requirements\": [\"No hallucinations\", \"No black boxes\", \"No silent actions\", \"Only explainable cognition earns trust\"], \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 10,
+      "last_updated": "2025-06-27T21:10:53.078201"
+    },
+    {
+      "policy_name": "irl_integrity_layer",
+      "policy_type": "reasoning",
+      "description": "IRL performs real-time, traceable reasoning against Canon and policy with justification, confidence score, and explanation",
+      "policy_json": "{\"irl_requirements\": [\"Real-time reasoning\", \"Traceable to Canon and policy\", \"Justification for every action\", \"Confidence score for audit\", \"Explanation for devs/users\", \"Cryptographically grounded enforcement\"], \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 9,
+      "last_updated": "2025-06-27T21:10:53.078234"
+    },
+    {
+      "policy_name": "reasoning_chain",
+      "policy_type": "audit",
+      "description": "Every Sigil-aware action must follow the Reasoning Chain: Input \u2192 Context \u2192 Reasoning \u2192 Suggestion \u2192 Verdict \u2192 Audit \u2192 IRL Score",
+      "policy_json": "{\"chain_components\": [\"Input - What was submitted by the user or system\", \"Context - What Canon or Nexus informed this response\", \"Reasoning - Why this path was chosen, with logic trace\", \"Suggestion - What the system proposes or performs\", \"Verdict - The trust boundary crossed: Allow, Deny, Defer, Flag\", \"Audit - Who triggered it, when, and with what authority\", \"IRL Score - A numerical measure of confidence and ethical alignment\"], \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 9,
+      "last_updated": "2025-06-27T21:10:53.078230"
+    },
+    {
+      "policy_name": "canon_memory_scope",
+      "policy_type": "data_governance",
+      "description": "Memory is schema-bound and LOA-scoped via mnemonic validation. No inference occurs without memory; no memory is accessed without clearance",
+      "policy_json": "{\"memory_rules\": [\"Schema-bound access control\", \"LOA-scoped validation\", \"Mnemonic validation required\", \"No inference without memory\", \"No memory access without clearance\"], \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 8,
+      "last_updated": "2025-06-27T21:10:53.078233"
+    },
+    {
+      "policy_name": "trust_score_calculation",
+      "policy_type": "scoring",
+      "description": "IRL confidence score affected by Canon alignment, context consistency, memory scope integrity, and LLM volatility",
+      "policy_json": "{\"score_factors\": [\"Canon alignment\", \"Context consistency\", \"Memory scope integrity\", \"LLM volatility (if applicable)\"], \"score_actions\": {\"low_scores\": \"defer or flag actions\", \"high_scores\": \"reinforce trust\"}, \"enforcement\": \"mandatory\"}",
+      "enforcement_rank": 7,
+      "last_updated": "2025-06-27T21:10:53.078238"
+    },
+    {
+      "policy_name": "sigil_protocol_foundation",
+      "policy_type": "philosophical",
+      "description": "Sigil is a protocol, not a product. It is not meant to be owned, but used correctly. There is no trust without trace.",
+      "policy_json": "{\"core_principles\": [\"Sigil is a protocol, not a product\", \"Not meant to be owned, but used correctly\", \"No trust without trace\", \"Foundation of Codex\"], \"enforcement\": \"guidance\"}",
+      "enforcement_rank": 5,
+      "last_updated": "2025-06-27T21:10:53.078240"
+    }
+  ]
 }
