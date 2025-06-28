@@ -1,0 +1,2122 @@
+[
+  {
+    "execution_id": "exec-9754cc18-c1ac32bd-1751108290",
+    "timestamp": "2025-06-28T10:58:10.891598+00:00",
+    "sacred_chain": {
+      "input_data": "ciborium",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'ciborium' -> 'ciborium'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "ciborium",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libcfg_if-b4957d577da748fa.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ciborium-io@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-io-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-io-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libciborium_io-4ad924235eee5075.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-c557e7ff9e6796f5\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-c557e7ff9e6796f5\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-85a742224087074d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-85a742224087074d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#half@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\half-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "half",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\half-2.6.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libhalf-5cf5047d48d049d9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-cd4efd3d5f5b3fce\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-4241650967ad59da\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ciborium-ll@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-ll-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium_ll",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-ll-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libciborium_ll-0701145fceb35896.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libproc_macro2-e470fc9d4b158096.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libproc_macro2-e470fc9d4b158096.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libquote-e919beee88ec8d36.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libquote-e919beee88ec8d36.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libsyn-3e78a658c498d667.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libsyn-3e78a658c498d667.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "serde_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.219\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libserde-1ed75c1cb339ccfa.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: irrefutable `if let` pattern\n   --> src\\value\\de.rs:246:27\n    |\n246 |                 } else if let Ok(x) = i128::try_from(*x) {\n    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: this pattern will always match, so the `if let` is useless\n    = help: consider replacing the `if let` with a `let`\n    = note: `#[warn(irrefutable_let_patterns)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this pattern will always match, so the `if let` is useless",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider replacing the `if let` with a `let`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(irrefutable_let_patterns)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "irrefutable_let_patterns",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "irrefutable `if let` pattern",
+                "spans": [
+                  {
+                    "byte_end": 7381,
+                    "byte_start": 7351,
+                    "column_end": 57,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 246,
+                    "line_start": 246,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 27,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: irrefutable `if let` pattern\n  --> src\\value\\ser.rs:53:27\n   |\n53 |                 } else if let Ok(x) = i128::try_from(*x) {\n   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: this pattern will always match, so the `if let` is useless\n   = help: consider replacing the `if let` with a `let`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this pattern will always match, so the `if let` is useless",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider replacing the `if let` with a `let`",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "irrefutable_let_patterns",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "irrefutable `if let` pattern",
+                "spans": [
+                  {
+                    "byte_end": 2155,
+                    "byte_start": 2125,
+                    "column_end": 57,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\value\\ser.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 53,
+                    "line_start": 53,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 27,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libciborium-113da607b2eb3571.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-c557e7ff9e6796f5\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-c557e7ff9e6796f5\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\proc-macro2-4241650967ad59da\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libunicode_ident-a3528efee345a255.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-85a742224087074d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-85a742224087074d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libcfg_if-b4957d577da748fa.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ciborium-io@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-io-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-io-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libciborium_io-4ad924235eee5075.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libproc_macro2-e470fc9d4b158096.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libproc_macro2-e470fc9d4b158096.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#half@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\half-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "half",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\half-2.6.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libhalf-5cf5047d48d049d9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\build\\serde-cd4efd3d5f5b3fce\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libquote-e919beee88ec8d36.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libquote-e919beee88ec8d36.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ciborium-ll@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-ll-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium_ll",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ciborium-ll-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libciborium_ll-0701145fceb35896.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libsyn-3e78a658c498d667.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libsyn-3e78a658c498d667.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde_derive@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "serde_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde_derive-1.0.219\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\serde_derive-d17f84d85123d513.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#serde@1.0.219",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "serde",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\serde-1.0.219\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "derive",
+                "serde_derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\target\\debug\\deps\\libserde-1ed75c1cb339ccfa.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: irrefutable `if let` pattern\n   --> src\\value\\de.rs:246:27\n    |\n246 |                 } else if let Ok(x) = i128::try_from(*x) {\n    |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: this pattern will always match, so the `if let` is useless\n    = help: consider replacing the `if let` with a `let`\n    = note: `#[warn(irrefutable_let_patterns)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this pattern will always match, so the `if let` is useless",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider replacing the `if let` with a `let`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(irrefutable_let_patterns)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "irrefutable_let_patterns",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "irrefutable `if let` pattern",
+                "spans": [
+                  {
+                    "byte_end": 7381,
+                    "byte_start": 7351,
+                    "column_end": 57,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 246,
+                    "line_start": 246,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 27,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: irrefutable `if let` pattern\n  --> src\\value\\ser.rs:53:27\n   |\n53 |                 } else if let Ok(x) = i128::try_from(*x) {\n   |                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = note: this pattern will always match, so the `if let` is useless\n   = help: consider replacing the `if let` with a `let`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "this pattern will always match, so the `if let` is useless",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider replacing the `if let` with a `let`",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "irrefutable_let_patterns",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "irrefutable `if let` pattern",
+                "spans": [
+                  {
+                    "byte_end": 2155,
+                    "byte_start": 2125,
+                    "column_end": 57,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\value\\ser.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 53,
+                    "line_start": 53,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 27,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: non-canonical implementation of `partial_cmp` on an `Ord` type\n   --> src\\value\\canonical.rs:120:1\n    |\n120 | /  impl PartialOrd for CanonicalValue {\n121 | |      fn partial_cmp(&self, other: &Self) -> Option<Ordering> {\n    | | _____________________________________________________________-\n122 | ||         Some(cmp_value(&self.0, &other.0))\n123 | ||     }\n    | ||_____- help: change this to: `{ Some(self.cmp(other)) }`\n124 | |  }\n    | |__^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#non_canonical_partial_ord_impl\nnote: the lint level is defined here\n   --> src\\lib.rs:89:9\n    |\n89  | #![deny(clippy::all)]\n    |         ^^^^^^^^^^^\n    = note: `#[deny(clippy::non_canonical_partial_ord_impl)]` implied by `#[deny(clippy::all)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#non_canonical_partial_ord_impl",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4250,
+                        "byte_start": 4239,
+                        "column_end": 20,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 89,
+                        "line_start": 89,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 20,
+                            "highlight_start": 9,
+                            "text": "#![deny(clippy::all)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::non_canonical_partial_ord_impl)]` implied by `#[deny(clippy::all)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3852,
+                        "byte_start": 3802,
+                        "column_end": 6,
+                        "column_start": 61,
+                        "expansion": null,
+                        "file_name": "src\\value\\canonical.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 123,
+                        "line_start": 121,
+                        "suggested_replacement": "{ Some(self.cmp(other)) }",
+                        "suggestion_applicability": "Unspecified",
+                        "text": [
+                          {
+                            "highlight_end": 62,
+                            "highlight_start": 61,
+                            "text": "    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {"
+                          },
+                          {
+                            "highlight_end": 43,
+                            "highlight_start": 1,
+                            "text": "        Some(cmp_value(&self.0, &other.0))"
+                          },
+                          {
+                            "highlight_end": 6,
+                            "highlight_start": 1,
+                            "text": "    }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::non_canonical_partial_ord_impl",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "non-canonical implementation of `partial_cmp` on an `Ord` type",
+                "spans": [
+                  {
+                    "byte_end": 3854,
+                    "byte_start": 3705,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\value\\canonical.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 124,
+                    "line_start": 120,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 1,
+                        "text": "impl PartialOrd for CanonicalValue {"
+                      },
+                      {
+                        "highlight_end": 62,
+                        "highlight_start": 1,
+                        "text": "    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {"
+                      },
+                      {
+                        "highlight_end": 43,
+                        "highlight_start": 1,
+                        "text": "        Some(cmp_value(&self.0, &other.0))"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    }"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\value\\de.rs:176:6\n    |\n176 | impl<'a> Deserializer<&'a Value> {\n    |      ^^                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\n    = note: `#[deny(clippy::needless_lifetimes)]` implied by `#[deny(clippy::all)]`\nhelp: elide the lifetimes\n    |\n176 - impl<'a> Deserializer<&'a Value> {\n176 + impl Deserializer<&Value> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_lifetimes)]` implied by `#[deny(clippy::all)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4647,
+                        "byte_start": 4643,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 176,
+                        "line_start": 176,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> Deserializer<&'a Value> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 4665,
+                        "byte_start": 4662,
+                        "column_end": 27,
+                        "column_start": 24,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 176,
+                        "line_start": 176,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 24,
+                            "text": "impl<'a> Deserializer<&'a Value> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 4646,
+                    "byte_start": 4644,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 176,
+                    "line_start": 176,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> Deserializer<&'a Value> {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 4664,
+                    "byte_start": 4662,
+                    "column_end": 26,
+                    "column_start": 24,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 176,
+                    "line_start": 176,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 24,
+                        "text": "impl<'a> Deserializer<&'a Value> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\value\\de.rs:222:6\n    |\n222 | impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {\n    |      ^^                                               ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n222 - impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {\n222 + impl<'de> de::Deserializer<'de> for Deserializer<&Value> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6280,
+                        "byte_start": 6276,
+                        "column_end": 10,
+                        "column_start": 6,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 222,
+                        "line_start": 222,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 6,
+                            "text": "impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 6328,
+                        "byte_start": 6325,
+                        "column_end": 58,
+                        "column_start": 55,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 222,
+                        "line_start": 222,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 58,
+                            "highlight_start": 55,
+                            "text": "impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 6278,
+                    "byte_start": 6276,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 222,
+                    "line_start": 222,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 6327,
+                    "byte_start": 6325,
+                    "column_end": 57,
+                    "column_start": 55,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 222,
+                    "line_start": 222,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 55,
+                        "text": "impl<'a, 'de> de::Deserializer<'de> for Deserializer<&'a Value> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: use of a fallible conversion when an infallible one could be used\n   --> src\\value\\de.rs:246:39\n    |\n246 |                 } else if let Ok(x) = i128::try_from(*x) {\n    |                                       ^^^^^^^^^^^^^^ help: use: `From::from`\n    |\n    = note: converting `Integer` to `i128` cannot fail\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_fallible_conversions\n    = note: `#[deny(clippy::unnecessary_fallible_conversions)]` implied by `#[deny(clippy::all)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "converting `Integer` to `i128` cannot fail",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_fallible_conversions",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::unnecessary_fallible_conversions)]` implied by `#[deny(clippy::all)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7377,
+                        "byte_start": 7363,
+                        "column_end": 53,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 246,
+                        "line_start": 246,
+                        "suggested_replacement": "From::from",
+                        "suggestion_applicability": "Unspecified",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 39,
+                            "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_fallible_conversions",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "use of a fallible conversion when an infallible one could be used",
+                "spans": [
+                  {
+                    "byte_end": 7377,
+                    "byte_start": 7363,
+                    "column_end": 53,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 246,
+                    "line_start": 246,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 53,
+                        "highlight_start": 39,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\value\\de.rs:576:6\n    |\n576 | impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {\n    |      ^^                                                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n576 - impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {\n576 + impl<'de> de::VariantAccess<'de> for Deserializer<&Value> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 17257,
+                        "byte_start": 17253,
+                        "column_end": 10,
+                        "column_start": 6,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 576,
+                        "line_start": 576,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 6,
+                            "text": "impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 17306,
+                        "byte_start": 17303,
+                        "column_end": 59,
+                        "column_start": 56,
+                        "expansion": null,
+                        "file_name": "src\\value\\de.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 576,
+                        "line_start": 576,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 59,
+                            "highlight_start": 56,
+                            "text": "impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 17255,
+                    "byte_start": 17253,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 576,
+                    "line_start": 576,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 17305,
+                    "byte_start": 17303,
+                    "column_end": 58,
+                    "column_start": 56,
+                    "expansion": null,
+                    "file_name": "src\\value\\de.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 576,
+                    "line_start": 576,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 58,
+                        "highlight_start": 56,
+                        "text": "impl<'a, 'de> de::VariantAccess<'de> for Deserializer<&'a Value> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1tla9eq1/ciborium-0.2.2#ciborium@0.2.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ciborium",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1tla9eq1\\ciborium-0.2.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: use of a fallible conversion when an infallible one could be used\n  --> src\\value\\ser.rs:53:39\n   |\n53 |                 } else if let Ok(x) = i128::try_from(*x) {\n   |                                       ^^^^^^^^^^^^^^ help: use: `From::from`\n   |\n   = note: converting `Integer` to `i128` cannot fail\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_fallible_conversions\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "converting `Integer` to `i128` cannot fail",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_fallible_conversions",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2151,
+                        "byte_start": 2137,
+                        "column_end": 53,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\value\\ser.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 53,
+                        "line_start": 53,
+                        "suggested_replacement": "From::from",
+                        "suggestion_applicability": "Unspecified",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 39,
+                            "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_fallible_conversions",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "use of a fallible conversion when an infallible one could be used",
+                "spans": [
+                  {
+                    "byte_end": 2151,
+                    "byte_start": 2137,
+                    "column_end": 53,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\value\\ser.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 53,
+                    "line_start": 53,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 53,
+                        "highlight_start": 39,
+                        "text": "                } else if let Ok(x) = i128::try_from(*x) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 27
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "ciborium",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-9754cc18-c1ac32bd-1751108290",
+      "timestamp": "2025-06-28T10:58:10.891598+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

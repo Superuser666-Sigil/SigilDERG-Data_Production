@@ -1,0 +1,3534 @@
+[
+  {
+    "execution_id": "exec-caadff60-8eb4f9c6-1751108776",
+    "timestamp": "2025-06-28T11:06:16.493762+00:00",
+    "sacred_chain": {
+      "input_data": "mime",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'mime' -> 'mime'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "mime",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\target\\debug\\deps\\libmime-5989c2f18acf9f68.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:130:17\n    |\n130 |                 pos: pos,\n    |                 ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\nnote: the lint level is defined here\n   --> src\\lib.rs:27:9\n    |\n27  | #![deny(warnings)]\n    |         ^^^^^^^^\n    = note: `#[deny(clippy::redundant_field_names)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 692,
+                        "byte_start": 684,
+                        "column_end": 17,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 27,
+                        "line_start": 27,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 9,
+                            "text": "#![deny(warnings)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::redundant_field_names)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3864,
+                        "byte_start": 3856,
+                        "column_end": 25,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 130,
+                        "line_start": 130,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 17,
+                            "text": "                pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 3864,
+                    "byte_start": 3856,
+                    "column_end": 25,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 130,
+                    "line_start": 130,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 17,
+                        "text": "                pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:131:17\n    |\n131 |                 byte: byte,\n    |                 ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3892,
+                        "byte_start": 3882,
+                        "column_end": 27,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 131,
+                        "line_start": 131,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 17,
+                            "text": "                byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 3892,
+                    "byte_start": 3882,
+                    "column_end": 27,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 131,
+                    "line_start": 131,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 17,
+                        "text": "                byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:152:21\n    |\n152 |                     slash: slash,\n    |                     ^^^^^^^^^^^^ help: replace it with: `slash`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4415,
+                        "byte_start": 4403,
+                        "column_end": 33,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 152,
+                        "line_start": 152,
+                        "suggested_replacement": "slash",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 21,
+                            "text": "                    slash: slash,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 4415,
+                    "byte_start": 4403,
+                    "column_end": 33,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 152,
+                    "line_start": 152,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 21,
+                        "text": "                    slash: slash,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:153:21\n    |\n153 |                     plus: plus,\n    |                     ^^^^^^^^^^ help: replace it with: `plus`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4447,
+                        "byte_start": 4437,
+                        "column_end": 31,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 153,
+                        "line_start": 153,
+                        "suggested_replacement": "plus",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 21,
+                            "text": "                    plus: plus,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 4447,
+                    "byte_start": 4437,
+                    "column_end": 31,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 153,
+                    "line_start": 153,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 21,
+                        "text": "                    plus: plus,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:158:17\n    |\n158 |                 pos: pos,\n    |                 ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4626,
+                        "byte_start": 4618,
+                        "column_end": 25,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 158,
+                        "line_start": 158,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 17,
+                            "text": "                pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 4626,
+                    "byte_start": 4618,
+                    "column_end": 25,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 158,
+                    "line_start": 158,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 17,
+                        "text": "                pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:159:17\n    |\n159 |                 byte: byte,\n    |                 ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 4654,
+                        "byte_start": 4644,
+                        "column_end": 27,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 159,
+                        "line_start": 159,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 27,
+                            "highlight_start": 17,
+                            "text": "                byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 4654,
+                    "byte_start": 4644,
+                    "column_end": 27,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 159,
+                    "line_start": 159,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 17,
+                        "text": "                byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:178:9\n    |\n178 |         slash: slash,\n    |         ^^^^^^^^^^^^ help: replace it with: `slash`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5153,
+                        "byte_start": 5141,
+                        "column_end": 21,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 178,
+                        "line_start": 178,
+                        "suggested_replacement": "slash",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 9,
+                            "text": "        slash: slash,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 5153,
+                    "byte_start": 5141,
+                    "column_end": 21,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 178,
+                    "line_start": 178,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 9,
+                        "text": "        slash: slash,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:179:9\n    |\n179 |         plus: plus,\n    |         ^^^^^^^^^^ help: replace it with: `plus`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5173,
+                        "byte_start": 5163,
+                        "column_end": 19,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 179,
+                        "line_start": 179,
+                        "suggested_replacement": "plus",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 19,
+                            "highlight_start": 9,
+                            "text": "        plus: plus,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 5173,
+                    "byte_start": 5163,
+                    "column_end": 19,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 179,
+                    "line_start": 179,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 9,
+                        "text": "        plus: plus,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:180:9\n    |\n180 |         params: params,\n    |         ^^^^^^^^^^^^^^ help: replace it with: `params`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5197,
+                        "byte_start": 5183,
+                        "column_end": 23,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 180,
+                        "line_start": 180,
+                        "suggested_replacement": "params",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 23,
+                            "highlight_start": 9,
+                            "text": "        params: params,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 5197,
+                    "byte_start": 5183,
+                    "column_end": 23,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 180,
+                    "line_start": 180,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 9,
+                        "text": "        params: params,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:206:21\n    |\n206 |                     pos: pos,\n    |                     ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6072,
+                        "byte_start": 6064,
+                        "column_end": 29,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 206,
+                        "line_start": 206,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 21,
+                            "text": "                    pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 6072,
+                    "byte_start": 6064,
+                    "column_end": 29,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 206,
+                    "line_start": 206,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 21,
+                        "text": "                    pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:207:21\n    |\n207 |                     byte: byte,\n    |                     ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6104,
+                        "byte_start": 6094,
+                        "column_end": 31,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 207,
+                        "line_start": 207,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 21,
+                            "text": "                    byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 6104,
+                    "byte_start": 6094,
+                    "column_end": 31,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 207,
+                    "line_start": 207,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 21,
+                        "text": "                    byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:226:25\n    |\n226 |                         pos: pos,\n    |                         ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6771,
+                        "byte_start": 6763,
+                        "column_end": 33,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 226,
+                        "line_start": 226,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 25,
+                            "text": "                        pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 6771,
+                    "byte_start": 6763,
+                    "column_end": 33,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 226,
+                    "line_start": 226,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 25,
+                        "text": "                        pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:227:25\n    |\n227 |                         byte: byte,\n    |                         ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6807,
+                        "byte_start": 6797,
+                        "column_end": 35,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 227,
+                        "line_start": 227,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 25,
+                            "text": "                        byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 6807,
+                    "byte_start": 6797,
+                    "column_end": 35,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 227,
+                    "line_start": 227,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 25,
+                        "text": "                        byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:249:25\n    |\n249 |                         pos: pos,\n    |                         ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7627,
+                        "byte_start": 7619,
+                        "column_end": 33,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 249,
+                        "line_start": 249,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 25,
+                            "text": "                        pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 7627,
+                    "byte_start": 7619,
+                    "column_end": 33,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 249,
+                    "line_start": 249,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 25,
+                        "text": "                        pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:250:25\n    |\n250 |                         byte: byte,\n    |                         ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7663,
+                        "byte_start": 7653,
+                        "column_end": 35,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 250,
+                        "line_start": 250,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 25,
+                            "text": "                        byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 7663,
+                    "byte_start": 7653,
+                    "column_end": 35,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 250,
+                    "line_start": 250,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 25,
+                        "text": "                        byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:273:25\n    |\n273 |                         pos: pos,\n    |                         ^^^^^^^^ help: replace it with: `pos`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8369,
+                        "byte_start": 8361,
+                        "column_end": 33,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 273,
+                        "line_start": 273,
+                        "suggested_replacement": "pos",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 25,
+                            "text": "                        pos: pos,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 8369,
+                    "byte_start": 8361,
+                    "column_end": 33,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 273,
+                    "line_start": 273,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 25,
+                        "text": "                        pos: pos,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: redundant field names in struct initialization\n   --> src\\parse.rs:274:25\n    |\n274 |                         byte: byte,\n    |                         ^^^^^^^^^^ help: replace it with: `byte`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8405,
+                        "byte_start": 8395,
+                        "column_end": 35,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 274,
+                        "line_start": 274,
+                        "suggested_replacement": "byte",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 25,
+                            "text": "                        byte: byte,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 8405,
+                    "byte_start": 8395,
+                    "column_end": 35,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 274,
+                    "line_start": 274,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 25,
+                        "text": "                        byte: byte,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this `if` statement can be collapsed\n   --> src\\parse.rs:294:17\n    |\n294 | /                 if semicolon + 2 == name.0 && CHARSET == &s[name.0..name.1] {\n295 | |                     if UTF_8 == &s[value.0..value.1] {\n296 | |                         params = ParamSource::Utf8(semicolon);\n297 | |                         continue 'params;\n298 | |                     }\n299 | |                 }\n    | |_________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if\n    = note: `#[deny(clippy::collapsible_if)]` implied by `#[deny(warnings)]`\nhelp: collapse nested if block\n    |\n294 ~                 if semicolon + 2 == name.0 && CHARSET == &s[name.0..name.1] && UTF_8 == &s[value.0..value.1] {\n295 +                     params = ParamSource::Utf8(semicolon);\n296 +                     continue 'params;\n297 +                 }\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_if",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::collapsible_if)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "collapse nested if block",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9301,
+                        "byte_start": 9040,
+                        "column_end": 18,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 299,
+                        "line_start": 294,
+                        "suggested_replacement": "if semicolon + 2 == name.0 && CHARSET == &s[name.0..name.1] && UTF_8 == &s[value.0..value.1] {\n                    params = ParamSource::Utf8(semicolon);\n                    continue 'params;\n                }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 78,
+                            "highlight_start": 17,
+                            "text": "                if semicolon + 2 == name.0 && CHARSET == &s[name.0..name.1] {"
+                          },
+                          {
+                            "highlight_end": 55,
+                            "highlight_start": 1,
+                            "text": "                    if UTF_8 == &s[value.0..value.1] {"
+                          },
+                          {
+                            "highlight_end": 63,
+                            "highlight_start": 1,
+                            "text": "                        params = ParamSource::Utf8(semicolon);"
+                          },
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 1,
+                            "text": "                        continue 'params;"
+                          },
+                          {
+                            "highlight_end": 22,
+                            "highlight_start": 1,
+                            "text": "                    }"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::collapsible_if",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this `if` statement can be collapsed",
+                "spans": [
+                  {
+                    "byte_end": 9301,
+                    "byte_start": 9040,
+                    "column_end": 18,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 299,
+                    "line_start": 294,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 17,
+                        "text": "                if semicolon + 2 == name.0 && CHARSET == &s[name.0..name.1] {"
+                      },
+                      {
+                        "highlight_end": 55,
+                        "highlight_start": 1,
+                        "text": "                    if UTF_8 == &s[value.0..value.1] {"
+                      },
+                      {
+                        "highlight_end": 63,
+                        "highlight_start": 1,
+                        "text": "                        params = ParamSource::Utf8(semicolon);"
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "                        continue 'params;"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "                    }"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this `else { if .. }` block can be collapsed\n   --> src\\lib.rs:364:20\n    |\n364 |               } else {\n    |  ____________________^\n365 | |                 if &a[..a_end] != &b[..b_end] {\n366 | |                     return false;\n367 | |                 }\n368 | |             }\n    | |_____________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_else_if\n    = note: `#[deny(clippy::collapsible_else_if)]` implied by `#[deny(warnings)]`\nhelp: collapse nested if block\n    |\n364 ~             } else if &a[..a_end] != &b[..b_end] {\n365 +                 return false;\n366 +             }\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#collapsible_else_if",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::collapsible_else_if)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "collapse nested if block",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9862,
+                        "byte_start": 9747,
+                        "column_end": 14,
+                        "column_start": 20,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 368,
+                        "line_start": 364,
+                        "suggested_replacement": "if &a[..a_end] != &b[..b_end] {\n                return false;\n            }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 20,
+                            "text": "            } else {"
+                          },
+                          {
+                            "highlight_end": 48,
+                            "highlight_start": 1,
+                            "text": "                if &a[..a_end] != &b[..b_end] {"
+                          },
+                          {
+                            "highlight_end": 34,
+                            "highlight_start": 1,
+                            "text": "                    return false;"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          },
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 1,
+                            "text": "            }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::collapsible_else_if",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this `else { if .. }` block can be collapsed",
+                "spans": [
+                  {
+                    "byte_end": 9862,
+                    "byte_start": 9747,
+                    "column_end": 14,
+                    "column_start": 20,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 368,
+                    "line_start": 364,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 20,
+                        "text": "            } else {"
+                      },
+                      {
+                        "highlight_end": 48,
+                        "highlight_start": 1,
+                        "text": "                if &a[..a_end] != &b[..b_end] {"
+                      },
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 1,
+                        "text": "                    return false;"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "            }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unneeded `return` statement\n   --> src\\parse.rs:87:17\n    |\n87  | /                 return match parse(slice) {\n88  | |                     Ok(mime) => {\n89  | |                         self.pos = start + pos + 1;\n90  | |                         Some(Ok(mime))\n...   |\n102 | |                 }\n    | |_________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return\n    = note: `#[deny(clippy::needless_return)]` implied by `#[deny(warnings)]`\nhelp: remove `return`\n    |\n87  ~                 match parse(slice) {\n88  +                     Ok(mime) => {\n89  +                         self.pos = start + pos + 1;\n90  +                         Some(Ok(mime))\n91  +                     }\n92  +                     Err(_) => {\n93  +                         if start + pos < len {\n94  +                             // Skip this invalid slice,\n95  +                             // try parsing the remaining slice in the next iteration\n96  +                             self.pos = start + pos;\n97  +                             Some(Err(slice))\n98  +                         } else {\n99  +                             None\n100 +                         }\n101 +                     }\n102 +                 }\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_return)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove `return`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3029,
+                        "byte_start": 2406,
+                        "column_end": 18,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 102,
+                        "line_start": 87,
+                        "suggested_replacement": "match parse(slice) {\n                    Ok(mime) => {\n                        self.pos = start + pos + 1;\n                        Some(Ok(mime))\n                    }\n                    Err(_) => {\n                        if start + pos < len {\n                            // Skip this invalid slice,\n                            // try parsing the remaining slice in the next iteration\n                            self.pos = start + pos;\n                            Some(Err(slice))\n                        } else {\n                            None\n                        }\n                    }\n                }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 17,
+                            "text": "                return match parse(slice) {"
+                          },
+                          {
+                            "highlight_end": 34,
+                            "highlight_start": 1,
+                            "text": "                    Ok(mime) => {"
+                          },
+                          {
+                            "highlight_end": 52,
+                            "highlight_start": 1,
+                            "text": "                        self.pos = start + pos + 1;"
+                          },
+                          {
+                            "highlight_end": 39,
+                            "highlight_start": 1,
+                            "text": "                        Some(Ok(mime))"
+                          },
+                          {
+                            "highlight_end": 22,
+                            "highlight_start": 1,
+                            "text": "                    }"
+                          },
+                          {
+                            "highlight_end": 32,
+                            "highlight_start": 1,
+                            "text": "                    Err(_) => {"
+                          },
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 1,
+                            "text": "                        if start + pos < len {"
+                          },
+                          {
+                            "highlight_end": 56,
+                            "highlight_start": 1,
+                            "text": "                            // Skip this invalid slice,"
+                          },
+                          {
+                            "highlight_end": 85,
+                            "highlight_start": 1,
+                            "text": "                            // try parsing the remaining slice in the next iteration"
+                          },
+                          {
+                            "highlight_end": 52,
+                            "highlight_start": 1,
+                            "text": "                            self.pos = start + pos;"
+                          },
+                          {
+                            "highlight_end": 45,
+                            "highlight_start": 1,
+                            "text": "                            Some(Err(slice))"
+                          },
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 1,
+                            "text": "                        } else {"
+                          },
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 1,
+                            "text": "                            None"
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "                        }"
+                          },
+                          {
+                            "highlight_end": 22,
+                            "highlight_start": 1,
+                            "text": "                    }"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_return",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unneeded `return` statement",
+                "spans": [
+                  {
+                    "byte_end": 3029,
+                    "byte_start": 2406,
+                    "column_end": 18,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 102,
+                    "line_start": 87,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 17,
+                        "text": "                return match parse(slice) {"
+                      },
+                      {
+                        "highlight_end": 34,
+                        "highlight_start": 1,
+                        "text": "                    Ok(mime) => {"
+                      },
+                      {
+                        "highlight_end": 52,
+                        "highlight_start": 1,
+                        "text": "                        self.pos = start + pos + 1;"
+                      },
+                      {
+                        "highlight_end": 39,
+                        "highlight_start": 1,
+                        "text": "                        Some(Ok(mime))"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "                    }"
+                      },
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 1,
+                        "text": "                    Err(_) => {"
+                      },
+                      {
+                        "highlight_end": 47,
+                        "highlight_start": 1,
+                        "text": "                        if start + pos < len {"
+                      },
+                      {
+                        "highlight_end": 56,
+                        "highlight_start": 1,
+                        "text": "                            // Skip this invalid slice,"
+                      },
+                      {
+                        "highlight_end": 85,
+                        "highlight_start": 1,
+                        "text": "                            // try parsing the remaining slice in the next iteration"
+                      },
+                      {
+                        "highlight_end": 52,
+                        "highlight_start": 1,
+                        "text": "                            self.pos = start + pos;"
+                      },
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 1,
+                        "text": "                            Some(Err(slice))"
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "                        } else {"
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "                            None"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "                        }"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "                    }"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: needless call to `bytes`\n  --> src\\parse.rs:67:19\n   |\n67 |         let len = self.source.bytes().len();\n   |                   ^^^^^^^^^^^^^^^^^^^^^^^^^ help: `len()` can be called directly on strings: `self.source.len()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_as_bytes\n   = note: `#[deny(clippy::needless_as_bytes)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_as_bytes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_as_bytes)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "`len()` can be called directly on strings",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1694,
+                        "byte_start": 1669,
+                        "column_end": 44,
+                        "column_start": 19,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 67,
+                        "line_start": 67,
+                        "suggested_replacement": "self.source.len()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 19,
+                            "text": "        let len = self.source.bytes().len();"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_as_bytes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "needless call to `bytes`",
+                "spans": [
+                  {
+                    "byte_end": 1694,
+                    "byte_start": 1669,
+                    "column_end": 44,
+                    "column_start": 19,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 67,
+                    "line_start": 67,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 44,
+                        "highlight_start": 19,
+                        "text": "        let len = self.source.bytes().len();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: dereferencing a tuple pattern where every element takes a reference\n   --> src\\parse.rs:311:9\n    |\n311 |     for &(ref name, ref value) in params {\n    |         ^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference\n    = note: `#[deny(clippy::needless_borrowed_reference)]` implied by `#[deny(warnings)]`\nhelp: try removing the `&` and `ref` parts\n    |\n311 -     for &(ref name, ref value) in params {\n311 +     for (name, value) in params {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrowed_reference",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_borrowed_reference)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try removing the `&` and `ref` parts",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9612,
+                        "byte_start": 9608,
+                        "column_end": 15,
+                        "column_start": 11,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 311,
+                        "line_start": 311,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 15,
+                            "highlight_start": 11,
+                            "text": "    for &(ref name, ref value) in params {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9622,
+                        "byte_start": 9618,
+                        "column_end": 25,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 311,
+                        "line_start": 311,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 21,
+                            "text": "    for &(ref name, ref value) in params {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9607,
+                        "byte_start": 9606,
+                        "column_end": 10,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\parse.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 311,
+                        "line_start": 311,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 9,
+                            "text": "    for &(ref name, ref value) in params {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrowed_reference",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "dereferencing a tuple pattern where every element takes a reference",
+                "spans": [
+                  {
+                    "byte_end": 9628,
+                    "byte_start": 9606,
+                    "column_end": 31,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\parse.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 311,
+                    "line_start": 311,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 31,
+                        "highlight_start": 9,
+                        "text": "    for &(ref name, ref value) in params {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unneeded `return` statement\n   --> src\\lib.rs:158:13\n    |\n158 |             return self.semicolon().unwrap_or(self.source.as_ref().len())\n    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return\nhelp: remove `return`\n    |\n158 -             return self.semicolon().unwrap_or(self.source.as_ref().len())\n158 +             self.semicolon().unwrap_or(self.source.as_ref().len())\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove `return`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3753,
+                        "byte_start": 3692,
+                        "column_end": 74,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 158,
+                        "line_start": 158,
+                        "suggested_replacement": "self.semicolon().unwrap_or(self.source.as_ref().len())",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 74,
+                            "highlight_start": 13,
+                            "text": "            return self.semicolon().unwrap_or(self.source.as_ref().len())"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_return",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unneeded `return` statement",
+                "spans": [
+                  {
+                    "byte_end": 3753,
+                    "byte_start": 3692,
+                    "column_end": 74,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 158,
+                    "line_start": 158,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 74,
+                        "highlight_start": 13,
+                        "text": "            return self.semicolon().unwrap_or(self.source.as_ref().len())"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this `if` has identical blocks\n   --> src\\lib.rs:282:32\n    |\n282 |       if b.len() < semicolon + 1 {\n    |  ________________________________^\n283 | |         false\n284 | |     } else if !eq_ascii(&a[..semicolon], &b[..semicolon]) {\n    | |_____^\n    |\nnote: same as this\n   --> src\\lib.rs:284:59\n    |\n284 |       } else if !eq_ascii(&a[..semicolon], &b[..semicolon]) {\n    |  ___________________________________________________________^\n285 | |         false\n286 | |     } else {\n    | |_____^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#if_same_then_else\n    = note: `#[deny(clippy::if_same_then_else)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "same as this",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7424,
+                        "byte_start": 7403,
+                        "column_end": 6,
+                        "column_start": 59,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 286,
+                        "line_start": 284,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 60,
+                            "highlight_start": 59,
+                            "text": "    } else if !eq_ascii(&a[..semicolon], &b[..semicolon]) {"
+                          },
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 1,
+                            "text": "        false"
+                          },
+                          {
+                            "highlight_end": 6,
+                            "highlight_start": 1,
+                            "text": "    } else {"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#if_same_then_else",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::if_same_then_else)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::if_same_then_else",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this `if` has identical blocks",
+                "spans": [
+                  {
+                    "byte_end": 7350,
+                    "byte_start": 7329,
+                    "column_end": 6,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 284,
+                    "line_start": 282,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 32,
+                        "text": "    if b.len() < semicolon + 1 {"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "        false"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    } else if !eq_ascii(&a[..semicolon], &b[..semicolon]) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: needlessly taken reference of both operands\n   --> src\\lib.rs:365:20\n    |\n365 |                 if &a[..a_end] != &b[..b_end] {\n    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#op_ref\n    = note: `#[deny(clippy::op_ref)]` implied by `#[deny(warnings)]`\nhelp: use the values directly\n    |\n365 -                 if &a[..a_end] != &b[..b_end] {\n365 +                 if a[..a_end] != b[..b_end] {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#op_ref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::op_ref)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the values directly",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9779,
+                        "byte_start": 9768,
+                        "column_end": 31,
+                        "column_start": 20,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 365,
+                        "line_start": 365,
+                        "suggested_replacement": "a[..a_end]",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 20,
+                            "text": "                if &a[..a_end] != &b[..b_end] {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9794,
+                        "byte_start": 9783,
+                        "column_end": 46,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 365,
+                        "line_start": 365,
+                        "suggested_replacement": "b[..b_end]",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 46,
+                            "highlight_start": 35,
+                            "text": "                if &a[..a_end] != &b[..b_end] {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::op_ref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "needlessly taken reference of both operands",
+                "spans": [
+                  {
+                    "byte_end": 9794,
+                    "byte_start": 9768,
+                    "column_end": 46,
+                    "column_start": 20,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 365,
+                    "line_start": 365,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 20,
+                        "text": "                if &a[..a_end] != &b[..b_end] {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: deref which would be done by auto-deref\n   --> src\\lib.rs:414:27\n    |\n414 |         mime_eq_str(self, *s)\n    |                           ^^ help: try: `s`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n    = note: `#[deny(clippy::explicit_auto_deref)]` implied by `#[deny(warnings)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::explicit_auto_deref)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11041,
+                        "byte_start": 11039,
+                        "column_end": 29,
+                        "column_start": 27,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 414,
+                        "line_start": 414,
+                        "suggested_replacement": "s",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 29,
+                            "highlight_start": 27,
+                            "text": "        mime_eq_str(self, *s)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 11041,
+                    "byte_start": 11039,
+                    "column_end": 29,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 414,
+                    "line_start": 414,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 27,
+                        "text": "        mime_eq_str(self, *s)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'a\n   --> src\\lib.rs:418:6\n    |\n418 | impl<'a> PartialEq<Mime> for &'a str {\n    |      ^^                       ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\n    = note: `#[deny(clippy::needless_lifetimes)]` implied by `#[deny(warnings)]`\nhelp: elide the lifetimes\n    |\n418 - impl<'a> PartialEq<Mime> for &'a str {\n418 + impl PartialEq<Mime> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::needless_lifetimes)]` implied by `#[deny(warnings)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11060,
+                        "byte_start": 11056,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 418,
+                        "line_start": 418,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "impl<'a> PartialEq<Mime> for &'a str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 11085,
+                        "byte_start": 11082,
+                        "column_end": 34,
+                        "column_start": 31,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 418,
+                        "line_start": 418,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 34,
+                            "highlight_start": 31,
+                            "text": "impl<'a> PartialEq<Mime> for &'a str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 11059,
+                    "byte_start": 11057,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 418,
+                    "line_start": 418,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a> PartialEq<Mime> for &'a str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 11084,
+                    "byte_start": 11082,
+                    "column_end": 33,
+                    "column_start": 31,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 418,
+                    "line_start": 418,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 31,
+                        "text": "impl<'a> PartialEq<Mime> for &'a str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: deref which would be done by auto-deref\n   --> src\\lib.rs:421:27\n    |\n421 |         mime_eq_str(mime, *self)\n    |                           ^^^^^ help: try: `self`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11176,
+                        "byte_start": 11171,
+                        "column_end": 32,
+                        "column_start": 27,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 421,
+                        "line_start": 421,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 32,
+                            "highlight_start": 27,
+                            "text": "        mime_eq_str(mime, *self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 11176,
+                    "byte_start": 11171,
+                    "column_end": 32,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 421,
+                    "line_start": 421,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 27,
+                        "text": "        mime_eq_str(mime, *self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: deref which would be done by auto-deref\n   --> src\\lib.rs:478:27\n    |\n478 |         name_eq_str(self, *other)\n    |                           ^^^^^^ help: try: `other`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12544,
+                        "byte_start": 12538,
+                        "column_end": 33,
+                        "column_start": 27,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 478,
+                        "line_start": 478,
+                        "suggested_replacement": "other",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 27,
+                            "text": "        name_eq_str(self, *other)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 12544,
+                    "byte_start": 12538,
+                    "column_end": 33,
+                    "column_start": 27,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 478,
+                    "line_start": 478,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 27,
+                        "text": "        name_eq_str(self, *other)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: the following explicit lifetimes could be elided: 'b\n   --> src\\lib.rs:482:10\n    |\n482 | impl<'a, 'b> PartialEq<Name<'a>> for &'b str {\n    |          ^^                           ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\nhelp: elide the lifetimes\n    |\n482 - impl<'a, 'b> PartialEq<Name<'a>> for &'b str {\n482 + impl<'a> PartialEq<Name<'a>> for &str {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12566,
+                        "byte_start": 12562,
+                        "column_end": 12,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 482,
+                        "line_start": 482,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 8,
+                            "text": "impl<'a, 'b> PartialEq<Name<'a>> for &'b str {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 12596,
+                        "byte_start": 12593,
+                        "column_end": 42,
+                        "column_start": 39,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 482,
+                        "line_start": 482,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 39,
+                            "text": "impl<'a, 'b> PartialEq<Name<'a>> for &'b str {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "the following explicit lifetimes could be elided: 'b",
+                "spans": [
+                  {
+                    "byte_end": 12566,
+                    "byte_start": 12564,
+                    "column_end": 12,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 482,
+                    "line_start": 482,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 12,
+                        "highlight_start": 10,
+                        "text": "impl<'a, 'b> PartialEq<Name<'a>> for &'b str {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 12595,
+                    "byte_start": 12593,
+                    "column_end": 41,
+                    "column_start": 39,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 482,
+                    "line_start": 482,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 39,
+                        "text": "impl<'a, 'b> PartialEq<Name<'a>> for &'b str {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplauvt5nc/mime-0.3.17#mime@0.3.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "mime",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplauvt5nc\\mime-0.3.17\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: deref which would be done by auto-deref\n   --> src\\lib.rs:485:28\n    |\n485 |         name_eq_str(other, *self)\n    |                            ^^^^^ help: try: `self`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 12693,
+                        "byte_start": 12688,
+                        "column_end": 33,
+                        "column_start": 28,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 485,
+                        "line_start": 485,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 28,
+                            "text": "        name_eq_str(other, *self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 12693,
+                    "byte_start": 12688,
+                    "column_end": 33,
+                    "column_start": 28,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 485,
+                    "line_start": 485,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 28,
+                        "text": "        name_eq_str(other, *self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 1
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "mime",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-caadff60-8eb4f9c6-1751108776",
+      "timestamp": "2025-06-28T11:06:16.493762+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

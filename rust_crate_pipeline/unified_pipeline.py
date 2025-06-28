@@ -15,6 +15,8 @@ from .config import PipelineConfig
 from .core import IRLEngine, CanonRegistry, SacredChainTrace, TrustVerdict
 from .scraping import UnifiedScraper, ScrapingResult
 from .crate_analysis import CrateAnalyzer
+from rust_crate_pipeline.utils.sanitization import Sanitizer
+from rust_crate_pipeline.version import __version__
 
 # Import Azure OpenAI enricher if available
 try:
@@ -37,6 +39,7 @@ except ImportError:
 if TYPE_CHECKING:
     from .azure_ai_processing import AzureOpenAIEnricher  # type: ignore[import]
     from .unified_llm_processor import UnifiedLLMProcessor, LLMConfig  # type: ignore[import]
+    from rust_crate_pipeline.models.crate_metadata import CrateMetadata
 
 
 class UnifiedSigilPipeline:
@@ -47,6 +50,7 @@ class UnifiedSigilPipeline:
         self.irl_engine: Optional[IRLEngine] = None
         self.scraper: Optional[UnifiedScraper] = None
         self.canon_registry: CanonRegistry = CanonRegistry()
+        self.sanitizer = Sanitizer()
         
         # Initialize AI components
         self.ai_enricher: Optional[Any] = None
@@ -171,22 +175,22 @@ class UnifiedSigilPipeline:
         self.logger.info(f"🔗 Performing Sacred Chain analysis for {crate_name}")
         
         try:
-            sacred_chain_trace = await self.irl_engine.analyze_with_sacred_chain(crate_name)
+            sanitized_docs = self.sanitizer.sanitize_data(documentation_results)
             
-            successful_docs = [result for result in documentation_results.values() 
-                             if result.error is None]
-            if successful_docs:
-                avg_quality = sum(doc.quality_score for doc in successful_docs) / len(successful_docs)
-                sacred_chain_trace.audit_info["documentation_quality"] = avg_quality
-                sacred_chain_trace.audit_info["documentation_sources"] = list(documentation_results.keys())
+            async with self.irl_engine as irl_engine:
+                trace = await irl_engine.analyze_with_sacred_chain(crate_name)
+
+            # Storing sanitized docs in the trace for later use by enrichment functions
+            trace.audit_info['sanitized_documentation'] = sanitized_docs
+
+            await self._add_crate_analysis_results(crate_name, crate_version, trace)
+
+            if self.unified_llm_processor:
+                await self._add_unified_llm_enrichment(crate_name, crate_version, trace)
+            elif self.ai_enricher:
+                await self._add_ai_enrichment(crate_name, crate_version, trace)
             
-            # Add crate analysis results if available
-            await self._add_crate_analysis_results(crate_name, crate_version, sacred_chain_trace)
-            
-            # Add AI enrichment if available
-            await self._add_ai_enrichment(crate_name, sacred_chain_trace)
-            
-            return sacred_chain_trace
+            return trace
             
         except Exception as e:
             self.logger.error(f"❌ Sacred Chain analysis failed: {e}")
@@ -217,13 +221,13 @@ class UnifiedSigilPipeline:
 
                 audit_results = await self._run_cargo_audit(crate_source_path)
 
-                trace.audit_info["crate_analysis"] = {
+                trace.audit_info["crate_analysis"] = self.sanitizer.sanitize_data({
                     "status": "completed",
                     "check": check_results,
                     "clippy": clippy_results,
                     "audit": audit_results,
                     "note": "Crate analysis performed."
-                }
+                })
 
         except Exception as e:
             self.logger.warning(f"⚠️  Failed to add crate analysis results: {e}")
@@ -331,17 +335,17 @@ class UnifiedSigilPipeline:
 
         return None
     
-    async def _add_ai_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
+    async def _add_ai_enrichment(self, crate_name: str, crate_version: str, trace: SacredChainTrace) -> None:
         """Add AI enrichment results to the sacred chain trace"""
         # Use unified LLM processor if available, otherwise fall back to Azure OpenAI
         if self.unified_llm_processor:
-            await self._add_unified_llm_enrichment(crate_name, trace)
+            await self._add_unified_llm_enrichment(crate_name, crate_version, trace)
         elif self.ai_enricher:
             await self._add_azure_openai_enrichment(crate_name, trace)
         else:
             self.logger.info("ℹ️  No AI enricher available, skipping AI enrichment")
     
-    async def _add_unified_llm_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
+    async def _add_unified_llm_enrichment(self, crate_name: str, crate_version: str, trace: SacredChainTrace) -> None:
         """Add enrichment using unified LLM processor"""
         if not self.unified_llm_processor:
             return
@@ -355,7 +359,7 @@ class UnifiedSigilPipeline:
             
             mock_crate = CrateMetadata(
                 name=crate_name,
-                version="unknown",
+                version=crate_version,
                 description=trace.suggestion or "No description available",
                 repository="",
                 keywords=[],
@@ -381,22 +385,16 @@ class UnifiedSigilPipeline:
             enriched_crate = self.unified_llm_processor.enrich_crate(mock_crate)
             
             # Add enrichment results to trace
-            trace.audit_info["ai_enrichment"] = {
-                "provider": self.llm_config.provider if self.llm_config else "unknown",
-                "model": self.llm_config.model if self.llm_config else "unknown",
-                "readme_summary": enriched_crate.readme_summary,
-                "use_case": enriched_crate.use_case,
-                "score": enriched_crate.score,
-                "factual_counterfactual": enriched_crate.factual_counterfactual
-            }
-            
-            self.logger.info(f"✅ Unified LLM enrichment completed for {crate_name}")
+            trace.audit_info["enriched_crate"] = self.sanitizer.sanitize_data(
+                enriched_crate.to_dict()
+            )
+            self.logger.info(f"✅ Enriched data for {crate_name} using Unified LLM")
             
         except Exception as e:
             self.logger.warning(f"⚠️  Failed to add unified LLM enrichment: {e}")
     
     async def _add_azure_openai_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
-        """Add enrichment using Azure OpenAI (fallback method)"""
+        """Add enrichment using Azure OpenAI"""
         if not self.ai_enricher:
             return
             
@@ -435,16 +433,10 @@ class UnifiedSigilPipeline:
             enriched_crate = self.ai_enricher.enrich_crate(mock_crate)
             
             # Add enrichment results to trace
-            trace.audit_info["ai_enrichment"] = {
-                "provider": "azure_openai",
-                "model": self.config.azure_openai_deployment_name,
-                "readme_summary": enriched_crate.readme_summary,
-                "use_case": enriched_crate.use_case,
-                "score": enriched_crate.score,
-                "factual_counterfactual": enriched_crate.factual_counterfactual
-            }
-            
-            self.logger.info(f"✅ Azure OpenAI enrichment completed for {crate_name}")
+            trace.audit_info["enriched_crate"] = self.sanitizer.sanitize_data(
+                enriched_crate.to_dict()
+            )
+            self.logger.info(f"✅ Enriched data for {crate_name} using Azure OpenAI")
             
         except Exception as e:
             self.logger.warning(f"⚠️  Failed to add Azure OpenAI enrichment: {e}")

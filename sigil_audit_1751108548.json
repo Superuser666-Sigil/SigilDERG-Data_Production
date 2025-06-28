@@ -1,0 +1,1106 @@
+[
+  {
+    "execution_id": "exec-265ee18a-64bdc616-1751108544",
+    "timestamp": "2025-06-28T11:02:24.990615+00:00",
+    "sacred_chain": {
+      "input_data": "backtrace",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'backtrace' -> 'backtrace'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "backtrace",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.24",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_demangle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.24\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\librustc_demangle-eac712915fa4ae8d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-e8e607e3652a8546\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libwindows_x86_64_msvc-3e6e4ddbeeceebc3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libwindows_targets-b5624e17f0a1ad8b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libbacktrace-81e9747b4e911bef.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-a21d0cd880e0be5c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\build\\windows_x86_64_msvc-e8e607e3652a8546\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc-demangle@0.1.24",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_demangle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc-demangle-0.1.24\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\librustc_demangle-eac712915fa4ae8d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libwindows_x86_64_msvc-3e6e4ddbeeceebc3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\target\\debug\\deps\\libwindows_targets-b5624e17f0a1ad8b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unsafe function's docs are missing a `# Safety` section\n  --> src\\backtrace\\mod.rs:65:1\n   |\n65 | pub unsafe fn trace_unsynchronized<F: FnMut(&Frame) -> bool>(mut cb: F) {\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc\n   = note: `#[warn(clippy::missing_safety_doc)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::missing_safety_doc)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_safety_doc",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unsafe function's docs are missing a `# Safety` section",
+                "spans": [
+                  {
+                    "byte_end": 2365,
+                    "byte_start": 2294,
+                    "column_end": 72,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\backtrace\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 65,
+                    "line_start": 65,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn trace_unsynchronized<F: FnMut(&Frame) -> bool>(mut cb: F) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: this public function might dereference a raw pointer but is not marked `unsafe`\n  --> src\\symbolize\\mod.rs:63:37\n   |\n63 |     unsafe { resolve_unsynchronized(addr, cb) }\n   |                                     ^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#not_unsafe_ptr_arg_deref\n   = note: `#[deny(clippy::not_unsafe_ptr_arg_deref)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#not_unsafe_ptr_arg_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::not_unsafe_ptr_arg_deref)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::not_unsafe_ptr_arg_deref",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "this public function might dereference a raw pointer but is not marked `unsafe`",
+                "spans": [
+                  {
+                    "byte_end": 1960,
+                    "byte_start": 1956,
+                    "column_end": 41,
+                    "column_start": 37,
+                    "expansion": null,
+                    "file_name": "src\\symbolize\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 63,
+                    "line_start": 63,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 37,
+                        "text": "    unsafe { resolve_unsynchronized(addr, cb) }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unsafe function's docs are missing a `# Safety` section\n   --> src\\symbolize\\mod.rs:158:1\n    |\n158 | / pub unsafe fn resolve_unsynchronized<F>(addr: *mut c_void, mut cb: F)\n159 | | where\n160 | |     F: FnMut(&Symbol),\n    | |______________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_safety_doc",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unsafe function's docs are missing a `# Safety` section",
+                "spans": [
+                  {
+                    "byte_end": 5282,
+                    "byte_start": 5184,
+                    "column_end": 23,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\symbolize\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 160,
+                    "line_start": 158,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 70,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn resolve_unsynchronized<F>(addr: *mut c_void, mut cb: F)"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "where"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "    F: FnMut(&Symbol),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unsafe function's docs are missing a `# Safety` section\n   --> src\\symbolize\\mod.rs:174:1\n    |\n174 | / pub unsafe fn resolve_frame_unsynchronized<F>(frame: &Frame, mut cb: F)\n175 | | where\n176 | |     F: FnMut(&Symbol),\n    | |______________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_safety_doc",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unsafe function's docs are missing a `# Safety` section",
+                "spans": [
+                  {
+                    "byte_end": 5823,
+                    "byte_start": 5723,
+                    "column_end": 23,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\symbolize\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 176,
+                    "line_start": 174,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 1,
+                        "text": "pub unsafe fn resolve_frame_unsynchronized<F>(frame: &Frame, mut cb: F)"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "where"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "    F: FnMut(&Symbol),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: length comparison to zero\n   --> src\\symbolize\\mod.rs:349:11\n    |\n349 |     while bytes.len() > 0 {\n    |           ^^^^^^^^^^^^^^^ help: using `!is_empty` is clearer and more explicit: `!bytes.is_empty()`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero\n    = note: `#[warn(clippy::len_zero)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#len_zero",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::len_zero)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "using `!is_empty` is clearer and more explicit",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 11522,
+                        "byte_start": 11507,
+                        "column_end": 26,
+                        "column_start": 11,
+                        "expansion": null,
+                        "file_name": "src\\symbolize\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 349,
+                        "line_start": 349,
+                        "suggested_replacement": "!bytes.is_empty()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 11,
+                            "text": "    while bytes.len() > 0 {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::len_zero",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "length comparison to zero",
+                "spans": [
+                  {
+                    "byte_end": 11522,
+                    "byte_start": 11507,
+                    "column_end": 26,
+                    "column_start": 11,
+                    "expansion": null,
+                    "file_name": "src\\symbolize\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 349,
+                    "line_start": 349,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 11,
+                        "text": "    while bytes.len() > 0 {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: casting to the same type is unnecessary (`u32` -> `u32`)\n   --> src\\symbolize\\dbghelp.rs:228:23\n    |\n228 |     info.MaxNameLen = MAX_SYM_NAME as u32;\n    |                       ^^^^^^^^^^^^^^^^^^^ help: try: `MAX_SYM_NAME`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast\n    = note: `#[warn(clippy::unnecessary_cast)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::unnecessary_cast)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7655,
+                        "byte_start": 7636,
+                        "column_end": 42,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\symbolize\\dbghelp.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 228,
+                        "line_start": 228,
+                        "suggested_replacement": "MAX_SYM_NAME",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 23,
+                            "text": "    info.MaxNameLen = MAX_SYM_NAME as u32;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_cast",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "casting to the same type is unnecessary (`u32` -> `u32`)",
+                "spans": [
+                  {
+                    "byte_end": 7655,
+                    "byte_start": 7636,
+                    "column_end": 42,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\symbolize\\dbghelp.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 228,
+                    "line_start": 228,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 23,
+                        "text": "    info.MaxNameLen = MAX_SYM_NAME as u32;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0lee26po/backtrace-0.3.75#backtrace@0.3.75",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "backtrace",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0lee26po\\backtrace-0.3.75\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: slow zero-filling initialization\n   --> src\\dbghelp.rs:364:35\n    |\n364 |           let mut search_path_buf = Vec::new();\n    |  ___________________________________^\n365 | |         search_path_buf.resize(1024, 0);\n    | |_______________________________________^ help: consider replacing this with: `vec![0; 1024]`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#slow_vector_initialization\n    = note: `#[warn(clippy::slow_vector_initialization)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#slow_vector_initialization",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::slow_vector_initialization)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider replacing this with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15146,
+                        "byte_start": 15095,
+                        "column_end": 40,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\dbghelp.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 365,
+                        "line_start": 364,
+                        "suggested_replacement": "vec![0; 1024]",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 46,
+                            "highlight_start": 35,
+                            "text": "        let mut search_path_buf = Vec::new();"
+                          },
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 1,
+                            "text": "        search_path_buf.resize(1024, 0);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::slow_vector_initialization",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "slow zero-filling initialization",
+                "spans": [
+                  {
+                    "byte_end": 15146,
+                    "byte_start": 15095,
+                    "column_end": 40,
+                    "column_start": 35,
+                    "expansion": null,
+                    "file_name": "src\\dbghelp.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 365,
+                    "line_start": 364,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 46,
+                        "highlight_start": 35,
+                        "text": "        let mut search_path_buf = Vec::new();"
+                      },
+                      {
+                        "highlight_end": 40,
+                        "highlight_start": 1,
+                        "text": "        search_path_buf.resize(1024, 0);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 28
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "backtrace",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-265ee18a-64bdc616-1751108544",
+      "timestamp": "2025-06-28T11:02:24.990615+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

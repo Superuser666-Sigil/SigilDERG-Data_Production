@@ -1,0 +1,469 @@
+[
+  {
+    "execution_id": "exec-6373f2da-a9e8c24c-1751109005",
+    "timestamp": "2025-06-28T11:10:05.900427+00:00",
+    "sacred_chain": {
+      "input_data": "unicode-normalization",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'unicode-normalization' -> 'unicode-normalization'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "unicode-normalization",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tinyvec_macros@0.1.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec_macros-0.1.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tinyvec_macros",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec_macros-0.1.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libtinyvec_macros-18afdec9b3093565.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tinyvec@1.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec-1.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tinyvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec-1.9.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "tinyvec_macros"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libtinyvec-46990580d0b447c9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmprj2ulzvs/unicode-normalization-0.1.24#unicode-normalization@0.1.24",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_normalization",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libunicode_normalization-40cfa69097de68f5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tinyvec_macros@0.1.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec_macros-0.1.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tinyvec_macros",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec_macros-0.1.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libtinyvec_macros-18afdec9b3093565.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tinyvec@1.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec-1.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tinyvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tinyvec-1.9.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "tinyvec_macros"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libtinyvec-46990580d0b447c9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmprj2ulzvs/unicode-normalization-0.1.24#unicode-normalization@0.1.24",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_normalization",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this `match` expression can be replaced with `?`\n  --> src\\stream_safe.rs:37:23\n   |\n37 |           let next_ch = match self.buffer.take().or_else(|| self.iter.next()) {\n   |  _______________________^\n38 | |             None => return None,\n39 | |             Some(c) => c,\n40 | |         };\n   | |_________^ help: try instead: `self.buffer.take().or_else(|| self.iter.next())?`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark\n   = note: `#[warn(clippy::question_mark)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::question_mark)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1167,
+                        "byte_start": 1043,
+                        "column_end": 10,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\stream_safe.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 40,
+                        "line_start": 37,
+                        "suggested_replacement": "self.buffer.take().or_else(|| self.iter.next())?",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 78,
+                            "highlight_start": 23,
+                            "text": "        let next_ch = match self.buffer.take().or_else(|| self.iter.next()) {"
+                          },
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 1,
+                            "text": "            None => return None,"
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "            Some(c) => c,"
+                          },
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 1,
+                            "text": "        };"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::question_mark",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this `match` expression can be replaced with `?`",
+                "spans": [
+                  {
+                    "byte_end": 1167,
+                    "byte_start": 1043,
+                    "column_end": 10,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\stream_safe.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 40,
+                    "line_start": 37,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 23,
+                        "text": "        let next_ch = match self.buffer.take().or_else(|| self.iter.next()) {"
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "            None => return None,"
+                      },
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 1,
+                        "text": "            Some(c) => c,"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        };"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmprj2ulzvs/unicode-normalization-0.1.24#unicode-normalization@0.1.24",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_normalization",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmprj2ulzvs\\unicode-normalization-0.1.24\\target\\debug\\deps\\libunicode_normalization-db60f8990e91bb96.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 3
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "unicode-normalization",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-6373f2da-a9e8c24c-1751109005",
+      "timestamp": "2025-06-28T11:10:05.900427+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

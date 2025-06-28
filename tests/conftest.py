@@ -5,8 +5,12 @@ import tempfile
 import os
 from unittest.mock import Mock, patch
 from typing import Dict, Any
+import sys
 
 from rust_crate_pipeline.config import PipelineConfig, EnrichedCrate
+
+# Add the project root to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 @pytest.fixture
