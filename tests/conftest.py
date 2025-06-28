@@ -1,16 +1,19 @@
 """Test configuration and fixtures for rust_crate_pipeline."""
 
-import pytest
-import tempfile
+# Standard library imports
 import os
+import sys
+import tempfile
+# Third-party imports
+import pytest
 from unittest.mock import Mock, patch
 from typing import Dict, Any
-import sys
+# Local imports must come after the project root is on sys.path
+
+# Ensure the project root is on the Python path _before_ attempting local imports
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from rust_crate_pipeline.config import PipelineConfig, EnrichedCrate
-
-# Add the project root to the Python path
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 
 @pytest.fixture

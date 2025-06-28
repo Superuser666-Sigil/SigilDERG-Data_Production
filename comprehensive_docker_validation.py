@@ -13,6 +13,11 @@ import sys
 from pathlib import Path
 from typing import List, Union, Dict, Any
 
+try:
+    from rust_crate_pipeline import __version__ as PACKAGE_VERSION
+except ImportError:
+    PACKAGE_VERSION = "latest"
+
 
 def run_command(
     cmd: Union[str, List[str]], description: str, check_return: bool = True
@@ -109,9 +114,10 @@ def build_docker_image() -> bool:
 
     # Build the image
     try:
+        image_tag = f"rust-crate-pipeline:{PACKAGE_VERSION}"
         run_command(
-            ["docker", "build", "-t", "rust-crate-pipeline:1.3.1", "."],
-            "Building Docker image with version tag",
+            ["docker", "build", "-t", image_tag, "."],
+            f"Building Docker image with version tag {PACKAGE_VERSION}",
         )
 
         # Also tag as latest
@@ -119,7 +125,7 @@ def build_docker_image() -> bool:
             [
                 "docker",
                 "tag",
-                "rust-crate-pipeline:1.3.1",
+                image_tag,
                 "rust-crate-pipeline:latest",
             ],
             "Tagging as latest",
@@ -145,9 +151,12 @@ def test_docker_container() -> bool:
                 "run",
                 "--rm",
                 "rust-crate-pipeline:latest",
-                "test",
+                "python",
+                "-m",
+                "rust_crate_pipeline",
+                "--help",
             ],
-            "description": "Testing basic container functionality",
+            "description": "Ensuring CLI help executes inside container",
         },
         {
             "name": "Package version check",
@@ -195,17 +204,6 @@ def test_docker_container() -> bool:
             ],
             "description": "Testing our integration module",
         },
-        {
-            "name": "Help command",
-            "cmd": [
-                "docker",
-                "run",
-                "--rm",
-                "rust-crate-pipeline:latest",
-                "--help",
-            ],
-            "description": "Testing help functionality",
-        },
     ]
 
     all_passed = True
@@ -221,43 +219,34 @@ def test_docker_container() -> bool:
 
 
 def validate_image_contents() -> bool:
-    """Validate that the image contains our expected files and versions"""
+    """Validate that required Python modules are available inside the image"""
     print("\n" + "=" * 70)
     print("📋 IMAGE CONTENTS VALIDATION")
     print("=" * 70)
 
-    # Check file structure
-    file_checks = [
-        "/app/rust_crate_pipeline",
-        "/app/utils",
-        "/app/enhanced_scraping.py",
-        "/app/pyproject.toml",
-        "/app/setup.py",
+    modules_to_check = [
+        "rust_crate_pipeline",
+        "enhanced_scraping",
+        "crawl4ai",
     ]
 
     all_passed = True
-    for file_path in file_checks:
+    for module in modules_to_check:
         try:
-            result = run_command(
+            run_command(
                 [
                     "docker",
                     "run",
                     "--rm",
                     "rust-crate-pipeline:latest",
-                    "test",
-                    "-e",
-                    file_path,
+                    "python",
+                    "-c",
+                    f"import {module}; print('{module} import ✅')",
                 ],
-                f"Checking if {file_path} exists in container",
-                check_return=False,
+                f"Checking import of {module} inside container",
             )
-            if result:
-                print(f"✅ {file_path} exists in container")
-            else:
-                print(f"❌ {file_path} missing in container")
-                all_passed = False
         except (subprocess.CalledProcessError, FileNotFoundError) as e:
-            print(f"❌ Failed to check {file_path}: {e}")
+            print(f"❌ Failed to import {module}: {e}")
             all_passed = False
 
     return all_passed
