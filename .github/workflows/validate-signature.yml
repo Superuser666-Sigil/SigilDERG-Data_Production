@@ -20,11 +20,22 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install cryptography
 
       - name: Validate DB signature
         run: |
-          pip install cryptography
+          if [ ! -f "sigil_rag_cache.db" ]; then
+            echo "❌ Database file not found"
+            exit 1
+          fi
+          if [ ! -f "sigil_seal_public.pem" ]; then
+            echo "❌ Public key file not found"
+            exit 1
+          fi
           python scripts/validate_signature.py \
             --db sigil_rag_cache.db \
             --public-key sigil_seal_public.pem

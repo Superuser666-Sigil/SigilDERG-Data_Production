@@ -1,3 +1,12 @@
+> **All LLM usage in this project is unified and cross-platform.**
+>
+> - All LLM calls are routed through the `UnifiedLLMProcessor` and `LLMConfig` abstractions.
+> - This ensures support for all major providers (cloud and local) on Mac, Linux, and Windows.
+> - **All new LLM features must use this pattern.**
+> - The project is future-proof: as [LiteLLM](https://github.com/BerriAI/litellm) adds new providers, you can use them immediately by updating your config/CLI—no code changes needed.
+
+---
+
 # Unified LLM Provider Support for Rust Crate Pipeline
 
 This document describes the comprehensive LLM provider support in the Rust Crate Pipeline, allowing you to use any LiteLLM-compatible provider for AI-powered crate analysis.

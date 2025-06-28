@@ -11,7 +11,7 @@ import requests
 import logging
 
 
-def check_github_token_quick() -> None:
+def check_github_token_quick() -> tuple[bool, str]:
     """Quick check if GitHub token is available and valid"""
     token = os.getenv("GITHUB_TOKEN")
 
@@ -49,7 +49,7 @@ def check_github_token_quick() -> None:
         return False, f"Error checking token: {str(e)}"
 
 
-def prompt_for_token_setup() -> None:
+def prompt_for_token_setup() -> bool:
     """Prompt user to set up GitHub token"""
     print("\n" + "=" * 60)
     print("[KEY] GitHub Token Required")
@@ -78,7 +78,7 @@ def prompt_for_token_setup() -> None:
         return False
 
 
-def check_and_setup_github_token() -> None:
+def check_and_setup_github_token() -> bool:
     """Checks and sets up the GitHub token."""
     is_valid, message = check_github_token_quick()
 

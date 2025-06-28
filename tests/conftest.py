@@ -1,59 +1,121 @@
-#!/usr/bin/env python3
-"""
-Optimized pytest configuration for fast development cycles and token efficiency.
-Rule Zero-aligned: maximum performance, minimal overhead.
-"""
+"""Test configuration and fixtures for rust_crate_pipeline."""
 
 import pytest
-from typing import List
-from _pytest.config import Config
-from _pytest.nodes import Item
-from _pytest.config.argparsing import Parser
+import tempfile
+import os
+from unittest.mock import Mock, patch
+from typing import Dict, Any
 
-
-def pytest_addoption(parser: Parser) -> None:
-    """Add custom command line options for test optimization."""
-    parser.addoption("--fast", action="store_true", help="Run only fast tests")
-    parser.addoption(
-        "--coverage-focus",
-        action="store_true",
-        help="Run coverage tests only",
-    )
-
-
-def pytest_collection_modifyitems(config: Config, items: List[Item]) -> None:
-    """Optimize test collection for speed."""
-    if config.getoption("--fast"):
-        # Skip slow tests
-        skip_slow = pytest.mark.skip(reason="--fast mode")
-        for item in items:
-            if "slow" in item.keywords or any(
-                name in str(item.fspath) for name in ["crawl4ai", "integration"]
-            ):
-                item.add_marker(skip_slow)
-
-    if config.getoption("--coverage-focus"):
-        # Run only coverage tests
-        coverage_files = [
-            "test_config_coverage.py",
-            "test_github_token_checker_coverage.py",
-            "test_main_module_coverage.py",
-            "test_rust_analyzer_coverage.py",
-        ]
-        skip_non_coverage = pytest.mark.skip(reason="not coverage-focused")
-        for item in items:
-            if not any(cf in str(item.fspath) for cf in coverage_files):
-                item.add_marker(skip_non_coverage)
+from rust_crate_pipeline.config import PipelineConfig, EnrichedCrate
 
 
 @pytest.fixture
-def mock_config() -> None:
-    """Fast mock configuration."""
-    from rust_crate_pipeline.config import PipelineConfig
-
-    return PipelineConfig(
-        batch_size=2,
-        n_workers=1,
-        enable_crawl4ai=False,
-        max_tokens=50,
+def sample_crate() -> EnrichedCrate:
+    """Create a sample crate for testing."""
+    return EnrichedCrate(
+        name="test-crate",
+        version="1.0.0",
+        description="A test crate for unit testing",
+        repository="https://github.com/test/test-crate",
+        keywords=["test", "example"],
+        categories=["development-tools"],
+        readme="# Test Crate\n\nThis is a test crate for unit testing.",
+        downloads=1000,
+        github_stars=50,
+        dependencies=[],
+        features={},
+        code_snippets=[],
+        readme_sections={},
+        librs_downloads=None,
+        source="crates.io",
+        enhanced_scraping={},
+        enhanced_features=[],
+        enhanced_dependencies=[],
+        readme_summary="A test crate for unit testing",
+        feature_summary="Basic functionality for testing",
+        use_case="Unit testing and development",
+        score=0.8,
+        factual_counterfactual="This is a factual test crate",
+        source_analysis=None,
+        user_behavior=None,
+        security=None,
     )
+
+
+@pytest.fixture
+def basic_config() -> PipelineConfig:
+    """Create a basic pipeline configuration for testing."""
+    return PipelineConfig(
+        enable_crawl4ai=False,
+        model_path="test-model.gguf",
+        output_path="./test_output",
+    )
+
+
+@pytest.fixture
+def temp_dir():
+    """Create a temporary directory for testing."""
+    with tempfile.TemporaryDirectory() as temp_dir:
+        yield temp_dir
+
+
+@pytest.fixture
+def mock_requests():
+    """Mock requests for testing network calls."""
+    with patch('requests.get') as mock_get:
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {"test": "data"}
+        mock_response.text = '{"test": "data"}'
+        mock_get.return_value = mock_response
+        yield mock_get
+
+
+@pytest.fixture
+def mock_github_token():
+    """Mock GitHub token environment variable."""
+    with patch.dict(os.environ, {'GITHUB_TOKEN': 'test_token'}):
+        yield 'test_token'
+
+
+@pytest.fixture
+def sample_rust_code() -> str:
+    """Sample Rust code for testing analysis."""
+    return '''
+pub struct TestStruct {
+    pub field1: String,
+    field2: i32,
+}
+
+impl TestStruct {
+    pub fn new() -> Self {
+        Self {
+            field1: String::new(),
+            field2: 0,
+        }
+    }
+    
+    pub fn test_method(&self) -> bool {
+        if self.field2 > 0 {
+            true
+        } else {
+            false
+        }
+    }
+}
+
+pub enum TestEnum {
+    Variant1,
+    Variant2(String),
+}
+
+pub trait TestTrait {
+    fn trait_method(&self) -> String;
+}
+
+impl TestTrait for TestStruct {
+    fn trait_method(&self) -> String {
+        self.field1.clone()
+    }
+}
+''' 

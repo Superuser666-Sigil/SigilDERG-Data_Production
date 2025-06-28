@@ -8,7 +8,7 @@ The Rust Crate Pipeline is designed to collect, process, and enrich metadata fro
 
 ## Features
 
-- **Web Scraping**: Automated collection of crate metadata from crates.io using Crawl4AI
+- **Enhanced Web Scraping**: Automated collection of crate metadata from crates.io using Crawl4AI with Playwright
 - **AI Enrichment**: Local and Azure OpenAI-powered analysis of crate descriptions, features, and documentation
 - **Multi-Provider LLM Support**: Unified LLM processor supporting OpenAI, Azure OpenAI, Ollama, LM Studio, and LiteLLM
 - **Cargo Testing**: Automated cargo build, test, and audit execution for comprehensive crate analysis
@@ -17,6 +17,15 @@ The Rust Crate Pipeline is designed to collect, process, and enrich metadata fro
 - **Data Export**: Structured output in JSON format for further analysis
 - **RAG Cache**: Intelligent caching with Rule Zero policies and architectural patterns
 - **Docker Support**: Containerized deployment with optimized Docker configurations
+- **Real-time Progress Monitoring**: CLI-based progress tracking with ASCII status indicators
+- **Cross-platform Compatibility**: Full Unicode symbol replacement for better encoding support
+
+## Requirements
+
+- **Python 3.12+**: Required for modern type annotations and language features
+- **Git**: For cloning repositories during analysis
+- **Cargo**: For Rust crate testing and analysis
+- **Playwright**: Automatically installed for enhanced web scraping
 
 ## Installation
 
@@ -25,12 +34,21 @@ The Rust Crate Pipeline is designed to collect, process, and enrich metadata fro
 git clone https://github.com/Superuser666-Sigil/SigilDERG-Data_Production.git
 cd SigilDERG-Data_Production
 
-# Install in development mode
+# Install in development mode (includes all dependencies)
 pip install -e .
 
-# Install additional dependencies for AI processing
-pip install -r requirements-crawl4ai.txt
+# Install Playwright browsers for enhanced scraping
+playwright install
 ```
+
+### Automatic Dependency Installation
+
+The package automatically installs all required dependencies including:
+- `crawl4ai` for web scraping
+- `playwright` for enhanced browser automation
+- `requests` for HTTP requests
+- `aiohttp` for async operations
+- And all other required packages
 
 ## Configuration
 
@@ -111,6 +129,27 @@ python -m rust_crate_pipeline --checkpoint-interval 5
 
 # Enable verbose logging
 python -m rust_crate_pipeline --log-level DEBUG
+
+# Enable enhanced scraping with Playwright
+python -m rust_crate_pipeline --enable-enhanced-scraping
+
+# Set output directory for results
+python -m rust_crate_pipeline --output-path ./results
+```
+
+#### Enhanced Scraping
+
+The pipeline now supports enhanced web scraping using Playwright for better data extraction:
+
+```bash
+# Enable enhanced scraping (default)
+python -m rust_crate_pipeline --enable-enhanced-scraping
+
+# Use basic scraping only
+python -m rust_crate_pipeline --disable-enhanced-scraping
+
+# Configure scraping options
+python -m rust_crate_pipeline --scraping-config '{"max_pages": 10, "concurrency": 3}'
 ```
 
 #### Multi-Provider LLM Support
@@ -231,6 +270,12 @@ clap
 
 ## Development
 
+### Prerequisites
+
+- Python 3.12+ (required for modern type annotations)
+- Git for version control
+- Cargo for Rust crate testing
+
 ### Running Tests
 
 ```bash
@@ -242,6 +287,12 @@ pytest tests/test_main_integration.py
 
 # Run with coverage
 pytest --cov=rust_crate_pipeline tests/
+
+# Run type checking
+pyright rust_crate_pipeline/
+
+# Run linting
+flake8 rust_crate_pipeline/
 ```
 
 ### Code Quality
@@ -255,14 +306,71 @@ isort rust_crate_pipeline/
 
 # Type checking
 pyright rust_crate_pipeline/
+
+# Lint code
+flake8 rust_crate_pipeline/
 ```
 
-## Requirements
+### Building and Publishing
 
-- Python 3.12+
-- Rust toolchain (for cargo testing)
-- Git (for GitHub API access)
-- Internet connection (for web scraping and API calls)
+```bash
+# Build package
+python -m build
+
+# Upload to PyPI (requires PYPI_API_TOKEN)
+python -m twine upload dist/*
+
+# Create release
+python scripts/create_release.py
+```
+
+### Docker Development
+
+```bash
+# Build Docker image
+docker build -t rust-crate-pipeline .
+
+# Run in Docker
+docker run -it rust-crate-pipeline
+
+# Run with volume mount for development
+docker run -it -v $(pwd):/app rust-crate-pipeline
+```
+
+## Recent Improvements
+
+### Version 1.4.0
+- **Security**: Robust Ed25519/RSA cryptographic signing and provenance
+- **Automation**: Automated RAG and provenance workflows
+- **CI/CD**: Improved GitHub Actions for validation and publishing
+- **Docker**: Updated Docker image and compose for new version
+- **Bug Fixes**: Workflow and validation fixes for Ed25519
+
+### Version 1.3.6
+- **Python 3.12+ Requirement**: Updated to use modern type annotations and language features
+- **Type Safety**: Enhanced type annotations throughout the codebase with modern syntax
+- **Build System**: Updated pyproject.toml and setup.py for better compatibility
+
+### Version 1.3.5
+- **Enhanced Web Scraping**: Added Playwright-based scraping for better data extraction
+- **Unicode Compatibility**: Replaced all Unicode symbols with ASCII equivalents for better cross-platform support
+- **Automatic Dependencies**: All required packages are now automatically installed
+- **Real-time Progress**: Added CLI-based progress monitoring with ASCII status indicators
+- **Docker Optimization**: Updated Dockerfile to include Playwright browser installation
+
+### Version 1.3.4
+- **PEP8 Compliance**: Fixed all Unicode emoji and symbols for better encoding support
+- **Cross-platform Compatibility**: Improved compatibility across different operating systems
+- **Type Safety**: Enhanced type annotations throughout the codebase
+
+### Version 1.3.3
+- **Real-time Progress Monitoring**: Added CLI-only progress tracking feature
+- **Enhanced Logging**: Improved status reporting and error handling
+
+### Version 1.3.2
+- **Multi-Provider LLM Support**: Added support for OpenAI, Azure OpenAI, Ollama, LM Studio, and LiteLLM
+- **Unified LLM Processor**: Centralized LLM processing with provider abstraction
+- **Enhanced Error Handling**: Better error recovery and retry mechanisms
 
 ## License
 
@@ -305,4 +413,42 @@ Or, text attribution:
 
 ```
 This project uses Crawl4AI (https://github.com/unclecode/crawl4ai) for web data extraction.
-``` 
+```
+
+## 🚀 Unified, Cross-Platform, Multi-Provider LLM Support
+
+This project supports **all major LLM providers** (cloud and local) on **Mac, Linux, and Windows** using a single, unified interface. All LLM calls are routed through the `UnifiedLLMProcessor` and `LLMConfig` abstractions, ensuring:
+
+- **One code path for all providers:** Azure OpenAI, OpenAI, Anthropic, Google, Cohere, HuggingFace, Ollama, LM Studio, and any OpenAI-compatible endpoint.
+- **Cross-platform compatibility:** Works out of the box on Mac, Linux, and Windows.
+- **Configurable via CLI and config files:** Select provider, model, API key, endpoint, and provider-specific options at runtime.
+- **Easy extensibility:** Add new providers by updating your config or CLI arguments—no code changes needed.
+
+### 📖 Provider Setup & Usage
+- See [`README_LLM_PROVIDERS.md`](./README_LLM_PROVIDERS.md) for full details, setup instructions, and usage examples for every supported provider.
+- Run `python run_pipeline_with_llm.py --help` for CLI options and provider-specific arguments.
+
+### 🧩 Example Usage
+```bash
+# Azure OpenAI
+python run_pipeline_with_llm.py --llm-provider azure --llm-model gpt-4o --crates tokio
+
+# Ollama (local)
+python run_pipeline_with_llm.py --llm-provider ollama --llm-model llama2 --crates serde
+
+# OpenAI API
+python run_pipeline_with_llm.py --llm-provider openai --llm-model gpt-4 --llm-api-key YOUR_KEY --crates tokio
+
+# Anthropic Claude
+python run_pipeline_with_llm.py --llm-provider anthropic --llm-model claude-3-sonnet --llm-api-key YOUR_KEY --crates serde
+```
+
+### 🔒 Security & Best Practices
+- Store API keys as environment variables.
+- Use local providers (Ollama, LM Studio) for full privacy—no data leaves your machine.
+- All LLM calls are routed through a single, auditable interface for maximum maintainability and security.
+
+### 🧪 Testing
+- Run `python test_unified_llm.py` to verify provider support and configuration.
+
+For more, see [`README_LLM_PROVIDERS.md`](./README_LLM_PROVIDERS.md) and the CLI help output. 

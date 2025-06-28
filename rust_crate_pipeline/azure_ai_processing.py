@@ -301,10 +301,19 @@ Summary:"""
         if not crate.features:
             return "No specific features documented."
 
-        features_text = "\n".join([
-            f"- {feature}: {', '.join(versions)}"
-            for feature, versions in crate.features.items()
-        ])
+        # Handle both dict and list feature formats
+        if isinstance(crate.features, dict):
+            features_text = "\n".join([
+                f"- {feature}: {', '.join(versions)}"
+                for feature, versions in crate.features.items()
+            ])
+        elif isinstance(crate.features, list):
+            features_text = "\n".join([
+                f"- {feature}" if isinstance(feature, str) else f"- {str(feature)}"
+                for feature in crate.features
+            ])
+        else:
+            return "Features format not recognized."
 
         prompt = f"""Summarize the key features of this Rust crate in 2-3 sentences:
 

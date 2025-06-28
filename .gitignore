@@ -192,10 +192,10 @@ desktop.ini
 .vscode/
 .idea/
 
-# Ignore private key files
-private.pem
-D:/private.pem
-*.key
+# Ignore all .pem files except the public key
 *.pem
 !sigil_seal_public.pem
-.aider*
+# Explicitly ignore private keys
+private.pem
+scripts/sigil_seal_private.pem
+D:/private.pem

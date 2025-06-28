@@ -7,41 +7,34 @@ from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.exceptions import InvalidSignature
 
 
-def load_signature_from_db(db_path: str) -> bytes:
+def load_signature_and_hash_from_db(db_path: str):
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute("SELECT signature FROM provenance ORDER BY timestamp DESC LIMIT 1")
+    cur.execute("SELECT db_hash, signature FROM provenance ORDER BY timestamp DESC LIMIT 1")
     row = cur.fetchone()
     conn.close()
     if not row:
         raise ValueError("No signature found in provenance table.")
-    return row[0]
-
-
-def load_db_hash(db_path: str) -> bytes:
-    BUF_SIZE = 65536
-    sha256 = hashlib.sha256()
-    with open(db_path, "rb") as f:
-        while True:
-            data = f.read(BUF_SIZE)
-            if not data:
-                break
-            sha256.update(data)
-    return sha256.digest()
+    return row[0], row[1]
 
 
 def verify_signature(db_path: str, public_key_path: str) -> bool:
-    signature = load_signature_from_db(db_path)
-    db_hash = load_db_hash(db_path)
+    db_hash, signature = load_signature_and_hash_from_db(db_path)
     with open(public_key_path, "rb") as key_file:
         public_key = serialization.load_pem_public_key(key_file.read())
+    key_type = type(public_key).__name__
     try:
-        public_key.verify(
-            signature,
-            db_hash,
-            padding.PKCS1v15(),
-            hashes.SHA256(),
-        )
+        if key_type.startswith('Ed25519'):
+            public_key.verify(signature, db_hash.encode())
+        elif key_type.startswith('RSAPublicKey') or hasattr(public_key, 'public_numbers'):
+            public_key.verify(
+                signature,
+                db_hash.encode(),
+                padding.PKCS1v15(),
+                hashes.SHA256(),
+            )
+        else:
+            raise ValueError(f"Unsupported public key type: {key_type}")
         return True
     except InvalidSignature:
         return False

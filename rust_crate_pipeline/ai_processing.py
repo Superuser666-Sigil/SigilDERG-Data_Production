@@ -2,6 +2,7 @@
 import re
 import time
 import logging
+import os
 from typing import TypedDict, Union
 
 from collections.abc import Callable
@@ -28,21 +29,82 @@ class Section(TypedDict):
 
 class LLMEnricher:
     def __init__(self, config: PipelineConfig) -> None:
-        if not _ai_dependencies_available:
-            raise ImportError(
-                "AI dependencies (tiktoken, llama_cpp) are not available. "
-                "Please install them to use LLMEnricher."
-            )
-
-        self.config = config
-        self.tokenizer = tiktoken.get_encoding("cl100k_base")  # type: ignore
-        self.model = self._load_model()
-
-    def _load_model(self) -> None:
-        """Optimized for GCP g2-standard-4 with L4 GPU (24GB VRAM)"""
+        """Initialize LLMEnricher with automatic provider detection"""
         if not _ai_dependencies_available:
             raise ImportError("Cannot load model: AI dependencies not available")
 
+        self.config = config
+        self.tokenizer = tiktoken.get_encoding("cl100k_base")  # type: ignore
+        
+        # Auto-detect and configure the appropriate LLM provider
+        self.model = self._auto_detect_and_load_model()
+
+    def _auto_detect_and_load_model(self):
+        """Automatically detect and load the appropriate LLM provider"""
+        
+        # Priority 1: Check if Azure OpenAI is configured and available
+        if (self.config.use_azure_openai and 
+            self.config.azure_openai_endpoint and 
+            self.config.azure_openai_api_key and 
+            self.config.azure_openai_deployment_name):
+            
+            try:
+                # Use the UnifiedLLMProcessor for Azure
+                from .unified_llm_processor import create_llm_processor_from_config
+                return create_llm_processor_from_config(self.config)
+            except Exception as e:
+                logging.warning(f"Azure OpenAI setup failed, falling back to local: {e}")
+        
+        # Priority 2: Check if local model file exists
+        if os.path.exists(self.config.model_path):
+            try:
+                return self._load_local_model()
+            except Exception as e:
+                logging.warning(f"Local model loading failed: {e}")
+        
+        # Priority 3: Check for other local providers (Ollama, LM Studio)
+        if self._check_ollama_available():
+            try:
+                from .unified_llm_processor import LLMConfig, UnifiedLLMProcessor
+                llm_config = LLMConfig(
+                    provider="ollama",
+                    model="llama2",  # Default model
+                    temperature=0.2,
+                    max_tokens=self.config.max_tokens,
+                    timeout=30,
+                    max_retries=self.config.max_retries
+                )
+                return UnifiedLLMProcessor(llm_config)
+            except Exception as e:
+                logging.warning(f"Ollama setup failed: {e}")
+        
+        # Priority 4: Check for LM Studio
+        if self._check_lmstudio_available():
+            try:
+                from .unified_llm_processor import LLMConfig, UnifiedLLMProcessor
+                llm_config = LLMConfig(
+                    provider="lmstudio",
+                    model="local-model",  # Default model
+                    temperature=0.2,
+                    max_tokens=self.config.max_tokens,
+                    timeout=30,
+                    max_retries=self.config.max_retries
+                )
+                return UnifiedLLMProcessor(llm_config)
+            except Exception as e:
+                logging.warning(f"LM Studio setup failed: {e}")
+        
+        # If all else fails, raise a clear error
+        raise RuntimeError(
+            "No LLM provider available. Please configure one of:\n"
+            "1. Azure OpenAI (set use_azure_openai=True and credentials)\n"
+            "2. Local model file (set model_path to existing .gguf file)\n"
+            "3. Ollama (install and run ollama serve)\n"
+            "4. LM Studio (install and run LM Studio server)"
+        )
+
+    def _load_local_model(self):
+        """Load local llama.cpp model"""
         return Llama(  # type: ignore
             model_path=self.config.model_path,
             n_ctx=4096,  # Larger context for L4's 24GB VRAM
@@ -58,6 +120,24 @@ class LLMEnricher:
             flash_attn=True,  # Enable flash attention if available
             verbose=False,  # Reduce logging overhead
         )
+
+    def _check_ollama_available(self):
+        """Check if Ollama is available"""
+        try:
+            import requests
+            response = requests.get("http://localhost:11434/api/tags", timeout=5)
+            return response.status_code == 200
+        except:
+            return False
+
+    def _check_lmstudio_available(self):
+        """Check if LM Studio is available"""
+        try:
+            import requests
+            response = requests.get("http://localhost:1234/v1/models", timeout=5)
+            return response.status_code == 200
+        except:
+            return False
 
     def estimate_tokens(self, text: str) -> int:
         return len(self.tokenizer.encode(text))
@@ -217,16 +297,23 @@ class LLMEnricher:
                     prompt, self.config.prompt_token_margin - 100
                 )
 
-            output = self.model(
-                prompt,
-                max_tokens=max_tokens,
-                temperature=temp,
-                # Stop at these tokens
-                stop=["<|end|>", "<|user|>", "<|system|>"],
-            )
+            # Handle different model types
+            from .unified_llm_processor import UnifiedLLMProcessor
+            if isinstance(self.model, UnifiedLLMProcessor):
+                # UnifiedLLMProcessor
+                return self.model.call_llm(prompt, temp, max_tokens)
+            else:
+                # Local Llama model
+                output = self.model(
+                    prompt,
+                    max_tokens=max_tokens,
+                    temperature=temp,
+                    # Stop at these tokens
+                    stop=["<|end|>", "<|user|>", "<|system|>"],
+                )
 
-            raw_text: str = output["choices"][0]["text"]  # type: ignore
-            return self.clean_output(raw_text)
+                raw_text: str = output["choices"][0]["text"]  # type: ignore
+                return self.clean_output(raw_text)
         except Exception as e:
             logging.error(f"Model inference failed: {str(e)}")
             raise
@@ -372,11 +459,28 @@ class LLMEnricher:
             if not crate.features:
                 return "No features documented for this crate."
 
-            # Format features with their dependencies
+            # Handle both dict and list feature formats
             feature_text = ""
-            for feature_name, deps in list(crate.features.items())[:8]:
-                deps_str = ", ".join(deps) if deps else "none"
-                feature_text += f"- {feature_name} (dependencies: {deps_str})\n"
+            if isinstance(crate.features, dict):
+                # Format features with their dependencies
+                for feature_name, deps in list(crate.features.items())[:8]:
+                    deps_str = ", ".join(deps) if deps else "none"
+                    feature_text += f"- {feature_name} (dependencies: {deps_str})\n"
+            elif isinstance(crate.features, list):
+                # Handle list format - assume each item is a feature name
+                for feature in crate.features[:8]:
+                    if isinstance(feature, str):
+                        feature_text += f"- {feature} (dependencies: none)\n"
+                    elif isinstance(feature, dict):
+                        # If feature is a dict, try to extract name and deps
+                        feature_name = feature.get('name', str(feature))
+                        deps = feature.get('dependencies', [])
+                        deps_str = ", ".join(deps) if deps else "none"
+                        feature_text += f"- {feature_name} (dependencies: {deps_str})\n"
+                    else:
+                        feature_text += f"- {str(feature)} (dependencies: none)\n"
+            else:
+                return "Features format not recognized."
 
             prompt = (
                 "<|system|>You are a Rust programming expert analyzing crate "
@@ -471,7 +575,23 @@ class LLMEnricher:
             readme_summary = self.truncate_content(
                 getattr(crate, "readme_summary", "") or "", 300
             )
-            features = ", ".join(list(crate.features.keys())[:5])
+            
+            # Handle both dict and list feature formats
+            if isinstance(crate.features, dict):
+                features = ", ".join(list(crate.features.keys())[:5])
+            elif isinstance(crate.features, list):
+                feature_names = []
+                for feature in crate.features[:5]:
+                    if isinstance(feature, str):
+                        feature_names.append(feature)
+                    elif isinstance(feature, dict):
+                        feature_name = feature.get('name', str(feature))
+                        feature_names.append(feature_name)
+                    else:
+                        feature_names.append(str(feature))
+                features = ", ".join(feature_names)
+            else:
+                features = ""
 
             prompt = (
                 "<|system|>Create exactly 5 factual/counterfactual pairs for "

@@ -1,0 +1,44 @@
+# This workflow automatically updates the RAG database with current codebase state and signs it.
+# The private key must be stored in the GitHub repository secrets as SIGIL_SEAL_PRIVATE_KEY.
+
+name: Update RAG Database
+
+on:
+  push:
+    branches: [ main, master ]
+    paths-ignore:
+      - 'sigil_rag_cache.db'
+      - 'sigil_rag_cache.hash'
+  workflow_dispatch:
+
+jobs:
+  update-rag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install cryptography psutil
+
+      - name: Create private key file
+        run: |
+          echo "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" > scripts/sigil_seal_private.pem
+
+      - name: Update RAG database
+        run: |
+          python scripts/update_rag_codebase_state.py
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add sigil_rag_cache.db sigil_rag_cache.hash
+          git commit -m "Auto-update RAG database with codebase state" || exit 0
+          git push 

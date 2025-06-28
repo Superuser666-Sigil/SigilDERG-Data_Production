@@ -27,7 +27,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="rust-crate-pipeline",
-    version=get_version(),
+    version="1.4.0",
     author="SigilDERG Team",
     author_email="sigilderg@example.com",
     description="A comprehensive pipeline for analyzing Rust crates with AI enrichment and enhanced scraping",
@@ -48,7 +48,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: Software Development :: Quality Assurance",
     ],
-    python_requires=">=3.8",
+    python_requires=">=3.12",
     install_requires=requirements,
     extras_require={
         "dev": [

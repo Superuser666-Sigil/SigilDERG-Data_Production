@@ -77,6 +77,30 @@ def test_llm_config_creation() -> None:
     )
     print(f"✅ Anthropic config created: {anthropic_config.provider} - {anthropic_config.model}")
 
+    # Test Google config
+    google_config = LLMConfig(
+        provider="google",
+        model="gemini-pro",
+        api_key="your-google-key"
+    )
+    print(f"✅ Google config created: {google_config.provider} - {google_config.model}")
+
+    # Test Cohere config
+    cohere_config = LLMConfig(
+        provider="cohere",
+        model="command",
+        api_key="your-cohere-key"
+    )
+    print(f"✅ Cohere config created: {cohere_config.provider} - {cohere_config.model}")
+
+    # Test HuggingFace config
+    hf_config = LLMConfig(
+        provider="huggingface",
+        model="HuggingFaceH4/zephyr-7b-beta",
+        api_key="your-hf-key"
+    )
+    print(f"✅ HuggingFace config created: {hf_config.provider} - {hf_config.model}")
+
 
 def test_processor_initialization() -> None:
     """Test processor initialization (without making actual API calls)"""

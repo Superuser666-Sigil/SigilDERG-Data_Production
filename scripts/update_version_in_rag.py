@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Update version information in the RAG cache for version 1.3.1
+Update version information in the RAG cache for version 1.4.0
 """
 
 import sqlite3
 import json
 from datetime import datetime, timezone
+import os
 
 def update_rag_version_info():
     """Update version information in the RAG cache"""
@@ -17,23 +18,25 @@ def update_rag_version_info():
         
         # Update environment metadata with new version
         version_info = {
-            "version": "1.3.1",
+            "version": "1.4.0",
             "release_date": datetime.now(timezone.utc).isoformat(),
-            "release_type": "patch",
+            "release_type": "minor",
             "changes": [
-                "Fixed Python 3.9 compatibility for type annotations",
-                "Resolved IDE linter errors in core modules",
-                "Updated dict[str, Any] to dict[str, Any] format",
-                "Fixed Union type expressions in conditional imports",
-                "Improved code quality and maintainability"
+                "Robust Ed25519 and RSA cryptographic signing for RAG database",
+                "Automated provenance and signature validation workflows",
+                "GitHub Actions for signature/hash validation and RAG auto-update",
+                "Docker image and compose updates for new version",
+                "Signature validation for Ed25519 keys in both scripts and CI",
+                "Public key tracking in git, private key protection",
+                "Workflow reliability for PyPI and Docker builds"
             ],
             "files_modified": [
                 "rust_crate_pipeline/version.py",
                 "setup.py", 
                 "pyproject.toml",
-                "rust_crate_pipeline/network.py",
-                "rust_crate_pipeline/pipeline.py",
-                "rust_crate_pipeline/production_config.py"
+                "docker-compose.yml",
+                "scripts/update_rag_codebase_state.py",
+                "scripts/validate_signature.py"
             ]
         }
         
@@ -42,30 +45,36 @@ def update_rag_version_info():
             INSERT INTO environment_metadata (label, os_name, os_version, system_type, processor, bios_version, enforcement_rank, timestamp, commit_hash)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            "version_1.3.1",
+            "version_1.4.0",
             "Version Update",
-            "1.3.1",
-            "Type Annotation Fixes",
+            "1.4.0",
+            "Security & Provenance",
             json.dumps(version_info),
-            "Patch Release",
+            "Minor Release",
             10,
             datetime.now(timezone.utc).isoformat(),
-            "version_1.3.1_update"
+            "version_1.4.0_update"
         ))
         
         # Update project context with version info
         cursor.execute("""
-            INSERT INTO project_context (context_type, content, metadata, timestamp)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO project_context (project_name, project_path, description, tech_stack, dependencies, configuration, last_updated, active, tags, timestamp)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """, (
-            "version_update",
-            f"Updated to version 1.3.1 - Type annotation compatibility fixes",
+            "rust_crate_pipeline_v1.4.0",
+            os.getcwd(),
+            f"Updated to version 1.4.0 - Security, provenance, and workflow improvements",
+            json.dumps(["python", "rust", "sqlite", "llm", "rag", "security", "provenance"]),
+            json.dumps({}),
             json.dumps(version_info),
+            datetime.now(timezone.utc).isoformat(),
+            True,
+            "version_update,security,provenance,1.4.0",
             datetime.now(timezone.utc).isoformat()
         ))
         
         conn.commit()
-        print("✅ Successfully updated RAG cache with version 1.3.1 information")
+        print("✅ Successfully updated RAG cache with version 1.4.0 information")
         
     except Exception as e:
         print(f"❌ Error updating RAG cache: {e}")

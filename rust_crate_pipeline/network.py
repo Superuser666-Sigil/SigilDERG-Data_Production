@@ -1,17 +1,13 @@
 # network.py
 import os
-import sys
 import re
+import sys
 import time
 import logging
 import requests
+from typing import Any, Dict, List, Optional, Union
 from bs4 import BeautifulSoup, Tag
-from typing import Any, Union
 from .config import PipelineConfig
-
-# Import utilities
-# Add the parent directory to the path to import utils
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 
 class GitHubBatchClient:

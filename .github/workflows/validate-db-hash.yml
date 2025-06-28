@@ -20,8 +20,12 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.12'
 
       - name: Compute DB hash and validate
         run: |
+          if [ ! -f "sigil_rag_cache.db" ]; then
+            echo "❌ Database file not found"
+            exit 1
+          fi
           python audits/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "${{ secrets.SIGIL_RAG_DB_HASH }}"

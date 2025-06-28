@@ -1,70 +1,112 @@
 # analysis.py
+from __future__ import annotations
+
 import io
 import re
 import tarfile
 import requests
 import logging
 import tempfile
-from typing import Any
+from typing import Any, Dict, List, Optional, Union
 import os
 import sys
 import time
 import subprocess
+from dataclasses import dataclass
 
 from .config import EnrichedCrate
 
-# Add the project root to the path to ensure utils can be imported
-# This is a common pattern in scripts to handle execution from different directories
-project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
+# Create a fallback RustCodeAnalyzer that doesn't depend on external utils
+class RustCodeAnalyzer:
+    """Fallback Rust code analyzer for when the full analyzer is not available."""
+    
+    def __init__(self, code_content: str) -> None:
+        self.code_content = code_content
 
-try:
-    from utils.rust_code_analyzer import RustCodeAnalyzer  # type: ignore
-except ImportError as e:
-    logging.error(
-        f"Failed to import RustCodeAnalyzer: {e}. "
-        f"Ensure the utils directory is in the Python path."
-    )
-    # Provide a non-functional fallback to avoid crashing the entire application
-    # if the import fails, but ensure it logs the error.
+    def analyze(self) -> dict[str, Any]:
+        """Basic analysis of Rust code content."""
+        lines = self.code_content.split('\n')
+        return {
+            "functions": self._count_functions(),
+            "structs": self._count_structs(),
+            "enums": self._count_enums(),
+            "traits": self._count_traits(),
+            "complexity": self._calculate_complexity(),
+            "lines_of_code": len(lines),
+        }
 
-    class RustCodeAnalyzer:  # type: ignore
-        def __init__(self, code_content: str) -> None:
-            logging.error(
-                "Using fallback RustCodeAnalyzer. Analysis will be incomplete."
-            )
-            self.code_content = code_content
+    def _count_functions(self) -> int:
+        """Count function definitions."""
+        return len(re.findall(r'fn\s+\w+\s*\(', self.code_content))
 
-        def analyze(self) -> dict[str, Any]:
-            return {
-                "functions": [],
-                "structs": [],
-                "enums": [],
-                "traits": [],
-                "complexity": 0,
-                "lines_of_code": len(self.code_content.split("\n")),
-            }
+    def _count_structs(self) -> int:
+        """Count struct definitions."""
+        return len(re.findall(r'struct\s+\w+', self.code_content))
 
-        @staticmethod
-        def create_empty_metrics() -> dict[str, Any]:
-            return {}
+    def _count_enums(self) -> int:
+        """Count enum definitions."""
+        return len(re.findall(r'enum\s+\w+', self.code_content))
 
-        @staticmethod
-        def detect_project_structure(files: list[str]) -> dict[str, bool]:
-            return {}
+    def _count_traits(self) -> int:
+        """Count trait definitions."""
+        return len(re.findall(r'trait\s+\w+', self.code_content))
 
-        @staticmethod
-        def analyze_rust_content(content: str) -> dict[str, Any]:
-            return {}
+    def _calculate_complexity(self) -> int:
+        """Calculate basic cyclomatic complexity."""
+        complexity = 0
+        complexity += len(re.findall(r'\bif\b', self.code_content))
+        complexity += len(re.findall(r'\bfor\b', self.code_content))
+        complexity += len(re.findall(r'\bwhile\b', self.code_content))
+        complexity += len(re.findall(r'\bmatch\b', self.code_content))
+        return complexity
 
-        @staticmethod
-        def aggregate_metrics(
-            metrics: dict[str, Any],
-            content_analysis: dict[str, Any],
-            structure: dict[str, bool],
-        ) -> dict[str, Any]:
-            return metrics
+    @staticmethod
+    def create_empty_metrics() -> dict[str, Any]:
+        """Create empty metrics structure."""
+        return {
+            "functions": 0,
+            "structs": 0,
+            "enums": 0,
+            "traits": 0,
+            "complexity": 0,
+            "lines_of_code": 0,
+            "file_count": 0,
+        }
+
+    @staticmethod
+    def detect_project_structure(files: list[str]) -> dict[str, bool]:
+        """Detect basic project structure."""
+        return {
+            "has_cargo_toml": any("Cargo.toml" in f for f in files),
+            "has_src": any("/src/" in f for f in files),
+            "has_tests": any("/tests/" in f for f in files),
+            "has_examples": any("/examples/" in f for f in files),
+        }
+
+    @staticmethod
+    def analyze_rust_content(content: str) -> dict[str, Any]:
+        """Analyze Rust content."""
+        analyzer = RustCodeAnalyzer(content)
+        return analyzer.analyze()
+
+    @staticmethod
+    def aggregate_metrics(
+        metrics: dict[str, Any],
+        content_analysis: dict[str, Any],
+        structure: dict[str, bool],
+    ) -> dict[str, Any]:
+        """Aggregate metrics from multiple sources."""
+        for key, value in content_analysis.items():
+            if isinstance(value, (int, float)):
+                metrics[key] = metrics.get(key, 0) + value
+            elif isinstance(value, list):
+                if key not in metrics:
+                    metrics[key] = []
+                metrics[key].extend(value)
+        
+        # Add structure information
+        metrics.update(structure)
+        return metrics
 
 
 # Constants for URLs and paths
