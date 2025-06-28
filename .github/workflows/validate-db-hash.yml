@@ -22,10 +22,22 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Check for required secrets
+        run: |
+          if [ -z "${{ secrets.SIGIL_RAG_DB_HASH }}" ]; then
+            echo "⚠️  SIGIL_RAG_DB_HASH secret not found. Skipping validation."
+            echo "To enable validation, add the expected hash to repository secrets."
+            exit 0
+          fi
+
       - name: Compute DB hash and validate
         run: |
           if [ ! -f "sigil_rag_cache.db" ]; then
             echo "❌ Database file not found"
             exit 1
+          fi
+          if [ -z "${{ secrets.SIGIL_RAG_DB_HASH }}" ]; then
+            echo "⚠️  Skipping hash validation - secret not configured"
+            exit 0
           fi
           python audits/validate_db_hash.py --db sigil_rag_cache.db --expected-hash "${{ secrets.SIGIL_RAG_DB_HASH }}"

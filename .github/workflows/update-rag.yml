@@ -17,11 +17,21 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Check for required secrets
+        run: |
+          if [ -z "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" ]; then
+            echo "⚠️  SIGIL_SEAL_PRIVATE_KEY secret not found. Skipping RAG update."
+            echo "To enable RAG updates, add the private key to repository secrets."
+            exit 0
+          fi
 
       - name: Install dependencies
         run: |
@@ -29,16 +39,31 @@ jobs:
 
       - name: Create private key file
         run: |
+          if [ -z "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" ]; then
+            echo "⚠️  Skipping RAG update - private key not configured"
+            exit 0
+          fi
           echo "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" > scripts/sigil_seal_private.pem
 
       - name: Update RAG database
         run: |
+          if [ -z "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" ]; then
+            echo "⚠️  Skipping RAG update - private key not configured"
+            exit 0
+          fi
           python scripts/update_rag_codebase_state.py
 
       - name: Commit and push changes
         run: |
+          if [ -z "${{ secrets.SIGIL_SEAL_PRIVATE_KEY }}" ]; then
+            echo "⚠️  Skipping commit - private key not configured"
+            exit 0
+          fi
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add sigil_rag_cache.db sigil_rag_cache.hash
-          git commit -m "Auto-update RAG database with codebase state" || exit 0
-          git push 
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update RAG database with codebase state"
+            git push 
