@@ -27,7 +27,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="rust-crate-pipeline",
-    version="1.4.0",
+    version=get_version(),
     author="SigilDERG Team",
     author_email="sigilderg@example.com",
     description="A comprehensive pipeline for analyzing Rust crates with AI enrichment and enhanced scraping",
