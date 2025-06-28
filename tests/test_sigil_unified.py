@@ -89,7 +89,7 @@ class TestSacredChainTrace:
             irl_score=8.5,
             execution_id="test-exec-123",
             timestamp="2024-01-01T00:00:00Z",
-            canon_version="1.0",
+            canon_version="1.3.0",
         )
 
         assert trace.input_data == "test-crate"
@@ -129,7 +129,7 @@ class TestSacredChainTrace:
             irl_score=8.0,
             execution_id="test-123",
             timestamp="2024-01-01T00:00:00Z",
-            canon_version="1.0",
+            canon_version="1.3.0",
         )
 
         audit_log = trace.to_audit_log()
@@ -152,7 +152,7 @@ class TestSacredChainTrace:
             irl_score=9.0,
             execution_id=execution_id,
             timestamp="2024-01-01T00:00:00Z",
-            canon_version="1.0",
+            canon_version="1.3.0",
         )
 
         result = trace.verify_integrity()
@@ -164,7 +164,7 @@ class TestCanonEntry:
     def test_canon_entry_creation(self) -> None:
         entry = CanonEntry(
             source="crates.io",
-            version="1.0",
+            version="1.3.0",
             authority_level=9,
             content_hash="abc123",
             last_validated="2024-01-01T00:00:00Z",
@@ -179,7 +179,7 @@ class TestCanonEntry:
         future_date = datetime.now(timezone.utc).replace(year=2030).isoformat()
         entry = CanonEntry(
             source="test",
-            version="1.0",
+            version="1.3.0",
             authority_level=5,
             content_hash="hash123",
             last_validated="2024-01-01T00:00:00Z",
@@ -194,7 +194,7 @@ class TestCanonEntry:
     def test_is_valid_without_expiry(self) -> None:
         entry = CanonEntry(
             source="test",
-            version="1.0",
+            version="1.3.0",
             authority_level=5,
             content_hash="hash123",
             last_validated="2024-01-01T00:00:00Z",

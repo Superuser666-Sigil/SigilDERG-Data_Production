@@ -26,7 +26,7 @@ class CanonRegistry:
     def __init__(self) -> None:
         self.canon_entries: Dict[str, CanonEntry] = {}
         self.authority_chain: List[str] = []
-        self.version = "1.0.0"
+        self.version = "1.3.0"
         self.logger = logging.getLogger(__name__)
         
         self._initialize_default_canon()
@@ -36,7 +36,7 @@ class CanonRegistry:
             "crates.io": {
                 "authority_level": 10,
                 "base_url": "https://crates.io/api/v1/",
-                "version": "1.0",
+                "version": "1.3.0",
                 "last_validated": datetime.now(timezone.utc).isoformat(),
             },
             "github.com": {
@@ -48,13 +48,13 @@ class CanonRegistry:
             "lib.rs": {
                 "authority_level": 6,
                 "base_url": "https://lib.rs/",
-                "version": "1.0",
+                "version": "1.3.0",
                 "last_validated": datetime.now(timezone.utc).isoformat(),
             },
             "docs.rs": {
                 "authority_level": 7,
                 "base_url": "https://docs.rs/",
-                "version": "1.0",
+                "version": "1.3.0",
                 "last_validated": datetime.now(timezone.utc).isoformat(),
             },
         }

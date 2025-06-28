@@ -5,7 +5,7 @@ A comprehensive workspace for data processing with Sacred Chain traceability,
 AI integration, and complete audit capabilities.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.3.0"
 __author__ = "Rule Zero Compliant Developer"
 
 from .core.pipeline import DataPipeline

@@ -20,7 +20,7 @@ class GitHubBatchClient:
         # Simple headers without dependency on HTTPClientUtils
         self.headers = {
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "SigilDERG-Data-Production/1.0",
+            "User-Agent": "SigilDERG-Data-Production/1.3.0",
         }
         if config.github_token:
             self.headers["Authorization"] = f"token {config.github_token}"
@@ -96,7 +96,7 @@ class CrateAPIClient:
         self.config = config
         # Simple session without dependency on HTTPClientUtils
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.0"})
+        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.3.0"})
 
     def fetch_crate_metadata(self, crate_name: str) -> dict[str, Any] | None:
         """Fetch metadata with retry logic"""

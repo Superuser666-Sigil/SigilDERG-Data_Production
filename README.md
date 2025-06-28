@@ -10,10 +10,13 @@ The Rust Crate Pipeline is designed to collect, process, and enrich metadata fro
 
 - **Web Scraping**: Automated collection of crate metadata from crates.io using Crawl4AI
 - **AI Enrichment**: Local and Azure OpenAI-powered analysis of crate descriptions, features, and documentation
+- **Multi-Provider LLM Support**: Unified LLM processor supporting OpenAI, Azure OpenAI, Ollama, LM Studio, and LiteLLM
 - **Cargo Testing**: Automated cargo build, test, and audit execution for comprehensive crate analysis
 - **Dependency Analysis**: Deep analysis of crate dependencies and their relationships
 - **Batch Processing**: Efficient processing of multiple crates with configurable batch sizes
 - **Data Export**: Structured output in JSON format for further analysis
+- **RAG Cache**: Intelligent caching with Rule Zero policies and architectural patterns
+- **Docker Support**: Containerized deployment with optimized Docker configurations
 
 ## Installation
 
@@ -47,6 +50,10 @@ export AZURE_OPENAI_API_VERSION="2024-02-15-preview"
 
 # PyPI API Token (optional, for publishing)
 export PYPI_API_TOKEN="your_pypi_token"
+
+# LiteLLM Configuration (optional, for multi-provider LLM support)
+export LITELLM_MODEL="deepseek-coder:33b"
+export LITELLM_BASE_URL="http://localhost:11434"  # For Ollama
 ```
 
 ### Configuration File
@@ -104,6 +111,25 @@ python -m rust_crate_pipeline --checkpoint-interval 5
 
 # Enable verbose logging
 python -m rust_crate_pipeline --log-level DEBUG
+```
+
+#### Multi-Provider LLM Support
+
+```bash
+# Use OpenAI
+python -m rust_crate_pipeline.unified_llm_processor --provider openai --model-name gpt-4
+
+# Use Azure OpenAI
+python -m rust_crate_pipeline.unified_llm_processor --provider azure --model-name gpt-4
+
+# Use Ollama (local)
+python -m rust_crate_pipeline.unified_llm_processor --provider ollama --model-name deepseek-coder:33b
+
+# Use LM Studio
+python -m rust_crate_pipeline.unified_llm_processor --provider openai --base-url http://localhost:1234/v1 --model-name local-model
+
+# Use LiteLLM
+python -m rust_crate_pipeline.unified_llm_processor --provider litellm --model-name deepseek-coder:33b
 ```
 
 #### Production Mode

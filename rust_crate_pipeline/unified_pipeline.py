@@ -360,7 +360,7 @@ class UnifiedSigilPipeline:
                         irl_score=0.0,
                         execution_id=f"error-{int(time.time())}",
                         timestamp=time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        canon_version="1.0.0",
+                        canon_version="1.3.0",
                     )
                     return crate_name, error_trace
         

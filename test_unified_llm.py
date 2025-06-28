@@ -121,7 +121,7 @@ def test_crate_enrichment() -> None:
     # Create a test crate
     test_crate = CrateMetadata(
         name="test-crate",
-        version="1.0.0",
+        version="1.3.0",
         description="A test Rust crate for demonstration",
         repository="https://github.com/test/test-crate",
         keywords=["test", "demo", "rust"],

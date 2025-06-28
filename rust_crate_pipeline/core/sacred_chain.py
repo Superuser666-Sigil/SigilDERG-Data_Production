@@ -55,7 +55,7 @@ class SacredChainBase(ABC):
     
     def __init__(self) -> None:
         self.execution_log: List[SacredChainTrace] = []
-        self.canon_version = "1.0.0"
+        self.canon_version = "1.3.0"
     
     def generate_execution_id(self, input_data: str) -> str:
         timestamp = datetime.now(timezone.utc).isoformat()
