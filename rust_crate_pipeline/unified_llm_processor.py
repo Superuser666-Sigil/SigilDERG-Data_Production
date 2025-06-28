@@ -590,6 +590,10 @@ class UnifiedLLMProcessor:
         total_context = "\n".join(context_history[-3:]) + "\n" + new_prompt
         return self.smart_truncate(total_context, 3000)
 
+    def get_total_cost(self) -> float:
+        """Return the current total cost."""
+        return self.budget_manager.get_total_cost()
+
 
 def create_llm_processor_from_config(pipeline_config: PipelineConfig) -> UnifiedLLMProcessor:
     """Create LLM processor from pipeline configuration"""

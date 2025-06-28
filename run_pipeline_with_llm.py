@@ -223,7 +223,12 @@ def parse_args() -> argparse.Namespace:
         help="Maximum budget for LLM API calls.",
     )
     
-    return parser.parse_args()
+    args = parser.parse_args()
+
+    if not args.crates and not args.crates_file:
+        parser.error("at least one of --crates or --crates-file is required")
+
+    return args
 
 
 async def main() -> None:

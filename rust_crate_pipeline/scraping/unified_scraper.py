@@ -108,6 +108,9 @@ class UnifiedScraper:
             # Update with any additional crawl config
             config_params.update(self.config.get("crawl_config", {}))
             
+            # Ensure max_retries is not passed to CrawlerRunConfig
+            config_params.pop("max_retries", None)
+
             crawl_config = CrawlerRunConfig(**config_params)
             
             # Set up extraction strategy if schema provided

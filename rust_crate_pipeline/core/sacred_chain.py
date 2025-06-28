@@ -34,6 +34,12 @@ class SacredChainTrace:
     timestamp: str
     canon_version: str
 
+    def to_dict(self) -> Dict[str, Any]:
+        """Converts the dataclass to a dictionary, handling enum serialization."""
+        data = asdict(self)
+        data['verdict'] = self.verdict.value
+        return data
+
     def to_audit_log(self) -> str:
         data_dict = asdict(self)
         data_dict["verdict"] = self.verdict.value

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import asyncio
 import json
 import logging
@@ -11,7 +13,7 @@ import gzip
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Union, TYPE_CHECKING
 
-from .config import PipelineConfig
+from .config import PipelineConfig, CrateMetadata, EnrichedCrate
 from .core import IRLEngine, CanonRegistry, SacredChainTrace, TrustVerdict
 from .scraping import UnifiedScraper, ScrapingResult
 from .crate_analysis import CrateAnalyzer
@@ -39,7 +41,7 @@ except ImportError:
 if TYPE_CHECKING:
     from .azure_ai_processing import AzureOpenAIEnricher  # type: ignore[import]
     from .unified_llm_processor import UnifiedLLMProcessor, LLMConfig  # type: ignore[import]
-    from rust_crate_pipeline.models.crate_metadata import CrateMetadata
+    from .config import CrateMetadata, EnrichedCrate
 
 
 class UnifiedSigilPipeline:
@@ -353,25 +355,28 @@ class UnifiedSigilPipeline:
         try:
             self.logger.info(f"🤖 Adding unified LLM enrichment for {crate_name}")
             
-            # Create a mock crate metadata for AI analysis
-            # In a real implementation, this would come from your scraping results
-            from .config import CrateMetadata
+            # Import here to avoid circular dependency at module level
+            from .models.crate_metadata import CrateMetadata
             
-            mock_crate = CrateMetadata(
+            # Get scraped data from trace
+            scraped_data = trace.audit_info.get('sanitized_documentation', {})
+            crates_io_data = scraped_data.get('crates.io', {}).get('data', {})
+            
+            crate_metadata = CrateMetadata(
                 name=crate_name,
                 version=crate_version,
-                description=trace.suggestion or "No description available",
-                repository="",
-                keywords=[],
-                categories=[],
-                readme="",
-                downloads=0,
-                github_stars=0,
-                dependencies=[],
-                features={},
+                description=crates_io_data.get('description', trace.suggestion or "No description available"),
+                repository=crates_io_data.get('repository', ""),
+                keywords=crates_io_data.get('keywords', []),
+                categories=crates_io_data.get('categories', []),
+                readme=crates_io_data.get('readme', ""),
+                downloads=crates_io_data.get('downloads', 0),
+                github_stars=0, # This would ideally come from a GitHub specific scrape
+                dependencies=crates_io_data.get('dependencies', []),
+                features=crates_io_data.get('features', {}),
                 code_snippets=[],
                 readme_sections={},
-                librs_downloads=None,
+                librs_downloads=scraped_data.get('librs.org', {}).get('data', {}).get('downloads_total', None),
                 source="crates.io",
                 enhanced_scraping={},
                 enhanced_features=[],
@@ -379,10 +384,10 @@ class UnifiedSigilPipeline:
             )
             
             # Store the metadata used for enrichment
-            trace.audit_info["crate_metadata"] = mock_crate.to_dict()
+            trace.audit_info["crate_metadata"] = crate_metadata.to_dict()
 
             # Enrich the crate using unified LLM processor
-            enriched_crate = self.unified_llm_processor.enrich_crate(mock_crate)
+            enriched_crate = self.unified_llm_processor.enrich_crate(crate_metadata)
             
             # Add enrichment results to trace
             trace.audit_info["enriched_crate"] = self.sanitizer.sanitize_data(
@@ -401,25 +406,28 @@ class UnifiedSigilPipeline:
         try:
             self.logger.info(f"🤖 Adding Azure OpenAI enrichment for {crate_name}")
             
-            # Create a mock crate metadata for AI analysis
-            # In a real implementation, this would come from your scraping results
-            from .config import CrateMetadata
+            # Import here to avoid circular dependency at module level
+            from .models.crate_metadata import CrateMetadata
             
-            mock_crate = CrateMetadata(
+            # Get scraped data from trace
+            scraped_data = trace.audit_info.get('sanitized_documentation', {})
+            crates_io_data = scraped_data.get('crates.io', {}).get('data', {})
+
+            crate_metadata = CrateMetadata(
                 name=crate_name,
                 version="unknown",
-                description=trace.suggestion or "No description available",
-                repository="",
-                keywords=[],
-                categories=[],
-                readme="",
-                downloads=0,
-                github_stars=0,
-                dependencies=[],
-                features={},
+                description=crates_io_data.get('description', trace.suggestion or "No description available"),
+                repository=crates_io_data.get('repository', ""),
+                keywords=crates_io_data.get('keywords', []),
+                categories=crates_io_data.get('categories', []),
+                readme=crates_io_data.get('readme', ""),
+                downloads=crates_io_data.get('downloads', 0),
+                github_stars=0, # This would ideally come from a GitHub specific scrape
+                dependencies=crates_io_data.get('dependencies', []),
+                features=crates_io_data.get('features', {}),
                 code_snippets=[],
                 readme_sections={},
-                librs_downloads=None,
+                librs_downloads=scraped_data.get('librs.org', {}).get('data', {}).get('downloads_total', None),
                 source="crates.io",
                 enhanced_scraping={},
                 enhanced_features=[],
@@ -427,10 +435,10 @@ class UnifiedSigilPipeline:
             )
             
             # Store the metadata used for enrichment
-            trace.audit_info["crate_metadata"] = mock_crate.to_dict()
+            trace.audit_info["crate_metadata"] = crate_metadata.to_dict()
 
             # Enrich the crate using Azure OpenAI
-            enriched_crate = self.ai_enricher.enrich_crate(mock_crate)
+            enriched_crate = self.ai_enricher.enrich_crate(crate_metadata)
             
             # Add enrichment results to trace
             trace.audit_info["enriched_crate"] = self.sanitizer.sanitize_data(
@@ -442,26 +450,31 @@ class UnifiedSigilPipeline:
             self.logger.warning(f"⚠️  Failed to add Azure OpenAI enrichment: {e}")
     
     async def _generate_analysis_report(self, crate_name: str, trace: SacredChainTrace) -> None:
-        report_data = {
-            "crate_name": crate_name,
-            "analysis_timestamp": trace.timestamp,
-            "execution_id": trace.execution_id,
-            "verdict": trace.verdict.value,
-            "irl_score": trace.irl_score,
-            "suggestion": trace.suggestion,
-            "context_sources": trace.context_sources,
-            "reasoning_steps": trace.reasoning_steps,
-            "audit_info": trace.audit_info,
-            "canon_version": trace.canon_version,
-        }
-        
-        report_file = Path(f"analysis_report_{crate_name}_{int(time.time())}.json")
+        """Generate analysis report and save to file"""
         try:
-            with open(report_file, "w") as f:
-                json.dump(report_data, f, indent=2)
-            self.logger.info(f"📄 Analysis report saved: {report_file}")
-        except IOError as e:
-            self.logger.error(f"❌ Failed to save analysis report: {e}")
+            self.logger.info(f"📊 Generating analysis report for {crate_name}")
+
+            # Ensure the output directory exists
+            output_dir = Path("output")
+            output_dir.mkdir(exist_ok=True)
+            
+            report_path = output_dir / f"{crate_name}_analysis_report.json"
+            
+            report_data = trace.to_dict()
+
+            # Manually handle MarkdownGenerationResult
+            if 'llm_enrichment' in report_data.get('audit_info', {}):
+                enrichment = report_data['audit_info']['llm_enrichment']
+                if not isinstance(enrichment, (dict, list, str, int, float, bool, type(None))):
+                    report_data['audit_info']['llm_enrichment'] = str(enrichment)
+            
+            with open(report_path, "w", encoding="utf-8") as f:
+                json.dump(report_data, f, indent=4)
+
+            self.logger.info(f"📊 Analysis report generated at {report_path}")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Failed to generate analysis report for {crate_name}: {e}")
     
     async def analyze_multiple_crates(self, crate_names: List[str]) -> Dict[str, SacredChainTrace]:
         if not crate_names:
@@ -488,7 +501,7 @@ class UnifiedSigilPipeline:
                         irl_score=0.0,
                         execution_id=f"error-{int(time.time())}",
                         timestamp=time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                        canon_version="1.3.0",
+                        canon_version=__version__,
                     )
                     return crate_name, error_trace
         
@@ -509,7 +522,7 @@ class UnifiedSigilPipeline:
     def get_pipeline_summary(self) -> Dict[str, Any]:
         """Get a summary of the pipeline configuration and status"""
         summary = {
-            "pipeline_version": "1.3.0",
+            "pipeline_version": __version__,
             "components": {
                 "irl_engine": self.irl_engine is not None,
                 "scraper": self.scraper is not None,
@@ -558,21 +571,23 @@ def create_pipeline_from_args(args: argparse.Namespace) -> UnifiedSigilPipeline:
     llm_config = None
     if hasattr(args, 'llm_provider') and args.llm_provider:
         if UNIFIED_LLM_AVAILABLE and LLMConfig is not None:
-            llm_config = LLMConfig(
-                provider=args.llm_provider,
-                model=args.llm_model or "gpt-4",
-                api_base=getattr(args, 'llm_api_base', None),
-                api_key=getattr(args, 'llm_api_key', None),
-                temperature=getattr(args, 'llm_temperature', 0.2),
-                max_tokens=getattr(args, 'llm_max_tokens', 256),
-                timeout=getattr(args, 'llm_timeout', 30),
-                max_retries=getattr(args, 'llm_max_retries', 3),
-                # Provider-specific settings
-                azure_deployment=getattr(args, 'azure_deployment', None),
-                azure_api_version=getattr(args, 'azure_api_version', None),
-                ollama_host=getattr(args, 'ollama_host', None),
-                lmstudio_host=getattr(args, 'lmstudio_host', None)
-            )
+            llm_config_params = {
+                "provider": args.llm_provider,
+                "model": args.llm_model or "gpt-4o",
+                "api_base": getattr(args, 'llm_api_base', None),
+                "api_key": getattr(args, 'llm_api_key', None),
+                "temperature": getattr(args, 'llm_temperature', 0.2),
+                "max_tokens": getattr(args, 'llm_max_tokens', 256),
+                "timeout": getattr(args, 'llm_timeout', 30),
+                "max_retries": getattr(args, 'llm_max_retries', 3),
+                "azure_deployment": getattr(args, 'azure_deployment', None),
+                "azure_api_version": getattr(args, 'azure_api_version', None),
+                "ollama_host": getattr(args, 'ollama_host', None),
+                "lmstudio_host": getattr(args, 'lmstudio_host', None),
+            }
+            # Filter out None values so that default values in LLMConfig are used
+            llm_config_params = {k: v for k, v in llm_config_params.items() if v is not None}
+            llm_config = LLMConfig(**llm_config_params)
         else:
             logging.warning("Unified LLM processor not available, falling back to Azure OpenAI")
     
@@ -591,6 +606,7 @@ def add_llm_arguments(parser: argparse.ArgumentParser) -> None:
     
     llm_group.add_argument(
         '--llm-model',
+        default='gpt-4o',
         help='Model name/identifier (e.g., gpt-4, llama2, claude-3)'
     )
     
