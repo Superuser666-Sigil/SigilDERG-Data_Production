@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """Final verification of the balanced crate list"""
 
@@ -6,7 +7,7 @@ from rust_crate_pipeline.pipeline import CrateDataPipeline
 
 
 class MockConfig:
-    def __init__(self):
+    def __init__(self) -> None:
         self.n_workers = 4
         self.batch_size = 10
 
@@ -17,7 +18,7 @@ class MockConfig:
 original_init = None
 
 
-def mock_init(self, config):
+def mock_init(self, config) -> None:
     self.config = config
     # Don't load model
 

@@ -82,7 +82,6 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY rust_crate_pipeline/ ./rust_crate_pipeline/
 COPY utils/ ./utils/
 COPY pyproject.toml setup.py README.md ./
-COPY enhanced_scraping.py ./
 
 # Install the package in development mode
 RUN pip install --no-cache-dir -e .

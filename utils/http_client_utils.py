@@ -6,7 +6,7 @@ import time
 import logging
 import requests
 from requests_cache import CachedSession
-from typing import Dict, Optional, Any
+from typing import Dict, Union, Optional, Any
 import re
 
 
@@ -14,9 +14,7 @@ class HTTPClientUtils:
     """Atomic unit for HTTP client operations"""
 
     @staticmethod
-    def create_cached_session(
-        cache_name: str, cache_ttl: int
-    ) -> CachedSession:
+    def create_cached_session(cache_name: str, cache_ttl: int) -> CachedSession:
         """Create a standardized cached session - atomic unit"""
         return CachedSession(cache_name, expire_after=cache_ttl)
 
@@ -86,7 +84,7 @@ class MetadataExtractor:
         if not readme:
             return []  # Find Rust code blocks
         pattern = (
-            r"```(?:rust|(?:no_run|ignore|compile_fail|mdbook-runnable)?)"
+            r"```(?:rust|(?:Union[no_run, ignore]|Union[compile_fail, mdbook]-runnable)?)"
             r"\s*([\s\S]*?)```"
         )
         matches = re.findall(pattern, readme)
@@ -113,14 +111,10 @@ class MetadataExtractor:
             if line.startswith("#"):
                 # Save previous section
                 if current_content:
-                    sections[current_section] = "\n".join(
-                        current_content
-                    ).strip()
+                    sections[current_section] = "\n".join(current_content).strip()
 
                 # Start new section
-                current_section = (
-                    line.strip("#").strip().lower().replace(" ", "_")
-                )
+                current_section = line.strip("#").strip().lower().replace(" ", "_")
                 current_content = []
             else:
                 current_content.append(line)

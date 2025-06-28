@@ -3,7 +3,7 @@ import json
 import os
 import shutil
 from datetime import datetime
-from typing import Any
+from typing import Any, Union
 
 
 def create_output_dir(base_name: str = "crate_data") -> str:
@@ -55,7 +55,7 @@ def save_checkpoint(data: list[dict], prefix: str, output_dir: str) -> str:
     return filename
 
 
-def safe_file_cleanup(path: str):
+def safe_file_cleanup(path: str) -> None:
     """Safely remove files or directories"""
     try:
         if os.path.isfile(path):
@@ -77,7 +77,7 @@ def disk_space_check(min_free_gb: float = 1.0) -> bool:
 
 
 def load_rule_zero_typing_quick_lookup(
-    path: str | None = None,
+    path: Union[str, None] = None,
 ) -> dict[str, Any]:
     """
     Load the Rule Zero Python Typing & PEP8 Quick Lookup Table as a dict.

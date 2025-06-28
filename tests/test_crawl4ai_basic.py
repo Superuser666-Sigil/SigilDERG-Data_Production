@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """
 Simple test to verify Crawl4AI is working correctly.
@@ -16,7 +17,7 @@ sys.path.insert(0, str(project_root))
 # Test basic Crawl4AI functionality
 
 
-def test_crawl4ai_import():
+def test_crawl4ai_import() -> None:
     """Test that Crawl4AI can be imported without errors"""
     try:
         from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig
@@ -29,7 +30,7 @@ def test_crawl4ai_import():
 
 
 @pytest.mark.asyncio
-async def test_crawl4ai_basic_functionality():
+async def test_crawl4ai_basic_functionality() -> None:
     """Test basic Crawl4AI crawling functionality"""
     try:
         from crawl4ai import AsyncWebCrawler, BrowserConfig, CrawlerRunConfig

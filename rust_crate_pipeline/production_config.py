@@ -12,7 +12,7 @@ from typing import Any
 # Production logging configuration
 
 
-def configure_production_logging():
+def configure_production_logging() -> None:
     """Configure logging for production to reduce verbose warnings"""
 
     # Don't use basicConfig here - let main.py handle it

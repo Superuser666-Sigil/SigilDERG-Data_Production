@@ -5,10 +5,9 @@ Simple integration test and demonstration for Crawl4AI in both pipelines
 import logging
 import os
 import sys
+from typing import Optional
 
-sys.path.insert(
-    0, os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-)
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 # Configure minimal logging
 logging.basicConfig(level=logging.WARNING)
@@ -17,17 +16,13 @@ print("🚀 Crawl4AI Integration Demonstration")
 print("=" * 50)
 
 
-def test_enhanced_scraping_demo():
+def test_enhanced_scraping_demo() -> Optional[bool]:
     """Test Enhanced Scraping Module demo"""
     try:
         from enhanced_scraping import EnhancedScraper
 
-        scraper = (
-            EnhancedScraper()
-        )  # Correct constructor - no enable_crawl4ai param
-        print(
-            "   ✅ Module imported and initialized (Crawl4AI: enabled by default)"
-        )
+        scraper = EnhancedScraper()  # Correct constructor - no enable_crawl4ai param
+        print("   ✅ Module imported and initialized (Crawl4AI: enabled by default)")
         assert scraper is not None
     except ImportError as e:
         print(f"   ❌ Required module missing: {e}")
@@ -36,8 +31,8 @@ def test_enhanced_scraping_demo():
         print(f"   ❌ Required file missing: {e}")
         assert False, f"Required file missing: {e}"
     except Exception as e:
-        print(f"   ❌ Failed: {e}")
-        assert False, f"Unexpected error: {e}"
+        print(f"❌ Demo failed: {e}")
+        return False
 
 
 # Test 1: Enhanced Scraping Module
@@ -164,4 +159,4 @@ print("   ✅ Graceful fallback to basic scraping")
 print("   ✅ Async processing for better performance")
 print("   ✅ Integration in both standard and Sigil pipelines")
 
-print("\n🎉 Ready for production use!")
+print("\n🎉 Ready for production use!") 

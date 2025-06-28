@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 import hashlib
 import os
 
@@ -14,7 +15,7 @@ def compute_db_hash(db_path: str) -> str:
     return sha256.hexdigest()
 
 
-def main():
+def main() -> None:
     repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     db_path = os.path.join(repo_root, "sigil_rag_cache.db")
     hash_path = os.path.join(repo_root, "sigil_rag_cache.hash")

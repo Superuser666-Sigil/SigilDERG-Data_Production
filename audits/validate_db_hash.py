@@ -19,9 +19,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Validate SQLite DB hash against canonical value."
     )
-    parser.add_argument(
-        "--db", required=True, help="Path to the SQLite database."
-    )
+    parser.add_argument("--db", required=True, help="Path to the SQLite database.")
     parser.add_argument(
         "--expected-hash",
         required=True,

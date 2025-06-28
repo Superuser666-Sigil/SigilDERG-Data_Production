@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """
 Minimal test to verify Sigil pipeline integration works in the main pipeline
@@ -12,13 +13,13 @@ project_root = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, project_root)
 
 
-def test_pipeline_integration():
-    """Test that Sigil pipeline can be imported and used in the main pipeline (model loading bypassed)"""
+def test_pipeline_integration() -> None:
+    """Test that Sigil pipeline can be imported and used in the main pipeline
+    (model loading bypassed)"""
     print("🦪 Testing Sigil Pipeline Integration with Main Pipeline")
     print("=" * 60)
     try:
         from rust_crate_pipeline.config import PipelineConfig
-        from rust_crate_pipeline.main import main as pipeline_main
         from sigil_enhanced_pipeline import SigilCompliantPipeline
 
         print("✅ All imports successful")
@@ -65,8 +66,9 @@ def test_pipeline_integration():
         assert False, f"Unexpected error: {e}"
 
 
-def test_compatibility_interface():
-    """Test that Sigil pipeline has compatible interface with main pipeline (model loading bypassed)"""
+def test_compatibility_interface() -> None:
+    """Test that Sigil pipeline has compatible interface with main pipeline
+    (model loading bypassed)"""
     print("\n🔗 Testing Interface Compatibility")
     print("-" * 40)
 
@@ -107,9 +109,7 @@ def test_compatibility_interface():
             sigil_result = sigil_pipeline.run()
 
             if isinstance(sigil_result, tuple) and len(sigil_result) == 2:
-                print(
-                    "✅ Sigil pipeline returns tuple(list, dict) as expected"
-                )
+                print("✅ Sigil pipeline returns tuple(list, dict) as expected")
                 print(f"   - First element type: {type(sigil_result[0])}")
                 print(f"   - Second element type: {type(sigil_result[1])}")
             else:
@@ -122,7 +122,7 @@ def test_compatibility_interface():
         assert False, f"Compatibility test failed: {e}"
 
 
-def test_cli_argument_parsing():
+def test_cli_argument_parsing() -> None:
     """Test that CLI arguments are properly parsed for Sigil options"""
     print("\n⚙️ Testing CLI Argument Integration")
     print("-" * 40)
@@ -146,11 +146,10 @@ def test_cli_argument_parsing():
                 args = parse_arguments()
                 print(f"✅ Test case {i + 1}: {' '.join(test_args)}")
                 print(
-                    f"   - Enable Sigil: {getattr(args, 'enable_sigil_protocol', False)}"
+                    f"   - Enable Sigil: "
+                    f"{getattr(args, 'enable_sigil_protocol', False)}"
                 )
-                print(
-                    f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}"
-                )
+                print(f"   - Sigil Mode: {getattr(args, 'sigil_mode', 'default')}")
                 print(f"   - Skip AI: {getattr(args, 'skip_ai', False)}")
                 print(f"   - Limit: {getattr(args, 'limit', 'None')}")
 
@@ -166,7 +165,7 @@ def test_cli_argument_parsing():
         assert False, f"CLI test failed: {e}"
 
 
-def main():
+def main() -> None:
     """Run all integration tests"""
     print("🚀 Sigil Enhanced Pipeline - Main Integration Tests")
     print("=" * 60)

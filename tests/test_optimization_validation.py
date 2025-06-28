@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 # test_optimization_validation.py
 """
 Test script to validate the code optimization and atomic unit separation
@@ -9,7 +10,7 @@ import sys
 sys.path.append(os.path.dirname(__file__))
 
 
-def test_atomic_utilities():
+def test_atomic_utilities() -> None:
     """Test that the atomic utilities work correctly"""
     print("=== Testing Atomic Utilities ===")
     try:
@@ -37,9 +38,7 @@ def test_atomic_utilities():
         }
         """
 
-        content_analysis = RustCodeAnalyzer.analyze_rust_content(
-            test_rust_code
-        )
+        content_analysis = RustCodeAnalyzer.analyze_rust_content(test_rust_code)
         assert content_analysis["loc"] > 0
         assert "main" in content_analysis["functions"]
         assert "MyStruct" in content_analysis["types"]
@@ -122,9 +121,7 @@ def test_atomic_utilities():
         sections = MetadataExtractor.extract_readme_sections(test_readme)
         # Accept 'intro' as a valid section if no explicit header is present
         assert (
-            "my_crate" in sections
-            or "My Crate" in sections
-            or "intro" in sections
+            "my_crate" in sections or "My Crate" in sections or "intro" in sections
         ), f"Expected section 'my_crate', 'My Crate', or 'intro' in {sections.keys()}"
         print("✅ MetadataExtractor.extract_readme_sections() works")
 
@@ -145,7 +142,7 @@ def test_atomic_utilities():
         assert False, f"Unexpected error: {e}"
 
 
-def test_original_functionality():
+def test_original_functionality() -> None:
     """Test that the original pipeline functionality still works"""
     print("\n=== Testing Original Functionality Preserved ===")
     try:
@@ -176,7 +173,7 @@ def test_original_functionality():
         assert False, f"Unexpected error: {e}"
 
 
-def main():
+def main() -> None:
     """Run optimization validation tests"""
     print("🚀 Starting Code Optimization Validation")
     print("=" * 50)

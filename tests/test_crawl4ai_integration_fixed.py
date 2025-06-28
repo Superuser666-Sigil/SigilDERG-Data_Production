@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """
 Comprehensive Crawl4AI Integration Test Suite
@@ -13,7 +14,7 @@ workspace_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, workspace_root)
 
 
-def test_enhanced_scraping():
+def test_enhanced_scraping() -> None:
     """Test the enhanced scraping module"""
     print("🧪 Testing Enhanced Scraping Module...")
     try:
@@ -25,7 +26,8 @@ def test_enhanced_scraping():
         print("✅ Enhanced scraping imports successful")
         scraper = EnhancedScraper(enable_crawl4ai=True)
         print(
-            f"✅ Enhanced scraper initialized (Crawl4AI enabled: {scraper.enable_crawl4ai})"
+            f"✅ Enhanced scraper initialized (Crawl4AI enabled: "
+            f"{scraper.enable_crawl4ai})"
         )
         crate_scraper = CrateDocumentationScraper(enable_crawl4ai=True)
         assert crate_scraper is not None
@@ -36,7 +38,7 @@ def test_enhanced_scraping():
         return False
 
 
-def test_standard_pipeline_integration():
+def test_standard_pipeline_integration() -> None:
     """Test Crawl4AI integration in standard pipeline"""
     print("\n🧪 Testing Standard Pipeline Integration...")
     try:
@@ -55,7 +57,7 @@ def test_standard_pipeline_integration():
         return False
 
 
-def test_sigil_pipeline_integration():
+def test_sigil_pipeline_integration() -> None:
     """Test Crawl4AI integration in Sigil pipeline"""
     print("\n🧪 Testing Sigil Pipeline Integration...")
     try:
@@ -74,7 +76,7 @@ def test_sigil_pipeline_integration():
         return False
 
 
-def test_cli_integration():
+def test_cli_integration() -> None:
     """Test CLI integration with Crawl4AI options"""
     print("\n🧪 Testing CLI Integration...")
     try:
@@ -92,15 +94,9 @@ def test_cli_integration():
         try:
             args = parse_arguments()
             print("✅ CLI parsing successful:")
-            print(
-                f"   - Enable Crawl4AI: {getattr(args, 'enable_crawl4ai', True)}"
-            )
-            print(
-                f"   - Crawl4AI Model: {getattr(args, 'crawl4ai_model', 'default')}"
-            )
-            print(
-                f"   - Disable Crawl4AI: {getattr(args, 'disable_crawl4ai', False)}"
-            )
+            print(f"   - Enable Crawl4AI: {getattr(args, 'enable_crawl4ai', True)}")
+            print(f"   - Crawl4AI Model: {getattr(args, 'crawl4ai_model', 'default')}")
+            print(f"   - Disable Crawl4AI: {getattr(args, 'disable_crawl4ai', False)}")
             return True
         finally:
             sys.argv = original_argv
@@ -109,7 +105,7 @@ def test_cli_integration():
         return False
 
 
-async def test_async_functionality():
+async def test_async_functionality() -> None:
     """Test async functionality with basic scraping"""
     try:
         from enhanced_scraping import EnhancedScraper
@@ -130,7 +126,7 @@ async def test_async_functionality():
         return False
 
 
-def main():
+def main() -> None:
     """Run all integration tests"""
     print("🚀 Crawl4AI Integration Test Suite")
     print("=" * 50)
@@ -179,8 +175,7 @@ def main():
         print("🎉 All tests passed! Crawl4AI integration is successful!")
         print("\n📋 Ready for use:")
         print(
-            "   - Standard Pipeline: "
-            "python -m rust_crate_pipeline --enable-crawl4ai"
+            "   - Standard Pipeline: " "python -m rust_crate_pipeline --enable-crawl4ai"
         )
         print(
             "   - Sigil Pipeline: "
@@ -188,8 +183,7 @@ def main():
             "--enable-sigil-protocol --enable-crawl4ai"
         )
         print(
-            "   - Disable Crawl4AI: "
-            "python -m rust_crate_pipeline --disable-crawl4ai"
+            "   - Disable Crawl4AI: " "python -m rust_crate_pipeline --disable-crawl4ai"
         )
     else:
         print("⚠️  Some tests failed. Review the errors above.")

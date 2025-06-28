@@ -28,8 +28,7 @@ def pytest_collection_modifyitems(config: Config, items: List[Item]) -> None:
         skip_slow = pytest.mark.skip(reason="--fast mode")
         for item in items:
             if "slow" in item.keywords or any(
-                name in str(item.fspath)
-                for name in ["crawl4ai", "integration"]
+                name in str(item.fspath) for name in ["crawl4ai", "integration"]
             ):
                 item.add_marker(skip_slow)
 
@@ -48,7 +47,7 @@ def pytest_collection_modifyitems(config: Config, items: List[Item]) -> None:
 
 
 @pytest.fixture
-def mock_config():
+def mock_config() -> None:
     """Fast mock configuration."""
     from rust_crate_pipeline.config import PipelineConfig
 

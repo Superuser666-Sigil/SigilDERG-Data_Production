@@ -1,10 +1,12 @@
+from typing import Dict, List, Tuple, Optional, Any
 """Version information for rust-crate-pipeline."""
 
-__version__ = "1.2.5-dev.20250621"
+__version__ = "1.3.0"
 __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
 
 # Version history
-# 1.2.5-dev.20250621 - Dev branch: experimental, not a formal release. Originated from v1.2.5.
+# 1.2.5-dev.20250621 - Dev branch: experimental, not a formal
+# release. Originated from v1.2.5.
 # 1.2.5 - Last official release.
 # 1.5.1 - Configuration Standardization Release: Model Path Consistency
 #         - Standardized all configuration to use GGUF model paths

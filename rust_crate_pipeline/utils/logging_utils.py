@@ -4,10 +4,11 @@ import time
 import psutil
 import logging
 from functools import wraps
+from typing import Any, Callable, Dict, Optional, Union
 
 
 def configure_logging(
-    log_dir: str | None = None, log_level: int = logging.INFO
+    log_dir: Optional[str] = None, log_level: int = logging.INFO
 ) -> logging.Logger:
     """
     Configure global logging with file and console handlers
@@ -25,9 +26,7 @@ def configure_logging(
     # Console handler
     console_handler = logging.StreamHandler()
     console_handler.setLevel(log_level)
-    console_format = logging.Formatter(
-        "%(asctime)s [%(levelname)s] %(message)s"
-    )
+    console_format = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
     console_handler.setFormatter(console_format)
     logger.addHandler(console_handler)
 
@@ -49,23 +48,21 @@ def configure_logging(
     return logger
 
 
-def log_execution_time(func):
+def log_execution_time(func: Callable[..., Any]) -> Callable[..., Any]:
     """Decorator to log function execution time"""
 
     @wraps(func)
-    def wrapper(*args, **kwargs):
+    def wrapper(*args, **kwargs) -> None:
         start_time = time.time()
         result = func(*args, **kwargs)
         end_time = time.time()
-        logging.info(
-            f"{func.__name__} executed in {end_time - start_time:.2f} seconds"
-        )
+        logging.info(f"{func.__name__} executed in {end_time - start_time:.2f} seconds")
         return result
 
     return wrapper
 
 
-def log_resource_usage():
+def log_resource_usage() -> Dict[str, Any]:
     """Log current resource utilization (CPU, memory, disk)"""
     cpu_percent = psutil.cpu_percent()
     mem = psutil.virtual_memory()

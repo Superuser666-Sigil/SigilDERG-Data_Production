@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """
 Quick setup and test script for Crawl4AI integration
@@ -8,7 +9,7 @@ import subprocess
 import sys
 
 
-def install_crawl4ai():
+def install_crawl4ai() -> None:
     """Install Crawl4AI and its dependencies"""
     print("🔧 Installing Crawl4AI...")
 
@@ -29,7 +30,7 @@ def install_crawl4ai():
         return False
 
 
-def test_basic_crawling():
+def test_basic_crawling() -> None:
     """Test basic Crawl4AI functionality"""
     print("\n🧪 Testing basic Crawl4AI functionality...")
 
@@ -37,7 +38,7 @@ def test_basic_crawling():
 import asyncio
 from crawl4ai import AsyncWebCrawler
 
-async def test_crawl():
+async def test_crawl() -> None:
     async with AsyncWebCrawler() as crawler:
         result = await crawler.arun(url="https://crates.io/crates/serde")
 
@@ -90,7 +91,7 @@ if __name__ == "__main__":
             pass
 
 
-def test_ollama_connection():
+def test_ollama_connection() -> None:
     """Test connection to local Ollama instance"""
     print("\n🔗 Testing Ollama connection...")
 
@@ -110,9 +111,7 @@ def test_ollama_connection():
             return False
 
     except requests.exceptions.ConnectionError:
-        print(
-            "[ERROR] Ollama not running or not accessible at localhost:11434"
-        )
+        print("[ERROR] Ollama not running or not accessible at localhost:11434")
         print("   Make sure Ollama is installed and running:")
         print("   1. Install Ollama from https://ollama.ai/")
         print("   2. Run: ollama serve")
@@ -123,7 +122,7 @@ def test_ollama_connection():
         return False
 
 
-def create_requirements_file():
+def create_requirements_file() -> None:
     """Create requirements file for Crawl4AI integration"""
     print("\n📝 Creating requirements file...")
 
@@ -148,7 +147,7 @@ requests
         return False
 
 
-def main():
+def main() -> None:
     """Main setup and test function"""
     print("[SETUP] Crawl4AI Integration Setup for Rust Crate Pipeline")
     print("=" * 60)
@@ -178,9 +177,7 @@ def main():
         print("\n[SUCCESS] All setup steps completed successfully!")
         print("\nNext steps:")
         print("1. Review the integration plan: CRAWL4AI_INTEGRATION_PLAN.md")
-        print(
-            "2. Test the starter script: python crawl4ai_integration_starter.py"
-        )
+        print("2. Test the starter script: python crawl4ai_integration_starter.py")
         print("3. Begin integrating with your existing pipeline")
     else:
         print("\n⚠️  Some setup steps failed. Please review the errors above.")

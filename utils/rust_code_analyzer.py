@@ -78,9 +78,7 @@ class RustCodeAnalyzer:
 
         # Update structure flags (OR operation to preserve True values)
         metrics["has_tests"] = metrics["has_tests"] or structure["has_tests"]
-        metrics["has_examples"] = (
-            metrics["has_examples"] or structure["has_examples"]
-        )
+        metrics["has_examples"] = metrics["has_examples"] or structure["has_examples"]
         metrics["has_benchmarks"] = (
             metrics["has_benchmarks"] or structure["has_benchmarks"]
         )

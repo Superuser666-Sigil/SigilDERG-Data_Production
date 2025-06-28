@@ -1,0 +1,23 @@
+{
+  "include": [
+    "rust_crate_pipeline",
+    "tests",
+    "scripts",
+    "utils"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".mypy_cache",
+    ".dmypy.json"
+  ],
+  "ignore": [
+    "rust_crate_pipeline/scraping/unified_scraper.py"
+  ],
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.8",
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true,
+  "stubPath": "./typings"
+} 

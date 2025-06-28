@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 import subprocess
 import sys
 import os
@@ -19,7 +20,7 @@ def compute_db_hash(db_path: str) -> str:
     return sha256.hexdigest()
 
 
-def main():
+def main() -> None:
     if not os.path.exists(DB_PATH):
         print(f"Database file {DB_PATH} not found.")
         sys.exit(1)

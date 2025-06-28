@@ -130,13 +130,40 @@ venv.bak/
 .dmypy.json
 dmypy.json
 
+# Ruff cache
+.ruff_cache/
+
 # Pyre type checker
 .pyre/
+
+# Additional cache directories
+*.cache/
+.cache/
+cache/
+
+# Temporary and log files (comprehensive)
+*.tmp
+*.temp
+*.log
+*.log.*
+validation.log
+rule_zero_validation.log
+checklist.log
+project_flake8_audit.log
+flake8_audit.log
+coverage.log
+coverage_output.txt
+coverage_temp.txt
+
+# Exception: Track important project logs for systematic progress
+!checklist.log
+!tests/coverage.log
+!**/audit.log
+!sigil_audit_*.json
 
 # Project specific
 *.gguf
 *.bin
-cache/
 output/
 data/
 models/

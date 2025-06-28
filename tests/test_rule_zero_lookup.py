@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 """
 Test for Rule Zero lookup table generation and rigor compliance.
 Ensures environment metadata and policies are present and valid in the lookup table.
@@ -10,25 +11,19 @@ import subprocess
 import pytest
 
 LOOKUP_PATH = os.path.abspath("rule_zero_lookup.json")
-SCRIPT_PATH = os.path.abspath(
-    os.path.join("scripts", "generate_rule_zero_lookup.py")
-)
+SCRIPT_PATH = os.path.abspath(os.path.join("scripts", "generate_rule_zero_lookup.py"))
 
 
 @pytest.mark.order(1)
-def test_generate_rule_zero_lookup_runs():
+def test_generate_rule_zero_lookup_runs() -> None:
     """Script runs without error and produces a JSON file."""
-    result = subprocess.run(
-        ["python", SCRIPT_PATH], capture_output=True, text=True
-    )
-    assert (
-        result.returncode == 0
-    ), f"Script failed: {result.stdout}\n{result.stderr}"
+    result = subprocess.run(["python", SCRIPT_PATH], capture_output=True, text=True)
+    assert result.returncode == 0, f"Script failed: {result.stdout}\n{result.stderr}"
     assert os.path.exists(LOOKUP_PATH), "Lookup table was not generated."
 
 
 @pytest.mark.order(2)
-def test_lookup_table_json_valid():
+def test_lookup_table_json_valid() -> None:
     """Lookup table is valid JSON and has required keys."""
     with open(LOOKUP_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -38,16 +33,14 @@ def test_lookup_table_json_valid():
     assert isinstance(
         data["environment_metadata"], list
     ), "environment_metadata should be a list."
-    assert (
-        "rule_zero_policies" in data
-    ), "Missing rule_zero_policies in lookup table."
+    assert "rule_zero_policies" in data, "Missing rule_zero_policies in lookup table."
     assert isinstance(
         data["rule_zero_policies"], list
     ), "rule_zero_policies should be a list."
 
 
 @pytest.mark.order(3)
-def test_environment_metadata_content():
+def test_environment_metadata_content() -> None:
     """At least one environment metadata entry is present and well-formed."""
     with open(LOOKUP_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -62,13 +55,11 @@ def test_environment_metadata_content():
         "timestamp",
     ]
     for field in required_fields:
-        assert (
-            field in entry
-        ), f"Missing field in environment metadata: {field}"
+        assert field in entry, f"Missing field in environment metadata: {field}"
 
 
 @pytest.mark.order(4)
-def test_rule_zero_policy_content():
+def test_rule_zero_policy_content() -> None:
     """If any policies exist, they must have required fields and valid JSON."""
     with open(LOOKUP_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)

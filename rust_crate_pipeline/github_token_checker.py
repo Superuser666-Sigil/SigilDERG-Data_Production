@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 # github_token_checker.py
 """
 GitHub Token Checker Module
@@ -10,7 +11,7 @@ import requests
 import logging
 
 
-def check_github_token_quick():
+def check_github_token_quick() -> None:
     """Quick check if GitHub token is available and valid"""
     token = os.getenv("GITHUB_TOKEN")
 
@@ -48,7 +49,7 @@ def check_github_token_quick():
         return False, f"Error checking token: {str(e)}"
 
 
-def prompt_for_token_setup():
+def prompt_for_token_setup() -> None:
     """Prompt user to set up GitHub token"""
     print("\n" + "=" * 60)
     print("[KEY] GitHub Token Required")
@@ -66,14 +67,10 @@ def prompt_for_token_setup():
     print("\n" + "=" * 60)
 
     # Ask if user wants to continue without token (limited functionality)
-    response = (
-        input("\nContinue without GitHub token? (y/N): ").strip().lower()
-    )
+    response = input("\nContinue without GitHub token? (y/N): ").strip().lower()
 
     if response in ["y", "yes"]:
-        print(
-            "[WARNING] Running with limited GitHub API access (60 requests/hour)"
-        )
+        print("[WARNING] Running with limited GitHub API access (60 requests/hour)")
         print("   You may encounter rate limit warnings.")
         return True
     else:
@@ -81,7 +78,7 @@ def prompt_for_token_setup():
         return False
 
 
-def check_and_setup_github_token():
+def check_and_setup_github_token() -> None:
     """Checks and sets up the GitHub token."""
     is_valid, message = check_github_token_quick()
 
@@ -94,9 +91,7 @@ def check_and_setup_github_token():
 
     # Check if we're in a non-interactive environment
     if not sys.stdin.isatty():
-        logging.error(
-            "GitHub token not configured and running in non-interactive mode"
-        )
+        logging.error("GitHub token not configured and running in non-interactive mode")
         logging.error("Set GITHUB_TOKEN environment variable before running")
         return False
 

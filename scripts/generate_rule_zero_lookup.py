@@ -1,7 +1,10 @@
+from typing import Dict, List, Tuple, Optional, Any
 """
-Script to generate a Rule Zero runtime lookup table from the canonical DB for dev environments.
+Script to generate a Rule Zero runtime lookup table from the canonical DB for
+dev environments.
 - Reads policy/enforcement data from the canonical SQLite DB.
-- Outputs a JSON lookup table for fast runtime access by agents or future models.
+- Outputs a JSON lookup table for fast runtime access by agents or future
+  models.
 - Ensures the lookup table is always up-to-date and traceable.
 """
 
@@ -14,20 +17,19 @@ LOOKUP_PATH = os.path.abspath("rule_zero_lookup.json")
 
 
 # Example: fetch all environment metadata and enforcement rules
-def fetch_rule_zero_data(conn):
+def fetch_rule_zero_data(conn) -> Dict[str, Any]:
     data = {}
     # Fetch environment metadata
     try:
-        cur = conn.execute(
-            "SELECT * FROM environment_metadata ORDER BY timestamp DESC"
-        )
+        cur = conn.execute("SELECT * FROM environment_metadata ORDER BY timestamp DESC")
         data["environment_metadata"] = [dict(row) for row in cur.fetchall()]
     except Exception as e:
         data["environment_metadata"] = f"Error: {e}"
     # Fetch Rule Zero policies
     try:
         cur = conn.execute(
-            "SELECT * FROM rule_zero_policies ORDER BY enforcement_rank DESC, last_updated DESC"
+            "SELECT * FROM rule_zero_policies ORDER BY enforcement_rank DESC, "
+            "last_updated DESC"
         )
         data["rule_zero_policies"] = [dict(row) for row in cur.fetchall()]
     except Exception as e:
@@ -36,7 +38,7 @@ def fetch_rule_zero_data(conn):
     return data
 
 
-def main():
+def main() -> None:
     if not os.path.exists(DB_PATH):
         print(f"Canonical DB not found: {DB_PATH}")
         return

@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """
 Test for rust_crate_pipeline.__main__ to achieve 100% coverage
@@ -8,7 +9,7 @@ import subprocess
 import sys
 
 
-def test_main_module_entry_point():
+def test_main_module_entry_point() -> None:
     """Test that the package can be run as a module (covers __main__.py)"""
     # Test running the module with --help to ensure entry point works
     # This covers lines 4-7 in __main__.py
@@ -26,13 +27,10 @@ def test_main_module_entry_point():
 
     # If it succeeds, should contain help text
     if result.returncode == 0:
-        assert (
-            "usage:" in result.stdout.lower()
-            or "help" in result.stdout.lower()
-        )
+        assert "usage:" in result.stdout.lower() or "help" in result.stdout.lower()
 
 
-def test_main_module_version():
+def test_main_module_version() -> None:
     """Test running module with version info"""
     result = subprocess.run(
         [sys.executable, "-m", "rust_crate_pipeline", "--version"],

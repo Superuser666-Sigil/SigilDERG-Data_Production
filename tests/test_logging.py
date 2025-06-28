@@ -1,8 +1,9 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """Test script to verify logging is working correctly"""
 
 
-def test_logging():
+def test_logging() -> None:
     """Test that logging works to both console and file"""
 
     print("🔍 Testing logging configuration...")

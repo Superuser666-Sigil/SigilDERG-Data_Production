@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 import argparse
 import sqlite3
 import hashlib
@@ -9,9 +10,7 @@ from cryptography.exceptions import InvalidSignature
 def load_signature_from_db(db_path: str) -> bytes:
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
-    cur.execute(
-        "SELECT signature FROM provenance ORDER BY timestamp DESC LIMIT 1"
-    )
+    cur.execute("SELECT signature FROM provenance ORDER BY timestamp DESC LIMIT 1")
     row = cur.fetchone()
     conn.close()
     if not row:
@@ -48,13 +47,11 @@ def verify_signature(db_path: str, public_key_path: str) -> bool:
         return False
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Validate SQLite DB signature using public key."
     )
-    parser.add_argument(
-        "--db", required=True, help="Path to the SQLite database."
-    )
+    parser.add_argument("--db", required=True, help="Path to the SQLite database.")
     parser.add_argument(
         "--public-key", required=True, help="Path to the public PEM key."
     )

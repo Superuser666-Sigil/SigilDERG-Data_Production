@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 """
 Test script to verify thread-free async implementation
 """
@@ -14,14 +15,15 @@ import pytest
 sys.path.insert(0, os.path.dirname(__file__))
 
 
-def monitor_threads():
+def monitor_threads() -> None:
     """Monitor active threads during execution"""
     return threading.active_count()
 
 
 @pytest.mark.asyncio
-async def test_async_pipeline():
-    """Test that the pipeline runs without creating additional threads (model loading bypassed)"""
+async def test_async_pipeline() -> None:
+    """Test that the pipeline runs without creating additional threads (model
+    loading bypassed)"""
     print("🦪 Testing Thread-Free Async Pipeline Implementation")
     print("=" * 60)
     initial_threads = monitor_threads()
@@ -33,7 +35,7 @@ async def test_async_pipeline():
         from rust_crate_pipeline.pipeline import CrateDataPipeline
 
         class DummyEnricher:
-            def __init__(self, config):
+            def __init__(self, config) -> None:
                 self.model = None
 
         # Patch LLMEnricher everywhere it is used in the pipeline
@@ -72,9 +74,7 @@ async def test_async_pipeline():
                     f"⚠️  Async fetch test skipped (expected in test environment): {e}"
                 )
             post_processing_threads = monitor_threads()
-            print(
-                f"📊 Post-processing thread count: {post_processing_threads}"
-            )
+            print(f"📊 Post-processing thread count: {post_processing_threads}")
             thread_increase = post_processing_threads - initial_threads
             print(f"\n📈 Thread count change: +{thread_increase}")
             assert (
@@ -93,7 +93,7 @@ async def test_async_pipeline():
 
 
 @pytest.mark.asyncio
-async def test_sigil_async_pipeline():
+async def test_sigil_async_pipeline() -> None:
     """Test that the Sigil pipeline also runs without threading"""
     print("\n🔮 Testing Sigil Pipeline Thread-Free Implementation")
     print("=" * 60)
@@ -126,9 +126,7 @@ async def test_sigil_async_pipeline():
         assert (
             thread_increase <= 1
         ), f"WARNING: {thread_increase} additional threads created"
-        print(
-            "✅ SUCCESS: Sigil pipeline operates without thread proliferation"
-        )
+        print("✅ SUCCESS: Sigil pipeline operates without thread proliferation")
     except ImportError as e:
         print(f"❌ Required module missing: {e}")
         assert False, f"Required module missing: {e}"
@@ -140,7 +138,7 @@ async def test_sigil_async_pipeline():
         assert False, f"Unexpected error: {e}"
 
 
-def test_threading_imports():
+def test_threading_imports() -> None:
     """Verify that threading modules are not being imported"""
     print("\n🔍 Testing Threading Import Usage")
     print("=" * 60)
@@ -164,13 +162,9 @@ def test_threading_imports():
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
                     if "ThreadPoolExecutor" in content:
-                        threading_usage.append(
-                            f"{file_path}: ThreadPoolExecutor"
-                        )
+                        threading_usage.append(f"{file_path}: ThreadPoolExecutor")
                     if "concurrent.futures" in content:
-                        threading_usage.append(
-                            f"{file_path}: concurrent.futures"
-                        )
+                        threading_usage.append(f"{file_path}: concurrent.futures")
             except UnicodeDecodeError:
                 print(f"⚠️  Could not read {file_path} due to encoding issues")
                 continue
@@ -178,7 +172,7 @@ def test_threading_imports():
     print("✅ SUCCESS: No direct threading usage in pipeline code")
 
 
-async def main():
+async def main() -> None:
     """Run all thread-free tests"""
     print("🚀 Thread-Free Async Pipeline Validation")
     print("=" * 60)

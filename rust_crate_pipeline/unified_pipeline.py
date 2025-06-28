@@ -1,0 +1,548 @@
+import asyncio
+import json
+import logging
+import time
+import argparse
+from pathlib import Path
+from typing import Dict, List, Optional, Any, Union, TYPE_CHECKING
+
+from .config import PipelineConfig
+from .core import IRLEngine, CanonRegistry, SacredChainTrace, TrustVerdict
+from .scraping import UnifiedScraper, ScrapingResult
+from .crate_analysis import CrateAnalyzer
+
+# Import Azure OpenAI enricher if available
+try:
+    from .azure_ai_processing import AzureOpenAIEnricher
+    AZURE_OPENAI_AVAILABLE = True
+except ImportError:
+    AZURE_OPENAI_AVAILABLE = False
+    AzureOpenAIEnricher = None  # type: ignore  # Fallback for type checkers; see below
+
+# Import unified LLM processor
+try:
+    from .unified_llm_processor import UnifiedLLMProcessor, create_llm_processor_from_args, LLMConfig
+    UNIFIED_LLM_AVAILABLE = True
+except ImportError:
+    UNIFIED_LLM_AVAILABLE = False
+    UnifiedLLMProcessor = None  # type: ignore
+    create_llm_processor_from_args = None  # type: ignore
+    LLMConfig = None  # type: ignore
+
+if TYPE_CHECKING:
+    from .azure_ai_processing import AzureOpenAIEnricher  # type: ignore[import]
+    from .unified_llm_processor import UnifiedLLMProcessor, LLMConfig  # type: ignore[import]
+
+
+class UnifiedSigilPipeline:
+    
+    def __init__(self, config: PipelineConfig, llm_config: Optional[Any] = None) -> None:
+        self.config = config
+        self.logger = logging.getLogger(__name__)
+        self.irl_engine: Optional[IRLEngine] = None
+        self.scraper: Optional[UnifiedScraper] = None
+        self.canon_registry: CanonRegistry = CanonRegistry()
+        
+        # Initialize AI components
+        self.ai_enricher: Optional[Any] = None
+        self.unified_llm_processor: Optional[Any] = None
+        self.crate_analyzer: Optional[CrateAnalyzer] = None
+        
+        # Store LLM config for later use
+        self.llm_config = llm_config
+        
+        self._initialize_components()
+    
+    def _initialize_components(self) -> None:
+        try:
+            self.irl_engine = IRLEngine(self.config, self.canon_registry)
+            self.logger.info("✅ IRL Engine initialized successfully")
+            
+            scraper_config = {
+                "verbose": False,
+                "word_count_threshold": 10,
+                "crawl_config": {
+                    "max_retries": self.config.max_retries,
+                    "timeout": self.config.crawl4ai_timeout,
+                }
+            }
+            self.scraper = UnifiedScraper(scraper_config)
+            self.logger.info("✅ Unified Scraper initialized successfully")
+            
+            # Initialize unified LLM processor if available
+            if UNIFIED_LLM_AVAILABLE and self.llm_config:
+                try:
+                    if UnifiedLLMProcessor is not None:
+                        self.unified_llm_processor = UnifiedLLMProcessor(self.llm_config)
+                        self.logger.info(f"✅ Unified LLM Processor initialized with provider: {self.llm_config.provider}")
+                    else:
+                        self.logger.warning("⚠️  UnifiedLLMProcessor is None at runtime; skipping initialization.")
+                except Exception as e:
+                    self.logger.warning(f"⚠️  Failed to initialize Unified LLM Processor: {e}")
+            
+            # Initialize Azure OpenAI enricher if available and configured (fallback)
+            elif AZURE_OPENAI_AVAILABLE and self.config.use_azure_openai:
+                try:
+                    if AzureOpenAIEnricher is not None:
+                        self.ai_enricher = AzureOpenAIEnricher(self.config)  # type: ignore
+                        self.logger.info("✅ Azure OpenAI Enricher initialized successfully")
+                    else:
+                        self.logger.warning("⚠️  AzureOpenAIEnricher is None at runtime; skipping initialization.")
+                except Exception as e:
+                    self.logger.warning(f"⚠️  Failed to initialize Azure OpenAI Enricher: {e}")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Failed to initialize pipeline components: {e}")
+            raise
+    
+    async def __aenter__(self) -> "UnifiedSigilPipeline":
+        if self.irl_engine:
+            await self.irl_engine.__aenter__()
+        if self.scraper:
+            await self.scraper.__aenter__()
+        return self
+    
+    async def __aexit__(self, exc_type: Optional[type], exc_val: Optional[Exception], exc_tb: Optional[Any]) -> None:
+        if self.irl_engine:
+            await self.irl_engine.__aexit__(exc_type, exc_val, exc_tb)
+        if self.scraper:
+            await self.scraper.__aexit__(exc_type, exc_val, exc_tb)
+    
+    async def analyze_crate(self, crate_name: str) -> SacredChainTrace:
+        if not crate_name or not isinstance(crate_name, str):
+            raise ValueError("crate_name must be a non-empty string")
+        
+        self.logger.info(f"🔍 Starting analysis of crate: {crate_name}")
+        
+        try:
+            documentation_results = await self._gather_documentation(crate_name)
+            
+            sacred_chain_trace = await self._perform_sacred_chain_analysis(
+                crate_name, documentation_results
+            )
+            
+            await self._generate_analysis_report(crate_name, sacred_chain_trace)
+            
+            self.logger.info(f"✅ Analysis completed for {crate_name}")
+            return sacred_chain_trace
+            
+        except Exception as e:
+            self.logger.error(f"❌ Analysis failed for {crate_name}: {e}")
+            raise RuntimeError(f"Analysis failed for {crate_name}: {str(e)}")
+    
+    async def _gather_documentation(self, crate_name: str) -> Dict[str, ScrapingResult]:
+        if not self.scraper:
+            raise RuntimeError("Scraper not initialized")
+        
+        self.logger.info(f"📚 Gathering documentation for {crate_name}")
+        
+        try:
+            results = await self.scraper.scrape_crate_documentation(crate_name)
+            
+            successful_sources = [source for source, result in results.items() 
+                                if result.error is None]
+            failed_sources = [source for source, result in results.items() 
+                            if result.error is not None]
+            
+            self.logger.info(f"✅ Successfully scraped {len(successful_sources)} sources: {successful_sources}")
+            if failed_sources:
+                self.logger.warning(f"⚠️  Failed to scrape {len(failed_sources)} sources: {failed_sources}")
+            
+            return results
+            
+        except Exception as e:
+            self.logger.error(f"❌ Documentation gathering failed: {e}")
+            raise
+    
+    async def _perform_sacred_chain_analysis(
+        self, crate_name: str, documentation_results: Dict[str, ScrapingResult]
+    ) -> SacredChainTrace:
+        if not self.irl_engine:
+            raise RuntimeError("IRL Engine not initialized")
+        
+        self.logger.info(f"🔗 Performing Sacred Chain analysis for {crate_name}")
+        
+        try:
+            sacred_chain_trace = await self.irl_engine.analyze_with_sacred_chain(crate_name)
+            
+            successful_docs = [result for result in documentation_results.values() 
+                             if result.error is None]
+            if successful_docs:
+                avg_quality = sum(doc.quality_score for doc in successful_docs) / len(successful_docs)
+                sacred_chain_trace.audit_info["documentation_quality"] = avg_quality
+                sacred_chain_trace.audit_info["documentation_sources"] = list(documentation_results.keys())
+            
+            # Add crate analysis results if available
+            await self._add_crate_analysis_results(crate_name, sacred_chain_trace)
+            
+            # Add AI enrichment if available
+            await self._add_ai_enrichment(crate_name, sacred_chain_trace)
+            
+            return sacred_chain_trace
+            
+        except Exception as e:
+            self.logger.error(f"❌ Sacred Chain analysis failed: {e}")
+            raise
+    
+    async def _add_crate_analysis_results(self, crate_name: str, trace: SacredChainTrace) -> None:
+        """Add cargo analysis results to the sacred chain trace"""
+        try:
+            # For now, we'll use a temporary directory approach
+            # In a real implementation, you'd download/extract the crate first
+            self.logger.info(f"🔍 Adding crate analysis results for {crate_name}")
+            
+            # This would be implemented based on your crate source strategy
+            # For now, we'll add a placeholder
+            trace.audit_info["crate_analysis"] = {
+                "status": "not_implemented",
+                "note": "Crate analysis requires downloading/extracting the crate source"
+            }
+            
+        except Exception as e:
+            self.logger.warning(f"⚠️  Failed to add crate analysis results: {e}")
+    
+    async def _add_ai_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
+        """Add AI enrichment results to the sacred chain trace"""
+        # Use unified LLM processor if available, otherwise fall back to Azure OpenAI
+        if self.unified_llm_processor:
+            await self._add_unified_llm_enrichment(crate_name, trace)
+        elif self.ai_enricher:
+            await self._add_azure_openai_enrichment(crate_name, trace)
+        else:
+            self.logger.info("ℹ️  No AI enricher available, skipping AI enrichment")
+    
+    async def _add_unified_llm_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
+        """Add enrichment using unified LLM processor"""
+        if not self.unified_llm_processor:
+            return
+            
+        try:
+            self.logger.info(f"🤖 Adding unified LLM enrichment for {crate_name}")
+            
+            # Create a mock crate metadata for AI analysis
+            # In a real implementation, this would come from your scraping results
+            from .config import CrateMetadata
+            
+            mock_crate = CrateMetadata(
+                name=crate_name,
+                version="unknown",
+                description=trace.suggestion or "No description available",
+                repository="",
+                keywords=[],
+                categories=[],
+                readme="",
+                downloads=0,
+                github_stars=0,
+                dependencies=[],
+                features={},
+                code_snippets=[],
+                readme_sections={},
+                librs_downloads=None,
+                source="crates.io",
+                enhanced_scraping={},
+                enhanced_features=[],
+                enhanced_dependencies=[]
+            )
+            
+            # Enrich the crate using unified LLM processor
+            enriched_crate = self.unified_llm_processor.enrich_crate(mock_crate)
+            
+            # Add enrichment results to trace
+            trace.audit_info["ai_enrichment"] = {
+                "provider": self.llm_config.provider if self.llm_config else "unknown",
+                "model": self.llm_config.model if self.llm_config else "unknown",
+                "readme_summary": enriched_crate.readme_summary,
+                "use_case": enriched_crate.use_case,
+                "score": enriched_crate.score,
+                "factual_counterfactual": enriched_crate.factual_counterfactual
+            }
+            
+            self.logger.info(f"✅ Unified LLM enrichment completed for {crate_name}")
+            
+        except Exception as e:
+            self.logger.warning(f"⚠️  Failed to add unified LLM enrichment: {e}")
+    
+    async def _add_azure_openai_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
+        """Add enrichment using Azure OpenAI (fallback method)"""
+        if not self.ai_enricher:
+            return
+            
+        try:
+            self.logger.info(f"🤖 Adding Azure OpenAI enrichment for {crate_name}")
+            
+            # Create a mock crate metadata for AI analysis
+            # In a real implementation, this would come from your scraping results
+            from .config import CrateMetadata
+            
+            mock_crate = CrateMetadata(
+                name=crate_name,
+                version="unknown",
+                description=trace.suggestion or "No description available",
+                repository="",
+                keywords=[],
+                categories=[],
+                readme="",
+                downloads=0,
+                github_stars=0,
+                dependencies=[],
+                features={},
+                code_snippets=[],
+                readme_sections={},
+                librs_downloads=None,
+                source="crates.io",
+                enhanced_scraping={},
+                enhanced_features=[],
+                enhanced_dependencies=[]
+            )
+            
+            # Enrich the crate using Azure OpenAI
+            enriched_crate = self.ai_enricher.enrich_crate(mock_crate)
+            
+            # Add enrichment results to trace
+            trace.audit_info["ai_enrichment"] = {
+                "provider": "azure_openai",
+                "model": self.config.azure_openai_deployment_name,
+                "readme_summary": enriched_crate.readme_summary,
+                "use_case": enriched_crate.use_case,
+                "score": enriched_crate.score,
+                "factual_counterfactual": enriched_crate.factual_counterfactual
+            }
+            
+            self.logger.info(f"✅ Azure OpenAI enrichment completed for {crate_name}")
+            
+        except Exception as e:
+            self.logger.warning(f"⚠️  Failed to add Azure OpenAI enrichment: {e}")
+    
+    async def _generate_analysis_report(self, crate_name: str, trace: SacredChainTrace) -> None:
+        report_data = {
+            "crate_name": crate_name,
+            "analysis_timestamp": trace.timestamp,
+            "execution_id": trace.execution_id,
+            "verdict": trace.verdict.value,
+            "irl_score": trace.irl_score,
+            "suggestion": trace.suggestion,
+            "context_sources": trace.context_sources,
+            "reasoning_steps": trace.reasoning_steps,
+            "audit_info": trace.audit_info,
+            "canon_version": trace.canon_version,
+        }
+        
+        report_file = Path(f"analysis_report_{crate_name}_{int(time.time())}.json")
+        try:
+            with open(report_file, "w") as f:
+                json.dump(report_data, f, indent=2)
+            self.logger.info(f"📄 Analysis report saved: {report_file}")
+        except IOError as e:
+            self.logger.error(f"❌ Failed to save analysis report: {e}")
+    
+    async def analyze_multiple_crates(self, crate_names: List[str]) -> Dict[str, SacredChainTrace]:
+        if not crate_names:
+            return {}
+        
+        self.logger.info(f"🚀 Starting concurrent analysis of {len(crate_names)} crates")
+        
+        semaphore = asyncio.Semaphore(self.config.n_workers)
+        
+        async def analyze_single_crate(crate_name: str) -> "tuple[str, SacredChainTrace]":
+            async with semaphore:
+                try:
+                    trace = await self.analyze_crate(crate_name)
+                    return crate_name, trace
+                except Exception as e:
+                    self.logger.error(f"❌ Analysis failed for {crate_name}: {e}")
+                    error_trace = SacredChainTrace(
+                        input_data=crate_name,
+                        context_sources=[],
+                        reasoning_steps=[f"Analysis failed: {str(e)}"],
+                        suggestion="DEFER: Analysis failed",
+                        verdict=TrustVerdict.DEFER,
+                        audit_info={"error": str(e)},
+                        irl_score=0.0,
+                        execution_id=f"error-{int(time.time())}",
+                        timestamp=time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                        canon_version="1.0.0",
+                    )
+                    return crate_name, error_trace
+        
+        tasks = [analyze_single_crate(name) for name in crate_names]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        analysis_results: Dict[str, SacredChainTrace] = {}
+        for result in results:
+            if isinstance(result, tuple):
+                crate_name, trace = result
+                analysis_results[crate_name] = trace
+            else:
+                self.logger.error(f"❌ Unexpected result type: {type(result)}")
+        
+        self.logger.info(f"✅ Completed analysis of {len(analysis_results)} crates")
+        return analysis_results
+    
+    def get_pipeline_summary(self) -> Dict[str, Any]:
+        """Get a summary of the pipeline configuration and status"""
+        summary = {
+            "pipeline_version": "1.3.0",
+            "components": {
+                "irl_engine": self.irl_engine is not None,
+                "scraper": self.scraper is not None,
+                "canon_registry": self.canon_registry is not None,
+            },
+            "ai_components": {
+                "unified_llm_processor": self.unified_llm_processor is not None,
+                "azure_openai_enricher": self.ai_enricher is not None,
+                "crate_analyzer": self.crate_analyzer is not None,
+            },
+            "configuration": {
+                "max_tokens": self.config.max_tokens,
+                "checkpoint_interval": self.config.checkpoint_interval,
+                "batch_size": self.config.batch_size,
+                "enable_crawl4ai": self.config.enable_crawl4ai,
+            }
+        }
+        
+        # Add LLM configuration if available
+        if self.llm_config:
+            summary["llm_configuration"] = {
+                "provider": self.llm_config.provider,
+                "model": self.llm_config.model,
+                "temperature": self.llm_config.temperature,
+                "max_tokens": self.llm_config.max_tokens,
+                "timeout": self.llm_config.timeout,
+                "max_retries": self.llm_config.max_retries
+            }
+        elif self.config.use_azure_openai:
+            summary["llm_configuration"] = {
+                "provider": "azure_openai",
+                "model": self.config.azure_openai_deployment_name,
+                "endpoint": self.config.azure_openai_endpoint,
+                "max_tokens": self.config.max_tokens
+            }
+        
+        return summary
+
+
+def create_pipeline_from_args(args: argparse.Namespace) -> UnifiedSigilPipeline:
+    """Create pipeline from command line arguments"""
+    # Create base config
+    config = PipelineConfig()
+    
+    # Create LLM config if LLM arguments are provided
+    llm_config = None
+    if hasattr(args, 'llm_provider') and args.llm_provider:
+        if UNIFIED_LLM_AVAILABLE and LLMConfig is not None:
+            llm_config = LLMConfig(
+                provider=args.llm_provider,
+                model=args.llm_model or "gpt-4",
+                api_base=getattr(args, 'llm_api_base', None),
+                api_key=getattr(args, 'llm_api_key', None),
+                temperature=getattr(args, 'llm_temperature', 0.2),
+                max_tokens=getattr(args, 'llm_max_tokens', 256),
+                timeout=getattr(args, 'llm_timeout', 30),
+                max_retries=getattr(args, 'llm_max_retries', 3),
+                # Provider-specific settings
+                azure_deployment=getattr(args, 'azure_deployment', None),
+                azure_api_version=getattr(args, 'azure_api_version', None),
+                ollama_host=getattr(args, 'ollama_host', None),
+                lmstudio_host=getattr(args, 'lmstudio_host', None)
+            )
+        else:
+            logging.warning("Unified LLM processor not available, falling back to Azure OpenAI")
+    
+    return UnifiedSigilPipeline(config, llm_config)
+
+
+def add_llm_arguments(parser: argparse.ArgumentParser) -> None:
+    """Add LLM-related command line arguments to the parser"""
+    llm_group = parser.add_argument_group('LLM Configuration')
+    
+    llm_group.add_argument(
+        '--llm-provider',
+        choices=['azure', 'ollama', 'lmstudio', 'openai', 'anthropic', 'google', 'cohere', 'huggingface'],
+        help='LLM provider to use (default: azure)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-model',
+        help='Model name/identifier (e.g., gpt-4, llama2, claude-3)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-api-base',
+        help='API base URL (for local providers or custom endpoints)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-api-key',
+        help='API key (if required by provider)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-temperature',
+        type=float,
+        default=0.2,
+        help='Temperature for LLM generation (default: 0.2)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-max-tokens',
+        type=int,
+        default=256,
+        help='Maximum tokens for LLM generation (default: 256)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-timeout',
+        type=int,
+        default=30,
+        help='Timeout for LLM API calls in seconds (default: 30)'
+    )
+    
+    llm_group.add_argument(
+        '--llm-max-retries',
+        type=int,
+        default=3,
+        help='Maximum retries for LLM API calls (default: 3)'
+    )
+    
+    # Provider-specific arguments
+    azure_group = parser.add_argument_group('Azure OpenAI Configuration')
+    azure_group.add_argument(
+        '--azure-deployment',
+        help='Azure OpenAI deployment name'
+    )
+    azure_group.add_argument(
+        '--azure-api-version',
+        help='Azure OpenAI API version'
+    )
+    
+    ollama_group = parser.add_argument_group('Ollama Configuration')
+    ollama_group.add_argument(
+        '--ollama-host',
+        default='http://localhost:11434',
+        help='Ollama host URL (default: http://localhost:11434)'
+    )
+    
+    lmstudio_group = parser.add_argument_group('LM Studio Configuration')
+    lmstudio_group.add_argument(
+        '--lmstudio-host',
+        default='http://localhost:1234/v1',
+        help='LM Studio host URL (default: http://localhost:1234/v1)'
+    )
+
+
+async def quick_analyze_crate(crate_name: str, config: Optional[PipelineConfig] = None, llm_config: Optional[Any] = None) -> SacredChainTrace:
+    """Quick analysis of a single crate"""
+    if config is None:
+        config = PipelineConfig()
+    
+    async with UnifiedSigilPipeline(config, llm_config) as pipeline:
+        return await pipeline.analyze_crate(crate_name)
+
+
+async def batch_analyze_crates(crate_names: List[str], config: Optional[PipelineConfig] = None, llm_config: Optional[Any] = None) -> Dict[str, SacredChainTrace]:
+    """Batch analysis of multiple crates"""
+    if config is None:
+        config = PipelineConfig()
+    
+    async with UnifiedSigilPipeline(config, llm_config) as pipeline:
+        return await pipeline.analyze_multiple_crates(crate_names) 

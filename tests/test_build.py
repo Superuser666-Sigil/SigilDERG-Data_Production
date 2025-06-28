@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 #!/usr/bin/env python3
 """Quick test to verify the balanced crate dataset works correctly."""
 
@@ -7,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
-def test_balanced_crates():
+def test_balanced_crates() -> None:
     """Test the balanced crate dataset without loading the model."""
     try:
         from rust_crate_pipeline.config import PipelineConfig
@@ -25,23 +26,17 @@ def test_balanced_crates():
 
         unique_crates = set(crates)
         duplicates = [c for c in unique_crates if crates.count(c) > 1]
-        assert len(unique_crates) == len(
-            crates
-        ), f"Duplicates found: {duplicates}"
+        assert len(unique_crates) == len(crates), f"Duplicates found: {duplicates}"
         print("   ✅ No duplicates found")
 
-        ml_ai_start = (
-            crates.index("tokenizers") if "tokenizers" in crates else -1
-        )
+        ml_ai_start = crates.index("tokenizers") if "tokenizers" in crates else -1
         assert ml_ai_start != -1, "ML/AI section not found"
         ml_crates = crates[ml_ai_start:]
         ml_percentage = (len(ml_crates) / len(crates)) * 100
         print(f"   📈 ML/AI crates: {len(ml_crates)} ({ml_percentage:.1f}%)")
         other_crates_count = len(crates) - len(ml_crates)
         other_percentage = 100 - ml_percentage
-        print(
-            f"   📈 Other crates: {other_crates_count} ({other_percentage:.1f}%)"
-        )
+        print(f"   📈 Other crates: {other_crates_count} ({other_percentage:.1f}%)")
         assert ml_percentage < 20, "Dataset still unbalanced"
         print("   ✅ Dataset successfully balanced!")
     except ImportError as e:
@@ -58,7 +53,7 @@ def test_balanced_crates():
 if __name__ == "__main__":
     success = test_balanced_crates()
     print(f"\n🚀 BUILD & TEST: {'SUCCESS' if success else 'FAILED'}")
-    deployment_msg = "📦 Version 1.2.5 ready for deployment!"
+    deployment_msg = "\U0001F4E6 Version 1.3.0 ready for deployment!"
     issue_msg = "❌ Issues need to be resolved"
     print(deployment_msg if success else issue_msg)
     sys.exit(0 if success else 1)

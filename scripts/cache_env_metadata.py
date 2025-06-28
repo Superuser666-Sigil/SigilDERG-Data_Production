@@ -1,3 +1,4 @@
+from typing import Dict, List, Tuple, Optional, Any
 import sqlite3
 from datetime import datetime, timezone
 
@@ -14,7 +15,7 @@ ENV_INFO = {
 }
 
 
-def cache_env_metadata(db_path: str = "sigil_rag_cache.db"):
+def cache_env_metadata(db_path: str = "sigil_rag_cache.db") -> None:
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
     cur.execute(
@@ -34,7 +35,9 @@ def cache_env_metadata(db_path: str = "sigil_rag_cache.db"):
     )
     cur.execute(
         """
-        INSERT INTO environment_metadata (label, os_name, os_version, system_type, processor, bios_version, enforcement_rank, timestamp)
+        INSERT INTO environment_metadata (label, os_name, os_version, system_type,
+                                         processor, bios_version, enforcement_rank,
+                                         timestamp)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         """,
         (

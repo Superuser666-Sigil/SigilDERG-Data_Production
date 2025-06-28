@@ -263,7 +263,7 @@ def validate_image_contents() -> bool:
     return all_passed
 
 
-def cleanup_test_containers():
+def cleanup_test_containers() -> None:
     """Clean up any test containers"""
     print("\n" + "=" * 70)
     print("🧹 CLEANUP")
@@ -280,7 +280,7 @@ def cleanup_test_containers():
         print("⚠️  Cleanup skipped (optional)")
 
 
-def main():
+def main() -> None:
     """Main validation logic"""
     print("=" * 70)
     print("🚀 STARTING COMPREHENSIVE DOCKER VALIDATION 🚀")

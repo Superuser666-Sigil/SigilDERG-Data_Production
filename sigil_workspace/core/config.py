@@ -65,12 +65,8 @@ class WorkspaceConfig(BaseModel):
     output_directory: str = Field(
         default="./output", description="Directory for output files"
     )
-    log_directory: str = Field(
-        default="./logs", description="Directory for log files"
-    )
-    cache_enabled: bool = Field(
-        default=True, description="Enable request caching"
-    )
+    log_directory: str = Field(default="./logs", description="Directory for log files")
+    cache_enabled: bool = Field(default=True, description="Enable request caching")
     cache_ttl: int = Field(
         default=3600, ge=0, description="Cache time-to-live in seconds"
     )
@@ -176,13 +172,8 @@ class SacredChainConfig:
         if self.hash_algorithm not in ["sha256", "sha512", "blake2b"]:
             errors.append("hash_algorithm must be sha256, sha512, or blake2b")
 
-        if (
-            self.confidence_score_precision < 1
-            or self.confidence_score_precision > 10
-        ):
-            errors.append(
-                "confidence_score_precision must be between 1 and 10"
-            )
+        if self.confidence_score_precision < 1 or self.confidence_score_precision > 10:
+            errors.append("confidence_score_precision must be between 1 and 10")
 
         if not (
             0

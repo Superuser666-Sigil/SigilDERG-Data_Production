@@ -30,9 +30,7 @@ def find_project_root() -> str:
         )
         return result.stdout.strip()
     except (subprocess.CalledProcessError, FileNotFoundError) as e:
-        die(
-            f"Failed to find project root. Is this a git repository? Error: {e}"
-        )
+        die(f"Failed to find project root. Is this a git repository? Error: {e}")
 
 
 def main() -> None:
@@ -48,9 +46,7 @@ def main() -> None:
 
     db_path = os.path.join(project_root, "sigil_rag_cache.db")
     hash_path = os.path.join(project_root, "sigil_rag_cache.hash")
-    validator_script = os.path.join(
-        project_root, "scripts", "validate_db_hash.py"
-    )
+    validator_script = os.path.join(project_root, "scripts", "validate_db_hash.py")
 
     if not os.path.exists(validator_script):
         die(f"Core validation script not found: {validator_script}")

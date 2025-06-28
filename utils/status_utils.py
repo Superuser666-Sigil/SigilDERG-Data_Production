@@ -12,7 +12,7 @@ This module provides Rule Zero-aligned status reporting with:
 import sys
 import time
 import platform
-from typing import Any
+from typing import Any, Union
 
 from collections.abc import Callable
 from functools import wraps
@@ -22,7 +22,7 @@ import logging
 class StatusIndicator:
     """Cross-platform status indicator with fallback symbols."""
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.platform = platform.system().lower()
         self.supports_unicode = self._check_unicode_support()
 
@@ -36,7 +36,7 @@ class StatusIndicator:
             else:
                 # Linux/Unix typically support Unicode
                 return True
-        except:
+        except (OSError, UnicodeError, AttributeError):
             return False
 
     @property
@@ -105,31 +105,35 @@ def with_retry(
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         @wraps(func)
         def wrapper(*args: Any, **kwargs: Any) -> Any:
-            last_exception: BaseException | None = None
+            last_exception: Union[BaseException, None] = None
             current_delay = delay
             for attempt in range(max_attempts):
                 try:
                     if attempt > 0:
                         print(
-                            f"{status.running} Retry attempt {attempt}/{max_attempts-1} for {func.__name__}"
+                            f"{status.running} Retry attempt {attempt}/"
+                            f"{max_attempts-1} for {func.__name__}"
                         )
                         time.sleep(current_delay)
                         current_delay *= backoff_factor
                     result = func(*args, **kwargs)
                     if attempt > 0:
                         print(
-                            f"{status.success} {func.__name__} succeeded on retry {attempt}"
+                            f"{status.success} {func.__name__} succeeded on "
+                            f"retry {attempt}"
                         )
                     return result
                 except exceptions as e:
                     last_exception = e
                     if attempt < max_attempts - 1:
                         print(
-                            f"{status.warning} {func.__name__} failed (attempt {attempt+1}/{max_attempts}): {str(e)}"
+                            f"{status.warning} {func.__name__} failed (attempt "
+                            f"{attempt+1}/{max_attempts}): {str(e)}"
                         )
                     else:
                         print(
-                            f"{status.error} {func.__name__} failed after {max_attempts} attempts: {str(e)}"
+                            f"{status.error} {func.__name__} failed after "
+                            f"{max_attempts} attempts: {str(e)}"
                         )
             # If we get here, all attempts failed
             if last_exception is not None:
@@ -166,9 +170,7 @@ def timed_operation(
             except Exception as e:
                 end_time = time.time()
                 duration = end_time - start_time
-                print(
-                    f"{status.error} {name} failed after {duration:.2f}s: {str(e)}"
-                )
+                print(f"{status.error} {name} failed after {duration:.2f}s: {str(e)}")
                 raise
 
         return wrapper
@@ -179,8 +181,8 @@ def timed_operation(
 def status_report(
     task: str,
     success: bool,
-    duration: float | None = None,
-    details: str | None = None,
+    duration: Union[float, None] = None,
+    details: Union[str, None] = None,
     level: str = "INFO",
 ) -> None:
     """
@@ -221,7 +223,7 @@ def status_report(
 class ProgressTracker:
     """Track progress of multi-step operations."""
 
-    def __init__(self, total_steps: int, operation_name: str = "Operation"):
+    def __init__(self, total_steps: int, operation_name: str = "Operation") -> None:
         self.total_steps = total_steps
         self.current_step = 0
         self.operation_name = operation_name
@@ -250,7 +252,8 @@ class ProgressTracker:
             eta_text = ""
 
         print(
-            f"{status.running} {self.operation_name} [{self.current_step}/{self.total_steps}] "
+            f"{status.running} {self.operation_name} "
+            f"[{self.current_step}/{self.total_steps}] "
             f"({percentage:.1f}%){step_display} - {elapsed:.1f}s elapsed{eta_text}"
         )
 
@@ -291,9 +294,7 @@ def platform_info() -> dict[str, str]:
         "platform_version": platform.version(),
         "python_version": platform.python_version(),
         "encoding": (
-            sys.stdout.encoding
-            if hasattr(sys.stdout, "encoding")
-            else "unknown"
+            sys.stdout.encoding if hasattr(sys.stdout, "encoding") else "unknown"
         ),
         "unicode_support": str(StatusIndicator().supports_unicode),
     }
@@ -332,7 +333,7 @@ if __name__ == "__main__":
 
     # Demo retry mechanism
     @with_retry(max_attempts=2, delay=0.1)
-    def flaky_function(should_fail: bool = False):
+    def flaky_function(should_fail: bool = False) -> None:
         if should_fail:
             raise ValueError("Simulated failure")
         return "Success!"
