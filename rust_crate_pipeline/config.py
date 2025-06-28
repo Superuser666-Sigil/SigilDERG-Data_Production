@@ -2,7 +2,7 @@
 import os
 import warnings
 from dataclasses import dataclass, field, asdict
-from typing import Any, Union, TYPE_CHECKING
+from typing import Any, Union, TYPE_CHECKING, Optional
 
 if TYPE_CHECKING:
     from typing import Dict, List
@@ -37,13 +37,20 @@ class PipelineConfig:
     )
     crawl4ai_timeout: int = 30
     output_path: str = "output"
+    llm_max_retries: int = 3
+    output_dir: str = "output"
+    verbose: bool = False
+    budget: Optional[float] = None
     
     # Azure OpenAI Configuration
     use_azure_openai: bool = True
-    azure_openai_endpoint: str = "https://david-mc08tirc-eastus2.services.ai.azure.com/"
-    azure_openai_api_key: str = "2hw0jjqwjtKke7DMGiJSPtlj6GhuLCNdQWPXoDGN2I3JMvzp4PmGJQQJ99BFACHYHv6XJ3w3AAAAACOGFPYA"
-    azure_openai_deployment_name: str = "gpt-4o"  # or your specific deployment name
+    azure_openai_endpoint: str = os.getenv("AZURE_OPENAI_ENDPOINT", "https://david-mc08tirc-eastus2.services.ai.azure.com/")
+    azure_openai_api_key: str = os.getenv("AZURE_OPENAI_API_KEY", "2hw0jjqwjtKke7DMGiJSPtlj6GhuLCNdQWPXoDGN2I3JMvzp4PmGJQQJ99BFACHYHv6XJ3w3AAAAACOGFPYA")
+    azure_openai_deployment_name: str = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o")
     azure_openai_api_version: str = "2024-02-15-preview"
+
+    class Config:
+        validate_assignment = True
 
 
 @dataclass

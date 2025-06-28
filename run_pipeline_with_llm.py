@@ -40,9 +40,10 @@ import json
 from pathlib import Path
 from typing import List, Optional
 from dataclasses import asdict
+import time
 
 # Add the project root to the path
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.append(str(Path(__file__).parent.parent))
 
 from rust_crate_pipeline.unified_pipeline import (
     UnifiedSigilPipeline, 
@@ -52,6 +53,11 @@ from rust_crate_pipeline.unified_pipeline import (
     batch_analyze_crates
 )
 from rust_crate_pipeline.config import PipelineConfig
+from rust_crate_pipeline.unified_llm_processor import (
+    create_llm_processor_from_args,
+    BudgetManager,
+)
+from rust_crate_pipeline.config import CrateMetadata, EnrichedCrate
 
 
 def setup_logging(verbose: bool = False) -> None:
@@ -62,7 +68,7 @@ def setup_logging(verbose: bool = False) -> None:
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
         handlers=[
             logging.StreamHandler(sys.stdout),
-            logging.FileHandler('pipeline.log')
+            logging.FileHandler('pipeline.log', encoding='utf-8')
         ]
     )
 
@@ -80,12 +86,8 @@ def validate_llm_config(args: argparse.Namespace) -> bool:
             return False
     
     if args.llm_provider == 'azure':
-        if not args.llm_api_key:
-            print("❌ Azure API key required. Use --llm-api-key.")
-            return False
-        if not args.azure_deployment:
-            print("❌ Azure deployment name required. Use --azure-deployment.")
-            return False
+        # These are now loaded from environment variables by default
+        pass
     
     if not args.llm_model:
         print("❌ Model name required. Use --llm-model.")
@@ -148,8 +150,30 @@ def print_llm_provider_info(provider: str) -> None:
     print(f"🧠 Models: {info['models']}")
 
 
-async def main() -> None:
-    """Main function"""
+def report_progress(
+    processed_crates: int,
+    total_crates: int,
+    start_time: float,
+    budget_manager: Optional[BudgetManager] = None,
+) -> None:
+    """Report the progress of the pipeline run."""
+    elapsed_time = time.time() - start_time
+    avg_time_per_crate = elapsed_time / processed_crates if processed_crates > 0 else 0
+    
+    progress_message = (
+        f"Processed {processed_crates}/{total_crates} crates "
+        f"({avg_time_per_crate:.2f}s/crate, total: {elapsed_time:.2f}s)"
+    )
+
+    if budget_manager:
+        progress_message += (
+            f" | Cost: ${budget_manager.get_total_cost():.4f}"
+        )
+    
+    print(progress_message)
+
+
+def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Unified Rust Crate Pipeline with Multi-LLM Provider Support",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -163,8 +187,14 @@ async def main() -> None:
     parser.add_argument(
         '--crates',
         nargs='+',
-        required=True,
+        required=False,
         help='List of Rust crates to analyze'
+    )
+    
+    parser.add_argument(
+        '--crates-file',
+        type=str,
+        help='Path to a file containing a list of Rust crates to analyze (one per line)'
     )
     
     parser.add_argument(
@@ -186,11 +216,39 @@ async def main() -> None:
         help='Number of crates to process in parallel (default: 5)'
     )
     
-    args = parser.parse_args()
+    parser.add_argument(
+        "--budget",
+        type=float,
+        default=None,
+        help="Maximum budget for LLM API calls.",
+    )
+    
+    return parser.parse_args()
+
+
+async def main() -> None:
+    """Main function"""
+    args = parse_args()
     
     # Setup logging
     setup_logging(args.verbose)
     logger = logging.getLogger(__name__)
+    
+    if not args.crates and not args.crates_file:
+        logger.error("You must provide either --crates or --crates-file.")
+        sys.exit(1)
+
+    if args.crates_file:
+        try:
+            with open(args.crates_file, 'r') as f:
+                args.crates = [line.strip() for line in f if line.strip()]
+        except FileNotFoundError:
+            logger.error(f"Crates file not found: {args.crates_file}")
+            sys.exit(1)
+
+    if not args.crates:
+        logger.error("No crates to analyze.")
+        sys.exit(1)
     
     # Validate configuration
     if not validate_llm_config(args):
@@ -199,67 +257,78 @@ async def main() -> None:
     # Print provider information
     print_llm_provider_info(args.llm_provider)
     
+    # Create LLM processor
+    try:
+        llm_processor = create_llm_processor_from_args(
+            provider=args.llm_provider,
+            model=args.llm_model,
+            api_base=args.llm_api_base,
+            api_key=args.llm_api_key,
+            temperature=args.llm_temperature,
+            max_tokens=args.llm_max_tokens,
+            azure_deployment=args.azure_deployment,
+            azure_api_version=args.azure_api_version,
+            ollama_host=args.ollama_host,
+            lmstudio_host=args.lmstudio_host,
+            budget=args.budget,
+        )
+    except ImportError as e:
+        logger.error(f"Failed to create LLM processor: {e}")
+        sys.exit(1)
+
     # Create output directory
     output_dir = Path(args.output_dir)
     output_dir.mkdir(exist_ok=True)
+
+    # Process crates
+    crates_to_process = args.crates
+    total_crates = len(crates_to_process)
+    start_time = time.time()
     
-    try:
-        # Create pipeline from arguments
-        logger.info("🚀 Initializing unified pipeline...")
-        pipeline = create_pipeline_from_args(args)
-        
-        # Print pipeline summary
-        summary = pipeline.get_pipeline_summary()
-        logger.info(f"📊 Pipeline Summary: {summary}")
-        
-        # Analyze crates
-        logger.info(f"🔍 Starting analysis of {len(args.crates)} crates...")
-        
-        if len(args.crates) == 1:
-            # Single crate analysis
-            crate_name = args.crates[0]
-            logger.info(f"📦 Analyzing single crate: {crate_name}")
+    logger.info(f"Starting LLM enrichment for {total_crates} crates...")
+    
+    # Create a pipeline config to pass to quick_analyze_crate
+    pipeline_config = PipelineConfig(
+        use_azure_openai=args.llm_provider == 'azure',
+        azure_openai_endpoint=args.llm_api_base,
+        azure_openai_api_key=args.llm_api_key,
+        azure_openai_deployment_name=args.azure_deployment,
+        azure_openai_api_version=args.azure_api_version,
+    )
+
+    for i, crate_name in enumerate(crates_to_process):
+        try:
+            logger.info(f"Analyzing crate: {crate_name}")
             
-            trace = await quick_analyze_crate(crate_name, pipeline.config, pipeline.llm_config)
+            # First, get the basic metadata by running the analysis part of the pipeline
+            trace = await quick_analyze_crate(crate_name, pipeline_config, llm_processor.config)
+            crate_metadata_dict = trace.audit_info.get("crate_metadata")
+
+            if not crate_metadata_dict:
+                logger.error(f"Could not retrieve metadata for {crate_name}. Skipping enrichment.")
+                continue
             
-            # Save results
-            output_file = output_dir / f"{crate_name}_analysis.json"
-            with open(output_file, 'w') as f:
-                json.dump(asdict(trace), f, indent=2, default=str)
+            # Re-create the CrateMetadata object from the dictionary
+            crate_metadata = CrateMetadata(**crate_metadata_dict)
+
+            logger.info(f"Enriching crate: {crate_name}")
+            # Enrich crate with LLM
+            enriched_crate = llm_processor.enrich_crate(crate_metadata)
             
-            logger.info(f"✅ Analysis completed for {crate_name}")
-            logger.info(f"📄 Results saved to: {output_file}")
+            # Save enriched data
+            output_file = output_dir / f"{crate_name}_enriched.json"
+            with open(output_file, "w", encoding="utf-8") as f:
+                json.dump(asdict(enriched_crate), f, indent=4)
             
-        else:
-            # Batch analysis
-            logger.info(f"📦 Analyzing {len(args.crates)} crates in batch...")
+            logger.info(f"Successfully processed and saved: {output_file}")
             
-            results = await batch_analyze_crates(args.crates, pipeline.config, pipeline.llm_config)
+        except Exception as e:
+            logger.error(f"Failed to process {crate_name}: {e}")
             
-            # Save results
-            for crate_name, trace in results.items():
-                output_file = output_dir / f"{crate_name}_analysis.json"
-                with open(output_file, 'w') as f:
-                    json.dump(asdict(trace), f, indent=2, default=str)
-                logger.info(f"📄 Results saved to: {output_file}")
-            
-            logger.info(f"✅ Batch analysis completed for {len(results)} crates")
-        
-        # Print final summary
-        successful = len([c for c in args.crates if (output_dir / f"{c}_analysis.json").exists()])
-        logger.info(f"🎉 Pipeline completed successfully!")
-        logger.info(f"📊 Processed: {successful}/{len(args.crates)} crates")
-        logger.info(f"📁 Output directory: {output_dir.absolute()}")
-        
-    except KeyboardInterrupt:
-        logger.info("⏹️  Pipeline interrupted by user")
-        sys.exit(1)
-    except Exception as e:
-        logger.error(f"❌ Pipeline failed: {e}")
-        if args.verbose:
-            import traceback
-            traceback.print_exc()
-        sys.exit(1)
+        finally:
+            report_progress(i + 1, total_crates, start_time, llm_processor.budget_manager)
+
+    logger.info("LLM enrichment pipeline finished.")
 
 
 if __name__ == "__main__":

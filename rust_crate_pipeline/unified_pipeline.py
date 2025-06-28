@@ -3,6 +3,11 @@ import json
 import logging
 import time
 import argparse
+import os
+import tempfile
+import aiohttp
+import tarfile
+import gzip
 from pathlib import Path
 from typing import Dict, List, Optional, Any, Union, TYPE_CHECKING
 
@@ -62,8 +67,6 @@ class UnifiedSigilPipeline:
                 "verbose": False,
                 "word_count_threshold": 10,
                 "crawl_config": {
-                    "max_retries": self.config.max_retries,
-                    "timeout": self.config.crawl4ai_timeout,
                 }
             }
             self.scraper = UnifiedScraper(scraper_config)
@@ -108,17 +111,22 @@ class UnifiedSigilPipeline:
         if self.scraper:
             await self.scraper.__aexit__(exc_type, exc_val, exc_tb)
     
-    async def analyze_crate(self, crate_name: str) -> SacredChainTrace:
+    async def analyze_crate(self, crate_name: str, crate_version: Optional[str] = None) -> SacredChainTrace:
         if not crate_name or not isinstance(crate_name, str):
             raise ValueError("crate_name must be a non-empty string")
         
         self.logger.info(f"🔍 Starting analysis of crate: {crate_name}")
         
         try:
+            if crate_version is None:
+                crate_version = await self._get_latest_crate_version(crate_name)
+                if not crate_version:
+                    raise RuntimeError(f"Could not determine latest version for {crate_name}")
+            
             documentation_results = await self._gather_documentation(crate_name)
             
             sacred_chain_trace = await self._perform_sacred_chain_analysis(
-                crate_name, documentation_results
+                crate_name, crate_version, documentation_results
             )
             
             await self._generate_analysis_report(crate_name, sacred_chain_trace)
@@ -155,7 +163,7 @@ class UnifiedSigilPipeline:
             raise
     
     async def _perform_sacred_chain_analysis(
-        self, crate_name: str, documentation_results: Dict[str, ScrapingResult]
+        self, crate_name: str, crate_version: str, documentation_results: Dict[str, ScrapingResult]
     ) -> SacredChainTrace:
         if not self.irl_engine:
             raise RuntimeError("IRL Engine not initialized")
@@ -173,7 +181,7 @@ class UnifiedSigilPipeline:
                 sacred_chain_trace.audit_info["documentation_sources"] = list(documentation_results.keys())
             
             # Add crate analysis results if available
-            await self._add_crate_analysis_results(crate_name, sacred_chain_trace)
+            await self._add_crate_analysis_results(crate_name, crate_version, sacred_chain_trace)
             
             # Add AI enrichment if available
             await self._add_ai_enrichment(crate_name, sacred_chain_trace)
@@ -184,22 +192,144 @@ class UnifiedSigilPipeline:
             self.logger.error(f"❌ Sacred Chain analysis failed: {e}")
             raise
     
-    async def _add_crate_analysis_results(self, crate_name: str, trace: SacredChainTrace) -> None:
+    async def _add_crate_analysis_results(self, crate_name: str, crate_version: str, trace: SacredChainTrace) -> None:
         """Add cargo analysis results to the sacred chain trace"""
         try:
-            # For now, we'll use a temporary directory approach
-            # In a real implementation, you'd download/extract the crate first
-            self.logger.info(f"🔍 Adding crate analysis results for {crate_name}")
+            self.logger.info(f"🔍 Adding crate analysis results for {crate_name} v{crate_version}")
             
-            # This would be implemented based on your crate source strategy
-            # For now, we'll add a placeholder
-            trace.audit_info["crate_analysis"] = {
-                "status": "not_implemented",
-                "note": "Crate analysis requires downloading/extracting the crate source"
-            }
-            
+            with tempfile.TemporaryDirectory() as temp_dir_str:
+                temp_dir = Path(temp_dir_str)
+                crate_source_path = await self._download_and_extract_crate(crate_name, crate_version, temp_dir)
+
+                if not crate_source_path:
+                    trace.audit_info["crate_analysis"] = {"status": "error", "note": "Failed to download or extract crate."}
+                    return
+
+                check_results = await self._run_cargo_command(
+                    ["cargo", "check", "--message-format=json"],
+                    cwd=crate_source_path
+                )
+                
+                clippy_results = await self._run_cargo_command(
+                    ["cargo", "clippy", "--message-format=json"],
+                    cwd=crate_source_path
+                )
+
+                audit_results = await self._run_cargo_audit(crate_source_path)
+
+                trace.audit_info["crate_analysis"] = {
+                    "status": "completed",
+                    "check": check_results,
+                    "clippy": clippy_results,
+                    "audit": audit_results,
+                    "note": "Crate analysis performed."
+                }
+
         except Exception as e:
             self.logger.warning(f"⚠️  Failed to add crate analysis results: {e}")
+            trace.audit_info["crate_analysis"] = {"status": "error", "note": str(e)}
+    
+    async def _download_and_extract_crate(self, crate_name: str, crate_version: str, target_dir: Path) -> Optional[Path]:
+        """Downloads and extracts a crate from crates.io."""
+        crate_url = f"https://static.crates.io/crates/{crate_name}/{crate_name}-{crate_version}.crate"
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(crate_url) as response:
+                    if response.status != 200:
+                        self.logger.error(f"Failed to download {crate_url}: HTTP {response.status}")
+                        return None
+                    
+                    # Save the .crate file
+                    crate_file_path = target_dir / f"{crate_name}-{crate_version}.crate"
+                    with open(crate_file_path, "wb") as f:
+                        f.write(await response.read())
+                    
+                    # Extract the tarball
+                    with gzip.open(crate_file_path, 'rb') as gz_file:
+                        with tarfile.open(fileobj=gz_file, mode='r') as tar_file:
+                            tar_file.extractall(path=target_dir)
+                    
+                    # The crate is usually extracted into a directory named `{crate_name}-{crate_version}`
+                    crate_source_dir = target_dir / f"{crate_name}-{crate_version}"
+                    if crate_source_dir.is_dir():
+                        return crate_source_dir
+                    else:
+                        self.logger.error(f"Could not find extracted directory: {crate_source_dir}")
+                        return None
+
+        except Exception as e:
+            self.logger.error(f"Error downloading or extracting crate {crate_name}: {e}")
+            return None
+    
+    async def _get_latest_crate_version(self, crate_name: str) -> Optional[str]:
+        """Fetches the latest version of a crate from crates.io API."""
+        api_url = f"https://crates.io/api/v1/crates/{crate_name}"
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(api_url) as response:
+                    if response.status != 200:
+                        self.logger.error(f"Failed to fetch crate info from {api_url}: HTTP {response.status}")
+                        return None
+                    data = await response.json()
+                    return data.get("crate", {}).get("max_version")
+        except Exception as e:
+            self.logger.error(f"Error fetching latest crate version for {crate_name}: {e}")
+            return None
+    
+    async def _run_cargo_command(self, command: List[str], cwd: Path) -> List[Dict[str, Any]]:
+        """Runs a cargo command and returns the parsed JSON output."""
+        self.logger.info(f"Running command: {' '.join(command)} in {cwd}")
+        process = await asyncio.create_subprocess_exec(
+            *command,
+            cwd=cwd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE
+        )
+        
+        stdout, stderr = await process.communicate()
+        
+        if process.returncode != 0:
+            self.logger.warning(f"Cargo command failed with exit code {process.returncode}")
+            self.logger.warning(f"Stderr: {stderr.decode(errors='ignore')}")
+
+        results = []
+        if stdout:
+            for line in stdout.decode(errors='ignore').splitlines():
+                if line.strip():
+                    try:
+                        results.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        self.logger.warning(f"Could not parse JSON line: {line}")
+        return results
+    
+    async def _run_cargo_audit(self, cwd: Path) -> Optional[Dict[str, Any]]:
+        """Runs cargo audit and returns the parsed JSON output."""
+        command = ["cargo", "audit", "--json"]
+        self.logger.info(f"Running command: {' '.join(command)} in {cwd}")
+        process = await asyncio.create_subprocess_exec(
+            *command,
+            cwd=cwd,
+            stdout=asyncio.subprocess.PIPE,
+            stderr=asyncio.subprocess.PIPE
+        )
+        
+        stdout, stderr = await process.communicate()
+        
+        if process.returncode != 0:
+            # cargo-audit exits with a non-zero status code if vulnerabilities are found.
+            # We still want to parse the output.
+            self.logger.info(f"Cargo audit finished with exit code {process.returncode}")
+        
+        if stdout:
+            try:
+                return json.loads(stdout)
+            except json.JSONDecodeError:
+                self.logger.warning(f"Could not parse cargo audit JSON output: {stdout.decode(errors='ignore')}")
+        
+        if stderr:
+             self.logger.warning(f"Stderr from cargo audit: {stderr.decode(errors='ignore')}")
+
+        return None
     
     async def _add_ai_enrichment(self, crate_name: str, trace: SacredChainTrace) -> None:
         """Add AI enrichment results to the sacred chain trace"""
@@ -244,6 +374,9 @@ class UnifiedSigilPipeline:
                 enhanced_dependencies=[]
             )
             
+            # Store the metadata used for enrichment
+            trace.audit_info["crate_metadata"] = mock_crate.to_dict()
+
             # Enrich the crate using unified LLM processor
             enriched_crate = self.unified_llm_processor.enrich_crate(mock_crate)
             
@@ -295,6 +428,9 @@ class UnifiedSigilPipeline:
                 enhanced_dependencies=[]
             )
             
+            # Store the metadata used for enrichment
+            trace.audit_info["crate_metadata"] = mock_crate.to_dict()
+
             # Enrich the crate using Azure OpenAI
             enriched_crate = self.ai_enricher.enrich_crate(mock_crate)
             

@@ -51,12 +51,29 @@ python run_pipeline_with_llm.py --llm-provider <provider> --llm-model <model> --
 ### Provider-Specific Configuration
 
 #### Azure OpenAI
+
+Set the following environment variables:
+```bash
+export AZURE_OPENAI_ENDPOINT="<your_endpoint>"
+export AZURE_OPENAI_API_KEY="<your_api_key>"
+export AZURE_OPENAI_DEPLOYMENT_NAME="<your_deployment_name>"
+```
+
+Then, run the pipeline:
 ```bash
 python run_pipeline_with_llm.py \
   --llm-provider azure \
   --llm-model gpt-4o \
-  --llm-api-key YOUR_AZURE_API_KEY \
-  --azure-deployment gpt-4o \
+  --crates tokio serde
+```
+
+You can still override these with command-line arguments if needed:
+```bash
+python run_pipeline_with_llm.py \\
+  --llm-provider azure \\
+  --llm-model gpt-4o \\
+  --llm-api-key YOUR_AZURE_API_KEY \\
+  --azure-deployment YOUR_AZURE_DEPLOYMENT \\
   --crates tokio serde
 ```
 

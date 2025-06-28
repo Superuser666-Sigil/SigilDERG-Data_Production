@@ -1,0 +1,2553 @@
+[
+  {
+    "execution_id": "exec-b1596972-a90872cb-1751108102",
+    "timestamp": "2025-06-28T10:55:02.691085+00:00",
+    "sacred_chain": {
+      "input_data": "embassy-sync",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'embassy-sync' -> 'embassy-sync'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "embassy-sync",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "documentation_quality": 3.3333333333333335,
+        "documentation_sources": [
+          "crates_io",
+          "docs_rs",
+          "lib_rs"
+        ],
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libpin_utils-6131d7e882b3d82e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#stable_deref_trait@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\stable_deref_trait-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "stable_deref_trait",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\stable_deref_trait-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libstable_deref_trait-4c7563f1c0561c5a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libpin_project_lite-360f5ac79d6490a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_sink-d7a9b7b60614ee0f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#critical-section@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\critical-section-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "critical_section",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\critical-section-1.2.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libcritical_section-10a07234f64ca891.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_task-17b7532ad7470ebd.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_core-8a641b923a7e2731.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embedded_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-0.6.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembedded_io-d370632ce9dca65e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#byteorder@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\byteorder-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "byteorder",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\byteorder-1.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libbyteorder-9ac94967ec0e15f0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-b63f140f737a4fac\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-b63f140f737a4fac\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-18c4555ea024bda2\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-18c4555ea024bda2\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-1172fcd630867290\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-1172fcd630867290\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hash32@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hash32-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hash32",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hash32-0.3.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libhash32-5ab88d9487e896e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-2e329de29a2f46e0\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-e0030f5202ccf116\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-ffa5426e25593c1d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embedded_io_async",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembedded_io_async-61d62174cf47a756.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "heapless",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libheapless-f0fbd5db3fe033a7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_util-587554df172c39bb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembassy_sync-1e85b9054d12f3d7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-18c4555ea024bda2\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-18c4555ea024bda2\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-b63f140f737a4fac\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-b63f140f737a4fac\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#byteorder@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\byteorder-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "byteorder",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\byteorder-1.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libbyteorder-9ac94967ec0e15f0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embedded-io-async-2e329de29a2f46e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_core-8a641b923a7e2731.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libpin_project_lite-360f5ac79d6490a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_task-17b7532ad7470ebd.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libpin_utils-6131d7e882b3d82e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#stable_deref_trait@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\stable_deref_trait-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "stable_deref_trait",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\stable_deref_trait-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libstable_deref_trait-4c7563f1c0561c5a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embedded_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-0.6.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembedded_io-d370632ce9dca65e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libcfg_if-26606f5aebf2192b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#critical-section@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\critical-section-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "critical_section",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\critical-section-1.2.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libcritical_section-10a07234f64ca891.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_sink-d7a9b7b60614ee0f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hash32@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hash32-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hash32",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hash32-0.3.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libhash32-5ab88d9487e896e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\heapless-ffa5426e25593c1d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libfutures_util-587554df172c39bb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#embedded-io-async@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embedded_io_async",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\embedded-io-async-0.6.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembedded_io_async-61d62174cf47a756.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#heapless@0.8.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "heapless",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\heapless-0.8.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libheapless-f0fbd5db3fe033a7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-86453e13ca5e292f\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-86453e13ca5e292f\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\build\\embassy-sync-7d65f4065932cd3c\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: empty line after doc comment\n  --> src\\rwlock.rs:39:1\n   |\n39 | / ///\n40 | |\n   | |_^\n41 |   pub struct RwLock<M, T>\n   |   ----------------- the comment documents this struct\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#empty_line_after_doc_comments\n   = note: `#[warn(clippy::empty_line_after_doc_comments)]` on by default\n   = help: if the empty line is unintentional, remove it\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#empty_line_after_doc_comments",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::empty_line_after_doc_comments)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "if the empty line is unintentional, remove it",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1655,
+                        "byte_start": 1654,
+                        "column_end": 1,
+                        "column_start": 4,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 40,
+                        "line_start": 39,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 4,
+                            "highlight_start": 4,
+                            "text": "///"
+                          },
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": ""
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::empty_line_after_doc_comments",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "empty line after doc comment",
+                "spans": [
+                  {
+                    "byte_end": 1673,
+                    "byte_start": 1656,
+                    "column_end": 18,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": false,
+                    "label": "the comment documents this struct",
+                    "line_end": 41,
+                    "line_start": 41,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "pub struct RwLock<M, T>"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 1655,
+                    "byte_start": 1651,
+                    "column_end": 1,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 40,
+                    "line_start": 39,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 4,
+                        "highlight_start": 1,
+                        "text": "///"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: casting raw pointers to the same type and constness is unnecessary (`*mut T` -> `*mut T`)\n  --> src\\blocking_mutex\\mod.rs:64:23\n   |\n64 |             let ptr = self.data.get() as *mut T;\n   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `self.data.get()`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast\n   = note: `#[warn(clippy::unnecessary_cast)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::unnecessary_cast)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2552,
+                        "byte_start": 2527,
+                        "column_end": 48,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\blocking_mutex\\mod.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 64,
+                        "line_start": 64,
+                        "suggested_replacement": "self.data.get()",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 48,
+                            "highlight_start": 23,
+                            "text": "            let ptr = self.data.get() as *mut T;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_cast",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "casting raw pointers to the same type and constness is unnecessary (`*mut T` -> `*mut T`)",
+                "spans": [
+                  {
+                    "byte_end": 2552,
+                    "byte_start": 2527,
+                    "column_end": 48,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\blocking_mutex\\mod.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 64,
+                    "line_start": 64,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 48,
+                        "highlight_start": 23,
+                        "text": "            let ptr = self.data.get() as *mut T;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: casting raw pointers to the same type and constness is unnecessary (`*mut T` -> `*mut T`)\n   --> src\\rwlock.rs:312:20\n    |\n312 |         unsafe { &*(self.rwlock.inner.get() as *mut T) }\n    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `self.rwlock.inner.get()`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_cast",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8828,
+                        "byte_start": 8793,
+                        "column_end": 55,
+                        "column_start": 20,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 312,
+                        "line_start": 312,
+                        "suggested_replacement": "self.rwlock.inner.get()",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 55,
+                            "highlight_start": 20,
+                            "text": "        unsafe { &*(self.rwlock.inner.get() as *mut T) }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_cast",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "casting raw pointers to the same type and constness is unnecessary (`*mut T` -> `*mut T`)",
+                "spans": [
+                  {
+                    "byte_end": 8828,
+                    "byte_start": 8793,
+                    "column_end": 55,
+                    "column_start": 20,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 312,
+                    "line_start": 312,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 55,
+                        "highlight_start": 20,
+                        "text": "        unsafe { &*(self.rwlock.inner.get() as *mut T) }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: replacing an `Option` with `Some(..)`\n  --> src\\waitqueue\\waker_registration.rs:29:42\n   |\n29 |                 if let Some(old_waker) = mem::replace(&mut self.waker, Some(w.clone())) {\n   |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: consider `Option::replace()` instead: `self.waker.replace(w.clone())`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#mem_replace_option_with_some\n   = note: `#[warn(clippy::mem_replace_option_with_some)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#mem_replace_option_with_some",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::mem_replace_option_with_some)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider `Option::replace()` instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1243,
+                        "byte_start": 1197,
+                        "column_end": 88,
+                        "column_start": 42,
+                        "expansion": null,
+                        "file_name": "src\\waitqueue\\waker_registration.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 29,
+                        "line_start": 29,
+                        "suggested_replacement": "self.waker.replace(w.clone())",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 88,
+                            "highlight_start": 42,
+                            "text": "                if let Some(old_waker) = mem::replace(&mut self.waker, Some(w.clone())) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::mem_replace_option_with_some",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "replacing an `Option` with `Some(..)`",
+                "spans": [
+                  {
+                    "byte_end": 1243,
+                    "byte_start": 1197,
+                    "column_end": 88,
+                    "column_start": 42,
+                    "expansion": null,
+                    "file_name": "src\\waitqueue\\waker_registration.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 29,
+                    "line_start": 29,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 88,
+                        "highlight_start": 42,
+                        "text": "                if let Some(old_waker) = mem::replace(&mut self.waker, Some(w.clone())) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true\n   --> src\\watch.rs:485:1\n    |\n485 | impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynSender<'a, T>> for Sender<'a, M, T, N> {\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into\n    = note: `#[warn(clippy::from_over_into)]` on by default\nhelp: replace the `Into` implementation with `From<watch::Sender<'a, M, T, N>>`\n    |\n485 ~ impl<'a, M: RawMutex, T: Clone, const N: usize> From<Sender<'a, M, T, N>> for DynSender<'a, T> {\n486 ~     fn from(val: Sender<'a, M, T, N>) -> Self {\n487 ~         val.as_dyn()\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::from_over_into)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the `Into` implementation with `From<watch::Sender<'a, M, T, N>>`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15791,
+                        "byte_start": 15787,
+                        "column_end": 53,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 485,
+                        "line_start": 485,
+                        "suggested_replacement": "From",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 49,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynSender<'a, T>> for Sender<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15808,
+                        "byte_start": 15792,
+                        "column_end": 70,
+                        "column_start": 54,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 485,
+                        "line_start": 485,
+                        "suggested_replacement": "Sender<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 70,
+                            "highlight_start": 54,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynSender<'a, T>> for Sender<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15833,
+                        "byte_start": 15814,
+                        "column_end": 95,
+                        "column_start": 76,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 485,
+                        "line_start": 485,
+                        "suggested_replacement": "DynSender<'a, T>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 95,
+                            "highlight_start": 76,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynSender<'a, T>> for Sender<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15847,
+                        "byte_start": 15843,
+                        "column_end": 12,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 486,
+                        "line_start": 486,
+                        "suggested_replacement": "from",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 8,
+                            "text": "    fn into(self) -> DynSender<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15852,
+                        "byte_start": 15848,
+                        "column_end": 17,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 486,
+                        "line_start": 486,
+                        "suggested_replacement": "val: Sender<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 13,
+                            "text": "    fn into(self) -> DynSender<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15873,
+                        "byte_start": 15857,
+                        "column_end": 38,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 486,
+                        "line_start": 486,
+                        "suggested_replacement": "Self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 22,
+                            "text": "    fn into(self) -> DynSender<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15888,
+                        "byte_start": 15884,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 487,
+                        "line_start": 487,
+                        "suggested_replacement": "val",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "        self.as_dyn()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::from_over_into",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true",
+                "spans": [
+                  {
+                    "byte_end": 15833,
+                    "byte_start": 15739,
+                    "column_end": 95,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\watch.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 485,
+                    "line_start": 485,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 95,
+                        "highlight_start": 1,
+                        "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynSender<'a, T>> for Sender<'a, M, T, N> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true\n   --> src\\watch.rs:688:1\n    |\n688 | impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynReceiver<'a, T>> for Receiver<'a, M, T, N> {\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into\nhelp: replace the `Into` implementation with `From<watch::Receiver<'a, M, T, N>>`\n    |\n688 ~ impl<'a, M: RawMutex, T: Clone, const N: usize> From<Receiver<'a, M, T, N>> for DynReceiver<'a, T> {\n689 ~     fn from(val: Receiver<'a, M, T, N>) -> Self {\n690 ~         val.as_dyn()\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the `Into` implementation with `From<watch::Receiver<'a, M, T, N>>`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 22436,
+                        "byte_start": 22432,
+                        "column_end": 53,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 688,
+                        "line_start": 688,
+                        "suggested_replacement": "From",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 49,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynReceiver<'a, T>> for Receiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22455,
+                        "byte_start": 22437,
+                        "column_end": 72,
+                        "column_start": 54,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 688,
+                        "line_start": 688,
+                        "suggested_replacement": "Receiver<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 72,
+                            "highlight_start": 54,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynReceiver<'a, T>> for Receiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22482,
+                        "byte_start": 22461,
+                        "column_end": 99,
+                        "column_start": 78,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 688,
+                        "line_start": 688,
+                        "suggested_replacement": "DynReceiver<'a, T>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 99,
+                            "highlight_start": 78,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynReceiver<'a, T>> for Receiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22496,
+                        "byte_start": 22492,
+                        "column_end": 12,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 689,
+                        "line_start": 689,
+                        "suggested_replacement": "from",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 8,
+                            "text": "    fn into(self) -> DynReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22501,
+                        "byte_start": 22497,
+                        "column_end": 17,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 689,
+                        "line_start": 689,
+                        "suggested_replacement": "val: Receiver<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 13,
+                            "text": "    fn into(self) -> DynReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22524,
+                        "byte_start": 22506,
+                        "column_end": 40,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 689,
+                        "line_start": 689,
+                        "suggested_replacement": "Self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 22,
+                            "text": "    fn into(self) -> DynReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 22539,
+                        "byte_start": 22535,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 690,
+                        "line_start": 690,
+                        "suggested_replacement": "val",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "        self.as_dyn()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::from_over_into",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true",
+                "spans": [
+                  {
+                    "byte_end": 22482,
+                    "byte_start": 22384,
+                    "column_end": 99,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\watch.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 688,
+                    "line_start": 688,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 99,
+                        "highlight_start": 1,
+                        "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynReceiver<'a, T>> for Receiver<'a, M, T, N> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: call to `std::mem::forget` with a value that does not implement `Drop`. Forgetting such a type is the same as dropping it\n   --> src\\watch.rs:735:9\n    |\n735 |         core::mem::forget(self); // Ensures the destructor is not called\n    |         ^^^^^^^^^^^^^^^^^^^^^^^\n    |\nnote: argument has type `watch::AnonReceiver<'_, M, T, N>`\n   --> src\\watch.rs:735:27\n    |\n735 |         core::mem::forget(self); // Ensures the destructor is not called\n    |                           ^^^^\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#forget_non_drop\n    = note: `#[warn(clippy::forget_non_drop)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "argument has type `watch::AnonReceiver<'_, M, T, N>`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 23978,
+                        "byte_start": 23974,
+                        "column_end": 31,
+                        "column_start": 27,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 735,
+                        "line_start": 735,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 27,
+                            "text": "        core::mem::forget(self); // Ensures the destructor is not called"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#forget_non_drop",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::forget_non_drop)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::forget_non_drop",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "call to `std::mem::forget` with a value that does not implement `Drop`. Forgetting such a type is the same as dropping it",
+                "spans": [
+                  {
+                    "byte_end": 23979,
+                    "byte_start": 23956,
+                    "column_end": 32,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\watch.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 735,
+                    "line_start": 735,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 9,
+                        "text": "        core::mem::forget(self); // Ensures the destructor is not called"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true\n   --> src\\watch.rs:740:1\n    |\n740 | impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynAnonReceiver<'a, T>> for AnonReceiver<'a, M, T, N> {\n    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into\nhelp: replace the `Into` implementation with `From<watch::AnonReceiver<'a, M, T, N>>`\n    |\n740 ~ impl<'a, M: RawMutex, T: Clone, const N: usize> From<AnonReceiver<'a, M, T, N>> for DynAnonReceiver<'a, T> {\n741 ~     fn from(val: AnonReceiver<'a, M, T, N>) -> Self {\n742 ~         val.as_dyn()\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#from_over_into",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the `Into` implementation with `From<watch::AnonReceiver<'a, M, T, N>>`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 24094,
+                        "byte_start": 24090,
+                        "column_end": 53,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 740,
+                        "line_start": 740,
+                        "suggested_replacement": "From",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 49,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynAnonReceiver<'a, T>> for AnonReceiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24117,
+                        "byte_start": 24095,
+                        "column_end": 76,
+                        "column_start": 54,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 740,
+                        "line_start": 740,
+                        "suggested_replacement": "AnonReceiver<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 76,
+                            "highlight_start": 54,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynAnonReceiver<'a, T>> for AnonReceiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24148,
+                        "byte_start": 24123,
+                        "column_end": 107,
+                        "column_start": 82,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 740,
+                        "line_start": 740,
+                        "suggested_replacement": "DynAnonReceiver<'a, T>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 107,
+                            "highlight_start": 82,
+                            "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynAnonReceiver<'a, T>> for AnonReceiver<'a, M, T, N> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24162,
+                        "byte_start": 24158,
+                        "column_end": 12,
+                        "column_start": 8,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 741,
+                        "line_start": 741,
+                        "suggested_replacement": "from",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 12,
+                            "highlight_start": 8,
+                            "text": "    fn into(self) -> DynAnonReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24167,
+                        "byte_start": 24163,
+                        "column_end": 17,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 741,
+                        "line_start": 741,
+                        "suggested_replacement": "val: AnonReceiver<'a, M, T, N>",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 17,
+                            "highlight_start": 13,
+                            "text": "    fn into(self) -> DynAnonReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24194,
+                        "byte_start": 24172,
+                        "column_end": 44,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 741,
+                        "line_start": 741,
+                        "suggested_replacement": "Self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 44,
+                            "highlight_start": 22,
+                            "text": "    fn into(self) -> DynAnonReceiver<'a, T> {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 24209,
+                        "byte_start": 24205,
+                        "column_end": 13,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\watch.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 742,
+                        "line_start": 742,
+                        "suggested_replacement": "val",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 9,
+                            "text": "        self.as_dyn()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::from_over_into",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "an implementation of `From` is preferred since it gives you `Into<_>` for free where the reverse isn't true",
+                "spans": [
+                  {
+                    "byte_end": 24148,
+                    "byte_start": 24042,
+                    "column_end": 107,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\watch.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 740,
+                    "line_start": 740,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 107,
+                        "highlight_start": 1,
+                        "text": "impl<'a, M: RawMutex, T: Clone, const N: usize> Into<DynAnonReceiver<'a, T>> for AnonReceiver<'a, M, T, N> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpdbb5f3o4/embassy-sync-0.7.0#embassy-sync@0.7.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "embassy_sync",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpdbb5f3o4\\embassy-sync-0.7.0\\target\\debug\\deps\\libembassy_sync-083acc70b9c1eb79.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 44
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "yanked": [
+                {
+                  "kind": "yanked",
+                  "package": {
+                    "name": "static_cell",
+                    "version": "2.1.0",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d89b0684884a883431282db1e4343f34afc2ff6996fe1f4a1664519b66e14c1e",
+                    "dependencies": [
+                      {
+                        "name": "portable-atomic",
+                        "version": "1.10.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": null,
+                  "affected": null,
+                  "versions": null
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed."
+        },
+        "crate_metadata": {
+          "name": "embassy-sync",
+          "version": "unknown",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": "",
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "ai_enrichment": {
+          "provider": "azure",
+          "model": "gpt-4o",
+          "readme_summary": null,
+          "use_case": null,
+          "score": null,
+          "factual_counterfactual": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-b1596972-a90872cb-1751108102",
+      "timestamp": "2025-06-28T10:55:02.691085+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

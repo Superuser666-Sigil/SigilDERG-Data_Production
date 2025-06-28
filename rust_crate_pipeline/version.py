@@ -1,12 +1,14 @@
 from typing import Dict, List, Tuple, Optional, Any
 """Version information for rust-crate-pipeline."""
 
-__version__ = "1.4.2"
+__version__ = "1.4.3"
 __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
 __author__ = "SigilDERG Team"
 __email__ = "sigilderg@example.com"
 
-# Version history
+# Release history
+# 1.4.3 - In-progress
+#         - Implemented full crate analysis (cargo check, clippy, audit)
 # 1.4.2 - Maintenance Release
 #         - Updated project to version 1.4.2
 #         - General maintenance and dependency updates

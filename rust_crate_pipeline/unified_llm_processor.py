@@ -13,6 +13,7 @@ if TYPE_CHECKING:
 try:
     import litellm
     from litellm import completion
+    from litellm.cost_calculator import cost_per_token
     LITELLM_AVAILABLE = True
 except ImportError:
     LITELLM_AVAILABLE = False
@@ -44,6 +45,35 @@ class LLMConfig:
     lmstudio_host: Optional[str] = None
 
 
+class BudgetManager:
+    """Monitors and enforces spending limits for LLM calls."""
+
+    def __init__(self, budget: float = 90.0):
+        self.budget = budget
+        self.total_cost = 0.0
+
+    def update_cost(self, model: str, completion_tokens: int, prompt_tokens: int) -> None:
+        """Update the total cost with the latest API call."""
+        try:
+            cost, _ = cost_per_token(
+                model=model,
+                completion_tokens=completion_tokens,
+                prompt_tokens=prompt_tokens,
+            )
+            self.total_cost += cost
+        except Exception:
+            # If cost cannot be determined, do not track.
+            pass
+
+    def is_over_budget(self) -> bool:
+        """Check if the cumulative cost has exceeded the budget."""
+        return self.total_cost > self.budget
+
+    def get_total_cost(self) -> float:
+        """Return the current total cost."""
+        return self.total_cost
+
+
 class Section(TypedDict, total=True):
     heading: str
     content: str
@@ -62,9 +92,10 @@ class UnifiedLLMProcessor:
     - And all other LiteLLM providers
     """
     
-    def __init__(self, config: LLMConfig) -> None:
+    def __init__(self, config: LLMConfig, budget_manager: Optional[BudgetManager] = None) -> None:
         self.config = config
         self.logger = logging.getLogger(__name__)
+        self.budget_manager = budget_manager or BudgetManager()
         
         if not LITELLM_AVAILABLE:
             raise ImportError("LiteLLM is required. Install with: pip install litellm")
@@ -275,72 +306,50 @@ class UnifiedLLMProcessor:
         max_tokens: Optional[int] = None,
         system_message: str = "You are a helpful AI assistant that analyzes Rust crates and provides insights."
     ) -> Optional[str]:
-        """Call LLM using LiteLLM with provider-specific configuration"""
+        """Call the LLM with the given prompt and parameters."""
+        
+        if self.budget_manager and self.budget_manager.is_over_budget():
+            self.logger.warning("Budget exceeded. Skipping LLM call.")
+            return None
+
+        model_name = self._get_model_name()
+        
+        # Prepare arguments for the completion call
+        args: Dict[str, Any] = {
+            "model": model_name,
+            "messages": [
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": temperature if temperature is not None else self.config.temperature,
+            "max_tokens": max_tokens if max_tokens is not None else self.config.max_tokens,
+            "timeout": self.config.timeout
+        }
+        
+        # Provider-specific arguments
+        if self.config.provider == "azure":
+            args["api_base"] = self.config.api_base
+            args["api_key"] = self.config.api_key
+            args["api_version"] = self.config.azure_api_version
+            # For Azure, model can be just the deployment name
+            args["model"] = self.config.azure_deployment or self.config.model
+        else:
+            args["api_base"] = self._get_api_base()
+            args["api_key"] = self.config.api_key
+
         try:
-            # Use config defaults if not provided
-            temp = temperature if temperature is not None else self.config.temperature
-            tokens = max_tokens if max_tokens is not None else self.config.max_tokens
+            response = completion(**args)
             
-            # Prepare the completion call parameters
-            completion_params: Dict[str, Any] = {
-                "model": self._get_model_name(),
-                "messages": [
-                    {"role": "system", "content": system_message},
-                    {"role": "user", "content": prompt}
-                ],
-                "temperature": temp,
-                "max_tokens": tokens,
-                "timeout": self.config.timeout
-            }
+            # Update budget
+            if self.budget_manager:
+                completion_tokens = response.usage.completion_tokens # type: ignore
+                prompt_tokens = response.usage.prompt_tokens # type: ignore
+                self.budget_manager.update_cost(model=model_name, completion_tokens=completion_tokens, prompt_tokens=prompt_tokens)
+
+            return response.choices[0].message.content # type: ignore
             
-            # Add provider-specific parameters
-            if self.config.provider == "azure":
-                if self.config.api_base:
-                    completion_params["api_base"] = self.config.api_base
-                if self.config.api_key:
-                    completion_params["api_key"] = self.config.api_key
-                if self.config.azure_deployment:
-                    completion_params["deployment_id"] = self.config.azure_deployment
-                if self.config.azure_api_version:
-                    completion_params["api_version"] = self.config.azure_api_version
-                    
-            elif self.config.provider in ["ollama", "lmstudio"]:
-                # Local providers don't need API keys
-                pass
-                
-            else:
-                # Other providers (OpenAI, Anthropic, etc.)
-                if self.config.api_key:
-                    completion_params["api_key"] = self.config.api_key
-                if self.config.api_base:
-                    completion_params["api_base"] = self.config.api_base
-            
-            self.logger.debug(f"Calling LLM with provider: {self.config.provider}, model: {self.config.model}")
-            
-            response = completion(**completion_params)
-            
-            # Handle different response formats from LiteLLM
-            # LiteLLM has complex response objects that vary by provider
-            try:
-                if hasattr(response, 'choices') and response.choices:  # type: ignore[attr-defined]
-                    choice = response.choices[0]  # type: ignore[attr-defined]
-                    if hasattr(choice, 'message') and hasattr(choice.message, 'content'):  # type: ignore[attr-defined]
-                        return choice.message.content  # type: ignore[attr-defined]
-                    elif hasattr(choice, 'content'):  # type: ignore[attr-defined]
-                        return choice.content  # type: ignore[attr-defined]
-                elif hasattr(response, 'content'):  # type: ignore[attr-defined]
-                    return response.content  # type: ignore[attr-defined]
-                elif isinstance(response, str):
-                    return response
-                else:
-                    self.logger.error(f"Unexpected response format: {response}")
-                    return None
-            except Exception as e:
-                self.logger.error(f"Error parsing LLM response: {e}")
-                return None
-                
         except Exception as e:
-            self.logger.error(f"Error calling LLM ({self.config.provider}): {str(e)}")
+            self.logger.error(f"LLM call failed: {e}")
             return None
 
     def validate_and_retry(
@@ -610,7 +619,9 @@ def create_llm_processor_from_config(pipeline_config: PipelineConfig) -> Unified
             max_retries=pipeline_config.max_retries
         )
     
-    return UnifiedLLMProcessor(llm_config)
+    budget_manager = BudgetManager(budget=pipeline_config.budget) if pipeline_config.budget is not None else None
+    
+    return UnifiedLLMProcessor(llm_config, budget_manager=budget_manager)
 
 
 def create_llm_processor_from_args(
@@ -620,9 +631,10 @@ def create_llm_processor_from_args(
     api_key: Optional[str] = None,
     temperature: float = 0.2,
     max_tokens: int = 256,
+    budget: Optional[float] = None,
     **kwargs
 ) -> UnifiedLLMProcessor:
-    """Create LLM processor from command line arguments"""
+    """Create a UnifiedLLMProcessor from command-line arguments."""
     
     llm_config = LLMConfig(
         provider=provider,
@@ -634,4 +646,6 @@ def create_llm_processor_from_args(
         **kwargs
     )
     
-    return UnifiedLLMProcessor(llm_config) 
+    budget_manager = BudgetManager(budget=budget) if budget is not None else None
+    
+    return UnifiedLLMProcessor(llm_config, budget_manager=budget_manager) 

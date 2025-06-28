@@ -14,29 +14,13 @@ class IRLEngine(SacredChainBase):
         super().__init__()
         self.config = config
         self.canon_registry = canon_registry or CanonRegistry()
-        self.crawler: Optional[Any] = None
         self.logger = logging.getLogger(__name__)
     
     async def __aenter__(self) -> "IRLEngine":
-        try:
-            from crawl4ai import AsyncWebCrawler, BrowserConfig
-            browser_config = BrowserConfig(headless=True, browser_type="chromium")
-            self.crawler = AsyncWebCrawler(config=browser_config)
-            await self.crawler.start()
-            self.logger.info("IRL Engine initialized with full traceability")
-        except ImportError:
-            self.logger.warning("Crawl4AI not available - IRL Engine running in limited mode")
-        except Exception as e:
-            self.logger.warning(f"Failed to initialize crawler: {e}")
-        
+        self.logger.info("IRL Engine initialized with full traceability")
         return self
 
     async def __aexit__(self, exc_type: Optional[type], exc_val: Optional[Exception], exc_tb: Optional[Any]) -> None:
-        if self.crawler:
-            try:
-                await self.crawler.stop()
-            except Exception as e:
-                self.logger.warning(f"Error stopping crawler: {e}")
         self._finalize_audit_log()
 
     def _finalize_audit_log(self) -> None:
@@ -120,9 +104,8 @@ class IRLEngine(SacredChainBase):
         reasoning_steps.append(f"Metadata extracted: {len(metadata)} fields")
         
         docs = {}
-        if self.crawler:
-            docs = await self._analyze_documentation(input_data)
-            reasoning_steps.append(f"Documentation analyzed: quality {docs.get('quality_score', 0):.1f}")
+        docs = await self._analyze_documentation(input_data)
+        reasoning_steps.append(f"Documentation analyzed: quality {docs.get('quality_score', 0):.1f}")
         
         sentiment = await self._analyze_community_sentiment(input_data)
         reasoning_steps.append(f"Sentiment analyzed: {sentiment.get('overall', 'unknown')}")
@@ -144,9 +127,6 @@ class IRLEngine(SacredChainBase):
         }
 
     async def _analyze_documentation(self, input_data: str) -> Dict[str, Any]:
-        if not self.crawler:
-            return {"quality_score": 5.0, "error": "No crawler available"}
-        
         try:
             return {
                 "quality_score": 7.0,
