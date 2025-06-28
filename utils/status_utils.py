@@ -3,7 +3,7 @@
 Cross-platform status indicators and retry mechanisms for SigilDERG-Data_Production
 
 This module provides Rule Zero-aligned status reporting with:
-- Platform-agnostic visual indicators
+- Platform-agnostic ASCII visual indicators
 - Retry mechanisms with exponential backoff
 - Clear success/failure feedback
 - Performance timing
@@ -42,44 +42,32 @@ class StatusIndicator:
     @property
     def success(self) -> str:
         """Success indicator."""
-        if self.supports_unicode:
-            return "✅"
-        return "[OK]" if self.platform == "windows" else "✓"
+        return "[OK]"
 
     @property
     def error(self) -> str:
         """Error indicator."""
-        if self.supports_unicode:
-            return "❌"
-        return "[ERROR]" if self.platform == "windows" else "✗"
+        return "[ERROR]"
 
     @property
     def warning(self) -> str:
         """Warning indicator."""
-        if self.supports_unicode:
-            return "⚠️"
-        return "[WARN]" if self.platform == "windows" else "!"
+        return "[WARN]"
 
     @property
     def info(self) -> str:
         """Info indicator."""
-        if self.supports_unicode:
-            return "ℹ️"
-        return "[INFO]" if self.platform == "windows" else "i"
+        return "[INFO]"
 
     @property
     def running(self) -> str:
         """Running/in-progress indicator."""
-        if self.supports_unicode:
-            return "🔄"
-        return "[RUNNING]" if self.platform == "windows" else ">"
+        return "[RUNNING]"
 
     @property
     def timer(self) -> str:
         """Timer indicator."""
-        if self.supports_unicode:
-            return "⏱️"
-        return "[TIME]" if self.platform == "windows" else "⧗"
+        return "[TIME]"
 
 
 # Global status indicator instance
