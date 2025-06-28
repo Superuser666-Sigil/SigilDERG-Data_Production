@@ -20,7 +20,7 @@ class GitHubBatchClient:
         # Simple headers without dependency on HTTPClientUtils
         self.headers = {
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "SigilDERG-Data-Production/1.3.1",
+            "User-Agent": "SigilDERG-Data-Production/1.3.2",
         }
         if config.github_token:
             self.headers["Authorization"] = f"token {config.github_token}"
@@ -45,8 +45,7 @@ class GitHubBatchClient:
                 if self.remaining_calls < 100:
                     reset_in = self.reset_time - time.time()
                     logging.warning(
-                        f"GitHub API rate limit low: {self.remaining_calls} remaining. "
-                        f"Resets in {reset_in / 60:.1f} minutes"
+                        f"GitHub API rate limit low: {self.remaining_calls} remaining. Resets in {reset_in / 60:.1f} minutes"
                     )
         except Exception:
             pass
@@ -60,8 +59,7 @@ class GitHubBatchClient:
                 return response.json()
             else:
                 logging.warning(
-                    f"Failed to get repo stats for {owner}/{repo}: "
-                    f"{response.status_code}"
+                    f"Failed to get repo stats for {owner}/{repo}: {response.status_code}"
                 )
                 return {}
         except Exception as e:
@@ -96,7 +94,7 @@ class CrateAPIClient:
         self.config = config
         # Simple session without dependency on HTTPClientUtils
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.3.1"})
+        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.3.2"})
 
     def fetch_crate_metadata(self, crate_name: str) -> "dict[str, Any] | None":
         """Fetch metadata with retry logic"""
@@ -105,10 +103,7 @@ class CrateAPIClient:
                 return self._fetch_metadata(crate_name)
             except Exception as e:
                 logging.warning(
-                    f"Attempt {
-                        attempt +
-                        1} failed for {crate_name}: {
-                        str(e)}"
+                    f"Attempt {attempt + 1} failed for {crate_name}: {str(e)}"
                 )
                 wait = 2**attempt
                 time.sleep(wait)
@@ -229,8 +224,7 @@ class CrateAPIClient:
 
         except Exception as e:
             logging.error(
-                f"Failed fetching metadata for {crate_name}: {
-                    str(e)}"
+                f"Failed fetching metadata for {crate_name}: {str(e)}"
             )
             raise
 
