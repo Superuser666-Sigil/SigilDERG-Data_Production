@@ -442,8 +442,7 @@ def main() -> None:
         if hasattr(args, "enable_sigil_protocol") and args.enable_sigil_protocol:
             logging.info("Sigil Protocol mode requested")
             logging.debug(
-                f"Sigil available: {_sigil_available}, SigilCompliantPipeline: {
-                    SigilCompliantPipeline is not None}"
+                f"Sigil available: {_sigil_available}, SigilCompliantPipeline: {SigilCompliantPipeline is not None}"
             )
 
             # Import Sigil enhanced pipeline

@@ -1,6 +1,11 @@
-# Changelog for Version 1.3.1
+# Changelog for Version 1.3.2
 
-## Release Date: June 28, 2025
+## Release Date: [TBD]
+
+### 🚀 Patch Release
+
+- Version bump to 1.3.2
+- All bug fixes and improvements from 1.3.1
 
 ### 🐛 Bug Fixes
 
@@ -49,7 +54,7 @@
 ### 🚀 Installation
 
 ```bash
-pip install rust-crate-pipeline==1.3.1
+pip install rust-crate-pipeline==1.3.2
 ```
 
 ### 🔄 Migration from 1.3.0
@@ -68,6 +73,11 @@ All fixes have been verified:
 
 - **Developers**: Better IDE experience with proper type hints
 - **Users**: No functional changes, improved stability
+- **Maintainers**: Cleaner codebase with resolved linter issues
+
+---
+
+**Note**: This release focuses on code quality improvements and type safety enhancements. All existing APIs and functionality remain unchanged. 
 - **Maintainers**: Cleaner codebase with resolved linter issues
 
 ---

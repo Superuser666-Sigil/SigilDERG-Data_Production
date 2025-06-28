@@ -1,5 +1,5 @@
 # Rust Crate Pipeline Dockerfile
-# Version: 1.3.1
+# Version: 1.3.3
 # Updated: June 28, 2025
 # Changes: Type annotation compatibility fixes for Python 3.9+
 
