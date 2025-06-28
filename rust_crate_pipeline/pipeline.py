@@ -25,19 +25,12 @@ except ImportError:
 
 # Import enhanced scraping capabilities
 try:
-    import sys
-
-    sys.path.append(os.path.dirname(os.path.dirname(__file__)))
-    from enhanced_scraping import (
-        CrateDocumentationScraper,
-        EnhancedScrapingResult,
-    )
-
+    from .scraping.unified_scraper import UnifiedScraper, ScrapingResult
     ENHANCED_SCRAPING_AVAILABLE = True
 except ImportError:
     ENHANCED_SCRAPING_AVAILABLE = False
-    CrateDocumentationScraper = None  # type: ignore[assignment,misc]
-    EnhancedScrapingResult = None  # type: ignore[assignment,misc]
+    UnifiedScraper = None  # type: ignore[assignment,misc]
+    ScrapingResult = None  # type: ignore[assignment,misc]
     logging.warning("Enhanced scraping not available - using basic methods")
 
 
@@ -53,16 +46,16 @@ class CrateDataPipeline:
         if config.use_azure_openai and AZURE_OPENAI_AVAILABLE and AzureOpenAIEnricher is not None:
             try:
                 self.enricher = AzureOpenAIEnricher(config)
-                logging.info("✅ Using Azure OpenAI enricher")
+                logging.info("[OK] Using Azure OpenAI enricher")
             except Exception as e:
-                logging.warning(f"⚠️ Failed to initialize Azure OpenAI enricher: {e}")
-                logging.info("🔄 Falling back to local LLM enricher")
+                logging.warning(f"[WARN] Failed to initialize Azure OpenAI enricher: {e}")
+                logging.info("[INFO] Falling back to local LLM enricher")
                 self.enricher = LLMEnricher(config)
         else:
             if config.use_azure_openai and not AZURE_OPENAI_AVAILABLE:
-                logging.warning("⚠️ Azure OpenAI requested but not available")
+                logging.warning("[WARN] Azure OpenAI requested but not available")
             self.enricher = LLMEnricher(config)
-            logging.info("✅ Using local LLM enricher")
+            logging.info("[OK] Using local LLM enricher")
         
         # Initialize cargo analyzer
         self.cargo_analyzer = CrateAnalyzer(".")
@@ -78,15 +71,15 @@ class CrateDataPipeline:
         if (
             not ENHANCED_SCRAPING_AVAILABLE
             or not self.config.enable_crawl4ai
-            or CrateDocumentationScraper is None
+            or UnifiedScraper is None
         ):
             return None
         try:
-            scraper = CrateDocumentationScraper()
-            logging.info("✅ Enhanced scraping with Crawl4AI enabled")
+            scraper = UnifiedScraper()
+            logging.info("[OK] Enhanced scraping with Crawl4AI enabled")
             return scraper
         except Exception as e:
-            logging.warning(f"❌ Failed to initialize enhanced scraping: {e}")
+            logging.warning(f"[ERROR] Failed to initialize enhanced scraping: {e}")
             return None
 
     def _create_output_dir(self) -> str:
@@ -223,7 +216,7 @@ class CrateDataPipeline:
             return
 
         try:
-            scraping_results = await self.enhanced_scraper.scrape_crate_info(crate.name)
+            scraping_results = await self.enhanced_scraper.scrape_crate_documentation(crate.name)
             if scraping_results:
                 self._integrate_scraping_results(crate, scraping_results)
                 logging.info(
@@ -393,5 +386,5 @@ class CrateDataPipeline:
         self.save_final_output(all_enriched, dependency_analysis)
 
         duration = time.time() - start_time
-        logging.info(f"✅ Done. Enriched {len(all_enriched)} crates in {duration:.2f}s")
+        logging.info(f"[OK] Done. Enriched {len(all_enriched)} crates in {duration:.2f}s")
         return all_enriched, dependency_analysis

@@ -1,8 +1,10 @@
 from typing import Dict, List, Tuple, Optional, Any
 """Version information for rust-crate-pipeline."""
 
-__version__ = "1.3.4"
+__version__ = "1.3.5"
 __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
+__author__ = "SigilDERG Team"
+__email__ = "sigilderg@example.com"
 
 # Version history
 # 1.2.5-dev.20250621 - Dev branch: experimental, not a formal
