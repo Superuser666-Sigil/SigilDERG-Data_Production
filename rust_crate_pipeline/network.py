@@ -20,7 +20,7 @@ class GitHubBatchClient:
         # Simple headers without dependency on HTTPClientUtils
         self.headers = {
             "Accept": "application/vnd.github.v3+json",
-            "User-Agent": "SigilDERG-Data-Production/1.3.0",
+            "User-Agent": "SigilDERG-Data-Production/1.3.1",
         }
         if config.github_token:
             self.headers["Authorization"] = f"token {config.github_token}"
@@ -51,7 +51,7 @@ class GitHubBatchClient:
         except Exception:
             pass
 
-    def get_repo_stats(self, owner: str, repo: str) -> dict[str, Any]:
+    def get_repo_stats(self, owner: str, repo: str) -> "dict[str, Any]":
         """Get repository statistics"""
         try:
             url = f"https://api.github.com/repos/{owner}/{repo}"
@@ -68,11 +68,11 @@ class GitHubBatchClient:
             logging.error(f"Error fetching repo stats: {str(e)}")
             return {}
 
-    def batch_get_repo_stats(self, repo_list: list[str]) -> dict[str, dict[str, Any]]:
+    def batch_get_repo_stats(self, repo_list: "list[str]") -> "dict[str, dict[str, Any]]":
         """Get statistics for multiple repositories in a batch"""
         self.check_rate_limit()
 
-        results: dict[str, dict[str, Any]] = {}
+        results: "dict[str, dict[str, Any]]" = {}
         for repo_url in repo_list:
             # Extract owner/repo from URL
             match = re.search(r"github\.com/([^/]+)/([^/\.]+)", repo_url)
@@ -96,9 +96,9 @@ class CrateAPIClient:
         self.config = config
         # Simple session without dependency on HTTPClientUtils
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.3.0"})
+        self.session.headers.update({"User-Agent": "SigilDERG-Data-Production/1.3.1"})
 
-    def fetch_crate_metadata(self, crate_name: str) -> dict[str, Any] | None:
+    def fetch_crate_metadata(self, crate_name: str) -> "dict[str, Any] | None":
         """Fetch metadata with retry logic"""
         for attempt in range(self.config.max_retries):
             try:
@@ -114,7 +114,7 @@ class CrateAPIClient:
                 time.sleep(wait)
         return None
 
-    def _fetch_metadata(self, crate_name: str) -> dict[str, Any] | None:
+    def _fetch_metadata(self, crate_name: str) -> "dict[str, Any] | None":
         """Enhanced metadata fetching that tries multiple sources"""
         # First try crates.io (primary source)
         try:

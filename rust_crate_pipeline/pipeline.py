@@ -69,11 +69,11 @@ class CrateDataPipeline:
         
         self.crates = self._get_crate_list()
         self.output_dir = self._create_output_dir()
-        self.enhanced_scraper: Union[CrateDocumentationScraper, None] = (
+        self.enhanced_scraper: Any = (
             self._initialize_enhanced_scraper()
         )
 
-    def _initialize_enhanced_scraper(self) -> Union[CrateDocumentationScraper, None]:
+    def _initialize_enhanced_scraper(self) -> Any:
         """Initializes the CrateDocumentationScraper if available and enabled."""
         if (
             not ENHANCED_SCRAPING_AVAILABLE
@@ -236,7 +236,7 @@ class CrateDataPipeline:
     def _integrate_scraping_results(
         self,
         crate: CrateMetadata,
-        scraping_results: "Dict[str, EnhancedScrapingResult]",
+        scraping_results: "Dict[str, Any]",
     ) -> None:
         """
         Integrates enhanced scraping results into the crate metadata.

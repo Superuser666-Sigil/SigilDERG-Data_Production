@@ -1,7 +1,7 @@
 from typing import Dict, List, Tuple, Optional, Any
 """Version information for rust-crate-pipeline."""
 
-__version__ = "1.3.0"
+__version__ = "1.3.1"
 __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
 
 # Version history
@@ -41,6 +41,12 @@ __version_info__ = tuple(int(x) for x in __version__.split("-")[0].split("."))
 #         - Improved error handling in enhanced scraping module
 #         - Standardized on direct llama.cpp approach (removed Ollama dependencies)
 #         - Enhanced Rule Zero compliance with transparent cleanup process
+#         - Fixed type annotation compatibility issues
+#         - Fixed Python 3.9 compatibility for type annotations
+#         - Updated dict[str, Any] to "dict[str, Any]" format
+#         - Fixed Union type expressions in conditional imports
+#         - Resolved IDE linter errors in network.py, pipeline.py, and production_config.py
+#         - Improved code quality and maintainability
 # 1.3.0 - Quality & Integration Release: Comprehensive code quality improvements
 #         - Fixed all critical PEP 8 violations (F821, F811, E114)
 #         - Enhanced error handling with graceful dependency fallbacks

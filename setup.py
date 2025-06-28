@@ -11,7 +11,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="rust-crate-pipeline",
-    version="1.3.0",
+    version="1.3.1",
     author="SuperUser666-Sigil",
     author_email="miragemodularframework@gmail.com",
     description=(

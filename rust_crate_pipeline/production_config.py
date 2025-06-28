@@ -28,7 +28,7 @@ def configure_production_logging() -> None:
 
 
 # Production-optimized settings
-PRODUCTION_SETTINGS: dict[str, Any] = {
+PRODUCTION_SETTINGS: "dict[str, Any]" = {
     # Reduced retries to minimize warnings
     "max_retries": 2,
     "validation_retries": 2,
@@ -48,7 +48,7 @@ PRODUCTION_SETTINGS: dict[str, Any] = {
 }
 
 
-def get_production_config() -> dict[str, Any]:
+def get_production_config() -> "dict[str, Any]":
     """Get production configuration dictionary"""
     return PRODUCTION_SETTINGS.copy()
 
@@ -58,7 +58,7 @@ def is_production() -> bool:
     return os.getenv("PRODUCTION", "false").lower() == "true"
 
 
-def setup_production_environment() -> dict[str, Any]:
+def setup_production_environment() -> "dict[str, Any]":
     """Set up the complete production environment"""
     configure_production_logging()
 
