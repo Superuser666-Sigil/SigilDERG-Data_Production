@@ -259,7 +259,7 @@ pyright rust_crate_pipeline/
 
 ## Requirements
 
-- Python 3.8+
+- Python 3.12+
 - Rust toolchain (for cargo testing)
 - Git (for GitHub API access)
 - Internet connection (for web scraping and API calls)
