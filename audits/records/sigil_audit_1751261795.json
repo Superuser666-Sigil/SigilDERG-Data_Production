@@ -1,0 +1,1234 @@
+[
+  {
+    "execution_id": "exec-8b09f1fa-f107ca4b-1751261783",
+    "timestamp": "2025-06-30T05:36:23.225550+00:00",
+    "sacred_chain": {
+      "input_data": "webpki",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'webpki' -> 'webpki'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "webpki",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/webpki",
+            "title": "webpki v0.22.4",
+            "content": {
+              "raw_markdown": "#  webpki v0.22.4\nWeb PKI X.509 Certificate Verification. \n  * [ Readme ](https://crates.io/crates/webpki)\n  * [ 46 Versions ](https://crates.io/crates/webpki/versions)\n  * [ Dependencies ](https://crates.io/crates/webpki/dependencies)\n  * [ Dependents ](https://crates.io/crates/webpki/reverse_dependencies)\n\n\n## Metadata\nover 1 year ago \nv1.61.0 \nnon-standard \n62 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add webpki\nOr add the following line to your Cargo.toml:\nwebpki = \"0.22.4\"\n## Repository\n[ github.com/briansmith/webpki ](https://github.com/briansmith/webpki)\n## Owners\n## Categories\n  * [Cryptography](https://crates.io/categories/cryptography)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=webpki&inquire=crate-violation)\n### Stats Overview\n97,400,438 Downloads all time\n46 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  webpki v0.22.4\nWeb PKI X.509 Certificate Verification. \n  *  Readme \u27e81\u27e9\n  *  46 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\nover 1 year ago \nv1.61.0 \nnon-standard \n62 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add webpki\nOr add the following line to your Cargo.toml:\nwebpki = \"0.22.4\"\n## Repository\n github.com/briansmith/webpki \u27e85\u27e9\n## Owners\n## Categories\n  * Cryptography\u27e86\u27e9\n  * No standard library\u27e87\u27e9\n\n\n Report crate \u27e88\u27e9\n### Stats Overview\n97,400,438 Downloads all time\n46 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/webpki:  Readme \n\u27e82\u27e9 https://crates.io/crates/webpki/versions:  46 Versions \n\u27e83\u27e9 https://crates.io/crates/webpki/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/webpki/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://github.com/briansmith/webpki:  github.com/briansmith/webpki \n\u27e86\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e87\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e88\u27e9 https://crates.io/support?crate=webpki&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1007,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115573.1031572"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/webpki",
+            "title": "Crate webpkiCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\n[Settings](https://docs.rs/webpki/latest/settings.html)\n[Help](https://docs.rs/webpki/latest/help.html)\nSummary[Source](https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103)\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## [\u00a7](https://docs.rs/webpki/latest/webpki/#features)Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs[\u00a7](https://docs.rs/webpki/latest/webpki/#structs)\n\n[DnsName](https://docs.rs/webpki/latest/webpki/struct.DnsName.html \"struct webpki::DnsName\")\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[DnsNameRef](https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html \"struct webpki::DnsNameRef\")\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[EndEntityCert](https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html \"struct webpki::EndEntityCert\")\n    An end-entity certificate.\n\n[InvalidDnsNameError](https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html \"struct webpki::InvalidDnsNameError\")\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\n[SignatureAlgorithm](https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html \"struct webpki::SignatureAlgorithm\")\n    A signature algorithm.\n\n[Time](https://docs.rs/webpki/latest/webpki/struct.Time.html \"struct webpki::Time\")\n    The time type.\n\n[TlsClientTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html \"struct webpki::TlsClientTrustAnchors\")\n    Trust anchors which may be used for authenticating clients.\n\n[TlsServerTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html \"struct webpki::TlsServerTrustAnchors\")\n    Trust anchors which may be used for authenticating servers.\n\n[TrustAnchor](https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html \"struct webpki::TrustAnchor\")\n    A trust anchor (a.k.a. root CA).\n## Enums[\u00a7](https://docs.rs/webpki/latest/webpki/#enums)\n\n[Error](https://docs.rs/webpki/latest/webpki/enum.Error.html \"enum webpki::Error\")\n    An error that occurs during certificate validation or name validation.\n\n[ErrorExt](https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html \"enum webpki::ErrorExt\")\n    An error that occurs during certificate validation or name validation.\n## Statics[\u00a7](https://docs.rs/webpki/latest/webpki/#statics)\n\n[ECDSA_P256_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html \"static webpki::ECDSA_P256_SHA256\")\n    ECDSA signatures using the P-256 curve and SHA-256.\n\n[ECDSA_P256_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html \"static webpki::ECDSA_P256_SHA384\")\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\n[ECDSA_P384_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html \"static webpki::ECDSA_P384_SHA256\")\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\n[ECDSA_P384_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html \"static webpki::ECDSA_P384_SHA384\")\n    ECDSA signatures using the P-384 curve and SHA-384.\n\n[ED25519](https://docs.rs/webpki/latest/webpki/static.ED25519.html \"static webpki::ED25519\")\n    ED25519 signatures according to RFC 8410\n\n[RSA_PKCS1_2048_8192_SHA256](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html \"static webpki::RSA_PKCS1_2048_8192_SHA256\")\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html \"static webpki::RSA_PKCS1_2048_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA512](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html \"static webpki::RSA_PKCS1_2048_8192_SHA512\")\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_3072_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html \"static webpki::RSA_PKCS1_3072_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\n[RSA_PSS_2048_8192_SHA256_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY\")\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA384_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY\")\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA512_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY\")\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n## Type Aliases[\u00a7](https://docs.rs/webpki/latest/webpki/#types)\n\n[DNSName](https://docs.rs/webpki/latest/webpki/type.DNSName.html \"type webpki::DNSName\")Deprecated\n\n\n[DNSNameRef](https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html \"type webpki::DNSNameRef\")Deprecated\n\n\n[TLSClientTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html \"type webpki::TLSClientTrustAnchors\")Deprecated\n\n\n[TLSServerTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html \"type webpki::TLSServerTrustAnchors\")Deprecated\n\n",
+              "markdown_with_citations": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## \u00a7\u27e84\u27e9Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs\u00a7\u27e85\u27e9\n\nDnsName\u27e86\u27e9\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nDnsNameRef\u27e87\u27e9\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nEndEntityCert\u27e88\u27e9\n    An end-entity certificate.\n\nInvalidDnsNameError\u27e89\u27e9\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\nSignatureAlgorithm\u27e810\u27e9\n    A signature algorithm.\n\nTime\u27e811\u27e9\n    The time type.\n\nTlsClientTrustAnchors\u27e812\u27e9\n    Trust anchors which may be used for authenticating clients.\n\nTlsServerTrustAnchors\u27e813\u27e9\n    Trust anchors which may be used for authenticating servers.\n\nTrustAnchor\u27e814\u27e9\n    A trust anchor (a.k.a. root CA).\n## Enums\u00a7\u27e815\u27e9\n\nError\u27e816\u27e9\n    An error that occurs during certificate validation or name validation.\n\nErrorExt\u27e817\u27e9\n    An error that occurs during certificate validation or name validation.\n## Statics\u00a7\u27e818\u27e9\n\nECDSA_P256_SHA256\u27e819\u27e9\n    ECDSA signatures using the P-256 curve and SHA-256.\n\nECDSA_P256_SHA384\u27e820\u27e9\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\nECDSA_P384_SHA256\u27e821\u27e9\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\nECDSA_P384_SHA384\u27e822\u27e9\n    ECDSA signatures using the P-384 curve and SHA-384.\n\nED25519\u27e823\u27e9\n    ED25519 signatures according to RFC 8410\n\nRSA_PKCS1_2048_8192_SHA256\u27e824\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA384\u27e825\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA512\u27e826\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\nRSA_PKCS1_3072_8192_SHA384\u27e827\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\nRSA_PSS_2048_8192_SHA256_LEGACY_KEY\u27e828\u27e9\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA384_LEGACY_KEY\u27e830\u27e9\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA512_LEGACY_KEY\u27e831\u27e9\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n## Type Aliases\u00a7\u27e832\u27e9\n\nDNSName\u27e833\u27e9Deprecated\n\n\nDNSNameRef\u27e834\u27e9Deprecated\n\n\nTLSClientTrustAnchors\u27e835\u27e9Deprecated\n\n\nTLSServerTrustAnchors\u27e836\u27e9Deprecated\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/webpki/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/webpki/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103: Source\n\u27e84\u27e9 https://docs.rs/webpki/latest/webpki/#features: \u00a7\n\u27e85\u27e9 https://docs.rs/webpki/latest/webpki/#structs: \u00a7\n\u27e86\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsName.html: struct webpki::DnsName - DnsName\n\u27e87\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html: struct webpki::DnsNameRef - DnsNameRef\n\u27e88\u27e9 https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html: struct webpki::EndEntityCert - EndEntityCert\n\u27e89\u27e9 https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html: struct webpki::InvalidDnsNameError - InvalidDnsNameError\n\u27e810\u27e9 https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html: struct webpki::SignatureAlgorithm - SignatureAlgorithm\n\u27e811\u27e9 https://docs.rs/webpki/latest/webpki/struct.Time.html: struct webpki::Time - Time\n\u27e812\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html: struct webpki::TlsClientTrustAnchors - TlsClientTrustAnchors\n\u27e813\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html: struct webpki::TlsServerTrustAnchors - TlsServerTrustAnchors\n\u27e814\u27e9 https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html: struct webpki::TrustAnchor - TrustAnchor\n\u27e815\u27e9 https://docs.rs/webpki/latest/webpki/#enums: \u00a7\n\u27e816\u27e9 https://docs.rs/webpki/latest/webpki/enum.Error.html: enum webpki::Error - Error\n\u27e817\u27e9 https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html: enum webpki::ErrorExt - ErrorExt\n\u27e818\u27e9 https://docs.rs/webpki/latest/webpki/#statics: \u00a7\n\u27e819\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html: static webpki::ECDSA_P256_SHA256 - ECDSA_P256_SHA256\n\u27e820\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html: static webpki::ECDSA_P256_SHA384 - ECDSA_P256_SHA384\n\u27e821\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html: static webpki::ECDSA_P384_SHA256 - ECDSA_P384_SHA256\n\u27e822\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html: static webpki::ECDSA_P384_SHA384 - ECDSA_P384_SHA384\n\u27e823\u27e9 https://docs.rs/webpki/latest/webpki/static.ED25519.html: static webpki::ED25519 - ED25519\n\u27e824\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html: static webpki::RSA_PKCS1_2048_8192_SHA256 - RSA_PKCS1_2048_8192_SHA256\n\u27e825\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html: static webpki::RSA_PKCS1_2048_8192_SHA384 - RSA_PKCS1_2048_8192_SHA384\n\u27e826\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html: static webpki::RSA_PKCS1_2048_8192_SHA512 - RSA_PKCS1_2048_8192_SHA512\n\u27e827\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html: static webpki::RSA_PKCS1_3072_8192_SHA384 - RSA_PKCS1_3072_8192_SHA384\n\u27e828\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY - RSA_PSS_2048_8192_SHA256_LEGACY_KEY\n\u27e829\u27e9 https://tools.ietf.org/html/rfc4055#section-1.2: RFC 4055 Section 1.2\n\u27e830\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY - RSA_PSS_2048_8192_SHA384_LEGACY_KEY\n\u27e831\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY - RSA_PSS_2048_8192_SHA512_LEGACY_KEY\n\u27e832\u27e9 https://docs.rs/webpki/latest/webpki/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSName.html: type webpki::DNSName - DNSName\n\u27e834\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html: type webpki::DNSNameRef - DNSNameRef\n\u27e835\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html: type webpki::TLSClientTrustAnchors - TLSClientTrustAnchors\n\u27e836\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html: type webpki::TLSServerTrustAnchors - TLSServerTrustAnchors\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 6368,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115573.9523642"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/webpki",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [16 releases](https://lib.rs/crates/webpki/versions)\n0.22.4 |  Oct 9, 2023   \n---|---  \n0.22.2 |  Sep 30, 2023   \n0.22.0 |  Apr 10, 2021   \n0.21.4 |  Dec 2, 2020   \n0.8.0 |  ~~Nov 21, 2016~~  \n#**160** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 399298/week @ 2025-02-04 365727/week @ 2025-02-11 334051/week @ 2025-02-18 315666/week @ 2025-02-25 317343/week @ 2025-03-04 357139/week @ 2025-03-11 364098/week @ 2025-03-18 355479/week @ 2025-03-25 333447/week @ 2025-04-01 336362/week @ 2025-04-08 336579/week @ 2025-04-15 359418/week @ 2025-04-22 285599/week @ 2025-04-29 255424/week @ 2025-05-06 262589/week @ 2025-05-13 207438/week @ 2025-05-20\n**1,064,697** downloads per month Used in [**2,795** crates (161 directly)](https://lib.rs/crates/webpki/rev)\n**Custom license**\n145KB  2.5K  SLoC\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHORS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n# What is webpki?\nwebpki is a library that validates Web PKI (TLS/SSL) certificates. webpki is designed to provide a **full** implementation of the client side of the **Web PKI** to a diverse range of applications and devices, including embedded (IoT) applications, mobile apps, desktop applications, and server infrastructure. webpki is intended to not only be the best implementation of the Web PKI, but to also _precisely define_ what the Web PKI is.\nwebpki is written in [Rust](https://www.rust-lang.org/) and uses [_ring_](https://github.com/briansmith/ring) for signature verification.\nwebpki is strongly influenced by [mozilla::pkix](https://github.com/briansmith/mozillapkix). You can read a little about the ideas underlying both mozilla::pkix and webpki in [insanity::pkix: A New Certificate Path Building & Validation Library](https://briansmith.org/insanity-pkix).\nThe Rust compiler statically guarantees there are no buffer overflows, uses-after-free, double-frees, data races, etc. in webpki. webpki takes advantage of Rust's borrow checker to ensure that its **zero-copy parsing** strategy is safe and efficient. webpki _never_ allocates memory on the heap, and it maintains a tight bound on the amount of stack memory it uses. webpki avoids all superfluous PKIX features in order to keep its object code size small. Further reducing the code size of webpki is an important goal.\nThis release is the very first prototype. Lots of improvements are planned, including:\n  * An extensive automated test suite.\n  * Key pinning.\n  * Certificate Transparency support.\n  * Short-lived certificate, OCSP stapling, and CRLSet support.\n  * Customization of the supported algorithms, key sizes, and elliptic curves allowed during a validation.\n  * A C language wrapper interface to allow using webpki in non-Rust applications.\n  * A specification of precisely what the Web PKI is.\n\n\n# Demo\nSee <https://github.com/ctz/rustls#example-code> for an example of using webpki.\n# License\nSee [LICENSE](https://github.com/briansmith/webpki/blob/main/LICENSE). This project happily accepts pull requests without any formal copyright/contributor license agreement. Pull requests must explicitly indicate who owns the copyright to the code being contributed and that the code is being licensed under the same terms as the existing webpki code.\n# Bug Reporting\nPlease report bugs either as pull requests or as issues in [the issue tracker](https://github.com/briansmith/webpki/issues). webpki has a **full disclosure** vulnerability policy. **Please do NOT attempt to report any security vulnerability in this code privately to anybody.**\n#### Dependencies\n~5\u201313MB  ~234K SLoC\n  * [ring](https://lib.rs/crates/ring \"new\") 0.17.2\n  * [untrusted](https://lib.rs/crates/untrusted \"new\") 0.9\n\n\n  * dev  [base64](https://lib.rs/crates/base64 \"obsolete\") 0.9.1\n  * dev  [serde](https://lib.rs/crates/serde \"1.0\")[+derive](https://lib.rs/crates/serde/features#feature-derive)\n  * dev  [serde_json](https://lib.rs/crates/serde_json \"1.0\")\n\n\n#### [Other features](https://lib.rs/crates/webpki/features)\n  * [alloc](https://lib.rs/crates/webpki/features#feature-alloc)\n  * [std](https://lib.rs/crates/webpki/features#feature-std)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  16 releases\u27e81\u27e9\n0.22.4 |  Oct 9, 2023   \n---|---  \n0.22.2 |  Sep 30, 2023   \n0.22.0 |  Apr 10, 2021   \n0.21.4 |  Dec 2, 2020   \n0.8.0 |  ~~Nov 21, 2016~~  \n#**160** in Cryptography\u27e82\u27e9\nDownload history 399298/week @ 2025-02-04 365727/week @ 2025-02-11 334051/week @ 2025-02-18 315666/week @ 2025-02-25 317343/week @ 2025-03-04 357139/week @ 2025-03-11 364098/week @ 2025-03-18 355479/week @ 2025-03-25 333447/week @ 2025-04-01 336362/week @ 2025-04-08 336579/week @ 2025-04-15 359418/week @ 2025-04-22 285599/week @ 2025-04-29 255424/week @ 2025-05-06 262589/week @ 2025-05-13 207438/week @ 2025-05-20\n**1,064,697** downloads per month Used in **2,795** crates (161 directly)\u27e83\u27e9\n**Custom license**\n145KB  2.5K  SLoC\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHORS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n# What is webpki?\nwebpki is a library that validates Web PKI (TLS/SSL) certificates. webpki is designed to provide a **full** implementation of the client side of the **Web PKI** to a diverse range of applications and devices, including embedded (IoT) applications, mobile apps, desktop applications, and server infrastructure. webpki is intended to not only be the best implementation of the Web PKI, but to also _precisely define_ what the Web PKI is.\nwebpki is written in Rust\u27e84\u27e9 and uses _ring_\u27e85\u27e9 for signature verification.\nwebpki is strongly influenced by mozilla::pkix\u27e86\u27e9. You can read a little about the ideas underlying both mozilla::pkix and webpki in insanity::pkix: A New Certificate Path Building & Validation Library\u27e87\u27e9.\nThe Rust compiler statically guarantees there are no buffer overflows, uses-after-free, double-frees, data races, etc. in webpki. webpki takes advantage of Rust's borrow checker to ensure that its **zero-copy parsing** strategy is safe and efficient. webpki _never_ allocates memory on the heap, and it maintains a tight bound on the amount of stack memory it uses. webpki avoids all superfluous PKIX features in order to keep its object code size small. Further reducing the code size of webpki is an important goal.\nThis release is the very first prototype. Lots of improvements are planned, including:\n  * An extensive automated test suite.\n  * Key pinning.\n  * Certificate Transparency support.\n  * Short-lived certificate, OCSP stapling, and CRLSet support.\n  * Customization of the supported algorithms, key sizes, and elliptic curves allowed during a validation.\n  * A C language wrapper interface to allow using webpki in non-Rust applications.\n  * A specification of precisely what the Web PKI is.\n\n\n# Demo\nSee <https://github.com/ctz/rustls#example-code> for an example of using webpki.\n# License\nSee LICENSE\u27e88\u27e9. This project happily accepts pull requests without any formal copyright/contributor license agreement. Pull requests must explicitly indicate who owns the copyright to the code being contributed and that the code is being licensed under the same terms as the existing webpki code.\n# Bug Reporting\nPlease report bugs either as pull requests or as issues in the issue tracker\u27e89\u27e9. webpki has a **full disclosure** vulnerability policy. **Please do NOT attempt to report any security vulnerability in this code privately to anybody.**\n#### Dependencies\n~5\u201313MB  ~234K SLoC\n  * ring\u27e810\u27e9 0.17.2\n  * untrusted\u27e811\u27e9 0.9\n\n\n  * dev  base64\u27e812\u27e9 0.9.1\n  * dev  serde\u27e813\u27e9+derive\u27e814\u27e9\n  * dev  serde_json\u27e815\u27e9\n\n\n#### Other features\u27e816\u27e9\n  * alloc\u27e817\u27e9\n  * std\u27e818\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/webpki/versions: 16 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/webpki/rev: **2,795** crates (161 directly)\n\u27e84\u27e9 https://www.rust-lang.org/: Rust\n\u27e85\u27e9 https://github.com/briansmith/ring: _ring_\n\u27e86\u27e9 https://github.com/briansmith/mozillapkix: mozilla::pkix\n\u27e87\u27e9 https://briansmith.org/insanity-pkix: insanity::pkix: A New Certificate Path Building & Validation Library\n\u27e88\u27e9 https://github.com/briansmith/webpki/blob/main/LICENSE: LICENSE\n\u27e89\u27e9 https://github.com/briansmith/webpki/issues: the issue tracker\n\u27e810\u27e9 https://lib.rs/crates/ring: new - ring\n\u27e811\u27e9 https://lib.rs/crates/untrusted: new - untrusted\n\u27e812\u27e9 https://lib.rs/crates/base64: obsolete - base64\n\u27e813\u27e9 https://lib.rs/crates/serde: 1.0 - serde\n\u27e814\u27e9 https://lib.rs/crates/serde/features#feature-derive: +derive\n\u27e815\u27e9 https://lib.rs/crates/serde_json: 1.0 - serde_json\n\u27e816\u27e9 https://lib.rs/crates/webpki/features: Other features\n\u27e817\u27e9 https://lib.rs/crates/webpki/features#feature-alloc: alloc\n\u27e818\u27e9 https://lib.rs/crates/webpki/features#feature-std: std\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4603,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115574.3131056"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#untrusted@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\untrusted-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "untrusted",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\untrusted-0.9.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libuntrusted-6452109ac6963ab5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libshlex-25724775bd6ea405.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libshlex-25724775bd6ea405.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libgetrandom-b3df485e8c74ce0f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.27",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.27\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.27\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcc-cfd009d0dca340e1.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcc-cfd009d0dca340e1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-0d084d30c65e6e3d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-0d084d30c65e6e3d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "linked_libs": [
+                "static=ring_core_0_17_14_",
+                "static=ring_core_0_17_14__test"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-2993c4aeed5e97ae\\out"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-2993c4aeed5e97ae\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ring",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libring-25c9544d01e8af32.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unused import: `CONSTRUCTED`\n  --> src\\der.rs:17:24\n   |\n17 |     der::{nested, Tag, CONSTRUCTED},\n   |                        ^^^^^^^^^^^\n   |\n   = note: `#[warn(unused_imports)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unused_imports)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove the unused import",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 855,
+                        "byte_start": 842,
+                        "column_end": 35,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\der.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 17,
+                        "line_start": 17,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 22,
+                            "text": "    der::{nested, Tag, CONSTRUCTED},"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "unused_imports",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unused import: `CONSTRUCTED`",
+                "spans": [
+                  {
+                    "byte_end": 855,
+                    "byte_start": 844,
+                    "column_end": 35,
+                    "column_start": 24,
+                    "expansion": null,
+                    "file_name": "src\\der.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 17,
+                    "line_start": 17,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 24,
+                        "text": "    der::{nested, Tag, CONSTRUCTED},"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libwebpki-e33f06c72b6d07a5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libshlex-25724775bd6ea405.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libshlex-25724775bd6ea405.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.27",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.27\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.27\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcc-cfd009d0dca340e1.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcc-cfd009d0dca340e1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#untrusted@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\untrusted-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "untrusted",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\untrusted-0.9.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libuntrusted-6452109ac6963ab5.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-0d084d30c65e6e3d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-0d084d30c65e6e3d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libgetrandom-b3df485e8c74ce0f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "linked_libs": [
+                "static=ring_core_0_17_14_",
+                "static=ring_core_0_17_14__test"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-2993c4aeed5e97ae\\out"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\build\\ring-2993c4aeed5e97ae\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ring@0.17.14",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ring",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ring-0.17.14\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libring-25c9544d01e8af32.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unused import: `CONSTRUCTED`\n  --> src\\der.rs:17:24\n   |\n17 |     der::{nested, Tag, CONSTRUCTED},\n   |                        ^^^^^^^^^^^\n   |\n   = note: `#[warn(unused_imports)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unused_imports)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove the unused import",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 855,
+                        "byte_start": 842,
+                        "column_end": 35,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\der.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 17,
+                        "line_start": 17,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 22,
+                            "text": "    der::{nested, Tag, CONSTRUCTED},"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "unused_imports",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unused import: `CONSTRUCTED`",
+                "spans": [
+                  {
+                    "byte_end": 855,
+                    "byte_start": 844,
+                    "column_end": 35,
+                    "column_start": 24,
+                    "expansion": null,
+                    "file_name": "src\\der.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 17,
+                    "line_start": 17,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 24,
+                        "text": "    der::{nested, Tag, CONSTRUCTED},"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:102:9\n    |\n102 |         write!(f, \"{:?}\", self)\n    |         ^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n    = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n    |\n102 -         write!(f, \"{:?}\", self)\n102 +         write!(f, \"{self:?}\")\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3998,
+                        "byte_start": 3998,
+                        "column_end": 21,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 102,
+                        "line_start": 102,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 21,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 4008,
+                        "byte_start": 4002,
+                        "column_end": 31,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 102,
+                        "line_start": 102,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 25,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 4009,
+                    "byte_start": 3986,
+                    "column_end": 32,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 102,
+                    "line_start": 102,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 9,
+                        "text": "        write!(f, \"{:?}\", self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n  --> src\\name\\dns_name.rs:96:9\n   |\n96 |         write!(f, \"{:?}\", self)\n   |         ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n   |\n96 -         write!(f, \"{:?}\", self)\n96 +         write!(f, \"{self:?}\")\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3515,
+                        "byte_start": 3515,
+                        "column_end": 21,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\name\\dns_name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 96,
+                        "line_start": 96,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 21,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 3525,
+                        "byte_start": 3519,
+                        "column_end": 31,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\name\\dns_name.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 96,
+                        "line_start": 96,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 25,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 3526,
+                    "byte_start": 3503,
+                    "column_end": 32,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\name\\dns_name.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 96,
+                    "line_start": 96,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 9,
+                        "text": "        write!(f, \"{:?}\", self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp8g00n37i/webpki-0.22.4#webpki@0.22.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "webpki",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp8g00n37i\\webpki-0.22.4\\target\\debug\\deps\\libwebpki-27925a4bc26a39e9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 32
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "safemem",
+                    "version": "0.3.3",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "ef703b7cb59335eae2eb93ceb664c0eb7ea6bf567079d843e09420219668e072",
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2023-0081",
+                    "package": "safemem",
+                    "title": "safemem is unmaintained",
+                    "description": "The latest crates.io release was in 2019. The repository has been archived by the author.\n\n## Migration\n\n- `safemem::copy_over(slice, src_idx, dest_idx, len);` can be replaced with `slice.copy_within(src_idx..src_idx+len, dest_idx);` as of `rust 1.37.0`.\n- `safemem::write_bytes(slice, byte);` can be replaced with `slice.fill(byte);` as of `rust 1.50.0`\n- `safemem::prepend(slice, vec);` can be replaced with\n\n  ```rust\n  let old_len = vec.len();\n  vec.extend_from_slice(slice);\n  vec.rotate_left(old_len);\n  ```\n  \n  as of `rust 1.26.0`",
+                    "date": "2023-02-14",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/abonander/safemem",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "webpki",
+          "version": "0.22.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\n[Settings](https://docs.rs/webpki/latest/settings.html)\n[Help](https://docs.rs/webpki/latest/help.html)\nSummary[Source](https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103)\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## [\u00a7](https://docs.rs/webpki/latest/webpki/#features)Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs[\u00a7](https://docs.rs/webpki/latest/webpki/#structs)\n\n[DnsName](https://docs.rs/webpki/latest/webpki/struct.DnsName.html \"struct webpki::DnsName\")\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[DnsNameRef](https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html \"struct webpki::DnsNameRef\")\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[EndEntityCert](https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html \"struct webpki::EndEntityCert\")\n    An end-entity certificate.\n\n[InvalidDnsNameError](https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html \"struct webpki::InvalidDnsNameError\")\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\n[SignatureAlgorithm](https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html \"struct webpki::SignatureAlgorithm\")\n    A signature algorithm.\n\n[Time](https://docs.rs/webpki/latest/webpki/struct.Time.html \"struct webpki::Time\")\n    The time type.\n\n[TlsClientTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html \"struct webpki::TlsClientTrustAnchors\")\n    Trust anchors which may be used for authenticating clients.\n\n[TlsServerTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html \"struct webpki::TlsServerTrustAnchors\")\n    Trust anchors which may be used for authenticating servers.\n\n[TrustAnchor](https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html \"struct webpki::TrustAnchor\")\n    A trust anchor (a.k.a. root CA).\n## Enums[\u00a7](https://docs.rs/webpki/latest/webpki/#enums)\n\n[Error](https://docs.rs/webpki/latest/webpki/enum.Error.html \"enum webpki::Error\")\n    An error that occurs during certificate validation or name validation.\n\n[ErrorExt](https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html \"enum webpki::ErrorExt\")\n    An error that occurs during certificate validation or name validation.\n## Statics[\u00a7](https://docs.rs/webpki/latest/webpki/#statics)\n\n[ECDSA_P256_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html \"static webpki::ECDSA_P256_SHA256\")\n    ECDSA signatures using the P-256 curve and SHA-256.\n\n[ECDSA_P256_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html \"static webpki::ECDSA_P256_SHA384\")\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\n[ECDSA_P384_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html \"static webpki::ECDSA_P384_SHA256\")\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\n[ECDSA_P384_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html \"static webpki::ECDSA_P384_SHA384\")\n    ECDSA signatures using the P-384 curve and SHA-384.\n\n[ED25519](https://docs.rs/webpki/latest/webpki/static.ED25519.html \"static webpki::ED25519\")\n    ED25519 signatures according to RFC 8410\n\n[RSA_PKCS1_2048_8192_SHA256](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html \"static webpki::RSA_PKCS1_2048_8192_SHA256\")\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html \"static webpki::RSA_PKCS1_2048_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA512](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html \"static webpki::RSA_PKCS1_2048_8192_SHA512\")\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_3072_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html \"static webpki::RSA_PKCS1_3072_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\n[RSA_PSS_2048_8192_SHA256_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY\")\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA384_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY\")\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA512_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY\")\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n## Type Aliases[\u00a7](https://docs.rs/webpki/latest/webpki/#types)\n\n[DNSName](https://docs.rs/webpki/latest/webpki/type.DNSName.html \"type webpki::DNSName\")Deprecated\n\n\n[DNSNameRef](https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html \"type webpki::DNSNameRef\")Deprecated\n\n\n[TLSClientTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html \"type webpki::TLSClientTrustAnchors\")Deprecated\n\n\n[TLSServerTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html \"type webpki::TLSServerTrustAnchors\")Deprecated\n\n",
+            "markdown_with_citations": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## \u00a7\u27e84\u27e9Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs\u00a7\u27e85\u27e9\n\nDnsName\u27e86\u27e9\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nDnsNameRef\u27e87\u27e9\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nEndEntityCert\u27e88\u27e9\n    An end-entity certificate.\n\nInvalidDnsNameError\u27e89\u27e9\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\nSignatureAlgorithm\u27e810\u27e9\n    A signature algorithm.\n\nTime\u27e811\u27e9\n    The time type.\n\nTlsClientTrustAnchors\u27e812\u27e9\n    Trust anchors which may be used for authenticating clients.\n\nTlsServerTrustAnchors\u27e813\u27e9\n    Trust anchors which may be used for authenticating servers.\n\nTrustAnchor\u27e814\u27e9\n    A trust anchor (a.k.a. root CA).\n## Enums\u00a7\u27e815\u27e9\n\nError\u27e816\u27e9\n    An error that occurs during certificate validation or name validation.\n\nErrorExt\u27e817\u27e9\n    An error that occurs during certificate validation or name validation.\n## Statics\u00a7\u27e818\u27e9\n\nECDSA_P256_SHA256\u27e819\u27e9\n    ECDSA signatures using the P-256 curve and SHA-256.\n\nECDSA_P256_SHA384\u27e820\u27e9\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\nECDSA_P384_SHA256\u27e821\u27e9\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\nECDSA_P384_SHA384\u27e822\u27e9\n    ECDSA signatures using the P-384 curve and SHA-384.\n\nED25519\u27e823\u27e9\n    ED25519 signatures according to RFC 8410\n\nRSA_PKCS1_2048_8192_SHA256\u27e824\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA384\u27e825\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA512\u27e826\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\nRSA_PKCS1_3072_8192_SHA384\u27e827\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\nRSA_PSS_2048_8192_SHA256_LEGACY_KEY\u27e828\u27e9\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA384_LEGACY_KEY\u27e830\u27e9\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA512_LEGACY_KEY\u27e831\u27e9\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n## Type Aliases\u00a7\u27e832\u27e9\n\nDNSName\u27e833\u27e9Deprecated\n\n\nDNSNameRef\u27e834\u27e9Deprecated\n\n\nTLSClientTrustAnchors\u27e835\u27e9Deprecated\n\n\nTLSServerTrustAnchors\u27e836\u27e9Deprecated\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/webpki/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/webpki/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103: Source\n\u27e84\u27e9 https://docs.rs/webpki/latest/webpki/#features: \u00a7\n\u27e85\u27e9 https://docs.rs/webpki/latest/webpki/#structs: \u00a7\n\u27e86\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsName.html: struct webpki::DnsName - DnsName\n\u27e87\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html: struct webpki::DnsNameRef - DnsNameRef\n\u27e88\u27e9 https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html: struct webpki::EndEntityCert - EndEntityCert\n\u27e89\u27e9 https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html: struct webpki::InvalidDnsNameError - InvalidDnsNameError\n\u27e810\u27e9 https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html: struct webpki::SignatureAlgorithm - SignatureAlgorithm\n\u27e811\u27e9 https://docs.rs/webpki/latest/webpki/struct.Time.html: struct webpki::Time - Time\n\u27e812\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html: struct webpki::TlsClientTrustAnchors - TlsClientTrustAnchors\n\u27e813\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html: struct webpki::TlsServerTrustAnchors - TlsServerTrustAnchors\n\u27e814\u27e9 https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html: struct webpki::TrustAnchor - TrustAnchor\n\u27e815\u27e9 https://docs.rs/webpki/latest/webpki/#enums: \u00a7\n\u27e816\u27e9 https://docs.rs/webpki/latest/webpki/enum.Error.html: enum webpki::Error - Error\n\u27e817\u27e9 https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html: enum webpki::ErrorExt - ErrorExt\n\u27e818\u27e9 https://docs.rs/webpki/latest/webpki/#statics: \u00a7\n\u27e819\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html: static webpki::ECDSA_P256_SHA256 - ECDSA_P256_SHA256\n\u27e820\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html: static webpki::ECDSA_P256_SHA384 - ECDSA_P256_SHA384\n\u27e821\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html: static webpki::ECDSA_P384_SHA256 - ECDSA_P384_SHA256\n\u27e822\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html: static webpki::ECDSA_P384_SHA384 - ECDSA_P384_SHA384\n\u27e823\u27e9 https://docs.rs/webpki/latest/webpki/static.ED25519.html: static webpki::ED25519 - ED25519\n\u27e824\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html: static webpki::RSA_PKCS1_2048_8192_SHA256 - RSA_PKCS1_2048_8192_SHA256\n\u27e825\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html: static webpki::RSA_PKCS1_2048_8192_SHA384 - RSA_PKCS1_2048_8192_SHA384\n\u27e826\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html: static webpki::RSA_PKCS1_2048_8192_SHA512 - RSA_PKCS1_2048_8192_SHA512\n\u27e827\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html: static webpki::RSA_PKCS1_3072_8192_SHA384 - RSA_PKCS1_3072_8192_SHA384\n\u27e828\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY - RSA_PSS_2048_8192_SHA256_LEGACY_KEY\n\u27e829\u27e9 https://tools.ietf.org/html/rfc4055#section-1.2: RFC 4055 Section 1.2\n\u27e830\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY - RSA_PSS_2048_8192_SHA384_LEGACY_KEY\n\u27e831\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY - RSA_PSS_2048_8192_SHA512_LEGACY_KEY\n\u27e832\u27e9 https://docs.rs/webpki/latest/webpki/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSName.html: type webpki::DNSName - DNSName\n\u27e834\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html: type webpki::DNSNameRef - DNSNameRef\n\u27e835\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html: type webpki::TLSClientTrustAnchors - TLSClientTrustAnchors\n\u27e836\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html: type webpki::TLSServerTrustAnchors - TLSServerTrustAnchors\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "webpki",
+          "version": "0.22.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\n[Settings](https://docs.rs/webpki/latest/settings.html)\n[Help](https://docs.rs/webpki/latest/help.html)\nSummary[Source](https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103)\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## [\u00a7](https://docs.rs/webpki/latest/webpki/#features)Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs[\u00a7](https://docs.rs/webpki/latest/webpki/#structs)\n\n[DnsName](https://docs.rs/webpki/latest/webpki/struct.DnsName.html \"struct webpki::DnsName\")\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[DnsNameRef](https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html \"struct webpki::DnsNameRef\")\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\n[EndEntityCert](https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html \"struct webpki::EndEntityCert\")\n    An end-entity certificate.\n\n[InvalidDnsNameError](https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html \"struct webpki::InvalidDnsNameError\")\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\n[SignatureAlgorithm](https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html \"struct webpki::SignatureAlgorithm\")\n    A signature algorithm.\n\n[Time](https://docs.rs/webpki/latest/webpki/struct.Time.html \"struct webpki::Time\")\n    The time type.\n\n[TlsClientTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html \"struct webpki::TlsClientTrustAnchors\")\n    Trust anchors which may be used for authenticating clients.\n\n[TlsServerTrustAnchors](https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html \"struct webpki::TlsServerTrustAnchors\")\n    Trust anchors which may be used for authenticating servers.\n\n[TrustAnchor](https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html \"struct webpki::TrustAnchor\")\n    A trust anchor (a.k.a. root CA).\n## Enums[\u00a7](https://docs.rs/webpki/latest/webpki/#enums)\n\n[Error](https://docs.rs/webpki/latest/webpki/enum.Error.html \"enum webpki::Error\")\n    An error that occurs during certificate validation or name validation.\n\n[ErrorExt](https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html \"enum webpki::ErrorExt\")\n    An error that occurs during certificate validation or name validation.\n## Statics[\u00a7](https://docs.rs/webpki/latest/webpki/#statics)\n\n[ECDSA_P256_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html \"static webpki::ECDSA_P256_SHA256\")\n    ECDSA signatures using the P-256 curve and SHA-256.\n\n[ECDSA_P256_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html \"static webpki::ECDSA_P256_SHA384\")\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\n[ECDSA_P384_SHA256](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html \"static webpki::ECDSA_P384_SHA256\")\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\n[ECDSA_P384_SHA384](https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html \"static webpki::ECDSA_P384_SHA384\")\n    ECDSA signatures using the P-384 curve and SHA-384.\n\n[ED25519](https://docs.rs/webpki/latest/webpki/static.ED25519.html \"static webpki::ED25519\")\n    ED25519 signatures according to RFC 8410\n\n[RSA_PKCS1_2048_8192_SHA256](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html \"static webpki::RSA_PKCS1_2048_8192_SHA256\")\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html \"static webpki::RSA_PKCS1_2048_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_2048_8192_SHA512](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html \"static webpki::RSA_PKCS1_2048_8192_SHA512\")\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\n[RSA_PKCS1_3072_8192_SHA384](https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html \"static webpki::RSA_PKCS1_3072_8192_SHA384\")\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\n[RSA_PSS_2048_8192_SHA256_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY\")\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA384_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY\")\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n\n[RSA_PSS_2048_8192_SHA512_LEGACY_KEY](https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html \"static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY\")\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see [RFC 4055 Section 1.2](https://tools.ietf.org/html/rfc4055#section-1.2).\n## Type Aliases[\u00a7](https://docs.rs/webpki/latest/webpki/#types)\n\n[DNSName](https://docs.rs/webpki/latest/webpki/type.DNSName.html \"type webpki::DNSName\")Deprecated\n\n\n[DNSNameRef](https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html \"type webpki::DNSNameRef\")Deprecated\n\n\n[TLSClientTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html \"type webpki::TLSClientTrustAnchors\")Deprecated\n\n\n[TLSServerTrustAnchors](https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html \"type webpki::TLSServerTrustAnchors\")Deprecated\n\n",
+            "markdown_with_citations": "[](https://docs.rs/webpki/latest/webpki/all.html \"show sidebar\")\n# Crate webpkiCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nwebpki: Web PKI X.509 Certificate Validation.\nSee `EndEntityCert`\u2019s documentation for a description of the certificate processing steps necessary for a TLS connection.\n## \u00a7\u27e84\u27e9Features\nFeature| Description  \n---|---  \n`alloc`| Enable features that require use of the heap. Currently all RSA signature algorithms require this feature.  \n`std`| Enable features that require libstd. Implies `alloc`.  \n## Structs\u00a7\u27e85\u27e9\n\nDnsName\u27e86\u27e9\n    Requires the `alloc` feature. A DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nDnsNameRef\u27e87\u27e9\n    A reference to a DNS Name suitable for use in the TLS Server Name Indication (SNI) extension and/or for use as the reference hostname for which to verify a certificate.\n\nEndEntityCert\u27e88\u27e9\n    An end-entity certificate.\n\nInvalidDnsNameError\u27e89\u27e9\n    An error indicating that a `DnsNameRef` could not built because the input is not a syntactically-valid DNS Name.\n\nSignatureAlgorithm\u27e810\u27e9\n    A signature algorithm.\n\nTime\u27e811\u27e9\n    The time type.\n\nTlsClientTrustAnchors\u27e812\u27e9\n    Trust anchors which may be used for authenticating clients.\n\nTlsServerTrustAnchors\u27e813\u27e9\n    Trust anchors which may be used for authenticating servers.\n\nTrustAnchor\u27e814\u27e9\n    A trust anchor (a.k.a. root CA).\n## Enums\u00a7\u27e815\u27e9\n\nError\u27e816\u27e9\n    An error that occurs during certificate validation or name validation.\n\nErrorExt\u27e817\u27e9\n    An error that occurs during certificate validation or name validation.\n## Statics\u00a7\u27e818\u27e9\n\nECDSA_P256_SHA256\u27e819\u27e9\n    ECDSA signatures using the P-256 curve and SHA-256.\n\nECDSA_P256_SHA384\u27e820\u27e9\n    ECDSA signatures using the P-256 curve and SHA-384. Deprecated.\n\nECDSA_P384_SHA256\u27e821\u27e9\n    ECDSA signatures using the P-384 curve and SHA-256. Deprecated.\n\nECDSA_P384_SHA384\u27e822\u27e9\n    ECDSA signatures using the P-384 curve and SHA-384.\n\nED25519\u27e823\u27e9\n    ED25519 signatures according to RFC 8410\n\nRSA_PKCS1_2048_8192_SHA256\u27e824\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-256 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA384\u27e825\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 2048-8192 bits.\n\nRSA_PKCS1_2048_8192_SHA512\u27e826\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-512 for keys of 2048-8192 bits.\n\nRSA_PKCS1_3072_8192_SHA384\u27e827\u27e9\n    RSA PKCS#1 1.5 signatures using SHA-384 for keys of 3072-8192 bits.\n\nRSA_PSS_2048_8192_SHA256_LEGACY_KEY\u27e828\u27e9\n    RSA PSS signatures using SHA-256 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA384_LEGACY_KEY\u27e830\u27e9\n    RSA PSS signatures using SHA-384 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n\nRSA_PSS_2048_8192_SHA512_LEGACY_KEY\u27e831\u27e9\n    RSA PSS signatures using SHA-512 for keys of 2048-8192 bits and of type rsaEncryption; see RFC 4055 Section 1.2\u27e829\u27e9.\n## Type Aliases\u00a7\u27e832\u27e9\n\nDNSName\u27e833\u27e9Deprecated\n\n\nDNSNameRef\u27e834\u27e9Deprecated\n\n\nTLSClientTrustAnchors\u27e835\u27e9Deprecated\n\n\nTLSServerTrustAnchors\u27e836\u27e9Deprecated\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/webpki/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/webpki/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/webpki/latest/src/webpki/lib.rs.html#15-103: Source\n\u27e84\u27e9 https://docs.rs/webpki/latest/webpki/#features: \u00a7\n\u27e85\u27e9 https://docs.rs/webpki/latest/webpki/#structs: \u00a7\n\u27e86\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsName.html: struct webpki::DnsName - DnsName\n\u27e87\u27e9 https://docs.rs/webpki/latest/webpki/struct.DnsNameRef.html: struct webpki::DnsNameRef - DnsNameRef\n\u27e88\u27e9 https://docs.rs/webpki/latest/webpki/struct.EndEntityCert.html: struct webpki::EndEntityCert - EndEntityCert\n\u27e89\u27e9 https://docs.rs/webpki/latest/webpki/struct.InvalidDnsNameError.html: struct webpki::InvalidDnsNameError - InvalidDnsNameError\n\u27e810\u27e9 https://docs.rs/webpki/latest/webpki/struct.SignatureAlgorithm.html: struct webpki::SignatureAlgorithm - SignatureAlgorithm\n\u27e811\u27e9 https://docs.rs/webpki/latest/webpki/struct.Time.html: struct webpki::Time - Time\n\u27e812\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsClientTrustAnchors.html: struct webpki::TlsClientTrustAnchors - TlsClientTrustAnchors\n\u27e813\u27e9 https://docs.rs/webpki/latest/webpki/struct.TlsServerTrustAnchors.html: struct webpki::TlsServerTrustAnchors - TlsServerTrustAnchors\n\u27e814\u27e9 https://docs.rs/webpki/latest/webpki/struct.TrustAnchor.html: struct webpki::TrustAnchor - TrustAnchor\n\u27e815\u27e9 https://docs.rs/webpki/latest/webpki/#enums: \u00a7\n\u27e816\u27e9 https://docs.rs/webpki/latest/webpki/enum.Error.html: enum webpki::Error - Error\n\u27e817\u27e9 https://docs.rs/webpki/latest/webpki/enum.ErrorExt.html: enum webpki::ErrorExt - ErrorExt\n\u27e818\u27e9 https://docs.rs/webpki/latest/webpki/#statics: \u00a7\n\u27e819\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA256.html: static webpki::ECDSA_P256_SHA256 - ECDSA_P256_SHA256\n\u27e820\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P256_SHA384.html: static webpki::ECDSA_P256_SHA384 - ECDSA_P256_SHA384\n\u27e821\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA256.html: static webpki::ECDSA_P384_SHA256 - ECDSA_P384_SHA256\n\u27e822\u27e9 https://docs.rs/webpki/latest/webpki/static.ECDSA_P384_SHA384.html: static webpki::ECDSA_P384_SHA384 - ECDSA_P384_SHA384\n\u27e823\u27e9 https://docs.rs/webpki/latest/webpki/static.ED25519.html: static webpki::ED25519 - ED25519\n\u27e824\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA256.html: static webpki::RSA_PKCS1_2048_8192_SHA256 - RSA_PKCS1_2048_8192_SHA256\n\u27e825\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA384.html: static webpki::RSA_PKCS1_2048_8192_SHA384 - RSA_PKCS1_2048_8192_SHA384\n\u27e826\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_2048_8192_SHA512.html: static webpki::RSA_PKCS1_2048_8192_SHA512 - RSA_PKCS1_2048_8192_SHA512\n\u27e827\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PKCS1_3072_8192_SHA384.html: static webpki::RSA_PKCS1_3072_8192_SHA384 - RSA_PKCS1_3072_8192_SHA384\n\u27e828\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA256_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA256_LEGACY_KEY - RSA_PSS_2048_8192_SHA256_LEGACY_KEY\n\u27e829\u27e9 https://tools.ietf.org/html/rfc4055#section-1.2: RFC 4055 Section 1.2\n\u27e830\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA384_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA384_LEGACY_KEY - RSA_PSS_2048_8192_SHA384_LEGACY_KEY\n\u27e831\u27e9 https://docs.rs/webpki/latest/webpki/static.RSA_PSS_2048_8192_SHA512_LEGACY_KEY.html: static webpki::RSA_PSS_2048_8192_SHA512_LEGACY_KEY - RSA_PSS_2048_8192_SHA512_LEGACY_KEY\n\u27e832\u27e9 https://docs.rs/webpki/latest/webpki/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSName.html: type webpki::DNSName - DNSName\n\u27e834\u27e9 https://docs.rs/webpki/latest/webpki/type.DNSNameRef.html: type webpki::DNSNameRef - DNSNameRef\n\u27e835\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSClientTrustAnchors.html: type webpki::TLSClientTrustAnchors - TLSClientTrustAnchors\n\u27e836\u27e9 https://docs.rs/webpki/latest/webpki/type.TLSServerTrustAnchors.html: type webpki::TLSServerTrustAnchors - TLSServerTrustAnchors\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `webpki` crate provides robust X.509 certificate validation for Web PKI, primarily used in TLS connections. It supports end-entity certificate processing, DNS name validation for Server Name Indication (SNI), and trust anchor management for authenticating servers and clients. Key features include support for various signature algorithms (ECDSA, ED25519, RSA PKCS#1, RSA PSS) and optional `alloc` and `std` features for enhanced functionality.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1: Certificate Validation  \n\u2705 Factual: The `webpki` crate provides X.509 certificate validation specifically tailored for use in TLS connections, with support for verifying end-entity certificates via the `EndEntityCert` struct.  \n\u274c Counterfactual: The `webpki` crate supports X.509 certificate validation for all types of applications, including email encryption and document signing.  \n\n---\n\n### Pair 2: Signature Algorithm Support  \n\u2705 Factual: The `webpki` crate supports ECDSA signatures using the P-256 and P-384 curves, as well as RSA PKCS#1 and RSA PSS signatures for keys ranging from 2048 to 8192 bits.  \n\u274c Counterfactual: The `webpki` crate supports ECDSA signatures using the P-521 curve and RSA keys smaller than 2048 bits.  \n\n---\n\n### Pair 3: Feature Flags  \n\u2705 Factual: The `webpki` crate requires the `alloc` feature to enable functionality for RSA signature algorithms, as these algorithms depend on heap allocation.  \n\u274c Counterfactual: The `webpki` crate requires the `std` feature to enable functionality for RSA signature algorithms, as these algorithms depend on standard library features.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-8b09f1fa-f107ca4b-1751261783",
+      "timestamp": "2025-06-30T05:36:23.225550+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

@@ -2,24 +2,25 @@
 from __future__ import annotations
 
 import io
-import re
-import tarfile
-import requests
 import logging
-import tempfile
-from typing import Any, Dict, List, Optional, Union
 import os
-import sys
-import time
+import re
 import subprocess
-from dataclasses import dataclass
+import tarfile
+import tempfile
+import time
+from typing import Any
+
+import requests
 
 from .config import EnrichedCrate
 
 # Create a fallback RustCodeAnalyzer that doesn't depend on external utils
+
+
 class RustCodeAnalyzer:
     """Fallback Rust code analyzer for when the full analyzer is not available."""
-    
+
     def __init__(self, code_content: str) -> None:
         self.code_content = code_content
 
@@ -103,7 +104,7 @@ class RustCodeAnalyzer:
                 if key not in metrics:
                     metrics[key] = []
                 metrics[key].extend(value)
-        
+
         # Add structure information
         metrics.update(structure)
         return metrics
@@ -126,7 +127,9 @@ class SourceAnalyzer:
             url = f"{CRATES_IO_API_URL}/{crate.name}/{crate.version}/download"
             response = requests.get(url, stream=True, timeout=30)
             response.raise_for_status()
-            logging.info(f"Successfully downloaded {crate.name} from crates.io")
+            logging.info(
+                f"Successfully downloaded {
+                    crate.name} from crates.io")
             return SourceAnalyzer.analyze_crate_tarball(response.content)
         except requests.RequestException as e:
             logging.warning(f"Failed to download from crates.io: {e}")
@@ -141,18 +144,24 @@ class SourceAnalyzer:
                     github_url = f"{GITHUB_API_URL}/{owner}/{repo_name}/tarball"
                     response = requests.get(github_url, timeout=30)
                     response.raise_for_status()
-                    logging.info(f"Successfully downloaded {crate.name} from GitHub")
-                    return SourceAnalyzer.analyze_github_tarball(response.content)
+                    logging.info(
+                        f"Successfully downloaded {
+                            crate.name} from GitHub")
+                    return SourceAnalyzer.analyze_github_tarball(
+                        response.content)
                 except requests.RequestException as e:
                     logging.warning(f"Failed to analyze from GitHub: {e}")
 
         # Method 3: Fallback to cloning from the repository directly
         if repo_url:
             try:
-                logging.info(f"Attempting to clone repository for {crate.name}")
+                logging.info(
+                    f"Attempting to clone repository for {
+                        crate.name}")
                 return SourceAnalyzer.analyze_crate_source_from_repo(repo_url)
             except Exception as e:
-                logging.error(f"Failed to clone and analyze repository {repo_url}: {e}")
+                logging.error(
+                    f"Failed to clone and analyze repository {repo_url}: {e}")
 
         return {
             "error": "Could not analyze crate from any available source.",
@@ -171,7 +180,8 @@ class SourceAnalyzer:
             ) as tar:
                 rust_files = [f for f in tar.getnames() if f.endswith(".rs")]
                 metrics["file_count"] = len(rust_files)
-                structure = RustCodeAnalyzer.detect_project_structure(tar.getnames())
+                structure = RustCodeAnalyzer.detect_project_structure(
+                    tar.getnames())
 
                 for member in tar.getmembers():
                     if member.isfile() and member.name.endswith(".rs"):
@@ -180,8 +190,7 @@ class SourceAnalyzer:
                             try:
                                 content_str = file_content.read().decode("utf-8")
                                 analysis = RustCodeAnalyzer.analyze_rust_content(
-                                    content_str
-                                )
+                                    content_str)
                                 metrics = RustCodeAnalyzer.aggregate_metrics(
                                     metrics, analysis, structure
                                 )
@@ -261,7 +270,8 @@ class SourceAnalyzer:
                     error_output = e.stderr.decode("utf-8", "ignore")
                 else:
                     error_output = str(e)
-                logging.error(f"Failed to clone repository {repo_url}: {error_output}")
+                logging.error(
+                    f"Failed to clone repository {repo_url}: {error_output}")
                 return {
                     "error": f"Failed to clone repository: {error_output}",
                     "file_count": 0,
@@ -314,7 +324,8 @@ class UserBehaviorAnalyzer:
         repo = repo.replace(".git", "")
 
         headers = UserBehaviorAnalyzer._get_github_headers()
-        UserBehaviorAnalyzer._fetch_github_activity(owner, repo, headers, result)
+        UserBehaviorAnalyzer._fetch_github_activity(
+            owner, repo, headers, result)
         UserBehaviorAnalyzer._fetch_crates_io_versions(crate.name, result)
 
         return result
@@ -346,7 +357,8 @@ class UserBehaviorAnalyzer:
             # Fetch commit activity (retries on 202)
             activity_url = f"{GITHUB_API_URL}/{owner}/{repo}/stats/commit_activity"
             for _ in range(3):  # Retry up to 3 times
-                activity_resp = requests.get(activity_url, headers=headers, timeout=60)
+                activity_resp = requests.get(
+                    activity_url, headers=headers, timeout=60)
                 if activity_resp.status_code == 200:
                     result["community_metrics"][
                         "commit_activity"
@@ -354,17 +366,18 @@ class UserBehaviorAnalyzer:
                     break
                 elif activity_resp.status_code == 202:
                     logging.info(
-                        f"GitHub is calculating stats for {owner}/{repo}, waiting..."
-                    )
+                        f"GitHub is calculating stats for {owner}/{repo}, waiting...")
                     time.sleep(2)
                 else:
                     activity_resp.raise_for_status()
 
         except requests.RequestException as e:
-            logging.warning(f"Error fetching GitHub data for {owner}/{repo}: {e}")
+            logging.warning(
+                f"Error fetching GitHub data for {owner}/{repo}: {e}")
 
     @staticmethod
-    def _fetch_crates_io_versions(crate_name: str, result: dict[str, Any]) -> None:
+    def _fetch_crates_io_versions(
+            crate_name: str, result: dict[str, Any]) -> None:
         """Fetch version adoption data from crates.io."""
         try:
             versions_url = f"{CRATES_IO_API_URL}/{crate_name}/versions"

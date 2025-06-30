@@ -1,0 +1,505 @@
+[
+  {
+    "execution_id": "exec-34ee60f5-8a3ee3b4-1751258391",
+    "timestamp": "2025-06-30T04:39:51.478188+00:00",
+    "sacred_chain": {
+      "input_data": "tokio-stream",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'tokio-stream' -> 'tokio-stream'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "tokio-stream",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/tokio-stream",
+            "title": "tokio-stream v0.1.17",
+            "content": {
+              "raw_markdown": "#  tokio-stream v0.1.17\nUtilities to work with `Stream` and `tokio`. \n  * [ Readme ](https://crates.io/crates/tokio-stream)\n  * [ 19 Versions ](https://crates.io/crates/tokio-stream/versions)\n  * [ Dependencies ](https://crates.io/crates/tokio-stream/dependencies)\n  * [ Dependents ](https://crates.io/crates/tokio-stream/reverse_dependencies)\n\n\n## Metadata\n7 months ago \nv1.70.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n37.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add tokio-stream\nOr add the following line to your Cargo.toml:\ntokio-stream = \"0.1.17\"\n## Homepage\n[ tokio.rs ](https://tokio.rs)\n## Repository\n[ github.com/tokio-rs/tokio ](https://github.com/tokio-rs/tokio)\n## Owners\n## Categories\n  * [Asynchronous](https://crates.io/categories/asynchronous)\n\n\n[ Report crate ](https://crates.io/support?crate=tokio-stream&inquire=crate-violation)\n### Stats Overview\n166,425,647 Downloads all time\n19 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  tokio-stream v0.1.17\nUtilities to work with `Stream` and `tokio`. \n  *  Readme \u27e81\u27e9\n  *  19 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n7 months ago \nv1.70.0 \n MIT \u27e85\u27e9\n37.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add tokio-stream\nOr add the following line to your Cargo.toml:\ntokio-stream = \"0.1.17\"\n## Homepage\n tokio.rs \u27e86\u27e9\n## Repository\n github.com/tokio-rs/tokio \u27e87\u27e9\n## Owners\n## Categories\n  * Asynchronous\u27e88\u27e9\n\n\n Report crate \u27e89\u27e9\n### Stats Overview\n166,425,647 Downloads all time\n19 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/tokio-stream:  Readme \n\u27e82\u27e9 https://crates.io/crates/tokio-stream/versions:  19 Versions \n\u27e83\u27e9 https://crates.io/crates/tokio-stream/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/tokio-stream/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://tokio.rs:  tokio.rs \n\u27e87\u27e9 https://github.com/tokio-rs/tokio:  github.com/tokio-rs/tokio \n\u27e88\u27e9 https://crates.io/categories/asynchronous: Asynchronous\n\u27e89\u27e9 https://crates.io/support?crate=tokio-stream&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1069,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112181.3724516"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/tokio-stream",
+            "title": "Crate tokio_streamCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\n[Settings](https://docs.rs/tokio-stream/latest/settings.html)\n[Help](https://docs.rs/tokio-stream/latest/help.html)\nSummary[Source](https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118)\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the [streams tutorial](https://tokio.rs/tokio/tutorial/streams) on the tokio website.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream)Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function)Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the [async-stream](https://docs.rs/async-stream) crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite)Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html), especially when dealing with plaintext formats streamed over the network. The opposite conversion from an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html) into a `Stream` is also another commonly required feature. To enable these conversions, [`tokio-util`](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html) provides the [`StreamReader`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html) and [`ReaderStream`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html) types when the io feature is enabled.\n## Re-exports[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#reexports)\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#modules)\n\n[adapters](https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html \"mod tokio_stream::adapters\")\n    Adapters for [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\")s created by methods in [`StreamExt`](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\").\n\n[wrappers](https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html \"mod tokio_stream::wrappers\")\n    Wrappers for Tokio types that implement `Stream`.\n## Structs[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#structs)\n\n[Elapsed](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html \"struct tokio_stream::Elapsed\")`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\n[Empty](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html \"struct tokio_stream::Empty\")\n    Stream for the [`empty`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\") function.\n\n[Iter](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html \"struct tokio_stream::Iter\")\n    Stream for the [`iter`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\") function.\n\n[Once](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html \"struct tokio_stream::Once\")\n    Stream for the [`once`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\") function.\n\n[Pending](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html \"struct tokio_stream::Pending\")\n    Stream for the [`pending`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\") function.\n\n[StreamMap](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html \"struct tokio_stream::StreamMap\")\n    Combine many streams into one, indexing each source stream with a unique key.\n\n[StreamNotifyClose](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html \"struct tokio_stream::StreamNotifyClose\")\n    A `Stream` that wraps the values in an `Option`.\n## Traits[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#traits)\n\n[FromStream](https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html \"trait tokio_stream::FromStream\")\n    Convert from a [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\").\n\n[StreamExt](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\")\n    An extension trait for the [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\") trait that provides a variety of convenient combinator functions.\n## Functions[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#functions)\n\n[empty](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\")\n    Creates a stream that yields nothing.\n\n[iter](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\")\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\n[once](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\")\n    Creates a stream that emits an element exactly once.\n\n[pending](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\")\n    Creates a stream that is never ready\n",
+              "markdown_with_citations": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the streams tutorial\u27e84\u27e9 on the tokio website.\n## \u00a7\u27e85\u27e9Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## \u00a7\u27e86\u27e9Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the async-stream\u27e87\u27e9 crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## \u00a7\u27e88\u27e9Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an `AsyncRead`\u27e89\u27e9, especially when dealing with plaintext formats streamed over the network. The opposite conversion from an `AsyncRead`\u27e89\u27e9 into a `Stream` is also another commonly required feature. To enable these conversions, `tokio-util`\u27e810\u27e9 provides the `StreamReader`\u27e811\u27e9 and `ReaderStream`\u27e812\u27e9 types when the io feature is enabled.\n## Re-exports\u00a7\u27e813\u27e9\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules\u00a7\u27e814\u27e9\n\nadapters\u27e815\u27e9\n    Adapters for `Stream`\u27e816\u27e9s created by methods in `StreamExt`\u27e817\u27e9.\n\nwrappers\u27e818\u27e9\n    Wrappers for Tokio types that implement `Stream`.\n## Structs\u00a7\u27e819\u27e9\n\nElapsed\u27e820\u27e9`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\nEmpty\u27e821\u27e9\n    Stream for the `empty`\u27e822\u27e9 function.\n\nIter\u27e823\u27e9\n    Stream for the `iter`\u27e824\u27e9 function.\n\nOnce\u27e825\u27e9\n    Stream for the `once`\u27e826\u27e9 function.\n\nPending\u27e827\u27e9\n    Stream for the `pending`\u27e828\u27e9 function.\n\nStreamMap\u27e829\u27e9\n    Combine many streams into one, indexing each source stream with a unique key.\n\nStreamNotifyClose\u27e830\u27e9\n    A `Stream` that wraps the values in an `Option`.\n## Traits\u00a7\u27e831\u27e9\n\nFromStream\u27e832\u27e9\n    Convert from a `Stream`\u27e816\u27e9.\n\nStreamExt\u27e817\u27e9\n    An extension trait for the `Stream`\u27e816\u27e9 trait that provides a variety of convenient combinator functions.\n## Functions\u00a7\u27e833\u27e9\n\nempty\u27e822\u27e9\n    Creates a stream that yields nothing.\n\niter\u27e824\u27e9\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\nonce\u27e826\u27e9\n    Creates a stream that emits an element exactly once.\n\npending\u27e828\u27e9\n    Creates a stream that is never ready\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-stream/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-stream/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118: Source\n\u27e84\u27e9 https://tokio.rs/tokio/tutorial/streams: streams tutorial\n\u27e85\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function: \u00a7\n\u27e87\u27e9 https://docs.rs/async-stream: async-stream\n\u27e88\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite: \u00a7\n\u27e89\u27e9 https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html: `AsyncRead`\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: `tokio-util`\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html: `StreamReader`\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html: `ReaderStream`\n\u27e813\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#reexports: \u00a7\n\u27e814\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#modules: \u00a7\n\u27e815\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html: mod tokio_stream::adapters - adapters\n\u27e816\u27e9 https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html: trait futures_core::stream::Stream - `Stream`\n\u27e817\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html: trait tokio_stream::StreamExt - `StreamExt`\n\u27e818\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html: mod tokio_stream::wrappers - wrappers\n\u27e819\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#structs: \u00a7\n\u27e820\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html: struct tokio_stream::Elapsed - Elapsed\n\u27e821\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html: struct tokio_stream::Empty - Empty\n\u27e822\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html: fn tokio_stream::empty - `empty`\n\u27e823\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html: struct tokio_stream::Iter - Iter\n\u27e824\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html: fn tokio_stream::iter - `iter`\n\u27e825\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html: struct tokio_stream::Once - Once\n\u27e826\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html: fn tokio_stream::once - `once`\n\u27e827\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html: struct tokio_stream::Pending - Pending\n\u27e828\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html: fn tokio_stream::pending - `pending`\n\u27e829\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html: struct tokio_stream::StreamMap - StreamMap\n\u27e830\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html: struct tokio_stream::StreamNotifyClose - StreamNotifyClose\n\u27e831\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#traits: \u00a7\n\u27e832\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html: trait tokio_stream::FromStream - FromStream\n\u27e833\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#functions: \u00a7\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 6548,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112182.1218961"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/tokio-stream",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [18 releases](https://lib.rs/crates/tokio-stream/versions)\n0.1.17 |  Dec 6, 2024   \n---|---  \n0.1.16 |  Sep 5, 2024   \n0.1.15 |  Mar 14, 2024   \n0.1.14 |  Apr 26, 2023   \n0.1.0 |  Dec 23, 2020   \n#**180** in [Asynchronous](https://lib.rs/asynchronous \"Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing.\")\nDownload history 2196589/week @ 2025-03-07 2214514/week @ 2025-03-14 2829141/week @ 2025-03-21 2003757/week @ 2025-03-28 2141806/week @ 2025-04-04 1951717/week @ 2025-04-11 1748470/week @ 2025-04-18 1750145/week @ 2025-04-25 1788088/week @ 2025-05-02 1873701/week @ 2025-05-09 1924441/week @ 2025-05-16 1690732/week @ 2025-05-23 1877822/week @ 2025-05-30 1837298/week @ 2025-06-06 1937493/week @ 2025-06-13 1661885/week @ 2025-06-20\n**7,615,638** downloads per month Used in [**9,480** crates (1,888 directly)](https://lib.rs/crates/tokio-stream/rev)\n**MIT** license \n2.5MB  **37K** SLoC\nStream utilities for Tokio.\nA ``Stream`` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library's ```Iterator``` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the [streams tutorial](https://tokio.rs/tokio/tutorial/streams) on the tokio website.\n# Iterating over a Stream\nDue to similarities with the standard library's ```Iterator``` trait, some new users may assume that they can use ```for` `in``` syntax to iterate over a ``Stream``, but this is unfortunately not possible. Instead, you can use a ```while` `let``` loop as follows:\n```\n``use` `tokio_stream`::````{``self` `as` stream`,` StreamExt```}```;`\n``#``[``tokio`::`main``]``\nasync ``fn` `main`````(````)``````{`\n  `let` `mut` stream `=` `stream`::``iter`(``vec!``[``0``,` `1``,` `2``]``)``;`\n  `while` `let` `Some``(`value`)` `=` stream`.``next``(``)``.`await `{`\n    `println!``(```\"`Got `{}``\"```,` value`)``;`\n  `}`\n```}```\n`\n```\n\n# Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the [async-stream](https://docs.rs/async-stream) crate, which contains macros that provide a ```yield``` keyword and allow you to return an ````impl` ```Stream````.\n# Conversion to and from ``AsyncRead``/``AsyncWrite``\nIt is often desirable to convert a ``Stream`` into an [``AsyncRead``](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html), especially when dealing with plaintext formats streamed over the network. The opposite conversion from an [``AsyncRead``](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html) into a ``Stream`` is also another commonly required feature. To enable these conversions, [``tokio-util``](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html) provides the [``StreamReader``](https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html) and [``ReaderStream``](https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html) types when the io feature is enabled.\n# tokio-stream\nUtilities to work with ``Stream`` and ``tokio``.\n## License\nThis project is licensed under the [MIT license](https://github.com/tokio-rs/tokio/blob/HEAD/LICENSE).\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in Tokio by you, shall be licensed as MIT, without any additional terms or conditions.\n#### Dependencies\n~0\u20137.5MB  ~50K SLoC\n  * [futures-core](https://lib.rs/crates/futures-core \"0.3.0\")\n  * [pin-project-lite](https://lib.rs/crates/pin-project-lite \"0.2.11\")\n  * [tokio](https://lib.rs/crates/tokio \"1.15.0\")[+sync](https://lib.rs/crates/tokio/features#feature-sync)\n  * [sync?](https://lib.rs/crates/tokio-stream/features#feature-sync \"optional feature\") [tokio-util](https://lib.rs/crates/tokio-util \"0.7.0\")\n\n\n  * dev  [async-stream](https://lib.rs/crates/async-stream \"0.3\")\n  * dev  [futures](https://lib.rs/crates/futures \"0.3\")\n  * dev  [parking_lot](https://lib.rs/crates/parking_lot \"0.12.0\")\n  * dev  [tokio-test](https://lib.rs/crates/tokio-test \"0.4\")\n\n\n#### [Other features](https://lib.rs/crates/tokio-stream/features)\n  * [fs](https://lib.rs/crates/tokio-stream/features#feature-fs)\n  * [full](https://lib.rs/crates/tokio-stream/features#feature-full)\n  * [io-util](https://lib.rs/crates/tokio-stream/features#feature-io-util)\n  * [net](https://lib.rs/crates/tokio-stream/features#feature-net)\n  * [signal](https://lib.rs/crates/tokio-stream/features#feature-signal)\n  * [time](https://lib.rs/crates/tokio-stream/features#feature-time)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  18 releases\u27e81\u27e9\n0.1.17 |  Dec 6, 2024   \n---|---  \n0.1.16 |  Sep 5, 2024   \n0.1.15 |  Mar 14, 2024   \n0.1.14 |  Apr 26, 2023   \n0.1.0 |  Dec 23, 2020   \n#**180** in Asynchronous\u27e82\u27e9\nDownload history 2196589/week @ 2025-03-07 2214514/week @ 2025-03-14 2829141/week @ 2025-03-21 2003757/week @ 2025-03-28 2141806/week @ 2025-04-04 1951717/week @ 2025-04-11 1748470/week @ 2025-04-18 1750145/week @ 2025-04-25 1788088/week @ 2025-05-02 1873701/week @ 2025-05-09 1924441/week @ 2025-05-16 1690732/week @ 2025-05-23 1877822/week @ 2025-05-30 1837298/week @ 2025-06-06 1937493/week @ 2025-06-13 1661885/week @ 2025-06-20\n**7,615,638** downloads per month Used in **9,480** crates (1,888 directly)\u27e83\u27e9\n**MIT** license \n2.5MB  **37K** SLoC\nStream utilities for Tokio.\nA ``Stream`` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library's ```Iterator``` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the streams tutorial\u27e84\u27e9 on the tokio website.\n# Iterating over a Stream\nDue to similarities with the standard library's ```Iterator``` trait, some new users may assume that they can use ```for` `in``` syntax to iterate over a ``Stream``, but this is unfortunately not possible. Instead, you can use a ```while` `let``` loop as follows:\n```\n``use` `tokio_stream`::````{``self` `as` stream`,` StreamExt```}```;`\n``#``[``tokio`::`main``]``\nasync ``fn` `main`````(````)``````{`\n  `let` `mut` stream `=` `stream`::``iter`(``vec!``[``0``,` `1``,` `2``]``)``;`\n  `while` `let` `Some``(`value`)` `=` stream`.``next``(``)``.`await `{`\n    `println!``(```\"`Got `{}``\"```,` value`)``;`\n  `}`\n```}```\n`\n```\n\n# Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the async-stream\u27e85\u27e9 crate, which contains macros that provide a ```yield``` keyword and allow you to return an ````impl` ```Stream````.\n# Conversion to and from ``AsyncRead``/``AsyncWrite``\nIt is often desirable to convert a ``Stream`` into an ``AsyncRead``\u27e86\u27e9, especially when dealing with plaintext formats streamed over the network. The opposite conversion from an ``AsyncRead``\u27e86\u27e9 into a ``Stream`` is also another commonly required feature. To enable these conversions, ``tokio-util``\u27e87\u27e9 provides the ``StreamReader``\u27e88\u27e9 and ``ReaderStream``\u27e89\u27e9 types when the io feature is enabled.\n# tokio-stream\nUtilities to work with ``Stream`` and ``tokio``.\n## License\nThis project is licensed under the MIT license\u27e810\u27e9.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in Tokio by you, shall be licensed as MIT, without any additional terms or conditions.\n#### Dependencies\n~0\u20137.5MB  ~50K SLoC\n  * futures-core\u27e811\u27e9\n  * pin-project-lite\u27e812\u27e9\n  * tokio\u27e813\u27e9+sync\u27e814\u27e9\n  * sync?\u27e815\u27e9 tokio-util\u27e816\u27e9\n\n\n  * dev  async-stream\u27e817\u27e9\n  * dev  futures\u27e818\u27e9\n  * dev  parking_lot\u27e819\u27e9\n  * dev  tokio-test\u27e820\u27e9\n\n\n#### Other features\u27e821\u27e9\n  * fs\u27e822\u27e9\n  * full\u27e823\u27e9\n  * io-util\u27e824\u27e9\n  * net\u27e825\u27e9\n  * signal\u27e826\u27e9\n  * time\u27e827\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/tokio-stream/versions: 18 releases\n\u27e82\u27e9 https://lib.rs/asynchronous: Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing. - Asynchronous\n\u27e83\u27e9 https://lib.rs/crates/tokio-stream/rev: **9,480** crates (1,888 directly)\n\u27e84\u27e9 https://tokio.rs/tokio/tutorial/streams: streams tutorial\n\u27e85\u27e9 https://docs.rs/async-stream: async-stream\n\u27e86\u27e9 https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html: ``AsyncRead``\n\u27e87\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: ``tokio-util``\n\u27e88\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html: ``StreamReader``\n\u27e89\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html: ``ReaderStream``\n\u27e810\u27e9 https://github.com/tokio-rs/tokio/blob/HEAD/LICENSE: MIT license\n\u27e811\u27e9 https://lib.rs/crates/futures-core: 0.3.0 - futures-core\n\u27e812\u27e9 https://lib.rs/crates/pin-project-lite: 0.2.11 - pin-project-lite\n\u27e813\u27e9 https://lib.rs/crates/tokio: 1.15.0 - tokio\n\u27e814\u27e9 https://lib.rs/crates/tokio/features#feature-sync: +sync\n\u27e815\u27e9 https://lib.rs/crates/tokio-stream/features#feature-sync: optional feature - sync?\n\u27e816\u27e9 https://lib.rs/crates/tokio-util: 0.7.0 - tokio-util\n\u27e817\u27e9 https://lib.rs/crates/async-stream: 0.3 - async-stream\n\u27e818\u27e9 https://lib.rs/crates/futures: 0.3 - futures\n\u27e819\u27e9 https://lib.rs/crates/parking_lot: 0.12.0 - parking_lot\n\u27e820\u27e9 https://lib.rs/crates/tokio-test: 0.4 - tokio-test\n\u27e821\u27e9 https://lib.rs/crates/tokio-stream/features: Other features\n\u27e822\u27e9 https://lib.rs/crates/tokio-stream/features#feature-fs: fs\n\u27e823\u27e9 https://lib.rs/crates/tokio-stream/features#feature-full: full\n\u27e824\u27e9 https://lib.rs/crates/tokio-stream/features#feature-io-util: io-util\n\u27e825\u27e9 https://lib.rs/crates/tokio-stream/features#feature-net: net\n\u27e826\u27e9 https://lib.rs/crates/tokio-stream/features#feature-signal: signal\n\u27e827\u27e9 https://lib.rs/crates/tokio-stream/features#feature-time: time\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4811,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112182.5288467"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.45.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "sync",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libtokio-7b4e4031bf49e98d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpivb4skl7/tokio-stream-0.1.17#tokio-stream@0.1.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_stream",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libtokio_stream-5c0f8cc99cae5b05.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.45.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "sync",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libtokio-7b4e4031bf49e98d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpivb4skl7/tokio-stream-0.1.17#tokio-stream@0.1.17",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_stream",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpivb4skl7\\tokio-stream-0.1.17\\target\\debug\\deps\\libtokio_stream-8c6e84d9342e0f41.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 55
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "tokio-stream",
+          "version": "0.1.17",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\n[Settings](https://docs.rs/tokio-stream/latest/settings.html)\n[Help](https://docs.rs/tokio-stream/latest/help.html)\nSummary[Source](https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118)\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the [streams tutorial](https://tokio.rs/tokio/tutorial/streams) on the tokio website.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream)Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function)Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the [async-stream](https://docs.rs/async-stream) crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite)Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html), especially when dealing with plaintext formats streamed over the network. The opposite conversion from an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html) into a `Stream` is also another commonly required feature. To enable these conversions, [`tokio-util`](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html) provides the [`StreamReader`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html) and [`ReaderStream`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html) types when the io feature is enabled.\n## Re-exports[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#reexports)\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#modules)\n\n[adapters](https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html \"mod tokio_stream::adapters\")\n    Adapters for [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\")s created by methods in [`StreamExt`](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\").\n\n[wrappers](https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html \"mod tokio_stream::wrappers\")\n    Wrappers for Tokio types that implement `Stream`.\n## Structs[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#structs)\n\n[Elapsed](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html \"struct tokio_stream::Elapsed\")`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\n[Empty](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html \"struct tokio_stream::Empty\")\n    Stream for the [`empty`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\") function.\n\n[Iter](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html \"struct tokio_stream::Iter\")\n    Stream for the [`iter`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\") function.\n\n[Once](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html \"struct tokio_stream::Once\")\n    Stream for the [`once`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\") function.\n\n[Pending](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html \"struct tokio_stream::Pending\")\n    Stream for the [`pending`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\") function.\n\n[StreamMap](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html \"struct tokio_stream::StreamMap\")\n    Combine many streams into one, indexing each source stream with a unique key.\n\n[StreamNotifyClose](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html \"struct tokio_stream::StreamNotifyClose\")\n    A `Stream` that wraps the values in an `Option`.\n## Traits[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#traits)\n\n[FromStream](https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html \"trait tokio_stream::FromStream\")\n    Convert from a [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\").\n\n[StreamExt](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\")\n    An extension trait for the [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\") trait that provides a variety of convenient combinator functions.\n## Functions[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#functions)\n\n[empty](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\")\n    Creates a stream that yields nothing.\n\n[iter](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\")\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\n[once](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\")\n    Creates a stream that emits an element exactly once.\n\n[pending](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\")\n    Creates a stream that is never ready\n",
+            "markdown_with_citations": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the streams tutorial\u27e84\u27e9 on the tokio website.\n## \u00a7\u27e85\u27e9Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## \u00a7\u27e86\u27e9Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the async-stream\u27e87\u27e9 crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## \u00a7\u27e88\u27e9Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an `AsyncRead`\u27e89\u27e9, especially when dealing with plaintext formats streamed over the network. The opposite conversion from an `AsyncRead`\u27e89\u27e9 into a `Stream` is also another commonly required feature. To enable these conversions, `tokio-util`\u27e810\u27e9 provides the `StreamReader`\u27e811\u27e9 and `ReaderStream`\u27e812\u27e9 types when the io feature is enabled.\n## Re-exports\u00a7\u27e813\u27e9\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules\u00a7\u27e814\u27e9\n\nadapters\u27e815\u27e9\n    Adapters for `Stream`\u27e816\u27e9s created by methods in `StreamExt`\u27e817\u27e9.\n\nwrappers\u27e818\u27e9\n    Wrappers for Tokio types that implement `Stream`.\n## Structs\u00a7\u27e819\u27e9\n\nElapsed\u27e820\u27e9`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\nEmpty\u27e821\u27e9\n    Stream for the `empty`\u27e822\u27e9 function.\n\nIter\u27e823\u27e9\n    Stream for the `iter`\u27e824\u27e9 function.\n\nOnce\u27e825\u27e9\n    Stream for the `once`\u27e826\u27e9 function.\n\nPending\u27e827\u27e9\n    Stream for the `pending`\u27e828\u27e9 function.\n\nStreamMap\u27e829\u27e9\n    Combine many streams into one, indexing each source stream with a unique key.\n\nStreamNotifyClose\u27e830\u27e9\n    A `Stream` that wraps the values in an `Option`.\n## Traits\u00a7\u27e831\u27e9\n\nFromStream\u27e832\u27e9\n    Convert from a `Stream`\u27e816\u27e9.\n\nStreamExt\u27e817\u27e9\n    An extension trait for the `Stream`\u27e816\u27e9 trait that provides a variety of convenient combinator functions.\n## Functions\u00a7\u27e833\u27e9\n\nempty\u27e822\u27e9\n    Creates a stream that yields nothing.\n\niter\u27e824\u27e9\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\nonce\u27e826\u27e9\n    Creates a stream that emits an element exactly once.\n\npending\u27e828\u27e9\n    Creates a stream that is never ready\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-stream/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-stream/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118: Source\n\u27e84\u27e9 https://tokio.rs/tokio/tutorial/streams: streams tutorial\n\u27e85\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function: \u00a7\n\u27e87\u27e9 https://docs.rs/async-stream: async-stream\n\u27e88\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite: \u00a7\n\u27e89\u27e9 https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html: `AsyncRead`\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: `tokio-util`\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html: `StreamReader`\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html: `ReaderStream`\n\u27e813\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#reexports: \u00a7\n\u27e814\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#modules: \u00a7\n\u27e815\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html: mod tokio_stream::adapters - adapters\n\u27e816\u27e9 https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html: trait futures_core::stream::Stream - `Stream`\n\u27e817\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html: trait tokio_stream::StreamExt - `StreamExt`\n\u27e818\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html: mod tokio_stream::wrappers - wrappers\n\u27e819\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#structs: \u00a7\n\u27e820\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html: struct tokio_stream::Elapsed - Elapsed\n\u27e821\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html: struct tokio_stream::Empty - Empty\n\u27e822\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html: fn tokio_stream::empty - `empty`\n\u27e823\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html: struct tokio_stream::Iter - Iter\n\u27e824\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html: fn tokio_stream::iter - `iter`\n\u27e825\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html: struct tokio_stream::Once - Once\n\u27e826\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html: fn tokio_stream::once - `once`\n\u27e827\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html: struct tokio_stream::Pending - Pending\n\u27e828\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html: fn tokio_stream::pending - `pending`\n\u27e829\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html: struct tokio_stream::StreamMap - StreamMap\n\u27e830\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html: struct tokio_stream::StreamNotifyClose - StreamNotifyClose\n\u27e831\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#traits: \u00a7\n\u27e832\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html: trait tokio_stream::FromStream - FromStream\n\u27e833\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#functions: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "tokio-stream",
+          "version": "0.1.17",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\n[Settings](https://docs.rs/tokio-stream/latest/settings.html)\n[Help](https://docs.rs/tokio-stream/latest/help.html)\nSummary[Source](https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118)\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the [streams tutorial](https://tokio.rs/tokio/tutorial/streams) on the tokio website.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream)Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function)Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the [async-stream](https://docs.rs/async-stream) crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## [\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite)Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html), especially when dealing with plaintext formats streamed over the network. The opposite conversion from an [`AsyncRead`](https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html) into a `Stream` is also another commonly required feature. To enable these conversions, [`tokio-util`](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html) provides the [`StreamReader`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html) and [`ReaderStream`](https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html) types when the io feature is enabled.\n## Re-exports[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#reexports)\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#modules)\n\n[adapters](https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html \"mod tokio_stream::adapters\")\n    Adapters for [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\")s created by methods in [`StreamExt`](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\").\n\n[wrappers](https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html \"mod tokio_stream::wrappers\")\n    Wrappers for Tokio types that implement `Stream`.\n## Structs[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#structs)\n\n[Elapsed](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html \"struct tokio_stream::Elapsed\")`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\n[Empty](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html \"struct tokio_stream::Empty\")\n    Stream for the [`empty`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\") function.\n\n[Iter](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html \"struct tokio_stream::Iter\")\n    Stream for the [`iter`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\") function.\n\n[Once](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html \"struct tokio_stream::Once\")\n    Stream for the [`once`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\") function.\n\n[Pending](https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html \"struct tokio_stream::Pending\")\n    Stream for the [`pending`](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\") function.\n\n[StreamMap](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html \"struct tokio_stream::StreamMap\")\n    Combine many streams into one, indexing each source stream with a unique key.\n\n[StreamNotifyClose](https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html \"struct tokio_stream::StreamNotifyClose\")\n    A `Stream` that wraps the values in an `Option`.\n## Traits[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#traits)\n\n[FromStream](https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html \"trait tokio_stream::FromStream\")\n    Convert from a [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\").\n\n[StreamExt](https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html \"trait tokio_stream::StreamExt\")\n    An extension trait for the [`Stream`](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\") trait that provides a variety of convenient combinator functions.\n## Functions[\u00a7](https://docs.rs/tokio-stream/latest/tokio_stream/#functions)\n\n[empty](https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html \"fn tokio_stream::empty\")\n    Creates a stream that yields nothing.\n\n[iter](https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html \"fn tokio_stream::iter\")\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\n[once](https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html \"fn tokio_stream::once\")\n    Creates a stream that emits an element exactly once.\n\n[pending](https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html \"fn tokio_stream::pending\")\n    Creates a stream that is never ready\n",
+            "markdown_with_citations": "[](https://docs.rs/tokio-stream/latest/tokio_stream/all.html \"show sidebar\")\n# Crate tokio_streamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nStream utilities for Tokio.\nA `Stream` is an asynchronous sequence of values. It can be thought of as an asynchronous version of the standard library\u2019s `Iterator` trait.\nThis crate provides helpers to work with them. For examples of usage and a more in-depth description of streams you can also refer to the streams tutorial\u27e84\u27e9 on the tokio website.\n## \u00a7\u27e85\u27e9Iterating over a Stream\nDue to similarities with the standard library\u2019s `Iterator` trait, some new users may assume that they can use `for in` syntax to iterate over a `Stream`, but this is unfortunately not possible. Instead, you can use a `while let` loop as follows:\n```\nuse tokio_stream::{self as stream, StreamExt};\n#[tokio::main]\nasync fn main() {\n  let mut stream = stream::iter(vec![0, 1, 2]);\n  while let Some(value) = stream.next().await {\n    println!(\"Got {}\", value);\n  }\n}\n```\n\n## \u00a7\u27e86\u27e9Returning a Stream from a function\nA common way to stream values from a function is to pass in the sender half of a channel and use the receiver as the stream. This requires awaiting both futures to ensure progress is made. Another alternative is the async-stream\u27e87\u27e9 crate, which contains macros that provide a `yield` keyword and allow you to return an `impl Stream`.\n## \u00a7\u27e88\u27e9Conversion to and from `AsyncRead`/`AsyncWrite`\nIt is often desirable to convert a `Stream` into an `AsyncRead`\u27e89\u27e9, especially when dealing with plaintext formats streamed over the network. The opposite conversion from an `AsyncRead`\u27e89\u27e9 into a `Stream` is also another commonly required feature. To enable these conversions, `tokio-util`\u27e810\u27e9 provides the `StreamReader`\u27e811\u27e9 and `ReaderStream`\u27e812\u27e9 types when the io feature is enabled.\n## Re-exports\u00a7\u27e813\u27e9\n\n`pub use futures_core::Stream[](https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html \"trait futures_core::stream::Stream\");`\n\n## Modules\u00a7\u27e814\u27e9\n\nadapters\u27e815\u27e9\n    Adapters for `Stream`\u27e816\u27e9s created by methods in `StreamExt`\u27e817\u27e9.\n\nwrappers\u27e818\u27e9\n    Wrappers for Tokio types that implement `Stream`.\n## Structs\u00a7\u27e819\u27e9\n\nElapsed\u27e820\u27e9`time`\n    Error returned by `Timeout` and `TimeoutRepeating`.\n\nEmpty\u27e821\u27e9\n    Stream for the `empty`\u27e822\u27e9 function.\n\nIter\u27e823\u27e9\n    Stream for the `iter`\u27e824\u27e9 function.\n\nOnce\u27e825\u27e9\n    Stream for the `once`\u27e826\u27e9 function.\n\nPending\u27e827\u27e9\n    Stream for the `pending`\u27e828\u27e9 function.\n\nStreamMap\u27e829\u27e9\n    Combine many streams into one, indexing each source stream with a unique key.\n\nStreamNotifyClose\u27e830\u27e9\n    A `Stream` that wraps the values in an `Option`.\n## Traits\u00a7\u27e831\u27e9\n\nFromStream\u27e832\u27e9\n    Convert from a `Stream`\u27e816\u27e9.\n\nStreamExt\u27e817\u27e9\n    An extension trait for the `Stream`\u27e816\u27e9 trait that provides a variety of convenient combinator functions.\n## Functions\u00a7\u27e833\u27e9\n\nempty\u27e822\u27e9\n    Creates a stream that yields nothing.\n\niter\u27e824\u27e9\n    Converts an `Iterator` into a `Stream` which is always ready to yield the next value.\n\nonce\u27e826\u27e9\n    Creates a stream that emits an element exactly once.\n\npending\u27e828\u27e9\n    Creates a stream that is never ready\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-stream/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-stream/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-stream/latest/src/tokio_stream/lib.rs.html#1-118: Source\n\u27e84\u27e9 https://tokio.rs/tokio/tutorial/streams: streams tutorial\n\u27e85\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#iterating-over-a-stream: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#returning-a-stream-from-a-function: \u00a7\n\u27e87\u27e9 https://docs.rs/async-stream: async-stream\n\u27e88\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#conversion-to-and-from-asyncreadasyncwrite: \u00a7\n\u27e89\u27e9 https://docs.rs/tokio/latest/tokio/io/trait.AsyncRead.html: `AsyncRead`\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: `tokio-util`\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.StreamReader.html: `StreamReader`\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/struct.ReaderStream.html: `ReaderStream`\n\u27e813\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#reexports: \u00a7\n\u27e814\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#modules: \u00a7\n\u27e815\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/adapters/index.html: mod tokio_stream::adapters - adapters\n\u27e816\u27e9 https://docs.rs/futures-core/0.3.31/x86_64-unknown-linux-gnu/futures_core/stream/trait.Stream.html: trait futures_core::stream::Stream - `Stream`\n\u27e817\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.StreamExt.html: trait tokio_stream::StreamExt - `StreamExt`\n\u27e818\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/wrappers/index.html: mod tokio_stream::wrappers - wrappers\n\u27e819\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#structs: \u00a7\n\u27e820\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Elapsed.html: struct tokio_stream::Elapsed - Elapsed\n\u27e821\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Empty.html: struct tokio_stream::Empty - Empty\n\u27e822\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.empty.html: fn tokio_stream::empty - `empty`\n\u27e823\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Iter.html: struct tokio_stream::Iter - Iter\n\u27e824\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.iter.html: fn tokio_stream::iter - `iter`\n\u27e825\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Once.html: struct tokio_stream::Once - Once\n\u27e826\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.once.html: fn tokio_stream::once - `once`\n\u27e827\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.Pending.html: struct tokio_stream::Pending - Pending\n\u27e828\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/fn.pending.html: fn tokio_stream::pending - `pending`\n\u27e829\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamMap.html: struct tokio_stream::StreamMap - StreamMap\n\u27e830\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/struct.StreamNotifyClose.html: struct tokio_stream::StreamNotifyClose - StreamNotifyClose\n\u27e831\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#traits: \u00a7\n\u27e832\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/trait.FromStream.html: trait tokio_stream::FromStream - FromStream\n\u27e833\u27e9 https://docs.rs/tokio-stream/latest/tokio_stream/#functions: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `tokio-stream` crate provides utilities for working with asynchronous streams in Rust, serving as an async counterpart to the standard `Iterator` trait. It includes tools for creating, transforming, and combining streams, along with adapters and wrappers for integrating with Tokio types. Key features include stream creation functions (`iter`, `once`, `empty`), combinators via the `StreamExt` trait, and conversions to/from `AsyncRead`/`AsyncWrite` using `tokio-util`.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 8.0,
+          "factual_counterfactual": "### Pair 1: Iterating over a Stream  \n\u2705 **Factual**: The `tokio-stream` crate does not support direct iteration over a `Stream` using Rust's `for in` syntax due to the asynchronous nature of streams. Instead, you can use a `while let` loop combined with `.next().await` to process stream values asynchronously.  \n\u274c **Counterfactual**: The `tokio-stream` crate allows direct iteration over a `Stream` using Rust's `for in` syntax, making it identical to iterating over a standard library `Iterator`.  \n\n---\n\n### Pair 2: Conversion to and from `AsyncRead`/`AsyncWrite`  \n\u2705 **Factual**: The `tokio-util` crate provides the `StreamReader` and `ReaderStream` types to enable conversions between `Stream` and `AsyncRead`/`AsyncWrite` when the `io` feature is enabled. These conversions are commonly used for streaming data over the network.  \n\u274c **Counterfactual**: The `tokio-stream` crate itself directly provides built-in types for converting between `Stream` and `AsyncRead`/`AsyncWrite`, eliminating the need for the `tokio-util` crate or additional features.  \n\n---\n\n### Pair 3: Returning a Stream from a Function  \n\u2705 **Factual**: To return a `Stream` from a function, you can use the sender-receiver pattern with a channel or leverage",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-34ee60f5-8a3ee3b4-1751258391",
+      "timestamp": "2025-06-30T04:39:51.478188+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

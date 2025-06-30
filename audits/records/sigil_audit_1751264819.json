@@ -1,0 +1,1621 @@
+[
+  {
+    "execution_id": "exec-318f9f81-fe32ffe4-1751264804",
+    "timestamp": "2025-06-30T06:26:44.873973+00:00",
+    "sacred_chain": {
+      "input_data": "ecdsa",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'ecdsa' -> 'ecdsa'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "ecdsa",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/ecdsa",
+            "title": "ecdsa v0.16.9",
+            "content": {
+              "raw_markdown": "#  ecdsa v0.16.9\nPure Rust implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) as specified in FIPS 186-4 (Digital Signature Standard), providing RFC6979 deterministic signatures as well as support for added entropy \n  * [ #crypto ](https://crates.io/keywords/crypto)\n  * [ #ecc ](https://crates.io/keywords/ecc)\n  * [ #nist ](https://crates.io/keywords/nist)\n  * [ #secp256k1 ](https://crates.io/keywords/secp256k1)\n  * [ #signature ](https://crates.io/keywords/signature)\n\n\n  * [ Readme ](https://crates.io/crates/ecdsa)\n  * [ 90 Versions ](https://crates.io/crates/ecdsa/versions)\n  * [ Dependencies ](https://crates.io/crates/ecdsa/dependencies)\n  * [ Dependents ](https://crates.io/crates/ecdsa/reverse_dependencies)\n\n\n## Metadata\nover 1 year ago \nv1.65.0 \n[ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0) OR [ MIT ](https://choosealicense.com/licenses/mit)\n30.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add ecdsa\nOr add the following line to your Cargo.toml:\necdsa = \"0.16.9\"\n## Homepage\n[ github.com/RustCrypto/signatures/tree/master/ecdsa ](https://github.com/RustCrypto/signatures/tree/master/ecdsa)\n## Repository\n[ github.com/RustCrypto/signatures ](https://github.com/RustCrypto/signatures)\n## Owners\n## Categories\n  * [Cryptography](https://crates.io/categories/cryptography)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=ecdsa&inquire=crate-violation)\n### Stats Overview\n68,187,706 Downloads all time\n90 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  ecdsa v0.16.9\nPure Rust implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA) as specified in FIPS 186-4 (Digital Signature Standard), providing RFC6979 deterministic signatures as well as support for added entropy \n  *  #crypto \u27e81\u27e9\n  *  #ecc \u27e82\u27e9\n  *  #nist \u27e83\u27e9\n  *  #secp256k1 \u27e84\u27e9\n  *  #signature \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  90 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nover 1 year ago \nv1.65.0 \n Apache-2.0 \u27e810\u27e9 OR  MIT \u27e811\u27e9\n30.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add ecdsa\nOr add the following line to your Cargo.toml:\necdsa = \"0.16.9\"\n## Homepage\n github.com/RustCrypto/signatures/tree/master/ecdsa \u27e812\u27e9\n## Repository\n github.com/RustCrypto/signatures \u27e813\u27e9\n## Owners\n## Categories\n  * Cryptography\u27e814\u27e9\n  * No standard library\u27e815\u27e9\n\n\n Report crate \u27e816\u27e9\n### Stats Overview\n68,187,706 Downloads all time\n90 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/crypto:  #crypto \n\u27e82\u27e9 https://crates.io/keywords/ecc:  #ecc \n\u27e83\u27e9 https://crates.io/keywords/nist:  #nist \n\u27e84\u27e9 https://crates.io/keywords/secp256k1:  #secp256k1 \n\u27e85\u27e9 https://crates.io/keywords/signature:  #signature \n\u27e86\u27e9 https://crates.io/crates/ecdsa:  Readme \n\u27e87\u27e9 https://crates.io/crates/ecdsa/versions:  90 Versions \n\u27e88\u27e9 https://crates.io/crates/ecdsa/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/ecdsa/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e811\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e812\u27e9 https://github.com/RustCrypto/signatures/tree/master/ecdsa:  github.com/RustCrypto/signatures/tree/master/ecdsa \n\u27e813\u27e9 https://github.com/RustCrypto/signatures:  github.com/RustCrypto/signatures \n\u27e814\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e815\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e816\u27e9 https://crates.io/support?crate=ecdsa&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1676,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118594.4075723"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/ecdsa",
+            "title": "Crate ecdsaCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\n[Settings](https://docs.rs/ecdsa/latest/settings.html)\n[Help](https://docs.rs/ecdsa/latest/help.html)\nSummary[Source](https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709)\nExpand description\n## [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa)[RustCrypto](https://github.com/RustCrypto): ECDSA\n[![crate](https://buildstats.info/crate/ecdsa)](https://crates.io/crates/ecdsa) [![Docs](https://docs.rs/ecdsa/badge.svg)](https://docs.rs/ecdsa/) [![Build Status](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg)](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![MSRV](https://img.shields.io/badge/rustc-1.65+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\n[Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) as specified in [FIPS 186-4](https://csrc.nist.gov/publications/detail/fips/186/4/final) (Digital Signature Standard).\n[Documentation](https://docs.rs/ecdsa/)\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#about)About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * [`k256`](https://docs.rs/k256) (secp256k1)\n    * [`p256`](https://docs.rs/p256) (NIST P-256)\n    * [`p384`](https://docs.rs/p384) (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging [`ecdsa::Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html) with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\n\n\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#-security-warning)\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version)Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#license)License\nAll crates licensed under either of\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#serde-support)`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") and [`VerifyingKey`](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\") types.\nPlease see type-specific documentation for more information.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#interop)Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the [`k256`](https://docs.rs/k256), [`p256`](https://docs.rs/p256), and/or [`p384`](https://docs.rs/p384) crates to expose ECDSA functionality in a generic, interoperable way by leveraging the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type with in conjunction with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\nFor example, the [`ring-compat`](https://docs.rs/ring-compat) crate implements the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits in conjunction with the [`p256::ecdsa::Signature`](https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html) and [`p384::ecdsa::Signature`](https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html) types to wrap the ECDSA implementations from [_ring_](https://docs.rs/ring) in a generic, interoperable API.\n## Re-exports[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#reexports)\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#modules)\n\n[der](https://docs.rs/ecdsa/latest/ecdsa/der/index.html \"mod ecdsa::der\")`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in [RFC5912 Appendix A](https://www.rfc-editor.org/rfc/rfc5912#appendix-A).\n\n[dev](https://docs.rs/ecdsa/latest/ecdsa/dev/index.html \"mod ecdsa::dev\")`dev`\n    Development-related functionality.\n\n[hazmat](https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html \"mod ecdsa::hazmat\")`hazmat`\n    Low-level ECDSA primitives.\n## Macros[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#macros)\n\n[new_signing_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html \"macro ecdsa::new_signing_test\")`dev`\n    Define ECDSA signing test.\n\n[new_verification_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html \"macro ecdsa::new_verification_test\")`dev`\n    Define ECDSA verification test.\n\n[new_wycheproof_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html \"macro ecdsa::new_wycheproof_test\")`dev`\n    Define a Wycheproof verification test.\n## Structs[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#structs)\n\n[Error](https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html \"struct ecdsa::Error\")\n    Signature errors.\n\n[NormalizedSignature](https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html \"struct ecdsa::NormalizedSignature\")\n    ECDSA signature with low-S normalization applied.\n\n[RecoveryId](https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html \"struct ecdsa::RecoveryId\")\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\n[Signature](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\")\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\n[SignatureWithOid](https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html \"struct ecdsa::SignatureWithOid\")`digest`\n    An extended [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\n[SigningKey](https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html \"struct ecdsa::SigningKey\")`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\n[VerifyingKey](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\")`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#constants)\n\n[ECDSA_SHA224_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html \"constant ecdsa::ECDSA_SHA224_OID\")`digest`\n    OID for ECDSA with SHA-224 digests.\n\n[ECDSA_SHA256_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html \"constant ecdsa::ECDSA_SHA256_OID\")`digest`\n    OID for ECDSA with SHA-256 digests.\n\n[ECDSA_SHA384_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html \"constant ecdsa::ECDSA_SHA384_OID\")`digest`\n    OID for ECDSA with SHA-384 digests.\n\n[ECDSA_SHA512_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html \"constant ecdsa::ECDSA_SHA512_OID\")`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#traits)\n\n[PrimeCurve](https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html \"trait ecdsa::PrimeCurve\")\n    Marker trait for elliptic curves with prime order.\n\n[SignatureEncoding](https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html \"trait ecdsa::SignatureEncoding\")\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#types)\n\n[EncodedPoint](https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html \"type ecdsa::EncodedPoint\")\n    Encoded elliptic curve point sized appropriately for a given curve.\n\n[Result](https://docs.rs/ecdsa/latest/ecdsa/type.Result.html \"type ecdsa::Result\")\n    Result type.\n\n[SignatureBytes](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html \"type ecdsa::SignatureBytes\")\n    Fixed-size byte array containing an ECDSA signature\n\n[SignatureSize](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html \"type ecdsa::SignatureSize\")\n    Size of a fixed sized signature for the given elliptic curve.\n",
+              "markdown_with_citations": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto\u27e85\u27e9: ECDSA\n![crate\u27e86\u27e9](https://crates.io/crates/ecdsa) ![Docs\u27e87\u27e9](https://docs.rs/ecdsa/) ![Build Status\u27e88\u27e9](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed\u27e89\u27e9] ![MSRV\u27e810\u27e9] ![Project Chat\u27e811\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\nElliptic Curve Digital Signature Algorithm (ECDSA)\u27e812\u27e9 as specified in FIPS 186-4\u27e813\u27e9 (Digital Signature Standard).\nDocumentation\u27e814\u27e9\n### \u00a7\u27e815\u27e9About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * `k256`\u27e816\u27e9 (secp256k1)\n    * `p256`\u27e817\u27e9 (NIST P-256)\n    * `p384`\u27e818\u27e9 (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging `ecdsa::Signature`\u27e819\u27e9 with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\n\n\n### \u00a7\u27e822\u27e9\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### \u00a7\u27e823\u27e9Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### \u00a7\u27e824\u27e9License\nAll crates licensed under either of\n  * Apache License, Version 2.0\u27e825\u27e9\n  * MIT license\u27e826\u27e9\n\n\nat your option.\n#### \u00a7\u27e827\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e828\u27e9`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the `Signature`\u27e819\u27e9 and `VerifyingKey`\u27e829\u27e9 types.\nPlease see type-specific documentation for more information.\n### \u00a7\u27e830\u27e9Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the `k256`\u27e816\u27e9, `p256`\u27e817\u27e9, and/or `p384`\u27e818\u27e9 crates to expose ECDSA functionality in a generic, interoperable way by leveraging the `Signature`\u27e819\u27e9 type with in conjunction with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\nFor example, the `ring-compat`\u27e831\u27e9 crate implements the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits in conjunction with the `p256::ecdsa::Signature`\u27e832\u27e9 and `p384::ecdsa::Signature`\u27e833\u27e9 types to wrap the ECDSA implementations from _ring_\u27e834\u27e9 in a generic, interoperable API.\n## Re-exports\u00a7\u27e835\u27e9\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules\u00a7\u27e836\u27e9\n\nder\u27e837\u27e9`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in RFC5912 Appendix A\u27e838\u27e9.\n\ndev\u27e839\u27e9`dev`\n    Development-related functionality.\n\nhazmat\u27e840\u27e9`hazmat`\n    Low-level ECDSA primitives.\n## Macros\u00a7\u27e841\u27e9\n\nnew_signing_test\u27e842\u27e9`dev`\n    Define ECDSA signing test.\n\nnew_verification_test\u27e843\u27e9`dev`\n    Define ECDSA verification test.\n\nnew_wycheproof_test\u27e844\u27e9`dev`\n    Define a Wycheproof verification test.\n## Structs\u00a7\u27e845\u27e9\n\nError\u27e846\u27e9\n    Signature errors.\n\nNormalizedSignature\u27e847\u27e9\n    ECDSA signature with low-S normalization applied.\n\nRecoveryId\u27e848\u27e9\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\nSignature\u27e819\u27e9\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\nSignatureWithOid\u27e849\u27e9`digest`\n    An extended `Signature`\u27e819\u27e9 type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\nSigningKey\u27e850\u27e9`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\nVerifyingKey\u27e829\u27e9`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants\u00a7\u27e851\u27e9\n\nECDSA_SHA224_OID\u27e852\u27e9`digest`\n    OID for ECDSA with SHA-224 digests.\n\nECDSA_SHA256_OID\u27e853\u27e9`digest`\n    OID for ECDSA with SHA-256 digests.\n\nECDSA_SHA384_OID\u27e854\u27e9`digest`\n    OID for ECDSA with SHA-384 digests.\n\nECDSA_SHA512_OID\u27e855\u27e9`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits\u00a7\u27e856\u27e9\n\nPrimeCurve\u27e857\u27e9\n    Marker trait for elliptic curves with prime order.\n\nSignatureEncoding\u27e858\u27e9\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases\u00a7\u27e859\u27e9\n\nEncodedPoint\u27e860\u27e9\n    Encoded elliptic curve point sized appropriately for a given curve.\n\nResult\u27e861\u27e9\n    Result type.\n\nSignatureBytes\u27e862\u27e9\n    Fixed-size byte array containing an ECDSA signature\n\nSignatureSize\u27e863\u27e9\n    Size of a fixed sized signature for the given elliptic curve.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/ecdsa/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/ecdsa/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709: Source\n\u27e84\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa: \u00a7\n\u27e85\u27e9 https://github.com/RustCrypto: RustCrypto\n\u27e86\u27e9 https://buildstats.info/crate/ecdsa: ![crate\n\u27e87\u27e9 https://docs.rs/ecdsa/badge.svg: ![Docs\n\u27e88\u27e9 https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg: ![Build Status\n\u27e89\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e810\u27e9 https://img.shields.io/badge/rustc-1.65+-blue.svg: MSRV\n\u27e811\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm: Elliptic Curve Digital Signature Algorithm (ECDSA)\n\u27e813\u27e9 https://csrc.nist.gov/publications/detail/fips/186/4/final: FIPS 186-4\n\u27e814\u27e9 https://docs.rs/ecdsa/: Documentation\n\u27e815\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#about: \u00a7\n\u27e816\u27e9 https://docs.rs/k256: `k256`\n\u27e817\u27e9 https://docs.rs/p256: `p256`\n\u27e818\u27e9 https://docs.rs/p384: `p384`\n\u27e819\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html: `ecdsa::Signature`\n\u27e820\u27e9 https://docs.rs/signature/latest/signature/trait.Signer.html: `signature::Signer`\n\u27e821\u27e9 https://docs.rs/signature/latest/signature/trait.Verifier.html: `signature::Verifier`\n\u27e822\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#-security-warning: \u00a7\n\u27e823\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version: \u00a7\n\u27e824\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#license: \u00a7\n\u27e825\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e826\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e827\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#contribution: \u00a7\n\u27e828\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#serde-support: \u00a7\n\u27e829\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html: struct ecdsa::VerifyingKey - `VerifyingKey`\n\u27e830\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#interop: \u00a7\n\u27e831\u27e9 https://docs.rs/ring-compat: `ring-compat`\n\u27e832\u27e9 https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html: `p256::ecdsa::Signature`\n\u27e833\u27e9 https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html: `p384::ecdsa::Signature`\n\u27e834\u27e9 https://docs.rs/ring: _ring_\n\u27e835\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#reexports: \u00a7\n\u27e836\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#modules: \u00a7\n\u27e837\u27e9 https://docs.rs/ecdsa/latest/ecdsa/der/index.html: mod ecdsa::der - der\n\u27e838\u27e9 https://www.rfc-editor.org/rfc/rfc5912#appendix-A: RFC5912 Appendix A\n\u27e839\u27e9 https://docs.rs/ecdsa/latest/ecdsa/dev/index.html: mod ecdsa::dev - dev\n\u27e840\u27e9 https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html: mod ecdsa::hazmat - hazmat\n\u27e841\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#macros: \u00a7\n\u27e842\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html: macro ecdsa::new_signing_test - new_signing_test\n\u27e843\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html: macro ecdsa::new_verification_test - new_verification_test\n\u27e844\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html: macro ecdsa::new_wycheproof_test - new_wycheproof_test\n\u27e845\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#structs: \u00a7\n\u27e846\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html: struct ecdsa::Error - Error\n\u27e847\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html: struct ecdsa::NormalizedSignature - NormalizedSignature\n\u27e848\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html: struct ecdsa::RecoveryId - RecoveryId\n\u27e849\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html: struct ecdsa::SignatureWithOid - SignatureWithOid\n\u27e850\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html: struct ecdsa::SigningKey - SigningKey\n\u27e851\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#constants: \u00a7\n\u27e852\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html: constant ecdsa::ECDSA_SHA224_OID - ECDSA_SHA224_OID\n\u27e853\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html: constant ecdsa::ECDSA_SHA256_OID - ECDSA_SHA256_OID\n\u27e854\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html: constant ecdsa::ECDSA_SHA384_OID - ECDSA_SHA384_OID\n\u27e855\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html: constant ecdsa::ECDSA_SHA512_OID - ECDSA_SHA512_OID\n\u27e856\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#traits: \u00a7\n\u27e857\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html: trait ecdsa::PrimeCurve - PrimeCurve\n\u27e858\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html: trait ecdsa::SignatureEncoding - SignatureEncoding\n\u27e859\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#types: \u00a7\n\u27e860\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html: type ecdsa::EncodedPoint - EncodedPoint\n\u27e861\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.Result.html: type ecdsa::Result - Result\n\u27e862\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html: type ecdsa::SignatureBytes - SignatureBytes\n\u27e863\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html: type ecdsa::SignatureSize - SignatureSize\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9840,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118595.2907011"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/ecdsa",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [66 releases](https://lib.rs/crates/ecdsa/versions)\nUses new Rust 2024\n0.17.0-rc.3 |  Jun 20, 2025   \n---|---  \n0.17.0-rc.0 |  May 29, 2025   \n0.17.0-pre.9 |  Sep 20, 2024   \n0.17.0-pre.7 |  Jul 27, 2024   \n0.0.0 |  ~~Oct 30, 2018~~  \n#**1137** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 955771/week @ 2025-03-09 1381832/week @ 2025-03-16 1642848/week @ 2025-03-23 1103997/week @ 2025-03-30 1175986/week @ 2025-04-06 970088/week @ 2025-04-13 923019/week @ 2025-04-20 897869/week @ 2025-04-27 994288/week @ 2025-05-04 989515/week @ 2025-05-11 999535/week @ 2025-05-18 858042/week @ 2025-05-25 943461/week @ 2025-06-01 951633/week @ 2025-06-08 964577/week @ 2025-06-15 1015819/week @ 2025-06-22\n**3,923,791** downloads per month Used in [**2,745** crates (126 directly)](https://lib.rs/crates/ecdsa/rev)\n**Apache-2.0 OR MIT**\n120KB  2.5K  SLoC\n# [RustCrypto](https://github.com/RustCrypto): ECDSA\n[![crate](https://img.shields.io/crates/v/ecdsa?logo=rust)](https://crates.io/crates/ecdsa) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/ecdsa/badge.svg)](https://docs.rs/ecdsa/) [![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg)](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![MSRV](https://img.shields.io/badge/rustc-1.85+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\n[Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) as specified in [FIPS 186-4](https://csrc.nist.gov/publications/detail/fips/186/4/final) (Digital Signature Standard).\n[Documentation](https://docs.rs/ecdsa/)\n## About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * [``k256``](https://docs.rs/k256) (secp256k1)\n    * [``p256``](https://docs.rs/p256) (NIST P-256)\n    * [``p384``](https://docs.rs/p384) (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging [```ecdsa`::``Signature``](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html) with the [```signature`::``Signer``](https://docs.rs/signature/latest/signature/trait.Signer.html) and [```signature`::``Verifier``](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\n\n\n## \u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It's possible timing variability can exist in concrete curve implementations, and thus this crate's security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n## License\nAll crates licensed under either of\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~3.5MB  ~73K SLoC\n  * [ default ](https://lib.rs/crates/ecdsa/features#feature-digest \"digest enabled by default feature\") [digest](https://lib.rs/crates/digest \"new\") 0.11.0-rc.0[+oid](https://lib.rs/crates/digest/features#feature-oid)\n  * [elliptic-curve](https://lib.rs/crates/elliptic-curve \"new\") 0.14.0-rc.7[+sec1](https://lib.rs/crates/elliptic-curve/features#feature-sec1)\n  * [signature](https://lib.rs/crates/signature \"new\") 3.0.0-rc.1[+rand_core](https://lib.rs/crates/signature/features#feature-rand_core)\n  * [zeroize](https://lib.rs/crates/zeroize \"1.5\")\n  * [pkcs8?](https://lib.rs/crates/ecdsa/features#feature-pkcs8 \"optional feature\") [der](https://lib.rs/crates/der \"new\") 0.8.0-rc.5\n  * [signing?](https://lib.rs/crates/ecdsa/features#feature-signing \"optional feature\") [rfc6979](https://lib.rs/crates/rfc6979 \"new\") 0.5.0-rc.0\n  * [serde?](https://lib.rs/crates/ecdsa/features#feature-serde \"optional feature\") [serdect](https://lib.rs/crates/serdect \"new\") 0.3[+alloc](https://lib.rs/crates/serdect/features#feature-alloc)\n  * [ optional ](https://lib.rs/crates/ecdsa/features#feature-sha2 \"sha2 is optional feature\") [sha2](https://lib.rs/crates/sha2 \"new\") 0.11.0-rc.0[+oid](https://lib.rs/crates/sha2/features#feature-oid)\n  * [alloc?](https://lib.rs/crates/ecdsa/features#feature-alloc \"optional feature\") [spki](https://lib.rs/crates/spki \"new\") 0.8.0-rc.0\n\n\n  * dev  [hex-literal](https://lib.rs/crates/hex-literal \"new\") 1.0\n\n\n#### [Other features](https://lib.rs/crates/ecdsa/features)\n  * [arithmetic](https://lib.rs/crates/ecdsa/features#feature-arithmetic)\n  * [dev](https://lib.rs/crates/ecdsa/features#feature-dev)\n  * [hazmat](https://lib.rs/crates/ecdsa/features#feature-hazmat)\n  * [pem](https://lib.rs/crates/ecdsa/features#feature-pem)\n  * [std](https://lib.rs/crates/ecdsa/features#feature-std)\n  * [verifying](https://lib.rs/crates/ecdsa/features#feature-verifying)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  66 releases\u27e81\u27e9\nUses new Rust 2024\n0.17.0-rc.3 |  Jun 20, 2025   \n---|---  \n0.17.0-rc.0 |  May 29, 2025   \n0.17.0-pre.9 |  Sep 20, 2024   \n0.17.0-pre.7 |  Jul 27, 2024   \n0.0.0 |  ~~Oct 30, 2018~~  \n#**1137** in Cryptography\u27e82\u27e9\nDownload history 955771/week @ 2025-03-09 1381832/week @ 2025-03-16 1642848/week @ 2025-03-23 1103997/week @ 2025-03-30 1175986/week @ 2025-04-06 970088/week @ 2025-04-13 923019/week @ 2025-04-20 897869/week @ 2025-04-27 994288/week @ 2025-05-04 989515/week @ 2025-05-11 999535/week @ 2025-05-18 858042/week @ 2025-05-25 943461/week @ 2025-06-01 951633/week @ 2025-06-08 964577/week @ 2025-06-15 1015819/week @ 2025-06-22\n**3,923,791** downloads per month Used in **2,745** crates (126 directly)\u27e83\u27e9\n**Apache-2.0 OR MIT**\n120KB  2.5K  SLoC\n# RustCrypto\u27e84\u27e9: ECDSA\n![crate\u27e85\u27e9](https://crates.io/crates/ecdsa) ![Docs\u27e86\u27e9](https://docs.rs/ecdsa/) ![Build Status\u27e87\u27e9](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed\u27e88\u27e9] ![MSRV\u27e89\u27e9] ![Project Chat\u27e810\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\nElliptic Curve Digital Signature Algorithm (ECDSA)\u27e811\u27e9 as specified in FIPS 186-4\u27e812\u27e9 (Digital Signature Standard).\nDocumentation\u27e813\u27e9\n## About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * ``k256``\u27e814\u27e9 (secp256k1)\n    * ``p256``\u27e815\u27e9 (NIST P-256)\n    * ``p384``\u27e816\u27e9 (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging ```ecdsa`::``Signature``\u27e817\u27e9 with the ```signature`::``Signer``\u27e818\u27e9 and ```signature`::``Verifier``\u27e819\u27e9 traits.\n\n\n## \u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It's possible timing variability can exist in concrete curve implementations, and thus this crate's security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n## License\nAll crates licensed under either of\n  * Apache License, Version 2.0\u27e820\u27e9\n  * MIT license\u27e821\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~3.5MB  ~73K SLoC\n  *  default \u27e822\u27e9 digest\u27e823\u27e9 0.11.0-rc.0+oid\u27e824\u27e9\n  * elliptic-curve\u27e825\u27e9 0.14.0-rc.7+sec1\u27e826\u27e9\n  * signature\u27e827\u27e9 3.0.0-rc.1+rand_core\u27e828\u27e9\n  * zeroize\u27e829\u27e9\n  * pkcs8?\u27e830\u27e9 der\u27e831\u27e9 0.8.0-rc.5\n  * signing?\u27e832\u27e9 rfc6979\u27e833\u27e9 0.5.0-rc.0\n  * serde?\u27e834\u27e9 serdect\u27e835\u27e9 0.3+alloc\u27e836\u27e9\n  *  optional \u27e837\u27e9 sha2\u27e838\u27e9 0.11.0-rc.0+oid\u27e839\u27e9\n  * alloc?\u27e840\u27e9 spki\u27e841\u27e9 0.8.0-rc.0\n\n\n  * dev  hex-literal\u27e842\u27e9 1.0\n\n\n#### Other features\u27e843\u27e9\n  * arithmetic\u27e844\u27e9\n  * dev\u27e845\u27e9\n  * hazmat\u27e846\u27e9\n  * pem\u27e847\u27e9\n  * std\u27e848\u27e9\n  * verifying\u27e849\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/ecdsa/versions: 66 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/ecdsa/rev: **2,745** crates (126 directly)\n\u27e84\u27e9 https://github.com/RustCrypto: RustCrypto\n\u27e85\u27e9 https://img.shields.io/crates/v/ecdsa?logo=rust: ![crate\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/ecdsa/badge.svg: ![Docs\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg: ![Build Status\n\u27e88\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e89\u27e9 https://img.shields.io/badge/rustc-1.85+-blue.svg: MSRV\n\u27e810\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e811\u27e9 https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm: Elliptic Curve Digital Signature Algorithm (ECDSA)\n\u27e812\u27e9 https://csrc.nist.gov/publications/detail/fips/186/4/final: FIPS 186-4\n\u27e813\u27e9 https://docs.rs/ecdsa/: Documentation\n\u27e814\u27e9 https://docs.rs/k256: ``k256``\n\u27e815\u27e9 https://docs.rs/p256: ``p256``\n\u27e816\u27e9 https://docs.rs/p384: ``p384``\n\u27e817\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html: ```ecdsa`::``Signature``\n\u27e818\u27e9 https://docs.rs/signature/latest/signature/trait.Signer.html: ```signature`::``Signer``\n\u27e819\u27e9 https://docs.rs/signature/latest/signature/trait.Verifier.html: ```signature`::``Verifier``\n\u27e820\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e821\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e822\u27e9 https://lib.rs/crates/ecdsa/features#feature-digest: digest enabled by default feature -  default \n\u27e823\u27e9 https://lib.rs/crates/digest: new - digest\n\u27e824\u27e9 https://lib.rs/crates/digest/features#feature-oid: +oid\n\u27e825\u27e9 https://lib.rs/crates/elliptic-curve: new - elliptic-curve\n\u27e826\u27e9 https://lib.rs/crates/elliptic-curve/features#feature-sec1: +sec1\n\u27e827\u27e9 https://lib.rs/crates/signature: new - signature\n\u27e828\u27e9 https://lib.rs/crates/signature/features#feature-rand_core: +rand_core\n\u27e829\u27e9 https://lib.rs/crates/zeroize: 1.5 - zeroize\n\u27e830\u27e9 https://lib.rs/crates/ecdsa/features#feature-pkcs8: optional feature - pkcs8?\n\u27e831\u27e9 https://lib.rs/crates/der: new - der\n\u27e832\u27e9 https://lib.rs/crates/ecdsa/features#feature-signing: optional feature - signing?\n\u27e833\u27e9 https://lib.rs/crates/rfc6979: new - rfc6979\n\u27e834\u27e9 https://lib.rs/crates/ecdsa/features#feature-serde: optional feature - serde?\n\u27e835\u27e9 https://lib.rs/crates/serdect: new - serdect\n\u27e836\u27e9 https://lib.rs/crates/serdect/features#feature-alloc: +alloc\n\u27e837\u27e9 https://lib.rs/crates/ecdsa/features#feature-sha2: sha2 is optional feature -  optional \n\u27e838\u27e9 https://lib.rs/crates/sha2: new - sha2\n\u27e839\u27e9 https://lib.rs/crates/sha2/features#feature-oid: +oid\n\u27e840\u27e9 https://lib.rs/crates/ecdsa/features#feature-alloc: optional feature - alloc?\n\u27e841\u27e9 https://lib.rs/crates/spki: new - spki\n\u27e842\u27e9 https://lib.rs/crates/hex-literal: new - hex-literal\n\u27e843\u27e9 https://lib.rs/crates/ecdsa/features: Other features\n\u27e844\u27e9 https://lib.rs/crates/ecdsa/features#feature-arithmetic: arithmetic\n\u27e845\u27e9 https://lib.rs/crates/ecdsa/features#feature-dev: dev\n\u27e846\u27e9 https://lib.rs/crates/ecdsa/features#feature-hazmat: hazmat\n\u27e847\u27e9 https://lib.rs/crates/ecdsa/features#feature-pem: pem\n\u27e848\u27e9 https://lib.rs/crates/ecdsa/features#feature-std: std\n\u27e849\u27e9 https://lib.rs/crates/ecdsa/features#feature-verifying: verifying\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5636,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118595.993755"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#base16ct@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base16ct-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base16ct",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base16ct-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libbase16ct-1fc8a2ee6d4e5732.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize@1.8.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "zeroize",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libzeroize-126add846bf74fa5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\librand_core-5a4f3dd9dec8705a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-0320d5188ea002e4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-0320d5188ea002e4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_total_cmp"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-3b2aaa0bf7fca97a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#der@0.8.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\der-0.8.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "der",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\der-0.8.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "oid",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libder-b998c0c0c4e093f1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_traits",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libnum_traits-7d1170ab924bf8ed.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libhybrid_array-35dd439c126803ae.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libblock_buffer-7bf08db966ee6dab.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#sec1@0.8.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sec1-0.8.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sec1",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sec1-0.8.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "der",
+                "point",
+                "subtle",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsec1-4aed1f241c60c9e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libcrypto_common-3a0c1874745e0340.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libdigest-0dce6cf4134450ac.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#signature@3.0.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\signature-3.0.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "signature",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\signature-3.0.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "digest",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsignature-2e6b86402f95e587.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-bigint@0.7.0-pre.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-bigint-0.7.0-pre.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_bigint",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-bigint-0.7.0-pre.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "hybrid-array",
+                "rand_core",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libcrypto_bigint-715723387c0de80c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#elliptic-curve@0.14.0-rc.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\elliptic-curve-0.14.0-rc.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "elliptic_curve",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\elliptic-curve-0.14.0-rc.7\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "digest",
+                "sec1"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libelliptic_curve-bf1a5da0ed02a28f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpihls1atw/ecdsa-0.17.0-rc.3#ecdsa@0.17.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ecdsa",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "digest"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libecdsa-1afb0b81d93756f7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize@1.8.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "zeroize",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libzeroize-126add846bf74fa5.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\librand_core-5a4f3dd9dec8705a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#base16ct@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base16ct-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base16ct",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\base16ct-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libbase16ct-1fc8a2ee6d4e5732.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-0320d5188ea002e4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-0320d5188ea002e4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#der@0.8.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\der-0.8.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "der",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\der-0.8.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "oid",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libder-b998c0c0c4e093f1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libhybrid_array-35dd439c126803ae.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_total_cmp"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\build\\num-traits-3b2aaa0bf7fca97a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libcrypto_common-3a0c1874745e0340.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libblock_buffer-7bf08db966ee6dab.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_traits",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libnum_traits-7d1170ab924bf8ed.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#sec1@0.8.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sec1-0.8.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sec1",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\sec1-0.8.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "der",
+                "point",
+                "subtle",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsec1-4aed1f241c60c9e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libdigest-0dce6cf4134450ac.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-bigint@0.7.0-pre.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-bigint-0.7.0-pre.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_bigint",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-bigint-0.7.0-pre.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "hybrid-array",
+                "rand_core",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libcrypto_bigint-715723387c0de80c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#elliptic-curve@0.14.0-rc.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\elliptic-curve-0.14.0-rc.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "elliptic_curve",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\elliptic-curve-0.14.0-rc.7\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "digest",
+                "sec1"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libelliptic_curve-bf1a5da0ed02a28f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#signature@3.0.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\signature-3.0.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "signature",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\signature-3.0.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "digest",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libsignature-2e6b86402f95e587.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpihls1atw/ecdsa-0.17.0-rc.3#ecdsa@0.17.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ecdsa",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "digest"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpihls1atw\\ecdsa-0.17.0-rc.3\\target\\debug\\deps\\libecdsa-ba76bcbe56894af3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 43
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "ecdsa",
+          "version": "0.17.0-rc.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\n[Settings](https://docs.rs/ecdsa/latest/settings.html)\n[Help](https://docs.rs/ecdsa/latest/help.html)\nSummary[Source](https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709)\nExpand description\n## [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa)[RustCrypto](https://github.com/RustCrypto): ECDSA\n[![crate](https://buildstats.info/crate/ecdsa)](https://crates.io/crates/ecdsa) [![Docs](https://docs.rs/ecdsa/badge.svg)](https://docs.rs/ecdsa/) [![Build Status](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg)](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![MSRV](https://img.shields.io/badge/rustc-1.65+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\n[Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) as specified in [FIPS 186-4](https://csrc.nist.gov/publications/detail/fips/186/4/final) (Digital Signature Standard).\n[Documentation](https://docs.rs/ecdsa/)\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#about)About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * [`k256`](https://docs.rs/k256) (secp256k1)\n    * [`p256`](https://docs.rs/p256) (NIST P-256)\n    * [`p384`](https://docs.rs/p384) (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging [`ecdsa::Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html) with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\n\n\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#-security-warning)\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version)Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#license)License\nAll crates licensed under either of\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#serde-support)`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") and [`VerifyingKey`](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\") types.\nPlease see type-specific documentation for more information.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#interop)Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the [`k256`](https://docs.rs/k256), [`p256`](https://docs.rs/p256), and/or [`p384`](https://docs.rs/p384) crates to expose ECDSA functionality in a generic, interoperable way by leveraging the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type with in conjunction with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\nFor example, the [`ring-compat`](https://docs.rs/ring-compat) crate implements the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits in conjunction with the [`p256::ecdsa::Signature`](https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html) and [`p384::ecdsa::Signature`](https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html) types to wrap the ECDSA implementations from [_ring_](https://docs.rs/ring) in a generic, interoperable API.\n## Re-exports[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#reexports)\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#modules)\n\n[der](https://docs.rs/ecdsa/latest/ecdsa/der/index.html \"mod ecdsa::der\")`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in [RFC5912 Appendix A](https://www.rfc-editor.org/rfc/rfc5912#appendix-A).\n\n[dev](https://docs.rs/ecdsa/latest/ecdsa/dev/index.html \"mod ecdsa::dev\")`dev`\n    Development-related functionality.\n\n[hazmat](https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html \"mod ecdsa::hazmat\")`hazmat`\n    Low-level ECDSA primitives.\n## Macros[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#macros)\n\n[new_signing_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html \"macro ecdsa::new_signing_test\")`dev`\n    Define ECDSA signing test.\n\n[new_verification_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html \"macro ecdsa::new_verification_test\")`dev`\n    Define ECDSA verification test.\n\n[new_wycheproof_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html \"macro ecdsa::new_wycheproof_test\")`dev`\n    Define a Wycheproof verification test.\n## Structs[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#structs)\n\n[Error](https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html \"struct ecdsa::Error\")\n    Signature errors.\n\n[NormalizedSignature](https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html \"struct ecdsa::NormalizedSignature\")\n    ECDSA signature with low-S normalization applied.\n\n[RecoveryId](https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html \"struct ecdsa::RecoveryId\")\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\n[Signature](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\")\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\n[SignatureWithOid](https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html \"struct ecdsa::SignatureWithOid\")`digest`\n    An extended [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\n[SigningKey](https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html \"struct ecdsa::SigningKey\")`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\n[VerifyingKey](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\")`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#constants)\n\n[ECDSA_SHA224_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html \"constant ecdsa::ECDSA_SHA224_OID\")`digest`\n    OID for ECDSA with SHA-224 digests.\n\n[ECDSA_SHA256_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html \"constant ecdsa::ECDSA_SHA256_OID\")`digest`\n    OID for ECDSA with SHA-256 digests.\n\n[ECDSA_SHA384_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html \"constant ecdsa::ECDSA_SHA384_OID\")`digest`\n    OID for ECDSA with SHA-384 digests.\n\n[ECDSA_SHA512_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html \"constant ecdsa::ECDSA_SHA512_OID\")`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#traits)\n\n[PrimeCurve](https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html \"trait ecdsa::PrimeCurve\")\n    Marker trait for elliptic curves with prime order.\n\n[SignatureEncoding](https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html \"trait ecdsa::SignatureEncoding\")\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#types)\n\n[EncodedPoint](https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html \"type ecdsa::EncodedPoint\")\n    Encoded elliptic curve point sized appropriately for a given curve.\n\n[Result](https://docs.rs/ecdsa/latest/ecdsa/type.Result.html \"type ecdsa::Result\")\n    Result type.\n\n[SignatureBytes](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html \"type ecdsa::SignatureBytes\")\n    Fixed-size byte array containing an ECDSA signature\n\n[SignatureSize](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html \"type ecdsa::SignatureSize\")\n    Size of a fixed sized signature for the given elliptic curve.\n",
+            "markdown_with_citations": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto\u27e85\u27e9: ECDSA\n![crate\u27e86\u27e9](https://crates.io/crates/ecdsa) ![Docs\u27e87\u27e9](https://docs.rs/ecdsa/) ![Build Status\u27e88\u27e9](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed\u27e89\u27e9] ![MSRV\u27e810\u27e9] ![Project Chat\u27e811\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\nElliptic Curve Digital Signature Algorithm (ECDSA)\u27e812\u27e9 as specified in FIPS 186-4\u27e813\u27e9 (Digital Signature Standard).\nDocumentation\u27e814\u27e9\n### \u00a7\u27e815\u27e9About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * `k256`\u27e816\u27e9 (secp256k1)\n    * `p256`\u27e817\u27e9 (NIST P-256)\n    * `p384`\u27e818\u27e9 (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging `ecdsa::Signature`\u27e819\u27e9 with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\n\n\n### \u00a7\u27e822\u27e9\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### \u00a7\u27e823\u27e9Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### \u00a7\u27e824\u27e9License\nAll crates licensed under either of\n  * Apache License, Version 2.0\u27e825\u27e9\n  * MIT license\u27e826\u27e9\n\n\nat your option.\n#### \u00a7\u27e827\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e828\u27e9`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the `Signature`\u27e819\u27e9 and `VerifyingKey`\u27e829\u27e9 types.\nPlease see type-specific documentation for more information.\n### \u00a7\u27e830\u27e9Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the `k256`\u27e816\u27e9, `p256`\u27e817\u27e9, and/or `p384`\u27e818\u27e9 crates to expose ECDSA functionality in a generic, interoperable way by leveraging the `Signature`\u27e819\u27e9 type with in conjunction with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\nFor example, the `ring-compat`\u27e831\u27e9 crate implements the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits in conjunction with the `p256::ecdsa::Signature`\u27e832\u27e9 and `p384::ecdsa::Signature`\u27e833\u27e9 types to wrap the ECDSA implementations from _ring_\u27e834\u27e9 in a generic, interoperable API.\n## Re-exports\u00a7\u27e835\u27e9\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules\u00a7\u27e836\u27e9\n\nder\u27e837\u27e9`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in RFC5912 Appendix A\u27e838\u27e9.\n\ndev\u27e839\u27e9`dev`\n    Development-related functionality.\n\nhazmat\u27e840\u27e9`hazmat`\n    Low-level ECDSA primitives.\n## Macros\u00a7\u27e841\u27e9\n\nnew_signing_test\u27e842\u27e9`dev`\n    Define ECDSA signing test.\n\nnew_verification_test\u27e843\u27e9`dev`\n    Define ECDSA verification test.\n\nnew_wycheproof_test\u27e844\u27e9`dev`\n    Define a Wycheproof verification test.\n## Structs\u00a7\u27e845\u27e9\n\nError\u27e846\u27e9\n    Signature errors.\n\nNormalizedSignature\u27e847\u27e9\n    ECDSA signature with low-S normalization applied.\n\nRecoveryId\u27e848\u27e9\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\nSignature\u27e819\u27e9\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\nSignatureWithOid\u27e849\u27e9`digest`\n    An extended `Signature`\u27e819\u27e9 type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\nSigningKey\u27e850\u27e9`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\nVerifyingKey\u27e829\u27e9`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants\u00a7\u27e851\u27e9\n\nECDSA_SHA224_OID\u27e852\u27e9`digest`\n    OID for ECDSA with SHA-224 digests.\n\nECDSA_SHA256_OID\u27e853\u27e9`digest`\n    OID for ECDSA with SHA-256 digests.\n\nECDSA_SHA384_OID\u27e854\u27e9`digest`\n    OID for ECDSA with SHA-384 digests.\n\nECDSA_SHA512_OID\u27e855\u27e9`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits\u00a7\u27e856\u27e9\n\nPrimeCurve\u27e857\u27e9\n    Marker trait for elliptic curves with prime order.\n\nSignatureEncoding\u27e858\u27e9\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases\u00a7\u27e859\u27e9\n\nEncodedPoint\u27e860\u27e9\n    Encoded elliptic curve point sized appropriately for a given curve.\n\nResult\u27e861\u27e9\n    Result type.\n\nSignatureBytes\u27e862\u27e9\n    Fixed-size byte array containing an ECDSA signature\n\nSignatureSize\u27e863\u27e9\n    Size of a fixed sized signature for the given elliptic curve.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/ecdsa/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/ecdsa/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709: Source\n\u27e84\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa: \u00a7\n\u27e85\u27e9 https://github.com/RustCrypto: RustCrypto\n\u27e86\u27e9 https://buildstats.info/crate/ecdsa: ![crate\n\u27e87\u27e9 https://docs.rs/ecdsa/badge.svg: ![Docs\n\u27e88\u27e9 https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg: ![Build Status\n\u27e89\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e810\u27e9 https://img.shields.io/badge/rustc-1.65+-blue.svg: MSRV\n\u27e811\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm: Elliptic Curve Digital Signature Algorithm (ECDSA)\n\u27e813\u27e9 https://csrc.nist.gov/publications/detail/fips/186/4/final: FIPS 186-4\n\u27e814\u27e9 https://docs.rs/ecdsa/: Documentation\n\u27e815\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#about: \u00a7\n\u27e816\u27e9 https://docs.rs/k256: `k256`\n\u27e817\u27e9 https://docs.rs/p256: `p256`\n\u27e818\u27e9 https://docs.rs/p384: `p384`\n\u27e819\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html: `ecdsa::Signature`\n\u27e820\u27e9 https://docs.rs/signature/latest/signature/trait.Signer.html: `signature::Signer`\n\u27e821\u27e9 https://docs.rs/signature/latest/signature/trait.Verifier.html: `signature::Verifier`\n\u27e822\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#-security-warning: \u00a7\n\u27e823\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version: \u00a7\n\u27e824\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#license: \u00a7\n\u27e825\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e826\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e827\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#contribution: \u00a7\n\u27e828\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#serde-support: \u00a7\n\u27e829\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html: struct ecdsa::VerifyingKey - `VerifyingKey`\n\u27e830\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#interop: \u00a7\n\u27e831\u27e9 https://docs.rs/ring-compat: `ring-compat`\n\u27e832\u27e9 https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html: `p256::ecdsa::Signature`\n\u27e833\u27e9 https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html: `p384::ecdsa::Signature`\n\u27e834\u27e9 https://docs.rs/ring: _ring_\n\u27e835\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#reexports: \u00a7\n\u27e836\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#modules: \u00a7\n\u27e837\u27e9 https://docs.rs/ecdsa/latest/ecdsa/der/index.html: mod ecdsa::der - der\n\u27e838\u27e9 https://www.rfc-editor.org/rfc/rfc5912#appendix-A: RFC5912 Appendix A\n\u27e839\u27e9 https://docs.rs/ecdsa/latest/ecdsa/dev/index.html: mod ecdsa::dev - dev\n\u27e840\u27e9 https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html: mod ecdsa::hazmat - hazmat\n\u27e841\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#macros: \u00a7\n\u27e842\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html: macro ecdsa::new_signing_test - new_signing_test\n\u27e843\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html: macro ecdsa::new_verification_test - new_verification_test\n\u27e844\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html: macro ecdsa::new_wycheproof_test - new_wycheproof_test\n\u27e845\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#structs: \u00a7\n\u27e846\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html: struct ecdsa::Error - Error\n\u27e847\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html: struct ecdsa::NormalizedSignature - NormalizedSignature\n\u27e848\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html: struct ecdsa::RecoveryId - RecoveryId\n\u27e849\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html: struct ecdsa::SignatureWithOid - SignatureWithOid\n\u27e850\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html: struct ecdsa::SigningKey - SigningKey\n\u27e851\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#constants: \u00a7\n\u27e852\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html: constant ecdsa::ECDSA_SHA224_OID - ECDSA_SHA224_OID\n\u27e853\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html: constant ecdsa::ECDSA_SHA256_OID - ECDSA_SHA256_OID\n\u27e854\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html: constant ecdsa::ECDSA_SHA384_OID - ECDSA_SHA384_OID\n\u27e855\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html: constant ecdsa::ECDSA_SHA512_OID - ECDSA_SHA512_OID\n\u27e856\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#traits: \u00a7\n\u27e857\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html: trait ecdsa::PrimeCurve - PrimeCurve\n\u27e858\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html: trait ecdsa::SignatureEncoding - SignatureEncoding\n\u27e859\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#types: \u00a7\n\u27e860\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html: type ecdsa::EncodedPoint - EncodedPoint\n\u27e861\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.Result.html: type ecdsa::Result - Result\n\u27e862\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html: type ecdsa::SignatureBytes - SignatureBytes\n\u27e863\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html: type ecdsa::SignatureSize - SignatureSize\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "ecdsa",
+          "version": "0.17.0-rc.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\n[Settings](https://docs.rs/ecdsa/latest/settings.html)\n[Help](https://docs.rs/ecdsa/latest/help.html)\nSummary[Source](https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709)\nExpand description\n## [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa)[RustCrypto](https://github.com/RustCrypto): ECDSA\n[![crate](https://buildstats.info/crate/ecdsa)](https://crates.io/crates/ecdsa) [![Docs](https://docs.rs/ecdsa/badge.svg)](https://docs.rs/ecdsa/) [![Build Status](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg)](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![MSRV](https://img.shields.io/badge/rustc-1.65+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\n[Elliptic Curve Digital Signature Algorithm (ECDSA)](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) as specified in [FIPS 186-4](https://csrc.nist.gov/publications/detail/fips/186/4/final) (Digital Signature Standard).\n[Documentation](https://docs.rs/ecdsa/)\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#about)About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * [`k256`](https://docs.rs/k256) (secp256k1)\n    * [`p256`](https://docs.rs/p256) (NIST P-256)\n    * [`p384`](https://docs.rs/p384) (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging [`ecdsa::Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html) with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\n\n\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#-security-warning)\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version)Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#license)License\nAll crates licensed under either of\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#serde-support)`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") and [`VerifyingKey`](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\") types.\nPlease see type-specific documentation for more information.\n### [\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#interop)Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the [`k256`](https://docs.rs/k256), [`p256`](https://docs.rs/p256), and/or [`p384`](https://docs.rs/p384) crates to expose ECDSA functionality in a generic, interoperable way by leveraging the [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type with in conjunction with the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits.\nFor example, the [`ring-compat`](https://docs.rs/ring-compat) crate implements the [`signature::Signer`](https://docs.rs/signature/latest/signature/trait.Signer.html) and [`signature::Verifier`](https://docs.rs/signature/latest/signature/trait.Verifier.html) traits in conjunction with the [`p256::ecdsa::Signature`](https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html) and [`p384::ecdsa::Signature`](https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html) types to wrap the ECDSA implementations from [_ring_](https://docs.rs/ring) in a generic, interoperable API.\n## Re-exports[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#reexports)\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#modules)\n\n[der](https://docs.rs/ecdsa/latest/ecdsa/der/index.html \"mod ecdsa::der\")`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in [RFC5912 Appendix A](https://www.rfc-editor.org/rfc/rfc5912#appendix-A).\n\n[dev](https://docs.rs/ecdsa/latest/ecdsa/dev/index.html \"mod ecdsa::dev\")`dev`\n    Development-related functionality.\n\n[hazmat](https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html \"mod ecdsa::hazmat\")`hazmat`\n    Low-level ECDSA primitives.\n## Macros[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#macros)\n\n[new_signing_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html \"macro ecdsa::new_signing_test\")`dev`\n    Define ECDSA signing test.\n\n[new_verification_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html \"macro ecdsa::new_verification_test\")`dev`\n    Define ECDSA verification test.\n\n[new_wycheproof_test](https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html \"macro ecdsa::new_wycheproof_test\")`dev`\n    Define a Wycheproof verification test.\n## Structs[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#structs)\n\n[Error](https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html \"struct ecdsa::Error\")\n    Signature errors.\n\n[NormalizedSignature](https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html \"struct ecdsa::NormalizedSignature\")\n    ECDSA signature with low-S normalization applied.\n\n[RecoveryId](https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html \"struct ecdsa::RecoveryId\")\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\n[Signature](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\")\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\n[SignatureWithOid](https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html \"struct ecdsa::SignatureWithOid\")`digest`\n    An extended [`Signature`](https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html \"struct ecdsa::Signature\") type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\n[SigningKey](https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html \"struct ecdsa::SigningKey\")`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\n[VerifyingKey](https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html \"struct ecdsa::VerifyingKey\")`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#constants)\n\n[ECDSA_SHA224_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html \"constant ecdsa::ECDSA_SHA224_OID\")`digest`\n    OID for ECDSA with SHA-224 digests.\n\n[ECDSA_SHA256_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html \"constant ecdsa::ECDSA_SHA256_OID\")`digest`\n    OID for ECDSA with SHA-256 digests.\n\n[ECDSA_SHA384_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html \"constant ecdsa::ECDSA_SHA384_OID\")`digest`\n    OID for ECDSA with SHA-384 digests.\n\n[ECDSA_SHA512_OID](https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html \"constant ecdsa::ECDSA_SHA512_OID\")`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#traits)\n\n[PrimeCurve](https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html \"trait ecdsa::PrimeCurve\")\n    Marker trait for elliptic curves with prime order.\n\n[SignatureEncoding](https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html \"trait ecdsa::SignatureEncoding\")\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases[\u00a7](https://docs.rs/ecdsa/latest/ecdsa/#types)\n\n[EncodedPoint](https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html \"type ecdsa::EncodedPoint\")\n    Encoded elliptic curve point sized appropriately for a given curve.\n\n[Result](https://docs.rs/ecdsa/latest/ecdsa/type.Result.html \"type ecdsa::Result\")\n    Result type.\n\n[SignatureBytes](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html \"type ecdsa::SignatureBytes\")\n    Fixed-size byte array containing an ECDSA signature\n\n[SignatureSize](https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html \"type ecdsa::SignatureSize\")\n    Size of a fixed sized signature for the given elliptic curve.\n",
+            "markdown_with_citations": "[](https://docs.rs/ecdsa/latest/ecdsa/all.html \"show sidebar\")\n# Crate ecdsaCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto\u27e85\u27e9: ECDSA\n![crate\u27e86\u27e9](https://crates.io/crates/ecdsa) ![Docs\u27e87\u27e9](https://docs.rs/ecdsa/) ![Build Status\u27e88\u27e9](https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml) ![Apache2/MIT licensed\u27e89\u27e9] ![MSRV\u27e810\u27e9] ![Project Chat\u27e811\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260048-signatures)\nElliptic Curve Digital Signature Algorithm (ECDSA)\u27e812\u27e9 as specified in FIPS 186-4\u27e813\u27e9 (Digital Signature Standard).\nDocumentation\u27e814\u27e9\n### \u00a7\u27e815\u27e9About\nThis crate provides generic ECDSA support which can be used in the following ways:\n  * Generic implementation of ECDSA usable with the following crates: \n    * `k256`\u27e816\u27e9 (secp256k1)\n    * `p256`\u27e817\u27e9 (NIST P-256)\n    * `p384`\u27e818\u27e9 (NIST P-384)\n  * Other crates which provide their own complete implementations of ECDSA can also leverage the types from this crate to export ECDSA functionality in a generic, interoperable way by leveraging `ecdsa::Signature`\u27e819\u27e9 with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\n\n\n### \u00a7\u27e822\u27e9\u26a0\ufe0f Security Warning\nThe ECDSA implementation contained in this crate has never been independently audited for security!\nThis crate contains a generic implementation of ECDSA which must be instantiated using a separate crate providing a concrete implementation of arithmetic for a particular curve. It\u2019s possible timing variability can exist in concrete curve implementations, and thus this crate\u2019s security can only be properly assessed for a specific elliptic curve.\nUSE AT YOUR OWN RISK!\n### \u00a7\u27e823\u27e9Minimum Supported Rust Version\nThis crate requires **Rust 1.65** at a minimum.\nWe may change the MSRV in the future, but it will be accompanied by a minor version bump.\n### \u00a7\u27e824\u27e9License\nAll crates licensed under either of\n  * Apache License, Version 2.0\u27e825\u27e9\n  * MIT license\u27e826\u27e9\n\n\nat your option.\n#### \u00a7\u27e827\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e828\u27e9`serde` support\nWhen the `serde` feature of this crate is enabled, `Serialize` and `Deserialize` impls are provided for the `Signature`\u27e819\u27e9 and `VerifyingKey`\u27e829\u27e9 types.\nPlease see type-specific documentation for more information.\n### \u00a7\u27e830\u27e9Interop\nAny crates which provide an implementation of ECDSA for a particular elliptic curve can leverage the types from this crate, along with the `k256`\u27e816\u27e9, `p256`\u27e817\u27e9, and/or `p384`\u27e818\u27e9 crates to expose ECDSA functionality in a generic, interoperable way by leveraging the `Signature`\u27e819\u27e9 type with in conjunction with the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits.\nFor example, the `ring-compat`\u27e831\u27e9 crate implements the `signature::Signer`\u27e820\u27e9 and `signature::Verifier`\u27e821\u27e9 traits in conjunction with the `p256::ecdsa::Signature`\u27e832\u27e9 and `p384::ecdsa::Signature`\u27e833\u27e9 types to wrap the ECDSA implementations from _ring_\u27e834\u27e9 in a generic, interoperable API.\n## Re-exports\u00a7\u27e835\u27e9\n\n`pub use elliptic_curve[](https://docs.rs/elliptic-curve/0.13.8/x86_64-unknown-linux-gnu/elliptic_curve/index.html \"mod elliptic_curve\");`\n\n\n`pub use signature[](https://docs.rs/signature/2.2.0/x86_64-unknown-linux-gnu/signature/index.html \"mod signature\");`\n\n## Modules\u00a7\u27e836\u27e9\n\nder\u27e837\u27e9`der`\n    Support for ASN.1 DER-encoded ECDSA signatures as specified in RFC5912 Appendix A\u27e838\u27e9.\n\ndev\u27e839\u27e9`dev`\n    Development-related functionality.\n\nhazmat\u27e840\u27e9`hazmat`\n    Low-level ECDSA primitives.\n## Macros\u00a7\u27e841\u27e9\n\nnew_signing_test\u27e842\u27e9`dev`\n    Define ECDSA signing test.\n\nnew_verification_test\u27e843\u27e9`dev`\n    Define ECDSA verification test.\n\nnew_wycheproof_test\u27e844\u27e9`dev`\n    Define a Wycheproof verification test.\n## Structs\u00a7\u27e845\u27e9\n\nError\u27e846\u27e9\n    Signature errors.\n\nNormalizedSignature\u27e847\u27e9\n    ECDSA signature with low-S normalization applied.\n\nRecoveryId\u27e848\u27e9\n    Recovery IDs, a.k.a. \u201crecid\u201d.\n\nSignature\u27e819\u27e9\n    ECDSA signature (fixed-size). Generic over elliptic curve types.\n\nSignatureWithOid\u27e849\u27e9`digest`\n    An extended `Signature`\u27e819\u27e9 type which is parameterized by an `ObjectIdentifier` which identifies the ECDSA variant used by a particular signature.\n\nSigningKey\u27e850\u27e9`signing`\n    ECDSA secret key used for signing. Generic over prime order elliptic curves (e.g. NIST P-curves)\n\nVerifyingKey\u27e829\u27e9`verifying`\n    ECDSA public key used for verifying signatures. Generic over prime order elliptic curves (e.g. NIST P-curves)\n## Constants\u00a7\u27e851\u27e9\n\nECDSA_SHA224_OID\u27e852\u27e9`digest`\n    OID for ECDSA with SHA-224 digests.\n\nECDSA_SHA256_OID\u27e853\u27e9`digest`\n    OID for ECDSA with SHA-256 digests.\n\nECDSA_SHA384_OID\u27e854\u27e9`digest`\n    OID for ECDSA with SHA-384 digests.\n\nECDSA_SHA512_OID\u27e855\u27e9`digest`\n    OID for ECDSA with SHA-512 digests.\n## Traits\u00a7\u27e856\u27e9\n\nPrimeCurve\u27e857\u27e9\n    Marker trait for elliptic curves with prime order.\n\nSignatureEncoding\u27e858\u27e9\n    Support for decoding/encoding signatures as bytes.\n## Type Aliases\u00a7\u27e859\u27e9\n\nEncodedPoint\u27e860\u27e9\n    Encoded elliptic curve point sized appropriately for a given curve.\n\nResult\u27e861\u27e9\n    Result type.\n\nSignatureBytes\u27e862\u27e9\n    Fixed-size byte array containing an ECDSA signature\n\nSignatureSize\u27e863\u27e9\n    Size of a fixed sized signature for the given elliptic curve.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/ecdsa/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/ecdsa/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/ecdsa/latest/src/ecdsa/lib.rs.html#1-709: Source\n\u27e84\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#rustcrypto-ecdsa: \u00a7\n\u27e85\u27e9 https://github.com/RustCrypto: RustCrypto\n\u27e86\u27e9 https://buildstats.info/crate/ecdsa: ![crate\n\u27e87\u27e9 https://docs.rs/ecdsa/badge.svg: ![Docs\n\u27e88\u27e9 https://github.com/RustCrypto/signatures/actions/workflows/ecdsa.yml/badge.svg: ![Build Status\n\u27e89\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e810\u27e9 https://img.shields.io/badge/rustc-1.65+-blue.svg: MSRV\n\u27e811\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm: Elliptic Curve Digital Signature Algorithm (ECDSA)\n\u27e813\u27e9 https://csrc.nist.gov/publications/detail/fips/186/4/final: FIPS 186-4\n\u27e814\u27e9 https://docs.rs/ecdsa/: Documentation\n\u27e815\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#about: \u00a7\n\u27e816\u27e9 https://docs.rs/k256: `k256`\n\u27e817\u27e9 https://docs.rs/p256: `p256`\n\u27e818\u27e9 https://docs.rs/p384: `p384`\n\u27e819\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Signature.html: `ecdsa::Signature`\n\u27e820\u27e9 https://docs.rs/signature/latest/signature/trait.Signer.html: `signature::Signer`\n\u27e821\u27e9 https://docs.rs/signature/latest/signature/trait.Verifier.html: `signature::Verifier`\n\u27e822\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#-security-warning: \u00a7\n\u27e823\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#minimum-supported-rust-version: \u00a7\n\u27e824\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#license: \u00a7\n\u27e825\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e826\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e827\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#contribution: \u00a7\n\u27e828\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#serde-support: \u00a7\n\u27e829\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.VerifyingKey.html: struct ecdsa::VerifyingKey - `VerifyingKey`\n\u27e830\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#interop: \u00a7\n\u27e831\u27e9 https://docs.rs/ring-compat: `ring-compat`\n\u27e832\u27e9 https://docs.rs/p256/latest/p256/ecdsa/type.Signature.html: `p256::ecdsa::Signature`\n\u27e833\u27e9 https://docs.rs/p384/latest/p384/ecdsa/type.Signature.html: `p384::ecdsa::Signature`\n\u27e834\u27e9 https://docs.rs/ring: _ring_\n\u27e835\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#reexports: \u00a7\n\u27e836\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#modules: \u00a7\n\u27e837\u27e9 https://docs.rs/ecdsa/latest/ecdsa/der/index.html: mod ecdsa::der - der\n\u27e838\u27e9 https://www.rfc-editor.org/rfc/rfc5912#appendix-A: RFC5912 Appendix A\n\u27e839\u27e9 https://docs.rs/ecdsa/latest/ecdsa/dev/index.html: mod ecdsa::dev - dev\n\u27e840\u27e9 https://docs.rs/ecdsa/latest/ecdsa/hazmat/index.html: mod ecdsa::hazmat - hazmat\n\u27e841\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#macros: \u00a7\n\u27e842\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_signing_test.html: macro ecdsa::new_signing_test - new_signing_test\n\u27e843\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_verification_test.html: macro ecdsa::new_verification_test - new_verification_test\n\u27e844\u27e9 https://docs.rs/ecdsa/latest/ecdsa/macro.new_wycheproof_test.html: macro ecdsa::new_wycheproof_test - new_wycheproof_test\n\u27e845\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#structs: \u00a7\n\u27e846\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.Error.html: struct ecdsa::Error - Error\n\u27e847\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.NormalizedSignature.html: struct ecdsa::NormalizedSignature - NormalizedSignature\n\u27e848\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.RecoveryId.html: struct ecdsa::RecoveryId - RecoveryId\n\u27e849\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SignatureWithOid.html: struct ecdsa::SignatureWithOid - SignatureWithOid\n\u27e850\u27e9 https://docs.rs/ecdsa/latest/ecdsa/struct.SigningKey.html: struct ecdsa::SigningKey - SigningKey\n\u27e851\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#constants: \u00a7\n\u27e852\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA224_OID.html: constant ecdsa::ECDSA_SHA224_OID - ECDSA_SHA224_OID\n\u27e853\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA256_OID.html: constant ecdsa::ECDSA_SHA256_OID - ECDSA_SHA256_OID\n\u27e854\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA384_OID.html: constant ecdsa::ECDSA_SHA384_OID - ECDSA_SHA384_OID\n\u27e855\u27e9 https://docs.rs/ecdsa/latest/ecdsa/constant.ECDSA_SHA512_OID.html: constant ecdsa::ECDSA_SHA512_OID - ECDSA_SHA512_OID\n\u27e856\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#traits: \u00a7\n\u27e857\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.PrimeCurve.html: trait ecdsa::PrimeCurve - PrimeCurve\n\u27e858\u27e9 https://docs.rs/ecdsa/latest/ecdsa/trait.SignatureEncoding.html: trait ecdsa::SignatureEncoding - SignatureEncoding\n\u27e859\u27e9 https://docs.rs/ecdsa/latest/ecdsa/#types: \u00a7\n\u27e860\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.EncodedPoint.html: type ecdsa::EncodedPoint - EncodedPoint\n\u27e861\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.Result.html: type ecdsa::Result - Result\n\u27e862\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureBytes.html: type ecdsa::SignatureBytes - SignatureBytes\n\u27e863\u27e9 https://docs.rs/ecdsa/latest/ecdsa/type.SignatureSize.html: type ecdsa::SignatureSize - SignatureSize\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `ecdsa` crate provides a generic implementation of the Elliptic Curve Digital Signature Algorithm (ECDSA), enabling interoperability with elliptic curve libraries like `k256`, `p256`, and `p384`. It supports signing and verification using the `signature` crate's traits, offers `serde` integration for key and signature serialization/deserialization, and includes utilities for DER encoding, low-level primitives, and testing macros. Note: the crate's security depends on the underlying curve implementation and has not been independently audited.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1: Generic ECDSA Support\n\u2705 **Factual**: The `ecdsa` crate provides a generic implementation of ECDSA that can be used with elliptic curve crates like `k256` (secp256k1), `p256` (NIST P-256), and `p384` (NIST P-384).  \n\u274c **Counterfactual**: The `ecdsa` crate includes built-in arithmetic implementations for specific elliptic curves such as secp256k1, P-256, and P-384, eliminating the need for external curve-specific crates.\n\n---\n\n### Pair 2: Security Audit Status\n\u2705 **Factual**: The `ecdsa` crate has not been independently audited for security, and its security depends on the specific elliptic curve implementation used in conjunction with it.  \n\u274c **Counterfactual**: The `ecdsa` crate has undergone a comprehensive security audit and guarantees protection against timing attacks regardless of the elliptic curve implementation.\n\n---\n\n### Pair 3: `serde` Feature\n\u2705 **Factual**: When the `serde` feature is enabled, the `ecdsa` crate provides `Serialize` and `Deserialize` implementations for its `Signature` and `VerifyingKey` types.  \n\u274c **Counterfactual**: The `ecdsa` crate always includes `Serialize` and `Deserialize` implementations for its types, even when the `serde` feature is not",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-318f9f81-fe32ffe4-1751264804",
+      "timestamp": "2025-06-30T06:26:44.873973+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

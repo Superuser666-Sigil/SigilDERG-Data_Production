@@ -1,0 +1,1188 @@
+[
+  {
+    "execution_id": "exec-75666699-be7de334-1751260458",
+    "timestamp": "2025-06-30T05:14:18.623966+00:00",
+    "sacred_chain": {
+      "input_data": "uuid",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'uuid' -> 'uuid'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "uuid",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/uuid",
+            "title": "uuid v1.17.0",
+            "content": {
+              "raw_markdown": "#  uuid v1.17.0\nA library to generate and parse UUIDs. \n  * [ #guid ](https://crates.io/keywords/guid)\n  * [ #unique ](https://crates.io/keywords/unique)\n  * [ #uuid ](https://crates.io/keywords/uuid)\n\n\n  * [ Readme ](https://crates.io/crates/uuid)\n  * [ 81 Versions ](https://crates.io/crates/uuid/versions)\n  * [ Dependencies ](https://crates.io/crates/uuid/dependencies)\n  * [ Dependents ](https://crates.io/crates/uuid/reverse_dependencies)\n\n\n## Metadata\nabout 1 month ago \nv1.63.0 \n[ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0) OR [ MIT ](https://choosealicense.com/licenses/mit)\n57.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add uuid\nOr add the following line to your Cargo.toml:\nuuid = \"1.17.0\"\n## Documentation\n[ docs.rs/uuid ](https://docs.rs/uuid)\n## Repository\n[ github.com/uuid-rs/uuid ](https://github.com/uuid-rs/uuid)\n## Owners\n## Categories\n  * [Data structures](https://crates.io/categories/data-structures)\n  * [WebAssembly](https://crates.io/categories/wasm)\n  * [Parser implementations](https://crates.io/categories/parser-implementations)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=uuid&inquire=crate-violation)\n### Stats Overview\n293,885,128 Downloads all time\n81 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  uuid v1.17.0\nA library to generate and parse UUIDs. \n  *  #guid \u27e81\u27e9\n  *  #unique \u27e82\u27e9\n  *  #uuid \u27e83\u27e9\n\n\n  *  Readme \u27e84\u27e9\n  *  81 Versions \u27e85\u27e9\n  *  Dependencies \u27e86\u27e9\n  *  Dependents \u27e87\u27e9\n\n\n## Metadata\nabout 1 month ago \nv1.63.0 \n Apache-2.0 \u27e88\u27e9 OR  MIT \u27e89\u27e9\n57.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add uuid\nOr add the following line to your Cargo.toml:\nuuid = \"1.17.0\"\n## Documentation\n docs.rs/uuid \u27e810\u27e9\n## Repository\n github.com/uuid-rs/uuid \u27e811\u27e9\n## Owners\n## Categories\n  * Data structures\u27e812\u27e9\n  * WebAssembly\u27e813\u27e9\n  * Parser implementations\u27e814\u27e9\n  * No standard library\u27e815\u27e9\n\n\n Report crate \u27e816\u27e9\n### Stats Overview\n293,885,128 Downloads all time\n81 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/guid:  #guid \n\u27e82\u27e9 https://crates.io/keywords/unique:  #unique \n\u27e83\u27e9 https://crates.io/keywords/uuid:  #uuid \n\u27e84\u27e9 https://crates.io/crates/uuid:  Readme \n\u27e85\u27e9 https://crates.io/crates/uuid/versions:  81 Versions \n\u27e86\u27e9 https://crates.io/crates/uuid/dependencies:  Dependencies \n\u27e87\u27e9 https://crates.io/crates/uuid/reverse_dependencies:  Dependents \n\u27e88\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e89\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e810\u27e9 https://docs.rs/uuid:  docs.rs/uuid \n\u27e811\u27e9 https://github.com/uuid-rs/uuid:  github.com/uuid-rs/uuid \n\u27e812\u27e9 https://crates.io/categories/data-structures: Data structures\n\u27e813\u27e9 https://crates.io/categories/wasm: WebAssembly\n\u27e814\u27e9 https://crates.io/categories/parser-implementations: Parser implementations\n\u27e815\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e816\u27e9 https://crates.io/support?crate=uuid&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1430,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114248.4142328"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/uuid",
+            "title": "Crate uuidCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\n[Settings](https://docs.rs/uuid/latest/settings.html)\n[Help](https://docs.rs/uuid/latest/help.html)\nSummary[Source](https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744)\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in [RFC 9562](https://www.ietf.org/rfc/rfc9562.html).\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#getting-started)Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions)Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a [`Builder`](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\") type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than [`Uuid`](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\") that can be used when you need control over implicit requirements on things like a source of randomness.\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use)Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#other-features)Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#unstable-features)Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#building-for-other-targets)Building for other targets\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#webassembly)WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#embedded)Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to [`Builder::from_random_bytes`](https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes \"associated function uuid::Builder::from_random_bytes\") without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#examples)Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#references)References\n  * [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)\n  * [RFC 9562: Universally Unique IDentifiers (UUID)](https://www.ietf.org/rfc/rfc9562.html).\n\n\n## Re-exports[\u00a7](https://docs.rs/uuid/latest/uuid/#reexports)\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules[\u00a7](https://docs.rs/uuid/latest/uuid/#modules)\n\n[fmt](https://docs.rs/uuid/latest/uuid/fmt/index.html \"mod uuid::fmt\")\n    Adapters for alternative string formats.\n\n[serde](https://docs.rs/uuid/latest/uuid/serde/index.html \"mod uuid::serde\")\n    Adapters for alternative `serde` formats.\n\n[timestamp](https://docs.rs/uuid/latest/uuid/timestamp/index.html \"mod uuid::timestamp\")\n    Generating UUIDs from timestamps.\n## Macros[\u00a7](https://docs.rs/uuid/latest/uuid/#macros)\n\n[uuid](https://docs.rs/uuid/latest/uuid/macro.uuid.html \"macro uuid::uuid\")\n    Parse [`Uuid`](https://docs.rs/uuid/*/uuid/struct.Uuid.html)s from string literals at compile time.\n## Structs[\u00a7](https://docs.rs/uuid/latest/uuid/#structs)\n\n[Builder](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\")\n    A builder for creating a UUID.\n\n[Error](https://docs.rs/uuid/latest/uuid/struct.Error.html \"struct uuid::Error\")\n    A general error that can occur when working with UUIDs.\n\n[NonNilUuid](https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html \"struct uuid::NonNilUuid\")\n    A UUID that is guaranteed not to be the [nil UUID](https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid).\n\n[Uuid](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\")\n    A Universally Unique Identifier (UUID).\n## Enums[\u00a7](https://docs.rs/uuid/latest/uuid/#enums)\n\n[Variant](https://docs.rs/uuid/latest/uuid/enum.Variant.html \"enum uuid::Variant\")\n    The reserved variants of UUIDs.\n\n[Version](https://docs.rs/uuid/latest/uuid/enum.Version.html \"enum uuid::Version\")\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases[\u00a7](https://docs.rs/uuid/latest/uuid/#types)\n\n[Bytes](https://docs.rs/uuid/latest/uuid/type.Bytes.html \"type uuid::Bytes\")\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+              "markdown_with_citations": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in RFC 9562\u27e84\u27e9.\n## \u00a7\u27e85\u27e9Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## \u00a7\u27e86\u27e9Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a `Builder`\u27e87\u27e9 type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than `Uuid`\u27e88\u27e9 that can be used when you need control over implicit requirements on things like a source of randomness.\n### \u00a7\u27e89\u27e9Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## \u00a7\u27e810\u27e9Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## \u00a7\u27e811\u27e9Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## \u00a7\u27e812\u27e9Building for other targets\n### \u00a7\u27e813\u27e9WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### \u00a7\u27e814\u27e9Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to `Builder::from_random_bytes`\u27e815\u27e9 without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## \u00a7\u27e816\u27e9Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## \u00a7\u27e817\u27e9References\n  * Wikipedia: Universally Unique Identifier\u27e818\u27e9\n  * RFC 9562: Universally Unique IDentifiers (UUID)\u27e84\u27e9.\n\n\n## Re-exports\u00a7\u27e819\u27e9\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules\u00a7\u27e820\u27e9\n\nfmt\u27e821\u27e9\n    Adapters for alternative string formats.\n\nserde\u27e822\u27e9\n    Adapters for alternative `serde` formats.\n\ntimestamp\u27e823\u27e9\n    Generating UUIDs from timestamps.\n## Macros\u00a7\u27e824\u27e9\n\nuuid\u27e825\u27e9\n    Parse `Uuid`\u27e826\u27e9s from string literals at compile time.\n## Structs\u00a7\u27e827\u27e9\n\nBuilder\u27e87\u27e9\n    A builder for creating a UUID.\n\nError\u27e828\u27e9\n    A general error that can occur when working with UUIDs.\n\nNonNilUuid\u27e829\u27e9\n    A UUID that is guaranteed not to be the nil UUID\u27e830\u27e9.\n\nUuid\u27e88\u27e9\n    A Universally Unique Identifier (UUID).\n## Enums\u00a7\u27e831\u27e9\n\nVariant\u27e832\u27e9\n    The reserved variants of UUIDs.\n\nVersion\u27e833\u27e9\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases\u00a7\u27e834\u27e9\n\nBytes\u27e835\u27e9\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/uuid/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/uuid/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744: Source\n\u27e84\u27e9 https://www.ietf.org/rfc/rfc9562.html: RFC 9562\n\u27e85\u27e9 https://docs.rs/uuid/latest/uuid/#getting-started: \u00a7\n\u27e86\u27e9 https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions: \u00a7\n\u27e87\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html: struct uuid::Builder - `Builder`\n\u27e88\u27e9 https://docs.rs/uuid/latest/uuid/struct.Uuid.html: struct uuid::Uuid - `Uuid`\n\u27e89\u27e9 https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use: \u00a7\n\u27e810\u27e9 https://docs.rs/uuid/latest/uuid/#other-features: \u00a7\n\u27e811\u27e9 https://docs.rs/uuid/latest/uuid/#unstable-features: \u00a7\n\u27e812\u27e9 https://docs.rs/uuid/latest/uuid/#building-for-other-targets: \u00a7\n\u27e813\u27e9 https://docs.rs/uuid/latest/uuid/#webassembly: \u00a7\n\u27e814\u27e9 https://docs.rs/uuid/latest/uuid/#embedded: \u00a7\n\u27e815\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes: associated function uuid::Builder::from_random_bytes - `Builder::from_random_bytes`\n\u27e816\u27e9 https://docs.rs/uuid/latest/uuid/#examples: \u00a7\n\u27e817\u27e9 https://docs.rs/uuid/latest/uuid/#references: \u00a7\n\u27e818\u27e9 http://en.wikipedia.org/wiki/Universally_unique_identifier: Wikipedia: Universally Unique Identifier\n\u27e819\u27e9 https://docs.rs/uuid/latest/uuid/#reexports: \u00a7\n\u27e820\u27e9 https://docs.rs/uuid/latest/uuid/#modules: \u00a7\n\u27e821\u27e9 https://docs.rs/uuid/latest/uuid/fmt/index.html: mod uuid::fmt - fmt\n\u27e822\u27e9 https://docs.rs/uuid/latest/uuid/serde/index.html: mod uuid::serde - serde\n\u27e823\u27e9 https://docs.rs/uuid/latest/uuid/timestamp/index.html: mod uuid::timestamp - timestamp\n\u27e824\u27e9 https://docs.rs/uuid/latest/uuid/#macros: \u00a7\n\u27e825\u27e9 https://docs.rs/uuid/latest/uuid/macro.uuid.html: macro uuid::uuid - uuid\n\u27e826\u27e9 https://docs.rs/uuid/*/uuid/struct.Uuid.html: `Uuid`\n\u27e827\u27e9 https://docs.rs/uuid/latest/uuid/#structs: \u00a7\n\u27e828\u27e9 https://docs.rs/uuid/latest/uuid/struct.Error.html: struct uuid::Error - Error\n\u27e829\u27e9 https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html: struct uuid::NonNilUuid - NonNilUuid\n\u27e830\u27e9 https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid: nil UUID\n\u27e831\u27e9 https://docs.rs/uuid/latest/uuid/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/uuid/latest/uuid/enum.Variant.html: enum uuid::Variant - Variant\n\u27e833\u27e9 https://docs.rs/uuid/latest/uuid/enum.Version.html: enum uuid::Version - Version\n\u27e834\u27e9 https://docs.rs/uuid/latest/uuid/#types: \u00a7\n\u27e835\u27e9 https://docs.rs/uuid/latest/uuid/type.Bytes.html: type uuid::Bytes - Bytes\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9395,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114249.110131"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/uuid",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [80 releases](https://lib.rs/crates/uuid/versions) (33 stable)\n1.17.0 |  May 23, 2025   \n---|---  \n1.16.0 |  Mar 14, 2025   \n1.15.1 |  Feb 26, 2025   \n1.11.0 |  Oct 16, 2024   \n0.1.0 |  Nov 27, 2014   \n#**1** in [Value formatting](https://lib.rs/value-formatting \"Crates to allow an application to format values for display to a user, potentially adapting the display to various languages and regions.\")\nDownload history 3465443/week @ 2025-03-09 3761181/week @ 2025-03-16 3898824/week @ 2025-03-23 3472577/week @ 2025-03-30 3666657/week @ 2025-04-06 3183761/week @ 2025-04-13 3012615/week @ 2025-04-20 2948319/week @ 2025-04-27 3034671/week @ 2025-05-04 3130157/week @ 2025-05-11 3191915/week @ 2025-05-18 2956679/week @ 2025-05-25 3305181/week @ 2025-06-01 3319657/week @ 2025-06-08 3567949/week @ 2025-06-15 3629243/week @ 2025-06-22\n**14,013,434** downloads per month Used in [**18,812** crates (6,328 directly)](https://lib.rs/crates/uuid/rev)\n**Apache-2.0 OR MIT**\n270KB  4.5K  SLoC\n# ``uuid``\n[![Latest Version](https://img.shields.io/crates/v/uuid.svg)](https://crates.io/crates/uuid) [![Continuous integration](https://img.gs/czjpqfbdkz/full/https://github.com/uuid-rs/uuid/actions/workflows/ci.yml/badge.svg)](https://github.com/uuid-rs/uuid/actions/workflows/ci.yml)\nHere's an example of a UUID:\n```\n`67e55044-10b1-426f-9247-bb680e5fe0c8\n`\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\n## Getting started\nAdd the following to your ``Cargo.toml``:\n```\n```[``dependencies.uuid``]`\n`version ``=` ``\"`1.17.0`\"``\n``# Lets you generate random UUIDs``\n`features ``=` ``[`\n  ``\"`v4`\"``,\n`]``\n``\n```\n\nWhen you want a UUID, you can generate one:\n```\n``use` `uuid`::``Uuid`;`\n`let` id `=` `Uuid`::``new_v4`(``)``;`\n`\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\n``use` `uuid`::````{`uuid`,` Uuid```}```;`\n`const` `ID``:` Uuid `=` `uuid!``(```\"`67e55044-10b1-426f-9247-bb680e5fe0c8`\"```)``;`\n`\n```\n\nYou can also parse UUIDs without needing any crate features:\n```\n``use` `uuid`::````{`Uuid`,` Version```}```;`\n`let` my_uuid `=` `Uuid`::``parse_str`(```\"`67e55044-10b1-426f-9247-bb680e5fe0c8`\"```)``?``;`\n`assert_eq!``(``Some``(``Version`::``Random`)``,` my_uuid`.``get_version``(``)``)``;`\n`\n```\n\nIf you'd like to parse UUIDs _really_ fast, check out the [``uuid-simd``](https://github.com/nugine/uuid-simd) library.\nFor more details on using ``uuid``, [see the library documentation](https://docs.rs/uuid/1.17.0/uuid).\n## References\n  * [``uuid`` library docs](https://docs.rs/uuid/1.17.0/uuid).\n  * [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier).\n  * [RFC 9562: Universally Unique IDentifiers (UUID)](https://www.ietf.org/rfc/rfc9562.html).\n\n\n# License\nLicensed under either of\n  * Apache License, Version 2.0, (LICENSE-APACHE or <https://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license (LICENSE-MIT or <https://opensource.org/licenses/MIT>)\n\n\nat your option.\n## Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0\u20131.4MB  ~26K SLoC\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-arbitrary \"arbitrary is optional feature\") [arbitrary](https://lib.rs/crates/arbitrary \"1.1.3\")\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-atomic \"atomic is optional feature\") [atomic](https://lib.rs/crates/atomic \"new\") 0.6\n  * [borsh?](https://lib.rs/crates/uuid/features#feature-borsh \"optional feature\") [borsh](https://lib.rs/crates/borsh \"new\") 1.0\n  * [borsh?](https://lib.rs/crates/uuid/features#feature-borsh \"optional feature\") [borsh-derive](https://lib.rs/crates/borsh-derive \"new\") 1.0\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-bytemuck \"bytemuck is optional feature\") [bytemuck](https://lib.rs/crates/bytemuck \"1.17.0\")[+derive](https://lib.rs/crates/bytemuck/features#feature-derive)\n  * [rng?](https://lib.rs/crates/uuid/features#feature-rng \"optional feature\") [rng-getrandom?](https://lib.rs/crates/uuid/features#feature-rng-getrandom \"optional feature\") [getrandom](https://lib.rs/crates/getrandom \"new\") 0.3 not wasm32 not  unknown none\n  * [rng-getrandom?](https://lib.rs/crates/uuid/features#feature-rng-getrandom \"optional feature\") [rng-rand?](https://lib.rs/crates/uuid/features#feature-rng-rand \"optional feature\") [uuid-rng-internal](https://lib.rs/crates/uuid-rng-internal \"renamed uuid-rng-internal-lib, 1.17.0\") wasm32 unknown none\n  * [js?](https://lib.rs/crates/uuid/features#feature-js \"optional feature\") [std?](https://lib.rs/crates/uuid/features#feature-std \"optional feature\") [js-sys](https://lib.rs/crates/js-sys \"0.3\") wasm32 unknown none atomics\n  * [js?](https://lib.rs/crates/uuid/features#feature-js \"optional feature\") [std?](https://lib.rs/crates/uuid/features#feature-std \"optional feature\") [wasm-bindgen](https://lib.rs/crates/wasm-bindgen \"0.2\")[+msrv](https://lib.rs/crates/wasm-bindgen/features#feature-msrv) wasm32 unknown none\n  * [md5?](https://lib.rs/crates/uuid/features#feature-md5 \"optional feature\") [md-5](https://lib.rs/crates/md-5 \"0.10\")\n  * [fast-rng?](https://lib.rs/crates/uuid/features#feature-fast-rng \"optional feature\") [rng-rand?](https://lib.rs/crates/uuid/features#feature-rng-rand \"optional feature\") [rand](https://lib.rs/crates/rand \"new\") 0.9 not wasm32 not  unknown none\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-serde \"serde is optional feature\") [serde](https://lib.rs/crates/serde \"1.0.56\")\n  * [sha1?](https://lib.rs/crates/uuid/features#feature-sha1 \"optional feature\") [sha1_smol](https://lib.rs/crates/sha1_smol \"1\")\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-slog \"slog is optional feature\") [slog](https://lib.rs/crates/slog \"new\") 2.0\n  * [macro-diagnostics?](https://lib.rs/crates/uuid/features#feature-macro-diagnostics \"optional feature\") [uuid-macro-internal](https://lib.rs/crates/uuid-macro-internal \"1.17.0\")\n  * [ optional ](https://lib.rs/crates/uuid/features#feature-zerocopy \"zerocopy is optional feature\") [zerocopy](https://lib.rs/crates/zerocopy \"0.8\")[+derive](https://lib.rs/crates/zerocopy/features#feature-derive)\n\n\n  * dev  [bincode](https://lib.rs/crates/bincode \"1.0\")\n  * dev  [rustversion](https://lib.rs/crates/rustversion \"1\")\n  * dev  [serde_derive](https://lib.rs/crates/serde_derive \"1.0.79\")\n  * dev  [serde_json](https://lib.rs/crates/serde_json \"1.0\")\n  * dev  [serde_test](https://lib.rs/crates/serde_test \"1.0.56\")\n  * dev  [trybuild](https://lib.rs/crates/trybuild \"1.0.52\")\n  * dev  [wasm-bindgen-test](https://lib.rs/crates/wasm-bindgen-test \"0.3\") wasm32 unknown none\n\n\n#### [Other features](https://lib.rs/crates/uuid/features)\n  * [v1](https://lib.rs/crates/uuid/features#feature-v1)\n  * [v3](https://lib.rs/crates/uuid/features#feature-v3)\n  * [v4](https://lib.rs/crates/uuid/features#feature-v4)\n  * [v5](https://lib.rs/crates/uuid/features#feature-v5)\n  * [v6](https://lib.rs/crates/uuid/features#feature-v6)\n  * [v7](https://lib.rs/crates/uuid/features#feature-v7)\n  * [v8](https://lib.rs/crates/uuid/features#feature-v8)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  80 releases\u27e81\u27e9 (33 stable)\n1.17.0 |  May 23, 2025   \n---|---  \n1.16.0 |  Mar 14, 2025   \n1.15.1 |  Feb 26, 2025   \n1.11.0 |  Oct 16, 2024   \n0.1.0 |  Nov 27, 2014   \n#**1** in Value formatting\u27e82\u27e9\nDownload history 3465443/week @ 2025-03-09 3761181/week @ 2025-03-16 3898824/week @ 2025-03-23 3472577/week @ 2025-03-30 3666657/week @ 2025-04-06 3183761/week @ 2025-04-13 3012615/week @ 2025-04-20 2948319/week @ 2025-04-27 3034671/week @ 2025-05-04 3130157/week @ 2025-05-11 3191915/week @ 2025-05-18 2956679/week @ 2025-05-25 3305181/week @ 2025-06-01 3319657/week @ 2025-06-08 3567949/week @ 2025-06-15 3629243/week @ 2025-06-22\n**14,013,434** downloads per month Used in **18,812** crates (6,328 directly)\u27e83\u27e9\n**Apache-2.0 OR MIT**\n270KB  4.5K  SLoC\n# ``uuid``\n![Latest Version\u27e84\u27e9](https://crates.io/crates/uuid) ![Continuous integration\u27e85\u27e9](https://github.com/uuid-rs/uuid/actions/workflows/ci.yml)\nHere's an example of a UUID:\n```\n`67e55044-10b1-426f-9247-bb680e5fe0c8\n`\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\n## Getting started\nAdd the following to your ``Cargo.toml``:\n```\n```[``dependencies.uuid``]`\n`version ``=` ``\"`1.17.0`\"``\n``# Lets you generate random UUIDs``\n`features ``=` ``[`\n  ``\"`v4`\"``,\n`]``\n``\n```\n\nWhen you want a UUID, you can generate one:\n```\n``use` `uuid`::``Uuid`;`\n`let` id `=` `Uuid`::``new_v4`(``)``;`\n`\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\n``use` `uuid`::````{`uuid`,` Uuid```}```;`\n`const` `ID``:` Uuid `=` `uuid!``(```\"`67e55044-10b1-426f-9247-bb680e5fe0c8`\"```)``;`\n`\n```\n\nYou can also parse UUIDs without needing any crate features:\n```\n``use` `uuid`::````{`Uuid`,` Version```}```;`\n`let` my_uuid `=` `Uuid`::``parse_str`(```\"`67e55044-10b1-426f-9247-bb680e5fe0c8`\"```)``?``;`\n`assert_eq!``(``Some``(``Version`::``Random`)``,` my_uuid`.``get_version``(``)``)``;`\n`\n```\n\nIf you'd like to parse UUIDs _really_ fast, check out the ``uuid-simd``\u27e86\u27e9 library.\nFor more details on using ``uuid``, see the library documentation\u27e87\u27e9.\n## References\n  * ``uuid`` library docs\u27e87\u27e9.\n  * Wikipedia: Universally Unique Identifier\u27e88\u27e9.\n  * RFC 9562: Universally Unique IDentifiers (UUID)\u27e89\u27e9.\n\n\n# License\nLicensed under either of\n  * Apache License, Version 2.0, (LICENSE-APACHE or <https://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license (LICENSE-MIT or <https://opensource.org/licenses/MIT>)\n\n\nat your option.\n## Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0\u20131.4MB  ~26K SLoC\n  *  optional \u27e810\u27e9 arbitrary\u27e811\u27e9\n  *  optional \u27e812\u27e9 atomic\u27e813\u27e9 0.6\n  * borsh?\u27e814\u27e9 borsh\u27e815\u27e9 1.0\n  * borsh?\u27e814\u27e9 borsh-derive\u27e816\u27e9 1.0\n  *  optional \u27e817\u27e9 bytemuck\u27e818\u27e9+derive\u27e819\u27e9\n  * rng?\u27e820\u27e9 rng-getrandom?\u27e821\u27e9 getrandom\u27e822\u27e9 0.3 not wasm32 not  unknown none\n  * rng-getrandom?\u27e821\u27e9 rng-rand?\u27e823\u27e9 uuid-rng-internal\u27e824\u27e9 wasm32 unknown none\n  * js?\u27e825\u27e9 std?\u27e826\u27e9 js-sys\u27e827\u27e9 wasm32 unknown none atomics\n  * js?\u27e825\u27e9 std?\u27e826\u27e9 wasm-bindgen\u27e828\u27e9+msrv\u27e829\u27e9 wasm32 unknown none\n  * md5?\u27e830\u27e9 md-5\u27e831\u27e9\n  * fast-rng?\u27e832\u27e9 rng-rand?\u27e823\u27e9 rand\u27e833\u27e9 0.9 not wasm32 not  unknown none\n  *  optional \u27e834\u27e9 serde\u27e835\u27e9\n  * sha1?\u27e836\u27e9 sha1_smol\u27e837\u27e9\n  *  optional \u27e838\u27e9 slog\u27e839\u27e9 2.0\n  * macro-diagnostics?\u27e840\u27e9 uuid-macro-internal\u27e841\u27e9\n  *  optional \u27e842\u27e9 zerocopy\u27e843\u27e9+derive\u27e844\u27e9\n\n\n  * dev  bincode\u27e845\u27e9\n  * dev  rustversion\u27e846\u27e9\n  * dev  serde_derive\u27e847\u27e9\n  * dev  serde_json\u27e848\u27e9\n  * dev  serde_test\u27e849\u27e9\n  * dev  trybuild\u27e850\u27e9\n  * dev  wasm-bindgen-test\u27e851\u27e9 wasm32 unknown none\n\n\n#### Other features\u27e852\u27e9\n  * v1\u27e853\u27e9\n  * v3\u27e854\u27e9\n  * v4\u27e855\u27e9\n  * v5\u27e856\u27e9\n  * v6\u27e857\u27e9\n  * v7\u27e858\u27e9\n  * v8\u27e859\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/uuid/versions: 80 releases\n\u27e82\u27e9 https://lib.rs/value-formatting: Crates to allow an application to format values for display to a user, potentially adapting the display to various languages and regions. - Value formatting\n\u27e83\u27e9 https://lib.rs/crates/uuid/rev: **18,812** crates (6,328 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/uuid.svg: ![Latest Version\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/uuid-rs/uuid/actions/workflows/ci.yml/badge.svg: ![Continuous integration\n\u27e86\u27e9 https://github.com/nugine/uuid-simd: ``uuid-simd``\n\u27e87\u27e9 https://docs.rs/uuid/1.17.0/uuid: see the library documentation\n\u27e88\u27e9 http://en.wikipedia.org/wiki/Universally_unique_identifier: Wikipedia: Universally Unique Identifier\n\u27e89\u27e9 https://www.ietf.org/rfc/rfc9562.html: RFC 9562: Universally Unique IDentifiers (UUID)\n\u27e810\u27e9 https://lib.rs/crates/uuid/features#feature-arbitrary: arbitrary is optional feature -  optional \n\u27e811\u27e9 https://lib.rs/crates/arbitrary: 1.1.3 - arbitrary\n\u27e812\u27e9 https://lib.rs/crates/uuid/features#feature-atomic: atomic is optional feature -  optional \n\u27e813\u27e9 https://lib.rs/crates/atomic: new - atomic\n\u27e814\u27e9 https://lib.rs/crates/uuid/features#feature-borsh: optional feature - borsh?\n\u27e815\u27e9 https://lib.rs/crates/borsh: new - borsh\n\u27e816\u27e9 https://lib.rs/crates/borsh-derive: new - borsh-derive\n\u27e817\u27e9 https://lib.rs/crates/uuid/features#feature-bytemuck: bytemuck is optional feature -  optional \n\u27e818\u27e9 https://lib.rs/crates/bytemuck: 1.17.0 - bytemuck\n\u27e819\u27e9 https://lib.rs/crates/bytemuck/features#feature-derive: +derive\n\u27e820\u27e9 https://lib.rs/crates/uuid/features#feature-rng: optional feature - rng?\n\u27e821\u27e9 https://lib.rs/crates/uuid/features#feature-rng-getrandom: optional feature - rng-getrandom?\n\u27e822\u27e9 https://lib.rs/crates/getrandom: new - getrandom\n\u27e823\u27e9 https://lib.rs/crates/uuid/features#feature-rng-rand: optional feature - rng-rand?\n\u27e824\u27e9 https://lib.rs/crates/uuid-rng-internal: renamed uuid-rng-internal-lib, 1.17.0 - uuid-rng-internal\n\u27e825\u27e9 https://lib.rs/crates/uuid/features#feature-js: optional feature - js?\n\u27e826\u27e9 https://lib.rs/crates/uuid/features#feature-std: optional feature - std?\n\u27e827\u27e9 https://lib.rs/crates/js-sys: 0.3 - js-sys\n\u27e828\u27e9 https://lib.rs/crates/wasm-bindgen: 0.2 - wasm-bindgen\n\u27e829\u27e9 https://lib.rs/crates/wasm-bindgen/features#feature-msrv: +msrv\n\u27e830\u27e9 https://lib.rs/crates/uuid/features#feature-md5: optional feature - md5?\n\u27e831\u27e9 https://lib.rs/crates/md-5: 0.10 - md-5\n\u27e832\u27e9 https://lib.rs/crates/uuid/features#feature-fast-rng: optional feature - fast-rng?\n\u27e833\u27e9 https://lib.rs/crates/rand: new - rand\n\u27e834\u27e9 https://lib.rs/crates/uuid/features#feature-serde: serde is optional feature -  optional \n\u27e835\u27e9 https://lib.rs/crates/serde: 1.0.56 - serde\n\u27e836\u27e9 https://lib.rs/crates/uuid/features#feature-sha1: optional feature - sha1?\n\u27e837\u27e9 https://lib.rs/crates/sha1_smol: 1 - sha1_smol\n\u27e838\u27e9 https://lib.rs/crates/uuid/features#feature-slog: slog is optional feature -  optional \n\u27e839\u27e9 https://lib.rs/crates/slog: new - slog\n\u27e840\u27e9 https://lib.rs/crates/uuid/features#feature-macro-diagnostics: optional feature - macro-diagnostics?\n\u27e841\u27e9 https://lib.rs/crates/uuid-macro-internal: 1.17.0 - uuid-macro-internal\n\u27e842\u27e9 https://lib.rs/crates/uuid/features#feature-zerocopy: zerocopy is optional feature -  optional \n\u27e843\u27e9 https://lib.rs/crates/zerocopy: 0.8 - zerocopy\n\u27e844\u27e9 https://lib.rs/crates/zerocopy/features#feature-derive: +derive\n\u27e845\u27e9 https://lib.rs/crates/bincode: 1.0 - bincode\n\u27e846\u27e9 https://lib.rs/crates/rustversion: 1 - rustversion\n\u27e847\u27e9 https://lib.rs/crates/serde_derive: 1.0.79 - serde_derive\n\u27e848\u27e9 https://lib.rs/crates/serde_json: 1.0 - serde_json\n\u27e849\u27e9 https://lib.rs/crates/serde_test: 1.0.56 - serde_test\n\u27e850\u27e9 https://lib.rs/crates/trybuild: 1.0.52 - trybuild\n\u27e851\u27e9 https://lib.rs/crates/wasm-bindgen-test: 0.3 - wasm-bindgen-test\n\u27e852\u27e9 https://lib.rs/crates/uuid/features: Other features\n\u27e853\u27e9 https://lib.rs/crates/uuid/features#feature-v1: v1\n\u27e854\u27e9 https://lib.rs/crates/uuid/features#feature-v3: v3\n\u27e855\u27e9 https://lib.rs/crates/uuid/features#feature-v4: v4\n\u27e856\u27e9 https://lib.rs/crates/uuid/features#feature-v5: v5\n\u27e857\u27e9 https://lib.rs/crates/uuid/features#feature-v6: v6\n\u27e858\u27e9 https://lib.rs/crates/uuid/features#feature-v7: v7\n\u27e859\u27e9 https://lib.rs/crates/uuid/features#feature-v8: v8\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7883,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114249.6973248"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\target\\debug\\deps\\libuuid-308f034271c8d830.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:139:17\n    |\n139 | ...   write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)\n    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n    = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n    |\n139 -                 write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)\n139 +                 write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{character}` at {index}\")\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5034,
+                        "byte_start": 5034,
+                        "column_end": 124,
+                        "column_start": 124,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 139,
+                        "line_start": 139,
+                        "suggested_replacement": "character",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 124,
+                            "highlight_start": 124,
+                            "text": "                write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5041,
+                        "byte_start": 5041,
+                        "column_end": 131,
+                        "column_start": 131,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 139,
+                        "line_start": 139,
+                        "suggested_replacement": "index",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 131,
+                            "highlight_start": 131,
+                            "text": "                write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5054,
+                        "byte_start": 5043,
+                        "column_end": 144,
+                        "column_start": 133,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 139,
+                        "line_start": 139,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 144,
+                            "highlight_start": 133,
+                            "text": "                write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5061,
+                        "byte_start": 5054,
+                        "column_end": 151,
+                        "column_start": 144,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 139,
+                        "line_start": 139,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 151,
+                            "highlight_start": 144,
+                            "text": "                write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 5062,
+                    "byte_start": 4927,
+                    "column_end": 152,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 139,
+                    "line_start": 139,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 152,
+                        "highlight_start": 17,
+                        "text": "                write!(f, \"invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `{}` at {}\", character, index)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:142:17\n    |\n142 | /                 write!(\n143 | |                     f,\n144 | |                     \"invalid length: expected length 32 for simple format, found {}\",\n145 | |                     len\n146 | |                 )\n    | |_________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5255,
+                        "byte_start": 5255,
+                        "column_end": 83,
+                        "column_start": 83,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 144,
+                        "line_start": 144,
+                        "suggested_replacement": "len",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 83,
+                            "highlight_start": 83,
+                            "text": "                    \"invalid length: expected length 32 for simple format, found {}\","
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5282,
+                        "byte_start": 5257,
+                        "column_end": 24,
+                        "column_start": 85,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 145,
+                        "line_start": 144,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 86,
+                            "highlight_start": 85,
+                            "text": "                    \"invalid length: expected length 32 for simple format, found {}\","
+                          },
+                          {
+                            "highlight_end": 24,
+                            "highlight_start": 1,
+                            "text": "                    len"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 5300,
+                    "byte_start": 5142,
+                    "column_end": 18,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 146,
+                    "line_start": 142,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 17,
+                        "text": "                write!("
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "                    f,"
+                      },
+                      {
+                        "highlight_end": 86,
+                        "highlight_start": 1,
+                        "text": "                    \"invalid length: expected length 32 for simple format, found {}\","
+                      },
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 1,
+                        "text": "                    len"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                )"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:149:17\n    |\n149 |                 write!(f, \"invalid length: expected 16 bytes, found {}\", len)\n    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n    |\n149 -                 write!(f, \"invalid length: expected 16 bytes, found {}\", len)\n149 +                 write!(f, \"invalid length: expected 16 bytes, found {len}\")\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5431,
+                        "byte_start": 5431,
+                        "column_end": 70,
+                        "column_start": 70,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 149,
+                        "line_start": 149,
+                        "suggested_replacement": "len",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 70,
+                            "highlight_start": 70,
+                            "text": "                write!(f, \"invalid length: expected 16 bytes, found {}\", len)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5438,
+                        "byte_start": 5433,
+                        "column_end": 77,
+                        "column_start": 72,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 149,
+                        "line_start": 149,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 77,
+                            "highlight_start": 72,
+                            "text": "                write!(f, \"invalid length: expected 16 bytes, found {}\", len)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 5439,
+                    "byte_start": 5378,
+                    "column_end": 78,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 149,
+                    "line_start": 149,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 17,
+                        "text": "                write!(f, \"invalid length: expected 16 bytes, found {}\", len)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:152:17\n    |\n152 |                 write!(f, \"invalid group count: expected 5, found {}\", count)\n    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n    |\n152 -                 write!(f, \"invalid group count: expected 5, found {}\", count)\n152 +                 write!(f, \"invalid group count: expected 5, found {count}\")\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5570,
+                        "byte_start": 5570,
+                        "column_end": 68,
+                        "column_start": 68,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 152,
+                        "line_start": 152,
+                        "suggested_replacement": "count",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 68,
+                            "highlight_start": 68,
+                            "text": "                write!(f, \"invalid group count: expected 5, found {}\", count)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5579,
+                        "byte_start": 5572,
+                        "column_end": 77,
+                        "column_start": 70,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 152,
+                        "line_start": 152,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 77,
+                            "highlight_start": 70,
+                            "text": "                write!(f, \"invalid group count: expected 5, found {}\", count)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 5580,
+                    "byte_start": 5519,
+                    "column_end": 78,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 152,
+                    "line_start": 152,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 17,
+                        "text": "                write!(f, \"invalid group count: expected 5, found {}\", count)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:156:17\n    |\n156 | /                 write!(\n157 | |                     f,\n158 | |                     \"invalid group length in group {}: expected {}, found {}\",\n159 | |                     group, expected, len\n160 | |                 )\n    | |_________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 5809,
+                        "byte_start": 5809,
+                        "column_end": 53,
+                        "column_start": 53,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 158,
+                        "line_start": 158,
+                        "suggested_replacement": "group",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 53,
+                            "text": "                    \"invalid group length in group {}: expected {}, found {}\","
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5822,
+                        "byte_start": 5822,
+                        "column_end": 66,
+                        "column_start": 66,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 158,
+                        "line_start": 158,
+                        "suggested_replacement": "expected",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 66,
+                            "highlight_start": 66,
+                            "text": "                    \"invalid group length in group {}: expected {}, found {}\","
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5832,
+                        "byte_start": 5832,
+                        "column_end": 76,
+                        "column_start": 76,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 158,
+                        "line_start": 158,
+                        "suggested_replacement": "len",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 76,
+                            "highlight_start": 76,
+                            "text": "                    \"invalid group length in group {}: expected {}, found {}\","
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5861,
+                        "byte_start": 5834,
+                        "column_end": 26,
+                        "column_start": 78,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 159,
+                        "line_start": 158,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 79,
+                            "highlight_start": 78,
+                            "text": "                    \"invalid group length in group {}: expected {}, found {}\","
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "                    group, expected, len"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5871,
+                        "byte_start": 5861,
+                        "column_end": 36,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 159,
+                        "line_start": 159,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 26,
+                            "text": "                    group, expected, len"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 5876,
+                        "byte_start": 5871,
+                        "column_end": 41,
+                        "column_start": 36,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 159,
+                        "line_start": 159,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 36,
+                            "text": "                    group, expected, len"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 5894,
+                    "byte_start": 5726,
+                    "column_end": 18,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 160,
+                    "line_start": 156,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 24,
+                        "highlight_start": 17,
+                        "text": "                write!("
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "                    f,"
+                      },
+                      {
+                        "highlight_end": 79,
+                        "highlight_start": 1,
+                        "text": "                    \"invalid group length in group {}: expected {}, found {}\","
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "                    group, expected, len"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                )"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the following explicit lifetimes could be elided: 'a\n   --> src\\timestamp.rs:413:6\n    |\n413 | impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {\n    |      ^^                                                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes\n    = note: `#[warn(clippy::needless_lifetimes)]` on by default\nhelp: elide the lifetimes\n    |\n413 - impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {\n413 + impl<T: ClockSequence + ?Sized> ClockSequence for &T {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_lifetimes)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "elide the lifetimes",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 13254,
+                        "byte_start": 13250,
+                        "column_end": 10,
+                        "column_start": 6,
+                        "expansion": null,
+                        "file_name": "src\\timestamp.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 413,
+                        "line_start": 413,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 10,
+                            "highlight_start": 6,
+                            "text": "impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 13303,
+                        "byte_start": 13300,
+                        "column_end": 59,
+                        "column_start": 56,
+                        "expansion": null,
+                        "file_name": "src\\timestamp.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 413,
+                        "line_start": 413,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 59,
+                            "highlight_start": 56,
+                            "text": "impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the following explicit lifetimes could be elided: 'a",
+                "spans": [
+                  {
+                    "byte_end": 13252,
+                    "byte_start": 13250,
+                    "column_end": 8,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\timestamp.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 413,
+                    "line_start": 413,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 6,
+                        "text": "impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 13302,
+                    "byte_start": 13300,
+                    "column_end": 58,
+                    "column_start": 56,
+                    "expansion": null,
+                    "file_name": "src\\timestamp.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 413,
+                    "line_start": 413,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 58,
+                        "highlight_start": 56,
+                        "text": "impl<'a, T: ClockSequence + ?Sized> ClockSequence for &'a T {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp6jng6uo5/uuid-1.17.0#uuid@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "uuid",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp6jng6uo5\\uuid-1.17.0\\target\\debug\\deps\\libuuid-39c7fab5bbc1711c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 88
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "uuid",
+          "version": "1.17.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\n[Settings](https://docs.rs/uuid/latest/settings.html)\n[Help](https://docs.rs/uuid/latest/help.html)\nSummary[Source](https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744)\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in [RFC 9562](https://www.ietf.org/rfc/rfc9562.html).\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#getting-started)Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions)Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a [`Builder`](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\") type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than [`Uuid`](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\") that can be used when you need control over implicit requirements on things like a source of randomness.\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use)Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#other-features)Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#unstable-features)Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#building-for-other-targets)Building for other targets\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#webassembly)WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#embedded)Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to [`Builder::from_random_bytes`](https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes \"associated function uuid::Builder::from_random_bytes\") without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#examples)Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#references)References\n  * [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)\n  * [RFC 9562: Universally Unique IDentifiers (UUID)](https://www.ietf.org/rfc/rfc9562.html).\n\n\n## Re-exports[\u00a7](https://docs.rs/uuid/latest/uuid/#reexports)\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules[\u00a7](https://docs.rs/uuid/latest/uuid/#modules)\n\n[fmt](https://docs.rs/uuid/latest/uuid/fmt/index.html \"mod uuid::fmt\")\n    Adapters for alternative string formats.\n\n[serde](https://docs.rs/uuid/latest/uuid/serde/index.html \"mod uuid::serde\")\n    Adapters for alternative `serde` formats.\n\n[timestamp](https://docs.rs/uuid/latest/uuid/timestamp/index.html \"mod uuid::timestamp\")\n    Generating UUIDs from timestamps.\n## Macros[\u00a7](https://docs.rs/uuid/latest/uuid/#macros)\n\n[uuid](https://docs.rs/uuid/latest/uuid/macro.uuid.html \"macro uuid::uuid\")\n    Parse [`Uuid`](https://docs.rs/uuid/*/uuid/struct.Uuid.html)s from string literals at compile time.\n## Structs[\u00a7](https://docs.rs/uuid/latest/uuid/#structs)\n\n[Builder](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\")\n    A builder for creating a UUID.\n\n[Error](https://docs.rs/uuid/latest/uuid/struct.Error.html \"struct uuid::Error\")\n    A general error that can occur when working with UUIDs.\n\n[NonNilUuid](https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html \"struct uuid::NonNilUuid\")\n    A UUID that is guaranteed not to be the [nil UUID](https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid).\n\n[Uuid](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\")\n    A Universally Unique Identifier (UUID).\n## Enums[\u00a7](https://docs.rs/uuid/latest/uuid/#enums)\n\n[Variant](https://docs.rs/uuid/latest/uuid/enum.Variant.html \"enum uuid::Variant\")\n    The reserved variants of UUIDs.\n\n[Version](https://docs.rs/uuid/latest/uuid/enum.Version.html \"enum uuid::Version\")\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases[\u00a7](https://docs.rs/uuid/latest/uuid/#types)\n\n[Bytes](https://docs.rs/uuid/latest/uuid/type.Bytes.html \"type uuid::Bytes\")\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+            "markdown_with_citations": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in RFC 9562\u27e84\u27e9.\n## \u00a7\u27e85\u27e9Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## \u00a7\u27e86\u27e9Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a `Builder`\u27e87\u27e9 type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than `Uuid`\u27e88\u27e9 that can be used when you need control over implicit requirements on things like a source of randomness.\n### \u00a7\u27e89\u27e9Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## \u00a7\u27e810\u27e9Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## \u00a7\u27e811\u27e9Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## \u00a7\u27e812\u27e9Building for other targets\n### \u00a7\u27e813\u27e9WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### \u00a7\u27e814\u27e9Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to `Builder::from_random_bytes`\u27e815\u27e9 without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## \u00a7\u27e816\u27e9Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## \u00a7\u27e817\u27e9References\n  * Wikipedia: Universally Unique Identifier\u27e818\u27e9\n  * RFC 9562: Universally Unique IDentifiers (UUID)\u27e84\u27e9.\n\n\n## Re-exports\u00a7\u27e819\u27e9\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules\u00a7\u27e820\u27e9\n\nfmt\u27e821\u27e9\n    Adapters for alternative string formats.\n\nserde\u27e822\u27e9\n    Adapters for alternative `serde` formats.\n\ntimestamp\u27e823\u27e9\n    Generating UUIDs from timestamps.\n## Macros\u00a7\u27e824\u27e9\n\nuuid\u27e825\u27e9\n    Parse `Uuid`\u27e826\u27e9s from string literals at compile time.\n## Structs\u00a7\u27e827\u27e9\n\nBuilder\u27e87\u27e9\n    A builder for creating a UUID.\n\nError\u27e828\u27e9\n    A general error that can occur when working with UUIDs.\n\nNonNilUuid\u27e829\u27e9\n    A UUID that is guaranteed not to be the nil UUID\u27e830\u27e9.\n\nUuid\u27e88\u27e9\n    A Universally Unique Identifier (UUID).\n## Enums\u00a7\u27e831\u27e9\n\nVariant\u27e832\u27e9\n    The reserved variants of UUIDs.\n\nVersion\u27e833\u27e9\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases\u00a7\u27e834\u27e9\n\nBytes\u27e835\u27e9\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/uuid/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/uuid/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744: Source\n\u27e84\u27e9 https://www.ietf.org/rfc/rfc9562.html: RFC 9562\n\u27e85\u27e9 https://docs.rs/uuid/latest/uuid/#getting-started: \u00a7\n\u27e86\u27e9 https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions: \u00a7\n\u27e87\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html: struct uuid::Builder - `Builder`\n\u27e88\u27e9 https://docs.rs/uuid/latest/uuid/struct.Uuid.html: struct uuid::Uuid - `Uuid`\n\u27e89\u27e9 https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use: \u00a7\n\u27e810\u27e9 https://docs.rs/uuid/latest/uuid/#other-features: \u00a7\n\u27e811\u27e9 https://docs.rs/uuid/latest/uuid/#unstable-features: \u00a7\n\u27e812\u27e9 https://docs.rs/uuid/latest/uuid/#building-for-other-targets: \u00a7\n\u27e813\u27e9 https://docs.rs/uuid/latest/uuid/#webassembly: \u00a7\n\u27e814\u27e9 https://docs.rs/uuid/latest/uuid/#embedded: \u00a7\n\u27e815\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes: associated function uuid::Builder::from_random_bytes - `Builder::from_random_bytes`\n\u27e816\u27e9 https://docs.rs/uuid/latest/uuid/#examples: \u00a7\n\u27e817\u27e9 https://docs.rs/uuid/latest/uuid/#references: \u00a7\n\u27e818\u27e9 http://en.wikipedia.org/wiki/Universally_unique_identifier: Wikipedia: Universally Unique Identifier\n\u27e819\u27e9 https://docs.rs/uuid/latest/uuid/#reexports: \u00a7\n\u27e820\u27e9 https://docs.rs/uuid/latest/uuid/#modules: \u00a7\n\u27e821\u27e9 https://docs.rs/uuid/latest/uuid/fmt/index.html: mod uuid::fmt - fmt\n\u27e822\u27e9 https://docs.rs/uuid/latest/uuid/serde/index.html: mod uuid::serde - serde\n\u27e823\u27e9 https://docs.rs/uuid/latest/uuid/timestamp/index.html: mod uuid::timestamp - timestamp\n\u27e824\u27e9 https://docs.rs/uuid/latest/uuid/#macros: \u00a7\n\u27e825\u27e9 https://docs.rs/uuid/latest/uuid/macro.uuid.html: macro uuid::uuid - uuid\n\u27e826\u27e9 https://docs.rs/uuid/*/uuid/struct.Uuid.html: `Uuid`\n\u27e827\u27e9 https://docs.rs/uuid/latest/uuid/#structs: \u00a7\n\u27e828\u27e9 https://docs.rs/uuid/latest/uuid/struct.Error.html: struct uuid::Error - Error\n\u27e829\u27e9 https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html: struct uuid::NonNilUuid - NonNilUuid\n\u27e830\u27e9 https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid: nil UUID\n\u27e831\u27e9 https://docs.rs/uuid/latest/uuid/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/uuid/latest/uuid/enum.Variant.html: enum uuid::Variant - Variant\n\u27e833\u27e9 https://docs.rs/uuid/latest/uuid/enum.Version.html: enum uuid::Version - Version\n\u27e834\u27e9 https://docs.rs/uuid/latest/uuid/#types: \u00a7\n\u27e835\u27e9 https://docs.rs/uuid/latest/uuid/type.Bytes.html: type uuid::Bytes - Bytes\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "uuid",
+          "version": "1.17.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\n[Settings](https://docs.rs/uuid/latest/settings.html)\n[Help](https://docs.rs/uuid/latest/help.html)\nSummary[Source](https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744)\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in [RFC 9562](https://www.ietf.org/rfc/rfc9562.html).\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#getting-started)Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions)Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a [`Builder`](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\") type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than [`Uuid`](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\") that can be used when you need control over implicit requirements on things like a source of randomness.\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use)Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#other-features)Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#unstable-features)Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#building-for-other-targets)Building for other targets\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#webassembly)WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### [\u00a7](https://docs.rs/uuid/latest/uuid/#embedded)Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to [`Builder::from_random_bytes`](https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes \"associated function uuid::Builder::from_random_bytes\") without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#examples)Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## [\u00a7](https://docs.rs/uuid/latest/uuid/#references)References\n  * [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)\n  * [RFC 9562: Universally Unique IDentifiers (UUID)](https://www.ietf.org/rfc/rfc9562.html).\n\n\n## Re-exports[\u00a7](https://docs.rs/uuid/latest/uuid/#reexports)\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules[\u00a7](https://docs.rs/uuid/latest/uuid/#modules)\n\n[fmt](https://docs.rs/uuid/latest/uuid/fmt/index.html \"mod uuid::fmt\")\n    Adapters for alternative string formats.\n\n[serde](https://docs.rs/uuid/latest/uuid/serde/index.html \"mod uuid::serde\")\n    Adapters for alternative `serde` formats.\n\n[timestamp](https://docs.rs/uuid/latest/uuid/timestamp/index.html \"mod uuid::timestamp\")\n    Generating UUIDs from timestamps.\n## Macros[\u00a7](https://docs.rs/uuid/latest/uuid/#macros)\n\n[uuid](https://docs.rs/uuid/latest/uuid/macro.uuid.html \"macro uuid::uuid\")\n    Parse [`Uuid`](https://docs.rs/uuid/*/uuid/struct.Uuid.html)s from string literals at compile time.\n## Structs[\u00a7](https://docs.rs/uuid/latest/uuid/#structs)\n\n[Builder](https://docs.rs/uuid/latest/uuid/struct.Builder.html \"struct uuid::Builder\")\n    A builder for creating a UUID.\n\n[Error](https://docs.rs/uuid/latest/uuid/struct.Error.html \"struct uuid::Error\")\n    A general error that can occur when working with UUIDs.\n\n[NonNilUuid](https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html \"struct uuid::NonNilUuid\")\n    A UUID that is guaranteed not to be the [nil UUID](https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid).\n\n[Uuid](https://docs.rs/uuid/latest/uuid/struct.Uuid.html \"struct uuid::Uuid\")\n    A Universally Unique Identifier (UUID).\n## Enums[\u00a7](https://docs.rs/uuid/latest/uuid/#enums)\n\n[Variant](https://docs.rs/uuid/latest/uuid/enum.Variant.html \"enum uuid::Variant\")\n    The reserved variants of UUIDs.\n\n[Version](https://docs.rs/uuid/latest/uuid/enum.Version.html \"enum uuid::Version\")\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases[\u00a7](https://docs.rs/uuid/latest/uuid/#types)\n\n[Bytes](https://docs.rs/uuid/latest/uuid/type.Bytes.html \"type uuid::Bytes\")\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+            "markdown_with_citations": "[](https://docs.rs/uuid/latest/uuid/all.html \"show sidebar\")\n# Crate uuidCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGenerate and parse universally unique identifiers (UUIDs).\nHere\u2019s an example of a UUID:\n```\n67e55044-10b1-426f-9247-bb680e5fe0c8\n```\n\nA UUID is a unique 128-bit value, stored as 16 octets, and regularly formatted as a hex string in five groups. UUIDs are used to assign unique identifiers to entities without requiring a central allocating authority.\nThey are particularly useful in distributed systems, though can be used in disparate areas, such as databases and network protocols. Typically a UUID is displayed in a readable string form as a sequence of hexadecimal digits, separated into groups by hyphens.\nThe uniqueness property is not strictly guaranteed, however for all practical purposes, it can be assumed that an unintentional collision would be extremely unlikely.\nUUIDs have a number of standardized encodings that are specified in RFC 9562\u27e84\u27e9.\n## \u00a7\u27e85\u27e9Getting started\nAdd the following to your `Cargo.toml`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\n# Lets you generate random UUIDs\nfeatures = [\n  \"v4\",\n]\n```\n\nWhen you want a UUID, you can generate one:\n```\nuse uuid::Uuid;\nlet id = Uuid::new_v4();\n```\n\nIf you have a UUID value, you can use its string literal form inline:\n```\nuse uuid::{uuid, Uuid};\nconst ID: Uuid = uuid!(\"67e55044-10b1-426f-9247-bb680e5fe0c8\");\n```\n\n## \u00a7\u27e86\u27e9Working with different UUID versions\nThis library supports all standardized methods for generating UUIDs through individual Cargo features.\nBy default, this crate depends on nothing but the Rust standard library and can parse and format UUIDs, but cannot generate them. Depending on the kind of UUID you\u2019d like to work with, there are Cargo features that enable generating them:\n  * `v1` - Version 1 UUIDs using a timestamp and monotonic counter.\n  * `v3` - Version 3 UUIDs based on the MD5 hash of some data.\n  * `v4` - Version 4 UUIDs with random data.\n  * `v5` - Version 5 UUIDs based on the SHA1 hash of some data.\n  * `v6` - Version 6 UUIDs using a timestamp and monotonic counter.\n  * `v7` - Version 7 UUIDs using a Unix timestamp.\n  * `v8` - Version 8 UUIDs using user-defined data.\n\n\nThis library also includes a `Builder`\u27e87\u27e9 type that can be used to help construct UUIDs of any version without any additional dependencies or features. It\u2019s a lower-level API than `Uuid`\u27e88\u27e9 that can be used when you need control over implicit requirements on things like a source of randomness.\n### \u00a7\u27e89\u27e9Which UUID version should I use?\nIf you just want to generate unique identifiers then consider version 4 (`v4`) UUIDs. If you want to use UUIDs as database keys or need to sort them then consider version 7 (`v7`) UUIDs. Other versions should generally be avoided unless there\u2019s an existing need for them.\nSome UUID versions supersede others. Prefer version 6 over version 1 and version 5 over version 3.\n## \u00a7\u27e810\u27e9Other features\nOther crate features can also be useful beyond the version support:\n  * `macro-diagnostics` - enhances the diagnostics of `uuid!` macro.\n  * `serde` - adds the ability to serialize and deserialize a UUID using `serde`.\n  * `borsh` - adds the ability to serialize and deserialize a UUID using `borsh`.\n  * `arbitrary` - adds an `Arbitrary` trait implementation to `Uuid` for fuzzing.\n  * `fast-rng` - uses a faster algorithm for generating random UUIDs when available. This feature requires more dependencies to compile, but is just as suitable for UUIDs as the default algorithm.\n  * `rng-rand` - forces `rand` as the backend for randomness.\n  * `rng-getrandom` - forces `getrandom` as the backend for randomness.\n  * `bytemuck` - adds a `Pod` trait implementation to `Uuid` for byte manipulation\n\n\n## \u00a7\u27e811\u27e9Unstable features\nSome features are unstable. They may be incomplete or depend on other unstable libraries. These include:\n  * `zerocopy` - adds support for zero-copy deserialization using the `zerocopy` library.\n\n\nUnstable features may break between minor releases.\nTo allow unstable features, you\u2019ll need to enable the Cargo feature as normal, but also pass an additional flag through your environment to opt-in to unstable `uuid` features:\n```\nRUSTFLAGS=\"--cfg uuid_unstable\"\n```\n\n## \u00a7\u27e812\u27e9Building for other targets\n### \u00a7\u27e813\u27e9WebAssembly\nFor WebAssembly, enable the `js` feature:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\nfeatures = [\n  \"v4\",\n  \"v7\",\n  \"js\",\n]\n```\n\n### \u00a7\u27e814\u27e9Embedded\nFor embedded targets without the standard library, you\u2019ll need to disable default features when building `uuid`:\n```\n[dependencies.uuid]\nversion = \"1.17.0\"\ndefault-features = false\n```\n\nSome additional features are supported in no-std environments:\n  * `v1`, `v3`, `v5`, `v6`, and `v8`.\n  * `serde`.\n\n\nIf you need to use `v4` or `v7` in a no-std environment, you\u2019ll need to produce random bytes yourself and then pass them to `Builder::from_random_bytes`\u27e815\u27e9 without enabling the `v4` or `v7` features.\nIf you\u2019re using `getrandom`, you can specify the `rng-getrandom` or `rng-rand` features of `uuid` and configure `getrandom`\u2019s provider per its docs. `uuid` may upgrade its version of `getrandom` in minor releases.\n## \u00a7\u27e816\u27e9Examples\nParse a UUID given in the simple format and print it as a URN:\n```\nlet my_uuid = Uuid::parse_str(\"a1a2a3a4b1b2c1c2d1d2d3d4d5d6d7d8\")?;\nprintln!(\"{}\", my_uuid.urn());\n```\n\nGenerate a random UUID and print it out in hexadecimal form:\n```\n// Note that this requires the `v4` feature to be enabled.\nlet my_uuid = Uuid::new_v4();\nprintln!(\"{}\", my_uuid);\n```\n\n## \u00a7\u27e817\u27e9References\n  * Wikipedia: Universally Unique Identifier\u27e818\u27e9\n  * RFC 9562: Universally Unique IDentifiers (UUID)\u27e84\u27e9.\n\n\n## Re-exports\u00a7\u27e819\u27e9\n\n`pub use timestamp::context::NoContext[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.NoContext.html \"struct uuid::timestamp::context::NoContext\");`\n\n\n`pub use timestamp::ClockSequence[](https://docs.rs/uuid/latest/uuid/timestamp/trait.ClockSequence.html \"trait uuid::timestamp::ClockSequence\");`\n\n\n`pub use timestamp::Timestamp[](https://docs.rs/uuid/latest/uuid/timestamp/struct.Timestamp.html \"struct uuid::timestamp::Timestamp\");`\n\n\n`pub use timestamp::context::Context[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.Context.html \"struct uuid::timestamp::context::Context\");`\n\n\n`pub use timestamp::context::ContextV7[](https://docs.rs/uuid/latest/uuid/timestamp/context/struct.ContextV7.html \"struct uuid::timestamp::context::ContextV7\");`\n\n## Modules\u00a7\u27e820\u27e9\n\nfmt\u27e821\u27e9\n    Adapters for alternative string formats.\n\nserde\u27e822\u27e9\n    Adapters for alternative `serde` formats.\n\ntimestamp\u27e823\u27e9\n    Generating UUIDs from timestamps.\n## Macros\u00a7\u27e824\u27e9\n\nuuid\u27e825\u27e9\n    Parse `Uuid`\u27e826\u27e9s from string literals at compile time.\n## Structs\u00a7\u27e827\u27e9\n\nBuilder\u27e87\u27e9\n    A builder for creating a UUID.\n\nError\u27e828\u27e9\n    A general error that can occur when working with UUIDs.\n\nNonNilUuid\u27e829\u27e9\n    A UUID that is guaranteed not to be the nil UUID\u27e830\u27e9.\n\nUuid\u27e88\u27e9\n    A Universally Unique Identifier (UUID).\n## Enums\u00a7\u27e831\u27e9\n\nVariant\u27e832\u27e9\n    The reserved variants of UUIDs.\n\nVersion\u27e833\u27e9\n    The version of the UUID, denoting the generating algorithm.\n## Type Aliases\u00a7\u27e834\u27e9\n\nBytes\u27e835\u27e9\n    A 128-bit (16 byte) buffer containing the UUID.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/uuid/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/uuid/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/uuid/latest/src/uuid/lib.rs.html#12-1744: Source\n\u27e84\u27e9 https://www.ietf.org/rfc/rfc9562.html: RFC 9562\n\u27e85\u27e9 https://docs.rs/uuid/latest/uuid/#getting-started: \u00a7\n\u27e86\u27e9 https://docs.rs/uuid/latest/uuid/#working-with-different-uuid-versions: \u00a7\n\u27e87\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html: struct uuid::Builder - `Builder`\n\u27e88\u27e9 https://docs.rs/uuid/latest/uuid/struct.Uuid.html: struct uuid::Uuid - `Uuid`\n\u27e89\u27e9 https://docs.rs/uuid/latest/uuid/#which-uuid-version-should-i-use: \u00a7\n\u27e810\u27e9 https://docs.rs/uuid/latest/uuid/#other-features: \u00a7\n\u27e811\u27e9 https://docs.rs/uuid/latest/uuid/#unstable-features: \u00a7\n\u27e812\u27e9 https://docs.rs/uuid/latest/uuid/#building-for-other-targets: \u00a7\n\u27e813\u27e9 https://docs.rs/uuid/latest/uuid/#webassembly: \u00a7\n\u27e814\u27e9 https://docs.rs/uuid/latest/uuid/#embedded: \u00a7\n\u27e815\u27e9 https://docs.rs/uuid/latest/uuid/struct.Builder.html#method.from_random_bytes: associated function uuid::Builder::from_random_bytes - `Builder::from_random_bytes`\n\u27e816\u27e9 https://docs.rs/uuid/latest/uuid/#examples: \u00a7\n\u27e817\u27e9 https://docs.rs/uuid/latest/uuid/#references: \u00a7\n\u27e818\u27e9 http://en.wikipedia.org/wiki/Universally_unique_identifier: Wikipedia: Universally Unique Identifier\n\u27e819\u27e9 https://docs.rs/uuid/latest/uuid/#reexports: \u00a7\n\u27e820\u27e9 https://docs.rs/uuid/latest/uuid/#modules: \u00a7\n\u27e821\u27e9 https://docs.rs/uuid/latest/uuid/fmt/index.html: mod uuid::fmt - fmt\n\u27e822\u27e9 https://docs.rs/uuid/latest/uuid/serde/index.html: mod uuid::serde - serde\n\u27e823\u27e9 https://docs.rs/uuid/latest/uuid/timestamp/index.html: mod uuid::timestamp - timestamp\n\u27e824\u27e9 https://docs.rs/uuid/latest/uuid/#macros: \u00a7\n\u27e825\u27e9 https://docs.rs/uuid/latest/uuid/macro.uuid.html: macro uuid::uuid - uuid\n\u27e826\u27e9 https://docs.rs/uuid/*/uuid/struct.Uuid.html: `Uuid`\n\u27e827\u27e9 https://docs.rs/uuid/latest/uuid/#structs: \u00a7\n\u27e828\u27e9 https://docs.rs/uuid/latest/uuid/struct.Error.html: struct uuid::Error - Error\n\u27e829\u27e9 https://docs.rs/uuid/latest/uuid/struct.NonNilUuid.html: struct uuid::NonNilUuid - NonNilUuid\n\u27e830\u27e9 https://www.ietf.org/rfc/rfc9562.html#name-nil-uuid: nil UUID\n\u27e831\u27e9 https://docs.rs/uuid/latest/uuid/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/uuid/latest/uuid/enum.Variant.html: enum uuid::Variant - Variant\n\u27e833\u27e9 https://docs.rs/uuid/latest/uuid/enum.Version.html: enum uuid::Version - Version\n\u27e834\u27e9 https://docs.rs/uuid/latest/uuid/#types: \u00a7\n\u27e835\u27e9 https://docs.rs/uuid/latest/uuid/type.Bytes.html: type uuid::Bytes - Bytes\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `uuid` crate enables generation, parsing, and formatting of universally unique identifiers (UUIDs) in Rust, supporting all standardized UUID versions (v1-v8) through optional features. It provides utilities for random UUID generation, custom construction using a `Builder`, and serialization/deserialization via `serde` or `borsh`. Additional features include support for embedded and WebAssembly targets, configurable randomness backends, and specialized traits for byte manipulation and fuzzing.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: UUID Generation Methods  \n\u2705 Factual: The `uuid` crate supports generating UUIDs of versions 1, 3, 4, 5, 6, 7, and 8, each with distinct methods and purposes, such as using timestamps, hashes, or random data.  \n\u274c Counterfactual: The `uuid` crate only supports generating UUIDs of versions 1 and 4, as other versions are considered deprecated and unsupported.  \n\n---\n\n### Pair 2: Default Dependencies  \n\u2705 Factual: By default, the `uuid` crate depends only on the Rust standard library and does not include features for generating UUIDs unless explicitly enabled via Cargo features.  \n\u274c Counterfactual: The `uuid` crate always includes dependencies for random UUID generation by default, even if no Cargo features are enabled.  \n\n---\n\n### Pair 3: Serialization Support  \n\u2705 Factual: The `uuid` crate provides optional features for serialization and deserialization using libraries like `serde` and `borsh`.  \n\u274c Counterfactual: The `uuid` crate requires `serde` as a mandatory dependency for all use cases, including UUID generation and parsing.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-75666699-be7de334-1751260458",
+      "timestamp": "2025-06-30T05:14:18.623966+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

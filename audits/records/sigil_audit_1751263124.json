@@ -1,0 +1,1387 @@
+[
+  {
+    "execution_id": "exec-cdb89192-d815ef25-1751263113",
+    "timestamp": "2025-06-30T05:58:33.115312+00:00",
+    "sacred_chain": {
+      "input_data": "tokio-util",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'tokio-util' -> 'tokio-util'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "tokio-util",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/tokio-util",
+            "title": "tokio-util v0.7.15",
+            "content": {
+              "raw_markdown": "#  tokio-util v0.7.15\nAdditional utilities for working with Tokio. \n  * [ Readme ](https://crates.io/crates/tokio-util)\n  * [ 34 Versions ](https://crates.io/crates/tokio-util/versions)\n  * [ Dependencies ](https://crates.io/crates/tokio-util/dependencies)\n  * [ Dependents ](https://crates.io/crates/tokio-util/reverse_dependencies)\n\n\n## Metadata\n2 months ago \nv1.70.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n121 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add tokio-util\nOr add the following line to your Cargo.toml:\ntokio-util = \"0.7.15\"\n## Homepage\n[ tokio.rs ](https://tokio.rs)\n## Repository\n[ github.com/tokio-rs/tokio ](https://github.com/tokio-rs/tokio)\n## Owners\n## Categories\n  * [Asynchronous](https://crates.io/categories/asynchronous)\n\n\n[ Report crate ](https://crates.io/support?crate=tokio-util&inquire=crate-violation)\n### Stats Overview\n296,557,234 Downloads all time\n34 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  tokio-util v0.7.15\nAdditional utilities for working with Tokio. \n  *  Readme \u27e81\u27e9\n  *  34 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n2 months ago \nv1.70.0 \n MIT \u27e85\u27e9\n121 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add tokio-util\nOr add the following line to your Cargo.toml:\ntokio-util = \"0.7.15\"\n## Homepage\n tokio.rs \u27e86\u27e9\n## Repository\n github.com/tokio-rs/tokio \u27e87\u27e9\n## Owners\n## Categories\n  * Asynchronous\u27e88\u27e9\n\n\n Report crate \u27e89\u27e9\n### Stats Overview\n296,557,234 Downloads all time\n34 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/tokio-util:  Readme \n\u27e82\u27e9 https://crates.io/crates/tokio-util/versions:  34 Versions \n\u27e83\u27e9 https://crates.io/crates/tokio-util/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/tokio-util/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://tokio.rs:  tokio.rs \n\u27e87\u27e9 https://github.com/tokio-rs/tokio:  github.com/tokio-rs/tokio \n\u27e88\u27e9 https://crates.io/categories/asynchronous: Asynchronous\n\u27e89\u27e9 https://crates.io/support?crate=tokio-util&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1052,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116903.0950667"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/tokio-util",
+            "title": "Crate tokio_utilCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\n[Settings](https://docs.rs/tokio-util/latest/settings.html)\n[Help](https://docs.rs/tokio-util/latest/help.html)\nSummary[Source](https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63)\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core [`tokio`](https://docs.rs/tokio) crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#reexports)\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#modules)\n\n[codec](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html \"mod tokio_util::codec\")`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\n[compat](https://docs.rs/tokio-util/latest/tokio_util/compat/index.html \"mod tokio_util::compat\")`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\n[context](https://docs.rs/tokio-util/latest/tokio_util/context/index.html \"mod tokio_util::context\")`rt`\n    Tokio context aware futures utilities.\n\n[either](https://docs.rs/tokio-util/latest/tokio_util/either/index.html \"mod tokio_util::either\")\n    Module defining an Either type.\n\n[io](https://docs.rs/tokio-util/latest/tokio_util/io/index.html \"mod tokio_util::io\")`io`\n    Helpers for IO related tasks.\n\n[net](https://docs.rs/tokio-util/latest/tokio_util/net/index.html \"mod tokio_util::net\")`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\n[sync](https://docs.rs/tokio-util/latest/tokio_util/sync/index.html \"mod tokio_util::sync\")\n    Synchronization primitives\n\n[task](https://docs.rs/tokio-util/latest/tokio_util/task/index.html \"mod tokio_util::task\")`rt`\n    Extra utilities for spawning tasks\n\n[time](https://docs.rs/tokio-util/latest/tokio_util/time/index.html \"mod tokio_util::time\")`time`\n    Additional utilities for tracking time.\n\n[udp](https://docs.rs/tokio-util/latest/tokio_util/udp/index.html \"mod tokio_util::udp\")`net` and `codec`\n    UDP framing\n",
+              "markdown_with_citations": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core `tokio`\u27e84\u27e9 crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports\u00a7\u27e85\u27e9\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules\u00a7\u27e86\u27e9\n\ncodec\u27e87\u27e9`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\ncompat\u27e88\u27e9`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\ncontext\u27e89\u27e9`rt`\n    Tokio context aware futures utilities.\n\neither\u27e810\u27e9\n    Module defining an Either type.\n\nio\u27e811\u27e9`io`\n    Helpers for IO related tasks.\n\nnet\u27e812\u27e9`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\nsync\u27e813\u27e9\n    Synchronization primitives\n\ntask\u27e814\u27e9`rt`\n    Extra utilities for spawning tasks\n\ntime\u27e815\u27e9`time`\n    Additional utilities for tracking time.\n\nudp\u27e816\u27e9`net` and `codec`\n    UDP framing\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-util/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-util/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63: Source\n\u27e84\u27e9 https://docs.rs/tokio: `tokio`\n\u27e85\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#reexports: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#modules: \u00a7\n\u27e87\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: mod tokio_util::codec - codec\n\u27e88\u27e9 https://docs.rs/tokio-util/latest/tokio_util/compat/index.html: mod tokio_util::compat - compat\n\u27e89\u27e9 https://docs.rs/tokio-util/latest/tokio_util/context/index.html: mod tokio_util::context - context\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/either/index.html: mod tokio_util::either - either\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/index.html: mod tokio_util::io - io\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/net/index.html: mod tokio_util::net - net\n\u27e813\u27e9 https://docs.rs/tokio-util/latest/tokio_util/sync/index.html: mod tokio_util::sync - sync\n\u27e814\u27e9 https://docs.rs/tokio-util/latest/tokio_util/task/index.html: mod tokio_util::task - task\n\u27e815\u27e9 https://docs.rs/tokio-util/latest/tokio_util/time/index.html: mod tokio_util::time - time\n\u27e816\u27e9 https://docs.rs/tokio-util/latest/tokio_util/udp/index.html: mod tokio_util::udp - udp\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 2270,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116903.8509472"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/tokio-util",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [34 releases](https://lib.rs/crates/tokio-util/versions)\n0.7.15 |  Apr 23, 2025   \n---|---  \n0.7.14 |  Mar 13, 2025   \n0.7.13 |  Dec 4, 2024   \n0.7.12 |  Sep 4, 2024   \n0.0.0 |  Feb 1, 2018   \n#**541** in [Asynchronous](https://lib.rs/asynchronous \"Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing.\")\nDownload history 3175611/week @ 2025-03-08 3523451/week @ 2025-03-15 3783892/week @ 2025-03-22 3356681/week @ 2025-03-29 3420980/week @ 2025-04-05 2947249/week @ 2025-04-12 2924901/week @ 2025-04-19 2836207/week @ 2025-04-26 2916199/week @ 2025-05-03 2985042/week @ 2025-05-10 3005192/week @ 2025-05-17 2735519/week @ 2025-05-24 3001542/week @ 2025-05-31 3073381/week @ 2025-06-07 3252804/week @ 2025-06-14 3431128/week @ 2025-06-21\n**13,270,540** downloads per month Used in [**22,655** crates (2,562 directly)](https://lib.rs/crates/tokio-util/rev)\n**MIT** license \n3MB  **39K** SLoC\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core [``tokio``](https://docs.rs/tokio) crate. However, ``tokio-util`` _will_ respect Rust's semantic versioning policy, especially with regard to breaking changes.\n# tokio-util\nUtilities for working with Tokio.\n## License\nThis project is licensed under the [MIT license](https://github.com/tokio-rs/tokio/blob/4d4d12613bb30f6b550421d6ce2c2c54eb5d341d/tokio-util/LICENSE).\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in Tokio by you, shall be licensed as MIT, without any additional terms or conditions.\n#### Dependencies\n~0.2\u20138.5MB  ~64K SLoC\n  * [bytes](https://lib.rs/crates/bytes \"1.5.0\")\n  * [futures-core](https://lib.rs/crates/futures-core \"0.3.0\")\n  * [futures-sink](https://lib.rs/crates/futures-sink \"0.3.0\")\n  * [pin-project-lite](https://lib.rs/crates/pin-project-lite \"0.2.11\")\n  * [tokio](https://lib.rs/crates/tokio \"1.28.0\")[+sync](https://lib.rs/crates/tokio/features#feature-sync)\n  * [compat?](https://lib.rs/crates/tokio-util/features#feature-compat \"optional feature\") [futures-io](https://lib.rs/crates/futures-io \"0.3.0\")\n  * [rt?](https://lib.rs/crates/tokio-util/features#feature-rt \"optional feature\") [futures-util](https://lib.rs/crates/futures-util \"0.3.0\")\n  * [rt?](https://lib.rs/crates/tokio-util/features#feature-rt \"optional feature\") [hashbrown](https://lib.rs/crates/hashbrown \"new\") 0.15[+raw-entry](https://lib.rs/crates/hashbrown/features#feature-raw-entry) tokio_unstable\n  * [time?](https://lib.rs/crates/tokio-util/features#feature-time \"optional feature\") [slab](https://lib.rs/crates/slab \"0.4.4\")\n  * [ optional ](https://lib.rs/crates/tokio-util/features#feature-tracing \"tracing is optional feature\") [tracing](https://lib.rs/crates/tracing \"0.1.29\")[+std](https://lib.rs/crates/tracing/features#feature-std)\n\n\n  * dev  [async-stream](https://lib.rs/crates/async-stream \"0.3.0\")\n  * dev  [futures](https://lib.rs/crates/futures \"0.3.0\")\n  * dev  [futures-test](https://lib.rs/crates/futures-test \"0.3.5\")\n  * dev  [parking_lot](https://lib.rs/crates/parking_lot \"0.12.0\")\n  * dev  [tempfile](https://lib.rs/crates/tempfile \"3.1.0\")\n  * dev  [tokio-stream](https://lib.rs/crates/tokio-stream \"0.1\")\n  * dev  [tokio-test](https://lib.rs/crates/tokio-test \"0.4.0\")\n\n\n#### [Other features](https://lib.rs/crates/tokio-util/features)\n  * [codec](https://lib.rs/crates/tokio-util/features#feature-codec)\n  * [full](https://lib.rs/crates/tokio-util/features#feature-full)\n  * [io](https://lib.rs/crates/tokio-util/features#feature-io)\n  * [io-util](https://lib.rs/crates/tokio-util/features#feature-io-util)\n  * [net](https://lib.rs/crates/tokio-util/features#feature-net)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  34 releases\u27e81\u27e9\n0.7.15 |  Apr 23, 2025   \n---|---  \n0.7.14 |  Mar 13, 2025   \n0.7.13 |  Dec 4, 2024   \n0.7.12 |  Sep 4, 2024   \n0.0.0 |  Feb 1, 2018   \n#**541** in Asynchronous\u27e82\u27e9\nDownload history 3175611/week @ 2025-03-08 3523451/week @ 2025-03-15 3783892/week @ 2025-03-22 3356681/week @ 2025-03-29 3420980/week @ 2025-04-05 2947249/week @ 2025-04-12 2924901/week @ 2025-04-19 2836207/week @ 2025-04-26 2916199/week @ 2025-05-03 2985042/week @ 2025-05-10 3005192/week @ 2025-05-17 2735519/week @ 2025-05-24 3001542/week @ 2025-05-31 3073381/week @ 2025-06-07 3252804/week @ 2025-06-14 3431128/week @ 2025-06-21\n**13,270,540** downloads per month Used in **22,655** crates (2,562 directly)\u27e83\u27e9\n**MIT** license \n3MB  **39K** SLoC\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core ``tokio``\u27e84\u27e9 crate. However, ``tokio-util`` _will_ respect Rust's semantic versioning policy, especially with regard to breaking changes.\n# tokio-util\nUtilities for working with Tokio.\n## License\nThis project is licensed under the MIT license\u27e85\u27e9.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in Tokio by you, shall be licensed as MIT, without any additional terms or conditions.\n#### Dependencies\n~0.2\u20138.5MB  ~64K SLoC\n  * bytes\u27e86\u27e9\n  * futures-core\u27e87\u27e9\n  * futures-sink\u27e88\u27e9\n  * pin-project-lite\u27e89\u27e9\n  * tokio\u27e810\u27e9+sync\u27e811\u27e9\n  * compat?\u27e812\u27e9 futures-io\u27e813\u27e9\n  * rt?\u27e814\u27e9 futures-util\u27e815\u27e9\n  * rt?\u27e814\u27e9 hashbrown\u27e816\u27e9 0.15+raw-entry\u27e817\u27e9 tokio_unstable\n  * time?\u27e818\u27e9 slab\u27e819\u27e9\n  *  optional \u27e820\u27e9 tracing\u27e821\u27e9+std\u27e822\u27e9\n\n\n  * dev  async-stream\u27e823\u27e9\n  * dev  futures\u27e824\u27e9\n  * dev  futures-test\u27e825\u27e9\n  * dev  parking_lot\u27e826\u27e9\n  * dev  tempfile\u27e827\u27e9\n  * dev  tokio-stream\u27e828\u27e9\n  * dev  tokio-test\u27e829\u27e9\n\n\n#### Other features\u27e830\u27e9\n  * codec\u27e831\u27e9\n  * full\u27e832\u27e9\n  * io\u27e833\u27e9\n  * io-util\u27e834\u27e9\n  * net\u27e835\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/tokio-util/versions: 34 releases\n\u27e82\u27e9 https://lib.rs/asynchronous: Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing. - Asynchronous\n\u27e83\u27e9 https://lib.rs/crates/tokio-util/rev: **22,655** crates (2,562 directly)\n\u27e84\u27e9 https://docs.rs/tokio: ``tokio``\n\u27e85\u27e9 https://github.com/tokio-rs/tokio/blob/4d4d12613bb30f6b550421d6ce2c2c54eb5d341d/tokio-util/LICENSE: MIT license\n\u27e86\u27e9 https://lib.rs/crates/bytes: 1.5.0 - bytes\n\u27e87\u27e9 https://lib.rs/crates/futures-core: 0.3.0 - futures-core\n\u27e88\u27e9 https://lib.rs/crates/futures-sink: 0.3.0 - futures-sink\n\u27e89\u27e9 https://lib.rs/crates/pin-project-lite: 0.2.11 - pin-project-lite\n\u27e810\u27e9 https://lib.rs/crates/tokio: 1.28.0 - tokio\n\u27e811\u27e9 https://lib.rs/crates/tokio/features#feature-sync: +sync\n\u27e812\u27e9 https://lib.rs/crates/tokio-util/features#feature-compat: optional feature - compat?\n\u27e813\u27e9 https://lib.rs/crates/futures-io: 0.3.0 - futures-io\n\u27e814\u27e9 https://lib.rs/crates/tokio-util/features#feature-rt: optional feature - rt?\n\u27e815\u27e9 https://lib.rs/crates/futures-util: 0.3.0 - futures-util\n\u27e816\u27e9 https://lib.rs/crates/hashbrown: new - hashbrown\n\u27e817\u27e9 https://lib.rs/crates/hashbrown/features#feature-raw-entry: +raw-entry\n\u27e818\u27e9 https://lib.rs/crates/tokio-util/features#feature-time: optional feature - time?\n\u27e819\u27e9 https://lib.rs/crates/slab: 0.4.4 - slab\n\u27e820\u27e9 https://lib.rs/crates/tokio-util/features#feature-tracing: tracing is optional feature -  optional \n\u27e821\u27e9 https://lib.rs/crates/tracing: 0.1.29 - tracing\n\u27e822\u27e9 https://lib.rs/crates/tracing/features#feature-std: +std\n\u27e823\u27e9 https://lib.rs/crates/async-stream: 0.3.0 - async-stream\n\u27e824\u27e9 https://lib.rs/crates/futures: 0.3.0 - futures\n\u27e825\u27e9 https://lib.rs/crates/futures-test: 0.3.5 - futures-test\n\u27e826\u27e9 https://lib.rs/crates/parking_lot: 0.12.0 - parking_lot\n\u27e827\u27e9 https://lib.rs/crates/tempfile: 3.1.0 - tempfile\n\u27e828\u27e9 https://lib.rs/crates/tokio-stream: 0.1 - tokio-stream\n\u27e829\u27e9 https://lib.rs/crates/tokio-test: 0.4.0 - tokio-test\n\u27e830\u27e9 https://lib.rs/crates/tokio-util/features: Other features\n\u27e831\u27e9 https://lib.rs/crates/tokio-util/features#feature-codec: codec\n\u27e832\u27e9 https://lib.rs/crates/tokio-util/features#feature-full: full\n\u27e833\u27e9 https://lib.rs/crates/tokio-util/features#feature-io: io\n\u27e834\u27e9 https://lib.rs/crates/tokio-util/features#feature-io-util: io-util\n\u27e835\u27e9 https://lib.rs/crates/tokio-util/features#feature-net: net\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3791,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116904.2170277"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libfutures_sink-39699e5e37bf0478.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytes@1.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytes",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.10.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libbytes-3203777d1ecff83c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.44.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.44.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.44.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "sync"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libtokio-9e065fb36743dbd8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libtokio_util-c11e71882372bbdb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.44.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.44.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.44.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "sync"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libtokio-9e065fb36743dbd8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libfutures_sink-39699e5e37bf0478.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytes@1.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytes",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytes-1.10.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libbytes-3203777d1ecff83c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:21:5\n   |\n21 | //!     This is important during both cancellation and refcounting.\n   |     ^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n   = note: `#[warn(clippy::doc_overindented_list_items)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_overindented_list_items)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 936,
+                        "byte_start": 932,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 21,
+                        "line_start": 21,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     This is important during both cancellation and refcounting."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 936,
+                    "byte_start": 932,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 21,
+                    "line_start": 21,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     This is important during both cancellation and refcounting."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:24:5\n   |\n24 | //!     This is important for deadlock safety, as it is used for lock order.\n   |     ^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1098,
+                        "byte_start": 1094,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 24,
+                        "line_start": 24,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     This is important for deadlock safety, as it is used for lock order."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1098,
+                    "byte_start": 1094,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 24,
+                    "line_start": 24,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     This is important for deadlock safety, as it is used for lock order."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:25:5\n   |\n25 | //!     Node B can only become the child of node A in two ways:\n   |     ^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1175,
+                        "byte_start": 1171,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 25,
+                        "line_start": 25,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     Node B can only become the child of node A in two ways:"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1175,
+                    "byte_start": 1171,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 25,
+                    "line_start": 25,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     Node B can only become the child of node A in two ways:"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:26:5\n   |\n26 | //!         - being created with `child_node()`, in which case it is trivially true that\n   |     ^^^^^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1243,
+                        "byte_start": 1235,
+                        "column_end": 13,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 26,
+                        "line_start": 26,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 5,
+                            "text": "//!         - being created with `child_node()`, in which case it is trivially true that"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1243,
+                    "byte_start": 1235,
+                    "column_end": 13,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 26,
+                    "line_start": 26,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 13,
+                        "highlight_start": 5,
+                        "text": "//!         - being created with `child_node()`, in which case it is trivially true that"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:27:5\n   |\n27 | //!           node A already existed when node B was created\n   |     ^^^^^^^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1334,
+                        "byte_start": 1324,
+                        "column_end": 15,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 27,
+                        "line_start": 27,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 15,
+                            "highlight_start": 5,
+                            "text": "//!           node A already existed when node B was created"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1334,
+                    "byte_start": 1324,
+                    "column_end": 15,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 27,
+                    "line_start": 27,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 5,
+                        "text": "//!           node A already existed when node B was created"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:28:5\n   |\n28 | //!         - being moved A->C->B to A->B because node C was removed in `decrease_handle_refcount()`\n   |     ^^^^^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1393,
+                        "byte_start": 1385,
+                        "column_end": 13,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 28,
+                        "line_start": 28,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 13,
+                            "highlight_start": 5,
+                            "text": "//!         - being moved A->C->B to A->B because node C was removed in `decrease_handle_refcount()`"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1393,
+                    "byte_start": 1385,
+                    "column_end": 13,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 28,
+                    "line_start": 28,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 13,
+                        "highlight_start": 5,
+                        "text": "//!         - being moved A->C->B to A->B because node C was removed in `decrease_handle_refcount()`"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:29:5\n   |\n29 | //!           or `cancel()`. In this case the invariant still holds, as B was younger than C, and C\n   |     ^^^^^^^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1496,
+                        "byte_start": 1486,
+                        "column_end": 15,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 29,
+                        "line_start": 29,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 15,
+                            "highlight_start": 5,
+                            "text": "//!           or `cancel()`. In this case the invariant still holds, as B was younger than C, and C"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1496,
+                    "byte_start": 1486,
+                    "column_end": 15,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 29,
+                    "line_start": 29,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 5,
+                        "text": "//!           or `cancel()`. In this case the invariant still holds, as B was younger than C, and C"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\sync\\cancellation_token\\tree_node.rs:30:5\n   |\n30 | //!           was younger than A, therefore B is also younger than A.\n   |     ^^^^^^^^^^ help: try using `   ` (3 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `   ` (3 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1596,
+                        "byte_start": 1586,
+                        "column_end": 15,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 30,
+                        "line_start": 30,
+                        "suggested_replacement": "   ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 15,
+                            "highlight_start": 5,
+                            "text": "//!           was younger than A, therefore B is also younger than A."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1596,
+                    "byte_start": 1586,
+                    "column_end": 15,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\sync\\cancellation_token\\tree_node.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 30,
+                    "line_start": 30,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 5,
+                        "text": "//!           was younger than A, therefore B is also younger than A."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpxr3qrw9s/tokio-util-0.7.15#tokio-util@0.7.15",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio_util",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpxr3qrw9s\\tokio-util-0.7.15\\target\\debug\\deps\\libtokio_util-e9a4209747a0f945.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 73
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "tokio-util",
+          "version": "0.7.15",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\n[Settings](https://docs.rs/tokio-util/latest/settings.html)\n[Help](https://docs.rs/tokio-util/latest/help.html)\nSummary[Source](https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63)\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core [`tokio`](https://docs.rs/tokio) crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#reexports)\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#modules)\n\n[codec](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html \"mod tokio_util::codec\")`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\n[compat](https://docs.rs/tokio-util/latest/tokio_util/compat/index.html \"mod tokio_util::compat\")`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\n[context](https://docs.rs/tokio-util/latest/tokio_util/context/index.html \"mod tokio_util::context\")`rt`\n    Tokio context aware futures utilities.\n\n[either](https://docs.rs/tokio-util/latest/tokio_util/either/index.html \"mod tokio_util::either\")\n    Module defining an Either type.\n\n[io](https://docs.rs/tokio-util/latest/tokio_util/io/index.html \"mod tokio_util::io\")`io`\n    Helpers for IO related tasks.\n\n[net](https://docs.rs/tokio-util/latest/tokio_util/net/index.html \"mod tokio_util::net\")`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\n[sync](https://docs.rs/tokio-util/latest/tokio_util/sync/index.html \"mod tokio_util::sync\")\n    Synchronization primitives\n\n[task](https://docs.rs/tokio-util/latest/tokio_util/task/index.html \"mod tokio_util::task\")`rt`\n    Extra utilities for spawning tasks\n\n[time](https://docs.rs/tokio-util/latest/tokio_util/time/index.html \"mod tokio_util::time\")`time`\n    Additional utilities for tracking time.\n\n[udp](https://docs.rs/tokio-util/latest/tokio_util/udp/index.html \"mod tokio_util::udp\")`net` and `codec`\n    UDP framing\n",
+            "markdown_with_citations": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core `tokio`\u27e84\u27e9 crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports\u00a7\u27e85\u27e9\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules\u00a7\u27e86\u27e9\n\ncodec\u27e87\u27e9`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\ncompat\u27e88\u27e9`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\ncontext\u27e89\u27e9`rt`\n    Tokio context aware futures utilities.\n\neither\u27e810\u27e9\n    Module defining an Either type.\n\nio\u27e811\u27e9`io`\n    Helpers for IO related tasks.\n\nnet\u27e812\u27e9`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\nsync\u27e813\u27e9\n    Synchronization primitives\n\ntask\u27e814\u27e9`rt`\n    Extra utilities for spawning tasks\n\ntime\u27e815\u27e9`time`\n    Additional utilities for tracking time.\n\nudp\u27e816\u27e9`net` and `codec`\n    UDP framing\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-util/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-util/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63: Source\n\u27e84\u27e9 https://docs.rs/tokio: `tokio`\n\u27e85\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#reexports: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#modules: \u00a7\n\u27e87\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: mod tokio_util::codec - codec\n\u27e88\u27e9 https://docs.rs/tokio-util/latest/tokio_util/compat/index.html: mod tokio_util::compat - compat\n\u27e89\u27e9 https://docs.rs/tokio-util/latest/tokio_util/context/index.html: mod tokio_util::context - context\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/either/index.html: mod tokio_util::either - either\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/index.html: mod tokio_util::io - io\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/net/index.html: mod tokio_util::net - net\n\u27e813\u27e9 https://docs.rs/tokio-util/latest/tokio_util/sync/index.html: mod tokio_util::sync - sync\n\u27e814\u27e9 https://docs.rs/tokio-util/latest/tokio_util/task/index.html: mod tokio_util::task - task\n\u27e815\u27e9 https://docs.rs/tokio-util/latest/tokio_util/time/index.html: mod tokio_util::time - time\n\u27e816\u27e9 https://docs.rs/tokio-util/latest/tokio_util/udp/index.html: mod tokio_util::udp - udp\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "tokio-util",
+          "version": "0.7.15",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\n[Settings](https://docs.rs/tokio-util/latest/settings.html)\n[Help](https://docs.rs/tokio-util/latest/help.html)\nSummary[Source](https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63)\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core [`tokio`](https://docs.rs/tokio) crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#reexports)\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules[\u00a7](https://docs.rs/tokio-util/latest/tokio_util/#modules)\n\n[codec](https://docs.rs/tokio-util/latest/tokio_util/codec/index.html \"mod tokio_util::codec\")`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\n[compat](https://docs.rs/tokio-util/latest/tokio_util/compat/index.html \"mod tokio_util::compat\")`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\n[context](https://docs.rs/tokio-util/latest/tokio_util/context/index.html \"mod tokio_util::context\")`rt`\n    Tokio context aware futures utilities.\n\n[either](https://docs.rs/tokio-util/latest/tokio_util/either/index.html \"mod tokio_util::either\")\n    Module defining an Either type.\n\n[io](https://docs.rs/tokio-util/latest/tokio_util/io/index.html \"mod tokio_util::io\")`io`\n    Helpers for IO related tasks.\n\n[net](https://docs.rs/tokio-util/latest/tokio_util/net/index.html \"mod tokio_util::net\")`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\n[sync](https://docs.rs/tokio-util/latest/tokio_util/sync/index.html \"mod tokio_util::sync\")\n    Synchronization primitives\n\n[task](https://docs.rs/tokio-util/latest/tokio_util/task/index.html \"mod tokio_util::task\")`rt`\n    Extra utilities for spawning tasks\n\n[time](https://docs.rs/tokio-util/latest/tokio_util/time/index.html \"mod tokio_util::time\")`time`\n    Additional utilities for tracking time.\n\n[udp](https://docs.rs/tokio-util/latest/tokio_util/udp/index.html \"mod tokio_util::udp\")`net` and `codec`\n    UDP framing\n",
+            "markdown_with_citations": "[](https://docs.rs/tokio-util/latest/tokio_util/all.html \"show sidebar\")\n# Crate tokio_utilCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for working with Tokio.\nThis crate is not versioned in lockstep with the core `tokio`\u27e84\u27e9 crate. However, `tokio-util` _will_ respect Rust\u2019s semantic versioning policy, especially with regard to breaking changes.\n## Re-exports\u00a7\u27e85\u27e9\n\n`pub use bytes[](https://docs.rs/bytes/1.10.1/x86_64-unknown-linux-gnu/bytes/index.html \"mod bytes\");`\n\n## Modules\u00a7\u27e86\u27e9\n\ncodec\u27e87\u27e9`codec`\n    Adaptors from `AsyncRead`/`AsyncWrite` to Stream/Sink\n\ncompat\u27e88\u27e9`compat`\n    Compatibility between the `tokio::io` and `futures-io` versions of the `AsyncRead` and `AsyncWrite` traits.\n\ncontext\u27e89\u27e9`rt`\n    Tokio context aware futures utilities.\n\neither\u27e810\u27e9\n    Module defining an Either type.\n\nio\u27e811\u27e9`io`\n    Helpers for IO related tasks.\n\nnet\u27e812\u27e9`net` and `codec`\n    TCP/UDP/Unix helpers for tokio.\n\nsync\u27e813\u27e9\n    Synchronization primitives\n\ntask\u27e814\u27e9`rt`\n    Extra utilities for spawning tasks\n\ntime\u27e815\u27e9`time`\n    Additional utilities for tracking time.\n\nudp\u27e816\u27e9`net` and `codec`\n    UDP framing\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/tokio-util/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/tokio-util/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/tokio-util/latest/src/tokio_util/lib.rs.html#1-63: Source\n\u27e84\u27e9 https://docs.rs/tokio: `tokio`\n\u27e85\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#reexports: \u00a7\n\u27e86\u27e9 https://docs.rs/tokio-util/latest/tokio_util/#modules: \u00a7\n\u27e87\u27e9 https://docs.rs/tokio-util/latest/tokio_util/codec/index.html: mod tokio_util::codec - codec\n\u27e88\u27e9 https://docs.rs/tokio-util/latest/tokio_util/compat/index.html: mod tokio_util::compat - compat\n\u27e89\u27e9 https://docs.rs/tokio-util/latest/tokio_util/context/index.html: mod tokio_util::context - context\n\u27e810\u27e9 https://docs.rs/tokio-util/latest/tokio_util/either/index.html: mod tokio_util::either - either\n\u27e811\u27e9 https://docs.rs/tokio-util/latest/tokio_util/io/index.html: mod tokio_util::io - io\n\u27e812\u27e9 https://docs.rs/tokio-util/latest/tokio_util/net/index.html: mod tokio_util::net - net\n\u27e813\u27e9 https://docs.rs/tokio-util/latest/tokio_util/sync/index.html: mod tokio_util::sync - sync\n\u27e814\u27e9 https://docs.rs/tokio-util/latest/tokio_util/task/index.html: mod tokio_util::task - task\n\u27e815\u27e9 https://docs.rs/tokio-util/latest/tokio_util/time/index.html: mod tokio_util::time - time\n\u27e816\u27e9 https://docs.rs/tokio-util/latest/tokio_util/udp/index.html: mod tokio_util::udp - udp\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `tokio-util` crate provides a collection of utilities to enhance and simplify working with the Tokio asynchronous runtime. Key features include adaptors for converting `AsyncRead`/`AsyncWrite` into `Stream`/`Sink`, compatibility tools for `tokio::io` and `futures-io`, and helpers for IO, networking (TCP/UDP/Unix), synchronization, task management, and time tracking. It also includes modules like `codec` for framing and `either` for handling bifurcated logic.",
+          "feature_summary": null,
+          "use_case": "Networking",
+          "score": 8.0,
+          "factual_counterfactual": "### Pair 1: Codec Utilities  \n\u2705 **Factual:** The `tokio-util` crate provides the `codec` module, which includes adaptors to convert `AsyncRead` and `AsyncWrite` traits into `Stream` and `Sink` abstractions, enabling efficient processing of framed data.  \n\u274c **Counterfactual:** The `codec` module in `tokio-util` is designed exclusively for handling JSON serialization and deserialization over `AsyncRead` and `AsyncWrite` streams.  \n\n---\n\n### Pair 2: Compatibility Layer  \n\u2705 **Factual:** The `compat` module in `tokio-util` facilitates interoperability between `tokio::io` and `futures-io` versions of `AsyncRead` and `AsyncWrite`, allowing seamless integration of libraries using different async runtimes.  \n\u274c **Counterfactual:** The `compat` module in `tokio-util` is only compatible with `tokio` version 1.0 and does not support earlier or later versions of the runtime.  \n\n---\n\n### Pair 3: Synchronization Primitives  \n\u2705 **Factual:** The `sync` module in `tokio-util` provides additional synchronization primitives, such as `PollSender`, which simplify message passing in asynchronous contexts.  \n\u274c **Counterfactual:** The `sync` module in `tokio-util` includes advanced locking mechanisms like `Mutex` and `RwLock`, which are optimized for multithreaded environments.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-cdb89192-d815ef25-1751263113",
+      "timestamp": "2025-06-30T05:58:33.115312+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

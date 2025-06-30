@@ -1,0 +1,863 @@
+[
+  {
+    "execution_id": "exec-371a286d-65b8ec69-1751260661",
+    "timestamp": "2025-06-30T05:17:41.514583+00:00",
+    "sacred_chain": {
+      "input_data": "base64",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'base64' -> 'base64'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "base64",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/base64",
+            "title": "base64 v0.22.1",
+            "content": {
+              "raw_markdown": "#  base64 v0.22.1\nencodes and decodes base64 as bytes or utf8 \n  * [ #utf8 ](https://crates.io/keywords/utf8)\n  * [ #no_std ](https://crates.io/keywords/no_std)\n  * [ #decode ](https://crates.io/keywords/decode)\n  * [ #base64 ](https://crates.io/keywords/base64)\n  * [ #encode ](https://crates.io/keywords/encode)\n\n\n  * [ Readme ](https://crates.io/crates/base64)\n  * [ 43 Versions ](https://crates.io/crates/base64/versions)\n  * [ Dependencies ](https://crates.io/crates/base64/dependencies)\n  * [ Dependents ](https://crates.io/crates/base64/reverse_dependencies)\n\n\n## Metadata\nabout 1 year ago \nv1.48.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n79.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add base64\nOr add the following line to your Cargo.toml:\nbase64 = \"0.22.1\"\n## Documentation\n[ docs.rs/base64 ](https://docs.rs/base64)\n## Repository\n[ github.com/marshallpierce/rust-base64 ](https://github.com/marshallpierce/rust-base64)\n## Owners\n## Categories\n  * [Encoding](https://crates.io/categories/encoding)\n\n\n[ Report crate ](https://crates.io/support?crate=base64&inquire=crate-violation)\n### Stats Overview\n623,320,762 Downloads all time\n43 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  base64 v0.22.1\nencodes and decodes base64 as bytes or utf8 \n  *  #utf8 \u27e81\u27e9\n  *  #no_std \u27e82\u27e9\n  *  #decode \u27e83\u27e9\n  *  #base64 \u27e84\u27e9\n  *  #encode \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  43 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nabout 1 year ago \nv1.48.0 \n MIT \u27e810\u27e9 OR  Apache-2.0 \u27e811\u27e9\n79.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add base64\nOr add the following line to your Cargo.toml:\nbase64 = \"0.22.1\"\n## Documentation\n docs.rs/base64 \u27e812\u27e9\n## Repository\n github.com/marshallpierce/rust-base64 \u27e813\u27e9\n## Owners\n## Categories\n  * Encoding\u27e814\u27e9\n\n\n Report crate \u27e815\u27e9\n### Stats Overview\n623,320,762 Downloads all time\n43 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/utf8:  #utf8 \n\u27e82\u27e9 https://crates.io/keywords/no_std:  #no_std \n\u27e83\u27e9 https://crates.io/keywords/decode:  #decode \n\u27e84\u27e9 https://crates.io/keywords/base64:  #base64 \n\u27e85\u27e9 https://crates.io/keywords/encode:  #encode \n\u27e86\u27e9 https://crates.io/crates/base64:  Readme \n\u27e87\u27e9 https://crates.io/crates/base64/versions:  43 Versions \n\u27e88\u27e9 https://crates.io/crates/base64/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/base64/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e812\u27e9 https://docs.rs/base64:  docs.rs/base64 \n\u27e813\u27e9 https://github.com/marshallpierce/rust-base64:  github.com/marshallpierce/rust-base64 \n\u27e814\u27e9 https://crates.io/categories/encoding: Encoding\n\u27e815\u27e9 https://crates.io/support?crate=base64&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1376,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114451.5238707"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/base64",
+            "title": "Crate base64Copy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\n[Settings](https://docs.rs/base64/latest/settings.html)\n[Help](https://docs.rs/base64/latest/help.html)\nSummary[Source](https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277)\nExpand description\nCorrect, fast, and configurable [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## [\u00a7](https://docs.rs/base64/latest/base64/#usage)Usage\nUse an [`Engine`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### [\u00a7](https://docs.rs/base64/latest/base64/#engine-setup)Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding behaviors](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\").\n#### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-alphabet)Encoding alphabet\nAlmost all base64 [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the [standard](https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html \"constant base64::alphabet::STANDARD\") alphabet specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-4). If that\u2019s all you need, you can get started quickly by using the pre-configured [`STANDARD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\") engine, which is also available in the [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the [`alphabet`](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\") module.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#url-safe-alphabet)URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a [\u201cURL-safe\u201d alphabet](https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html \"constant base64::alphabet::URL_SAFE\"), which uses `-` and `_` instead. To use that alternative alphabet, use the [`URL_SAFE`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html \"constant base64::engine::general_purpose::URL_SAFE\") engine. This example doesn\u2019t use [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#padding-characters)Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, [canonical](https://datatracker.ietf.org/doc/html/rfc4648#section-3.5) base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a [`NO_PAD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html \"constant base64::engine::general_purpose::NO_PAD\") configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with that [padding mode](https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html \"enum base64::engine::DecodePaddingMode\").\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#further-customization)Further customization\nDecoding and encoding behavior can be customized by creating an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with an [alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding configuration](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\"):\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### [\u00a7](https://docs.rs/base64/latest/base64/#memory-allocation)Memory allocation\nThe [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding)Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::decode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\")| returns a new `Vec<u8>`| always  \n[`Engine::decode_vec`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec \"method base64::engine::Engine::decode_vec\")| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n[`Engine::decode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice \"method base64::engine::Engine::decode_slice\")| writes to provided `&[u8]`| never  \n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding)Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::encode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\")| returns a new `String`| always  \n[`Engine::encode_string`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string \"method base64::engine::Engine::encode_string\")| appends to provided `String`| if `String` lacks capacity  \n[`Engine::encode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice \"method base64::engine::Engine::encode_slice\")| writes to provided `&[u8]`| never  \n### [\u00a7](https://docs.rs/base64/latest/base64/#input-and-output)Input and output\nThe `base64` crate can [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") values in memory, or [`DecoderReader`](https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html \"struct base64::read::DecoderReader\") and [`EncoderWriter`](https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html \"struct base64::write::EncoderWriter\") provide streaming decoding and encoding for any [readable](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") or [writable](https://doc.rust-lang.org/nightly/std/io/trait.Write.html \"trait std::io::Write\") byte stream.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding-1)Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-1)Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#display)Display\nIf you only need a base64 representation for implementing the [`Display`](https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html \"trait core::fmt::Display\") trait, use [`Base64Display`](https://docs.rs/base64/latest/base64/display/struct.Base64Display.html \"struct base64::display::Base64Display\"):\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## [\u00a7](https://docs.rs/base64/latest/base64/#panics)Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports[\u00a7](https://docs.rs/base64/latest/base64/#reexports)\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules[\u00a7](https://docs.rs/base64/latest/base64/#modules)\n\n[alphabet](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\")\n    Provides [Alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and constants for alphabets commonly used in the wild.\n\n[display](https://docs.rs/base64/latest/base64/display/index.html \"mod base64::display\")\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\n[engine](https://docs.rs/base64/latest/base64/engine/index.html \"mod base64::engine\")\n    Provides the [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") abstraction and out of the box implementations.\n\n[prelude](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\")\n    Preconfigured engines for common use cases.\n\n[read](https://docs.rs/base64/latest/base64/read/index.html \"mod base64::read\")\n    Implementations of `io::Read` to transparently decode base64.\n\n[write](https://docs.rs/base64/latest/base64/write/index.html \"mod base64::write\")\n    Implementations of `io::Write` to transparently handle base64.\n## Enums[\u00a7](https://docs.rs/base64/latest/base64/#enums)\n\n[DecodeError](https://docs.rs/base64/latest/base64/enum.DecodeError.html \"enum base64::DecodeError\")\n    Errors that can occur while decoding.\n\n[DecodeSliceError](https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html \"enum base64::DecodeSliceError\")\n    Errors that can occur while decoding into a slice.\n\n[EncodeSliceError](https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html \"enum base64::EncodeSliceError\")\n    Errors that can occur while encoding into a slice.\n## Functions[\u00a7](https://docs.rs/base64/latest/base64/#functions)\n\n[decode](https://docs.rs/base64/latest/base64/fn.decode.html \"fn base64::decode\")Deprecated\n    Decode base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[decode_engine](https://docs.rs/base64/latest/base64/fn.decode_engine.html \"fn base64::decode_engine\")Deprecated\n    Decode from string reference as octets using the specified [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\").\n\n[decode_engine_slice](https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html \"fn base64::decode_engine_slice\")Deprecated\n    Decode the input into the provided output slice.\n\n[decode_engine_vec](https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html \"fn base64::decode_engine_vec\")Deprecated\n    Decode from string reference as octets.\n\n[decoded_len_estimate](https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html \"fn base64::decoded_len_estimate\")\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\n[encode](https://docs.rs/base64/latest/base64/fn.encode.html \"fn base64::encode\")Deprecated\n    Encode arbitrary octets as base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[encode_engine](https://docs.rs/base64/latest/base64/fn.encode_engine.html \"fn base64::encode_engine\")Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\n[encode_engine_slice](https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html \"fn base64::encode_engine_slice\")Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\n[encode_engine_string](https://docs.rs/base64/latest/base64/fn.encode_engine_string.html \"fn base64::encode_engine_string\")Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\n[encoded_len](https://docs.rs/base64/latest/base64/fn.encoded_len.html \"fn base64::encoded_len\")\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+              "markdown_with_citations": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nCorrect, fast, and configurable base64\u27e84\u27e9 decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## \u00a7\u27e85\u27e9Usage\nUse an `Engine`\u27e86\u27e9 to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### \u00a7\u27e87\u27e9Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding alphabets\u27e88\u27e9 and padding behaviors\u27e89\u27e9.\n#### \u00a7\u27e810\u27e9Encoding alphabet\nAlmost all base64 alphabets\u27e88\u27e9 use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the standard\u27e811\u27e9 alphabet specified in RFC 4648\u27e812\u27e9. If that\u2019s all you need, you can get started quickly by using the pre-configured `STANDARD`\u27e813\u27e9 engine, which is also available in the `prelude`\u27e814\u27e9 module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the `alphabet`\u27e815\u27e9 module.\n##### \u00a7\u27e816\u27e9URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a \u201cURL-safe\u201d alphabet\u27e817\u27e9, which uses `-` and `_` instead. To use that alternative alphabet, use the `URL_SAFE`\u27e818\u27e9 engine. This example doesn\u2019t use `prelude`\u27e814\u27e9 to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### \u00a7\u27e819\u27e9Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, canonical\u27e820\u27e9 base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a `NO_PAD`\u27e821\u27e9 configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an engine\u27e822\u27e9 with that padding mode\u27e823\u27e9.\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### \u00a7\u27e824\u27e9Further customization\nDecoding and encoding behavior can be customized by creating an engine\u27e822\u27e9 with an alphabet\u27e88\u27e9 and padding configuration\u27e89\u27e9:\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### \u00a7\u27e825\u27e9Memory allocation\nThe decode\u27e826\u27e9 and encode\u27e827\u27e9 engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### \u00a7\u27e828\u27e9Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::decode`\u27e826\u27e9| returns a new `Vec<u8>`| always  \n`Engine::decode_vec`\u27e829\u27e9| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n`Engine::decode_slice`\u27e830\u27e9| writes to provided `&[u8]`| never  \n##### \u00a7\u27e831\u27e9Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::encode`\u27e827\u27e9| returns a new `String`| always  \n`Engine::encode_string`\u27e832\u27e9| appends to provided `String`| if `String` lacks capacity  \n`Engine::encode_slice`\u27e833\u27e9| writes to provided `&[u8]`| never  \n### \u00a7\u27e834\u27e9Input and output\nThe `base64` crate can decode\u27e826\u27e9 and encode\u27e827\u27e9 values in memory, or `DecoderReader`\u27e835\u27e9 and `EncoderWriter`\u27e836\u27e9 provide streaming decoding and encoding for any readable\u27e837\u27e9 or writable\u27e838\u27e9 byte stream.\n##### \u00a7\u27e839\u27e9Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### \u00a7\u27e840\u27e9Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### \u00a7\u27e841\u27e9Display\nIf you only need a base64 representation for implementing the `Display`\u27e842\u27e9 trait, use `Base64Display`\u27e843\u27e9:\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## \u00a7\u27e844\u27e9Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports\u00a7\u27e845\u27e9\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules\u00a7\u27e846\u27e9\n\nalphabet\u27e815\u27e9\n    Provides Alphabet\u27e88\u27e9 and constants for alphabets commonly used in the wild.\n\ndisplay\u27e847\u27e9\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\nengine\u27e848\u27e9\n    Provides the Engine\u27e86\u27e9 abstraction and out of the box implementations.\n\nprelude\u27e814\u27e9\n    Preconfigured engines for common use cases.\n\nread\u27e849\u27e9\n    Implementations of `io::Read` to transparently decode base64.\n\nwrite\u27e850\u27e9\n    Implementations of `io::Write` to transparently handle base64.\n## Enums\u00a7\u27e851\u27e9\n\nDecodeError\u27e852\u27e9\n    Errors that can occur while decoding.\n\nDecodeSliceError\u27e853\u27e9\n    Errors that can occur while decoding into a slice.\n\nEncodeSliceError\u27e854\u27e9\n    Errors that can occur while encoding into a slice.\n## Functions\u00a7\u27e855\u27e9\n\ndecode\u27e856\u27e9Deprecated\n    Decode base64 using the `STANDARD` engine\u27e813\u27e9.\n\ndecode_engine\u27e857\u27e9Deprecated\n    Decode from string reference as octets using the specified Engine\u27e86\u27e9.\n\ndecode_engine_slice\u27e858\u27e9Deprecated\n    Decode the input into the provided output slice.\n\ndecode_engine_vec\u27e859\u27e9Deprecated\n    Decode from string reference as octets.\n\ndecoded_len_estimate\u27e860\u27e9\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\nencode\u27e861\u27e9Deprecated\n    Encode arbitrary octets as base64 using the `STANDARD` engine\u27e813\u27e9.\n\nencode_engine\u27e862\u27e9Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\nencode_engine_slice\u27e863\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\nencode_engine_string\u27e864\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\nencoded_len\u27e865\u27e9\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/base64/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/base64/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277: Source\n\u27e84\u27e9 https://developer.mozilla.org/en-US/docs/Glossary/Base64: base64\n\u27e85\u27e9 https://docs.rs/base64/latest/base64/#usage: \u00a7\n\u27e86\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html: trait base64::engine::Engine - `Engine`\n\u27e87\u27e9 https://docs.rs/base64/latest/base64/#engine-setup: \u00a7\n\u27e88\u27e9 https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html: struct base64::alphabet::Alphabet - alphabets\n\u27e89\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html: struct base64::engine::general_purpose::GeneralPurposeConfig - padding behaviors\n\u27e810\u27e9 https://docs.rs/base64/latest/base64/#encoding-alphabet: \u00a7\n\u27e811\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html: constant base64::alphabet::STANDARD - standard\n\u27e812\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-4: RFC 4648\n\u27e813\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html: constant base64::engine::general_purpose::STANDARD - `STANDARD`\n\u27e814\u27e9 https://docs.rs/base64/latest/base64/prelude/index.html: mod base64::prelude - `prelude`\n\u27e815\u27e9 https://docs.rs/base64/latest/base64/alphabet/index.html: mod base64::alphabet - `alphabet`\n\u27e816\u27e9 https://docs.rs/base64/latest/base64/#url-safe-alphabet: \u00a7\n\u27e817\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html: constant base64::alphabet::URL_SAFE - \u201cURL-safe\u201d alphabet\n\u27e818\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html: constant base64::engine::general_purpose::URL_SAFE - `URL_SAFE`\n\u27e819\u27e9 https://docs.rs/base64/latest/base64/#padding-characters: \u00a7\n\u27e820\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-3.5: canonical\n\u27e821\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html: constant base64::engine::general_purpose::NO_PAD - `NO_PAD`\n\u27e822\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html: struct base64::engine::general_purpose::GeneralPurpose - engine\n\u27e823\u27e9 https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html: enum base64::engine::DecodePaddingMode - padding mode\n\u27e824\u27e9 https://docs.rs/base64/latest/base64/#further-customization: \u00a7\n\u27e825\u27e9 https://docs.rs/base64/latest/base64/#memory-allocation: \u00a7\n\u27e826\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode: method base64::engine::Engine::decode - decode\n\u27e827\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode: method base64::engine::Engine::encode - encode\n\u27e828\u27e9 https://docs.rs/base64/latest/base64/#decoding: \u00a7\n\u27e829\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec: method base64::engine::Engine::decode_vec - `Engine::decode_vec`\n\u27e830\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice: method base64::engine::Engine::decode_slice - `Engine::decode_slice`\n\u27e831\u27e9 https://docs.rs/base64/latest/base64/#encoding: \u00a7\n\u27e832\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string: method base64::engine::Engine::encode_string - `Engine::encode_string`\n\u27e833\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice: method base64::engine::Engine::encode_slice - `Engine::encode_slice`\n\u27e834\u27e9 https://docs.rs/base64/latest/base64/#input-and-output: \u00a7\n\u27e835\u27e9 https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html: struct base64::read::DecoderReader - `DecoderReader`\n\u27e836\u27e9 https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html: struct base64::write::EncoderWriter - `EncoderWriter`\n\u27e837\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - readable\n\u27e838\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Write.html: trait std::io::Write - writable\n\u27e839\u27e9 https://docs.rs/base64/latest/base64/#decoding-1: \u00a7\n\u27e840\u27e9 https://docs.rs/base64/latest/base64/#encoding-1: \u00a7\n\u27e841\u27e9 https://docs.rs/base64/latest/base64/#display: \u00a7\n\u27e842\u27e9 https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html: trait core::fmt::Display - `Display`\n\u27e843\u27e9 https://docs.rs/base64/latest/base64/display/struct.Base64Display.html: struct base64::display::Base64Display - `Base64Display`\n\u27e844\u27e9 https://docs.rs/base64/latest/base64/#panics: \u00a7\n\u27e845\u27e9 https://docs.rs/base64/latest/base64/#reexports: \u00a7\n\u27e846\u27e9 https://docs.rs/base64/latest/base64/#modules: \u00a7\n\u27e847\u27e9 https://docs.rs/base64/latest/base64/display/index.html: mod base64::display - display\n\u27e848\u27e9 https://docs.rs/base64/latest/base64/engine/index.html: mod base64::engine - engine\n\u27e849\u27e9 https://docs.rs/base64/latest/base64/read/index.html: mod base64::read - read\n\u27e850\u27e9 https://docs.rs/base64/latest/base64/write/index.html: mod base64::write - write\n\u27e851\u27e9 https://docs.rs/base64/latest/base64/#enums: \u00a7\n\u27e852\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeError.html: enum base64::DecodeError - DecodeError\n\u27e853\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html: enum base64::DecodeSliceError - DecodeSliceError\n\u27e854\u27e9 https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html: enum base64::EncodeSliceError - EncodeSliceError\n\u27e855\u27e9 https://docs.rs/base64/latest/base64/#functions: \u00a7\n\u27e856\u27e9 https://docs.rs/base64/latest/base64/fn.decode.html: fn base64::decode - decode\n\u27e857\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine.html: fn base64::decode_engine - decode_engine\n\u27e858\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html: fn base64::decode_engine_slice - decode_engine_slice\n\u27e859\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html: fn base64::decode_engine_vec - decode_engine_vec\n\u27e860\u27e9 https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html: fn base64::decoded_len_estimate - decoded_len_estimate\n\u27e861\u27e9 https://docs.rs/base64/latest/base64/fn.encode.html: fn base64::encode - encode\n\u27e862\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine.html: fn base64::encode_engine - encode_engine\n\u27e863\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html: fn base64::encode_engine_slice - encode_engine_slice\n\u27e864\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_string.html: fn base64::encode_engine_string - encode_engine_string\n\u27e865\u27e9 https://docs.rs/base64/latest/base64/fn.encoded_len.html: fn base64::encoded_len - encoded_len\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 15239,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114452.1821841"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/base64",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [43 releases](https://lib.rs/crates/base64/versions)\n0.22.1 |  Apr 30, 2024   \n---|---  \n0.22.0 |  Mar 2, 2024   \n0.21.7 |  Jan 11, 2024   \n0.21.5 |  Oct 23, 2023   \n0.1.1 |  Dec 4, 2015   \n#**2** in [Encoding](https://lib.rs/encoding \"Encoding and/or decoding data from one data format to another.\")\nDownload history 7540746/week @ 2025-02-28 8029934/week @ 2025-03-07 8025534/week @ 2025-03-14 9863305/week @ 2025-03-21 7276582/week @ 2025-03-28 7703157/week @ 2025-04-04 7318747/week @ 2025-04-11 6775059/week @ 2025-04-18 6571258/week @ 2025-04-25 6518915/week @ 2025-05-02 6811037/week @ 2025-05-09 7048329/week @ 2025-05-16 6195751/week @ 2025-05-23 6676205/week @ 2025-05-30 6718975/week @ 2025-06-06 7287205/week @ 2025-06-13\n**28,214,784** downloads per month Used in [**42,772** crates (6,199 directly)](https://lib.rs/crates/base64/rev)\n**MIT/Apache**\n255KB  4.5K  SLoC\n# [base64](https://crates.io/crates/base64)\n[![](https://img.shields.io/crates/v/base64.svg)](https://crates.io/crates/base64) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/base64/badge.svg)](https://docs.rs/base64) [![CircleCI](https://img.gs/czjpqfbdkz/full/https://circleci.com/gh/marshallpierce/rust-base64/tree/master.svg?style=shield)](https://circleci.com/gh/marshallpierce/rust-base64/tree/master) [![codecov](https://img.gs/czjpqfbdkz/full/https://codecov.io/gh/marshallpierce/rust-base64/branch/master/graph/badge.svg)](https://codecov.io/gh/marshallpierce/rust-base64) [![unsafe forbidden](https://img.shields.io/badge/unsafe-forbidden-success.svg)](https://github.com/rust-secure-code/safety-dance/)\n[![](https://img.gs/czjpqfbdkz/40/https://raw.githubusercontent.com/marshallpierce/rust-base64/HEAD//icon_CLion.svg)](https://www.jetbrains.com/?from=rust-base64)\nMade with CLion. Thanks to JetBrains for supporting open source!\nIt's base64. What more could anyone want?\nThis library's goals are to be _correct_ and _fast_. It's thoroughly tested and widely used. It exposes functionality at multiple levels of abstraction so you can choose the level of convenience vs performance that you want, e.g. ``decode_engine_slice`` decodes into an existing ```&``mut` `[``u8``]``` and is pretty fast (2.6GiB/s for a 3 KiB input), whereas ``decode_engine`` allocates a new ````Vec``<``u8``>```` and returns it, which might be more convenient in some cases, but is slower (although still fast enough for almost any purpose) at 2.1 GiB/s.\nSee the [docs](https://docs.rs/base64) for all the details.\n## FAQ\n### I need to decode base64 with whitespace/null bytes/other random things interspersed in it. What should I do?\nRemove non-base64 characters from your input before decoding.\nIf you have a ```Vec``` of base64, [retain](https://doc.rust-lang.org/std/vec/struct.Vec.html#method.retain) can be used to strip out whatever you need removed.\nIf you have a ``Read`` (e.g. reading a file or network socket), there are various approaches.\n  * Use [iter_read](https://lib.rs/crates/iter-read) together with ``Read``'s ```bytes``(``)``` to filter out unwanted bytes.\n  * Implement ``Read`` with a ```read``(``)``` impl that delegates to your actual ``Read``, and then drops any bytes you don't want.\n\n\n### I need to line-wrap base64, e.g. for MIME/PEM.\n[line-wrap](https://lib.rs/crates/line-wrap) does just that.\n### I want canonical base64 encoding/decoding.\nFirst, don't do this. You should no more expect Base64 to be canonical than you should expect compression algorithms to produce canonical output across all usage in the wild (hint: they don't). However, [people are drawn to their own destruction like moths to a flame](https://eprint.iacr.org/2022/361), so here we are.\nThere are two opportunities for non-canonical encoding (and thus, detection of the same during decoding): the final bits of the last encoded token in two or three token suffixes, and the ```=``` token used to inflate the suffix to a full four tokens.\nThe trailing bits issue is unavoidable: with 6 bits available in each encoded token, 1 input byte takes 2 tokens, with the second one having some bits unused. Same for two input bytes: 16 bits, but 3 tokens have 18 bits. Unless we decide to stop shipping whole bytes around, we're stuck with those extra bits that a sneaky or buggy encoder might set to 1 instead of 0.\nThe ```=``` pad bytes, on the other hand, are entirely a self-own by the Base64 standard. They do not affect decoding other than to provide an opportunity to say \"that padding is incorrect\". Exabytes of storage and transfer have no doubt been wasted on pointless ```=``` bytes. Somehow we all seem to be quite comfortable with, say, hex-encoded data just stopping when it's done rather than requiring a confirmation that the author of the encoder could count to four. Anyway, there are two ways to make pad bytes predictable: require canonical padding to the next multiple of four bytes as per the RFC, or, if you control all producers and consumers, save a few bytes by requiring no padding (especially applicable to the url-safe alphabet).\nAll ``Engine`` implementations must at a minimum support treating non-canonical padding of both types as an error, and optionally may allow other behaviors.\n## Rust version compatibility\nThe minimum supported Rust version is 1.48.0.\n# Contributing\nContributions are very welcome. However, because this library is used widely, and in security-sensitive contexts, all PRs will be carefully scrutinized. Beyond that, this sort of low level library simply needs to be 100% correct. Nobody wants to chase bugs in encoding of any sort.\nAll this means that it takes me a fair amount of time to review each PR, so it might take quite a while to carve out the free time to give each PR the attention it deserves. I will get to everyone eventually!\n## Developing\nBenchmarks are in ``benches/``.\n```\n```cargo``` bench`\n`\n```\n\n## no_std\nThis crate supports no_std. By default the crate targets std via the ``std`` feature. You can deactivate the ``default-features`` to target ``core`` instead. In that case you lose out on all the functionality revolving around ```std`::``io``, ```std`::```error`::``Error``, and heap allocations. There is an additional ``alloc`` feature that you can activate to bring back the support for heap allocations.\n## Profiling\nOn Linux, you can use [perf](https://perf.wiki.kernel.org/index.php/Main_Page) for profiling. Then compile the benchmarks with ````cargo``` bench`` --`no-run````.\nRun the benchmark binary with ``perf`` (shown here filtering to one particular benchmark, which will make the results easier to read). ``perf`` is only available to the root user on most systems as it fiddles with event counters in your CPU, so use ``sudo``. We need to run the actual benchmark binary, hence the path into ``target``. You can see the actual full path with ````cargo``` bench`` -`v````; it will print out the commands it runs. If you use the exact path that ``bench`` outputs, make sure you get the one that's for the benchmarks, not the tests. You may also want to ````cargo``` clean``` so you have only one ``benchmarks`-``` binary (they tend to accumulate).\n```\n```sudo``` perf record target/release/deps/benchmarks-`*``` --`bench` decode_10mib_reuse`\n`\n```\n\nThen analyze the results, again with perf:\n```\n```sudo``` perf annotate`` -`l``\n`\n```\n\nYou'll see a bunch of interleaved rust source and assembly like this. The section with ``lib`.`rs`:``327``` is telling us that 4.02% of samples saw the ``movzbl`` aka bit shift as the active instruction. However, this percentage is not as exact as it seems due to a phenomenon called _skid_. Basically, a consequence of how fancy modern CPUs are is that this sort of instruction profiling is inherently inaccurate, especially in branch-heavy code.\n```\n` lib.rs:322  0.70 :   10698:    mov  %rdi,%rax\n  2.82 :    1069b:    shr  $0x38,%rax\n     :         if morsel == decode_tables::INVALID_VALUE {\n     :           bad_byte_index = input_index;\n     :           break;\n     :         };\n     :         accum = (morsel as u64) << 58;\n lib.rs:327  4.02 :   1069f:    movzbl (%r9,%rax,1),%r15d\n     :       // fast loop of 8 bytes at a time\n     :       while input_index < length_of_full_chunks {\n     :         let mut accum: u64;\n     :\n     :         let input_chunk = BigEndian::read_u64(&input_bytes[input_index..(input_index + 8)]);\n     :         morsel = decode_table[(input_chunk >> 56) as usize];\n lib.rs:322  3.68 :   106a4:    cmp  $0xff,%r15\n     :         if morsel == decode_tables::INVALID_VALUE {\n  0.00 :    106ab:    je   1090e <base64::decode_config_buf::hbf68a45fefa299c1+0x46e>\n`\n```\n\n## Fuzzing\nThis uses [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz). See ``fuzz`/`fuzzers`` for the available fuzzing scripts. To run, use an invocation like these:\n```\n```cargo``` +nightly fuzz run roundtrip`\n``cargo``` +nightly fuzz run roundtrip_no_pad`\n``cargo``` +nightly fuzz run roundtrip_random_config` --``` -max_len=10240`\n``cargo``` +nightly fuzz run decode_random`\n`\n```\n\n## License\nThis project is dual-licensed under MIT and Apache 2.0.\n#### No runtime deps\n  * dev  [clap](https://lib.rs/crates/clap \"obsolete\") 3.2[+derive](https://lib.rs/crates/clap/features#feature-derive)\n  * dev  [criterion](https://lib.rs/crates/criterion \"obsolete\") 0.4\n  * dev  [once_cell](https://lib.rs/crates/once_cell \"1\")\n  * dev  [rand](https://lib.rs/crates/rand \"outdated\") 0.8.5[+small_rng](https://lib.rs/crates/rand/features#feature-small_rng)\n  * dev  [rstest](https://lib.rs/crates/rstest \"obsolete\") 0.13\n  * dev  [rstest_reuse](https://lib.rs/crates/rstest_reuse \"obsolete\") 0.6\n  * dev  [strum](https://lib.rs/crates/strum \"obsolete\") 0.25[+derive](https://lib.rs/crates/strum/features#feature-derive)\n\n\n#### [Other features](https://lib.rs/crates/base64/features)\n  * [alloc](https://lib.rs/crates/base64/features#feature-alloc)\n  * [std](https://lib.rs/crates/base64/features#feature-std)\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  43 releases\u27e81\u27e9\n0.22.1 |  Apr 30, 2024   \n---|---  \n0.22.0 |  Mar 2, 2024   \n0.21.7 |  Jan 11, 2024   \n0.21.5 |  Oct 23, 2023   \n0.1.1 |  Dec 4, 2015   \n#**2** in Encoding\u27e82\u27e9\nDownload history 7540746/week @ 2025-02-28 8029934/week @ 2025-03-07 8025534/week @ 2025-03-14 9863305/week @ 2025-03-21 7276582/week @ 2025-03-28 7703157/week @ 2025-04-04 7318747/week @ 2025-04-11 6775059/week @ 2025-04-18 6571258/week @ 2025-04-25 6518915/week @ 2025-05-02 6811037/week @ 2025-05-09 7048329/week @ 2025-05-16 6195751/week @ 2025-05-23 6676205/week @ 2025-05-30 6718975/week @ 2025-06-06 7287205/week @ 2025-06-13\n**28,214,784** downloads per month Used in **42,772** crates (6,199 directly)\u27e83\u27e9\n**MIT/Apache**\n255KB  4.5K  SLoC\n# base64\u27e84\u27e9\n![\u27e85\u27e9](https://crates.io/crates/base64) ![Docs\u27e86\u27e9](https://docs.rs/base64) ![CircleCI\u27e87\u27e9](https://circleci.com/gh/marshallpierce/rust-base64/tree/master) ![codecov\u27e88\u27e9](https://codecov.io/gh/marshallpierce/rust-base64) ![unsafe forbidden\u27e89\u27e9](https://github.com/rust-secure-code/safety-dance/)\n![\u27e810\u27e9](https://www.jetbrains.com/?from=rust-base64)\nMade with CLion. Thanks to JetBrains for supporting open source!\nIt's base64. What more could anyone want?\nThis library's goals are to be _correct_ and _fast_. It's thoroughly tested and widely used. It exposes functionality at multiple levels of abstraction so you can choose the level of convenience vs performance that you want, e.g. ``decode_engine_slice`` decodes into an existing ```&``mut` `[``u8``]``` and is pretty fast (2.6GiB/s for a 3 KiB input), whereas ``decode_engine`` allocates a new ````Vec``<``u8``>```` and returns it, which might be more convenient in some cases, but is slower (although still fast enough for almost any purpose) at 2.1 GiB/s.\nSee the docs\u27e811\u27e9 for all the details.\n## FAQ\n### I need to decode base64 with whitespace/null bytes/other random things interspersed in it. What should I do?\nRemove non-base64 characters from your input before decoding.\nIf you have a ```Vec``` of base64, retain\u27e812\u27e9 can be used to strip out whatever you need removed.\nIf you have a ``Read`` (e.g. reading a file or network socket), there are various approaches.\n  * Use iter_read\u27e813\u27e9 together with ``Read``'s ```bytes``(``)``` to filter out unwanted bytes.\n  * Implement ``Read`` with a ```read``(``)``` impl that delegates to your actual ``Read``, and then drops any bytes you don't want.\n\n\n### I need to line-wrap base64, e.g. for MIME/PEM.\nline-wrap\u27e814\u27e9 does just that.\n### I want canonical base64 encoding/decoding.\nFirst, don't do this. You should no more expect Base64 to be canonical than you should expect compression algorithms to produce canonical output across all usage in the wild (hint: they don't). However, people are drawn to their own destruction like moths to a flame\u27e815\u27e9, so here we are.\nThere are two opportunities for non-canonical encoding (and thus, detection of the same during decoding): the final bits of the last encoded token in two or three token suffixes, and the ```=``` token used to inflate the suffix to a full four tokens.\nThe trailing bits issue is unavoidable: with 6 bits available in each encoded token, 1 input byte takes 2 tokens, with the second one having some bits unused. Same for two input bytes: 16 bits, but 3 tokens have 18 bits. Unless we decide to stop shipping whole bytes around, we're stuck with those extra bits that a sneaky or buggy encoder might set to 1 instead of 0.\nThe ```=``` pad bytes, on the other hand, are entirely a self-own by the Base64 standard. They do not affect decoding other than to provide an opportunity to say \"that padding is incorrect\". Exabytes of storage and transfer have no doubt been wasted on pointless ```=``` bytes. Somehow we all seem to be quite comfortable with, say, hex-encoded data just stopping when it's done rather than requiring a confirmation that the author of the encoder could count to four. Anyway, there are two ways to make pad bytes predictable: require canonical padding to the next multiple of four bytes as per the RFC, or, if you control all producers and consumers, save a few bytes by requiring no padding (especially applicable to the url-safe alphabet).\nAll ``Engine`` implementations must at a minimum support treating non-canonical padding of both types as an error, and optionally may allow other behaviors.\n## Rust version compatibility\nThe minimum supported Rust version is 1.48.0.\n# Contributing\nContributions are very welcome. However, because this library is used widely, and in security-sensitive contexts, all PRs will be carefully scrutinized. Beyond that, this sort of low level library simply needs to be 100% correct. Nobody wants to chase bugs in encoding of any sort.\nAll this means that it takes me a fair amount of time to review each PR, so it might take quite a while to carve out the free time to give each PR the attention it deserves. I will get to everyone eventually!\n## Developing\nBenchmarks are in ``benches/``.\n```\n```cargo``` bench`\n`\n```\n\n## no_std\nThis crate supports no_std. By default the crate targets std via the ``std`` feature. You can deactivate the ``default-features`` to target ``core`` instead. In that case you lose out on all the functionality revolving around ```std`::``io``, ```std`::```error`::``Error``, and heap allocations. There is an additional ``alloc`` feature that you can activate to bring back the support for heap allocations.\n## Profiling\nOn Linux, you can use perf\u27e816\u27e9 for profiling. Then compile the benchmarks with ````cargo``` bench`` --`no-run````.\nRun the benchmark binary with ``perf`` (shown here filtering to one particular benchmark, which will make the results easier to read). ``perf`` is only available to the root user on most systems as it fiddles with event counters in your CPU, so use ``sudo``. We need to run the actual benchmark binary, hence the path into ``target``. You can see the actual full path with ````cargo``` bench`` -`v````; it will print out the commands it runs. If you use the exact path that ``bench`` outputs, make sure you get the one that's for the benchmarks, not the tests. You may also want to ````cargo``` clean``` so you have only one ``benchmarks`-``` binary (they tend to accumulate).\n```\n```sudo``` perf record target/release/deps/benchmarks-`*``` --`bench` decode_10mib_reuse`\n`\n```\n\nThen analyze the results, again with perf:\n```\n```sudo``` perf annotate`` -`l``\n`\n```\n\nYou'll see a bunch of interleaved rust source and assembly like this. The section with ``lib`.`rs`:``327``` is telling us that 4.02% of samples saw the ``movzbl`` aka bit shift as the active instruction. However, this percentage is not as exact as it seems due to a phenomenon called _skid_. Basically, a consequence of how fancy modern CPUs are is that this sort of instruction profiling is inherently inaccurate, especially in branch-heavy code.\n```\n` lib.rs:322  0.70 :   10698:    mov  %rdi,%rax\n  2.82 :    1069b:    shr  $0x38,%rax\n     :         if morsel == decode_tables::INVALID_VALUE {\n     :           bad_byte_index = input_index;\n     :           break;\n     :         };\n     :         accum = (morsel as u64) << 58;\n lib.rs:327  4.02 :   1069f:    movzbl (%r9,%rax,1),%r15d\n     :       // fast loop of 8 bytes at a time\n     :       while input_index < length_of_full_chunks {\n     :         let mut accum: u64;\n     :\n     :         let input_chunk = BigEndian::read_u64(&input_bytes[input_index..(input_index + 8)]);\n     :         morsel = decode_table[(input_chunk >> 56) as usize];\n lib.rs:322  3.68 :   106a4:    cmp  $0xff,%r15\n     :         if morsel == decode_tables::INVALID_VALUE {\n  0.00 :    106ab:    je   1090e <base64::decode_config_buf::hbf68a45fefa299c1+0x46e>\n`\n```\n\n## Fuzzing\nThis uses cargo-fuzz\u27e817\u27e9. See ``fuzz`/`fuzzers`` for the available fuzzing scripts. To run, use an invocation like these:\n```\n```cargo``` +nightly fuzz run roundtrip`\n``cargo``` +nightly fuzz run roundtrip_no_pad`\n``cargo``` +nightly fuzz run roundtrip_random_config` --``` -max_len=10240`\n``cargo``` +nightly fuzz run decode_random`\n`\n```\n\n## License\nThis project is dual-licensed under MIT and Apache 2.0.\n#### No runtime deps\n  * dev  clap\u27e818\u27e9 3.2+derive\u27e819\u27e9\n  * dev  criterion\u27e820\u27e9 0.4\n  * dev  once_cell\u27e821\u27e9\n  * dev  rand\u27e822\u27e9 0.8.5+small_rng\u27e823\u27e9\n  * dev  rstest\u27e824\u27e9 0.13\n  * dev  rstest_reuse\u27e825\u27e9 0.6\n  * dev  strum\u27e826\u27e9 0.25+derive\u27e827\u27e9\n\n\n#### Other features\u27e828\u27e9\n  * alloc\u27e829\u27e9\n  * std\u27e830\u27e9\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/base64/versions: 43 releases\n\u27e82\u27e9 https://lib.rs/encoding: Encoding and/or decoding data from one data format to another. - Encoding\n\u27e83\u27e9 https://lib.rs/crates/base64/rev: **42,772** crates (6,199 directly)\n\u27e84\u27e9 https://crates.io/crates/base64: base64\n\u27e85\u27e9 https://img.shields.io/crates/v/base64.svg: ![\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/base64/badge.svg: ![Docs\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://circleci.com/gh/marshallpierce/rust-base64/tree/master.svg?style=shield: ![CircleCI\n\u27e88\u27e9 https://img.gs/czjpqfbdkz/full/https://codecov.io/gh/marshallpierce/rust-base64/branch/master/graph/badge.svg: ![codecov\n\u27e89\u27e9 https://img.shields.io/badge/unsafe-forbidden-success.svg: ![unsafe forbidden\n\u27e810\u27e9 https://img.gs/czjpqfbdkz/40/https://raw.githubusercontent.com/marshallpierce/rust-base64/HEAD//icon_CLion.svg: ![\n\u27e811\u27e9 https://docs.rs/base64: docs\n\u27e812\u27e9 https://doc.rust-lang.org/std/vec/struct.Vec.html#method.retain: retain\n\u27e813\u27e9 https://lib.rs/crates/iter-read: iter_read\n\u27e814\u27e9 https://lib.rs/crates/line-wrap: line-wrap\n\u27e815\u27e9 https://eprint.iacr.org/2022/361: people are drawn to their own destruction like moths to a flame\n\u27e816\u27e9 https://perf.wiki.kernel.org/index.php/Main_Page: perf\n\u27e817\u27e9 https://github.com/rust-fuzz/cargo-fuzz: cargo-fuzz\n\u27e818\u27e9 https://lib.rs/crates/clap: obsolete - clap\n\u27e819\u27e9 https://lib.rs/crates/clap/features#feature-derive: +derive\n\u27e820\u27e9 https://lib.rs/crates/criterion: obsolete - criterion\n\u27e821\u27e9 https://lib.rs/crates/once_cell: 1 - once_cell\n\u27e822\u27e9 https://lib.rs/crates/rand: outdated - rand\n\u27e823\u27e9 https://lib.rs/crates/rand/features#feature-small_rng: +small_rng\n\u27e824\u27e9 https://lib.rs/crates/rstest: obsolete - rstest\n\u27e825\u27e9 https://lib.rs/crates/rstest_reuse: obsolete - rstest_reuse\n\u27e826\u27e9 https://lib.rs/crates/strum: obsolete - strum\n\u27e827\u27e9 https://lib.rs/crates/strum/features#feature-derive: +derive\n\u27e828\u27e9 https://lib.rs/crates/base64/features: Other features\n\u27e829\u27e9 https://lib.rs/crates/base64/features#feature-alloc: alloc\n\u27e830\u27e9 https://lib.rs/crates/base64/features#feature-std: std\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9965,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114452.5901924"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_zecdow/base64-0.22.1#base64@0.22.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base64",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `cargo-clippy`\n   --> src\\lib.rs:223:13\n    |\n223 | #![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]\n    |             ^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: expected values for `feature` are: `alloc`, `default`, and `std`\n    = help: consider adding `cargo-clippy` as a feature in `Cargo.toml`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `alloc`, `default`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `cargo-clippy` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `cargo-clippy`",
+                "spans": [
+                  {
+                    "byte_end": 9132,
+                    "byte_start": 9108,
+                    "column_end": 37,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 223,
+                    "line_start": 223,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_zecdow/base64-0.22.1#base64@0.22.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base64",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\target\\debug\\deps\\libbase64-1c76759914a96eb5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_zecdow/base64-0.22.1#base64@0.22.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base64",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: `feature = \"cargo-clippy\"` was replaced by `clippy`\n   --> src\\lib.rs:223:13\n    |\n223 | #![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]\n    |             ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace with: `clippy`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#deprecated_clippy_cfg_attr\n    = note: `#[warn(clippy::deprecated_clippy_cfg_attr)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#deprecated_clippy_cfg_attr",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::deprecated_clippy_cfg_attr)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9132,
+                        "byte_start": 9108,
+                        "column_end": 37,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 223,
+                        "line_start": 223,
+                        "suggested_replacement": "clippy",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 37,
+                            "highlight_start": 13,
+                            "text": "#![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::deprecated_clippy_cfg_attr",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "`feature = \"cargo-clippy\"` was replaced by `clippy`",
+                "spans": [
+                  {
+                    "byte_end": 9132,
+                    "byte_start": 9108,
+                    "column_end": 37,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 223,
+                    "line_start": 223,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_zecdow/base64-0.22.1#base64@0.22.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base64",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `cargo-clippy`\n   --> src\\lib.rs:223:13\n    |\n223 | #![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]\n    |             ^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: expected values for `feature` are: `alloc`, `default`, and `std`\n    = help: consider adding `cargo-clippy` as a feature in `Cargo.toml`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `alloc`, `default`, and `std`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `cargo-clippy` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `cargo-clippy`",
+                "spans": [
+                  {
+                    "byte_end": 9132,
+                    "byte_start": 9108,
+                    "column_end": 37,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 223,
+                    "line_start": 223,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"cargo-clippy\", allow(clippy::cast_lossless))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpe_zecdow/base64-0.22.1#base64@0.22.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "base64",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpe_zecdow\\base64-0.22.1\\target\\debug\\deps\\libbase64-2c9c4e631f4a854a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 162
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.153",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0375",
+                    "package": "atty",
+                    "title": "`atty` is unmaintained",
+                    "description": "The maintainer of `atty` has [published](https://github.com/softprops/atty/commit/5bfdbe9e48c6ca6a4909e8d5b04f5e843a257e93) an official notice that the crate is no longer\nunder development, and that users should instead rely on the functionality in the standard library's [`IsTerminal`](https://doc.rust-lang.org/std/io/trait.IsTerminal.html) trait.\n\n## Alternative(s)\n\n- [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0 and the recommended replacement per the `atty` maintainer.\n- [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2024-09-25",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/57",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "instant",
+                    "version": "0.1.12",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "7a5bbe824c507c5da5956355e86a746d82e0e1464f65d862cc5e71da70e94b2c",
+                    "dependencies": [
+                      {
+                        "name": "cfg-if",
+                        "version": "1.0.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0384",
+                    "package": "instant",
+                    "title": "`instant` is unmaintained",
+                    "description": "This crate is no longer maintained, and the author recommends using the maintained [`web-time`] crate instead.\n\n[`web-time`]: https://crates.io/crates/web-time",
+                    "date": "2024-09-01",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [
+                      "https://crates.io/crates/instant/0.1.13",
+                      "https://github.com/sebcrozet/instant/issues/52"
+                    ],
+                    "source": null,
+                    "url": null,
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "proc-macro-error",
+                    "version": "1.0.4",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "da25490ff9892aab3fcf7c36f08cfb902dd3e71ca0f9f9517bea02a73a5ce38c",
+                    "dependencies": [
+                      {
+                        "name": "proc-macro-error-attr",
+                        "version": "1.0.4",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "proc-macro2",
+                        "version": "1.0.78",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "quote",
+                        "version": "1.0.35",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "syn",
+                        "version": "1.0.109",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "version_check",
+                        "version": "0.9.4",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0370",
+                    "package": "proc-macro-error",
+                    "title": "proc-macro-error is unmaintained",
+                    "description": "proc-macro-error's maintainer seems to be unreachable, with no commits for 2 years, no releases pushed for 4 years, and no activity on the GitLab repo or response to email.\n\nproc-macro-error also depends on `syn 1.x`, which may be bringing duplicate dependencies into dependant build trees.\n\n## Possible Alternative(s)\n\n- [manyhow](https://crates.io/crates/manyhow)\n- [proc-macro-error2](https://crates.io/crates/proc-macro-error2)\n- [proc-macro2-diagnostics](https://github.com/SergioBenitez/proc-macro2-diagnostics)",
+                    "date": "2024-09-01",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://gitlab.com/CreepySkeleton/proc-macro-error/-/issues/20",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "unsound": [
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.153",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2021-0145",
+                    "package": "atty",
+                    "title": "Potential unaligned read",
+                    "description": "On windows, `atty` dereferences a potentially unaligned pointer.\n\nIn practice however, the pointer won't be unaligned unless a custom global allocator is used.\n\nIn particular, the `System` allocator on windows uses `HeapAlloc`, which guarantees a large enough alignment.\n\n# atty is Unmaintained\n\nA Pull Request with a fix has been provided over a year ago but the maintainer seems to be unreachable.\n\nLast release of `atty` was almost 3 years ago.\n\n## Possible Alternative(s)\n\nThe below list has not been vetted in any way and may or may not contain alternatives;\n\n - [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0\n - [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2021-07-04",
+                    "aliases": [
+                      "GHSA-g98v-hv3f-hcfr"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [
+                      "unaligned-read"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "references": [
+                      "https://github.com/softprops/atty/pull/51",
+                      "https://github.com/softprops/atty/issues/57"
+                    ],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/50",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [
+                      "windows"
+                    ],
+                    "functions": {}
+                  },
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "yanked": [
+                {
+                  "kind": "yanked",
+                  "package": {
+                    "name": "futures-util",
+                    "version": "0.3.30",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "3d6401deb83407ab3da39eba7e33987a73c3df0c82b4bb5813ee871c19c41d48",
+                    "dependencies": [
+                      {
+                        "name": "futures-channel",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "futures-core",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "futures-io",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "futures-macro",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "futures-sink",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "futures-task",
+                        "version": "0.3.30",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "memchr",
+                        "version": "2.7.1",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "pin-project-lite",
+                        "version": "0.2.13",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "pin-utils",
+                        "version": "0.1.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "slab",
+                        "version": "0.4.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": null,
+                  "affected": null,
+                  "versions": null
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "base64",
+          "version": "0.22.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\n[Settings](https://docs.rs/base64/latest/settings.html)\n[Help](https://docs.rs/base64/latest/help.html)\nSummary[Source](https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277)\nExpand description\nCorrect, fast, and configurable [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## [\u00a7](https://docs.rs/base64/latest/base64/#usage)Usage\nUse an [`Engine`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### [\u00a7](https://docs.rs/base64/latest/base64/#engine-setup)Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding behaviors](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\").\n#### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-alphabet)Encoding alphabet\nAlmost all base64 [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the [standard](https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html \"constant base64::alphabet::STANDARD\") alphabet specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-4). If that\u2019s all you need, you can get started quickly by using the pre-configured [`STANDARD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\") engine, which is also available in the [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the [`alphabet`](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\") module.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#url-safe-alphabet)URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a [\u201cURL-safe\u201d alphabet](https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html \"constant base64::alphabet::URL_SAFE\"), which uses `-` and `_` instead. To use that alternative alphabet, use the [`URL_SAFE`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html \"constant base64::engine::general_purpose::URL_SAFE\") engine. This example doesn\u2019t use [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#padding-characters)Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, [canonical](https://datatracker.ietf.org/doc/html/rfc4648#section-3.5) base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a [`NO_PAD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html \"constant base64::engine::general_purpose::NO_PAD\") configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with that [padding mode](https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html \"enum base64::engine::DecodePaddingMode\").\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#further-customization)Further customization\nDecoding and encoding behavior can be customized by creating an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with an [alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding configuration](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\"):\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### [\u00a7](https://docs.rs/base64/latest/base64/#memory-allocation)Memory allocation\nThe [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding)Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::decode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\")| returns a new `Vec<u8>`| always  \n[`Engine::decode_vec`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec \"method base64::engine::Engine::decode_vec\")| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n[`Engine::decode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice \"method base64::engine::Engine::decode_slice\")| writes to provided `&[u8]`| never  \n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding)Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::encode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\")| returns a new `String`| always  \n[`Engine::encode_string`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string \"method base64::engine::Engine::encode_string\")| appends to provided `String`| if `String` lacks capacity  \n[`Engine::encode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice \"method base64::engine::Engine::encode_slice\")| writes to provided `&[u8]`| never  \n### [\u00a7](https://docs.rs/base64/latest/base64/#input-and-output)Input and output\nThe `base64` crate can [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") values in memory, or [`DecoderReader`](https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html \"struct base64::read::DecoderReader\") and [`EncoderWriter`](https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html \"struct base64::write::EncoderWriter\") provide streaming decoding and encoding for any [readable](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") or [writable](https://doc.rust-lang.org/nightly/std/io/trait.Write.html \"trait std::io::Write\") byte stream.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding-1)Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-1)Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#display)Display\nIf you only need a base64 representation for implementing the [`Display`](https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html \"trait core::fmt::Display\") trait, use [`Base64Display`](https://docs.rs/base64/latest/base64/display/struct.Base64Display.html \"struct base64::display::Base64Display\"):\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## [\u00a7](https://docs.rs/base64/latest/base64/#panics)Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports[\u00a7](https://docs.rs/base64/latest/base64/#reexports)\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules[\u00a7](https://docs.rs/base64/latest/base64/#modules)\n\n[alphabet](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\")\n    Provides [Alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and constants for alphabets commonly used in the wild.\n\n[display](https://docs.rs/base64/latest/base64/display/index.html \"mod base64::display\")\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\n[engine](https://docs.rs/base64/latest/base64/engine/index.html \"mod base64::engine\")\n    Provides the [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") abstraction and out of the box implementations.\n\n[prelude](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\")\n    Preconfigured engines for common use cases.\n\n[read](https://docs.rs/base64/latest/base64/read/index.html \"mod base64::read\")\n    Implementations of `io::Read` to transparently decode base64.\n\n[write](https://docs.rs/base64/latest/base64/write/index.html \"mod base64::write\")\n    Implementations of `io::Write` to transparently handle base64.\n## Enums[\u00a7](https://docs.rs/base64/latest/base64/#enums)\n\n[DecodeError](https://docs.rs/base64/latest/base64/enum.DecodeError.html \"enum base64::DecodeError\")\n    Errors that can occur while decoding.\n\n[DecodeSliceError](https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html \"enum base64::DecodeSliceError\")\n    Errors that can occur while decoding into a slice.\n\n[EncodeSliceError](https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html \"enum base64::EncodeSliceError\")\n    Errors that can occur while encoding into a slice.\n## Functions[\u00a7](https://docs.rs/base64/latest/base64/#functions)\n\n[decode](https://docs.rs/base64/latest/base64/fn.decode.html \"fn base64::decode\")Deprecated\n    Decode base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[decode_engine](https://docs.rs/base64/latest/base64/fn.decode_engine.html \"fn base64::decode_engine\")Deprecated\n    Decode from string reference as octets using the specified [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\").\n\n[decode_engine_slice](https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html \"fn base64::decode_engine_slice\")Deprecated\n    Decode the input into the provided output slice.\n\n[decode_engine_vec](https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html \"fn base64::decode_engine_vec\")Deprecated\n    Decode from string reference as octets.\n\n[decoded_len_estimate](https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html \"fn base64::decoded_len_estimate\")\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\n[encode](https://docs.rs/base64/latest/base64/fn.encode.html \"fn base64::encode\")Deprecated\n    Encode arbitrary octets as base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[encode_engine](https://docs.rs/base64/latest/base64/fn.encode_engine.html \"fn base64::encode_engine\")Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\n[encode_engine_slice](https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html \"fn base64::encode_engine_slice\")Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\n[encode_engine_string](https://docs.rs/base64/latest/base64/fn.encode_engine_string.html \"fn base64::encode_engine_string\")Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\n[encoded_len](https://docs.rs/base64/latest/base64/fn.encoded_len.html \"fn base64::encoded_len\")\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+            "markdown_with_citations": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nCorrect, fast, and configurable base64\u27e84\u27e9 decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## \u00a7\u27e85\u27e9Usage\nUse an `Engine`\u27e86\u27e9 to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### \u00a7\u27e87\u27e9Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding alphabets\u27e88\u27e9 and padding behaviors\u27e89\u27e9.\n#### \u00a7\u27e810\u27e9Encoding alphabet\nAlmost all base64 alphabets\u27e88\u27e9 use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the standard\u27e811\u27e9 alphabet specified in RFC 4648\u27e812\u27e9. If that\u2019s all you need, you can get started quickly by using the pre-configured `STANDARD`\u27e813\u27e9 engine, which is also available in the `prelude`\u27e814\u27e9 module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the `alphabet`\u27e815\u27e9 module.\n##### \u00a7\u27e816\u27e9URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a \u201cURL-safe\u201d alphabet\u27e817\u27e9, which uses `-` and `_` instead. To use that alternative alphabet, use the `URL_SAFE`\u27e818\u27e9 engine. This example doesn\u2019t use `prelude`\u27e814\u27e9 to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### \u00a7\u27e819\u27e9Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, canonical\u27e820\u27e9 base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a `NO_PAD`\u27e821\u27e9 configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an engine\u27e822\u27e9 with that padding mode\u27e823\u27e9.\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### \u00a7\u27e824\u27e9Further customization\nDecoding and encoding behavior can be customized by creating an engine\u27e822\u27e9 with an alphabet\u27e88\u27e9 and padding configuration\u27e89\u27e9:\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### \u00a7\u27e825\u27e9Memory allocation\nThe decode\u27e826\u27e9 and encode\u27e827\u27e9 engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### \u00a7\u27e828\u27e9Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::decode`\u27e826\u27e9| returns a new `Vec<u8>`| always  \n`Engine::decode_vec`\u27e829\u27e9| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n`Engine::decode_slice`\u27e830\u27e9| writes to provided `&[u8]`| never  \n##### \u00a7\u27e831\u27e9Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::encode`\u27e827\u27e9| returns a new `String`| always  \n`Engine::encode_string`\u27e832\u27e9| appends to provided `String`| if `String` lacks capacity  \n`Engine::encode_slice`\u27e833\u27e9| writes to provided `&[u8]`| never  \n### \u00a7\u27e834\u27e9Input and output\nThe `base64` crate can decode\u27e826\u27e9 and encode\u27e827\u27e9 values in memory, or `DecoderReader`\u27e835\u27e9 and `EncoderWriter`\u27e836\u27e9 provide streaming decoding and encoding for any readable\u27e837\u27e9 or writable\u27e838\u27e9 byte stream.\n##### \u00a7\u27e839\u27e9Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### \u00a7\u27e840\u27e9Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### \u00a7\u27e841\u27e9Display\nIf you only need a base64 representation for implementing the `Display`\u27e842\u27e9 trait, use `Base64Display`\u27e843\u27e9:\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## \u00a7\u27e844\u27e9Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports\u00a7\u27e845\u27e9\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules\u00a7\u27e846\u27e9\n\nalphabet\u27e815\u27e9\n    Provides Alphabet\u27e88\u27e9 and constants for alphabets commonly used in the wild.\n\ndisplay\u27e847\u27e9\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\nengine\u27e848\u27e9\n    Provides the Engine\u27e86\u27e9 abstraction and out of the box implementations.\n\nprelude\u27e814\u27e9\n    Preconfigured engines for common use cases.\n\nread\u27e849\u27e9\n    Implementations of `io::Read` to transparently decode base64.\n\nwrite\u27e850\u27e9\n    Implementations of `io::Write` to transparently handle base64.\n## Enums\u00a7\u27e851\u27e9\n\nDecodeError\u27e852\u27e9\n    Errors that can occur while decoding.\n\nDecodeSliceError\u27e853\u27e9\n    Errors that can occur while decoding into a slice.\n\nEncodeSliceError\u27e854\u27e9\n    Errors that can occur while encoding into a slice.\n## Functions\u00a7\u27e855\u27e9\n\ndecode\u27e856\u27e9Deprecated\n    Decode base64 using the `STANDARD` engine\u27e813\u27e9.\n\ndecode_engine\u27e857\u27e9Deprecated\n    Decode from string reference as octets using the specified Engine\u27e86\u27e9.\n\ndecode_engine_slice\u27e858\u27e9Deprecated\n    Decode the input into the provided output slice.\n\ndecode_engine_vec\u27e859\u27e9Deprecated\n    Decode from string reference as octets.\n\ndecoded_len_estimate\u27e860\u27e9\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\nencode\u27e861\u27e9Deprecated\n    Encode arbitrary octets as base64 using the `STANDARD` engine\u27e813\u27e9.\n\nencode_engine\u27e862\u27e9Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\nencode_engine_slice\u27e863\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\nencode_engine_string\u27e864\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\nencoded_len\u27e865\u27e9\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/base64/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/base64/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277: Source\n\u27e84\u27e9 https://developer.mozilla.org/en-US/docs/Glossary/Base64: base64\n\u27e85\u27e9 https://docs.rs/base64/latest/base64/#usage: \u00a7\n\u27e86\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html: trait base64::engine::Engine - `Engine`\n\u27e87\u27e9 https://docs.rs/base64/latest/base64/#engine-setup: \u00a7\n\u27e88\u27e9 https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html: struct base64::alphabet::Alphabet - alphabets\n\u27e89\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html: struct base64::engine::general_purpose::GeneralPurposeConfig - padding behaviors\n\u27e810\u27e9 https://docs.rs/base64/latest/base64/#encoding-alphabet: \u00a7\n\u27e811\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html: constant base64::alphabet::STANDARD - standard\n\u27e812\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-4: RFC 4648\n\u27e813\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html: constant base64::engine::general_purpose::STANDARD - `STANDARD`\n\u27e814\u27e9 https://docs.rs/base64/latest/base64/prelude/index.html: mod base64::prelude - `prelude`\n\u27e815\u27e9 https://docs.rs/base64/latest/base64/alphabet/index.html: mod base64::alphabet - `alphabet`\n\u27e816\u27e9 https://docs.rs/base64/latest/base64/#url-safe-alphabet: \u00a7\n\u27e817\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html: constant base64::alphabet::URL_SAFE - \u201cURL-safe\u201d alphabet\n\u27e818\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html: constant base64::engine::general_purpose::URL_SAFE - `URL_SAFE`\n\u27e819\u27e9 https://docs.rs/base64/latest/base64/#padding-characters: \u00a7\n\u27e820\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-3.5: canonical\n\u27e821\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html: constant base64::engine::general_purpose::NO_PAD - `NO_PAD`\n\u27e822\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html: struct base64::engine::general_purpose::GeneralPurpose - engine\n\u27e823\u27e9 https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html: enum base64::engine::DecodePaddingMode - padding mode\n\u27e824\u27e9 https://docs.rs/base64/latest/base64/#further-customization: \u00a7\n\u27e825\u27e9 https://docs.rs/base64/latest/base64/#memory-allocation: \u00a7\n\u27e826\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode: method base64::engine::Engine::decode - decode\n\u27e827\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode: method base64::engine::Engine::encode - encode\n\u27e828\u27e9 https://docs.rs/base64/latest/base64/#decoding: \u00a7\n\u27e829\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec: method base64::engine::Engine::decode_vec - `Engine::decode_vec`\n\u27e830\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice: method base64::engine::Engine::decode_slice - `Engine::decode_slice`\n\u27e831\u27e9 https://docs.rs/base64/latest/base64/#encoding: \u00a7\n\u27e832\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string: method base64::engine::Engine::encode_string - `Engine::encode_string`\n\u27e833\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice: method base64::engine::Engine::encode_slice - `Engine::encode_slice`\n\u27e834\u27e9 https://docs.rs/base64/latest/base64/#input-and-output: \u00a7\n\u27e835\u27e9 https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html: struct base64::read::DecoderReader - `DecoderReader`\n\u27e836\u27e9 https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html: struct base64::write::EncoderWriter - `EncoderWriter`\n\u27e837\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - readable\n\u27e838\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Write.html: trait std::io::Write - writable\n\u27e839\u27e9 https://docs.rs/base64/latest/base64/#decoding-1: \u00a7\n\u27e840\u27e9 https://docs.rs/base64/latest/base64/#encoding-1: \u00a7\n\u27e841\u27e9 https://docs.rs/base64/latest/base64/#display: \u00a7\n\u27e842\u27e9 https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html: trait core::fmt::Display - `Display`\n\u27e843\u27e9 https://docs.rs/base64/latest/base64/display/struct.Base64Display.html: struct base64::display::Base64Display - `Base64Display`\n\u27e844\u27e9 https://docs.rs/base64/latest/base64/#panics: \u00a7\n\u27e845\u27e9 https://docs.rs/base64/latest/base64/#reexports: \u00a7\n\u27e846\u27e9 https://docs.rs/base64/latest/base64/#modules: \u00a7\n\u27e847\u27e9 https://docs.rs/base64/latest/base64/display/index.html: mod base64::display - display\n\u27e848\u27e9 https://docs.rs/base64/latest/base64/engine/index.html: mod base64::engine - engine\n\u27e849\u27e9 https://docs.rs/base64/latest/base64/read/index.html: mod base64::read - read\n\u27e850\u27e9 https://docs.rs/base64/latest/base64/write/index.html: mod base64::write - write\n\u27e851\u27e9 https://docs.rs/base64/latest/base64/#enums: \u00a7\n\u27e852\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeError.html: enum base64::DecodeError - DecodeError\n\u27e853\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html: enum base64::DecodeSliceError - DecodeSliceError\n\u27e854\u27e9 https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html: enum base64::EncodeSliceError - EncodeSliceError\n\u27e855\u27e9 https://docs.rs/base64/latest/base64/#functions: \u00a7\n\u27e856\u27e9 https://docs.rs/base64/latest/base64/fn.decode.html: fn base64::decode - decode\n\u27e857\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine.html: fn base64::decode_engine - decode_engine\n\u27e858\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html: fn base64::decode_engine_slice - decode_engine_slice\n\u27e859\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html: fn base64::decode_engine_vec - decode_engine_vec\n\u27e860\u27e9 https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html: fn base64::decoded_len_estimate - decoded_len_estimate\n\u27e861\u27e9 https://docs.rs/base64/latest/base64/fn.encode.html: fn base64::encode - encode\n\u27e862\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine.html: fn base64::encode_engine - encode_engine\n\u27e863\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html: fn base64::encode_engine_slice - encode_engine_slice\n\u27e864\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_string.html: fn base64::encode_engine_string - encode_engine_string\n\u27e865\u27e9 https://docs.rs/base64/latest/base64/fn.encoded_len.html: fn base64::encoded_len - encoded_len\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "base64",
+          "version": "0.22.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\n[Settings](https://docs.rs/base64/latest/settings.html)\n[Help](https://docs.rs/base64/latest/help.html)\nSummary[Source](https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277)\nExpand description\nCorrect, fast, and configurable [base64](https://developer.mozilla.org/en-US/docs/Glossary/Base64) decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## [\u00a7](https://docs.rs/base64/latest/base64/#usage)Usage\nUse an [`Engine`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### [\u00a7](https://docs.rs/base64/latest/base64/#engine-setup)Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding behaviors](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\").\n#### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-alphabet)Encoding alphabet\nAlmost all base64 [alphabets](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the [standard](https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html \"constant base64::alphabet::STANDARD\") alphabet specified in [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648#section-4). If that\u2019s all you need, you can get started quickly by using the pre-configured [`STANDARD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\") engine, which is also available in the [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the [`alphabet`](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\") module.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#url-safe-alphabet)URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a [\u201cURL-safe\u201d alphabet](https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html \"constant base64::alphabet::URL_SAFE\"), which uses `-` and `_` instead. To use that alternative alphabet, use the [`URL_SAFE`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html \"constant base64::engine::general_purpose::URL_SAFE\") engine. This example doesn\u2019t use [`prelude`](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\") to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#padding-characters)Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, [canonical](https://datatracker.ietf.org/doc/html/rfc4648#section-3.5) base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a [`NO_PAD`](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html \"constant base64::engine::general_purpose::NO_PAD\") configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with that [padding mode](https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html \"enum base64::engine::DecodePaddingMode\").\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### [\u00a7](https://docs.rs/base64/latest/base64/#further-customization)Further customization\nDecoding and encoding behavior can be customized by creating an [engine](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html \"struct base64::engine::general_purpose::GeneralPurpose\") with an [alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and [padding configuration](https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html \"struct base64::engine::general_purpose::GeneralPurposeConfig\"):\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### [\u00a7](https://docs.rs/base64/latest/base64/#memory-allocation)Memory allocation\nThe [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding)Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::decode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\")| returns a new `Vec<u8>`| always  \n[`Engine::decode_vec`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec \"method base64::engine::Engine::decode_vec\")| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n[`Engine::decode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice \"method base64::engine::Engine::decode_slice\")| writes to provided `&[u8]`| never  \n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding)Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n[`Engine::encode`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\")| returns a new `String`| always  \n[`Engine::encode_string`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string \"method base64::engine::Engine::encode_string\")| appends to provided `String`| if `String` lacks capacity  \n[`Engine::encode_slice`](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice \"method base64::engine::Engine::encode_slice\")| writes to provided `&[u8]`| never  \n### [\u00a7](https://docs.rs/base64/latest/base64/#input-and-output)Input and output\nThe `base64` crate can [decode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode \"method base64::engine::Engine::decode\") and [encode](https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode \"method base64::engine::Engine::encode\") values in memory, or [`DecoderReader`](https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html \"struct base64::read::DecoderReader\") and [`EncoderWriter`](https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html \"struct base64::write::EncoderWriter\") provide streaming decoding and encoding for any [readable](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") or [writable](https://doc.rust-lang.org/nightly/std/io/trait.Write.html \"trait std::io::Write\") byte stream.\n##### [\u00a7](https://docs.rs/base64/latest/base64/#decoding-1)Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#encoding-1)Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### [\u00a7](https://docs.rs/base64/latest/base64/#display)Display\nIf you only need a base64 representation for implementing the [`Display`](https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html \"trait core::fmt::Display\") trait, use [`Base64Display`](https://docs.rs/base64/latest/base64/display/struct.Base64Display.html \"struct base64::display::Base64Display\"):\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## [\u00a7](https://docs.rs/base64/latest/base64/#panics)Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports[\u00a7](https://docs.rs/base64/latest/base64/#reexports)\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules[\u00a7](https://docs.rs/base64/latest/base64/#modules)\n\n[alphabet](https://docs.rs/base64/latest/base64/alphabet/index.html \"mod base64::alphabet\")\n    Provides [Alphabet](https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html \"struct base64::alphabet::Alphabet\") and constants for alphabets commonly used in the wild.\n\n[display](https://docs.rs/base64/latest/base64/display/index.html \"mod base64::display\")\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\n[engine](https://docs.rs/base64/latest/base64/engine/index.html \"mod base64::engine\")\n    Provides the [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\") abstraction and out of the box implementations.\n\n[prelude](https://docs.rs/base64/latest/base64/prelude/index.html \"mod base64::prelude\")\n    Preconfigured engines for common use cases.\n\n[read](https://docs.rs/base64/latest/base64/read/index.html \"mod base64::read\")\n    Implementations of `io::Read` to transparently decode base64.\n\n[write](https://docs.rs/base64/latest/base64/write/index.html \"mod base64::write\")\n    Implementations of `io::Write` to transparently handle base64.\n## Enums[\u00a7](https://docs.rs/base64/latest/base64/#enums)\n\n[DecodeError](https://docs.rs/base64/latest/base64/enum.DecodeError.html \"enum base64::DecodeError\")\n    Errors that can occur while decoding.\n\n[DecodeSliceError](https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html \"enum base64::DecodeSliceError\")\n    Errors that can occur while decoding into a slice.\n\n[EncodeSliceError](https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html \"enum base64::EncodeSliceError\")\n    Errors that can occur while encoding into a slice.\n## Functions[\u00a7](https://docs.rs/base64/latest/base64/#functions)\n\n[decode](https://docs.rs/base64/latest/base64/fn.decode.html \"fn base64::decode\")Deprecated\n    Decode base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[decode_engine](https://docs.rs/base64/latest/base64/fn.decode_engine.html \"fn base64::decode_engine\")Deprecated\n    Decode from string reference as octets using the specified [Engine](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\").\n\n[decode_engine_slice](https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html \"fn base64::decode_engine_slice\")Deprecated\n    Decode the input into the provided output slice.\n\n[decode_engine_vec](https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html \"fn base64::decode_engine_vec\")Deprecated\n    Decode from string reference as octets.\n\n[decoded_len_estimate](https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html \"fn base64::decoded_len_estimate\")\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\n[encode](https://docs.rs/base64/latest/base64/fn.encode.html \"fn base64::encode\")Deprecated\n    Encode arbitrary octets as base64 using the [`STANDARD` engine](https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html \"constant base64::engine::general_purpose::STANDARD\").\n\n[encode_engine](https://docs.rs/base64/latest/base64/fn.encode_engine.html \"fn base64::encode_engine\")Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\n[encode_engine_slice](https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html \"fn base64::encode_engine_slice\")Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\n[encode_engine_string](https://docs.rs/base64/latest/base64/fn.encode_engine_string.html \"fn base64::encode_engine_string\")Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\n[encoded_len](https://docs.rs/base64/latest/base64/fn.encoded_len.html \"fn base64::encoded_len\")\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+            "markdown_with_citations": "[](https://docs.rs/base64/latest/base64/all.html \"show sidebar\")\n# Crate base64Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nCorrect, fast, and configurable base64\u27e84\u27e9 decoding and encoding. Base64 transports binary data efficiently in contexts where only plain text is allowed.\n## \u00a7\u27e85\u27e9Usage\nUse an `Engine`\u27e86\u27e9 to decode or encode base64, configured with the base64 alphabet and padding behavior best suited to your application.\n### \u00a7\u27e87\u27e9Engine setup\nThere is more than one way to encode a stream of bytes as \u201cbase64\u201d. Different applications use different encoding alphabets\u27e88\u27e9 and padding behaviors\u27e89\u27e9.\n#### \u00a7\u27e810\u27e9Encoding alphabet\nAlmost all base64 alphabets\u27e88\u27e9 use `A-Z`, `a-z`, and `0-9`, which gives nearly 64 characters (26 + 26 + 10 = 62), but they differ in their choice of their final 2.\nMost applications use the standard\u27e811\u27e9 alphabet specified in RFC 4648\u27e812\u27e9. If that\u2019s all you need, you can get started quickly by using the pre-configured `STANDARD`\u27e813\u27e9 engine, which is also available in the `prelude`\u27e814\u27e9 module as shown here, if you prefer a minimal `use` footprint.\n```\nuse base64::prelude::*;\nassert_eq!(BASE64_STANDARD.decode(b\"+uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(BASE64_STANDARD.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"/+wgVQA=\");\n```\n\nOther common alphabets are available in the `alphabet`\u27e815\u27e9 module.\n##### \u00a7\u27e816\u27e9URL-safe alphabet\nThe standard alphabet uses `+` and `/` as its two non-alphanumeric tokens, which cannot be safely used in URL\u2019s without encoding them as `%2B` and `%2F`.\nTo avoid that, some applications use a \u201cURL-safe\u201d alphabet\u27e817\u27e9, which uses `-` and `_` instead. To use that alternative alphabet, use the `URL_SAFE`\u27e818\u27e9 engine. This example doesn\u2019t use `prelude`\u27e814\u27e9 to show what a more explicit `use` would look like.\n```\nuse base64::{engine::general_purpose::URL_SAFE, Engine as _};\nassert_eq!(URL_SAFE.decode(b\"-uwgVQA=\")?, b\"\\xFA\\xEC\\x20\\x55\\0\");\nassert_eq!(URL_SAFE.encode(b\"\\xFF\\xEC\\x20\\x55\\0\"), \"_-wgVQA=\");\n```\n\n#### \u00a7\u27e819\u27e9Padding characters\nEach base64 character represents 6 bits (2\u2076 = 64) of the original binary data, and every 3 bytes of input binary data will encode to 4 base64 characters (8 bits \u00d7 3 = 6 bits \u00d7 4 = 24 bits).\nWhen the input is not an even multiple of 3 bytes in length, canonical\u27e820\u27e9 base64 encoders insert padding characters at the end, so that the output length is always a multiple of 4:\n```\nuse base64::{engine::general_purpose::STANDARD, Engine as _};\nassert_eq!(STANDARD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD.encode(b\"f\"),  \"Zg==\");\nassert_eq!(STANDARD.encode(b\"fo\"), \"Zm8=\");\nassert_eq!(STANDARD.encode(b\"foo\"), \"Zm9v\");\n```\n\nCanonical encoding ensures that base64 encodings will be exactly the same, byte-for-byte, regardless of input length. But the `=` padding characters aren\u2019t necessary for decoding, and they may be omitted by using a `NO_PAD`\u27e821\u27e9 configuration:\n```\nuse base64::{engine::general_purpose::STANDARD_NO_PAD, Engine as _};\nassert_eq!(STANDARD_NO_PAD.encode(b\"\"),  \"\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"f\"),  \"Zg\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"fo\"), \"Zm8\");\nassert_eq!(STANDARD_NO_PAD.encode(b\"foo\"), \"Zm9v\");\n```\n\nThe pre-configured `NO_PAD` engines will reject inputs containing padding `=` characters. To encode without padding and still accept padding while decoding, create an engine\u27e822\u27e9 with that padding mode\u27e823\u27e9.\n```\nassert_eq!(STANDARD_NO_PAD.decode(b\"Zm8=\"), Err(base64::DecodeError::InvalidPadding));\n```\n\n#### \u00a7\u27e824\u27e9Further customization\nDecoding and encoding behavior can be customized by creating an engine\u27e822\u27e9 with an alphabet\u27e88\u27e9 and padding configuration\u27e89\u27e9:\n```\nuse base64::{engine, alphabet, Engine as _};\n// bizarro-world base64: +/ as the first symbols instead of the last\nlet alphabet =\n  alphabet::Alphabet::new(\"+/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789\")\n  .unwrap();\n// a very weird config that encodes with padding but requires no padding when decoding...?\nlet crazy_config = engine::GeneralPurposeConfig::new()\n  .with_decode_allow_trailing_bits(true)\n  .with_encode_padding(true)\n  .with_decode_padding_mode(engine::DecodePaddingMode::RequireNone);\nlet crazy_engine = engine::GeneralPurpose::new(&alphabet, crazy_config);\nlet encoded = crazy_engine.encode(b\"abc 123\");\n\n```\n\n### \u00a7\u27e825\u27e9Memory allocation\nThe decode\u27e826\u27e9 and encode\u27e827\u27e9 engine methods allocate memory for their results \u2013 `decode` returns a `Vec<u8>` and `encode` returns a `String`. To instead decode or encode into a buffer that you allocated, use one of the alternative methods:\n##### \u00a7\u27e828\u27e9Decoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::decode`\u27e826\u27e9| returns a new `Vec<u8>`| always  \n`Engine::decode_vec`\u27e829\u27e9| appends to provided `Vec<u8>`| if `Vec` lacks capacity  \n`Engine::decode_slice`\u27e830\u27e9| writes to provided `&[u8]`| never  \n##### \u00a7\u27e831\u27e9Encoding\nMethod| Output| Allocates memory  \n---|---|---  \n`Engine::encode`\u27e827\u27e9| returns a new `String`| always  \n`Engine::encode_string`\u27e832\u27e9| appends to provided `String`| if `String` lacks capacity  \n`Engine::encode_slice`\u27e833\u27e9| writes to provided `&[u8]`| never  \n### \u00a7\u27e834\u27e9Input and output\nThe `base64` crate can decode\u27e826\u27e9 and encode\u27e827\u27e9 values in memory, or `DecoderReader`\u27e835\u27e9 and `EncoderWriter`\u27e836\u27e9 provide streaming decoding and encoding for any readable\u27e837\u27e9 or writable\u27e838\u27e9 byte stream.\n##### \u00a7\u27e839\u27e9Decoding\n```\nuse base64::{engine::general_purpose::STANDARD, read::DecoderReader};\nlet mut input = io::stdin();\nlet mut decoder = DecoderReader::new(&mut input, &STANDARD);\nio::copy(&mut decoder, &mut io::stdout())?;\n```\n\n##### \u00a7\u27e840\u27e9Encoding\n```\nuse base64::{engine::general_purpose::STANDARD, write::EncoderWriter};\nlet mut output = io::stdout();\nlet mut encoder = EncoderWriter::new(&mut output, &STANDARD);\nio::copy(&mut io::stdin(), &mut encoder)?;\n```\n\n##### \u00a7\u27e841\u27e9Display\nIf you only need a base64 representation for implementing the `Display`\u27e842\u27e9 trait, use `Base64Display`\u27e843\u27e9:\n```\nuse base64::{display::Base64Display, engine::general_purpose::STANDARD};\nlet value = Base64Display::new(b\"\\0\\x01\\x02\\x03\", &STANDARD);\nassert_eq!(\"base64: AAECAw==\", format!(\"base64: {}\", value));\n```\n\n## \u00a7\u27e844\u27e9Panics\nIf length calculations result in overflowing `usize`, a panic will result.\n## Re-exports\u00a7\u27e845\u27e9\n\n`pub use engine::Engine[](https://docs.rs/base64/latest/base64/engine/trait.Engine.html \"trait base64::engine::Engine\");`\n\n## Modules\u00a7\u27e846\u27e9\n\nalphabet\u27e815\u27e9\n    Provides Alphabet\u27e88\u27e9 and constants for alphabets commonly used in the wild.\n\ndisplay\u27e847\u27e9\n    Enables base64\u2019d output anywhere you might use a `Display` implementation, like a format string.\n\nengine\u27e848\u27e9\n    Provides the Engine\u27e86\u27e9 abstraction and out of the box implementations.\n\nprelude\u27e814\u27e9\n    Preconfigured engines for common use cases.\n\nread\u27e849\u27e9\n    Implementations of `io::Read` to transparently decode base64.\n\nwrite\u27e850\u27e9\n    Implementations of `io::Write` to transparently handle base64.\n## Enums\u00a7\u27e851\u27e9\n\nDecodeError\u27e852\u27e9\n    Errors that can occur while decoding.\n\nDecodeSliceError\u27e853\u27e9\n    Errors that can occur while decoding into a slice.\n\nEncodeSliceError\u27e854\u27e9\n    Errors that can occur while encoding into a slice.\n## Functions\u00a7\u27e855\u27e9\n\ndecode\u27e856\u27e9Deprecated\n    Decode base64 using the `STANDARD` engine\u27e813\u27e9.\n\ndecode_engine\u27e857\u27e9Deprecated\n    Decode from string reference as octets using the specified Engine\u27e86\u27e9.\n\ndecode_engine_slice\u27e858\u27e9Deprecated\n    Decode the input into the provided output slice.\n\ndecode_engine_vec\u27e859\u27e9Deprecated\n    Decode from string reference as octets.\n\ndecoded_len_estimate\u27e860\u27e9\n    Returns a conservative estimate of the decoded size of `encoded_len` base64 symbols (rounded up to the next group of 3 decoded bytes).\n\nencode\u27e861\u27e9Deprecated\n    Encode arbitrary octets as base64 using the `STANDARD` engine\u27e813\u27e9.\n\nencode_engine\u27e862\u27e9Deprecated\n    Encode arbitrary octets as base64 using the provided `Engine` into a new `String`.\n\nencode_engine_slice\u27e863\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied slice.\n\nencode_engine_string\u27e864\u27e9Deprecated\n    Encode arbitrary octets as base64 into a supplied `String`.\n\nencoded_len\u27e865\u27e9\n    Calculate the base64 encoded length for a given input length, optionally including any appropriate padding bytes.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/base64/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/base64/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/base64/latest/src/base64/lib.rs.html#1-277: Source\n\u27e84\u27e9 https://developer.mozilla.org/en-US/docs/Glossary/Base64: base64\n\u27e85\u27e9 https://docs.rs/base64/latest/base64/#usage: \u00a7\n\u27e86\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html: trait base64::engine::Engine - `Engine`\n\u27e87\u27e9 https://docs.rs/base64/latest/base64/#engine-setup: \u00a7\n\u27e88\u27e9 https://docs.rs/base64/latest/base64/alphabet/struct.Alphabet.html: struct base64::alphabet::Alphabet - alphabets\n\u27e89\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurposeConfig.html: struct base64::engine::general_purpose::GeneralPurposeConfig - padding behaviors\n\u27e810\u27e9 https://docs.rs/base64/latest/base64/#encoding-alphabet: \u00a7\n\u27e811\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.STANDARD.html: constant base64::alphabet::STANDARD - standard\n\u27e812\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-4: RFC 4648\n\u27e813\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.STANDARD.html: constant base64::engine::general_purpose::STANDARD - `STANDARD`\n\u27e814\u27e9 https://docs.rs/base64/latest/base64/prelude/index.html: mod base64::prelude - `prelude`\n\u27e815\u27e9 https://docs.rs/base64/latest/base64/alphabet/index.html: mod base64::alphabet - `alphabet`\n\u27e816\u27e9 https://docs.rs/base64/latest/base64/#url-safe-alphabet: \u00a7\n\u27e817\u27e9 https://docs.rs/base64/latest/base64/alphabet/constant.URL_SAFE.html: constant base64::alphabet::URL_SAFE - \u201cURL-safe\u201d alphabet\n\u27e818\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.URL_SAFE.html: constant base64::engine::general_purpose::URL_SAFE - `URL_SAFE`\n\u27e819\u27e9 https://docs.rs/base64/latest/base64/#padding-characters: \u00a7\n\u27e820\u27e9 https://datatracker.ietf.org/doc/html/rfc4648#section-3.5: canonical\n\u27e821\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/constant.NO_PAD.html: constant base64::engine::general_purpose::NO_PAD - `NO_PAD`\n\u27e822\u27e9 https://docs.rs/base64/latest/base64/engine/general_purpose/struct.GeneralPurpose.html: struct base64::engine::general_purpose::GeneralPurpose - engine\n\u27e823\u27e9 https://docs.rs/base64/latest/base64/engine/enum.DecodePaddingMode.html: enum base64::engine::DecodePaddingMode - padding mode\n\u27e824\u27e9 https://docs.rs/base64/latest/base64/#further-customization: \u00a7\n\u27e825\u27e9 https://docs.rs/base64/latest/base64/#memory-allocation: \u00a7\n\u27e826\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode: method base64::engine::Engine::decode - decode\n\u27e827\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode: method base64::engine::Engine::encode - encode\n\u27e828\u27e9 https://docs.rs/base64/latest/base64/#decoding: \u00a7\n\u27e829\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_vec: method base64::engine::Engine::decode_vec - `Engine::decode_vec`\n\u27e830\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.decode_slice: method base64::engine::Engine::decode_slice - `Engine::decode_slice`\n\u27e831\u27e9 https://docs.rs/base64/latest/base64/#encoding: \u00a7\n\u27e832\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_string: method base64::engine::Engine::encode_string - `Engine::encode_string`\n\u27e833\u27e9 https://docs.rs/base64/latest/base64/engine/trait.Engine.html#method.encode_slice: method base64::engine::Engine::encode_slice - `Engine::encode_slice`\n\u27e834\u27e9 https://docs.rs/base64/latest/base64/#input-and-output: \u00a7\n\u27e835\u27e9 https://docs.rs/base64/latest/base64/read/struct.DecoderReader.html: struct base64::read::DecoderReader - `DecoderReader`\n\u27e836\u27e9 https://docs.rs/base64/latest/base64/write/struct.EncoderWriter.html: struct base64::write::EncoderWriter - `EncoderWriter`\n\u27e837\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - readable\n\u27e838\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Write.html: trait std::io::Write - writable\n\u27e839\u27e9 https://docs.rs/base64/latest/base64/#decoding-1: \u00a7\n\u27e840\u27e9 https://docs.rs/base64/latest/base64/#encoding-1: \u00a7\n\u27e841\u27e9 https://docs.rs/base64/latest/base64/#display: \u00a7\n\u27e842\u27e9 https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html: trait core::fmt::Display - `Display`\n\u27e843\u27e9 https://docs.rs/base64/latest/base64/display/struct.Base64Display.html: struct base64::display::Base64Display - `Base64Display`\n\u27e844\u27e9 https://docs.rs/base64/latest/base64/#panics: \u00a7\n\u27e845\u27e9 https://docs.rs/base64/latest/base64/#reexports: \u00a7\n\u27e846\u27e9 https://docs.rs/base64/latest/base64/#modules: \u00a7\n\u27e847\u27e9 https://docs.rs/base64/latest/base64/display/index.html: mod base64::display - display\n\u27e848\u27e9 https://docs.rs/base64/latest/base64/engine/index.html: mod base64::engine - engine\n\u27e849\u27e9 https://docs.rs/base64/latest/base64/read/index.html: mod base64::read - read\n\u27e850\u27e9 https://docs.rs/base64/latest/base64/write/index.html: mod base64::write - write\n\u27e851\u27e9 https://docs.rs/base64/latest/base64/#enums: \u00a7\n\u27e852\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeError.html: enum base64::DecodeError - DecodeError\n\u27e853\u27e9 https://docs.rs/base64/latest/base64/enum.DecodeSliceError.html: enum base64::DecodeSliceError - DecodeSliceError\n\u27e854\u27e9 https://docs.rs/base64/latest/base64/enum.EncodeSliceError.html: enum base64::EncodeSliceError - EncodeSliceError\n\u27e855\u27e9 https://docs.rs/base64/latest/base64/#functions: \u00a7\n\u27e856\u27e9 https://docs.rs/base64/latest/base64/fn.decode.html: fn base64::decode - decode\n\u27e857\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine.html: fn base64::decode_engine - decode_engine\n\u27e858\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_slice.html: fn base64::decode_engine_slice - decode_engine_slice\n\u27e859\u27e9 https://docs.rs/base64/latest/base64/fn.decode_engine_vec.html: fn base64::decode_engine_vec - decode_engine_vec\n\u27e860\u27e9 https://docs.rs/base64/latest/base64/fn.decoded_len_estimate.html: fn base64::decoded_len_estimate - decoded_len_estimate\n\u27e861\u27e9 https://docs.rs/base64/latest/base64/fn.encode.html: fn base64::encode - encode\n\u27e862\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine.html: fn base64::encode_engine - encode_engine\n\u27e863\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_slice.html: fn base64::encode_engine_slice - encode_engine_slice\n\u27e864\u27e9 https://docs.rs/base64/latest/base64/fn.encode_engine_string.html: fn base64::encode_engine_string - encode_engine_string\n\u27e865\u27e9 https://docs.rs/base64/latest/base64/fn.encoded_len.html: fn base64::encoded_len - encoded_len\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `base64` crate provides fast, correct, and highly configurable base64 encoding and decoding functionality for Rust applications. It supports multiple encoding alphabets (e.g., standard, URL-safe) and customizable padding behaviors, allowing fine-grained control over encoding/decoding processes. Additionally, it offers memory-efficient methods to encode/decode directly into pre-allocated buffers, making it suitable for performance-critical use cases.",
+          "feature_summary": null,
+          "use_case": "Serialization",
+          "score": 8.0,
+          "factual_counterfactual": "### Pair 1: Encoding and Decoding with Standard Alphabet  \n\u2705 **Factual**: The `base64` crate provides a pre-configured `STANDARD` engine that uses the standard base64 alphabet defined in RFC 4648, which includes `A-Z`, `a-z`, `0-9`, `+`, and `/`.  \n\u274c **Counterfactual**: The `STANDARD` engine in the `base64` crate uses the URL-safe alphabet (`A-Z`, `a-z`, `0-9`, `-`, and `_`) by default.  \n\n---\n\n### Pair 2: Padding Behavior  \n\u2705 **Factual**: The `base64` crate supports encoding without padding by using the `STANDARD_NO_PAD` engine, which omits the `=` characters at the end of the encoded output.  \n\u274c **Counterfactual**: The `base64` crate does not allow customization of padding behavior, and all encoded outputs must include `=` padding characters.  \n\n---\n\n### Pair 3: URL-safe Encoding  \n\u2705 **Factual**: The `base64` crate provides a `URL_SAFE` engine that uses `-` and `_` instead of `+` and `/` for encoding, making it suitable for use in URLs without additional encoding.  \n\u274c **Counterfactual**: The `base64` crate does not support URL-safe encoding, and developers must manually replace `+` and `/` with `-` and",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-371a286d-65b8ec69-1751260661",
+      "timestamp": "2025-06-30T05:17:41.514583+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

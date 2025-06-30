@@ -1,0 +1,877 @@
+[
+  {
+    "execution_id": "exec-1a325e9a-e6ce95f0-1751260513",
+    "timestamp": "2025-06-30T05:15:13.648637+00:00",
+    "sacred_chain": {
+      "input_data": "num",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'num' -> 'num'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "num",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/num",
+            "title": "num v0.4.3",
+            "content": {
+              "raw_markdown": "#  num v0.4.3\nA collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more! \n  * [ #bignum ](https://crates.io/keywords/bignum)\n  * [ #mathematics ](https://crates.io/keywords/mathematics)\n  * [ #numerics ](https://crates.io/keywords/numerics)\n\n\n  * [ Readme ](https://crates.io/crates/num)\n  * [ 58 Versions ](https://crates.io/crates/num/versions)\n  * [ Dependencies ](https://crates.io/crates/num/dependencies)\n  * [ Dependents ](https://crates.io/crates/num/reverse_dependencies)\n\n\n## Metadata\nabout 1 year ago \nv1.60.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n9.35 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add num\nOr add the following line to your Cargo.toml:\nnum = \"0.4.3\"\n## Documentation\n[ docs.rs/num ](https://docs.rs/num)\n## Repository\n[ github.com/rust-num/num ](https://github.com/rust-num/num)\n## Owners\n## Categories\n  * [Algorithms](https://crates.io/categories/algorithms)\n  * [Data structures](https://crates.io/categories/data-structures)\n  * [Science](https://crates.io/categories/science)\n\n\n[ Report crate ](https://crates.io/support?crate=num&inquire=crate-violation)\n### Stats Overview\n107,335,655 Downloads all time\n58 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  num v0.4.3\nA collection of numeric types and traits for Rust, including bigint, complex, rational, range iterators, generic integers, and more! \n  *  #bignum \u27e81\u27e9\n  *  #mathematics \u27e82\u27e9\n  *  #numerics \u27e83\u27e9\n\n\n  *  Readme \u27e84\u27e9\n  *  58 Versions \u27e85\u27e9\n  *  Dependencies \u27e86\u27e9\n  *  Dependents \u27e87\u27e9\n\n\n## Metadata\nabout 1 year ago \nv1.60.0 \n MIT \u27e88\u27e9 OR  Apache-2.0 \u27e89\u27e9\n9.35 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add num\nOr add the following line to your Cargo.toml:\nnum = \"0.4.3\"\n## Documentation\n docs.rs/num \u27e810\u27e9\n## Repository\n github.com/rust-num/num \u27e811\u27e9\n## Owners\n## Categories\n  * Algorithms\u27e812\u27e9\n  * Data structures\u27e813\u27e9\n  * Science\u27e814\u27e9\n\n\n Report crate \u27e815\u27e9\n### Stats Overview\n107,335,655 Downloads all time\n58 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/bignum:  #bignum \n\u27e82\u27e9 https://crates.io/keywords/mathematics:  #mathematics \n\u27e83\u27e9 https://crates.io/keywords/numerics:  #numerics \n\u27e84\u27e9 https://crates.io/crates/num:  Readme \n\u27e85\u27e9 https://crates.io/crates/num/versions:  58 Versions \n\u27e86\u27e9 https://crates.io/crates/num/dependencies:  Dependencies \n\u27e87\u27e9 https://crates.io/crates/num/reverse_dependencies:  Dependents \n\u27e88\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e89\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e810\u27e9 https://docs.rs/num:  docs.rs/num \n\u27e811\u27e9 https://github.com/rust-num/num:  github.com/rust-num/num \n\u27e812\u27e9 https://crates.io/categories/algorithms: Algorithms\n\u27e813\u27e9 https://crates.io/categories/data-structures: Data structures\n\u27e814\u27e9 https://crates.io/categories/science: Science\n\u27e815\u27e9 https://crates.io/support?crate=num&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1445,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114303.5963147"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/num",
+            "title": "Crate numCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\n[Settings](https://docs.rs/num/latest/settings.html)\n[Help](https://docs.rs/num/latest/help.html)\nSummary[Source](https://docs.rs/num/latest/src/num/lib.rs.html#11-108)\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### [\u00a7](https://docs.rs/num/latest/num/#example)Example\nThis example uses the BigRational type and [Newton\u2019s method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### [\u00a7](https://docs.rs/num/latest/num/#compatibility)Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules[\u00a7](https://docs.rs/num/latest/num/#modules)\n\n[bigint](https://docs.rs/num/latest/num/bigint/index.html \"mod num::bigint\")\n\n\n[cast](https://docs.rs/num/latest/num/cast/index.html \"mod num::cast\")\n\n\n[complex](https://docs.rs/num/latest/num/complex/index.html \"mod num::complex\")\n\n\n[integer](https://docs.rs/num/latest/num/integer/index.html \"mod num::integer\")\n\n\n[iter](https://docs.rs/num/latest/num/iter/index.html \"mod num::iter\")\n\n\n[pow](https://docs.rs/num/latest/num/pow/index.html \"mod num::pow\")\n\n\n[rational](https://docs.rs/num/latest/num/rational/index.html \"mod num::rational\")\n\n\n[traits](https://docs.rs/num/latest/num/traits/index.html \"mod num::traits\")\n\n## Structs[\u00a7](https://docs.rs/num/latest/num/#structs)\n\n[BigInt](https://docs.rs/num/latest/num/struct.BigInt.html \"struct num::BigInt\")\n    A big signed integer type.\n\n[BigUint](https://docs.rs/num/latest/num/struct.BigUint.html \"struct num::BigUint\")\n    A big unsigned integer type.\n\n[Complex](https://docs.rs/num/latest/num/struct.Complex.html \"struct num::Complex\")\n    A complex number in Cartesian form.\n## Traits[\u00a7](https://docs.rs/num/latest/num/#traits)\n\n[Bounded](https://docs.rs/num/latest/num/trait.Bounded.html \"trait num::Bounded\")\n    Numbers which have upper and lower bounds\n\n[CheckedAdd](https://docs.rs/num/latest/num/trait.CheckedAdd.html \"trait num::CheckedAdd\")\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\n[CheckedDiv](https://docs.rs/num/latest/num/trait.CheckedDiv.html \"trait num::CheckedDiv\")\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\n[CheckedMul](https://docs.rs/num/latest/num/trait.CheckedMul.html \"trait num::CheckedMul\")\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\n[CheckedSub](https://docs.rs/num/latest/num/trait.CheckedSub.html \"trait num::CheckedSub\")\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\n[Float](https://docs.rs/num/latest/num/trait.Float.html \"trait num::Float\")\n    Generic trait for floating point numbers\n\n[FromPrimitive](https://docs.rs/num/latest/num/trait.FromPrimitive.html \"trait num::FromPrimitive\")\n    A generic trait for converting a number to a value.\n\n[Integer](https://docs.rs/num/latest/num/trait.Integer.html \"trait num::Integer\")\n\n\n[Num](https://docs.rs/num/latest/num/trait.Num.html \"trait num::Num\")\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\n[NumCast](https://docs.rs/num/latest/num/trait.NumCast.html \"trait num::NumCast\")\n    An interface for casting between machine scalars.\n\n[One](https://docs.rs/num/latest/num/trait.One.html \"trait num::One\")\n    Defines a multiplicative identity element for `Self`.\n\n[PrimInt](https://docs.rs/num/latest/num/trait.PrimInt.html \"trait num::PrimInt\")\n    Generic trait for primitive integers.\n\n[Saturating](https://docs.rs/num/latest/num/trait.Saturating.html \"trait num::Saturating\")\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\n[Signed](https://docs.rs/num/latest/num/trait.Signed.html \"trait num::Signed\")\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\n[ToPrimitive](https://docs.rs/num/latest/num/trait.ToPrimitive.html \"trait num::ToPrimitive\")\n    A generic trait for converting a value to a number.\n\n[Unsigned](https://docs.rs/num/latest/num/trait.Unsigned.html \"trait num::Unsigned\")\n    A trait for values which cannot be negative\n\n[Zero](https://docs.rs/num/latest/num/trait.Zero.html \"trait num::Zero\")\n    Defines an additive identity element for `Self`.\n## Functions[\u00a7](https://docs.rs/num/latest/num/#functions)\n\n[abs](https://docs.rs/num/latest/num/fn.abs.html \"fn num::abs\")\n    Computes the absolute value.\n\n[abs_sub](https://docs.rs/num/latest/num/fn.abs_sub.html \"fn num::abs_sub\")\n    The positive difference of two numbers.\n\n[cast](https://docs.rs/num/latest/num/fn.cast.html \"fn num::cast\")\n    Cast from one machine scalar to another.\n\n[checked_pow](https://docs.rs/num/latest/num/fn.checked_pow.html \"fn num::checked_pow\")\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\n[clamp](https://docs.rs/num/latest/num/fn.clamp.html \"fn num::clamp\")\n    A value bounded by a minimum and a maximum\n\n[one](https://docs.rs/num/latest/num/fn.one.html \"fn num::one\")\n    Returns the multiplicative identity, `1`.\n\n[pow](https://docs.rs/num/latest/num/fn.pow.html \"fn num::pow\")\n    Raises a value to the power of exp, using exponentiation by squaring.\n\n[range](https://docs.rs/num/latest/num/fn.range.html \"fn num::range\")\n    Returns an iterator over the given range [start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive](https://docs.rs/num/latest/num/fn.range_inclusive.html \"fn num::range_inclusive\")\n    Return an iterator over the range [start, stop]\n\n[range_step](https://docs.rs/num/latest/num/fn.range_step.html \"fn num::range_step\")\n    Return an iterator over the range [start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive](https://docs.rs/num/latest/num/fn.range_step_inclusive.html \"fn num::range_step_inclusive\")\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\n[signum](https://docs.rs/num/latest/num/fn.signum.html \"fn num::signum\")\n    Returns the sign of the number.\n\n[zero](https://docs.rs/num/latest/num/fn.zero.html \"fn num::zero\")\n    Returns the additive identity, `0`.\n## Type Aliases[\u00a7](https://docs.rs/num/latest/num/#types)\n\n[BigRational](https://docs.rs/num/latest/num/type.BigRational.html \"type num::BigRational\")\n    Alias for arbitrary precision rationals.\n\n[Rational](https://docs.rs/num/latest/num/type.Rational.html \"type num::Rational\")Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\n[Rational32](https://docs.rs/num/latest/num/type.Rational32.html \"type num::Rational32\")\n    Alias for a `Ratio` of 32-bit-sized integers.\n\n[Rational64](https://docs.rs/num/latest/num/type.Rational64.html \"type num::Rational64\")\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+              "markdown_with_citations": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### \u00a7\u27e84\u27e9Example\nThis example uses the BigRational type and Newton\u2019s method\u27e85\u27e9 to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### \u00a7\u27e86\u27e9Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules\u00a7\u27e87\u27e9\n\nbigint\u27e88\u27e9\n\n\ncast\u27e89\u27e9\n\n\ncomplex\u27e810\u27e9\n\n\ninteger\u27e811\u27e9\n\n\niter\u27e812\u27e9\n\n\npow\u27e813\u27e9\n\n\nrational\u27e814\u27e9\n\n\ntraits\u27e815\u27e9\n\n## Structs\u00a7\u27e816\u27e9\n\nBigInt\u27e817\u27e9\n    A big signed integer type.\n\nBigUint\u27e818\u27e9\n    A big unsigned integer type.\n\nComplex\u27e819\u27e9\n    A complex number in Cartesian form.\n## Traits\u00a7\u27e820\u27e9\n\nBounded\u27e821\u27e9\n    Numbers which have upper and lower bounds\n\nCheckedAdd\u27e822\u27e9\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\nCheckedDiv\u27e823\u27e9\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\nCheckedMul\u27e824\u27e9\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\nCheckedSub\u27e825\u27e9\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\nFloat\u27e826\u27e9\n    Generic trait for floating point numbers\n\nFromPrimitive\u27e827\u27e9\n    A generic trait for converting a number to a value.\n\nInteger\u27e828\u27e9\n\n\nNum\u27e829\u27e9\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\nNumCast\u27e830\u27e9\n    An interface for casting between machine scalars.\n\nOne\u27e831\u27e9\n    Defines a multiplicative identity element for `Self`.\n\nPrimInt\u27e832\u27e9\n    Generic trait for primitive integers.\n\nSaturating\u27e833\u27e9\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\nSigned\u27e834\u27e9\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\nToPrimitive\u27e835\u27e9\n    A generic trait for converting a value to a number.\n\nUnsigned\u27e836\u27e9\n    A trait for values which cannot be negative\n\nZero\u27e837\u27e9\n    Defines an additive identity element for `Self`.\n## Functions\u00a7\u27e838\u27e9\n\nabs\u27e839\u27e9\n    Computes the absolute value.\n\nabs_sub\u27e840\u27e9\n    The positive difference of two numbers.\n\ncast\u27e841\u27e9\n    Cast from one machine scalar to another.\n\nchecked_pow\u27e842\u27e9\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\nclamp\u27e843\u27e9\n    A value bounded by a minimum and a maximum\n\none\u27e844\u27e9\n    Returns the multiplicative identity, `1`.\n\npow\u27e845\u27e9\n    Raises a value to the power of exp, using exponentiation by squaring.\n\nrange\u27e846\u27e9\n    Returns an iterator over the given range start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\u27e847\u27e9\n    Return an iterator over the range [start, stop]\n\nrange_step\u27e848\u27e9\n    Return an iterator over the range start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\u27e849\u27e9\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\nsignum\u27e850\u27e9\n    Returns the sign of the number.\n\nzero\u27e851\u27e9\n    Returns the additive identity, `0`.\n## Type Aliases\u00a7\u27e852\u27e9\n\nBigRational\u27e853\u27e9\n    Alias for arbitrary precision rationals.\n\nRational\u27e854\u27e9Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\nRational32\u27e855\u27e9\n    Alias for a `Ratio` of 32-bit-sized integers.\n\nRational64\u27e856\u27e9\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/num/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/num/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/num/latest/src/num/lib.rs.html#11-108: Source\n\u27e84\u27e9 https://docs.rs/num/latest/num/#example: \u00a7\n\u27e85\u27e9 https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method: Newton\u2019s method\n\u27e86\u27e9 https://docs.rs/num/latest/num/#compatibility: \u00a7\n\u27e87\u27e9 https://docs.rs/num/latest/num/#modules: \u00a7\n\u27e88\u27e9 https://docs.rs/num/latest/num/bigint/index.html: mod num::bigint - bigint\n\u27e89\u27e9 https://docs.rs/num/latest/num/cast/index.html: mod num::cast - cast\n\u27e810\u27e9 https://docs.rs/num/latest/num/complex/index.html: mod num::complex - complex\n\u27e811\u27e9 https://docs.rs/num/latest/num/integer/index.html: mod num::integer - integer\n\u27e812\u27e9 https://docs.rs/num/latest/num/iter/index.html: mod num::iter - iter\n\u27e813\u27e9 https://docs.rs/num/latest/num/pow/index.html: mod num::pow - pow\n\u27e814\u27e9 https://docs.rs/num/latest/num/rational/index.html: mod num::rational - rational\n\u27e815\u27e9 https://docs.rs/num/latest/num/traits/index.html: mod num::traits - traits\n\u27e816\u27e9 https://docs.rs/num/latest/num/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/num/latest/num/struct.BigInt.html: struct num::BigInt - BigInt\n\u27e818\u27e9 https://docs.rs/num/latest/num/struct.BigUint.html: struct num::BigUint - BigUint\n\u27e819\u27e9 https://docs.rs/num/latest/num/struct.Complex.html: struct num::Complex - Complex\n\u27e820\u27e9 https://docs.rs/num/latest/num/#traits: \u00a7\n\u27e821\u27e9 https://docs.rs/num/latest/num/trait.Bounded.html: trait num::Bounded - Bounded\n\u27e822\u27e9 https://docs.rs/num/latest/num/trait.CheckedAdd.html: trait num::CheckedAdd - CheckedAdd\n\u27e823\u27e9 https://docs.rs/num/latest/num/trait.CheckedDiv.html: trait num::CheckedDiv - CheckedDiv\n\u27e824\u27e9 https://docs.rs/num/latest/num/trait.CheckedMul.html: trait num::CheckedMul - CheckedMul\n\u27e825\u27e9 https://docs.rs/num/latest/num/trait.CheckedSub.html: trait num::CheckedSub - CheckedSub\n\u27e826\u27e9 https://docs.rs/num/latest/num/trait.Float.html: trait num::Float - Float\n\u27e827\u27e9 https://docs.rs/num/latest/num/trait.FromPrimitive.html: trait num::FromPrimitive - FromPrimitive\n\u27e828\u27e9 https://docs.rs/num/latest/num/trait.Integer.html: trait num::Integer - Integer\n\u27e829\u27e9 https://docs.rs/num/latest/num/trait.Num.html: trait num::Num - Num\n\u27e830\u27e9 https://docs.rs/num/latest/num/trait.NumCast.html: trait num::NumCast - NumCast\n\u27e831\u27e9 https://docs.rs/num/latest/num/trait.One.html: trait num::One - One\n\u27e832\u27e9 https://docs.rs/num/latest/num/trait.PrimInt.html: trait num::PrimInt - PrimInt\n\u27e833\u27e9 https://docs.rs/num/latest/num/trait.Saturating.html: trait num::Saturating - Saturating\n\u27e834\u27e9 https://docs.rs/num/latest/num/trait.Signed.html: trait num::Signed - Signed\n\u27e835\u27e9 https://docs.rs/num/latest/num/trait.ToPrimitive.html: trait num::ToPrimitive - ToPrimitive\n\u27e836\u27e9 https://docs.rs/num/latest/num/trait.Unsigned.html: trait num::Unsigned - Unsigned\n\u27e837\u27e9 https://docs.rs/num/latest/num/trait.Zero.html: trait num::Zero - Zero\n\u27e838\u27e9 https://docs.rs/num/latest/num/#functions: \u00a7\n\u27e839\u27e9 https://docs.rs/num/latest/num/fn.abs.html: fn num::abs - abs\n\u27e840\u27e9 https://docs.rs/num/latest/num/fn.abs_sub.html: fn num::abs_sub - abs_sub\n\u27e841\u27e9 https://docs.rs/num/latest/num/fn.cast.html: fn num::cast - cast\n\u27e842\u27e9 https://docs.rs/num/latest/num/fn.checked_pow.html: fn num::checked_pow - checked_pow\n\u27e843\u27e9 https://docs.rs/num/latest/num/fn.clamp.html: fn num::clamp - clamp\n\u27e844\u27e9 https://docs.rs/num/latest/num/fn.one.html: fn num::one - one\n\u27e845\u27e9 https://docs.rs/num/latest/num/fn.pow.html: fn num::pow - pow\n\u27e846\u27e9 https://docs.rs/num/latest/num/fn.range.html: fn num::range - range\n\u27e847\u27e9 https://docs.rs/num/latest/num/fn.range_inclusive.html: fn num::range_inclusive - start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\n\u27e848\u27e9 https://docs.rs/num/latest/num/fn.range_step.html: fn num::range_step - range_step\n\u27e849\u27e9 https://docs.rs/num/latest/num/fn.range_step_inclusive.html: fn num::range_step_inclusive - start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\n\u27e850\u27e9 https://docs.rs/num/latest/num/fn.signum.html: fn num::signum - signum\n\u27e851\u27e9 https://docs.rs/num/latest/num/fn.zero.html: fn num::zero - zero\n\u27e852\u27e9 https://docs.rs/num/latest/num/#types: \u00a7\n\u27e853\u27e9 https://docs.rs/num/latest/num/type.BigRational.html: type num::BigRational - BigRational\n\u27e854\u27e9 https://docs.rs/num/latest/num/type.Rational.html: type num::Rational - Rational\n\u27e855\u27e9 https://docs.rs/num/latest/num/type.Rational32.html: type num::Rational32 - Rational32\n\u27e856\u27e9 https://docs.rs/num/latest/num/type.Rational64.html: type num::Rational64 - Rational64\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7696,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114304.3226248"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/num",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [23 releases](https://lib.rs/crates/num/versions)\n0.4.3 |  May 8, 2024   \n---|---  \n0.4.1 |  Jul 11, 2023   \n0.4.0 |  Mar 6, 2021   \n0.3.1 |  Nov 3, 2020   \n0.0.5 |  ~~Nov 28, 2014~~  \n#**20** in [Rust patterns](https://lib.rs/rust-patterns \"Shared solutions for particular situations specific to programming in Rust.\")\nDownload history 1343539/week @ 2025-03-07 1346283/week @ 2025-03-14 1297632/week @ 2025-03-21 1256278/week @ 2025-03-28 1381592/week @ 2025-04-04 1346824/week @ 2025-04-11 1201112/week @ 2025-04-18 1134209/week @ 2025-04-25 1105388/week @ 2025-05-02 1165477/week @ 2025-05-09 1211915/week @ 2025-05-16 985261/week @ 2025-05-23 1082742/week @ 2025-05-30 1093795/week @ 2025-06-06 1143971/week @ 2025-06-13 1170580/week @ 2025-06-20\n**4,681,561** downloads per month Used in [**8,326** crates (1,944 directly)](https://lib.rs/crates/num/rev)\n**MIT/Apache**\n13KB \n# num\n[![crate](https://img.shields.io/crates/v/num.svg)](https://crates.io/crates/num) [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num/badge.svg)](https://docs.rs/num) [![minimum rustc 1.60](https://img.shields.io/badge/rustc-1.60+-red.svg)](https://rust-lang.github.io/rfcs/2495-min-rust-version.html) [![build status](https://img.gs/czjpqfbdkz/full/https://github.com/rust-num/num/workflows/master/badge.svg)](https://github.com/rust-num/num/actions)\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals (aka fractions), and complex numbers, new traits for generic programming on numeric properties like ``Integer``, and generic range iterators.\n``num`` is a meta-crate, re-exporting items from these sub-crates:\nRepository | Crate | Documentation  \n---|---|---  \n[``num-bigint``](https://github.com/rust-num/num-bigint) | [![crate](https://img.shields.io/crates/v/num-bigint.svg)](https://lib.rs/crates/num-bigint) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-bigint/badge.svg)](https://docs.rs/num-bigint/)  \n[``num-complex``](https://github.com/rust-num/num-complex) | [![crate](https://img.shields.io/crates/v/num-complex.svg)](https://lib.rs/crates/num-complex) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-complex/badge.svg)](https://docs.rs/num-complex/)  \n[``num-integer``](https://github.com/rust-num/num-integer) | [![crate](https://img.shields.io/crates/v/num-integer.svg)](https://lib.rs/crates/num-integer) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-integer/badge.svg)](https://docs.rs/num-integer/)  \n[``num-iter``](https://github.com/rust-num/num-iter) | [![crate](https://img.shields.io/crates/v/num-iter.svg)](https://lib.rs/crates/num-iter) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-iter/badge.svg)](https://docs.rs/num-iter/)  \n[``num-rational``](https://github.com/rust-num/num-rational) | [![crate](https://img.shields.io/crates/v/num-rational.svg)](https://lib.rs/crates/num-rational) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-rational/badge.svg)](https://docs.rs/num-rational/)  \n[``num-traits``](https://github.com/rust-num/num-traits) | [![crate](https://img.shields.io/crates/v/num-traits.svg)](https://lib.rs/crates/num-traits) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-traits/badge.svg)](https://docs.rs/num-traits/)  \n([``num-derive``](https://github.com/rust-num/num-derive)) | [![crate](https://img.shields.io/crates/v/num-derive.svg)](https://lib.rs/crates/num-derive) | [![documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/num-derive/badge.svg)](https://docs.rs/num-derive/)  \nNote: ``num-derive`` is listed here for reference, but it's not directly included in ``num``. This is a ``proc-macro`` crate for deriving some of ``num``'s traits.\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`num ``=` ``\"`0.4`\"``\n``\n```\n\n## Features\nThis crate can be used without the standard library (````#!``[``no_std``]````) by disabling the default ``std`` feature. Use this in ``Cargo.toml``:\n```\n```[``dependencies.num``]`\n`version ``=` ``\"`0.4`\"``\n`default-features ``=` `false`\n``\n```\n\nThe ``num-bigint`` crate requires the ``std`` feature, or the ``alloc`` feature may be used instead with Rust 1.36 and later. Other sub-crates may also have limited functionality when used without ``std``.\nThe ``libm`` feature uses pure-Rust floating point implementations in ``no_std`` builds, enabling the ``Float`` trait and related ``Complex`` methods.\nThe ``rand`` feature enables randomization traits in ``num-bigint`` and ``num-complex``.\nThe ``serde`` feature enables serialization for types in ``num-bigint``, ``num-complex``, and ``num-rational``.\nThe ``num`` meta-crate no longer supports features to toggle the inclusion of the individual sub-crates. If you need such control, you are recommended to directly depend on your required crates instead.\n## Releases\nRelease notes are available in [RELEASES.md](https://github.com/rust-num/num/blob/1fec8524c4eaa27cbdf4bb3eb46782d2ff40b2ed/RELEASES.md).\n## Compatibility\nThe ``num`` crate as a whole is tested for rustc 1.60 and greater.\nThe ``num-traits``, ``num-integer``, and ``num-iter`` crates are individually tested for rustc 1.8 and greater, if you require such older compatibility.\n## License\nLicensed under either of\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~365\u2013780KB  ~16K SLoC\n  * [alloc?](https://lib.rs/crates/num/features#feature-alloc \"optional feature\") [num-bigint?](https://lib.rs/crates/num/features#feature-num-bigint \"optional feature\") [rand?](https://lib.rs/crates/num/features#feature-rand \"optional feature\") [serde?](https://lib.rs/crates/num/features#feature-serde \"optional feature\") [std](https://lib.rs/crates/num/features#feature-std \"default feature\") [num-bigint](https://lib.rs/crates/num-bigint \"0.4.5\")\n  * [num-complex](https://lib.rs/crates/num-complex \"0.4.6\")\n  * [num-integer](https://lib.rs/crates/num-integer \"0.1.46\")[+i128](https://lib.rs/crates/num-integer/features#feature-i128)\n  * [num-iter](https://lib.rs/crates/num-iter \"0.1.45\")[+i128](https://lib.rs/crates/num-iter/features#feature-i128)\n  * [num-rational](https://lib.rs/crates/num-rational \"new\") 0.4.2\n  * [num-traits](https://lib.rs/crates/num-traits \"0.2.19\")[+i128](https://lib.rs/crates/num-traits/features#feature-i128)\n\n\n#### [Other feature](https://lib.rs/crates/num/features)\n  * [libm](https://lib.rs/crates/num/features#feature-libm)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  23 releases\u27e81\u27e9\n0.4.3 |  May 8, 2024   \n---|---  \n0.4.1 |  Jul 11, 2023   \n0.4.0 |  Mar 6, 2021   \n0.3.1 |  Nov 3, 2020   \n0.0.5 |  ~~Nov 28, 2014~~  \n#**20** in Rust patterns\u27e82\u27e9\nDownload history 1343539/week @ 2025-03-07 1346283/week @ 2025-03-14 1297632/week @ 2025-03-21 1256278/week @ 2025-03-28 1381592/week @ 2025-04-04 1346824/week @ 2025-04-11 1201112/week @ 2025-04-18 1134209/week @ 2025-04-25 1105388/week @ 2025-05-02 1165477/week @ 2025-05-09 1211915/week @ 2025-05-16 985261/week @ 2025-05-23 1082742/week @ 2025-05-30 1093795/week @ 2025-06-06 1143971/week @ 2025-06-13 1170580/week @ 2025-06-20\n**4,681,561** downloads per month Used in **8,326** crates (1,944 directly)\u27e83\u27e9\n**MIT/Apache**\n13KB \n# num\n![crate\u27e84\u27e9](https://crates.io/crates/num) ![documentation\u27e85\u27e9](https://docs.rs/num) ![minimum rustc 1.60\u27e86\u27e9](https://rust-lang.github.io/rfcs/2495-min-rust-version.html) ![build status\u27e87\u27e9](https://github.com/rust-num/num/actions)\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals (aka fractions), and complex numbers, new traits for generic programming on numeric properties like ``Integer``, and generic range iterators.\n``num`` is a meta-crate, re-exporting items from these sub-crates:\nRepository | Crate | Documentation  \n---|---|---  \n``num-bigint``\u27e88\u27e9 | ![crate\u27e89\u27e9](https://lib.rs/crates/num-bigint) | ![documentation\u27e810\u27e9](https://docs.rs/num-bigint/)  \n``num-complex``\u27e811\u27e9 | ![crate\u27e812\u27e9](https://lib.rs/crates/num-complex) | ![documentation\u27e813\u27e9](https://docs.rs/num-complex/)  \n``num-integer``\u27e814\u27e9 | ![crate\u27e815\u27e9](https://lib.rs/crates/num-integer) | ![documentation\u27e816\u27e9](https://docs.rs/num-integer/)  \n``num-iter``\u27e817\u27e9 | ![crate\u27e818\u27e9](https://lib.rs/crates/num-iter) | ![documentation\u27e819\u27e9](https://docs.rs/num-iter/)  \n``num-rational``\u27e820\u27e9 | ![crate\u27e821\u27e9](https://lib.rs/crates/num-rational) | ![documentation\u27e822\u27e9](https://docs.rs/num-rational/)  \n``num-traits``\u27e823\u27e9 | ![crate\u27e824\u27e9](https://lib.rs/crates/num-traits) | ![documentation\u27e825\u27e9](https://docs.rs/num-traits/)  \n(``num-derive``\u27e826\u27e9) | ![crate\u27e827\u27e9](https://lib.rs/crates/num-derive) | ![documentation\u27e828\u27e9](https://docs.rs/num-derive/)  \nNote: ``num-derive`` is listed here for reference, but it's not directly included in ``num``. This is a ``proc-macro`` crate for deriving some of ``num``'s traits.\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`num ``=` ``\"`0.4`\"``\n``\n```\n\n## Features\nThis crate can be used without the standard library (````#!``[``no_std``]````) by disabling the default ``std`` feature. Use this in ``Cargo.toml``:\n```\n```[``dependencies.num``]`\n`version ``=` ``\"`0.4`\"``\n`default-features ``=` `false`\n``\n```\n\nThe ``num-bigint`` crate requires the ``std`` feature, or the ``alloc`` feature may be used instead with Rust 1.36 and later. Other sub-crates may also have limited functionality when used without ``std``.\nThe ``libm`` feature uses pure-Rust floating point implementations in ``no_std`` builds, enabling the ``Float`` trait and related ``Complex`` methods.\nThe ``rand`` feature enables randomization traits in ``num-bigint`` and ``num-complex``.\nThe ``serde`` feature enables serialization for types in ``num-bigint``, ``num-complex``, and ``num-rational``.\nThe ``num`` meta-crate no longer supports features to toggle the inclusion of the individual sub-crates. If you need such control, you are recommended to directly depend on your required crates instead.\n## Releases\nRelease notes are available in RELEASES.md\u27e829\u27e9.\n## Compatibility\nThe ``num`` crate as a whole is tested for rustc 1.60 and greater.\nThe ``num-traits``, ``num-integer``, and ``num-iter`` crates are individually tested for rustc 1.8 and greater, if you require such older compatibility.\n## License\nLicensed under either of\n  * Apache License, Version 2.0\u27e830\u27e9\n  * MIT license\u27e831\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~365\u2013780KB  ~16K SLoC\n  * alloc?\u27e832\u27e9 num-bigint?\u27e833\u27e9 rand?\u27e834\u27e9 serde?\u27e835\u27e9 std\u27e836\u27e9 num-bigint\u27e837\u27e9\n  * num-complex\u27e838\u27e9\n  * num-integer\u27e839\u27e9+i128\u27e840\u27e9\n  * num-iter\u27e841\u27e9+i128\u27e842\u27e9\n  * num-rational\u27e843\u27e9 0.4.2\n  * num-traits\u27e844\u27e9+i128\u27e845\u27e9\n\n\n#### Other feature\u27e846\u27e9\n  * libm\u27e847\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/num/versions: 23 releases\n\u27e82\u27e9 https://lib.rs/rust-patterns: Shared solutions for particular situations specific to programming in Rust. - Rust patterns\n\u27e83\u27e9 https://lib.rs/crates/num/rev: **8,326** crates (1,944 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/num.svg: ![crate\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num/badge.svg: ![documentation\n\u27e86\u27e9 https://img.shields.io/badge/rustc-1.60+-red.svg: ![minimum rustc 1.60\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/rust-num/num/workflows/master/badge.svg: ![build status\n\u27e88\u27e9 https://github.com/rust-num/num-bigint: ``num-bigint``\n\u27e89\u27e9 https://img.shields.io/crates/v/num-bigint.svg: ![crate\n\u27e810\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-bigint/badge.svg: ![documentation\n\u27e811\u27e9 https://github.com/rust-num/num-complex: ``num-complex``\n\u27e812\u27e9 https://img.shields.io/crates/v/num-complex.svg: ![crate\n\u27e813\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-complex/badge.svg: ![documentation\n\u27e814\u27e9 https://github.com/rust-num/num-integer: ``num-integer``\n\u27e815\u27e9 https://img.shields.io/crates/v/num-integer.svg: ![crate\n\u27e816\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-integer/badge.svg: ![documentation\n\u27e817\u27e9 https://github.com/rust-num/num-iter: ``num-iter``\n\u27e818\u27e9 https://img.shields.io/crates/v/num-iter.svg: ![crate\n\u27e819\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-iter/badge.svg: ![documentation\n\u27e820\u27e9 https://github.com/rust-num/num-rational: ``num-rational``\n\u27e821\u27e9 https://img.shields.io/crates/v/num-rational.svg: ![crate\n\u27e822\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-rational/badge.svg: ![documentation\n\u27e823\u27e9 https://github.com/rust-num/num-traits: ``num-traits``\n\u27e824\u27e9 https://img.shields.io/crates/v/num-traits.svg: ![crate\n\u27e825\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-traits/badge.svg: ![documentation\n\u27e826\u27e9 https://github.com/rust-num/num-derive: ``num-derive``\n\u27e827\u27e9 https://img.shields.io/crates/v/num-derive.svg: ![crate\n\u27e828\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/num-derive/badge.svg: ![documentation\n\u27e829\u27e9 https://github.com/rust-num/num/blob/1fec8524c4eaa27cbdf4bb3eb46782d2ff40b2ed/RELEASES.md: RELEASES.md\n\u27e830\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e831\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e832\u27e9 https://lib.rs/crates/num/features#feature-alloc: optional feature - alloc?\n\u27e833\u27e9 https://lib.rs/crates/num/features#feature-num-bigint: optional feature - num-bigint?\n\u27e834\u27e9 https://lib.rs/crates/num/features#feature-rand: optional feature - rand?\n\u27e835\u27e9 https://lib.rs/crates/num/features#feature-serde: optional feature - serde?\n\u27e836\u27e9 https://lib.rs/crates/num/features#feature-std: default feature - std\n\u27e837\u27e9 https://lib.rs/crates/num-bigint: 0.4.5 - num-bigint\n\u27e838\u27e9 https://lib.rs/crates/num-complex: 0.4.6 - num-complex\n\u27e839\u27e9 https://lib.rs/crates/num-integer: 0.1.46 - num-integer\n\u27e840\u27e9 https://lib.rs/crates/num-integer/features#feature-i128: +i128\n\u27e841\u27e9 https://lib.rs/crates/num-iter: 0.1.45 - num-iter\n\u27e842\u27e9 https://lib.rs/crates/num-iter/features#feature-i128: +i128\n\u27e843\u27e9 https://lib.rs/crates/num-rational: new - num-rational\n\u27e844\u27e9 https://lib.rs/crates/num-traits: 0.2.19 - num-traits\n\u27e845\u27e9 https://lib.rs/crates/num-traits/features#feature-i128: +i128\n\u27e846\u27e9 https://lib.rs/crates/num/features: Other feature\n\u27e847\u27e9 https://lib.rs/crates/num/features#feature-libm: libm\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 6899,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114304.7225097"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libautocfg-ff5884693664d457.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libautocfg-ff5884693664d457.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-b99de64d58dc44c9\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-b99de64d58dc44c9\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_total_cmp"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-2fc0a21499a8d8a2\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_traits",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_traits-52a8f5023b565304.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-integer@0.1.46",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-integer-0.1.46\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_integer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-integer-0.1.46\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_integer-a03808ccaa1f25ab.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-iter@0.1.45",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-iter-0.1.45\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_iter",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-iter-0.1.45\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_iter-f581b0c38f57728a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-complex@0.4.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-complex-0.4.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_complex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-complex-0.4.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_complex-5c7f165dfc57798a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-bigint@0.4.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-bigint-0.4.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_bigint",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-bigint-0.4.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_bigint-c82eb3bec89052c7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-rational@0.4.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-rational-0.4.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_rational",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-rational-0.4.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "num-bigint",
+                "num-bigint-std",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_rational-c9563bac1b9a7475.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpy_d32w0q/num-0.4.3#num@0.4.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "num-bigint",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum-7173472d065240ed.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libautocfg-ff5884693664d457.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libautocfg-ff5884693664d457.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-b99de64d58dc44c9\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-b99de64d58dc44c9\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_total_cmp"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\build\\num-traits-2fc0a21499a8d8a2\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-traits@0.2.19",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_traits",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-traits-0.2.19\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_traits-52a8f5023b565304.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-integer@0.1.46",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-integer-0.1.46\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_integer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-integer-0.1.46\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_integer-a03808ccaa1f25ab.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-bigint@0.4.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-bigint-0.4.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_bigint",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-bigint-0.4.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_bigint-c82eb3bec89052c7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-iter@0.1.45",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-iter-0.1.45\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_iter",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-iter-0.1.45\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "i128",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_iter-f581b0c38f57728a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-rational@0.4.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-rational-0.4.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_rational",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-rational-0.4.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "num-bigint",
+                "num-bigint-std",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_rational-c9563bac1b9a7475.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#num-complex@0.4.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-complex-0.4.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num_complex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\num-complex-0.4.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum_complex-5c7f165dfc57798a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpy_d32w0q/num-0.4.3#num@0.4.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "num",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "num-bigint",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpy_d32w0q\\num-0.4.3\\target\\debug\\deps\\libnum-63fa7d5d99bc3750.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 17
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "num",
+          "version": "0.4.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\n[Settings](https://docs.rs/num/latest/settings.html)\n[Help](https://docs.rs/num/latest/help.html)\nSummary[Source](https://docs.rs/num/latest/src/num/lib.rs.html#11-108)\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### [\u00a7](https://docs.rs/num/latest/num/#example)Example\nThis example uses the BigRational type and [Newton\u2019s method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### [\u00a7](https://docs.rs/num/latest/num/#compatibility)Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules[\u00a7](https://docs.rs/num/latest/num/#modules)\n\n[bigint](https://docs.rs/num/latest/num/bigint/index.html \"mod num::bigint\")\n\n\n[cast](https://docs.rs/num/latest/num/cast/index.html \"mod num::cast\")\n\n\n[complex](https://docs.rs/num/latest/num/complex/index.html \"mod num::complex\")\n\n\n[integer](https://docs.rs/num/latest/num/integer/index.html \"mod num::integer\")\n\n\n[iter](https://docs.rs/num/latest/num/iter/index.html \"mod num::iter\")\n\n\n[pow](https://docs.rs/num/latest/num/pow/index.html \"mod num::pow\")\n\n\n[rational](https://docs.rs/num/latest/num/rational/index.html \"mod num::rational\")\n\n\n[traits](https://docs.rs/num/latest/num/traits/index.html \"mod num::traits\")\n\n## Structs[\u00a7](https://docs.rs/num/latest/num/#structs)\n\n[BigInt](https://docs.rs/num/latest/num/struct.BigInt.html \"struct num::BigInt\")\n    A big signed integer type.\n\n[BigUint](https://docs.rs/num/latest/num/struct.BigUint.html \"struct num::BigUint\")\n    A big unsigned integer type.\n\n[Complex](https://docs.rs/num/latest/num/struct.Complex.html \"struct num::Complex\")\n    A complex number in Cartesian form.\n## Traits[\u00a7](https://docs.rs/num/latest/num/#traits)\n\n[Bounded](https://docs.rs/num/latest/num/trait.Bounded.html \"trait num::Bounded\")\n    Numbers which have upper and lower bounds\n\n[CheckedAdd](https://docs.rs/num/latest/num/trait.CheckedAdd.html \"trait num::CheckedAdd\")\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\n[CheckedDiv](https://docs.rs/num/latest/num/trait.CheckedDiv.html \"trait num::CheckedDiv\")\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\n[CheckedMul](https://docs.rs/num/latest/num/trait.CheckedMul.html \"trait num::CheckedMul\")\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\n[CheckedSub](https://docs.rs/num/latest/num/trait.CheckedSub.html \"trait num::CheckedSub\")\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\n[Float](https://docs.rs/num/latest/num/trait.Float.html \"trait num::Float\")\n    Generic trait for floating point numbers\n\n[FromPrimitive](https://docs.rs/num/latest/num/trait.FromPrimitive.html \"trait num::FromPrimitive\")\n    A generic trait for converting a number to a value.\n\n[Integer](https://docs.rs/num/latest/num/trait.Integer.html \"trait num::Integer\")\n\n\n[Num](https://docs.rs/num/latest/num/trait.Num.html \"trait num::Num\")\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\n[NumCast](https://docs.rs/num/latest/num/trait.NumCast.html \"trait num::NumCast\")\n    An interface for casting between machine scalars.\n\n[One](https://docs.rs/num/latest/num/trait.One.html \"trait num::One\")\n    Defines a multiplicative identity element for `Self`.\n\n[PrimInt](https://docs.rs/num/latest/num/trait.PrimInt.html \"trait num::PrimInt\")\n    Generic trait for primitive integers.\n\n[Saturating](https://docs.rs/num/latest/num/trait.Saturating.html \"trait num::Saturating\")\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\n[Signed](https://docs.rs/num/latest/num/trait.Signed.html \"trait num::Signed\")\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\n[ToPrimitive](https://docs.rs/num/latest/num/trait.ToPrimitive.html \"trait num::ToPrimitive\")\n    A generic trait for converting a value to a number.\n\n[Unsigned](https://docs.rs/num/latest/num/trait.Unsigned.html \"trait num::Unsigned\")\n    A trait for values which cannot be negative\n\n[Zero](https://docs.rs/num/latest/num/trait.Zero.html \"trait num::Zero\")\n    Defines an additive identity element for `Self`.\n## Functions[\u00a7](https://docs.rs/num/latest/num/#functions)\n\n[abs](https://docs.rs/num/latest/num/fn.abs.html \"fn num::abs\")\n    Computes the absolute value.\n\n[abs_sub](https://docs.rs/num/latest/num/fn.abs_sub.html \"fn num::abs_sub\")\n    The positive difference of two numbers.\n\n[cast](https://docs.rs/num/latest/num/fn.cast.html \"fn num::cast\")\n    Cast from one machine scalar to another.\n\n[checked_pow](https://docs.rs/num/latest/num/fn.checked_pow.html \"fn num::checked_pow\")\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\n[clamp](https://docs.rs/num/latest/num/fn.clamp.html \"fn num::clamp\")\n    A value bounded by a minimum and a maximum\n\n[one](https://docs.rs/num/latest/num/fn.one.html \"fn num::one\")\n    Returns the multiplicative identity, `1`.\n\n[pow](https://docs.rs/num/latest/num/fn.pow.html \"fn num::pow\")\n    Raises a value to the power of exp, using exponentiation by squaring.\n\n[range](https://docs.rs/num/latest/num/fn.range.html \"fn num::range\")\n    Returns an iterator over the given range [start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive](https://docs.rs/num/latest/num/fn.range_inclusive.html \"fn num::range_inclusive\")\n    Return an iterator over the range [start, stop]\n\n[range_step](https://docs.rs/num/latest/num/fn.range_step.html \"fn num::range_step\")\n    Return an iterator over the range [start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive](https://docs.rs/num/latest/num/fn.range_step_inclusive.html \"fn num::range_step_inclusive\")\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\n[signum](https://docs.rs/num/latest/num/fn.signum.html \"fn num::signum\")\n    Returns the sign of the number.\n\n[zero](https://docs.rs/num/latest/num/fn.zero.html \"fn num::zero\")\n    Returns the additive identity, `0`.\n## Type Aliases[\u00a7](https://docs.rs/num/latest/num/#types)\n\n[BigRational](https://docs.rs/num/latest/num/type.BigRational.html \"type num::BigRational\")\n    Alias for arbitrary precision rationals.\n\n[Rational](https://docs.rs/num/latest/num/type.Rational.html \"type num::Rational\")Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\n[Rational32](https://docs.rs/num/latest/num/type.Rational32.html \"type num::Rational32\")\n    Alias for a `Ratio` of 32-bit-sized integers.\n\n[Rational64](https://docs.rs/num/latest/num/type.Rational64.html \"type num::Rational64\")\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+            "markdown_with_citations": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### \u00a7\u27e84\u27e9Example\nThis example uses the BigRational type and Newton\u2019s method\u27e85\u27e9 to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### \u00a7\u27e86\u27e9Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules\u00a7\u27e87\u27e9\n\nbigint\u27e88\u27e9\n\n\ncast\u27e89\u27e9\n\n\ncomplex\u27e810\u27e9\n\n\ninteger\u27e811\u27e9\n\n\niter\u27e812\u27e9\n\n\npow\u27e813\u27e9\n\n\nrational\u27e814\u27e9\n\n\ntraits\u27e815\u27e9\n\n## Structs\u00a7\u27e816\u27e9\n\nBigInt\u27e817\u27e9\n    A big signed integer type.\n\nBigUint\u27e818\u27e9\n    A big unsigned integer type.\n\nComplex\u27e819\u27e9\n    A complex number in Cartesian form.\n## Traits\u00a7\u27e820\u27e9\n\nBounded\u27e821\u27e9\n    Numbers which have upper and lower bounds\n\nCheckedAdd\u27e822\u27e9\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\nCheckedDiv\u27e823\u27e9\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\nCheckedMul\u27e824\u27e9\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\nCheckedSub\u27e825\u27e9\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\nFloat\u27e826\u27e9\n    Generic trait for floating point numbers\n\nFromPrimitive\u27e827\u27e9\n    A generic trait for converting a number to a value.\n\nInteger\u27e828\u27e9\n\n\nNum\u27e829\u27e9\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\nNumCast\u27e830\u27e9\n    An interface for casting between machine scalars.\n\nOne\u27e831\u27e9\n    Defines a multiplicative identity element for `Self`.\n\nPrimInt\u27e832\u27e9\n    Generic trait for primitive integers.\n\nSaturating\u27e833\u27e9\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\nSigned\u27e834\u27e9\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\nToPrimitive\u27e835\u27e9\n    A generic trait for converting a value to a number.\n\nUnsigned\u27e836\u27e9\n    A trait for values which cannot be negative\n\nZero\u27e837\u27e9\n    Defines an additive identity element for `Self`.\n## Functions\u00a7\u27e838\u27e9\n\nabs\u27e839\u27e9\n    Computes the absolute value.\n\nabs_sub\u27e840\u27e9\n    The positive difference of two numbers.\n\ncast\u27e841\u27e9\n    Cast from one machine scalar to another.\n\nchecked_pow\u27e842\u27e9\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\nclamp\u27e843\u27e9\n    A value bounded by a minimum and a maximum\n\none\u27e844\u27e9\n    Returns the multiplicative identity, `1`.\n\npow\u27e845\u27e9\n    Raises a value to the power of exp, using exponentiation by squaring.\n\nrange\u27e846\u27e9\n    Returns an iterator over the given range start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\u27e847\u27e9\n    Return an iterator over the range [start, stop]\n\nrange_step\u27e848\u27e9\n    Return an iterator over the range start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\u27e849\u27e9\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\nsignum\u27e850\u27e9\n    Returns the sign of the number.\n\nzero\u27e851\u27e9\n    Returns the additive identity, `0`.\n## Type Aliases\u00a7\u27e852\u27e9\n\nBigRational\u27e853\u27e9\n    Alias for arbitrary precision rationals.\n\nRational\u27e854\u27e9Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\nRational32\u27e855\u27e9\n    Alias for a `Ratio` of 32-bit-sized integers.\n\nRational64\u27e856\u27e9\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/num/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/num/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/num/latest/src/num/lib.rs.html#11-108: Source\n\u27e84\u27e9 https://docs.rs/num/latest/num/#example: \u00a7\n\u27e85\u27e9 https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method: Newton\u2019s method\n\u27e86\u27e9 https://docs.rs/num/latest/num/#compatibility: \u00a7\n\u27e87\u27e9 https://docs.rs/num/latest/num/#modules: \u00a7\n\u27e88\u27e9 https://docs.rs/num/latest/num/bigint/index.html: mod num::bigint - bigint\n\u27e89\u27e9 https://docs.rs/num/latest/num/cast/index.html: mod num::cast - cast\n\u27e810\u27e9 https://docs.rs/num/latest/num/complex/index.html: mod num::complex - complex\n\u27e811\u27e9 https://docs.rs/num/latest/num/integer/index.html: mod num::integer - integer\n\u27e812\u27e9 https://docs.rs/num/latest/num/iter/index.html: mod num::iter - iter\n\u27e813\u27e9 https://docs.rs/num/latest/num/pow/index.html: mod num::pow - pow\n\u27e814\u27e9 https://docs.rs/num/latest/num/rational/index.html: mod num::rational - rational\n\u27e815\u27e9 https://docs.rs/num/latest/num/traits/index.html: mod num::traits - traits\n\u27e816\u27e9 https://docs.rs/num/latest/num/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/num/latest/num/struct.BigInt.html: struct num::BigInt - BigInt\n\u27e818\u27e9 https://docs.rs/num/latest/num/struct.BigUint.html: struct num::BigUint - BigUint\n\u27e819\u27e9 https://docs.rs/num/latest/num/struct.Complex.html: struct num::Complex - Complex\n\u27e820\u27e9 https://docs.rs/num/latest/num/#traits: \u00a7\n\u27e821\u27e9 https://docs.rs/num/latest/num/trait.Bounded.html: trait num::Bounded - Bounded\n\u27e822\u27e9 https://docs.rs/num/latest/num/trait.CheckedAdd.html: trait num::CheckedAdd - CheckedAdd\n\u27e823\u27e9 https://docs.rs/num/latest/num/trait.CheckedDiv.html: trait num::CheckedDiv - CheckedDiv\n\u27e824\u27e9 https://docs.rs/num/latest/num/trait.CheckedMul.html: trait num::CheckedMul - CheckedMul\n\u27e825\u27e9 https://docs.rs/num/latest/num/trait.CheckedSub.html: trait num::CheckedSub - CheckedSub\n\u27e826\u27e9 https://docs.rs/num/latest/num/trait.Float.html: trait num::Float - Float\n\u27e827\u27e9 https://docs.rs/num/latest/num/trait.FromPrimitive.html: trait num::FromPrimitive - FromPrimitive\n\u27e828\u27e9 https://docs.rs/num/latest/num/trait.Integer.html: trait num::Integer - Integer\n\u27e829\u27e9 https://docs.rs/num/latest/num/trait.Num.html: trait num::Num - Num\n\u27e830\u27e9 https://docs.rs/num/latest/num/trait.NumCast.html: trait num::NumCast - NumCast\n\u27e831\u27e9 https://docs.rs/num/latest/num/trait.One.html: trait num::One - One\n\u27e832\u27e9 https://docs.rs/num/latest/num/trait.PrimInt.html: trait num::PrimInt - PrimInt\n\u27e833\u27e9 https://docs.rs/num/latest/num/trait.Saturating.html: trait num::Saturating - Saturating\n\u27e834\u27e9 https://docs.rs/num/latest/num/trait.Signed.html: trait num::Signed - Signed\n\u27e835\u27e9 https://docs.rs/num/latest/num/trait.ToPrimitive.html: trait num::ToPrimitive - ToPrimitive\n\u27e836\u27e9 https://docs.rs/num/latest/num/trait.Unsigned.html: trait num::Unsigned - Unsigned\n\u27e837\u27e9 https://docs.rs/num/latest/num/trait.Zero.html: trait num::Zero - Zero\n\u27e838\u27e9 https://docs.rs/num/latest/num/#functions: \u00a7\n\u27e839\u27e9 https://docs.rs/num/latest/num/fn.abs.html: fn num::abs - abs\n\u27e840\u27e9 https://docs.rs/num/latest/num/fn.abs_sub.html: fn num::abs_sub - abs_sub\n\u27e841\u27e9 https://docs.rs/num/latest/num/fn.cast.html: fn num::cast - cast\n\u27e842\u27e9 https://docs.rs/num/latest/num/fn.checked_pow.html: fn num::checked_pow - checked_pow\n\u27e843\u27e9 https://docs.rs/num/latest/num/fn.clamp.html: fn num::clamp - clamp\n\u27e844\u27e9 https://docs.rs/num/latest/num/fn.one.html: fn num::one - one\n\u27e845\u27e9 https://docs.rs/num/latest/num/fn.pow.html: fn num::pow - pow\n\u27e846\u27e9 https://docs.rs/num/latest/num/fn.range.html: fn num::range - range\n\u27e847\u27e9 https://docs.rs/num/latest/num/fn.range_inclusive.html: fn num::range_inclusive - start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\n\u27e848\u27e9 https://docs.rs/num/latest/num/fn.range_step.html: fn num::range_step - range_step\n\u27e849\u27e9 https://docs.rs/num/latest/num/fn.range_step_inclusive.html: fn num::range_step_inclusive - start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\n\u27e850\u27e9 https://docs.rs/num/latest/num/fn.signum.html: fn num::signum - signum\n\u27e851\u27e9 https://docs.rs/num/latest/num/fn.zero.html: fn num::zero - zero\n\u27e852\u27e9 https://docs.rs/num/latest/num/#types: \u00a7\n\u27e853\u27e9 https://docs.rs/num/latest/num/type.BigRational.html: type num::BigRational - BigRational\n\u27e854\u27e9 https://docs.rs/num/latest/num/type.Rational.html: type num::Rational - Rational\n\u27e855\u27e9 https://docs.rs/num/latest/num/type.Rational32.html: type num::Rational32 - Rational32\n\u27e856\u27e9 https://docs.rs/num/latest/num/type.Rational64.html: type num::Rational64 - Rational64\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "num",
+          "version": "0.4.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\n[Settings](https://docs.rs/num/latest/settings.html)\n[Help](https://docs.rs/num/latest/help.html)\nSummary[Source](https://docs.rs/num/latest/src/num/lib.rs.html#11-108)\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### [\u00a7](https://docs.rs/num/latest/num/#example)Example\nThis example uses the BigRational type and [Newton\u2019s method](https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method) to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### [\u00a7](https://docs.rs/num/latest/num/#compatibility)Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules[\u00a7](https://docs.rs/num/latest/num/#modules)\n\n[bigint](https://docs.rs/num/latest/num/bigint/index.html \"mod num::bigint\")\n\n\n[cast](https://docs.rs/num/latest/num/cast/index.html \"mod num::cast\")\n\n\n[complex](https://docs.rs/num/latest/num/complex/index.html \"mod num::complex\")\n\n\n[integer](https://docs.rs/num/latest/num/integer/index.html \"mod num::integer\")\n\n\n[iter](https://docs.rs/num/latest/num/iter/index.html \"mod num::iter\")\n\n\n[pow](https://docs.rs/num/latest/num/pow/index.html \"mod num::pow\")\n\n\n[rational](https://docs.rs/num/latest/num/rational/index.html \"mod num::rational\")\n\n\n[traits](https://docs.rs/num/latest/num/traits/index.html \"mod num::traits\")\n\n## Structs[\u00a7](https://docs.rs/num/latest/num/#structs)\n\n[BigInt](https://docs.rs/num/latest/num/struct.BigInt.html \"struct num::BigInt\")\n    A big signed integer type.\n\n[BigUint](https://docs.rs/num/latest/num/struct.BigUint.html \"struct num::BigUint\")\n    A big unsigned integer type.\n\n[Complex](https://docs.rs/num/latest/num/struct.Complex.html \"struct num::Complex\")\n    A complex number in Cartesian form.\n## Traits[\u00a7](https://docs.rs/num/latest/num/#traits)\n\n[Bounded](https://docs.rs/num/latest/num/trait.Bounded.html \"trait num::Bounded\")\n    Numbers which have upper and lower bounds\n\n[CheckedAdd](https://docs.rs/num/latest/num/trait.CheckedAdd.html \"trait num::CheckedAdd\")\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\n[CheckedDiv](https://docs.rs/num/latest/num/trait.CheckedDiv.html \"trait num::CheckedDiv\")\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\n[CheckedMul](https://docs.rs/num/latest/num/trait.CheckedMul.html \"trait num::CheckedMul\")\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\n[CheckedSub](https://docs.rs/num/latest/num/trait.CheckedSub.html \"trait num::CheckedSub\")\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\n[Float](https://docs.rs/num/latest/num/trait.Float.html \"trait num::Float\")\n    Generic trait for floating point numbers\n\n[FromPrimitive](https://docs.rs/num/latest/num/trait.FromPrimitive.html \"trait num::FromPrimitive\")\n    A generic trait for converting a number to a value.\n\n[Integer](https://docs.rs/num/latest/num/trait.Integer.html \"trait num::Integer\")\n\n\n[Num](https://docs.rs/num/latest/num/trait.Num.html \"trait num::Num\")\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\n[NumCast](https://docs.rs/num/latest/num/trait.NumCast.html \"trait num::NumCast\")\n    An interface for casting between machine scalars.\n\n[One](https://docs.rs/num/latest/num/trait.One.html \"trait num::One\")\n    Defines a multiplicative identity element for `Self`.\n\n[PrimInt](https://docs.rs/num/latest/num/trait.PrimInt.html \"trait num::PrimInt\")\n    Generic trait for primitive integers.\n\n[Saturating](https://docs.rs/num/latest/num/trait.Saturating.html \"trait num::Saturating\")\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\n[Signed](https://docs.rs/num/latest/num/trait.Signed.html \"trait num::Signed\")\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\n[ToPrimitive](https://docs.rs/num/latest/num/trait.ToPrimitive.html \"trait num::ToPrimitive\")\n    A generic trait for converting a value to a number.\n\n[Unsigned](https://docs.rs/num/latest/num/trait.Unsigned.html \"trait num::Unsigned\")\n    A trait for values which cannot be negative\n\n[Zero](https://docs.rs/num/latest/num/trait.Zero.html \"trait num::Zero\")\n    Defines an additive identity element for `Self`.\n## Functions[\u00a7](https://docs.rs/num/latest/num/#functions)\n\n[abs](https://docs.rs/num/latest/num/fn.abs.html \"fn num::abs\")\n    Computes the absolute value.\n\n[abs_sub](https://docs.rs/num/latest/num/fn.abs_sub.html \"fn num::abs_sub\")\n    The positive difference of two numbers.\n\n[cast](https://docs.rs/num/latest/num/fn.cast.html \"fn num::cast\")\n    Cast from one machine scalar to another.\n\n[checked_pow](https://docs.rs/num/latest/num/fn.checked_pow.html \"fn num::checked_pow\")\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\n[clamp](https://docs.rs/num/latest/num/fn.clamp.html \"fn num::clamp\")\n    A value bounded by a minimum and a maximum\n\n[one](https://docs.rs/num/latest/num/fn.one.html \"fn num::one\")\n    Returns the multiplicative identity, `1`.\n\n[pow](https://docs.rs/num/latest/num/fn.pow.html \"fn num::pow\")\n    Raises a value to the power of exp, using exponentiation by squaring.\n\n[range](https://docs.rs/num/latest/num/fn.range.html \"fn num::range\")\n    Returns an iterator over the given range [start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive](https://docs.rs/num/latest/num/fn.range_inclusive.html \"fn num::range_inclusive\")\n    Return an iterator over the range [start, stop]\n\n[range_step](https://docs.rs/num/latest/num/fn.range_step.html \"fn num::range_step\")\n    Return an iterator over the range [start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive](https://docs.rs/num/latest/num/fn.range_step_inclusive.html \"fn num::range_step_inclusive\")\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\n[signum](https://docs.rs/num/latest/num/fn.signum.html \"fn num::signum\")\n    Returns the sign of the number.\n\n[zero](https://docs.rs/num/latest/num/fn.zero.html \"fn num::zero\")\n    Returns the additive identity, `0`.\n## Type Aliases[\u00a7](https://docs.rs/num/latest/num/#types)\n\n[BigRational](https://docs.rs/num/latest/num/type.BigRational.html \"type num::BigRational\")\n    Alias for arbitrary precision rationals.\n\n[Rational](https://docs.rs/num/latest/num/type.Rational.html \"type num::Rational\")Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\n[Rational32](https://docs.rs/num/latest/num/type.Rational32.html \"type num::Rational32\")\n    Alias for a `Ratio` of 32-bit-sized integers.\n\n[Rational64](https://docs.rs/num/latest/num/type.Rational64.html \"type num::Rational64\")\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+            "markdown_with_citations": "[](https://docs.rs/num/latest/num/all.html \"show sidebar\")\n# Crate numCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA collection of numeric types and traits for Rust.\nThis includes new types for big integers, rationals, and complex numbers, new traits for generic programming on numeric properties like `Integer`, and generic range iterators.\n### \u00a7\u27e84\u27e9Example\nThis example uses the BigRational type and Newton\u2019s method\u27e85\u27e9 to approximate a square root to arbitrary precision:\n```\n\nuse num::FromPrimitive;\nuse num::bigint::BigInt;\nuse num::rational::{Ratio, BigRational};\nfn approx_sqrt(number: u64, iterations: usize) -> BigRational {\n  let start: Ratio<BigInt> = Ratio::from_integer(FromPrimitive::from_u64(number).unwrap());\n  let mut approx = start.clone();\n  for _ in 0..iterations {\n    approx = (&approx + (&start / &approx)) /\n      Ratio::from_integer(FromPrimitive::from_u64(2).unwrap());\n  }\n  approx\n}\nfn main() {\n  println!(\"{}\", approx_sqrt(10, 4)); // prints 4057691201/1283082416\n}\n\n```\n\n### \u00a7\u27e86\u27e9Compatibility\nThe `num` crate is tested for rustc 1.60 and greater.\n## Modules\u00a7\u27e87\u27e9\n\nbigint\u27e88\u27e9\n\n\ncast\u27e89\u27e9\n\n\ncomplex\u27e810\u27e9\n\n\ninteger\u27e811\u27e9\n\n\niter\u27e812\u27e9\n\n\npow\u27e813\u27e9\n\n\nrational\u27e814\u27e9\n\n\ntraits\u27e815\u27e9\n\n## Structs\u00a7\u27e816\u27e9\n\nBigInt\u27e817\u27e9\n    A big signed integer type.\n\nBigUint\u27e818\u27e9\n    A big unsigned integer type.\n\nComplex\u27e819\u27e9\n    A complex number in Cartesian form.\n## Traits\u00a7\u27e820\u27e9\n\nBounded\u27e821\u27e9\n    Numbers which have upper and lower bounds\n\nCheckedAdd\u27e822\u27e9\n    Performs addition that returns `None` instead of wrapping around on overflow.\n\nCheckedDiv\u27e823\u27e9\n    Performs division that returns `None` instead of panicking on division by zero and instead of wrapping around on underflow and overflow.\n\nCheckedMul\u27e824\u27e9\n    Performs multiplication that returns `None` instead of wrapping around on underflow or overflow.\n\nCheckedSub\u27e825\u27e9\n    Performs subtraction that returns `None` instead of wrapping around on underflow.\n\nFloat\u27e826\u27e9\n    Generic trait for floating point numbers\n\nFromPrimitive\u27e827\u27e9\n    A generic trait for converting a number to a value.\n\nInteger\u27e828\u27e9\n\n\nNum\u27e829\u27e9\n    The base trait for numeric types, covering `0` and `1` values, comparisons, basic numeric operations, and string conversion.\n\nNumCast\u27e830\u27e9\n    An interface for casting between machine scalars.\n\nOne\u27e831\u27e9\n    Defines a multiplicative identity element for `Self`.\n\nPrimInt\u27e832\u27e9\n    Generic trait for primitive integers.\n\nSaturating\u27e833\u27e9\n    Saturating math operations. Deprecated, use `SaturatingAdd`, `SaturatingSub` and `SaturatingMul` instead.\n\nSigned\u27e834\u27e9\n    Useful functions for signed numbers (i.e. numbers that can be negative).\n\nToPrimitive\u27e835\u27e9\n    A generic trait for converting a value to a number.\n\nUnsigned\u27e836\u27e9\n    A trait for values which cannot be negative\n\nZero\u27e837\u27e9\n    Defines an additive identity element for `Self`.\n## Functions\u00a7\u27e838\u27e9\n\nabs\u27e839\u27e9\n    Computes the absolute value.\n\nabs_sub\u27e840\u27e9\n    The positive difference of two numbers.\n\ncast\u27e841\u27e9\n    Cast from one machine scalar to another.\n\nchecked_pow\u27e842\u27e9\n    Raises a value to the power of exp, returning `None` if an overflow occurred.\n\nclamp\u27e843\u27e9\n    A value bounded by a minimum and a maximum\n\none\u27e844\u27e9\n    Returns the multiplicative identity, `1`.\n\npow\u27e845\u27e9\n    Raises a value to the power of exp, using exponentiation by squaring.\n\nrange\u27e846\u27e9\n    Returns an iterator over the given range start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\u27e847\u27e9\n    Return an iterator over the range [start, stop]\n\nrange_step\u27e848\u27e9\n    Return an iterator over the range start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\u27e849\u27e9\n    Return an iterator over the range [start, stop] by `step`. It handles overflow by stopping.\n\nsignum\u27e850\u27e9\n    Returns the sign of the number.\n\nzero\u27e851\u27e9\n    Returns the additive identity, `0`.\n## Type Aliases\u00a7\u27e852\u27e9\n\nBigRational\u27e853\u27e9\n    Alias for arbitrary precision rationals.\n\nRational\u27e854\u27e9Deprecated\n    Alias for a `Ratio` of machine-sized integers.\n\nRational32\u27e855\u27e9\n    Alias for a `Ratio` of 32-bit-sized integers.\n\nRational64\u27e856\u27e9\n    Alias for a `Ratio` of 64-bit-sized integers.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/num/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/num/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/num/latest/src/num/lib.rs.html#11-108: Source\n\u27e84\u27e9 https://docs.rs/num/latest/num/#example: \u00a7\n\u27e85\u27e9 https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method: Newton\u2019s method\n\u27e86\u27e9 https://docs.rs/num/latest/num/#compatibility: \u00a7\n\u27e87\u27e9 https://docs.rs/num/latest/num/#modules: \u00a7\n\u27e88\u27e9 https://docs.rs/num/latest/num/bigint/index.html: mod num::bigint - bigint\n\u27e89\u27e9 https://docs.rs/num/latest/num/cast/index.html: mod num::cast - cast\n\u27e810\u27e9 https://docs.rs/num/latest/num/complex/index.html: mod num::complex - complex\n\u27e811\u27e9 https://docs.rs/num/latest/num/integer/index.html: mod num::integer - integer\n\u27e812\u27e9 https://docs.rs/num/latest/num/iter/index.html: mod num::iter - iter\n\u27e813\u27e9 https://docs.rs/num/latest/num/pow/index.html: mod num::pow - pow\n\u27e814\u27e9 https://docs.rs/num/latest/num/rational/index.html: mod num::rational - rational\n\u27e815\u27e9 https://docs.rs/num/latest/num/traits/index.html: mod num::traits - traits\n\u27e816\u27e9 https://docs.rs/num/latest/num/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/num/latest/num/struct.BigInt.html: struct num::BigInt - BigInt\n\u27e818\u27e9 https://docs.rs/num/latest/num/struct.BigUint.html: struct num::BigUint - BigUint\n\u27e819\u27e9 https://docs.rs/num/latest/num/struct.Complex.html: struct num::Complex - Complex\n\u27e820\u27e9 https://docs.rs/num/latest/num/#traits: \u00a7\n\u27e821\u27e9 https://docs.rs/num/latest/num/trait.Bounded.html: trait num::Bounded - Bounded\n\u27e822\u27e9 https://docs.rs/num/latest/num/trait.CheckedAdd.html: trait num::CheckedAdd - CheckedAdd\n\u27e823\u27e9 https://docs.rs/num/latest/num/trait.CheckedDiv.html: trait num::CheckedDiv - CheckedDiv\n\u27e824\u27e9 https://docs.rs/num/latest/num/trait.CheckedMul.html: trait num::CheckedMul - CheckedMul\n\u27e825\u27e9 https://docs.rs/num/latest/num/trait.CheckedSub.html: trait num::CheckedSub - CheckedSub\n\u27e826\u27e9 https://docs.rs/num/latest/num/trait.Float.html: trait num::Float - Float\n\u27e827\u27e9 https://docs.rs/num/latest/num/trait.FromPrimitive.html: trait num::FromPrimitive - FromPrimitive\n\u27e828\u27e9 https://docs.rs/num/latest/num/trait.Integer.html: trait num::Integer - Integer\n\u27e829\u27e9 https://docs.rs/num/latest/num/trait.Num.html: trait num::Num - Num\n\u27e830\u27e9 https://docs.rs/num/latest/num/trait.NumCast.html: trait num::NumCast - NumCast\n\u27e831\u27e9 https://docs.rs/num/latest/num/trait.One.html: trait num::One - One\n\u27e832\u27e9 https://docs.rs/num/latest/num/trait.PrimInt.html: trait num::PrimInt - PrimInt\n\u27e833\u27e9 https://docs.rs/num/latest/num/trait.Saturating.html: trait num::Saturating - Saturating\n\u27e834\u27e9 https://docs.rs/num/latest/num/trait.Signed.html: trait num::Signed - Signed\n\u27e835\u27e9 https://docs.rs/num/latest/num/trait.ToPrimitive.html: trait num::ToPrimitive - ToPrimitive\n\u27e836\u27e9 https://docs.rs/num/latest/num/trait.Unsigned.html: trait num::Unsigned - Unsigned\n\u27e837\u27e9 https://docs.rs/num/latest/num/trait.Zero.html: trait num::Zero - Zero\n\u27e838\u27e9 https://docs.rs/num/latest/num/#functions: \u00a7\n\u27e839\u27e9 https://docs.rs/num/latest/num/fn.abs.html: fn num::abs - abs\n\u27e840\u27e9 https://docs.rs/num/latest/num/fn.abs_sub.html: fn num::abs_sub - abs_sub\n\u27e841\u27e9 https://docs.rs/num/latest/num/fn.cast.html: fn num::cast - cast\n\u27e842\u27e9 https://docs.rs/num/latest/num/fn.checked_pow.html: fn num::checked_pow - checked_pow\n\u27e843\u27e9 https://docs.rs/num/latest/num/fn.clamp.html: fn num::clamp - clamp\n\u27e844\u27e9 https://docs.rs/num/latest/num/fn.one.html: fn num::one - one\n\u27e845\u27e9 https://docs.rs/num/latest/num/fn.pow.html: fn num::pow - pow\n\u27e846\u27e9 https://docs.rs/num/latest/num/fn.range.html: fn num::range - range\n\u27e847\u27e9 https://docs.rs/num/latest/num/fn.range_inclusive.html: fn num::range_inclusive - start, stop) (that is, starting at start (inclusive), and ending at stop (exclusive)).\n\n[range_inclusive\n\u27e848\u27e9 https://docs.rs/num/latest/num/fn.range_step.html: fn num::range_step - range_step\n\u27e849\u27e9 https://docs.rs/num/latest/num/fn.range_step_inclusive.html: fn num::range_step_inclusive - start, stop) by `step`. It handles overflow by stopping.\n\n[range_step_inclusive\n\u27e850\u27e9 https://docs.rs/num/latest/num/fn.signum.html: fn num::signum - signum\n\u27e851\u27e9 https://docs.rs/num/latest/num/fn.zero.html: fn num::zero - zero\n\u27e852\u27e9 https://docs.rs/num/latest/num/#types: \u00a7\n\u27e853\u27e9 https://docs.rs/num/latest/num/type.BigRational.html: type num::BigRational - BigRational\n\u27e854\u27e9 https://docs.rs/num/latest/num/type.Rational.html: type num::Rational - Rational\n\u27e855\u27e9 https://docs.rs/num/latest/num/type.Rational32.html: type num::Rational32 - Rational32\n\u27e856\u27e9 https://docs.rs/num/latest/num/type.Rational64.html: type num::Rational64 - Rational64\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `num` crate is a comprehensive collection of numeric types, traits, and utilities for Rust, enabling advanced mathematical operations and generic programming. It provides support for big integers (`BigInt`, `BigUint`), rationals (`BigRational`), complex numbers, and traits like `Integer`, `Float`, and `Num` for numeric manipulation. Additionally, it includes functions for range iteration, checked arithmetic, and type conversions, making it ideal for precise and flexible numerical computations.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 8.0,
+          "factual_counterfactual": "### Pair 1: BigInt and BigUint Types  \n\u2705 Factual: The `num` crate provides the `BigInt` and `BigUint` types for representing arbitrarily large signed and unsigned integers, respectively. These types are useful for computations that exceed the size limits of primitive integer types.  \n\u274c Counterfactual: The `num` crate's `BigInt` and `BigUint` types are limited to 128-bit integers, making them unsuitable for computations requiring larger sizes.  \n\n---\n\n### Pair 2: Rational Numbers and Precision  \n\u2705 Factual: The `num` crate includes the `Ratio` type, which can represent rational numbers precisely using two integers for the numerator and denominator, avoiding floating-point inaccuracies.  \n\u274c Counterfactual: The `num` crate uses floating-point arithmetic for its `Ratio` type, which can lead to rounding errors when performing operations on rational numbers.  \n\n---\n\n### Pair 3: Compatibility with Rust Versions  \n\u2705 Factual: The `num` crate is tested for compatibility with Rust compiler versions 1.60 and greater, ensuring reliable functionality on modern Rust toolchains.  \n\u274c Counterfactual: The `num` crate requires nightly Rust features and is incompatible with stable Rust releases, making it unsuitable for production environments.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-1a325e9a-e6ce95f0-1751260513",
+      "timestamp": "2025-06-30T05:15:13.648637+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

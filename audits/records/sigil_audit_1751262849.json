@@ -1,0 +1,943 @@
+[
+  {
+    "execution_id": "exec-483b3cb3-13bae3f4-1751262833",
+    "timestamp": "2025-06-30T05:53:53.753968+00:00",
+    "sacred_chain": {
+      "input_data": "crossbeam",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'crossbeam' -> 'crossbeam'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "crossbeam",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/crossbeam",
+            "title": "crossbeam v0.8.4",
+            "content": {
+              "raw_markdown": "#  crossbeam v0.8.4\nTools for concurrent programming \n  * [ #rcu ](https://crates.io/keywords/rcu)\n  * [ #non-blocking ](https://crates.io/keywords/non-blocking)\n  * [ #garbage ](https://crates.io/keywords/garbage)\n  * [ #atomic ](https://crates.io/keywords/atomic)\n  * [ #lock-free ](https://crates.io/keywords/lock-free)\n\n\n  * [ Readme ](https://crates.io/crates/crossbeam)\n  * [ 36 Versions ](https://crates.io/crates/crossbeam/versions)\n  * [ Dependencies ](https://crates.io/crates/crossbeam/dependencies)\n  * [ Dependents ](https://crates.io/crates/crossbeam/reverse_dependencies)\n\n\n## Metadata\nover 1 year ago \nv1.61.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n10.3 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add crossbeam\nOr add the following line to your Cargo.toml:\ncrossbeam = \"0.8.4\"\n## Repository\n[ github.com/crossbeam-rs/crossbeam ](https://github.com/crossbeam-rs/crossbeam)\n## Owners\n## Categories\n  * [No standard library](https://crates.io/categories/no-std)\n  * [Concurrency](https://crates.io/categories/concurrency)\n  * [Data structures](https://crates.io/categories/data-structures)\n  * [Memory management](https://crates.io/categories/memory-management)\n\n\n[ Report crate ](https://crates.io/support?crate=crossbeam&inquire=crate-violation)\n### Stats Overview\n57,084,811 Downloads all time\n36 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  crossbeam v0.8.4\nTools for concurrent programming \n  *  #rcu \u27e81\u27e9\n  *  #non-blocking \u27e82\u27e9\n  *  #garbage \u27e83\u27e9\n  *  #atomic \u27e84\u27e9\n  *  #lock-free \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  36 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nover 1 year ago \nv1.61.0 \n MIT \u27e810\u27e9 OR  Apache-2.0 \u27e811\u27e9\n10.3 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add crossbeam\nOr add the following line to your Cargo.toml:\ncrossbeam = \"0.8.4\"\n## Repository\n github.com/crossbeam-rs/crossbeam \u27e812\u27e9\n## Owners\n## Categories\n  * No standard library\u27e813\u27e9\n  * Concurrency\u27e814\u27e9\n  * Data structures\u27e815\u27e9\n  * Memory management\u27e816\u27e9\n\n\n Report crate \u27e817\u27e9\n### Stats Overview\n57,084,811 Downloads all time\n36 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/rcu:  #rcu \n\u27e82\u27e9 https://crates.io/keywords/non-blocking:  #non-blocking \n\u27e83\u27e9 https://crates.io/keywords/garbage:  #garbage \n\u27e84\u27e9 https://crates.io/keywords/atomic:  #atomic \n\u27e85\u27e9 https://crates.io/keywords/lock-free:  #lock-free \n\u27e86\u27e9 https://crates.io/crates/crossbeam:  Readme \n\u27e87\u27e9 https://crates.io/crates/crossbeam/versions:  36 Versions \n\u27e88\u27e9 https://crates.io/crates/crossbeam/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/crossbeam/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e812\u27e9 https://github.com/crossbeam-rs/crossbeam:  github.com/crossbeam-rs/crossbeam \n\u27e813\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e814\u27e9 https://crates.io/categories/concurrency: Concurrency\n\u27e815\u27e9 https://crates.io/categories/data-structures: Data structures\n\u27e816\u27e9 https://crates.io/categories/memory-management: Memory management\n\u27e817\u27e9 https://crates.io/support?crate=crossbeam&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1544,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116623.7064423"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/crossbeam",
+            "title": "Crate crossbeamCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\n[Settings](https://docs.rs/crossbeam/latest/settings.html)\n[Help](https://docs.rs/crossbeam/latest/help.html)\nSummary[Source](https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81)\nExpand description\nTools for concurrent programming.\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#atomics)Atomics\n  * [`AtomicCell`](https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html \"struct crossbeam::atomic::AtomicCell\"), a thread-safe mutable memory location.\n  * [`AtomicConsume`](https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html \"trait crossbeam::atomic::AtomicConsume\"), for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#data-structures)Data structures\n  * [`deque`](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\"), work-stealing deques for building task schedulers.\n  * [`ArrayQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html \"struct crossbeam::queue::ArrayQueue\"), a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * [`SegQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html \"struct crossbeam::queue::SegQueue\"), an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#memory-management)Memory management\n  * [`epoch`](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\"), an epoch-based garbage collector.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization)Thread synchronization\n  * [`channel`](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\"), multi-producer multi-consumer channels for message passing.\n  * [`Parker`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html \"struct crossbeam::sync::Parker\"), a thread parking primitive.\n  * [`ShardedLock`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html \"struct crossbeam::sync::ShardedLock\"), a sharded reader-writer lock with fast concurrent reads.\n  * [`WaitGroup`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html \"struct crossbeam::sync::WaitGroup\"), for synchronizing the beginning or end of some computation.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#utilities)Utilities\n  * [`Backoff`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html \"struct crossbeam::utils::Backoff\"), for exponential backoff in spin loops.\n  * [`CachePadded`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html \"struct crossbeam::utils::CachePadded\"), for padding and aligning a value to the length of a cache line.\n  * [`scope`](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\"), for spawning threads that borrow local variables from the stack.\n\n\n## Modules[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#modules)\n\n[atomic](https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html \"mod crossbeam::atomic\")\n    Atomic types.\n\n[channel](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\")\n    Multi-producer multi-consumer channels for message passing.\n\n[deque](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\")\n    Concurrent work-stealing deques.\n\n[epoch](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\")\n    Epoch-based memory reclamation.\n\n[queue](https://docs.rs/crossbeam/latest/crossbeam/queue/index.html \"mod crossbeam::queue\")\n    Concurrent queues.\n\n[sync](https://docs.rs/crossbeam/latest/crossbeam/sync/index.html \"mod crossbeam::sync\")\n    Thread synchronization primitives.\n\n[thread](https://docs.rs/crossbeam/latest/crossbeam/thread/index.html \"mod crossbeam::thread\")\n    Threads that can borrow variables from the stack.\n\n[utils](https://docs.rs/crossbeam/latest/crossbeam/utils/index.html \"mod crossbeam::utils\")\n    Miscellaneous utilities.\n## Macros[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#macros)\n\n[select](https://docs.rs/crossbeam/latest/crossbeam/macro.select.html \"macro crossbeam::select\")\n    Selects from a set of channel operations.\n## Functions[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#functions)\n\n[scope](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\")\n    Creates a new scope for spawning threads.\n",
+              "markdown_with_citations": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nTools for concurrent programming.\n### \u00a7\u27e84\u27e9Atomics\n  * `AtomicCell`\u27e85\u27e9, a thread-safe mutable memory location.\n  * `AtomicConsume`\u27e86\u27e9, for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### \u00a7\u27e87\u27e9Data structures\n  * `deque`\u27e88\u27e9, work-stealing deques for building task schedulers.\n  * `ArrayQueue`\u27e89\u27e9, a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * `SegQueue`\u27e810\u27e9, an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### \u00a7\u27e811\u27e9Memory management\n  * `epoch`\u27e812\u27e9, an epoch-based garbage collector.\n\n\n### \u00a7\u27e813\u27e9Thread synchronization\n  * `channel`\u27e814\u27e9, multi-producer multi-consumer channels for message passing.\n  * `Parker`\u27e815\u27e9, a thread parking primitive.\n  * `ShardedLock`\u27e816\u27e9, a sharded reader-writer lock with fast concurrent reads.\n  * `WaitGroup`\u27e817\u27e9, for synchronizing the beginning or end of some computation.\n\n\n### \u00a7\u27e818\u27e9Utilities\n  * `Backoff`\u27e819\u27e9, for exponential backoff in spin loops.\n  * `CachePadded`\u27e820\u27e9, for padding and aligning a value to the length of a cache line.\n  * `scope`\u27e821\u27e9, for spawning threads that borrow local variables from the stack.\n\n\n## Modules\u00a7\u27e822\u27e9\n\natomic\u27e823\u27e9\n    Atomic types.\n\nchannel\u27e814\u27e9\n    Multi-producer multi-consumer channels for message passing.\n\ndeque\u27e88\u27e9\n    Concurrent work-stealing deques.\n\nepoch\u27e812\u27e9\n    Epoch-based memory reclamation.\n\nqueue\u27e824\u27e9\n    Concurrent queues.\n\nsync\u27e825\u27e9\n    Thread synchronization primitives.\n\nthread\u27e826\u27e9\n    Threads that can borrow variables from the stack.\n\nutils\u27e827\u27e9\n    Miscellaneous utilities.\n## Macros\u00a7\u27e828\u27e9\n\nselect\u27e829\u27e9\n    Selects from a set of channel operations.\n## Functions\u00a7\u27e830\u27e9\n\nscope\u27e821\u27e9\n    Creates a new scope for spawning threads.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/crossbeam/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/crossbeam/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#atomics: \u00a7\n\u27e85\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html: struct crossbeam::atomic::AtomicCell - `AtomicCell`\n\u27e86\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html: trait crossbeam::atomic::AtomicConsume - `AtomicConsume`\n\u27e87\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#data-structures: \u00a7\n\u27e88\u27e9 https://docs.rs/crossbeam/latest/crossbeam/deque/index.html: mod crossbeam::deque - `deque`\n\u27e89\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html: struct crossbeam::queue::ArrayQueue - `ArrayQueue`\n\u27e810\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html: struct crossbeam::queue::SegQueue - `SegQueue`\n\u27e811\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#memory-management: \u00a7\n\u27e812\u27e9 https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html: mod crossbeam::epoch - `epoch`\n\u27e813\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization: \u00a7\n\u27e814\u27e9 https://docs.rs/crossbeam/latest/crossbeam/channel/index.html: mod crossbeam::channel - `channel`\n\u27e815\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html: struct crossbeam::sync::Parker - `Parker`\n\u27e816\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html: struct crossbeam::sync::ShardedLock - `ShardedLock`\n\u27e817\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html: struct crossbeam::sync::WaitGroup - `WaitGroup`\n\u27e818\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#utilities: \u00a7\n\u27e819\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html: struct crossbeam::utils::Backoff - `Backoff`\n\u27e820\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html: struct crossbeam::utils::CachePadded - `CachePadded`\n\u27e821\u27e9 https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html: fn crossbeam::scope - `scope`\n\u27e822\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#modules: \u00a7\n\u27e823\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html: mod crossbeam::atomic - atomic\n\u27e824\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/index.html: mod crossbeam::queue - queue\n\u27e825\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/index.html: mod crossbeam::sync - sync\n\u27e826\u27e9 https://docs.rs/crossbeam/latest/crossbeam/thread/index.html: mod crossbeam::thread - thread\n\u27e827\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/index.html: mod crossbeam::utils - utils\n\u27e828\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#macros: \u00a7\n\u27e829\u27e9 https://docs.rs/crossbeam/latest/crossbeam/macro.select.html: macro crossbeam::select - select\n\u27e830\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#functions: \u00a7\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4574,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116624.4172573"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/crossbeam",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [34 releases](https://lib.rs/crates/crossbeam/versions)\n0.8.4 |  Jan 8, 2024   \n---|---  \n0.8.3 |  Dec 24, 2023   \n0.8.2 |  Jul 23, 2022   \n0.8.1 |  May 30, 2021   \n0.1.6 |  Nov 2, 2015   \n#**10** in [Concurrency](https://lib.rs/concurrency \"Crates for implementing concurrent and parallel computation.\")\nDownload history 366989/week @ 2025-01-28 430791/week @ 2025-02-04 461853/week @ 2025-02-11 487844/week @ 2025-02-18 483919/week @ 2025-02-25 503110/week @ 2025-03-04 516888/week @ 2025-03-11 472379/week @ 2025-03-18 453563/week @ 2025-03-25 433251/week @ 2025-04-01 450225/week @ 2025-04-08 455491/week @ 2025-04-15 512483/week @ 2025-04-22 472698/week @ 2025-04-29 459044/week @ 2025-05-06 404062/week @ 2025-05-13\n**1,912,127** downloads per month Used in [**3,540** crates (975 directly)](https://lib.rs/crates/crossbeam/rev)\n**MIT/Apache**\n250KB  3.5K  SLoC\n# Crossbeam\n[![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/crossbeam-rs/crossbeam/workflows/CI/badge.svg)](https://github.com/crossbeam-rs/crossbeam/actions) [![License](https://img.shields.io/badge/license-MIT_OR_Apache--2.0-blue.svg)](https://github.com/crossbeam-rs/crossbeam#license) [![Cargo](https://img.shields.io/crates/v/crossbeam.svg)](https://crates.io/crates/crossbeam) [![Documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/crossbeam/badge.svg)](https://docs.rs/crossbeam) [![Rust 1.61+](https://img.shields.io/badge/rust-1.61+-lightgray.svg)](https://www.rust-lang.org) [![chat](https://img.shields.io/discord/569610676205781012.svg?logo=discord)](https://discord.com/invite/JXYwgWZ)\nThis crate provides a set of tools for concurrent programming:\n#### Atomics\n  * [``AtomicCell``](https://docs.rs/crossbeam/*/crossbeam/atomic/struct.AtomicCell.html), a thread-safe mutable memory location.(no_std)\n  * [``AtomicConsume``](https://docs.rs/crossbeam/*/crossbeam/atomic/trait.AtomicConsume.html), for reading from primitive atomic types with \"consume\" ordering.(no_std)\n\n\n#### Data structures\n  * [``deque``](https://docs.rs/crossbeam/*/crossbeam/deque/index.html), work-stealing deques for building task schedulers.\n  * [``ArrayQueue``](https://docs.rs/crossbeam/*/crossbeam/queue/struct.ArrayQueue.html), a bounded MPMC queue that allocates a fixed-capacity buffer on construction.(alloc)\n  * [``SegQueue``](https://docs.rs/crossbeam/*/crossbeam/queue/struct.SegQueue.html), an unbounded MPMC queue that allocates small buffers, segments, on demand.(alloc)\n\n\n#### Memory management\n  * [``epoch``](https://docs.rs/crossbeam/*/crossbeam/epoch/index.html), an epoch-based garbage collector.(alloc)\n\n\n#### Thread synchronization\n  * [``channel``](https://docs.rs/crossbeam/*/crossbeam/channel/index.html), multi-producer multi-consumer channels for message passing.\n  * [``Parker``](https://docs.rs/crossbeam/*/crossbeam/sync/struct.Parker.html), a thread parking primitive.\n  * [``ShardedLock``](https://docs.rs/crossbeam/*/crossbeam/sync/struct.ShardedLock.html), a sharded reader-writer lock with fast concurrent reads.\n  * [``WaitGroup``](https://docs.rs/crossbeam/*/crossbeam/sync/struct.WaitGroup.html), for synchronizing the beginning or end of some computation.\n\n\n#### Utilities\n  * [``Backoff``](https://docs.rs/crossbeam/*/crossbeam/utils/struct.Backoff.html), for exponential backoff in spin loops.(no_std)\n  * [``CachePadded``](https://docs.rs/crossbeam/*/crossbeam/utils/struct.CachePadded.html), for padding and aligning a value to the length of a cache line.(no_std)\n  * [``scope``](https://docs.rs/crossbeam/*/crossbeam/fn.scope.html), for spawning threads that borrow local variables from the stack.\n\n\n_Features marked with(no_std) can be used in ``no_std`` environments._ _Features marked with(alloc) can be used in ``no_std`` environments, but only if ``alloc`` feature is enabled._\n## Crates\nThe main ``crossbeam`` crate just [re-exports](https://github.com/crossbeam-rs/crossbeam/blob/master/src/lib.rs) tools from smaller subcrates:\n  * [``crossbeam-channel``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-channel) provides multi-producer multi-consumer channels for message passing.\n  * [``crossbeam-deque``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-deque) provides work-stealing deques, which are primarily intended for building task schedulers.\n  * [``crossbeam-epoch``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-epoch) provides epoch-based garbage collection for building concurrent data structures.\n  * [``crossbeam-queue``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-queue) provides concurrent queues that can be shared among threads.\n  * [``crossbeam-utils``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-utils) provides atomics, synchronization primitives, scoped threads, and other utilities.\n\n\nThere is one more experimental subcrate that is not yet included in ``crossbeam``:\n  * [``crossbeam-skiplist``](https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-skiplist) provides concurrent maps and sets based on lock-free skip lists.\n\n\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`crossbeam ``=` ``\"`0.8`\"``\n``\n```\n\n## Compatibility\nCrossbeam supports stable Rust releases going back at least six months, and every time the minimum supported Rust version is increased, a new minor version is released. Currently, the minimum supported Rust version is 1.61.\n## Contributing\nCrossbeam welcomes contribution from everyone in the form of suggestions, bug reports, pull requests, and feedback. \ud83d\udc9b\nIf you need ideas for contribution, there are several ways to get started:\n  * Found a bug or have a feature request? [Submit an issue](https://github.com/crossbeam-rs/crossbeam/issues/new)!\n  * Issues and PRs labeled with [feedback wanted](https://github.com/crossbeam-rs/crossbeam/issues?utf8=%E2%9C%93&q=is%3Aopen+sort%3Aupdated-desc+label%3A%22feedback+wanted%22+) need feedback from users and contributors.\n  * Issues labeled with [good first issue](https://github.com/crossbeam-rs/crossbeam/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22) are relatively easy starter issues.\n\n\n#### RFCs\nWe also have the [RFCs](https://github.com/crossbeam-rs/rfcs) repository for more high-level discussion, which is the place where we brainstorm ideas and propose substantial changes to Crossbeam.\nYou are welcome to participate in any open [issues](https://github.com/crossbeam-rs/rfcs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc) or [pull requests](https://github.com/crossbeam-rs/rfcs/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc).\n#### Learning resources\nIf you'd like to learn more about concurrency and non-blocking data structures, there's a list of learning resources in our [wiki](https://github.com/crossbeam-rs/rfcs/wiki), which includes relevant blog posts, papers, videos, and other similar projects.\nAnother good place to visit is [merged RFCs](https://github.com/crossbeam-rs/rfcs/tree/master/text). They contain elaborate descriptions and rationale for features we've introduced to Crossbeam, but keep in mind that some of the written information is now out of date.\n#### Conduct\nThe Crossbeam project adheres to the [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct). This describes the minimum behavior expected from all contributors.\n## License\nLicensed under either of\n  * Apache License, Version 2.0 ([LICENSE-APACHE](https://github.com/crossbeam-rs/crossbeam/blob/master/LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license ([LICENSE-MIT](https://github.com/crossbeam-rs/crossbeam/blob/master/LICENSE-MIT) or <http://opensource.org/licenses/MIT>)\n\n\nat your option.\nSome Crossbeam subcrates have additional licensing notices. Take a look at other readme files in this repository for more information.\n#### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n  * [std](https://lib.rs/crates/crossbeam/features#feature-std \"default feature\") [crossbeam-channel](https://lib.rs/crates/crossbeam-channel \"0.5.10\")\n  * [std](https://lib.rs/crates/crossbeam/features#feature-std \"default feature\") [crossbeam-deque](https://lib.rs/crates/crossbeam-deque \"0.8.4\")\n  * [alloc](https://lib.rs/crates/crossbeam/features#feature-alloc \"default feature\") [nightly?](https://lib.rs/crates/crossbeam/features#feature-nightly \"optional feature\") [std](https://lib.rs/crates/crossbeam/features#feature-std \"default feature\") [crossbeam-epoch](https://lib.rs/crates/crossbeam-epoch \"0.9.17\")\n  * [alloc](https://lib.rs/crates/crossbeam/features#feature-alloc \"default feature\") [nightly?](https://lib.rs/crates/crossbeam/features#feature-nightly \"optional feature\") [std](https://lib.rs/crates/crossbeam/features#feature-std \"default feature\") [crossbeam-queue](https://lib.rs/crates/crossbeam-queue \"0.3.10\")\n  * [crossbeam-utils](https://lib.rs/crates/crossbeam-utils \"0.8.18\")\n\n\n  * dev  [rand](https://lib.rs/crates/rand \"outdated\") 0.8\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  34 releases\u27e81\u27e9\n0.8.4 |  Jan 8, 2024   \n---|---  \n0.8.3 |  Dec 24, 2023   \n0.8.2 |  Jul 23, 2022   \n0.8.1 |  May 30, 2021   \n0.1.6 |  Nov 2, 2015   \n#**10** in Concurrency\u27e82\u27e9\nDownload history 366989/week @ 2025-01-28 430791/week @ 2025-02-04 461853/week @ 2025-02-11 487844/week @ 2025-02-18 483919/week @ 2025-02-25 503110/week @ 2025-03-04 516888/week @ 2025-03-11 472379/week @ 2025-03-18 453563/week @ 2025-03-25 433251/week @ 2025-04-01 450225/week @ 2025-04-08 455491/week @ 2025-04-15 512483/week @ 2025-04-22 472698/week @ 2025-04-29 459044/week @ 2025-05-06 404062/week @ 2025-05-13\n**1,912,127** downloads per month Used in **3,540** crates (975 directly)\u27e83\u27e9\n**MIT/Apache**\n250KB  3.5K  SLoC\n# Crossbeam\n![Build Status\u27e84\u27e9](https://github.com/crossbeam-rs/crossbeam/actions) ![License\u27e85\u27e9](https://github.com/crossbeam-rs/crossbeam#license) ![Cargo\u27e86\u27e9](https://crates.io/crates/crossbeam) ![Documentation\u27e87\u27e9](https://docs.rs/crossbeam) ![Rust 1.61+\u27e88\u27e9](https://www.rust-lang.org) ![chat\u27e89\u27e9](https://discord.com/invite/JXYwgWZ)\nThis crate provides a set of tools for concurrent programming:\n#### Atomics\n  * ``AtomicCell``\u27e810\u27e9, a thread-safe mutable memory location.(no_std)\n  * ``AtomicConsume``\u27e811\u27e9, for reading from primitive atomic types with \"consume\" ordering.(no_std)\n\n\n#### Data structures\n  * ``deque``\u27e812\u27e9, work-stealing deques for building task schedulers.\n  * ``ArrayQueue``\u27e813\u27e9, a bounded MPMC queue that allocates a fixed-capacity buffer on construction.(alloc)\n  * ``SegQueue``\u27e814\u27e9, an unbounded MPMC queue that allocates small buffers, segments, on demand.(alloc)\n\n\n#### Memory management\n  * ``epoch``\u27e815\u27e9, an epoch-based garbage collector.(alloc)\n\n\n#### Thread synchronization\n  * ``channel``\u27e816\u27e9, multi-producer multi-consumer channels for message passing.\n  * ``Parker``\u27e817\u27e9, a thread parking primitive.\n  * ``ShardedLock``\u27e818\u27e9, a sharded reader-writer lock with fast concurrent reads.\n  * ``WaitGroup``\u27e819\u27e9, for synchronizing the beginning or end of some computation.\n\n\n#### Utilities\n  * ``Backoff``\u27e820\u27e9, for exponential backoff in spin loops.(no_std)\n  * ``CachePadded``\u27e821\u27e9, for padding and aligning a value to the length of a cache line.(no_std)\n  * ``scope``\u27e822\u27e9, for spawning threads that borrow local variables from the stack.\n\n\n_Features marked with(no_std) can be used in ``no_std`` environments._ _Features marked with(alloc) can be used in ``no_std`` environments, but only if ``alloc`` feature is enabled._\n## Crates\nThe main ``crossbeam`` crate just re-exports\u27e823\u27e9 tools from smaller subcrates:\n  * ``crossbeam-channel``\u27e824\u27e9 provides multi-producer multi-consumer channels for message passing.\n  * ``crossbeam-deque``\u27e825\u27e9 provides work-stealing deques, which are primarily intended for building task schedulers.\n  * ``crossbeam-epoch``\u27e826\u27e9 provides epoch-based garbage collection for building concurrent data structures.\n  * ``crossbeam-queue``\u27e827\u27e9 provides concurrent queues that can be shared among threads.\n  * ``crossbeam-utils``\u27e828\u27e9 provides atomics, synchronization primitives, scoped threads, and other utilities.\n\n\nThere is one more experimental subcrate that is not yet included in ``crossbeam``:\n  * ``crossbeam-skiplist``\u27e829\u27e9 provides concurrent maps and sets based on lock-free skip lists.\n\n\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`crossbeam ``=` ``\"`0.8`\"``\n``\n```\n\n## Compatibility\nCrossbeam supports stable Rust releases going back at least six months, and every time the minimum supported Rust version is increased, a new minor version is released. Currently, the minimum supported Rust version is 1.61.\n## Contributing\nCrossbeam welcomes contribution from everyone in the form of suggestions, bug reports, pull requests, and feedback. \ud83d\udc9b\nIf you need ideas for contribution, there are several ways to get started:\n  * Found a bug or have a feature request? Submit an issue\u27e830\u27e9!\n  * Issues and PRs labeled with feedback wanted\u27e831\u27e9 need feedback from users and contributors.\n  * Issues labeled with good first issue\u27e832\u27e9 are relatively easy starter issues.\n\n\n#### RFCs\nWe also have the RFCs\u27e833\u27e9 repository for more high-level discussion, which is the place where we brainstorm ideas and propose substantial changes to Crossbeam.\nYou are welcome to participate in any open issues\u27e834\u27e9 or pull requests\u27e835\u27e9.\n#### Learning resources\nIf you'd like to learn more about concurrency and non-blocking data structures, there's a list of learning resources in our wiki\u27e836\u27e9, which includes relevant blog posts, papers, videos, and other similar projects.\nAnother good place to visit is merged RFCs\u27e837\u27e9. They contain elaborate descriptions and rationale for features we've introduced to Crossbeam, but keep in mind that some of the written information is now out of date.\n#### Conduct\nThe Crossbeam project adheres to the Rust Code of Conduct\u27e838\u27e9. This describes the minimum behavior expected from all contributors.\n## License\nLicensed under either of\n  * Apache License, Version 2.0 (LICENSE-APACHE\u27e839\u27e9 or <http://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license (LICENSE-MIT\u27e840\u27e9 or <http://opensource.org/licenses/MIT>)\n\n\nat your option.\nSome Crossbeam subcrates have additional licensing notices. Take a look at other readme files in this repository for more information.\n#### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n  * std\u27e841\u27e9 crossbeam-channel\u27e842\u27e9\n  * std\u27e841\u27e9 crossbeam-deque\u27e843\u27e9\n  * alloc\u27e844\u27e9 nightly?\u27e845\u27e9 std\u27e841\u27e9 crossbeam-epoch\u27e846\u27e9\n  * alloc\u27e844\u27e9 nightly?\u27e845\u27e9 std\u27e841\u27e9 crossbeam-queue\u27e847\u27e9\n  * crossbeam-utils\u27e848\u27e9\n\n\n  * dev  rand\u27e849\u27e9 0.8\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/crossbeam/versions: 34 releases\n\u27e82\u27e9 https://lib.rs/concurrency: Crates for implementing concurrent and parallel computation. - Concurrency\n\u27e83\u27e9 https://lib.rs/crates/crossbeam/rev: **3,540** crates (975 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/crossbeam-rs/crossbeam/workflows/CI/badge.svg: ![Build Status\n\u27e85\u27e9 https://img.shields.io/badge/license-MIT_OR_Apache--2.0-blue.svg: ![License\n\u27e86\u27e9 https://img.shields.io/crates/v/crossbeam.svg: ![Cargo\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/crossbeam/badge.svg: ![Documentation\n\u27e88\u27e9 https://img.shields.io/badge/rust-1.61+-lightgray.svg: ![Rust 1.61+\n\u27e89\u27e9 https://img.shields.io/discord/569610676205781012.svg?logo=discord: ![chat\n\u27e810\u27e9 https://docs.rs/crossbeam/*/crossbeam/atomic/struct.AtomicCell.html: ``AtomicCell``\n\u27e811\u27e9 https://docs.rs/crossbeam/*/crossbeam/atomic/trait.AtomicConsume.html: ``AtomicConsume``\n\u27e812\u27e9 https://docs.rs/crossbeam/*/crossbeam/deque/index.html: ``deque``\n\u27e813\u27e9 https://docs.rs/crossbeam/*/crossbeam/queue/struct.ArrayQueue.html: ``ArrayQueue``\n\u27e814\u27e9 https://docs.rs/crossbeam/*/crossbeam/queue/struct.SegQueue.html: ``SegQueue``\n\u27e815\u27e9 https://docs.rs/crossbeam/*/crossbeam/epoch/index.html: ``epoch``\n\u27e816\u27e9 https://docs.rs/crossbeam/*/crossbeam/channel/index.html: ``channel``\n\u27e817\u27e9 https://docs.rs/crossbeam/*/crossbeam/sync/struct.Parker.html: ``Parker``\n\u27e818\u27e9 https://docs.rs/crossbeam/*/crossbeam/sync/struct.ShardedLock.html: ``ShardedLock``\n\u27e819\u27e9 https://docs.rs/crossbeam/*/crossbeam/sync/struct.WaitGroup.html: ``WaitGroup``\n\u27e820\u27e9 https://docs.rs/crossbeam/*/crossbeam/utils/struct.Backoff.html: ``Backoff``\n\u27e821\u27e9 https://docs.rs/crossbeam/*/crossbeam/utils/struct.CachePadded.html: ``CachePadded``\n\u27e822\u27e9 https://docs.rs/crossbeam/*/crossbeam/fn.scope.html: ``scope``\n\u27e823\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/src/lib.rs: re-exports\n\u27e824\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-channel: ``crossbeam-channel``\n\u27e825\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-deque: ``crossbeam-deque``\n\u27e826\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-epoch: ``crossbeam-epoch``\n\u27e827\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-queue: ``crossbeam-queue``\n\u27e828\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-utils: ``crossbeam-utils``\n\u27e829\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/crossbeam-skiplist: ``crossbeam-skiplist``\n\u27e830\u27e9 https://github.com/crossbeam-rs/crossbeam/issues/new: Submit an issue\n\u27e831\u27e9 https://github.com/crossbeam-rs/crossbeam/issues?utf8=%E2%9C%93&q=is%3Aopen+sort%3Aupdated-desc+label%3A%22feedback+wanted%22+: feedback wanted\n\u27e832\u27e9 https://github.com/crossbeam-rs/crossbeam/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22: good first issue\n\u27e833\u27e9 https://github.com/crossbeam-rs/rfcs: RFCs\n\u27e834\u27e9 https://github.com/crossbeam-rs/rfcs/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc: issues\n\u27e835\u27e9 https://github.com/crossbeam-rs/rfcs/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc: pull requests\n\u27e836\u27e9 https://github.com/crossbeam-rs/rfcs/wiki: wiki\n\u27e837\u27e9 https://github.com/crossbeam-rs/rfcs/tree/master/text: merged RFCs\n\u27e838\u27e9 https://www.rust-lang.org/policies/code-of-conduct: Rust Code of Conduct\n\u27e839\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/LICENSE-APACHE: LICENSE-APACHE\n\u27e840\u27e9 https://github.com/crossbeam-rs/crossbeam/blob/master/LICENSE-MIT: LICENSE-MIT\n\u27e841\u27e9 https://lib.rs/crates/crossbeam/features#feature-std: default feature - std\n\u27e842\u27e9 https://lib.rs/crates/crossbeam-channel: 0.5.10 - crossbeam-channel\n\u27e843\u27e9 https://lib.rs/crates/crossbeam-deque: 0.8.4 - crossbeam-deque\n\u27e844\u27e9 https://lib.rs/crates/crossbeam/features#feature-alloc: default feature - alloc\n\u27e845\u27e9 https://lib.rs/crates/crossbeam/features#feature-nightly: optional feature - nightly?\n\u27e846\u27e9 https://lib.rs/crates/crossbeam-epoch: 0.9.17 - crossbeam-epoch\n\u27e847\u27e9 https://lib.rs/crates/crossbeam-queue: 0.3.10 - crossbeam-queue\n\u27e848\u27e9 https://lib.rs/crates/crossbeam-utils: 0.8.18 - crossbeam-utils\n\u27e849\u27e9 https://lib.rs/crates/rand: outdated - rand\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9260,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116624.8528475"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-fa9754cdc3e3a37a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-fa9754cdc3e3a37a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-c09e493f89b8d7f2\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_utils-e068025586ae0021.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-queue@0.3.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-queue-0.3.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_queue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-queue-0.3.12\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_queue-482c6a6b49137367.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-epoch@0.9.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-epoch-0.9.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_epoch",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-epoch-0.9.18\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_epoch-d3f7c19ac1b6eb03.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-deque@0.8.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-deque-0.8.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_deque",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-deque-0.8.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_deque-fd7666a16143a67b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-channel@0.5.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_channel",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_channel-5320441b1d02c707.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpiv7a4r6v/crossbeam-0.8.4#crossbeam@0.8.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `crossbeam_loom`\n  --> src\\lib.rs:80:11\n   |\n80 | #[cfg(not(crossbeam_loom))]\n   |           ^^^^^^^^^^^^^^\n   |\n   = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n   = help: consider using a Cargo feature instead\n   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n            [lints.rust]\n            unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(crossbeam_loom)'] }\n   = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(crossbeam_loom)\");` to the top of the `build.rs`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n   = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(crossbeam_loom)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(crossbeam_loom)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `crossbeam_loom`",
+                "spans": [
+                  {
+                    "byte_end": 2458,
+                    "byte_start": 2444,
+                    "column_end": 25,
+                    "column_start": 11,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 80,
+                    "line_start": 80,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 11,
+                        "text": "#[cfg(not(crossbeam_loom))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpiv7a4r6v/crossbeam-0.8.4#crossbeam@0.8.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "crossbeam-channel",
+                "crossbeam-deque",
+                "crossbeam-epoch",
+                "crossbeam-queue",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam-b9bb94d469ef3cc1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-fa9754cdc3e3a37a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-fa9754cdc3e3a37a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\build\\crossbeam-utils-c09e493f89b8d7f2\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_utils-e068025586ae0021.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-epoch@0.9.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-epoch-0.9.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_epoch",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-epoch-0.9.18\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_epoch-d3f7c19ac1b6eb03.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-deque@0.8.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-deque-0.8.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_deque",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-deque-0.8.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_deque-fd7666a16143a67b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-queue@0.3.12",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-queue-0.3.12\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_queue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-queue-0.3.12\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_queue-482c6a6b49137367.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-channel@0.5.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_channel",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.15\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam_channel-5320441b1d02c707.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpiv7a4r6v/crossbeam-0.8.4#crossbeam@0.8.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition name: `crossbeam_loom`\n  --> src\\lib.rs:80:11\n   |\n80 | #[cfg(not(crossbeam_loom))]\n   |           ^^^^^^^^^^^^^^\n   |\n   = help: expected names are: `docsrs`, `feature`, and `test` and 31 more\n   = help: consider using a Cargo feature instead\n   = help: or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n            [lints.rust]\n            unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(crossbeam_loom)'] }\n   = help: or consider adding `println!(\"cargo::rustc-check-cfg=cfg(crossbeam_loom)\");` to the top of the `build.rs`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n   = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "expected names are: `docsrs`, `feature`, and `test` and 31 more",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider using a Cargo feature instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding in `Cargo.toml` the `check-cfg` lint config for the lint:\n [lints.rust]\n unexpected_cfgs = { level = \"warn\", check-cfg = ['cfg(crossbeam_loom)'] }",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "or consider adding `println!(\"cargo::rustc-check-cfg=cfg(crossbeam_loom)\");` to the top of the `build.rs`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition name: `crossbeam_loom`",
+                "spans": [
+                  {
+                    "byte_end": 2458,
+                    "byte_start": 2444,
+                    "column_end": 25,
+                    "column_start": 11,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 80,
+                    "line_start": 80,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 11,
+                        "text": "#[cfg(not(crossbeam_loom))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpiv7a4r6v/crossbeam-0.8.4#crossbeam@0.8.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "crossbeam-channel",
+                "crossbeam-deque",
+                "crossbeam-epoch",
+                "crossbeam-queue",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpiv7a4r6v\\crossbeam-0.8.4\\target\\debug\\deps\\libcrossbeam-eed18a5b2c4b6099.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 20
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "crossbeam",
+          "version": "0.8.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\n[Settings](https://docs.rs/crossbeam/latest/settings.html)\n[Help](https://docs.rs/crossbeam/latest/help.html)\nSummary[Source](https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81)\nExpand description\nTools for concurrent programming.\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#atomics)Atomics\n  * [`AtomicCell`](https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html \"struct crossbeam::atomic::AtomicCell\"), a thread-safe mutable memory location.\n  * [`AtomicConsume`](https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html \"trait crossbeam::atomic::AtomicConsume\"), for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#data-structures)Data structures\n  * [`deque`](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\"), work-stealing deques for building task schedulers.\n  * [`ArrayQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html \"struct crossbeam::queue::ArrayQueue\"), a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * [`SegQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html \"struct crossbeam::queue::SegQueue\"), an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#memory-management)Memory management\n  * [`epoch`](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\"), an epoch-based garbage collector.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization)Thread synchronization\n  * [`channel`](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\"), multi-producer multi-consumer channels for message passing.\n  * [`Parker`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html \"struct crossbeam::sync::Parker\"), a thread parking primitive.\n  * [`ShardedLock`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html \"struct crossbeam::sync::ShardedLock\"), a sharded reader-writer lock with fast concurrent reads.\n  * [`WaitGroup`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html \"struct crossbeam::sync::WaitGroup\"), for synchronizing the beginning or end of some computation.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#utilities)Utilities\n  * [`Backoff`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html \"struct crossbeam::utils::Backoff\"), for exponential backoff in spin loops.\n  * [`CachePadded`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html \"struct crossbeam::utils::CachePadded\"), for padding and aligning a value to the length of a cache line.\n  * [`scope`](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\"), for spawning threads that borrow local variables from the stack.\n\n\n## Modules[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#modules)\n\n[atomic](https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html \"mod crossbeam::atomic\")\n    Atomic types.\n\n[channel](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\")\n    Multi-producer multi-consumer channels for message passing.\n\n[deque](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\")\n    Concurrent work-stealing deques.\n\n[epoch](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\")\n    Epoch-based memory reclamation.\n\n[queue](https://docs.rs/crossbeam/latest/crossbeam/queue/index.html \"mod crossbeam::queue\")\n    Concurrent queues.\n\n[sync](https://docs.rs/crossbeam/latest/crossbeam/sync/index.html \"mod crossbeam::sync\")\n    Thread synchronization primitives.\n\n[thread](https://docs.rs/crossbeam/latest/crossbeam/thread/index.html \"mod crossbeam::thread\")\n    Threads that can borrow variables from the stack.\n\n[utils](https://docs.rs/crossbeam/latest/crossbeam/utils/index.html \"mod crossbeam::utils\")\n    Miscellaneous utilities.\n## Macros[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#macros)\n\n[select](https://docs.rs/crossbeam/latest/crossbeam/macro.select.html \"macro crossbeam::select\")\n    Selects from a set of channel operations.\n## Functions[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#functions)\n\n[scope](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\")\n    Creates a new scope for spawning threads.\n",
+            "markdown_with_citations": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nTools for concurrent programming.\n### \u00a7\u27e84\u27e9Atomics\n  * `AtomicCell`\u27e85\u27e9, a thread-safe mutable memory location.\n  * `AtomicConsume`\u27e86\u27e9, for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### \u00a7\u27e87\u27e9Data structures\n  * `deque`\u27e88\u27e9, work-stealing deques for building task schedulers.\n  * `ArrayQueue`\u27e89\u27e9, a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * `SegQueue`\u27e810\u27e9, an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### \u00a7\u27e811\u27e9Memory management\n  * `epoch`\u27e812\u27e9, an epoch-based garbage collector.\n\n\n### \u00a7\u27e813\u27e9Thread synchronization\n  * `channel`\u27e814\u27e9, multi-producer multi-consumer channels for message passing.\n  * `Parker`\u27e815\u27e9, a thread parking primitive.\n  * `ShardedLock`\u27e816\u27e9, a sharded reader-writer lock with fast concurrent reads.\n  * `WaitGroup`\u27e817\u27e9, for synchronizing the beginning or end of some computation.\n\n\n### \u00a7\u27e818\u27e9Utilities\n  * `Backoff`\u27e819\u27e9, for exponential backoff in spin loops.\n  * `CachePadded`\u27e820\u27e9, for padding and aligning a value to the length of a cache line.\n  * `scope`\u27e821\u27e9, for spawning threads that borrow local variables from the stack.\n\n\n## Modules\u00a7\u27e822\u27e9\n\natomic\u27e823\u27e9\n    Atomic types.\n\nchannel\u27e814\u27e9\n    Multi-producer multi-consumer channels for message passing.\n\ndeque\u27e88\u27e9\n    Concurrent work-stealing deques.\n\nepoch\u27e812\u27e9\n    Epoch-based memory reclamation.\n\nqueue\u27e824\u27e9\n    Concurrent queues.\n\nsync\u27e825\u27e9\n    Thread synchronization primitives.\n\nthread\u27e826\u27e9\n    Threads that can borrow variables from the stack.\n\nutils\u27e827\u27e9\n    Miscellaneous utilities.\n## Macros\u00a7\u27e828\u27e9\n\nselect\u27e829\u27e9\n    Selects from a set of channel operations.\n## Functions\u00a7\u27e830\u27e9\n\nscope\u27e821\u27e9\n    Creates a new scope for spawning threads.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/crossbeam/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/crossbeam/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#atomics: \u00a7\n\u27e85\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html: struct crossbeam::atomic::AtomicCell - `AtomicCell`\n\u27e86\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html: trait crossbeam::atomic::AtomicConsume - `AtomicConsume`\n\u27e87\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#data-structures: \u00a7\n\u27e88\u27e9 https://docs.rs/crossbeam/latest/crossbeam/deque/index.html: mod crossbeam::deque - `deque`\n\u27e89\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html: struct crossbeam::queue::ArrayQueue - `ArrayQueue`\n\u27e810\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html: struct crossbeam::queue::SegQueue - `SegQueue`\n\u27e811\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#memory-management: \u00a7\n\u27e812\u27e9 https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html: mod crossbeam::epoch - `epoch`\n\u27e813\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization: \u00a7\n\u27e814\u27e9 https://docs.rs/crossbeam/latest/crossbeam/channel/index.html: mod crossbeam::channel - `channel`\n\u27e815\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html: struct crossbeam::sync::Parker - `Parker`\n\u27e816\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html: struct crossbeam::sync::ShardedLock - `ShardedLock`\n\u27e817\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html: struct crossbeam::sync::WaitGroup - `WaitGroup`\n\u27e818\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#utilities: \u00a7\n\u27e819\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html: struct crossbeam::utils::Backoff - `Backoff`\n\u27e820\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html: struct crossbeam::utils::CachePadded - `CachePadded`\n\u27e821\u27e9 https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html: fn crossbeam::scope - `scope`\n\u27e822\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#modules: \u00a7\n\u27e823\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html: mod crossbeam::atomic - atomic\n\u27e824\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/index.html: mod crossbeam::queue - queue\n\u27e825\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/index.html: mod crossbeam::sync - sync\n\u27e826\u27e9 https://docs.rs/crossbeam/latest/crossbeam/thread/index.html: mod crossbeam::thread - thread\n\u27e827\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/index.html: mod crossbeam::utils - utils\n\u27e828\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#macros: \u00a7\n\u27e829\u27e9 https://docs.rs/crossbeam/latest/crossbeam/macro.select.html: macro crossbeam::select - select\n\u27e830\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#functions: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "crossbeam",
+          "version": "0.8.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\n[Settings](https://docs.rs/crossbeam/latest/settings.html)\n[Help](https://docs.rs/crossbeam/latest/help.html)\nSummary[Source](https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81)\nExpand description\nTools for concurrent programming.\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#atomics)Atomics\n  * [`AtomicCell`](https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html \"struct crossbeam::atomic::AtomicCell\"), a thread-safe mutable memory location.\n  * [`AtomicConsume`](https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html \"trait crossbeam::atomic::AtomicConsume\"), for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#data-structures)Data structures\n  * [`deque`](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\"), work-stealing deques for building task schedulers.\n  * [`ArrayQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html \"struct crossbeam::queue::ArrayQueue\"), a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * [`SegQueue`](https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html \"struct crossbeam::queue::SegQueue\"), an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#memory-management)Memory management\n  * [`epoch`](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\"), an epoch-based garbage collector.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization)Thread synchronization\n  * [`channel`](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\"), multi-producer multi-consumer channels for message passing.\n  * [`Parker`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html \"struct crossbeam::sync::Parker\"), a thread parking primitive.\n  * [`ShardedLock`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html \"struct crossbeam::sync::ShardedLock\"), a sharded reader-writer lock with fast concurrent reads.\n  * [`WaitGroup`](https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html \"struct crossbeam::sync::WaitGroup\"), for synchronizing the beginning or end of some computation.\n\n\n### [\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#utilities)Utilities\n  * [`Backoff`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html \"struct crossbeam::utils::Backoff\"), for exponential backoff in spin loops.\n  * [`CachePadded`](https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html \"struct crossbeam::utils::CachePadded\"), for padding and aligning a value to the length of a cache line.\n  * [`scope`](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\"), for spawning threads that borrow local variables from the stack.\n\n\n## Modules[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#modules)\n\n[atomic](https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html \"mod crossbeam::atomic\")\n    Atomic types.\n\n[channel](https://docs.rs/crossbeam/latest/crossbeam/channel/index.html \"mod crossbeam::channel\")\n    Multi-producer multi-consumer channels for message passing.\n\n[deque](https://docs.rs/crossbeam/latest/crossbeam/deque/index.html \"mod crossbeam::deque\")\n    Concurrent work-stealing deques.\n\n[epoch](https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html \"mod crossbeam::epoch\")\n    Epoch-based memory reclamation.\n\n[queue](https://docs.rs/crossbeam/latest/crossbeam/queue/index.html \"mod crossbeam::queue\")\n    Concurrent queues.\n\n[sync](https://docs.rs/crossbeam/latest/crossbeam/sync/index.html \"mod crossbeam::sync\")\n    Thread synchronization primitives.\n\n[thread](https://docs.rs/crossbeam/latest/crossbeam/thread/index.html \"mod crossbeam::thread\")\n    Threads that can borrow variables from the stack.\n\n[utils](https://docs.rs/crossbeam/latest/crossbeam/utils/index.html \"mod crossbeam::utils\")\n    Miscellaneous utilities.\n## Macros[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#macros)\n\n[select](https://docs.rs/crossbeam/latest/crossbeam/macro.select.html \"macro crossbeam::select\")\n    Selects from a set of channel operations.\n## Functions[\u00a7](https://docs.rs/crossbeam/latest/crossbeam/#functions)\n\n[scope](https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html \"fn crossbeam::scope\")\n    Creates a new scope for spawning threads.\n",
+            "markdown_with_citations": "[](https://docs.rs/crossbeam/latest/crossbeam/all.html \"show sidebar\")\n# Crate crossbeamCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nTools for concurrent programming.\n### \u00a7\u27e84\u27e9Atomics\n  * `AtomicCell`\u27e85\u27e9, a thread-safe mutable memory location.\n  * `AtomicConsume`\u27e86\u27e9, for reading from primitive atomic types with \u201cconsume\u201d ordering.\n\n\n### \u00a7\u27e87\u27e9Data structures\n  * `deque`\u27e88\u27e9, work-stealing deques for building task schedulers.\n  * `ArrayQueue`\u27e89\u27e9, a bounded MPMC queue that allocates a fixed-capacity buffer on construction.\n  * `SegQueue`\u27e810\u27e9, an unbounded MPMC queue that allocates small buffers, segments, on demand.\n\n\n### \u00a7\u27e811\u27e9Memory management\n  * `epoch`\u27e812\u27e9, an epoch-based garbage collector.\n\n\n### \u00a7\u27e813\u27e9Thread synchronization\n  * `channel`\u27e814\u27e9, multi-producer multi-consumer channels for message passing.\n  * `Parker`\u27e815\u27e9, a thread parking primitive.\n  * `ShardedLock`\u27e816\u27e9, a sharded reader-writer lock with fast concurrent reads.\n  * `WaitGroup`\u27e817\u27e9, for synchronizing the beginning or end of some computation.\n\n\n### \u00a7\u27e818\u27e9Utilities\n  * `Backoff`\u27e819\u27e9, for exponential backoff in spin loops.\n  * `CachePadded`\u27e820\u27e9, for padding and aligning a value to the length of a cache line.\n  * `scope`\u27e821\u27e9, for spawning threads that borrow local variables from the stack.\n\n\n## Modules\u00a7\u27e822\u27e9\n\natomic\u27e823\u27e9\n    Atomic types.\n\nchannel\u27e814\u27e9\n    Multi-producer multi-consumer channels for message passing.\n\ndeque\u27e88\u27e9\n    Concurrent work-stealing deques.\n\nepoch\u27e812\u27e9\n    Epoch-based memory reclamation.\n\nqueue\u27e824\u27e9\n    Concurrent queues.\n\nsync\u27e825\u27e9\n    Thread synchronization primitives.\n\nthread\u27e826\u27e9\n    Threads that can borrow variables from the stack.\n\nutils\u27e827\u27e9\n    Miscellaneous utilities.\n## Macros\u00a7\u27e828\u27e9\n\nselect\u27e829\u27e9\n    Selects from a set of channel operations.\n## Functions\u00a7\u27e830\u27e9\n\nscope\u27e821\u27e9\n    Creates a new scope for spawning threads.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/crossbeam/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/crossbeam/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/crossbeam/latest/src/crossbeam/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#atomics: \u00a7\n\u27e85\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/struct.AtomicCell.html: struct crossbeam::atomic::AtomicCell - `AtomicCell`\n\u27e86\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/trait.AtomicConsume.html: trait crossbeam::atomic::AtomicConsume - `AtomicConsume`\n\u27e87\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#data-structures: \u00a7\n\u27e88\u27e9 https://docs.rs/crossbeam/latest/crossbeam/deque/index.html: mod crossbeam::deque - `deque`\n\u27e89\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.ArrayQueue.html: struct crossbeam::queue::ArrayQueue - `ArrayQueue`\n\u27e810\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/struct.SegQueue.html: struct crossbeam::queue::SegQueue - `SegQueue`\n\u27e811\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#memory-management: \u00a7\n\u27e812\u27e9 https://docs.rs/crossbeam/latest/crossbeam/epoch/index.html: mod crossbeam::epoch - `epoch`\n\u27e813\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#thread-synchronization: \u00a7\n\u27e814\u27e9 https://docs.rs/crossbeam/latest/crossbeam/channel/index.html: mod crossbeam::channel - `channel`\n\u27e815\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.Parker.html: struct crossbeam::sync::Parker - `Parker`\n\u27e816\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.ShardedLock.html: struct crossbeam::sync::ShardedLock - `ShardedLock`\n\u27e817\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/struct.WaitGroup.html: struct crossbeam::sync::WaitGroup - `WaitGroup`\n\u27e818\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#utilities: \u00a7\n\u27e819\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.Backoff.html: struct crossbeam::utils::Backoff - `Backoff`\n\u27e820\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/struct.CachePadded.html: struct crossbeam::utils::CachePadded - `CachePadded`\n\u27e821\u27e9 https://docs.rs/crossbeam/latest/crossbeam/fn.scope.html: fn crossbeam::scope - `scope`\n\u27e822\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#modules: \u00a7\n\u27e823\u27e9 https://docs.rs/crossbeam/latest/crossbeam/atomic/index.html: mod crossbeam::atomic - atomic\n\u27e824\u27e9 https://docs.rs/crossbeam/latest/crossbeam/queue/index.html: mod crossbeam::queue - queue\n\u27e825\u27e9 https://docs.rs/crossbeam/latest/crossbeam/sync/index.html: mod crossbeam::sync - sync\n\u27e826\u27e9 https://docs.rs/crossbeam/latest/crossbeam/thread/index.html: mod crossbeam::thread - thread\n\u27e827\u27e9 https://docs.rs/crossbeam/latest/crossbeam/utils/index.html: mod crossbeam::utils - utils\n\u27e828\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#macros: \u00a7\n\u27e829\u27e9 https://docs.rs/crossbeam/latest/crossbeam/macro.select.html: macro crossbeam::select - select\n\u27e830\u27e9 https://docs.rs/crossbeam/latest/crossbeam/#functions: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `crossbeam` crate provides a suite of tools for concurrent programming in Rust, including thread-safe data structures, synchronization primitives, and memory management utilities. Key features include multi-producer multi-consumer channels, work-stealing deques, epoch-based garbage collection, and scoped threads for borrowing stack variables. It also offers utilities like exponential backoff, cache line padding, and a macro for selecting channel operations.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 9.0,
+          "factual_counterfactual": "### Pair 1: Thread Synchronization\n\u2705 Factual: The `crossbeam::channel` module provides multi-producer, multi-consumer (MPMC) channels that enable efficient message passing between threads, supporting both bounded and unbounded channels.  \n\u274c Counterfactual: The `crossbeam::channel` module only supports single-producer, single-consumer (SPSC) channels, making it unsuitable for complex thread communication patterns.  \n\n---\n\n### Pair 2: Memory Management\n\u2705 Factual: The `crossbeam::epoch` module implements an epoch-based garbage collector, allowing safe memory reclamation in concurrent programming without requiring locks.  \n\u274c Counterfactual: The `crossbeam::epoch` module uses a reference counting mechanism for memory management, which can lead to performance bottlenecks in highly concurrent applications.  \n\n---\n\n### Pair 3: Data Structures\n\u2705 Factual: The `crossbeam::queue::ArrayQueue` is a bounded multi-producer, multi-consumer (MPMC) queue that pre-allocates a fixed-capacity buffer, making it ideal for scenarios with predictable memory usage.  \n\u274c Counterfactual: The `crossbeam::queue::ArrayQueue` dynamically expands its capacity based on runtime demands, similar to unbounded queues like `SegQueue`.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-483b3cb3-13bae3f4-1751262833",
+      "timestamp": "2025-06-30T05:53:53.753968+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

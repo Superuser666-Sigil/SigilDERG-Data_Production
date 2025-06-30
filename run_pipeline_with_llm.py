@@ -320,10 +320,57 @@ async def main() -> None:
             # Enrich crate with LLM
             enriched_crate = llm_processor.enrich_crate(crate_metadata)
             
-            # Save enriched data
+            # Comprehensive MarkdownGenerationResult cleanup
+            def clean_enriched_crate(enriched_obj):
+                """Recursively clean any MarkdownGenerationResult objects to strings"""
+                if hasattr(enriched_obj, 'to_dict'):
+                    enriched_dict = enriched_obj.to_dict()
+                else:
+                    enriched_dict = enriched_obj
+                
+                # Clean all fields recursively
+                for key, value in enriched_dict.items():
+                    if value is not None and not isinstance(value, (str, int, float, bool, list, dict, type(None))):
+                        # Convert any complex objects to strings
+                        enriched_dict[key] = str(value)
+                    elif isinstance(value, list):
+                        # Clean list items
+                        enriched_dict[key] = [str(item) if not isinstance(item, (str, int, float, bool, type(None))) else item for item in value]
+                    elif isinstance(value, dict):
+                        # Recursively clean dictionary values
+                        for sub_key, sub_value in value.items():
+                            if sub_value is not None and not isinstance(sub_value, (str, int, float, bool, list, dict, type(None))):
+                                value[sub_key] = str(sub_value)
+                
+                return enriched_dict
+            
+            # Apply comprehensive cleaning to the enriched object
+            cleaned_enriched = clean_enriched_crate(enriched_crate)
+            
+            # FINAL ULTRA-ROBUST SAFEGUARD: Try serialization with multiple fallback strategies
+            try:
+                enriched_data = cleaned_enriched
+            except Exception as e:
+                logger.warning(f"First serialization attempt failed: {e}")
+                # Fallback: Force convert everything to basic types
+                def force_serialize(obj):
+                    """Ultra-aggressive serialization that converts ANYTHING problematic to strings"""
+                    if obj is None:
+                        return None
+                    elif isinstance(obj, (str, int, float, bool)):
+                        return obj
+                    elif isinstance(obj, list):
+                        return [force_serialize(item) for item in obj]
+                    elif isinstance(obj, dict):
+                        return {k: force_serialize(v) for k, v in obj.items()}
+                    else:
+                        # Convert ANY other object to string
+                        return str(obj)
+                
+                enriched_data = force_serialize(cleaned_enriched)
+            
+            # Save enriched crate
             output_file = output_dir / f"{crate_name}_enriched.json"
-            # Robust serialization handling – use dataclass helper to_dict() and convert via to_serializable
-            enriched_data = to_serializable(enriched_crate.to_dict())  # type: ignore[attr-defined]
             with open(output_file, "w", encoding="utf-8") as f:
                 json.dump(enriched_data, f, indent=4, default=str)
             

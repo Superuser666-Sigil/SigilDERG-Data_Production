@@ -1,0 +1,985 @@
+[
+  {
+    "execution_id": "exec-93d8874c-07790812-1751260202",
+    "timestamp": "2025-06-30T05:10:02.002439+00:00",
+    "sacred_chain": {
+      "input_data": "console",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'console' -> 'console'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "console",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/console",
+            "title": "console v0.16.0",
+            "content": {
+              "raw_markdown": "#  console v0.16.0\nA terminal and console abstraction for Rust \n  * [ #ansi ](https://crates.io/keywords/ansi)\n  * [ #cli ](https://crates.io/keywords/cli)\n  * [ #colors ](https://crates.io/keywords/colors)\n  * [ #console ](https://crates.io/keywords/console)\n  * [ #terminal ](https://crates.io/keywords/terminal)\n\n\n  * [ Readme ](https://crates.io/crates/console)\n  * [ 48 Versions ](https://crates.io/crates/console/versions)\n  * [ Dependencies ](https://crates.io/crates/console/dependencies)\n  * [ Dependents ](https://crates.io/crates/console/reverse_dependencies)\n\n\n## Metadata\n3 days ago \nv1.66.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n38.2 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add console\nOr add the following line to your Cargo.toml:\nconsole = \"0.16.0\"\n## Documentation\n[ docs.rs/console ](https://docs.rs/console)\n## Repository\n[ github.com/console-rs/console ](https://github.com/console-rs/console)\n## Owners\n[ Report crate ](https://crates.io/support?crate=console&inquire=crate-violation)\n### Stats Overview\n107,091,852 Downloads all time\n48 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  console v0.16.0\nA terminal and console abstraction for Rust \n  *  #ansi \u27e81\u27e9\n  *  #cli \u27e82\u27e9\n  *  #colors \u27e83\u27e9\n  *  #console \u27e84\u27e9\n  *  #terminal \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  48 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\n3 days ago \nv1.66.0 \n MIT \u27e810\u27e9\n38.2 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add console\nOr add the following line to your Cargo.toml:\nconsole = \"0.16.0\"\n## Documentation\n docs.rs/console \u27e811\u27e9\n## Repository\n github.com/console-rs/console \u27e812\u27e9\n## Owners\n Report crate \u27e813\u27e9\n### Stats Overview\n107,091,852 Downloads all time\n48 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/ansi:  #ansi \n\u27e82\u27e9 https://crates.io/keywords/cli:  #cli \n\u27e83\u27e9 https://crates.io/keywords/colors:  #colors \n\u27e84\u27e9 https://crates.io/keywords/console:  #console \n\u27e85\u27e9 https://crates.io/keywords/terminal:  #terminal \n\u27e86\u27e9 https://crates.io/crates/console:  Readme \n\u27e87\u27e9 https://crates.io/crates/console/versions:  48 Versions \n\u27e88\u27e9 https://crates.io/crates/console/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/console/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://docs.rs/console:  docs.rs/console \n\u27e812\u27e9 https://github.com/console-rs/console:  github.com/console-rs/console \n\u27e813\u27e9 https://crates.io/support?crate=console&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1228,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113991.9024928"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/console",
+            "title": "Crate consoleCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\n[Settings](https://docs.rs/console/latest/settings.html)\n[Help](https://docs.rs/console/latest/help.html)\nSummary[Source](https://docs.rs/console/latest/src/console/lib.rs.html#1-122)\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * [dialoguer](https://docs.rs/dialoguer)\n  * [indicatif](https://docs.rs/indicatif)\n\n\n## [\u00a7](https://docs.rs/console/latest/console/#terminal-access)Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#colors-and-styles)Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#working-with-ansi-codes)Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## [\u00a7](https://docs.rs/console/latest/console/#unicode-width-support)Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## [\u00a7](https://docs.rs/console/latest/console/#features)Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs[\u00a7](https://docs.rs/console/latest/console/#structs)\n\n[AnsiCodeIterator](https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html \"struct console::AnsiCodeIterator\")\n    An iterator over ansi codes in a string.\n\n[Emoji](https://docs.rs/console/latest/console/struct.Emoji.html \"struct console::Emoji\")\n    \u201cIntelligent\u201d emoji formatter.\n\n[Style](https://docs.rs/console/latest/console/struct.Style.html \"struct console::Style\")\n    A stored style that can be applied.\n\n[StyledObject](https://docs.rs/console/latest/console/struct.StyledObject.html \"struct console::StyledObject\")\n    A formatting wrapper that can be styled for a terminal.\n\n[Term](https://docs.rs/console/latest/console/struct.Term.html \"struct console::Term\")\n    Abstraction around a terminal.\n\n[TermFeatures](https://docs.rs/console/latest/console/struct.TermFeatures.html \"struct console::TermFeatures\")\n    Gives access to the terminal features.\n## Enums[\u00a7](https://docs.rs/console/latest/console/#enums)\n\n[Alignment](https://docs.rs/console/latest/console/enum.Alignment.html \"enum console::Alignment\")\n    Defines the alignment for padding operations.\n\n[Attribute](https://docs.rs/console/latest/console/enum.Attribute.html \"enum console::Attribute\")\n    A terminal style attribute.\n\n[Color](https://docs.rs/console/latest/console/enum.Color.html \"enum console::Color\")\n    A terminal color.\n\n[Key](https://docs.rs/console/latest/console/enum.Key.html \"enum console::Key\")\n    Key mapping\n\n[TermFamily](https://docs.rs/console/latest/console/enum.TermFamily.html \"enum console::TermFamily\")\n    The family of the terminal.\n\n[TermTarget](https://docs.rs/console/latest/console/enum.TermTarget.html \"enum console::TermTarget\")\n    Where the term is writing.\n## Functions[\u00a7](https://docs.rs/console/latest/console/#functions)\n\n[colors_enabled](https://docs.rs/console/latest/console/fn.colors_enabled.html \"fn console::colors_enabled\")\n    Returns `true` if colors should be enabled for stdout.\n\n[colors_enabled_stderr](https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html \"fn console::colors_enabled_stderr\")\n    Returns `true` if colors should be enabled for stderr.\n\n[measure_text_width](https://docs.rs/console/latest/console/fn.measure_text_width.html \"fn console::measure_text_width\")\n    Measure the width of a string in terminal characters.\n\n[pad_str](https://docs.rs/console/latest/console/fn.pad_str.html \"fn console::pad_str\")\n    Pads a string to fill a certain number of characters.\n\n[pad_str_with](https://docs.rs/console/latest/console/fn.pad_str_with.html \"fn console::pad_str_with\")\n    Pads a string with specific padding to fill a certain number of characters.\n\n[set_colors_enabled](https://docs.rs/console/latest/console/fn.set_colors_enabled.html \"fn console::set_colors_enabled\")\n    Forces colorization on or off for stdout.\n\n[set_colors_enabled_stderr](https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html \"fn console::set_colors_enabled_stderr\")\n    Forces colorization on or off for stderr.\n\n[strip_ansi_codes](https://docs.rs/console/latest/console/fn.strip_ansi_codes.html \"fn console::strip_ansi_codes\")\n    Helper function to strip ansi codes.\n\n[style](https://docs.rs/console/latest/console/fn.style.html \"fn console::style\")\n    Wraps an object for formatting for styling.\n\n[truncate_str](https://docs.rs/console/latest/console/fn.truncate_str.html \"fn console::truncate_str\")\n    Truncates a string to a certain number of characters.\n\n[user_attended](https://docs.rs/console/latest/console/fn.user_attended.html \"fn console::user_attended\")\n    A fast way to check if the application has a user attended for stdout.\n\n[user_attended_stderr](https://docs.rs/console/latest/console/fn.user_attended_stderr.html \"fn console::user_attended_stderr\")\n    A fast way to check if the application has a user attended for stderr.\n",
+              "markdown_with_citations": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * dialoguer\u27e84\u27e9\n  * indicatif\u27e85\u27e9\n\n\n## \u00a7\u27e86\u27e9Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## \u00a7\u27e87\u27e9Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## \u00a7\u27e88\u27e9Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## \u00a7\u27e89\u27e9Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## \u00a7\u27e810\u27e9Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs\u00a7\u27e811\u27e9\n\nAnsiCodeIterator\u27e812\u27e9\n    An iterator over ansi codes in a string.\n\nEmoji\u27e813\u27e9\n    \u201cIntelligent\u201d emoji formatter.\n\nStyle\u27e814\u27e9\n    A stored style that can be applied.\n\nStyledObject\u27e815\u27e9\n    A formatting wrapper that can be styled for a terminal.\n\nTerm\u27e816\u27e9\n    Abstraction around a terminal.\n\nTermFeatures\u27e817\u27e9\n    Gives access to the terminal features.\n## Enums\u00a7\u27e818\u27e9\n\nAlignment\u27e819\u27e9\n    Defines the alignment for padding operations.\n\nAttribute\u27e820\u27e9\n    A terminal style attribute.\n\nColor\u27e821\u27e9\n    A terminal color.\n\nKey\u27e822\u27e9\n    Key mapping\n\nTermFamily\u27e823\u27e9\n    The family of the terminal.\n\nTermTarget\u27e824\u27e9\n    Where the term is writing.\n## Functions\u00a7\u27e825\u27e9\n\ncolors_enabled\u27e826\u27e9\n    Returns `true` if colors should be enabled for stdout.\n\ncolors_enabled_stderr\u27e827\u27e9\n    Returns `true` if colors should be enabled for stderr.\n\nmeasure_text_width\u27e828\u27e9\n    Measure the width of a string in terminal characters.\n\npad_str\u27e829\u27e9\n    Pads a string to fill a certain number of characters.\n\npad_str_with\u27e830\u27e9\n    Pads a string with specific padding to fill a certain number of characters.\n\nset_colors_enabled\u27e831\u27e9\n    Forces colorization on or off for stdout.\n\nset_colors_enabled_stderr\u27e832\u27e9\n    Forces colorization on or off for stderr.\n\nstrip_ansi_codes\u27e833\u27e9\n    Helper function to strip ansi codes.\n\nstyle\u27e834\u27e9\n    Wraps an object for formatting for styling.\n\ntruncate_str\u27e835\u27e9\n    Truncates a string to a certain number of characters.\n\nuser_attended\u27e836\u27e9\n    A fast way to check if the application has a user attended for stdout.\n\nuser_attended_stderr\u27e837\u27e9\n    A fast way to check if the application has a user attended for stderr.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/console/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/console/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/console/latest/src/console/lib.rs.html#1-122: Source\n\u27e84\u27e9 https://docs.rs/dialoguer: dialoguer\n\u27e85\u27e9 https://docs.rs/indicatif: indicatif\n\u27e86\u27e9 https://docs.rs/console/latest/console/#terminal-access: \u00a7\n\u27e87\u27e9 https://docs.rs/console/latest/console/#colors-and-styles: \u00a7\n\u27e88\u27e9 https://docs.rs/console/latest/console/#working-with-ansi-codes: \u00a7\n\u27e89\u27e9 https://docs.rs/console/latest/console/#unicode-width-support: \u00a7\n\u27e810\u27e9 https://docs.rs/console/latest/console/#features: \u00a7\n\u27e811\u27e9 https://docs.rs/console/latest/console/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html: struct console::AnsiCodeIterator - AnsiCodeIterator\n\u27e813\u27e9 https://docs.rs/console/latest/console/struct.Emoji.html: struct console::Emoji - Emoji\n\u27e814\u27e9 https://docs.rs/console/latest/console/struct.Style.html: struct console::Style - Style\n\u27e815\u27e9 https://docs.rs/console/latest/console/struct.StyledObject.html: struct console::StyledObject - StyledObject\n\u27e816\u27e9 https://docs.rs/console/latest/console/struct.Term.html: struct console::Term - Term\n\u27e817\u27e9 https://docs.rs/console/latest/console/struct.TermFeatures.html: struct console::TermFeatures - TermFeatures\n\u27e818\u27e9 https://docs.rs/console/latest/console/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/console/latest/console/enum.Alignment.html: enum console::Alignment - Alignment\n\u27e820\u27e9 https://docs.rs/console/latest/console/enum.Attribute.html: enum console::Attribute - Attribute\n\u27e821\u27e9 https://docs.rs/console/latest/console/enum.Color.html: enum console::Color - Color\n\u27e822\u27e9 https://docs.rs/console/latest/console/enum.Key.html: enum console::Key - Key\n\u27e823\u27e9 https://docs.rs/console/latest/console/enum.TermFamily.html: enum console::TermFamily - TermFamily\n\u27e824\u27e9 https://docs.rs/console/latest/console/enum.TermTarget.html: enum console::TermTarget - TermTarget\n\u27e825\u27e9 https://docs.rs/console/latest/console/#functions: \u00a7\n\u27e826\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled.html: fn console::colors_enabled - colors_enabled\n\u27e827\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html: fn console::colors_enabled_stderr - colors_enabled_stderr\n\u27e828\u27e9 https://docs.rs/console/latest/console/fn.measure_text_width.html: fn console::measure_text_width - measure_text_width\n\u27e829\u27e9 https://docs.rs/console/latest/console/fn.pad_str.html: fn console::pad_str - pad_str\n\u27e830\u27e9 https://docs.rs/console/latest/console/fn.pad_str_with.html: fn console::pad_str_with - pad_str_with\n\u27e831\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled.html: fn console::set_colors_enabled - set_colors_enabled\n\u27e832\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html: fn console::set_colors_enabled_stderr - set_colors_enabled_stderr\n\u27e833\u27e9 https://docs.rs/console/latest/console/fn.strip_ansi_codes.html: fn console::strip_ansi_codes - strip_ansi_codes\n\u27e834\u27e9 https://docs.rs/console/latest/console/fn.style.html: fn console::style - style\n\u27e835\u27e9 https://docs.rs/console/latest/console/fn.truncate_str.html: fn console::truncate_str - truncate_str\n\u27e836\u27e9 https://docs.rs/console/latest/console/fn.user_attended.html: fn console::user_attended - user_attended\n\u27e837\u27e9 https://docs.rs/console/latest/console/fn.user_attended_stderr.html: fn console::user_attended_stderr - user_attended_stderr\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 6692,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113992.5096543"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/console",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [44 releases](https://lib.rs/crates/console/versions)\n[ new 0.16.0 ](https://github.com/console-rs/console/releases) |  Jun 27, 2025   \n---|---  \n0.15.11 |  Mar 1, 2025   \n0.15.10 |  Dec 16, 2024   \n0.15.8 |  Jan 9, 2024   \n0.5.0 |  Jun 28, 2017   \n#**7** in [Command-line interface](https://lib.rs/command-line-interface \"Crates to help create command line interfaces, such as argument parsers, line-editing, or output coloring and formatting.\")\nDownload history 1400047/week @ 2025-03-10 1362165/week @ 2025-03-17 1362046/week @ 2025-03-24 1418027/week @ 2025-03-31 1623372/week @ 2025-04-07 1414381/week @ 2025-04-14 1355737/week @ 2025-04-21 1312225/week @ 2025-04-28 1386816/week @ 2025-05-05 1411402/week @ 2025-05-12 1383122/week @ 2025-05-19 1192362/week @ 2025-05-26 1358354/week @ 2025-06-02 1397649/week @ 2025-06-09 1467290/week @ 2025-06-16 1467702/week @ 2025-06-23\n**5,751,582** downloads per month Used in [**6,025** crates (1,157 directly)](https://lib.rs/crates/console/rev)\n**MIT** license \n125KB  3K  SLoC\n# ``console``\n[![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/console-rs/console/actions/workflows/ci.yml/badge.svg)](https://github.com/console-rs/console/actions?query=workflow%3ACI) [![crates.io](https://img.shields.io/crates/d/console.svg)](https://crates.io/crates/console) [![License](https://img.shields.io/github/license/console-rs/console)](https://github.com/console-rs/console/blob/main/LICENSE) [![Documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/console/badge.svg)](https://docs.rs/console)\n**console** is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * [dialoguer](https://docs.rs/dialoguer)\n  * [indicatif](https://docs.rs/indicatif)\n\n\n## Terminal Access\nThe terminal is abstracted through the ```console`::``Term`` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\n``use` `std`::``thread`;`\n`use` `std`::```time`::``Duration`;`\n`use` `console`::``Term`;`\n`let` term `=` `Term`::``stdout`(``)``;`\nterm`.``write_line``(```\"`Hello World!`\"```)``?``;`\n`thread`::``sleep`(``Duration`::``from_millis`(``2000``)``)``;`\nterm`.``clear_line``(``)``?``;`\n`\n```\n\n## Colors and Styles\n``console`` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the ``style`` function and utility types.\nExample usage:\n```\n``use` `console`::``style`;`\n`println!``(```\"`This is `{}` neat`\"```,` `style``(```\"`quite`\"```)``.``cyan``(``)``)``;`\n`\n```\n\nYou can also store styles and apply them to text later:\n```\n``use` `console`::``Style`;`\n`let` cyan `=` `Style`::``new`(``)``.``cyan``(``)``;`\n`println!``(```\"`This is `{}` neat`\"```,` cyan`.``apply_to``(```\"`quite`\"```)``)``;`\n`\n```\n\n## Working with ANSI Codes\nThe crate provides the function ``strip_ansi_codes`` to remove ANSI codes from a string as well as ``measure_text_width`` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## Unicode Width Support\nBy default this crate depends on the ``unicode-width`` crate to calculate the width of terminal characters. If you do not need this you can disable the ``unicode-width`` feature which will cut down on dependencies.\nLicense: MIT\n#### Dependencies\n~1\u201315MB  ~106K SLoC\n  * [encode_unicode](https://lib.rs/crates/encode_unicode \"1\") win\n  * [std](https://lib.rs/crates/console/features#feature-std \"default feature\") [libc](https://lib.rs/crates/libc \"0.2.99\")\n  * [std](https://lib.rs/crates/console/features#feature-std \"default feature\") [once_cell](https://lib.rs/crates/once_cell \"1.8\")\n  * [default](https://lib.rs/crates/console/features#feature-default \"default feature\") [unicode-width](https://lib.rs/crates/unicode-width \"new\") 0.2\n  * [windows-sys](https://lib.rs/crates/windows-sys \"new\") 0.60[+Win32_Foundation](https://lib.rs/crates/windows-sys/features#feature-Win32_Foundation)[+Win32\u2026Console](https://lib.rs/crates/windows-sys/features#feature-Win32_System_Console)[+Win32\u2026FileSystem](https://lib.rs/crates/windows-sys/features#feature-Win32_Storage_FileSystem)[+Win32\u2026KeyboardAndMouse](https://lib.rs/crates/windows-sys/features#feature-Win32_UI_Input_KeyboardAndMouse) win\n\n\n  * dev  [proptest](https://lib.rs/crates/proptest \"1.0.0\")[+std](https://lib.rs/crates/proptest/features#feature-std)[+bit-set](https://lib.rs/crates/proptest/features#feature-bit-set)[+break-dead-code](https://lib.rs/crates/proptest/features#feature-break-dead-code)\n  * dev  [regex](https://lib.rs/crates/regex \"1.4.2\")\n\n\n#### [Other features](https://lib.rs/crates/console/features)\n  * [alloc](https://lib.rs/crates/console/features#feature-alloc)\n  * [ansi-parsing](https://lib.rs/crates/console/features#feature-ansi-parsing)\n  * [windows-console-colors](https://lib.rs/crates/console/features#feature-windows-console-colors)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  44 releases\u27e81\u27e9\n new 0.16.0 \u27e82\u27e9 |  Jun 27, 2025   \n---|---  \n0.15.11 |  Mar 1, 2025   \n0.15.10 |  Dec 16, 2024   \n0.15.8 |  Jan 9, 2024   \n0.5.0 |  Jun 28, 2017   \n#**7** in Command-line interface\u27e83\u27e9\nDownload history 1400047/week @ 2025-03-10 1362165/week @ 2025-03-17 1362046/week @ 2025-03-24 1418027/week @ 2025-03-31 1623372/week @ 2025-04-07 1414381/week @ 2025-04-14 1355737/week @ 2025-04-21 1312225/week @ 2025-04-28 1386816/week @ 2025-05-05 1411402/week @ 2025-05-12 1383122/week @ 2025-05-19 1192362/week @ 2025-05-26 1358354/week @ 2025-06-02 1397649/week @ 2025-06-09 1467290/week @ 2025-06-16 1467702/week @ 2025-06-23\n**5,751,582** downloads per month Used in **6,025** crates (1,157 directly)\u27e84\u27e9\n**MIT** license \n125KB  3K  SLoC\n# ``console``\n![Build Status\u27e85\u27e9](https://github.com/console-rs/console/actions?query=workflow%3ACI) ![crates.io\u27e86\u27e9](https://crates.io/crates/console) ![License\u27e87\u27e9](https://github.com/console-rs/console/blob/main/LICENSE) ![Documentation\u27e88\u27e9](https://docs.rs/console)\n**console** is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * dialoguer\u27e89\u27e9\n  * indicatif\u27e810\u27e9\n\n\n## Terminal Access\nThe terminal is abstracted through the ```console`::``Term`` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\n``use` `std`::``thread`;`\n`use` `std`::```time`::``Duration`;`\n`use` `console`::``Term`;`\n`let` term `=` `Term`::``stdout`(``)``;`\nterm`.``write_line``(```\"`Hello World!`\"```)``?``;`\n`thread`::``sleep`(``Duration`::``from_millis`(``2000``)``)``;`\nterm`.``clear_line``(``)``?``;`\n`\n```\n\n## Colors and Styles\n``console`` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the ``style`` function and utility types.\nExample usage:\n```\n``use` `console`::``style`;`\n`println!``(```\"`This is `{}` neat`\"```,` `style``(```\"`quite`\"```)``.``cyan``(``)``)``;`\n`\n```\n\nYou can also store styles and apply them to text later:\n```\n``use` `console`::``Style`;`\n`let` cyan `=` `Style`::``new`(``)``.``cyan``(``)``;`\n`println!``(```\"`This is `{}` neat`\"```,` cyan`.``apply_to``(```\"`quite`\"```)``)``;`\n`\n```\n\n## Working with ANSI Codes\nThe crate provides the function ``strip_ansi_codes`` to remove ANSI codes from a string as well as ``measure_text_width`` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## Unicode Width Support\nBy default this crate depends on the ``unicode-width`` crate to calculate the width of terminal characters. If you do not need this you can disable the ``unicode-width`` feature which will cut down on dependencies.\nLicense: MIT\n#### Dependencies\n~1\u201315MB  ~106K SLoC\n  * encode_unicode\u27e811\u27e9 win\n  * std\u27e812\u27e9 libc\u27e813\u27e9\n  * std\u27e812\u27e9 once_cell\u27e814\u27e9\n  * default\u27e815\u27e9 unicode-width\u27e816\u27e9 0.2\n  * windows-sys\u27e817\u27e9 0.60+Win32_Foundation\u27e818\u27e9+Win32\u2026Console\u27e819\u27e9+Win32\u2026FileSystem\u27e820\u27e9+Win32\u2026KeyboardAndMouse\u27e821\u27e9 win\n\n\n  * dev  proptest\u27e822\u27e9+std\u27e823\u27e9+bit-set\u27e824\u27e9+break-dead-code\u27e825\u27e9\n  * dev  regex\u27e826\u27e9\n\n\n#### Other features\u27e827\u27e9\n  * alloc\u27e828\u27e9\n  * ansi-parsing\u27e829\u27e9\n  * windows-console-colors\u27e830\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/console/versions: 44 releases\n\u27e82\u27e9 https://github.com/console-rs/console/releases:  new 0.16.0 \n\u27e83\u27e9 https://lib.rs/command-line-interface: Crates to help create command line interfaces, such as argument parsers, line-editing, or output coloring and formatting. - Command-line interface\n\u27e84\u27e9 https://lib.rs/crates/console/rev: **6,025** crates (1,157 directly)\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/console-rs/console/actions/workflows/ci.yml/badge.svg: ![Build Status\n\u27e86\u27e9 https://img.shields.io/crates/d/console.svg: ![crates.io\n\u27e87\u27e9 https://img.shields.io/github/license/console-rs/console: ![License\n\u27e88\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/console/badge.svg: ![Documentation\n\u27e89\u27e9 https://docs.rs/dialoguer: dialoguer\n\u27e810\u27e9 https://docs.rs/indicatif: indicatif\n\u27e811\u27e9 https://lib.rs/crates/encode_unicode: 1 - encode_unicode\n\u27e812\u27e9 https://lib.rs/crates/console/features#feature-std: default feature - std\n\u27e813\u27e9 https://lib.rs/crates/libc: 0.2.99 - libc\n\u27e814\u27e9 https://lib.rs/crates/once_cell: 1.8 - once_cell\n\u27e815\u27e9 https://lib.rs/crates/console/features#feature-default: default feature - default\n\u27e816\u27e9 https://lib.rs/crates/unicode-width: new - unicode-width\n\u27e817\u27e9 https://lib.rs/crates/windows-sys: new - windows-sys\n\u27e818\u27e9 https://lib.rs/crates/windows-sys/features#feature-Win32_Foundation: +Win32_Foundation\n\u27e819\u27e9 https://lib.rs/crates/windows-sys/features#feature-Win32_System_Console: +Win32\u2026Console\n\u27e820\u27e9 https://lib.rs/crates/windows-sys/features#feature-Win32_Storage_FileSystem: +Win32\u2026FileSystem\n\u27e821\u27e9 https://lib.rs/crates/windows-sys/features#feature-Win32_UI_Input_KeyboardAndMouse: +Win32\u2026KeyboardAndMouse\n\u27e822\u27e9 https://lib.rs/crates/proptest: 1.0.0 - proptest\n\u27e823\u27e9 https://lib.rs/crates/proptest/features#feature-std: +std\n\u27e824\u27e9 https://lib.rs/crates/proptest/features#feature-bit-set: +bit-set\n\u27e825\u27e9 https://lib.rs/crates/proptest/features#feature-break-dead-code: +break-dead-code\n\u27e826\u27e9 https://lib.rs/crates/regex: 1.4.2 - regex\n\u27e827\u27e9 https://lib.rs/crates/console/features: Other features\n\u27e828\u27e9 https://lib.rs/crates/console/features#feature-alloc: alloc\n\u27e829\u27e9 https://lib.rs/crates/console/features#feature-ansi-parsing: ansi-parsing\n\u27e830\u27e9 https://lib.rs/crates/console/features#feature-windows-console-colors: windows-console-colors\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5353,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113993.0730523"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#once_cell@1.20.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\once_cell-1.20.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "once_cell",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\once_cell-1.20.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "race",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libonce_cell-645d9ee8a69a29d7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libunicode_width-911e5fa1d8ca1fe0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-240a97a4fa0b393c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-240a97a4fa0b393c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-d92a3393127d4a15\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_x86_64_msvc-40ee72fb67443885.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.53.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_targets-41d56a13d5b30761.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-c56b4f856938e881\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-c56b4f856938e881\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#encode_unicode@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\encode_unicode-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "encode_unicode",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\encode_unicode-1.0.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libencode_unicode-e3f4adf8df5b4460.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "freebsd11",
+                "libc_const_extern_fn"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-153b022f09d946a4\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "libc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\liblibc-b111125a5ac9d280.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.60.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Console",
+                "Win32_UI",
+                "Win32_UI_Input",
+                "Win32_UI_Input_KeyboardAndMouse",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_sys-cf32f1cab57ecf06.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpne28srsf/console-0.16.0#console@0.16.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "console",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "ansi-parsing",
+                "default",
+                "std",
+                "unicode-width"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libconsole-249424b25cfd79b1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-240a97a4fa0b393c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-240a97a4fa0b393c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\windows_x86_64_msvc-d92a3393127d4a15\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-c56b4f856938e881\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-c56b4f856938e881\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#encode_unicode@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\encode_unicode-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "encode_unicode",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\encode_unicode-1.0.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libencode_unicode-e3f4adf8df5b4460.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#once_cell@1.20.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\once_cell-1.20.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "once_cell",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\once_cell-1.20.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "race",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libonce_cell-645d9ee8a69a29d7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libunicode_width-911e5fa1d8ca1fe0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.53.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.53.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_x86_64_msvc-40ee72fb67443885.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "freebsd11",
+                "libc_const_extern_fn"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\build\\libc-153b022f09d946a4\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.53.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.53.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_targets-41d56a13d5b30761.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#libc@0.2.170",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "libc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\libc-0.2.170\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\liblibc-b111125a5ac9d280.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.60.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.60.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Console",
+                "Win32_UI",
+                "Win32_UI_Input",
+                "Win32_UI_Input_KeyboardAndMouse",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libwindows_sys-cf32f1cab57ecf06.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpne28srsf/console-0.16.0#console@0.16.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "console",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "ansi-parsing",
+                "default",
+                "std",
+                "unicode-width"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpne28srsf\\console-0.16.0\\target\\debug\\deps\\libconsole-ab6426246b771d5f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 45
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "console",
+          "version": "0.16.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\n[Settings](https://docs.rs/console/latest/settings.html)\n[Help](https://docs.rs/console/latest/help.html)\nSummary[Source](https://docs.rs/console/latest/src/console/lib.rs.html#1-122)\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * [dialoguer](https://docs.rs/dialoguer)\n  * [indicatif](https://docs.rs/indicatif)\n\n\n## [\u00a7](https://docs.rs/console/latest/console/#terminal-access)Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#colors-and-styles)Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#working-with-ansi-codes)Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## [\u00a7](https://docs.rs/console/latest/console/#unicode-width-support)Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## [\u00a7](https://docs.rs/console/latest/console/#features)Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs[\u00a7](https://docs.rs/console/latest/console/#structs)\n\n[AnsiCodeIterator](https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html \"struct console::AnsiCodeIterator\")\n    An iterator over ansi codes in a string.\n\n[Emoji](https://docs.rs/console/latest/console/struct.Emoji.html \"struct console::Emoji\")\n    \u201cIntelligent\u201d emoji formatter.\n\n[Style](https://docs.rs/console/latest/console/struct.Style.html \"struct console::Style\")\n    A stored style that can be applied.\n\n[StyledObject](https://docs.rs/console/latest/console/struct.StyledObject.html \"struct console::StyledObject\")\n    A formatting wrapper that can be styled for a terminal.\n\n[Term](https://docs.rs/console/latest/console/struct.Term.html \"struct console::Term\")\n    Abstraction around a terminal.\n\n[TermFeatures](https://docs.rs/console/latest/console/struct.TermFeatures.html \"struct console::TermFeatures\")\n    Gives access to the terminal features.\n## Enums[\u00a7](https://docs.rs/console/latest/console/#enums)\n\n[Alignment](https://docs.rs/console/latest/console/enum.Alignment.html \"enum console::Alignment\")\n    Defines the alignment for padding operations.\n\n[Attribute](https://docs.rs/console/latest/console/enum.Attribute.html \"enum console::Attribute\")\n    A terminal style attribute.\n\n[Color](https://docs.rs/console/latest/console/enum.Color.html \"enum console::Color\")\n    A terminal color.\n\n[Key](https://docs.rs/console/latest/console/enum.Key.html \"enum console::Key\")\n    Key mapping\n\n[TermFamily](https://docs.rs/console/latest/console/enum.TermFamily.html \"enum console::TermFamily\")\n    The family of the terminal.\n\n[TermTarget](https://docs.rs/console/latest/console/enum.TermTarget.html \"enum console::TermTarget\")\n    Where the term is writing.\n## Functions[\u00a7](https://docs.rs/console/latest/console/#functions)\n\n[colors_enabled](https://docs.rs/console/latest/console/fn.colors_enabled.html \"fn console::colors_enabled\")\n    Returns `true` if colors should be enabled for stdout.\n\n[colors_enabled_stderr](https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html \"fn console::colors_enabled_stderr\")\n    Returns `true` if colors should be enabled for stderr.\n\n[measure_text_width](https://docs.rs/console/latest/console/fn.measure_text_width.html \"fn console::measure_text_width\")\n    Measure the width of a string in terminal characters.\n\n[pad_str](https://docs.rs/console/latest/console/fn.pad_str.html \"fn console::pad_str\")\n    Pads a string to fill a certain number of characters.\n\n[pad_str_with](https://docs.rs/console/latest/console/fn.pad_str_with.html \"fn console::pad_str_with\")\n    Pads a string with specific padding to fill a certain number of characters.\n\n[set_colors_enabled](https://docs.rs/console/latest/console/fn.set_colors_enabled.html \"fn console::set_colors_enabled\")\n    Forces colorization on or off for stdout.\n\n[set_colors_enabled_stderr](https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html \"fn console::set_colors_enabled_stderr\")\n    Forces colorization on or off for stderr.\n\n[strip_ansi_codes](https://docs.rs/console/latest/console/fn.strip_ansi_codes.html \"fn console::strip_ansi_codes\")\n    Helper function to strip ansi codes.\n\n[style](https://docs.rs/console/latest/console/fn.style.html \"fn console::style\")\n    Wraps an object for formatting for styling.\n\n[truncate_str](https://docs.rs/console/latest/console/fn.truncate_str.html \"fn console::truncate_str\")\n    Truncates a string to a certain number of characters.\n\n[user_attended](https://docs.rs/console/latest/console/fn.user_attended.html \"fn console::user_attended\")\n    A fast way to check if the application has a user attended for stdout.\n\n[user_attended_stderr](https://docs.rs/console/latest/console/fn.user_attended_stderr.html \"fn console::user_attended_stderr\")\n    A fast way to check if the application has a user attended for stderr.\n",
+            "markdown_with_citations": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * dialoguer\u27e84\u27e9\n  * indicatif\u27e85\u27e9\n\n\n## \u00a7\u27e86\u27e9Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## \u00a7\u27e87\u27e9Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## \u00a7\u27e88\u27e9Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## \u00a7\u27e89\u27e9Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## \u00a7\u27e810\u27e9Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs\u00a7\u27e811\u27e9\n\nAnsiCodeIterator\u27e812\u27e9\n    An iterator over ansi codes in a string.\n\nEmoji\u27e813\u27e9\n    \u201cIntelligent\u201d emoji formatter.\n\nStyle\u27e814\u27e9\n    A stored style that can be applied.\n\nStyledObject\u27e815\u27e9\n    A formatting wrapper that can be styled for a terminal.\n\nTerm\u27e816\u27e9\n    Abstraction around a terminal.\n\nTermFeatures\u27e817\u27e9\n    Gives access to the terminal features.\n## Enums\u00a7\u27e818\u27e9\n\nAlignment\u27e819\u27e9\n    Defines the alignment for padding operations.\n\nAttribute\u27e820\u27e9\n    A terminal style attribute.\n\nColor\u27e821\u27e9\n    A terminal color.\n\nKey\u27e822\u27e9\n    Key mapping\n\nTermFamily\u27e823\u27e9\n    The family of the terminal.\n\nTermTarget\u27e824\u27e9\n    Where the term is writing.\n## Functions\u00a7\u27e825\u27e9\n\ncolors_enabled\u27e826\u27e9\n    Returns `true` if colors should be enabled for stdout.\n\ncolors_enabled_stderr\u27e827\u27e9\n    Returns `true` if colors should be enabled for stderr.\n\nmeasure_text_width\u27e828\u27e9\n    Measure the width of a string in terminal characters.\n\npad_str\u27e829\u27e9\n    Pads a string to fill a certain number of characters.\n\npad_str_with\u27e830\u27e9\n    Pads a string with specific padding to fill a certain number of characters.\n\nset_colors_enabled\u27e831\u27e9\n    Forces colorization on or off for stdout.\n\nset_colors_enabled_stderr\u27e832\u27e9\n    Forces colorization on or off for stderr.\n\nstrip_ansi_codes\u27e833\u27e9\n    Helper function to strip ansi codes.\n\nstyle\u27e834\u27e9\n    Wraps an object for formatting for styling.\n\ntruncate_str\u27e835\u27e9\n    Truncates a string to a certain number of characters.\n\nuser_attended\u27e836\u27e9\n    A fast way to check if the application has a user attended for stdout.\n\nuser_attended_stderr\u27e837\u27e9\n    A fast way to check if the application has a user attended for stderr.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/console/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/console/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/console/latest/src/console/lib.rs.html#1-122: Source\n\u27e84\u27e9 https://docs.rs/dialoguer: dialoguer\n\u27e85\u27e9 https://docs.rs/indicatif: indicatif\n\u27e86\u27e9 https://docs.rs/console/latest/console/#terminal-access: \u00a7\n\u27e87\u27e9 https://docs.rs/console/latest/console/#colors-and-styles: \u00a7\n\u27e88\u27e9 https://docs.rs/console/latest/console/#working-with-ansi-codes: \u00a7\n\u27e89\u27e9 https://docs.rs/console/latest/console/#unicode-width-support: \u00a7\n\u27e810\u27e9 https://docs.rs/console/latest/console/#features: \u00a7\n\u27e811\u27e9 https://docs.rs/console/latest/console/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html: struct console::AnsiCodeIterator - AnsiCodeIterator\n\u27e813\u27e9 https://docs.rs/console/latest/console/struct.Emoji.html: struct console::Emoji - Emoji\n\u27e814\u27e9 https://docs.rs/console/latest/console/struct.Style.html: struct console::Style - Style\n\u27e815\u27e9 https://docs.rs/console/latest/console/struct.StyledObject.html: struct console::StyledObject - StyledObject\n\u27e816\u27e9 https://docs.rs/console/latest/console/struct.Term.html: struct console::Term - Term\n\u27e817\u27e9 https://docs.rs/console/latest/console/struct.TermFeatures.html: struct console::TermFeatures - TermFeatures\n\u27e818\u27e9 https://docs.rs/console/latest/console/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/console/latest/console/enum.Alignment.html: enum console::Alignment - Alignment\n\u27e820\u27e9 https://docs.rs/console/latest/console/enum.Attribute.html: enum console::Attribute - Attribute\n\u27e821\u27e9 https://docs.rs/console/latest/console/enum.Color.html: enum console::Color - Color\n\u27e822\u27e9 https://docs.rs/console/latest/console/enum.Key.html: enum console::Key - Key\n\u27e823\u27e9 https://docs.rs/console/latest/console/enum.TermFamily.html: enum console::TermFamily - TermFamily\n\u27e824\u27e9 https://docs.rs/console/latest/console/enum.TermTarget.html: enum console::TermTarget - TermTarget\n\u27e825\u27e9 https://docs.rs/console/latest/console/#functions: \u00a7\n\u27e826\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled.html: fn console::colors_enabled - colors_enabled\n\u27e827\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html: fn console::colors_enabled_stderr - colors_enabled_stderr\n\u27e828\u27e9 https://docs.rs/console/latest/console/fn.measure_text_width.html: fn console::measure_text_width - measure_text_width\n\u27e829\u27e9 https://docs.rs/console/latest/console/fn.pad_str.html: fn console::pad_str - pad_str\n\u27e830\u27e9 https://docs.rs/console/latest/console/fn.pad_str_with.html: fn console::pad_str_with - pad_str_with\n\u27e831\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled.html: fn console::set_colors_enabled - set_colors_enabled\n\u27e832\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html: fn console::set_colors_enabled_stderr - set_colors_enabled_stderr\n\u27e833\u27e9 https://docs.rs/console/latest/console/fn.strip_ansi_codes.html: fn console::strip_ansi_codes - strip_ansi_codes\n\u27e834\u27e9 https://docs.rs/console/latest/console/fn.style.html: fn console::style - style\n\u27e835\u27e9 https://docs.rs/console/latest/console/fn.truncate_str.html: fn console::truncate_str - truncate_str\n\u27e836\u27e9 https://docs.rs/console/latest/console/fn.user_attended.html: fn console::user_attended - user_attended\n\u27e837\u27e9 https://docs.rs/console/latest/console/fn.user_attended_stderr.html: fn console::user_attended_stderr - user_attended_stderr\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "console",
+          "version": "0.16.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\n[Settings](https://docs.rs/console/latest/settings.html)\n[Help](https://docs.rs/console/latest/help.html)\nSummary[Source](https://docs.rs/console/latest/src/console/lib.rs.html#1-122)\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * [dialoguer](https://docs.rs/dialoguer)\n  * [indicatif](https://docs.rs/indicatif)\n\n\n## [\u00a7](https://docs.rs/console/latest/console/#terminal-access)Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#colors-and-styles)Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## [\u00a7](https://docs.rs/console/latest/console/#working-with-ansi-codes)Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## [\u00a7](https://docs.rs/console/latest/console/#unicode-width-support)Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## [\u00a7](https://docs.rs/console/latest/console/#features)Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs[\u00a7](https://docs.rs/console/latest/console/#structs)\n\n[AnsiCodeIterator](https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html \"struct console::AnsiCodeIterator\")\n    An iterator over ansi codes in a string.\n\n[Emoji](https://docs.rs/console/latest/console/struct.Emoji.html \"struct console::Emoji\")\n    \u201cIntelligent\u201d emoji formatter.\n\n[Style](https://docs.rs/console/latest/console/struct.Style.html \"struct console::Style\")\n    A stored style that can be applied.\n\n[StyledObject](https://docs.rs/console/latest/console/struct.StyledObject.html \"struct console::StyledObject\")\n    A formatting wrapper that can be styled for a terminal.\n\n[Term](https://docs.rs/console/latest/console/struct.Term.html \"struct console::Term\")\n    Abstraction around a terminal.\n\n[TermFeatures](https://docs.rs/console/latest/console/struct.TermFeatures.html \"struct console::TermFeatures\")\n    Gives access to the terminal features.\n## Enums[\u00a7](https://docs.rs/console/latest/console/#enums)\n\n[Alignment](https://docs.rs/console/latest/console/enum.Alignment.html \"enum console::Alignment\")\n    Defines the alignment for padding operations.\n\n[Attribute](https://docs.rs/console/latest/console/enum.Attribute.html \"enum console::Attribute\")\n    A terminal style attribute.\n\n[Color](https://docs.rs/console/latest/console/enum.Color.html \"enum console::Color\")\n    A terminal color.\n\n[Key](https://docs.rs/console/latest/console/enum.Key.html \"enum console::Key\")\n    Key mapping\n\n[TermFamily](https://docs.rs/console/latest/console/enum.TermFamily.html \"enum console::TermFamily\")\n    The family of the terminal.\n\n[TermTarget](https://docs.rs/console/latest/console/enum.TermTarget.html \"enum console::TermTarget\")\n    Where the term is writing.\n## Functions[\u00a7](https://docs.rs/console/latest/console/#functions)\n\n[colors_enabled](https://docs.rs/console/latest/console/fn.colors_enabled.html \"fn console::colors_enabled\")\n    Returns `true` if colors should be enabled for stdout.\n\n[colors_enabled_stderr](https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html \"fn console::colors_enabled_stderr\")\n    Returns `true` if colors should be enabled for stderr.\n\n[measure_text_width](https://docs.rs/console/latest/console/fn.measure_text_width.html \"fn console::measure_text_width\")\n    Measure the width of a string in terminal characters.\n\n[pad_str](https://docs.rs/console/latest/console/fn.pad_str.html \"fn console::pad_str\")\n    Pads a string to fill a certain number of characters.\n\n[pad_str_with](https://docs.rs/console/latest/console/fn.pad_str_with.html \"fn console::pad_str_with\")\n    Pads a string with specific padding to fill a certain number of characters.\n\n[set_colors_enabled](https://docs.rs/console/latest/console/fn.set_colors_enabled.html \"fn console::set_colors_enabled\")\n    Forces colorization on or off for stdout.\n\n[set_colors_enabled_stderr](https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html \"fn console::set_colors_enabled_stderr\")\n    Forces colorization on or off for stderr.\n\n[strip_ansi_codes](https://docs.rs/console/latest/console/fn.strip_ansi_codes.html \"fn console::strip_ansi_codes\")\n    Helper function to strip ansi codes.\n\n[style](https://docs.rs/console/latest/console/fn.style.html \"fn console::style\")\n    Wraps an object for formatting for styling.\n\n[truncate_str](https://docs.rs/console/latest/console/fn.truncate_str.html \"fn console::truncate_str\")\n    Truncates a string to a certain number of characters.\n\n[user_attended](https://docs.rs/console/latest/console/fn.user_attended.html \"fn console::user_attended\")\n    A fast way to check if the application has a user attended for stdout.\n\n[user_attended_stderr](https://docs.rs/console/latest/console/fn.user_attended_stderr.html \"fn console::user_attended_stderr\")\n    A fast way to check if the application has a user attended for stderr.\n",
+            "markdown_with_citations": "[](https://docs.rs/console/latest/console/all.html \"show sidebar\")\n# Crate consoleCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nconsole is a library for Rust that provides access to various terminal features so you can build nicer looking command line interfaces. It comes with various tools and utilities for working with Terminals and formatting text.\nBest paired with other libraries in the family:\n  * dialoguer\u27e84\u27e9\n  * indicatif\u27e85\u27e9\n\n\n## \u00a7\u27e86\u27e9Terminal Access\nThe terminal is abstracted through the `console::Term` type. It can either directly provide access to the connected terminal or by buffering up commands. A buffered terminal will however not be completely buffered on windows where cursor movements are currently directly passed through.\nExample usage:\n```\nuse std::thread;\nuse std::time::Duration;\nuse console::Term;\nlet term = Term::stdout();\nterm.write_line(\"Hello World!\")?;\nthread::sleep(Duration::from_millis(2000));\nterm.clear_line()?;\n```\n\n## \u00a7\u27e87\u27e9Colors and Styles\n`console` automatically detects when to use colors based on the tty flag. It also provides higher level wrappers for styling text and other things that can be displayed with the `style` function and utility types.\nExample usage:\n```\nuse console::style;\nprintln!(\"This is {} neat\", style(\"quite\").cyan());\n```\n\nYou can also store styles and apply them to text later:\n```\nuse console::Style;\nlet cyan = Style::new().cyan();\nprintln!(\"This is {} neat\", cyan.apply_to(\"quite\"));\n```\n\n## \u00a7\u27e88\u27e9Working with ANSI Codes\nThe crate provides the function `strip_ansi_codes` to remove ANSI codes from a string as well as `measure_text_width` to calculate the width of a string as it would be displayed by the terminal. Both of those together are useful for more complex formatting.\n## \u00a7\u27e89\u27e9Unicode Width Support\nBy default this crate depends on the `unicode-width` crate to calculate the width of terminal characters. If you do not need this you can disable the `unicode-width` feature which will cut down on dependencies.\n## \u00a7\u27e810\u27e9Features\nBy default all features are enabled. The following features exist:\n  * `unicode-width`: adds support for unicode width calculations\n  * `ansi-parsing`: adds support for parsing ansi codes (this adds support for stripping and taking ansi escape codes into account for length calculations).\n\n\n## Structs\u00a7\u27e811\u27e9\n\nAnsiCodeIterator\u27e812\u27e9\n    An iterator over ansi codes in a string.\n\nEmoji\u27e813\u27e9\n    \u201cIntelligent\u201d emoji formatter.\n\nStyle\u27e814\u27e9\n    A stored style that can be applied.\n\nStyledObject\u27e815\u27e9\n    A formatting wrapper that can be styled for a terminal.\n\nTerm\u27e816\u27e9\n    Abstraction around a terminal.\n\nTermFeatures\u27e817\u27e9\n    Gives access to the terminal features.\n## Enums\u00a7\u27e818\u27e9\n\nAlignment\u27e819\u27e9\n    Defines the alignment for padding operations.\n\nAttribute\u27e820\u27e9\n    A terminal style attribute.\n\nColor\u27e821\u27e9\n    A terminal color.\n\nKey\u27e822\u27e9\n    Key mapping\n\nTermFamily\u27e823\u27e9\n    The family of the terminal.\n\nTermTarget\u27e824\u27e9\n    Where the term is writing.\n## Functions\u00a7\u27e825\u27e9\n\ncolors_enabled\u27e826\u27e9\n    Returns `true` if colors should be enabled for stdout.\n\ncolors_enabled_stderr\u27e827\u27e9\n    Returns `true` if colors should be enabled for stderr.\n\nmeasure_text_width\u27e828\u27e9\n    Measure the width of a string in terminal characters.\n\npad_str\u27e829\u27e9\n    Pads a string to fill a certain number of characters.\n\npad_str_with\u27e830\u27e9\n    Pads a string with specific padding to fill a certain number of characters.\n\nset_colors_enabled\u27e831\u27e9\n    Forces colorization on or off for stdout.\n\nset_colors_enabled_stderr\u27e832\u27e9\n    Forces colorization on or off for stderr.\n\nstrip_ansi_codes\u27e833\u27e9\n    Helper function to strip ansi codes.\n\nstyle\u27e834\u27e9\n    Wraps an object for formatting for styling.\n\ntruncate_str\u27e835\u27e9\n    Truncates a string to a certain number of characters.\n\nuser_attended\u27e836\u27e9\n    A fast way to check if the application has a user attended for stdout.\n\nuser_attended_stderr\u27e837\u27e9\n    A fast way to check if the application has a user attended for stderr.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/console/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/console/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/console/latest/src/console/lib.rs.html#1-122: Source\n\u27e84\u27e9 https://docs.rs/dialoguer: dialoguer\n\u27e85\u27e9 https://docs.rs/indicatif: indicatif\n\u27e86\u27e9 https://docs.rs/console/latest/console/#terminal-access: \u00a7\n\u27e87\u27e9 https://docs.rs/console/latest/console/#colors-and-styles: \u00a7\n\u27e88\u27e9 https://docs.rs/console/latest/console/#working-with-ansi-codes: \u00a7\n\u27e89\u27e9 https://docs.rs/console/latest/console/#unicode-width-support: \u00a7\n\u27e810\u27e9 https://docs.rs/console/latest/console/#features: \u00a7\n\u27e811\u27e9 https://docs.rs/console/latest/console/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/console/latest/console/struct.AnsiCodeIterator.html: struct console::AnsiCodeIterator - AnsiCodeIterator\n\u27e813\u27e9 https://docs.rs/console/latest/console/struct.Emoji.html: struct console::Emoji - Emoji\n\u27e814\u27e9 https://docs.rs/console/latest/console/struct.Style.html: struct console::Style - Style\n\u27e815\u27e9 https://docs.rs/console/latest/console/struct.StyledObject.html: struct console::StyledObject - StyledObject\n\u27e816\u27e9 https://docs.rs/console/latest/console/struct.Term.html: struct console::Term - Term\n\u27e817\u27e9 https://docs.rs/console/latest/console/struct.TermFeatures.html: struct console::TermFeatures - TermFeatures\n\u27e818\u27e9 https://docs.rs/console/latest/console/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/console/latest/console/enum.Alignment.html: enum console::Alignment - Alignment\n\u27e820\u27e9 https://docs.rs/console/latest/console/enum.Attribute.html: enum console::Attribute - Attribute\n\u27e821\u27e9 https://docs.rs/console/latest/console/enum.Color.html: enum console::Color - Color\n\u27e822\u27e9 https://docs.rs/console/latest/console/enum.Key.html: enum console::Key - Key\n\u27e823\u27e9 https://docs.rs/console/latest/console/enum.TermFamily.html: enum console::TermFamily - TermFamily\n\u27e824\u27e9 https://docs.rs/console/latest/console/enum.TermTarget.html: enum console::TermTarget - TermTarget\n\u27e825\u27e9 https://docs.rs/console/latest/console/#functions: \u00a7\n\u27e826\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled.html: fn console::colors_enabled - colors_enabled\n\u27e827\u27e9 https://docs.rs/console/latest/console/fn.colors_enabled_stderr.html: fn console::colors_enabled_stderr - colors_enabled_stderr\n\u27e828\u27e9 https://docs.rs/console/latest/console/fn.measure_text_width.html: fn console::measure_text_width - measure_text_width\n\u27e829\u27e9 https://docs.rs/console/latest/console/fn.pad_str.html: fn console::pad_str - pad_str\n\u27e830\u27e9 https://docs.rs/console/latest/console/fn.pad_str_with.html: fn console::pad_str_with - pad_str_with\n\u27e831\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled.html: fn console::set_colors_enabled - set_colors_enabled\n\u27e832\u27e9 https://docs.rs/console/latest/console/fn.set_colors_enabled_stderr.html: fn console::set_colors_enabled_stderr - set_colors_enabled_stderr\n\u27e833\u27e9 https://docs.rs/console/latest/console/fn.strip_ansi_codes.html: fn console::strip_ansi_codes - strip_ansi_codes\n\u27e834\u27e9 https://docs.rs/console/latest/console/fn.style.html: fn console::style - style\n\u27e835\u27e9 https://docs.rs/console/latest/console/fn.truncate_str.html: fn console::truncate_str - truncate_str\n\u27e836\u27e9 https://docs.rs/console/latest/console/fn.user_attended.html: fn console::user_attended - user_attended\n\u27e837\u27e9 https://docs.rs/console/latest/console/fn.user_attended_stderr.html: fn console::user_attended_stderr - user_attended_stderr\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `console` crate is a versatile library for building polished command-line interfaces in Rust, offering terminal abstraction, text styling, and color management. It supports ANSI code handling, Unicode width calculations, and provides utilities for formatting, padding, and truncating text. Key features include terminal access via `Term`, dynamic styling with `Style`, and functions for managing colors, measuring text width, and stripping ANSI codes.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: Terminal Access  \n\u2705 **Factual**: The `console::Term` type provides an abstraction for terminal access, allowing developers to write directly to the terminal or buffer commands for later execution.  \n\u274c **Counterfactual**: The `console::Term` type only supports buffered terminal operations and does not allow direct interaction with the terminal.  \n\n---\n\n### Pair 2: Colors and Styles  \n\u2705 **Factual**: The `console` crate automatically detects whether to enable colors based on the terminal's TTY flag and provides utilities like `style` and `Style` for text styling.  \n\u274c **Counterfactual**: The `console` crate requires manual configuration to enable colors and does not support automatic detection of the terminal's TTY flag.  \n\n---\n\n### Pair 3: Unicode Width Support  \n\u2705 **Factual**: The `console` crate depends on the `unicode-width` crate by default to calculate the width of terminal characters, but this feature can be disabled to reduce dependencies.  \n\u274c **Counterfactual**: The `console` crate does not support Unicode width calculations and relies solely on ASCII character width for terminal formatting.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-93d8874c-07790812-1751260202",
+      "timestamp": "2025-06-30T05:10:02.002439+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

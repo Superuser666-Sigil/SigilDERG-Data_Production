@@ -1,0 +1,1561 @@
+[
+  {
+    "execution_id": "exec-fb609bdc-0ce2a33d-1751263897",
+    "timestamp": "2025-06-30T06:11:37.943034+00:00",
+    "sacred_chain": {
+      "input_data": "darling",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'darling' -> 'darling'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "darling",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/darling",
+            "title": "darling v0.20.11",
+            "content": {
+              "raw_markdown": "#  darling v0.20.11\nA proc-macro library for reading attributes into structs when implementing custom derives. \n  * [ Readme ](https://crates.io/crates/darling)\n  * [ 61 Versions ](https://crates.io/crates/darling/versions)\n  * [ Dependencies ](https://crates.io/crates/darling/dependencies)\n  * [ Dependents ](https://crates.io/crates/darling/reverse_dependencies)\n\n\n## Metadata\n3 months ago \nv1.56.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n36.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add darling\nOr add the following line to your Cargo.toml:\ndarling = \"0.20.11\"\n## Documentation\n[ docs.rs/darling/0.20.11 ](https://docs.rs/darling/0.20.11)\n## Repository\n[ github.com/TedDriggs/darling ](https://github.com/TedDriggs/darling)\n## Owners\n[ Report crate ](https://crates.io/support?crate=darling&inquire=crate-violation)\n### Stats Overview\n224,443,425 Downloads all time\n61 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  darling v0.20.11\nA proc-macro library for reading attributes into structs when implementing custom derives. \n  *  Readme \u27e81\u27e9\n  *  61 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n3 months ago \nv1.56.0 \n MIT \u27e85\u27e9\n36.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add darling\nOr add the following line to your Cargo.toml:\ndarling = \"0.20.11\"\n## Documentation\n docs.rs/darling/0.20.11 \u27e86\u27e9\n## Repository\n github.com/TedDriggs/darling \u27e87\u27e9\n## Owners\n Report crate \u27e88\u27e9\n### Stats Overview\n224,443,425 Downloads all time\n61 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/darling:  Readme \n\u27e82\u27e9 https://crates.io/crates/darling/versions:  61 Versions \n\u27e83\u27e9 https://crates.io/crates/darling/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/darling/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://docs.rs/darling/0.20.11:  docs.rs/darling/0.20.11 \n\u27e87\u27e9 https://github.com/TedDriggs/darling:  github.com/TedDriggs/darling \n\u27e88\u27e9 https://crates.io/support?crate=darling&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1040,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117687.7340156"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/darling",
+            "title": "Crate darlingCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\n[Settings](https://docs.rs/darling/latest/settings.html)\n[Help](https://docs.rs/darling/latest/help.html)\nSummary[Source](https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117)\nExpand description\n## [\u00a7](https://docs.rs/darling/latest/darling/#darling)Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### [\u00a7](https://docs.rs/darling/latest/darling/#design)Design\nDarling takes considerable design inspiration from [`serde`](https://serde.rs). A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### [\u00a7](https://docs.rs/darling/latest/darling/#attributes)Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### [\u00a7](https://docs.rs/darling/latest/darling/#forwarded-fields)Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromderiveinput)`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromfield)`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromtypeparam)`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromvariant)`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules[\u00a7](https://docs.rs/darling/latest/darling/#modules)\n\n[ast](https://docs.rs/darling/latest/darling/ast/index.html \"mod darling::ast\")\n    Utility types for working with the AST.\n\n[error](https://docs.rs/darling/latest/darling/error/index.html \"mod darling::error\")\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\n[usage](https://docs.rs/darling/latest/darling/usage/index.html \"mod darling::usage\")\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\n[util](https://docs.rs/darling/latest/darling/util/index.html \"mod darling::util\")\n    Utility types for attribute parsing.\n## Macros[\u00a7](https://docs.rs/darling/latest/darling/#macros)\n\n[uses_lifetimes](https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html \"macro darling::uses_lifetimes\")\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\n[uses_type_params](https://docs.rs/darling/latest/darling/macro.uses_type_params.html \"macro darling::uses_type_params\")\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs[\u00a7](https://docs.rs/darling/latest/darling/#structs)\n\n[Error](https://docs.rs/darling/latest/darling/struct.Error.html \"struct darling::Error\")\n    An error encountered during attribute parsing.\n## Traits[\u00a7](https://docs.rs/darling/latest/darling/#traits)\n\n[FromAttributes](https://docs.rs/darling/latest/darling/trait.FromAttributes.html \"trait darling::FromAttributes\")\n    Create an instance by parsing a list of attributes.\n\n[FromDeriveInput](https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html \"trait darling::FromDeriveInput\")\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\n[FromField](https://docs.rs/darling/latest/darling/trait.FromField.html \"trait darling::FromField\")\n    Creates an instance by parsing an individual field and its attributes.\n\n[FromGenericParam](https://docs.rs/darling/latest/darling/trait.FromGenericParam.html \"trait darling::FromGenericParam\")\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\n[FromGenerics](https://docs.rs/darling/latest/darling/trait.FromGenerics.html \"trait darling::FromGenerics\")\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\n[FromMeta](https://docs.rs/darling/latest/darling/trait.FromMeta.html \"trait darling::FromMeta\")\n    Create an instance from an item in an attribute declaration.\n\n[FromTypeParam](https://docs.rs/darling/latest/darling/trait.FromTypeParam.html \"trait darling::FromTypeParam\")\n    Creates an instance by parsing an individual type_param and its attributes.\n\n[FromVariant](https://docs.rs/darling/latest/darling/trait.FromVariant.html \"trait darling::FromVariant\")\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases[\u00a7](https://docs.rs/darling/latest/darling/#types)\n\n[Result](https://docs.rs/darling/latest/darling/type.Result.html \"type darling::Result\")\n    An alias of `Result` specific to attribute parsing.\n",
+              "markdown_with_citations": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### \u00a7\u27e85\u27e9Design\nDarling takes considerable design inspiration from `serde`\u27e86\u27e9. A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### \u00a7\u27e87\u27e9Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### \u00a7\u27e88\u27e9Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### \u00a7\u27e89\u27e9`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e810\u27e9`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e811\u27e9`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e812\u27e9`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules\u00a7\u27e813\u27e9\n\nast\u27e814\u27e9\n    Utility types for working with the AST.\n\nerror\u27e815\u27e9\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\nusage\u27e816\u27e9\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\nutil\u27e817\u27e9\n    Utility types for attribute parsing.\n## Macros\u00a7\u27e818\u27e9\n\nuses_lifetimes\u27e819\u27e9\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\nuses_type_params\u27e820\u27e9\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs\u00a7\u27e821\u27e9\n\nError\u27e822\u27e9\n    An error encountered during attribute parsing.\n## Traits\u00a7\u27e823\u27e9\n\nFromAttributes\u27e824\u27e9\n    Create an instance by parsing a list of attributes.\n\nFromDeriveInput\u27e825\u27e9\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\nFromField\u27e826\u27e9\n    Creates an instance by parsing an individual field and its attributes.\n\nFromGenericParam\u27e827\u27e9\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\nFromGenerics\u27e828\u27e9\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\nFromMeta\u27e829\u27e9\n    Create an instance from an item in an attribute declaration.\n\nFromTypeParam\u27e830\u27e9\n    Creates an instance by parsing an individual type_param and its attributes.\n\nFromVariant\u27e831\u27e9\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases\u00a7\u27e832\u27e9\n\nResult\u27e833\u27e9\n    An alias of `Result` specific to attribute parsing.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/darling/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/darling/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117: Source\n\u27e84\u27e9 https://docs.rs/darling/latest/darling/#darling: \u00a7\n\u27e85\u27e9 https://docs.rs/darling/latest/darling/#design: \u00a7\n\u27e86\u27e9 https://serde.rs: `serde`\n\u27e87\u27e9 https://docs.rs/darling/latest/darling/#attributes: \u00a7\n\u27e88\u27e9 https://docs.rs/darling/latest/darling/#forwarded-fields: \u00a7\n\u27e89\u27e9 https://docs.rs/darling/latest/darling/#fromderiveinput: \u00a7\n\u27e810\u27e9 https://docs.rs/darling/latest/darling/#fromfield: \u00a7\n\u27e811\u27e9 https://docs.rs/darling/latest/darling/#fromtypeparam: \u00a7\n\u27e812\u27e9 https://docs.rs/darling/latest/darling/#fromvariant: \u00a7\n\u27e813\u27e9 https://docs.rs/darling/latest/darling/#modules: \u00a7\n\u27e814\u27e9 https://docs.rs/darling/latest/darling/ast/index.html: mod darling::ast - ast\n\u27e815\u27e9 https://docs.rs/darling/latest/darling/error/index.html: mod darling::error - error\n\u27e816\u27e9 https://docs.rs/darling/latest/darling/usage/index.html: mod darling::usage - usage\n\u27e817\u27e9 https://docs.rs/darling/latest/darling/util/index.html: mod darling::util - util\n\u27e818\u27e9 https://docs.rs/darling/latest/darling/#macros: \u00a7\n\u27e819\u27e9 https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html: macro darling::uses_lifetimes - uses_lifetimes\n\u27e820\u27e9 https://docs.rs/darling/latest/darling/macro.uses_type_params.html: macro darling::uses_type_params - uses_type_params\n\u27e821\u27e9 https://docs.rs/darling/latest/darling/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/darling/latest/darling/struct.Error.html: struct darling::Error - Error\n\u27e823\u27e9 https://docs.rs/darling/latest/darling/#traits: \u00a7\n\u27e824\u27e9 https://docs.rs/darling/latest/darling/trait.FromAttributes.html: trait darling::FromAttributes - FromAttributes\n\u27e825\u27e9 https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html: trait darling::FromDeriveInput - FromDeriveInput\n\u27e826\u27e9 https://docs.rs/darling/latest/darling/trait.FromField.html: trait darling::FromField - FromField\n\u27e827\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenericParam.html: trait darling::FromGenericParam - FromGenericParam\n\u27e828\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenerics.html: trait darling::FromGenerics - FromGenerics\n\u27e829\u27e9 https://docs.rs/darling/latest/darling/trait.FromMeta.html: trait darling::FromMeta - FromMeta\n\u27e830\u27e9 https://docs.rs/darling/latest/darling/trait.FromTypeParam.html: trait darling::FromTypeParam - FromTypeParam\n\u27e831\u27e9 https://docs.rs/darling/latest/darling/trait.FromVariant.html: trait darling::FromVariant - FromVariant\n\u27e832\u27e9 https://docs.rs/darling/latest/darling/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/darling/latest/darling/type.Result.html: type darling::Result - Result\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9072,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117688.4518443"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/darling",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [59 releases](https://lib.rs/crates/darling/versions)\n0.20.11 |  Mar 28, 2025   \n---|---  \n0.20.10 |  Jul 9, 2024   \n0.20.9 |  May 15, 2024   \n0.20.8 |  Feb 23, 2024   \n0.2.0 |  Jun 19, 2017   \n#**3** in [Procedural macros](https://lib.rs/development-tools/procedural-macro-helpers \"Crates to help you write procedural macros in Rust.\n\")\nDownload history 3068600/week @ 2025-03-09 3264584/week @ 2025-03-16 3452544/week @ 2025-03-23 2952644/week @ 2025-03-30 3137671/week @ 2025-04-06 2729213/week @ 2025-04-13 2661267/week @ 2025-04-20 2545626/week @ 2025-04-27 2634387/week @ 2025-05-04 2731010/week @ 2025-05-11 2762646/week @ 2025-05-18 2503867/week @ 2025-05-25 2732610/week @ 2025-06-01 2717332/week @ 2025-06-08 2881137/week @ 2025-06-15 3029575/week @ 2025-06-22\n**11,514,533** downloads per month Used in [**12,531** crates (785 directly)](https://lib.rs/crates/darling/rev)\n**MIT** license \n335KB  7K  SLoC\n# Darling\n[![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/TedDriggs/darling/workflows/CI/badge.svg)](https://github.com/TedDriggs/darling/actions) [![Latest Version](https://img.shields.io/crates/v/darling.svg)](https://crates.io/crates/darling) ![Rustc Version 1.56+](https://img.shields.io/badge/rustc-1.56+-lightgray.svg)\n``darling`` is a crate for proc macro authors, which enables parsing attributes into structs. It is heavily inspired by ``serde`` both in its internals and in its API.\n# Benefits\n  * Easy and declarative parsing of macro input - make your proc-macros highly controllable with minimal time investment.\n  * Great validation and errors, no work required. When users of your proc-macro make a mistake, ``darling`` makes sure they get error markers at the right place in their source, and provides \"did you mean\" suggestions for misspelled fields.\n\n\n# Usage\n``darling`` provides a set of traits which can be derived or manually implemented.\n  1. ``FromMeta`` is used to extract values from a meta-item in an attribute. Implementations are likely reusable for many libraries, much like ``FromStr`` or ```serde`::``Deserialize``. Trait implementations are provided for primitives, some std types, and some ``syn`` types.\n  2. ``FromDeriveInput`` is implemented or derived by each proc-macro crate which depends on ``darling``. This is the root for input parsing; it gets access to the identity, generics, and visibility of the target type, and can specify which attribute names should be parsed or forwarded from the input AST.\n  3. ``FromField`` is implemented or derived by each proc-macro crate which depends on ``darling``. Structs deriving this trait will get access to the identity (if it exists), type, and visibility of the field.\n  4. ``FromVariant`` is implemented or derived by each proc-macro crate which depends on ``darling``. Structs deriving this trait will get access to the identity and contents of the variant, which can be transformed the same as any other ``darling`` input.\n  5. ``FromAttributes`` is a lower-level version of the more-specific ``FromDeriveInput``, ``FromField``, and ``FromVariant`` traits. Structs deriving this trait get a meta-item extractor and error collection which works for any syntax element, including traits, trait items, and functions. This is useful for non-derive proc macros.\n\n\n## Additional Modules\n  * ```darling`::``ast`` provides generic types for representing the AST.\n  * ```darling`::``usage`` provides traits and functions for determining where type parameters and lifetimes are used in a struct or enum.\n  * ```darling`::``util`` provides helper types with special ``FromMeta`` implementations, such as ``PathList``.\n\n\n# Example\n```\n``use` `darling`::````{`FromDeriveInput`,` FromMeta```}```;`\n``#``[``derive```(```Default`,` FromMeta```)```]``\n``#``[``darling```(```default```)```]``\n``pub` `struct` ```Lorem` ````{`\n  ``#``[``darling```(```rename `=` ``\"`sit`\"`````)```]``\n  `ipsum``:` `bool`,\n  `dolor``:` ``Option``<``String``>``,\n```}```\n``#``[``derive```(```FromDeriveInput```)```]``\n``#``[``darling```(`````attributes``(```my_crate```)```,` ``forward_attrs``(```allow`,` doc`,` cfg```)`````)```]``\n``pub` `struct` ```MyTraitOpts` ````{`\n  `ident``:` `syn`::``Ident,\n  `attrs``:` ``Vec``<``syn`::``Attribute`>``,\n  `lorem``:` Lorem,\n```}```\n`\n```\n\nThe above code will then be able to parse this input:\n```\n```///` A doc comment which will be available in `MyTraitOpts::attrs`.`\n``#``[``derive```(```MyTrait```)```]``\n``#``[``my_crate```(`````lorem``(```dolor `=` ``\"`Hello`\"```,` sit```)`````)```]``\n``pub` `struct` ```ConsumingType```;`\n`\n```\n\n# Attribute Macros\nNon-derive attribute macros are supported. To parse arguments for attribute macros, derive ``FromMeta`` on the argument receiver type, then use ```darling`::```ast`::```NestedMeta`::``parse_meta_list`` to convert the arguments ``TokenStream`` to a ````Vec``<`NestedMeta`>````, then pass that to the derived ``from_list`` method on your argument receiver type. This will produce a normal ```darling`::``Result``<`T`>```` that can be used the same as a result from parsing a ``DeriveInput``.\n## Macro Code\n```\n``use` `darling`::````{`Error`,` FromMeta```}```;`\n`use` `darling`::```ast`::``NestedMeta`;`\n`use` `syn`::``ItemFn`;`\n`use` `proc_macro`::``TokenStream`;`\n``#``[``derive```(```Debug`,` FromMeta```)```]``\n``struct` ```MacroArgs` ````{`\n  ``#``[``darling```(```default```)```]``\n  `timeout_ms``:` ``Option``<``u16``>``,\n  `path``:` String,\n```}```\n``#``[``proc_macro_attribute``]``\n``pub` `fn` `your_attr`````(``args``:` TokenStream, `input``:` TokenStream```)```` ``->` TokenStream` ````{`\n  `let` attr_args `=` `match` `NestedMeta`::``parse_meta_list`(`args`.``into``(``)``)` `{`\n    `Ok``(`v`)` `=>` v`,`\n    `Err``(`e`)` `=>` `{` `return` `TokenStream`::``from`(``Error`::``from`(`e`)``.``write_errors``(``)``)``;` `}`\n  `}``;`\n  `let` _input `=` `syn`::``parse_macro_input`!``(`input `as` ItemFn`)``;`\n  `let` _args `=` `match` `MacroArgs`::``from_list`(``&`attr_args`)` `{`\n    `Ok``(`v`)` `=>` v`,`\n    `Err``(`e`)` `=>` `{` `return` `TokenStream`::``from`(`e`.``write_errors``(``)``)``;` `}`\n  `}``;`\n  ``//` do things with `args``\n  `unimplemented!``(``)`\n```}```\n`\n```\n\n## Consuming Code\n```\n``use` `your_crate`::``your_attr`;`\n``#``[``your_attr```(```path `=` ``\"`hello`\"```,` timeout_ms `=` 15```)```]``\n``fn` `do_stuff`````(````)``````{`\n  `println!``(```\"`Hello`\"```)``;`\n```}```\n`\n```\n\n# Features\nDarling's features are built to work well for real-world projects.\n  * **Defaults** : Supports struct- and field-level defaults, using the same path syntax as ``serde``. Additionally, ````Option``<`T`>```` and ```darling`::```util`::``Flag`` fields are innately optional; you don't need to declare ````#``[``darling```(```default```)```]```` for those.\n  * **Field Renaming** : Fields can have different names in usage vs. the backing code.\n  * **Auto-populated fields** : Structs deriving ``FromDeriveInput`` and ``FromField`` can declare properties named ``ident``, ``vis``, ``ty``, ``attrs``, and ``generics`` to automatically get copies of the matching values from the input AST. ``FromDeriveInput`` additionally exposes ``data`` to get access to the body of the deriving type, and ``FromVariant`` exposes ``fields``. \n    * **Transformation of forwarded attributes** : You can add ````#``[``darling```(```with`=`path```)```]```` to the ``attrs`` field to use a custom function to transform the forwarded attributes before they're provided to your struct. The function signature is ```fn``(```Vec``<`Attribute`>```)` ``->` `darling`::````Result``<`T`>`````, where ``T`` is the type you declared for the ``attrs`` field. Returning an error from this function will propagate with all other parsing errors.\n  * **Mapping function** : Use ````#``[``darling```(```map`=```\"`path`\"`````)```]```` or ````#``[``darling```(```and_then`=```\"`path`\"`````)```]```` to specify a function that runs on the result of parsing a meta-item field. This can change the return type, which enables you to parse to an intermediate form and convert that to the type you need in your struct.\n  * **Skip fields** : Use ````#``[``darling```(```skip```)```]```` to mark a field that shouldn't be read from attribute meta-items.\n  * **Multiple-occurrence fields** : Use ````#``[``darling```(```multiple```)```]```` on a ```Vec``` field to allow that field to appear multiple times in the meta-item. Each occurrence will be pushed into the ```Vec```.\n  * **Span access** : Use ```darling`::```util`::``SpannedValue`` in a struct to get access to that meta item's source code span. This can be used to emit warnings that point at a specific field from your proc macro. In addition, you can use ```darling`::```Error`::``write_errors`` to automatically get precise error location details in most cases.\n  * **\"Did you mean\" suggestions** : Compile errors from derived darling trait impls include suggestions for misspelled fields.\n  * **Struct flattening** : Use ````#``[``darling```(```flatten```)```]```` to remove one level of structure when presenting your meta item to users. Fields that are not known to the parent struct will be forwarded to the ``flatten`` field.\n  * **Custom shorthand** : Use ````#``[``darling```(```from_word `=` ...```)```]```` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro's user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches ```FromMeta`::``from_word``.\n  * **Custom handling for missing fields** : When a field is not present and ````#``[``darling```(```default```)```]```` is not used, derived impls will call ```FromMeta`::``from_none`` on that field's type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. ````Option``<`T`:` FromMeta`>```` uses this to make options optional without requiring ````#``[``darling```(```default```)```]```` declarations, and structs and enums can use this themselves with ````#``[``darling```(```from_none `=` ...```)```]````. This takes either a path or a closure whose signature matches ```FromMeta`::``from_none``.\n\n\n## Shape Validation\nSome proc-macros only work on structs, while others need enums whose variants are either unit or newtype variants. Darling makes this sort of validation extremely simple. On the receiver that derives ``FromDeriveInput``, add ````#``[``darling```(`````supports``(```...```)`````)```]```` and then list the shapes that your macro should accept.\nName | Description  \n---|---  \n``any`` | Accept anything  \n``struct_any`` | Accept any struct  \n``struct_named`` | Accept structs with named fields, e.g. ````struct` ```Example` ````{` `field``:` String ```}`````  \n``struct_newtype`` | Accept newtype structs, e.g. ````struct` ```Example````(`String`)````  \n``struct_tuple`` | Accept tuple structs, e.g. ````struct` ```Example````(`String, String`)````  \n``struct_unit`` | Accept unit structs, e.g. ````struct` ```Example```;```  \n``enum_any`` | Accept any enum  \n``enum_named`` | Accept enum variants with named fields  \n``enum_newtype`` | Accept newtype enum variants  \n``enum_tuple`` | Accept tuple enum variants  \n``enum_unit`` | Accept unit enum variants  \nEach one is additive, so listing ````#``[``darling```(`````supports``(```struct_any`,` enum_newtype```)`````)```]```` would accept all structs and any enum where every variant is a newtype variant.\nThis can also be used when deriving ``FromVariant``, without the ``enum_`` prefix.\n#### Dependencies\n~205\u2013640KB  ~15K SLoC\n  * [darling_core](https://lib.rs/crates/darling_core \"=0.20.11\")\n  * [darling_macro](https://lib.rs/crates/darling_macro \"=0.20.11\")\n\n\n  * dev  [proc-macro2](https://lib.rs/crates/proc-macro2 \"1.0.86\")\n  * dev  [quote](https://lib.rs/crates/quote \"1.0.18\")\n  * dev  [rustversion](https://lib.rs/crates/rustversion \"1.0.9\") compiletests\n  * dev  [syn](https://lib.rs/crates/syn \"2.0.15\")\n  * dev  [trybuild](https://lib.rs/crates/trybuild \"1.0.89\") compiletests\n\n\n#### [Other features](https://lib.rs/crates/darling/features)\n  * [diagnostics](https://lib.rs/crates/darling/features#feature-diagnostics)\n  * [suggestions](https://lib.rs/crates/darling/features#feature-suggestions)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  59 releases\u27e81\u27e9\n0.20.11 |  Mar 28, 2025   \n---|---  \n0.20.10 |  Jul 9, 2024   \n0.20.9 |  May 15, 2024   \n0.20.8 |  Feb 23, 2024   \n0.2.0 |  Jun 19, 2017   \n#**3** in Procedural macros\u27e82\u27e9\nDownload history 3068600/week @ 2025-03-09 3264584/week @ 2025-03-16 3452544/week @ 2025-03-23 2952644/week @ 2025-03-30 3137671/week @ 2025-04-06 2729213/week @ 2025-04-13 2661267/week @ 2025-04-20 2545626/week @ 2025-04-27 2634387/week @ 2025-05-04 2731010/week @ 2025-05-11 2762646/week @ 2025-05-18 2503867/week @ 2025-05-25 2732610/week @ 2025-06-01 2717332/week @ 2025-06-08 2881137/week @ 2025-06-15 3029575/week @ 2025-06-22\n**11,514,533** downloads per month Used in **12,531** crates (785 directly)\u27e83\u27e9\n**MIT** license \n335KB  7K  SLoC\n# Darling\n![Build Status\u27e84\u27e9](https://github.com/TedDriggs/darling/actions) ![Latest Version\u27e85\u27e9](https://crates.io/crates/darling) ![Rustc Version 1.56+\u27e86\u27e9]\n``darling`` is a crate for proc macro authors, which enables parsing attributes into structs. It is heavily inspired by ``serde`` both in its internals and in its API.\n# Benefits\n  * Easy and declarative parsing of macro input - make your proc-macros highly controllable with minimal time investment.\n  * Great validation and errors, no work required. When users of your proc-macro make a mistake, ``darling`` makes sure they get error markers at the right place in their source, and provides \"did you mean\" suggestions for misspelled fields.\n\n\n# Usage\n``darling`` provides a set of traits which can be derived or manually implemented.\n  1. ``FromMeta`` is used to extract values from a meta-item in an attribute. Implementations are likely reusable for many libraries, much like ``FromStr`` or ```serde`::``Deserialize``. Trait implementations are provided for primitives, some std types, and some ``syn`` types.\n  2. ``FromDeriveInput`` is implemented or derived by each proc-macro crate which depends on ``darling``. This is the root for input parsing; it gets access to the identity, generics, and visibility of the target type, and can specify which attribute names should be parsed or forwarded from the input AST.\n  3. ``FromField`` is implemented or derived by each proc-macro crate which depends on ``darling``. Structs deriving this trait will get access to the identity (if it exists), type, and visibility of the field.\n  4. ``FromVariant`` is implemented or derived by each proc-macro crate which depends on ``darling``. Structs deriving this trait will get access to the identity and contents of the variant, which can be transformed the same as any other ``darling`` input.\n  5. ``FromAttributes`` is a lower-level version of the more-specific ``FromDeriveInput``, ``FromField``, and ``FromVariant`` traits. Structs deriving this trait get a meta-item extractor and error collection which works for any syntax element, including traits, trait items, and functions. This is useful for non-derive proc macros.\n\n\n## Additional Modules\n  * ```darling`::``ast`` provides generic types for representing the AST.\n  * ```darling`::``usage`` provides traits and functions for determining where type parameters and lifetimes are used in a struct or enum.\n  * ```darling`::``util`` provides helper types with special ``FromMeta`` implementations, such as ``PathList``.\n\n\n# Example\n```\n``use` `darling`::````{`FromDeriveInput`,` FromMeta```}```;`\n``#``[``derive```(```Default`,` FromMeta```)```]``\n``#``[``darling```(```default```)```]``\n``pub` `struct` ```Lorem` ````{`\n  ``#``[``darling```(```rename `=` ``\"`sit`\"`````)```]``\n  `ipsum``:` `bool`,\n  `dolor``:` ``Option``<``String``>``,\n```}```\n``#``[``derive```(```FromDeriveInput```)```]``\n``#``[``darling```(`````attributes``(```my_crate```)```,` ``forward_attrs``(```allow`,` doc`,` cfg```)`````)```]``\n``pub` `struct` ```MyTraitOpts` ````{`\n  `ident``:` `syn`::``Ident,\n  `attrs``:` ``Vec``<``syn`::``Attribute`>``,\n  `lorem``:` Lorem,\n```}```\n`\n```\n\nThe above code will then be able to parse this input:\n```\n```///` A doc comment which will be available in `MyTraitOpts::attrs`.`\n``#``[``derive```(```MyTrait```)```]``\n``#``[``my_crate```(`````lorem``(```dolor `=` ``\"`Hello`\"```,` sit```)`````)```]``\n``pub` `struct` ```ConsumingType```;`\n`\n```\n\n# Attribute Macros\nNon-derive attribute macros are supported. To parse arguments for attribute macros, derive ``FromMeta`` on the argument receiver type, then use ```darling`::```ast`::```NestedMeta`::``parse_meta_list`` to convert the arguments ``TokenStream`` to a ````Vec``<`NestedMeta`>````, then pass that to the derived ``from_list`` method on your argument receiver type. This will produce a normal ```darling`::``Result``<`T`>```` that can be used the same as a result from parsing a ``DeriveInput``.\n## Macro Code\n```\n``use` `darling`::````{`Error`,` FromMeta```}```;`\n`use` `darling`::```ast`::``NestedMeta`;`\n`use` `syn`::``ItemFn`;`\n`use` `proc_macro`::``TokenStream`;`\n``#``[``derive```(```Debug`,` FromMeta```)```]``\n``struct` ```MacroArgs` ````{`\n  ``#``[``darling```(```default```)```]``\n  `timeout_ms``:` ``Option``<``u16``>``,\n  `path``:` String,\n```}```\n``#``[``proc_macro_attribute``]``\n``pub` `fn` `your_attr`````(``args``:` TokenStream, `input``:` TokenStream```)```` ``->` TokenStream` ````{`\n  `let` attr_args `=` `match` `NestedMeta`::``parse_meta_list`(`args`.``into``(``)``)` `{`\n    `Ok``(`v`)` `=>` v`,`\n    `Err``(`e`)` `=>` `{` `return` `TokenStream`::``from`(``Error`::``from`(`e`)``.``write_errors``(``)``)``;` `}`\n  `}``;`\n  `let` _input `=` `syn`::``parse_macro_input`!``(`input `as` ItemFn`)``;`\n  `let` _args `=` `match` `MacroArgs`::``from_list`(``&`attr_args`)` `{`\n    `Ok``(`v`)` `=>` v`,`\n    `Err``(`e`)` `=>` `{` `return` `TokenStream`::``from`(`e`.``write_errors``(``)``)``;` `}`\n  `}``;`\n  ``//` do things with `args``\n  `unimplemented!``(``)`\n```}```\n`\n```\n\n## Consuming Code\n```\n``use` `your_crate`::``your_attr`;`\n``#``[``your_attr```(```path `=` ``\"`hello`\"```,` timeout_ms `=` 15```)```]``\n``fn` `do_stuff`````(````)``````{`\n  `println!``(```\"`Hello`\"```)``;`\n```}```\n`\n```\n\n# Features\nDarling's features are built to work well for real-world projects.\n  * **Defaults** : Supports struct- and field-level defaults, using the same path syntax as ``serde``. Additionally, ````Option``<`T`>```` and ```darling`::```util`::``Flag`` fields are innately optional; you don't need to declare ````#``[``darling```(```default```)```]```` for those.\n  * **Field Renaming** : Fields can have different names in usage vs. the backing code.\n  * **Auto-populated fields** : Structs deriving ``FromDeriveInput`` and ``FromField`` can declare properties named ``ident``, ``vis``, ``ty``, ``attrs``, and ``generics`` to automatically get copies of the matching values from the input AST. ``FromDeriveInput`` additionally exposes ``data`` to get access to the body of the deriving type, and ``FromVariant`` exposes ``fields``. \n    * **Transformation of forwarded attributes** : You can add ````#``[``darling```(```with`=`path```)```]```` to the ``attrs`` field to use a custom function to transform the forwarded attributes before they're provided to your struct. The function signature is ```fn``(```Vec``<`Attribute`>```)` ``->` `darling`::````Result``<`T`>`````, where ``T`` is the type you declared for the ``attrs`` field. Returning an error from this function will propagate with all other parsing errors.\n  * **Mapping function** : Use ````#``[``darling```(```map`=```\"`path`\"`````)```]```` or ````#``[``darling```(```and_then`=```\"`path`\"`````)```]```` to specify a function that runs on the result of parsing a meta-item field. This can change the return type, which enables you to parse to an intermediate form and convert that to the type you need in your struct.\n  * **Skip fields** : Use ````#``[``darling```(```skip```)```]```` to mark a field that shouldn't be read from attribute meta-items.\n  * **Multiple-occurrence fields** : Use ````#``[``darling```(```multiple```)```]```` on a ```Vec``` field to allow that field to appear multiple times in the meta-item. Each occurrence will be pushed into the ```Vec```.\n  * **Span access** : Use ```darling`::```util`::``SpannedValue`` in a struct to get access to that meta item's source code span. This can be used to emit warnings that point at a specific field from your proc macro. In addition, you can use ```darling`::```Error`::``write_errors`` to automatically get precise error location details in most cases.\n  * **\"Did you mean\" suggestions** : Compile errors from derived darling trait impls include suggestions for misspelled fields.\n  * **Struct flattening** : Use ````#``[``darling```(```flatten```)```]```` to remove one level of structure when presenting your meta item to users. Fields that are not known to the parent struct will be forwarded to the ``flatten`` field.\n  * **Custom shorthand** : Use ````#``[``darling```(```from_word `=` ...```)```]```` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro's user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches ```FromMeta`::``from_word``.\n  * **Custom handling for missing fields** : When a field is not present and ````#``[``darling```(```default```)```]```` is not used, derived impls will call ```FromMeta`::``from_none`` on that field's type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. ````Option``<`T`:` FromMeta`>```` uses this to make options optional without requiring ````#``[``darling```(```default```)```]```` declarations, and structs and enums can use this themselves with ````#``[``darling```(```from_none `=` ...```)```]````. This takes either a path or a closure whose signature matches ```FromMeta`::``from_none``.\n\n\n## Shape Validation\nSome proc-macros only work on structs, while others need enums whose variants are either unit or newtype variants. Darling makes this sort of validation extremely simple. On the receiver that derives ``FromDeriveInput``, add ````#``[``darling```(`````supports``(```...```)`````)```]```` and then list the shapes that your macro should accept.\nName | Description  \n---|---  \n``any`` | Accept anything  \n``struct_any`` | Accept any struct  \n``struct_named`` | Accept structs with named fields, e.g. ````struct` ```Example` ````{` `field``:` String ```}`````  \n``struct_newtype`` | Accept newtype structs, e.g. ````struct` ```Example````(`String`)````  \n``struct_tuple`` | Accept tuple structs, e.g. ````struct` ```Example````(`String, String`)````  \n``struct_unit`` | Accept unit structs, e.g. ````struct` ```Example```;```  \n``enum_any`` | Accept any enum  \n``enum_named`` | Accept enum variants with named fields  \n``enum_newtype`` | Accept newtype enum variants  \n``enum_tuple`` | Accept tuple enum variants  \n``enum_unit`` | Accept unit enum variants  \nEach one is additive, so listing ````#``[``darling```(`````supports``(```struct_any`,` enum_newtype```)`````)```]```` would accept all structs and any enum where every variant is a newtype variant.\nThis can also be used when deriving ``FromVariant``, without the ``enum_`` prefix.\n#### Dependencies\n~205\u2013640KB  ~15K SLoC\n  * darling_core\u27e87\u27e9\n  * darling_macro\u27e88\u27e9\n\n\n  * dev  proc-macro2\u27e89\u27e9\n  * dev  quote\u27e810\u27e9\n  * dev  rustversion\u27e811\u27e9 compiletests\n  * dev  syn\u27e812\u27e9\n  * dev  trybuild\u27e813\u27e9 compiletests\n\n\n#### Other features\u27e814\u27e9\n  * diagnostics\u27e815\u27e9\n  * suggestions\u27e816\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/darling/versions: 59 releases\n\u27e82\u27e9 https://lib.rs/development-tools/procedural-macro-helpers: Crates to help you write procedural macros in Rust.\n - Procedural macros\n\u27e83\u27e9 https://lib.rs/crates/darling/rev: **12,531** crates (785 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/TedDriggs/darling/workflows/CI/badge.svg: ![Build Status\n\u27e85\u27e9 https://img.shields.io/crates/v/darling.svg: ![Latest Version\n\u27e86\u27e9 https://img.shields.io/badge/rustc-1.56+-lightgray.svg: Rustc Version 1.56+\n\u27e87\u27e9 https://lib.rs/crates/darling_core: =0.20.11 - darling_core\n\u27e88\u27e9 https://lib.rs/crates/darling_macro: =0.20.11 - darling_macro\n\u27e89\u27e9 https://lib.rs/crates/proc-macro2: 1.0.86 - proc-macro2\n\u27e810\u27e9 https://lib.rs/crates/quote: 1.0.18 - quote\n\u27e811\u27e9 https://lib.rs/crates/rustversion: 1.0.9 - rustversion\n\u27e812\u27e9 https://lib.rs/crates/syn: 2.0.15 - syn\n\u27e813\u27e9 https://lib.rs/crates/trybuild: 1.0.89 - trybuild\n\u27e814\u27e9 https://lib.rs/crates/darling/features: Other features\n\u27e815\u27e9 https://lib.rs/crates/darling/features#feature-diagnostics: diagnostics\n\u27e816\u27e9 https://lib.rs/crates/darling/features#feature-suggestions: suggestions\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 12367,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117689.052791"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-da722296a25cad98.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-6a2bfe21e1772c80.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-6a2bfe21e1772c80.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ident_case@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ident_case",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-8535b88697f29c8f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.8",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-180cac0cc8280feb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ident_case@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ident_case",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-9d205211ae57ff4b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-9d205211ae57ff4b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.8",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-b15c39dc295f6d9e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-b15c39dc295f6d9e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#strsim@0.11.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\strsim-0.11.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "strsim",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\strsim-0.11.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libstrsim-ac36f38ed9919aaa.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-c0b3994f52be66a9\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-c0b3994f52be66a9\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-adef0cd77c9d0ffb\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-4df57f7f758158e7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-bc9936301181ace0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-6d37c4dbf8dbddcd.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-6d37c4dbf8dbddcd.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-76adf179f1099bbe.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-76adf179f1099bbe.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-e14976d8f50f3d1a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-a83893b0c2a32efd.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-a83893b0c2a32efd.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_core@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "strsim",
+                "suggestions"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-6452e21550a0470f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_core@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-97fc174354b49bcb.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-97fc174354b49bcb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_macro@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_macro-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "darling_macro",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_macro-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpoe3h21it/darling-0.20.11#darling@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "suggestions"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling-6177e7ae0315da14.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-c0b3994f52be66a9\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-c0b3994f52be66a9\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\build\\proc-macro2-adef0cd77c9d0ffb\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.8",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-b15c39dc295f6d9e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-b15c39dc295f6d9e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.8",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.8\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libunicode_ident-180cac0cc8280feb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ident_case@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ident_case",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-9d205211ae57ff4b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-9d205211ae57ff4b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-6a2bfe21e1772c80.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-6a2bfe21e1772c80.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ident_case@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ident_case",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ident_case-1.0.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libident_case-8535b88697f29c8f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#fnv@1.0.7",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "fnv",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\fnv-1.0.7\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libfnv-da722296a25cad98.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#strsim@0.11.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\strsim-0.11.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "strsim",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\strsim-0.11.1\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libstrsim-ac36f38ed9919aaa.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-6d37c4dbf8dbddcd.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-6d37c4dbf8dbddcd.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.86",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.86\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libproc_macro2-4df57f7f758158e7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-76adf179f1099bbe.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-76adf179f1099bbe.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.37",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.37\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libquote-bc9936301181ace0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-a83893b0c2a32efd.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-a83893b0c2a32efd.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.79",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.79\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libsyn-e14976d8f50f3d1a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_core@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-97fc174354b49bcb.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-97fc174354b49bcb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_core@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_core-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "strsim",
+                "suggestions"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling_core-6452e21550a0470f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#darling_macro@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_macro-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "darling_macro",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\darling_macro-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\darling_macro-a26c8da0ac72678a.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpoe3h21it/darling-0.20.11#darling@0.20.11",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "darling",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "suggestions"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpoe3h21it\\darling-0.20.11\\target\\debug\\deps\\libdarling-43d631cc7daf9659.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 32
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": true,
+              "count": 1,
+              "list": [
+                {
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0402",
+                    "package": "hashbrown",
+                    "title": "Borsh serialization of HashMap is non-canonical",
+                    "description": "The borsh serialization of the HashMap did not follow the borsh specification.\nIt potentially produced non-canonical encodings dependent on insertion order.\nIt also did not perform canonicty checks on decoding.\n\nThis can result in consensus splits and cause equivalent objects to be\nconsidered distinct.\n\nThis was patched in 0.15.1.",
+                    "date": "2024-10-11",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [
+                      "borsh"
+                    ],
+                    "cvss": null,
+                    "informational": null,
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/rust-lang/hashbrown/issues/576",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "versions": {
+                    "patched": [
+                      ">=0.15.1"
+                    ],
+                    "unaffected": [
+                      "<0.15.0"
+                    ]
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [],
+                    "functions": {
+                      "hashbrown::HashMap::borsh_serialize": [
+                        "=0.15.0"
+                      ]
+                    }
+                  },
+                  "package": {
+                    "name": "hashbrown",
+                    "version": "0.15.0",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "1e087f84d4f86bf4b218b927129862374b72199ae7d8657835f1e89000eea4fb",
+                    "replace": null
+                  }
+                }
+              ]
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "darling",
+          "version": "0.20.11",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\n[Settings](https://docs.rs/darling/latest/settings.html)\n[Help](https://docs.rs/darling/latest/help.html)\nSummary[Source](https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117)\nExpand description\n## [\u00a7](https://docs.rs/darling/latest/darling/#darling)Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### [\u00a7](https://docs.rs/darling/latest/darling/#design)Design\nDarling takes considerable design inspiration from [`serde`](https://serde.rs). A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### [\u00a7](https://docs.rs/darling/latest/darling/#attributes)Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### [\u00a7](https://docs.rs/darling/latest/darling/#forwarded-fields)Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromderiveinput)`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromfield)`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromtypeparam)`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromvariant)`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules[\u00a7](https://docs.rs/darling/latest/darling/#modules)\n\n[ast](https://docs.rs/darling/latest/darling/ast/index.html \"mod darling::ast\")\n    Utility types for working with the AST.\n\n[error](https://docs.rs/darling/latest/darling/error/index.html \"mod darling::error\")\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\n[usage](https://docs.rs/darling/latest/darling/usage/index.html \"mod darling::usage\")\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\n[util](https://docs.rs/darling/latest/darling/util/index.html \"mod darling::util\")\n    Utility types for attribute parsing.\n## Macros[\u00a7](https://docs.rs/darling/latest/darling/#macros)\n\n[uses_lifetimes](https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html \"macro darling::uses_lifetimes\")\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\n[uses_type_params](https://docs.rs/darling/latest/darling/macro.uses_type_params.html \"macro darling::uses_type_params\")\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs[\u00a7](https://docs.rs/darling/latest/darling/#structs)\n\n[Error](https://docs.rs/darling/latest/darling/struct.Error.html \"struct darling::Error\")\n    An error encountered during attribute parsing.\n## Traits[\u00a7](https://docs.rs/darling/latest/darling/#traits)\n\n[FromAttributes](https://docs.rs/darling/latest/darling/trait.FromAttributes.html \"trait darling::FromAttributes\")\n    Create an instance by parsing a list of attributes.\n\n[FromDeriveInput](https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html \"trait darling::FromDeriveInput\")\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\n[FromField](https://docs.rs/darling/latest/darling/trait.FromField.html \"trait darling::FromField\")\n    Creates an instance by parsing an individual field and its attributes.\n\n[FromGenericParam](https://docs.rs/darling/latest/darling/trait.FromGenericParam.html \"trait darling::FromGenericParam\")\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\n[FromGenerics](https://docs.rs/darling/latest/darling/trait.FromGenerics.html \"trait darling::FromGenerics\")\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\n[FromMeta](https://docs.rs/darling/latest/darling/trait.FromMeta.html \"trait darling::FromMeta\")\n    Create an instance from an item in an attribute declaration.\n\n[FromTypeParam](https://docs.rs/darling/latest/darling/trait.FromTypeParam.html \"trait darling::FromTypeParam\")\n    Creates an instance by parsing an individual type_param and its attributes.\n\n[FromVariant](https://docs.rs/darling/latest/darling/trait.FromVariant.html \"trait darling::FromVariant\")\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases[\u00a7](https://docs.rs/darling/latest/darling/#types)\n\n[Result](https://docs.rs/darling/latest/darling/type.Result.html \"type darling::Result\")\n    An alias of `Result` specific to attribute parsing.\n",
+            "markdown_with_citations": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### \u00a7\u27e85\u27e9Design\nDarling takes considerable design inspiration from `serde`\u27e86\u27e9. A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### \u00a7\u27e87\u27e9Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### \u00a7\u27e88\u27e9Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### \u00a7\u27e89\u27e9`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e810\u27e9`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e811\u27e9`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e812\u27e9`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules\u00a7\u27e813\u27e9\n\nast\u27e814\u27e9\n    Utility types for working with the AST.\n\nerror\u27e815\u27e9\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\nusage\u27e816\u27e9\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\nutil\u27e817\u27e9\n    Utility types for attribute parsing.\n## Macros\u00a7\u27e818\u27e9\n\nuses_lifetimes\u27e819\u27e9\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\nuses_type_params\u27e820\u27e9\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs\u00a7\u27e821\u27e9\n\nError\u27e822\u27e9\n    An error encountered during attribute parsing.\n## Traits\u00a7\u27e823\u27e9\n\nFromAttributes\u27e824\u27e9\n    Create an instance by parsing a list of attributes.\n\nFromDeriveInput\u27e825\u27e9\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\nFromField\u27e826\u27e9\n    Creates an instance by parsing an individual field and its attributes.\n\nFromGenericParam\u27e827\u27e9\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\nFromGenerics\u27e828\u27e9\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\nFromMeta\u27e829\u27e9\n    Create an instance from an item in an attribute declaration.\n\nFromTypeParam\u27e830\u27e9\n    Creates an instance by parsing an individual type_param and its attributes.\n\nFromVariant\u27e831\u27e9\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases\u00a7\u27e832\u27e9\n\nResult\u27e833\u27e9\n    An alias of `Result` specific to attribute parsing.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/darling/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/darling/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117: Source\n\u27e84\u27e9 https://docs.rs/darling/latest/darling/#darling: \u00a7\n\u27e85\u27e9 https://docs.rs/darling/latest/darling/#design: \u00a7\n\u27e86\u27e9 https://serde.rs: `serde`\n\u27e87\u27e9 https://docs.rs/darling/latest/darling/#attributes: \u00a7\n\u27e88\u27e9 https://docs.rs/darling/latest/darling/#forwarded-fields: \u00a7\n\u27e89\u27e9 https://docs.rs/darling/latest/darling/#fromderiveinput: \u00a7\n\u27e810\u27e9 https://docs.rs/darling/latest/darling/#fromfield: \u00a7\n\u27e811\u27e9 https://docs.rs/darling/latest/darling/#fromtypeparam: \u00a7\n\u27e812\u27e9 https://docs.rs/darling/latest/darling/#fromvariant: \u00a7\n\u27e813\u27e9 https://docs.rs/darling/latest/darling/#modules: \u00a7\n\u27e814\u27e9 https://docs.rs/darling/latest/darling/ast/index.html: mod darling::ast - ast\n\u27e815\u27e9 https://docs.rs/darling/latest/darling/error/index.html: mod darling::error - error\n\u27e816\u27e9 https://docs.rs/darling/latest/darling/usage/index.html: mod darling::usage - usage\n\u27e817\u27e9 https://docs.rs/darling/latest/darling/util/index.html: mod darling::util - util\n\u27e818\u27e9 https://docs.rs/darling/latest/darling/#macros: \u00a7\n\u27e819\u27e9 https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html: macro darling::uses_lifetimes - uses_lifetimes\n\u27e820\u27e9 https://docs.rs/darling/latest/darling/macro.uses_type_params.html: macro darling::uses_type_params - uses_type_params\n\u27e821\u27e9 https://docs.rs/darling/latest/darling/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/darling/latest/darling/struct.Error.html: struct darling::Error - Error\n\u27e823\u27e9 https://docs.rs/darling/latest/darling/#traits: \u00a7\n\u27e824\u27e9 https://docs.rs/darling/latest/darling/trait.FromAttributes.html: trait darling::FromAttributes - FromAttributes\n\u27e825\u27e9 https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html: trait darling::FromDeriveInput - FromDeriveInput\n\u27e826\u27e9 https://docs.rs/darling/latest/darling/trait.FromField.html: trait darling::FromField - FromField\n\u27e827\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenericParam.html: trait darling::FromGenericParam - FromGenericParam\n\u27e828\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenerics.html: trait darling::FromGenerics - FromGenerics\n\u27e829\u27e9 https://docs.rs/darling/latest/darling/trait.FromMeta.html: trait darling::FromMeta - FromMeta\n\u27e830\u27e9 https://docs.rs/darling/latest/darling/trait.FromTypeParam.html: trait darling::FromTypeParam - FromTypeParam\n\u27e831\u27e9 https://docs.rs/darling/latest/darling/trait.FromVariant.html: trait darling::FromVariant - FromVariant\n\u27e832\u27e9 https://docs.rs/darling/latest/darling/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/darling/latest/darling/type.Result.html: type darling::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "darling",
+          "version": "0.20.11",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\n[Settings](https://docs.rs/darling/latest/settings.html)\n[Help](https://docs.rs/darling/latest/help.html)\nSummary[Source](https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117)\nExpand description\n## [\u00a7](https://docs.rs/darling/latest/darling/#darling)Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### [\u00a7](https://docs.rs/darling/latest/darling/#design)Design\nDarling takes considerable design inspiration from [`serde`](https://serde.rs). A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### [\u00a7](https://docs.rs/darling/latest/darling/#attributes)Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### [\u00a7](https://docs.rs/darling/latest/darling/#forwarded-fields)Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromderiveinput)`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromfield)`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromtypeparam)`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### [\u00a7](https://docs.rs/darling/latest/darling/#fromvariant)`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules[\u00a7](https://docs.rs/darling/latest/darling/#modules)\n\n[ast](https://docs.rs/darling/latest/darling/ast/index.html \"mod darling::ast\")\n    Utility types for working with the AST.\n\n[error](https://docs.rs/darling/latest/darling/error/index.html \"mod darling::error\")\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\n[usage](https://docs.rs/darling/latest/darling/usage/index.html \"mod darling::usage\")\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\n[util](https://docs.rs/darling/latest/darling/util/index.html \"mod darling::util\")\n    Utility types for attribute parsing.\n## Macros[\u00a7](https://docs.rs/darling/latest/darling/#macros)\n\n[uses_lifetimes](https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html \"macro darling::uses_lifetimes\")\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\n[uses_type_params](https://docs.rs/darling/latest/darling/macro.uses_type_params.html \"macro darling::uses_type_params\")\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs[\u00a7](https://docs.rs/darling/latest/darling/#structs)\n\n[Error](https://docs.rs/darling/latest/darling/struct.Error.html \"struct darling::Error\")\n    An error encountered during attribute parsing.\n## Traits[\u00a7](https://docs.rs/darling/latest/darling/#traits)\n\n[FromAttributes](https://docs.rs/darling/latest/darling/trait.FromAttributes.html \"trait darling::FromAttributes\")\n    Create an instance by parsing a list of attributes.\n\n[FromDeriveInput](https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html \"trait darling::FromDeriveInput\")\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\n[FromField](https://docs.rs/darling/latest/darling/trait.FromField.html \"trait darling::FromField\")\n    Creates an instance by parsing an individual field and its attributes.\n\n[FromGenericParam](https://docs.rs/darling/latest/darling/trait.FromGenericParam.html \"trait darling::FromGenericParam\")\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\n[FromGenerics](https://docs.rs/darling/latest/darling/trait.FromGenerics.html \"trait darling::FromGenerics\")\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\n[FromMeta](https://docs.rs/darling/latest/darling/trait.FromMeta.html \"trait darling::FromMeta\")\n    Create an instance from an item in an attribute declaration.\n\n[FromTypeParam](https://docs.rs/darling/latest/darling/trait.FromTypeParam.html \"trait darling::FromTypeParam\")\n    Creates an instance by parsing an individual type_param and its attributes.\n\n[FromVariant](https://docs.rs/darling/latest/darling/trait.FromVariant.html \"trait darling::FromVariant\")\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases[\u00a7](https://docs.rs/darling/latest/darling/#types)\n\n[Result](https://docs.rs/darling/latest/darling/type.Result.html \"type darling::Result\")\n    An alias of `Result` specific to attribute parsing.\n",
+            "markdown_with_citations": "[](https://docs.rs/darling/latest/darling/all.html \"show sidebar\")\n# Crate darlingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Darling\nDarling is a tool for declarative attribute parsing in proc macro implementations.\n### \u00a7\u27e85\u27e9Design\nDarling takes considerable design inspiration from `serde`\u27e86\u27e9. A data structure that can be read from any attribute implements `FromMeta` (or has an implementation automatically generated using `derive`). Any crate can provide `FromMeta` implementations, even one not specifically geared towards proc-macro authors.\nProc-macro crates should provide their own structs which implement or derive `FromDeriveInput`, `FromField`, `FromVariant`, `FromGenerics`, _et alia_ to gather settings relevant to their operation.\n### \u00a7\u27e87\u27e9Attributes\nThere are a number of attributes that `darling` exposes to enable finer-grained control over the code it generates.\n  * **Field renaming** : You can use `#[darling(rename=\"new_name\")]` on a field to change the name Darling looks for. You can also use `#[darling(rename_all=\"...\")]` at the struct or enum level to apply a casing rule to all fields or variants.\n  * **Map function** : You can use `#[darling(map=\"path::to::function\")]` to run code on a field before its stored in the struct.\n  * **Default values** : You can use `#[darling(default)]` at the type or field level to use that type\u2019s default value to fill in values not specified by the caller.\n  * **Skipped fields** : You can skip a variant or field using `#[darling(skip)]`. Fields marked with this will fall back to `Default::default()` for their value, but you can override that with an explicit default or a value from the type-level default.\n  * **Custom shorthand** : Use `#[darling(from_word = ...)]` on a struct or enum to override how a simple word is interpreted. By default, it is an error for your macro\u2019s user to fail to specify the fields of your struct, but with this you can choose to instead produce a set of default values. This takes either a path or a closure whose signature matches `FromMeta::from_word`.\n  * **Custom handling for missing fields** : When a field is not present and `#[darling(default)]` is not used, derived impls will call `FromMeta::from_none` on that field\u2019s type to try and get the fallback value for the field. Usually, there is not a fallback value, so a missing field error is generated. `Option<T: FromMeta>` uses this to make options optional without requiring `#[darling(default)]` declarations, and structs and enums can use this themselves with `#[darling(from_none = ...)]`. This takes either a path or a closure whose signature matches `FromMeta::from_none`.\n\n\n### \u00a7\u27e88\u27e9Forwarded Fields\nAll derivable traits except `FromMeta` support forwarding some fields from the input AST to the derived struct. These fields are matched up by identifier **before** `rename` attribute values are considered, allowing you to use their names for your own properties. The deriving struct is responsible for making sure the types of fields it chooses to declare are compatible with this table.\nA deriving struct is free to include or exclude any of the fields below.\n#### \u00a7\u27e89\u27e9`FromDeriveInput`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type  \n`vis`| `syn::Visibility`| The visibility of the passed-in type  \n`generics`| `T: darling::FromGenerics`| The generics of the passed-in type. This can be `syn::Generics`, `darling::ast::Generics`, or any compatible type.  \n`data` (or anything, using `#[darling(with = ...)]`)| `darling::ast::Data`| The body of the passed-in type  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e810\u27e9`FromField`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `Option<syn::Ident>`| The identifier of the passed-in field, or `None` for tuple fields  \n`vis`| `syn::Visibility`| The visibility of the passed-in field  \n`ty`| `syn::Type`| The type of the passed-in field  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in field. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e811\u27e9`FromTypeParam`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in type param  \n`bounds`| `Vec<syn::TypeParamBound>`| The bounds applied to the type param  \n`default`| `Option<syn::Type>`| The default type of the parameter, if one exists  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in type param. These are controlled using the `forward_attrs` attribute.  \n#### \u00a7\u27e812\u27e9`FromVariant`\nField name| Type| Meaning  \n---|---|---  \n`ident`| `syn::Ident`| The identifier of the passed-in variant  \n`discriminant`| `Option<syn::Expr>`| For a variant such as `Example = 2`, the `2`  \n`fields`| `darling::ast::Fields<T> where T: FromField`| The fields associated with the variant  \n`attrs`| `Vec<syn::Attribute>` (or anything, using `#[darling(with = ...)]`)| The forwarded attributes from the passed in variant. These are controlled using the `forward_attrs` attribute.  \n## Modules\u00a7\u27e813\u27e9\n\nast\u27e814\u27e9\n    Utility types for working with the AST.\n\nerror\u27e815\u27e9\n    The `darling::Error` type, the multiple error `Accumulator`, and their internals.\n\nusage\u27e816\u27e9\n    Traits and types used for tracking the usage of generic parameters through a proc-macro input.\n\nutil\u27e817\u27e9\n    Utility types for attribute parsing.\n## Macros\u00a7\u27e818\u27e9\n\nuses_lifetimes\u27e819\u27e9\n    Generator for `UsesLifetimes` impls that unions the used lifetimes of the selected fields.\n\nuses_type_params\u27e820\u27e9\n    Generator for `UsesTypeParam` impls that unions the used type parameters of the selected fields.\n## Structs\u00a7\u27e821\u27e9\n\nError\u27e822\u27e9\n    An error encountered during attribute parsing.\n## Traits\u00a7\u27e823\u27e9\n\nFromAttributes\u27e824\u27e9\n    Create an instance by parsing a list of attributes.\n\nFromDeriveInput\u27e825\u27e9\n    Creates an instance by parsing an entire proc-macro `derive` input, including the, identity, generics, and visibility of the type.\n\nFromField\u27e826\u27e9\n    Creates an instance by parsing an individual field and its attributes.\n\nFromGenericParam\u27e827\u27e9\n    Creates an instance by parsing a specific `syn::GenericParam`. This can be a type param, a lifetime, or a const param.\n\nFromGenerics\u27e828\u27e9\n    Creates an instance by parsing an entire generics declaration, including the `where` clause.\n\nFromMeta\u27e829\u27e9\n    Create an instance from an item in an attribute declaration.\n\nFromTypeParam\u27e830\u27e9\n    Creates an instance by parsing an individual type_param and its attributes.\n\nFromVariant\u27e831\u27e9\n    Creates an instance from a specified `syn::Variant`.\n## Type Aliases\u00a7\u27e832\u27e9\n\nResult\u27e833\u27e9\n    An alias of `Result` specific to attribute parsing.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/darling/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/darling/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/darling/latest/src/darling/lib.rs.html#1-117: Source\n\u27e84\u27e9 https://docs.rs/darling/latest/darling/#darling: \u00a7\n\u27e85\u27e9 https://docs.rs/darling/latest/darling/#design: \u00a7\n\u27e86\u27e9 https://serde.rs: `serde`\n\u27e87\u27e9 https://docs.rs/darling/latest/darling/#attributes: \u00a7\n\u27e88\u27e9 https://docs.rs/darling/latest/darling/#forwarded-fields: \u00a7\n\u27e89\u27e9 https://docs.rs/darling/latest/darling/#fromderiveinput: \u00a7\n\u27e810\u27e9 https://docs.rs/darling/latest/darling/#fromfield: \u00a7\n\u27e811\u27e9 https://docs.rs/darling/latest/darling/#fromtypeparam: \u00a7\n\u27e812\u27e9 https://docs.rs/darling/latest/darling/#fromvariant: \u00a7\n\u27e813\u27e9 https://docs.rs/darling/latest/darling/#modules: \u00a7\n\u27e814\u27e9 https://docs.rs/darling/latest/darling/ast/index.html: mod darling::ast - ast\n\u27e815\u27e9 https://docs.rs/darling/latest/darling/error/index.html: mod darling::error - error\n\u27e816\u27e9 https://docs.rs/darling/latest/darling/usage/index.html: mod darling::usage - usage\n\u27e817\u27e9 https://docs.rs/darling/latest/darling/util/index.html: mod darling::util - util\n\u27e818\u27e9 https://docs.rs/darling/latest/darling/#macros: \u00a7\n\u27e819\u27e9 https://docs.rs/darling/latest/darling/macro.uses_lifetimes.html: macro darling::uses_lifetimes - uses_lifetimes\n\u27e820\u27e9 https://docs.rs/darling/latest/darling/macro.uses_type_params.html: macro darling::uses_type_params - uses_type_params\n\u27e821\u27e9 https://docs.rs/darling/latest/darling/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/darling/latest/darling/struct.Error.html: struct darling::Error - Error\n\u27e823\u27e9 https://docs.rs/darling/latest/darling/#traits: \u00a7\n\u27e824\u27e9 https://docs.rs/darling/latest/darling/trait.FromAttributes.html: trait darling::FromAttributes - FromAttributes\n\u27e825\u27e9 https://docs.rs/darling/latest/darling/trait.FromDeriveInput.html: trait darling::FromDeriveInput - FromDeriveInput\n\u27e826\u27e9 https://docs.rs/darling/latest/darling/trait.FromField.html: trait darling::FromField - FromField\n\u27e827\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenericParam.html: trait darling::FromGenericParam - FromGenericParam\n\u27e828\u27e9 https://docs.rs/darling/latest/darling/trait.FromGenerics.html: trait darling::FromGenerics - FromGenerics\n\u27e829\u27e9 https://docs.rs/darling/latest/darling/trait.FromMeta.html: trait darling::FromMeta - FromMeta\n\u27e830\u27e9 https://docs.rs/darling/latest/darling/trait.FromTypeParam.html: trait darling::FromTypeParam - FromTypeParam\n\u27e831\u27e9 https://docs.rs/darling/latest/darling/trait.FromVariant.html: trait darling::FromVariant - FromVariant\n\u27e832\u27e9 https://docs.rs/darling/latest/darling/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/darling/latest/darling/type.Result.html: type darling::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `darling` crate simplifies declarative attribute parsing for Rust procedural macros by providing a `FromMeta` trait and derived implementations for extracting metadata from attributes. It supports advanced features like field renaming, default values, custom handling for missing fields, and attribute forwarding, enabling fine-grained control over macro behavior. Inspired by `serde`, it offers utilities for parsing and working with the Rust AST, making proc-macro development more ergonomic and robust.",
+          "feature_summary": null,
+          "use_case": "DevTools",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: Declarative Attribute Parsing  \n\u2705 Factual: `darling` is a Rust crate designed for declarative attribute parsing in proc macro implementations, allowing developers to easily extract and validate metadata from attributes.  \n\u274c Counterfactual: `darling` is primarily used for runtime attribute parsing, enabling dynamic manipulation of metadata during program execution.  \n\n---\n\n### Pair 2: Integration with `serde`-Inspired Design  \n\u2705 Factual: `darling` takes design inspiration from `serde`, enabling data structures to implement or derive traits like `FromMeta` for seamless attribute parsing.  \n\u274c Counterfactual: `darling` uses a completely unique design that does not rely on or resemble any existing Rust crates, including `serde`.  \n\n---\n\n### Pair 3: Handling Missing Fields  \n\u2705 Factual: When a field is missing and `#[darling(default)]` is not used, `darling` calls `FromMeta::from_none` on the field\u2019s type to attempt to generate a fallback value, often resulting in an error if no fallback is defined.  \n\u274c Counterfactual: `darling` automatically assigns default values to all missing fields without requiring `#[darling(default)]` or `FromMeta::from_none` implementations.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-fb609bdc-0ce2a33d-1751263897",
+      "timestamp": "2025-06-30T06:11:37.943034+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

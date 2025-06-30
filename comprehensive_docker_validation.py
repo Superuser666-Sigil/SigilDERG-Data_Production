@@ -82,17 +82,17 @@ def validate_local_setup() -> bool:
             print(f"❌ Failed to import {module}: {e}")
             return False
 
-    # Check integration files
-    integration_files = [
-        "crawl4ai_direct_llm_integration.py",
-        "enhanced_scraping.py",
+    # Check integration modules
+    integration_modules = [
+        "rust_crate_pipeline.crawl4ai_integration",
     ]
 
-    for file in integration_files:
-        if Path(file).exists():
-            print(f"✅ Integration file {file} exists")
-        else:
-            print(f"❌ Integration file {file} missing")
+    for module in integration_modules:
+        try:
+            __import__(module)
+            print(f"✅ Integration module {module} imports successfully")
+        except ImportError as e:
+            print(f"❌ Failed to import integration module {module}: {e}")
             return False
 
     return True
@@ -197,9 +197,8 @@ def test_docker_container() -> bool:
                 "python",
                 "-c",
                 (
-                    "import sys; sys.path.append('.'); "
-                    "import enhanced_scraping; "
-                    "print('Enhanced scraping module available')"
+                    "import rust_crate_pipeline.crawl4ai_integration; "
+                    "print('Integration modules available')"
                 ),
             ],
             "description": "Testing our integration module",
@@ -226,7 +225,7 @@ def validate_image_contents() -> bool:
 
     modules_to_check = [
         "rust_crate_pipeline",
-        "enhanced_scraping",
+        "rust_crate_pipeline.crawl4ai_integration",
         "crawl4ai",
     ]
 

@@ -6,7 +6,9 @@ A comprehensive system for gathering, enriching, and analyzing metadata for Rust
 Includes AI-powered enrichment using local LLMs and dependency analysis.
 
 Example usage:
-    from rust_crate_pipeline import CrateDataPipeline
+    from rust_crate_pipeline import (
+    CrateDataPipeline
+)
     from rust_crate_pipeline.main import main
 
     # Run the main pipeline

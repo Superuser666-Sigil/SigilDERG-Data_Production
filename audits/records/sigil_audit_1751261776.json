@@ -1,0 +1,2827 @@
+[
+  {
+    "execution_id": "exec-dd0a00fd-4294fd08-1751261763",
+    "timestamp": "2025-06-30T05:36:03.438199+00:00",
+    "sacred_chain": {
+      "input_data": "native-tls",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'native-tls' -> 'native-tls'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "native-tls",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/native-tls",
+            "title": "native-tls v0.2.14",
+            "content": {
+              "raw_markdown": "#  native-tls v0.2.14\nA wrapper over a platform's native TLS implementation \n  * [ Readme ](https://crates.io/crates/native-tls)\n  * [ 21 Versions ](https://crates.io/crates/native-tls/versions)\n  * [ Dependencies ](https://crates.io/crates/native-tls/dependencies)\n  * [ Dependents ](https://crates.io/crates/native-tls/reverse_dependencies)\n\n\n## Metadata\n4 months ago \nv1.80.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n28.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add native-tls\nOr add the following line to your Cargo.toml:\nnative-tls = \"0.2.14\"\n## Repository\n[ github.com/sfackler/rust-native-tls ](https://github.com/sfackler/rust-native-tls)\n## Owners\n[ Report crate ](https://crates.io/support?crate=native-tls&inquire=crate-violation)\n### Stats Overview\n150,526,454 Downloads all time\n21 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  native-tls v0.2.14\nA wrapper over a platform's native TLS implementation \n  *  Readme \u27e81\u27e9\n  *  21 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n4 months ago \nv1.80.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n28.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add native-tls\nOr add the following line to your Cargo.toml:\nnative-tls = \"0.2.14\"\n## Repository\n github.com/sfackler/rust-native-tls \u27e87\u27e9\n## Owners\n Report crate \u27e88\u27e9\n### Stats Overview\n150,526,454 Downloads all time\n21 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/native-tls:  Readme \n\u27e82\u27e9 https://crates.io/crates/native-tls/versions:  21 Versions \n\u27e83\u27e9 https://crates.io/crates/native-tls/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/native-tls/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://github.com/sfackler/rust-native-tls:  github.com/sfackler/rust-native-tls \n\u27e88\u27e9 https://crates.io/support?crate=native-tls&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1027,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115553.1704345"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/native-tls",
+            "title": "Crate native_tlsCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\n[Settings](https://docs.rs/native-tls/latest/settings.html)\n[Help](https://docs.rs/native-tls/latest/help.html)\nSummary[Source](https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719)\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented)How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#supported-features)Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#cargo-features)Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#examples)Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/native-tls/latest/native_tls/#structs)\n\n[Certificate](https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html \"struct native_tls::Certificate\")\n    An X509 certificate.\n\n[Error](https://docs.rs/native-tls/latest/native_tls/struct.Error.html \"struct native_tls::Error\")\n    An error returned from the TLS implementation.\n\n[Identity](https://docs.rs/native-tls/latest/native_tls/struct.Identity.html \"struct native_tls::Identity\")\n    A cryptographic identity.\n\n[MidHandshakeTlsStream](https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html \"struct native_tls::MidHandshakeTlsStream\")\n    A TLS stream which has been interrupted midway through the handshake process.\n\n[TlsAcceptor](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html \"struct native_tls::TlsAcceptor\")\n    A builder for server-side TLS connections.\n\n[TlsAcceptorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html \"struct native_tls::TlsAcceptorBuilder\")\n    A builder for `TlsAcceptor`s.\n\n[TlsConnector](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html \"struct native_tls::TlsConnector\")\n    A builder for client-side TLS connections.\n\n[TlsConnectorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html \"struct native_tls::TlsConnectorBuilder\")\n    A builder for `TlsConnector`s.\n\n[TlsStream](https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html \"struct native_tls::TlsStream\")\n    A stream managing a TLS session.\n## Enums[\u00a7](https://docs.rs/native-tls/latest/native_tls/#enums)\n\n[HandshakeError](https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html \"enum native_tls::HandshakeError\")\n    An error returned from `ClientBuilder::handshake`.\n\n[Protocol](https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html \"enum native_tls::Protocol\")\n    SSL/TLS protocol versions.\n## Type Aliases[\u00a7](https://docs.rs/native-tls/latest/native_tls/#types)\n\n[Result](https://docs.rs/native-tls/latest/native_tls/type.Result.html \"type native_tls::Result\")\n    A typedef of the result-type returned by many methods.\n",
+              "markdown_with_citations": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## \u00a7\u27e84\u27e9How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## \u00a7\u27e85\u27e9Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## \u00a7\u27e86\u27e9Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## \u00a7\u27e87\u27e9Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nCertificate\u27e89\u27e9\n    An X509 certificate.\n\nError\u27e810\u27e9\n    An error returned from the TLS implementation.\n\nIdentity\u27e811\u27e9\n    A cryptographic identity.\n\nMidHandshakeTlsStream\u27e812\u27e9\n    A TLS stream which has been interrupted midway through the handshake process.\n\nTlsAcceptor\u27e813\u27e9\n    A builder for server-side TLS connections.\n\nTlsAcceptorBuilder\u27e814\u27e9\n    A builder for `TlsAcceptor`s.\n\nTlsConnector\u27e815\u27e9\n    A builder for client-side TLS connections.\n\nTlsConnectorBuilder\u27e816\u27e9\n    A builder for `TlsConnector`s.\n\nTlsStream\u27e817\u27e9\n    A stream managing a TLS session.\n## Enums\u00a7\u27e818\u27e9\n\nHandshakeError\u27e819\u27e9\n    An error returned from `ClientBuilder::handshake`.\n\nProtocol\u27e820\u27e9\n    SSL/TLS protocol versions.\n## Type Aliases\u00a7\u27e821\u27e9\n\nResult\u27e822\u27e9\n    A typedef of the result-type returned by many methods.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/native-tls/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/native-tls/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719: Source\n\u27e84\u27e9 https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented: \u00a7\n\u27e85\u27e9 https://docs.rs/native-tls/latest/native_tls/#supported-features: \u00a7\n\u27e86\u27e9 https://docs.rs/native-tls/latest/native_tls/#cargo-features: \u00a7\n\u27e87\u27e9 https://docs.rs/native-tls/latest/native_tls/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/native-tls/latest/native_tls/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html: struct native_tls::Certificate - Certificate\n\u27e810\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Error.html: struct native_tls::Error - Error\n\u27e811\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Identity.html: struct native_tls::Identity - Identity\n\u27e812\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html: struct native_tls::MidHandshakeTlsStream - MidHandshakeTlsStream\n\u27e813\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html: struct native_tls::TlsAcceptor - TlsAcceptor\n\u27e814\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html: struct native_tls::TlsAcceptorBuilder - TlsAcceptorBuilder\n\u27e815\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html: struct native_tls::TlsConnector - TlsConnector\n\u27e816\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html: struct native_tls::TlsConnectorBuilder - TlsConnectorBuilder\n\u27e817\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html: struct native_tls::TlsStream - TlsStream\n\u27e818\u27e9 https://docs.rs/native-tls/latest/native_tls/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html: enum native_tls::HandshakeError - HandshakeError\n\u27e820\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html: enum native_tls::Protocol - Protocol\n\u27e821\u27e9 https://docs.rs/native-tls/latest/native_tls/#types: \u00a7\n\u27e822\u27e9 https://docs.rs/native-tls/latest/native_tls/type.Result.html: type native_tls::Result - Result\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5832,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115553.8533501"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/native-tls",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [21 releases](https://lib.rs/crates/native-tls/versions)\nUses old Rust 2015\n0.2.14 |  Feb 19, 2025   \n---|---  \n0.2.12 |  May 27, 2024   \n0.2.11 |  Nov 1, 2022   \n0.2.10 |  Mar 28, 2022   \n0.1.0 |  Nov 9, 2016   \n#**25** in [Network programming](https://lib.rs/network-programming \"Crates dealing with higher-level network protocols such as FTP, HTTP, or SSH, or lower-level network protocols such as TCP or UDP.\")\nDownload history 1785062/week @ 2025-03-08 1973180/week @ 2025-03-15 2238747/week @ 2025-03-22 1616496/week @ 2025-03-29 1657039/week @ 2025-04-05 1467604/week @ 2025-04-12 1436024/week @ 2025-04-19 1371954/week @ 2025-04-26 1467343/week @ 2025-05-03 1465906/week @ 2025-05-10 1457135/week @ 2025-05-17 1327923/week @ 2025-05-24 1411896/week @ 2025-05-31 1483543/week @ 2025-06-07 1493715/week @ 2025-06-14 1655522/week @ 2025-06-21\n**6,290,743** downloads per month Used in [**4,945** crates (580 directly)](https://lib.rs/crates/native-tls/rev)\n**MIT/Apache**\n105KB  2.5K  SLoC\n# rust-native-tls\n[Documentation](https://docs.rs/native-tls)\nAn abstraction over platform-specific TLS implementations.\nSpecifically, this crate uses SChannel on Windows (via the [``schannel``](https://lib.rs/crates/schannel) crate), Secure Transport on macOS (via the [``security-framework``](https://lib.rs/crates/security-framework) crate), and OpenSSL (via the [``openssl``](https://lib.rs/crates/openssl) crate) on all other platforms.\n## Installation\n```\n```# Cargo.toml``\n``[``dependencies``]`\n`native-tls ``=` ``\"`0.2`\"``\n``\n```\n\n## Usage\nAn example client looks like:\n```\n``extern` `crate` native_tls`;`\n`use` `native_tls`::``TlsConnector`;`\n`use` `std`::```io`::````{`Read`,` Write```}```;`\n`use` `std`::```net`::``TcpStream`;`\n``fn` `main`````(````)``````{`\n  `let` connector `=` `TlsConnector`::``new`(``)``.``unwrap``(``)``;`\n  `let` stream `=` `TcpStream`::``connect`(```\"`google.com:443`\"```)``.``unwrap``(``)``;`\n  `let` `mut` stream `=` connector`.``connect``(```\"`google.com`\"```,` stream`)``.``unwrap``(``)``;`\n  stream`.``write_all``(```b``\"`GET / HTTP/1.0`\\r``\\n``\\r``\\n``\"```)``.``unwrap``(``)``;`\n  `let` `mut` res `=` `vec!``[``]``;`\n  stream`.``read_to_end``(``&``mut` res`)``.``unwrap``(``)``;`\n  `println!``(```\"``{}``\"```,` `String```::``from_utf8_lossy`(``&`res`)``)``;`\n```}```\n`\n```\n\nTo accept connections as a server from remote clients:\n```\n``extern` `crate` native_tls`;`\n`use` `native_tls`::````{`Identity`,` TlsAcceptor`,` TlsStream```}```;`\n`use` `std`::```fs`::``File`;`\n`use` `std`::```io`::````{`Read```}```;`\n`use` `std`::```net`::````{`TcpListener`,` TcpStream```}```;`\n`use` `std`::```sync`::``Arc`;`\n`use` `std`::``thread`;`\n``fn` `main`````(````)``````{`\n  `let` `mut` file `=` `File`::``open`(```\"`identity.pfx`\"```)``.``unwrap``(``)``;`\n  `let` `mut` identity `=` `vec!``[``]``;`\n  file`.``read_to_end``(``&``mut` identity`)``.``unwrap``(``)``;`\n  `let` identity `=` `Identity`::``from_pkcs12`(``&`identity`,` ``\"`hunter2`\"```)``.``unwrap``(``)``;`\n  `let` acceptor `=` `TlsAcceptor`::``new`(`identity`)``.``unwrap``(``)``;`\n  `let` acceptor `=` `Arc`::``new`(`acceptor`)``;`\n  `let` listener `=` `TcpListener`::``bind`(```\"`0.0.0.0:8443`\"```)``.``unwrap``(``)``;`\n  `fn` `handle_client```(``stream``:` `TlsStream`<`TcpStream`>`````)`` `{`\n    ``//` ...`\n  `}`\n  `for` stream `in` listener`.``incoming``(``)` `{`\n    `match` stream `{`\n      `Ok``(`stream`)` `=>` `{`\n        `let` acceptor `=` acceptor`.``clone``(``)``;`\n        `thread`::``spawn`(``move` `||` `{`\n          `let` stream `=` acceptor`.``accept``(`stream`)``.``unwrap``(``)``;`\n          `handle_client``(`stream`)``;`\n        `}``)``;`\n      `}`\n      `Err``(`e`)` `=>` `{` ``/*` connection failed `*/`` `}`\n    `}`\n  `}`\n```}```\n`\n```\n\n# License\n``rust-native-tls`` is primarily distributed under the terms of both the MIT license and the Apache License (Version 2.0), with portions covered by various BSD-like licenses.\nSee LICENSE-APACHE, and LICENSE-MIT for details.\n#### Dependencies\n~0\u201314MB  ~132K SLoC\n  * [log](https://lib.rs/crates/log \"0.4.5\") not  win apple\n  * [openssl](https://lib.rs/crates/openssl \"0.10.69\") not  win apple\n  * [openssl-probe](https://lib.rs/crates/openssl-probe \"0.1\") not  win apple\n  * [openssl-sys](https://lib.rs/crates/openssl-sys \"0.9.81\") not  win apple\n  * [libc](https://lib.rs/crates/libc \"0.2\") apple\n  * [security-framework](https://lib.rs/crates/security-framework \"outdated\") 2.0 apple\n  * [security-framework-sys](https://lib.rs/crates/security-framework-sys \"2.0.0\") apple\n  * [schannel](https://lib.rs/crates/schannel \"0.1.17\") win\n  * [tempfile](https://lib.rs/crates/tempfile \"3.1.0\") mac\n\n\n  * build `build.rs`\n  * dev  [test-cert-gen](https://lib.rs/crates/test-cert-gen \"0.9\")\n\n\n#### [Other features](https://lib.rs/crates/native-tls/features)\n  * [alpn](https://lib.rs/crates/native-tls/features#feature-alpn)\n  * [vendored](https://lib.rs/crates/native-tls/features#feature-vendored)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  21 releases\u27e81\u27e9\nUses old Rust 2015\n0.2.14 |  Feb 19, 2025   \n---|---  \n0.2.12 |  May 27, 2024   \n0.2.11 |  Nov 1, 2022   \n0.2.10 |  Mar 28, 2022   \n0.1.0 |  Nov 9, 2016   \n#**25** in Network programming\u27e82\u27e9\nDownload history 1785062/week @ 2025-03-08 1973180/week @ 2025-03-15 2238747/week @ 2025-03-22 1616496/week @ 2025-03-29 1657039/week @ 2025-04-05 1467604/week @ 2025-04-12 1436024/week @ 2025-04-19 1371954/week @ 2025-04-26 1467343/week @ 2025-05-03 1465906/week @ 2025-05-10 1457135/week @ 2025-05-17 1327923/week @ 2025-05-24 1411896/week @ 2025-05-31 1483543/week @ 2025-06-07 1493715/week @ 2025-06-14 1655522/week @ 2025-06-21\n**6,290,743** downloads per month Used in **4,945** crates (580 directly)\u27e83\u27e9\n**MIT/Apache**\n105KB  2.5K  SLoC\n# rust-native-tls\nDocumentation\u27e84\u27e9\nAn abstraction over platform-specific TLS implementations.\nSpecifically, this crate uses SChannel on Windows (via the ``schannel``\u27e85\u27e9 crate), Secure Transport on macOS (via the ``security-framework``\u27e86\u27e9 crate), and OpenSSL (via the ``openssl``\u27e87\u27e9 crate) on all other platforms.\n## Installation\n```\n```# Cargo.toml``\n``[``dependencies``]`\n`native-tls ``=` ``\"`0.2`\"``\n``\n```\n\n## Usage\nAn example client looks like:\n```\n``extern` `crate` native_tls`;`\n`use` `native_tls`::``TlsConnector`;`\n`use` `std`::```io`::````{`Read`,` Write```}```;`\n`use` `std`::```net`::``TcpStream`;`\n``fn` `main`````(````)``````{`\n  `let` connector `=` `TlsConnector`::``new`(``)``.``unwrap``(``)``;`\n  `let` stream `=` `TcpStream`::``connect`(```\"`google.com:443`\"```)``.``unwrap``(``)``;`\n  `let` `mut` stream `=` connector`.``connect``(```\"`google.com`\"```,` stream`)``.``unwrap``(``)``;`\n  stream`.``write_all``(```b``\"`GET / HTTP/1.0`\\r``\\n``\\r``\\n``\"```)``.``unwrap``(``)``;`\n  `let` `mut` res `=` `vec!``[``]``;`\n  stream`.``read_to_end``(``&``mut` res`)``.``unwrap``(``)``;`\n  `println!``(```\"``{}``\"```,` `String```::``from_utf8_lossy`(``&`res`)``)``;`\n```}```\n`\n```\n\nTo accept connections as a server from remote clients:\n```\n``extern` `crate` native_tls`;`\n`use` `native_tls`::````{`Identity`,` TlsAcceptor`,` TlsStream```}```;`\n`use` `std`::```fs`::``File`;`\n`use` `std`::```io`::````{`Read```}```;`\n`use` `std`::```net`::````{`TcpListener`,` TcpStream```}```;`\n`use` `std`::```sync`::``Arc`;`\n`use` `std`::``thread`;`\n``fn` `main`````(````)``````{`\n  `let` `mut` file `=` `File`::``open`(```\"`identity.pfx`\"```)``.``unwrap``(``)``;`\n  `let` `mut` identity `=` `vec!``[``]``;`\n  file`.``read_to_end``(``&``mut` identity`)``.``unwrap``(``)``;`\n  `let` identity `=` `Identity`::``from_pkcs12`(``&`identity`,` ``\"`hunter2`\"```)``.``unwrap``(``)``;`\n  `let` acceptor `=` `TlsAcceptor`::``new`(`identity`)``.``unwrap``(``)``;`\n  `let` acceptor `=` `Arc`::``new`(`acceptor`)``;`\n  `let` listener `=` `TcpListener`::``bind`(```\"`0.0.0.0:8443`\"```)``.``unwrap``(``)``;`\n  `fn` `handle_client```(``stream``:` `TlsStream`<`TcpStream`>`````)`` `{`\n    ``//` ...`\n  `}`\n  `for` stream `in` listener`.``incoming``(``)` `{`\n    `match` stream `{`\n      `Ok``(`stream`)` `=>` `{`\n        `let` acceptor `=` acceptor`.``clone``(``)``;`\n        `thread`::``spawn`(``move` `||` `{`\n          `let` stream `=` acceptor`.``accept``(`stream`)``.``unwrap``(``)``;`\n          `handle_client``(`stream`)``;`\n        `}``)``;`\n      `}`\n      `Err``(`e`)` `=>` `{` ``/*` connection failed `*/`` `}`\n    `}`\n  `}`\n```}```\n`\n```\n\n# License\n``rust-native-tls`` is primarily distributed under the terms of both the MIT license and the Apache License (Version 2.0), with portions covered by various BSD-like licenses.\nSee LICENSE-APACHE, and LICENSE-MIT for details.\n#### Dependencies\n~0\u201314MB  ~132K SLoC\n  * log\u27e88\u27e9 not  win apple\n  * openssl\u27e87\u27e9 not  win apple\n  * openssl-probe\u27e89\u27e9 not  win apple\n  * openssl-sys\u27e810\u27e9 not  win apple\n  * libc\u27e811\u27e9 apple\n  * security-framework\u27e86\u27e9 2.0 apple\n  * security-framework-sys\u27e812\u27e9 apple\n  * schannel\u27e85\u27e9 win\n  * tempfile\u27e813\u27e9 mac\n\n\n  * build `build.rs`\n  * dev  test-cert-gen\u27e814\u27e9\n\n\n#### Other features\u27e815\u27e9\n  * alpn\u27e816\u27e9\n  * vendored\u27e817\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/native-tls/versions: 21 releases\n\u27e82\u27e9 https://lib.rs/network-programming: Crates dealing with higher-level network protocols such as FTP, HTTP, or SSH, or lower-level network protocols such as TCP or UDP. - Network programming\n\u27e83\u27e9 https://lib.rs/crates/native-tls/rev: **4,945** crates (580 directly)\n\u27e84\u27e9 https://docs.rs/native-tls: Documentation\n\u27e85\u27e9 https://lib.rs/crates/schannel: ``schannel``\n\u27e86\u27e9 https://lib.rs/crates/security-framework: ``security-framework``\n\u27e87\u27e9 https://lib.rs/crates/openssl: ``openssl``\n\u27e88\u27e9 https://lib.rs/crates/log: 0.4.5 - log\n\u27e89\u27e9 https://lib.rs/crates/openssl-probe: 0.1 - openssl-probe\n\u27e810\u27e9 https://lib.rs/crates/openssl-sys: 0.9.81 - openssl-sys\n\u27e811\u27e9 https://lib.rs/crates/libc: 0.2 - libc\n\u27e812\u27e9 https://lib.rs/crates/security-framework-sys: 2.0.0 - security-framework-sys\n\u27e813\u27e9 https://lib.rs/crates/tempfile: 3.1.0 - tempfile\n\u27e814\u27e9 https://lib.rs/crates/test-cert-gen: 0.9 - test-cert-gen\n\u27e815\u27e9 https://lib.rs/crates/native-tls/features: Other features\n\u27e816\u27e9 https://lib.rs/crates/native-tls/features#feature-alpn: alpn\n\u27e817\u27e9 https://lib.rs/crates/native-tls/features#feature-vendored: vendored\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5004,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "115554.5254558"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-18a86fabfa75a40d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-18a86fabfa75a40d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-71c5de2b7d5f209b\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.59.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_NetworkManagement",
+                "Win32_NetworkManagement_IpHelper",
+                "Win32_Networking",
+                "Win32_Networking_WinSock",
+                "Win32_Security",
+                "Win32_Security_Authentication",
+                "Win32_Security_Authentication_Identity",
+                "Win32_Security_Credentials",
+                "Win32_Security_Cryptography",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Diagnostics",
+                "Win32_System_Diagnostics_Debug",
+                "Win32_System_LibraryLoader",
+                "Win32_System_Memory",
+                "Win32_System_SystemInformation",
+                "Win32_System_Threading",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_sys-bf01cc52b67a1839.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#schannel@0.1.27",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\schannel-0.1.27\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "schannel",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\schannel-0.1.27\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libschannel-ba522c6e7fb1422c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libnative_tls-cd5990f58dd544e8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-sys@0.59.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_sys",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-sys-0.59.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "Win32",
+                "Win32_Foundation",
+                "Win32_NetworkManagement",
+                "Win32_NetworkManagement_IpHelper",
+                "Win32_Networking",
+                "Win32_Networking_WinSock",
+                "Win32_Security",
+                "Win32_Security_Authentication",
+                "Win32_Security_Authentication_Identity",
+                "Win32_Security_Credentials",
+                "Win32_Security_Cryptography",
+                "Win32_Storage",
+                "Win32_Storage_FileSystem",
+                "Win32_System",
+                "Win32_System_Diagnostics",
+                "Win32_System_Diagnostics_Debug",
+                "Win32_System_LibraryLoader",
+                "Win32_System_Memory",
+                "Win32_System_SystemInformation",
+                "Win32_System_Threading",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libwindows_sys-bf01cc52b67a1839.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#schannel@0.1.27",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\schannel-0.1.27\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "schannel",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\schannel-0.1.27\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libschannel-ba522c6e7fb1422c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\build.rs",
+                "edition": "2015",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-a3025afbf443a225\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-a3025afbf443a225\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\build\\native-tls-ad7951bd2691929d\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: statics have by default a `'static` lifetime\n  --> src\\imp\\schannel.rs:17:20\n   |\n17 | static PROTOCOLS: &'static [Protocol] = &[\n   |                   -^^^^^^^----------- help: consider removing `'static`: `&[Protocol]`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_static_lifetimes\n   = note: `#[warn(clippy::redundant_static_lifetimes)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_static_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_static_lifetimes)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider removing `'static`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 535,
+                        "byte_start": 516,
+                        "column_end": 38,
+                        "column_start": 19,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 17,
+                        "line_start": 17,
+                        "suggested_replacement": "&[Protocol]",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 19,
+                            "text": "static PROTOCOLS: &'static [Protocol] = &["
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_static_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "statics have by default a `'static` lifetime",
+                "spans": [
+                  {
+                    "byte_end": 524,
+                    "byte_start": 517,
+                    "column_end": 27,
+                    "column_start": 20,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 17,
+                    "line_start": 17,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 27,
+                        "highlight_start": 20,
+                        "text": "static PROTOCOLS: &'static [Protocol] = &["
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:38:5\n   |\n38 | //!     vendored copy of OpenSSL. This feature has no effect on Windows and\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n   = note: `#[warn(clippy::doc_overindented_list_items)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_overindented_list_items)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1700,
+                        "byte_start": 1696,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 38,
+                        "line_start": 38,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     vendored copy of OpenSSL. This feature has no effect on Windows and"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1700,
+                    "byte_start": 1696,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 38,
+                    "line_start": 38,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     vendored copy of OpenSSL. This feature has no effect on Windows and"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:39:5\n   |\n39 | //!     macOS, where OpenSSL is not used.\n   |     ^^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 1776,
+                        "byte_start": 1772,
+                        "column_end": 9,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 39,
+                        "line_start": 39,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 9,
+                            "highlight_start": 5,
+                            "text": "//!     macOS, where OpenSSL is not used."
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 1776,
+                    "byte_start": 1772,
+                    "column_end": 9,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 39,
+                    "line_start": 39,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 9,
+                        "highlight_start": 5,
+                        "text": "//!     macOS, where OpenSSL is not used."
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: useless conversion to the same type: `imp::pem::PemBlock<'_>`\n   --> src\\imp\\schannel.rs:104:29\n    |\n104 |         let mut cert_iter = pem::PemBlock::new(pem).into_iter();\n    |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: consider removing `.into_iter()`: `pem::PemBlock::new(pem)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion\n    = note: `#[warn(clippy::useless_conversion)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#useless_conversion",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::useless_conversion)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider removing `.into_iter()`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2833,
+                        "byte_start": 2798,
+                        "column_end": 64,
+                        "column_start": 29,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 104,
+                        "line_start": 104,
+                        "suggested_replacement": "pem::PemBlock::new(pem)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 64,
+                            "highlight_start": 29,
+                            "text": "        let mut cert_iter = pem::PemBlock::new(pem).into_iter();"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::useless_conversion",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "useless conversion to the same type: `imp::pem::PemBlock<'_>`",
+                "spans": [
+                  {
+                    "byte_end": 2833,
+                    "byte_start": 2798,
+                    "column_end": 64,
+                    "column_start": 29,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 104,
+                    "line_start": 104,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 64,
+                        "highlight_start": 29,
+                        "text": "        let mut cert_iter = pem::PemBlock::new(pem).into_iter();"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\imp\\schannel.rs:127:45\n    |\n127 |         container.import().import_pkcs8_pem(&key)?;\n    |                                             ^^^^ help: change this to: `key`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3698,
+                        "byte_start": 3694,
+                        "column_end": 49,
+                        "column_start": 45,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 127,
+                        "line_start": 127,
+                        "suggested_replacement": "key",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 49,
+                            "highlight_start": 45,
+                            "text": "        container.import().import_pkcs8_pem(&key)?;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 3698,
+                    "byte_start": 3694,
+                    "column_end": 49,
+                    "column_start": 45,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 127,
+                    "line_start": 127,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 49,
+                        "highlight_start": 45,
+                        "text": "        container.import().import_pkcs8_pem(&key)?;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\imp\\schannel.rs:205:31\n    |\n205 |     pub fn handshake(self) -> Result<TlsStream<S>, HandshakeError<S>> {\n    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n...\n215 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n    |\n    = help: try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n    = note: `#[warn(clippy::result_large_err)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::result_large_err)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 6023,
+                    "byte_start": 5987,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 215,
+                    "line_start": 215,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 5801,
+                    "byte_start": 5762,
+                    "column_end": 70,
+                    "column_start": 31,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 205,
+                    "line_start": 205,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 70,
+                        "highlight_start": 31,
+                        "text": "    pub fn handshake(self) -> Result<TlsStream<S>, HandshakeError<S>> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: large size difference between variants\n   --> src\\imp\\schannel.rs:213:1\n    |\n213 | / pub enum HandshakeError<S> {\n214 | |     Failure(Error),\n    | |     -------------- the second-largest variant contains at least 8 bytes\n215 | |     WouldBlock(MidHandshakeTlsStream<S>),\n    | |     ------------------------------------ the largest variant contains at least 244 bytes\n216 | | }\n    | |_^ the entire enum is at least 244 bytes\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant\n    = note: `#[warn(clippy::large_enum_variant)]` on by default\nhelp: consider boxing the large fields to reduce the total size of the enum\n    |\n215 -     WouldBlock(MidHandshakeTlsStream<S>),\n215 +     WouldBlock(Box<MidHandshakeTlsStream<S>>),\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::large_enum_variant)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider boxing the large fields to reduce the total size of the enum",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 6022,
+                        "byte_start": 5998,
+                        "column_end": 40,
+                        "column_start": 16,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 215,
+                        "line_start": 215,
+                        "suggested_replacement": "Box<MidHandshakeTlsStream<S>>",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 16,
+                            "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::large_enum_variant",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "large size difference between variants",
+                "spans": [
+                  {
+                    "byte_end": 6026,
+                    "byte_start": 5934,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": "the entire enum is at least 244 bytes",
+                    "line_end": 216,
+                    "line_start": 213,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 1,
+                        "text": "pub enum HandshakeError<S> {"
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    Failure(Error),"
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 6023,
+                    "byte_start": 5987,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 215,
+                    "line_start": 215,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 5981,
+                    "byte_start": 5967,
+                    "column_end": 19,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": false,
+                    "label": "the second-largest variant contains at least 8 bytes",
+                    "line_end": 214,
+                    "line_start": 214,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 5,
+                        "text": "    Failure(Error),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\imp\\schannel.rs:271:58\n    |\n215 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n...\n271 |     pub fn connect<S>(&self, domain: &str, stream: S) -> Result<TlsStream<S>, HandshakeError<S>>\n    |                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 6023,
+                    "byte_start": 5987,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 215,
+                    "line_start": 215,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 7881,
+                    "byte_start": 7842,
+                    "column_end": 97,
+                    "column_start": 58,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 271,
+                    "line_start": 271,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 97,
+                        "highlight_start": 58,
+                        "text": "    pub fn connect<S>(&self, domain: &str, stream: S) -> Result<TlsStream<S>, HandshakeError<S>>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this block may be rewritten with the `?` operator\n   --> src\\imp\\schannel.rs:292:17\n    |\n292 | /                 if let Err(err) = res.result() {\n293 | |                     // Propagate previous error encountered during normal cert validation.\n294 | |                     return Err(err);\n295 | |                 }\n    | |_________________^ help: replace it with: `res.result()?;`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark\n    = note: `#[warn(clippy::question_mark)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#question_mark",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::question_mark)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8906,
+                        "byte_start": 8728,
+                        "column_end": 18,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 295,
+                        "line_start": 292,
+                        "suggested_replacement": "res.result()?;",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 49,
+                            "highlight_start": 17,
+                            "text": "                if let Err(err) = res.result() {"
+                          },
+                          {
+                            "highlight_end": 91,
+                            "highlight_start": 1,
+                            "text": "                    // Propagate previous error encountered during normal cert validation."
+                          },
+                          {
+                            "highlight_end": 37,
+                            "highlight_start": 1,
+                            "text": "                    return Err(err);"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::question_mark",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this block may be rewritten with the `?` operator",
+                "spans": [
+                  {
+                    "byte_end": 8906,
+                    "byte_start": 8728,
+                    "column_end": 18,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 295,
+                    "line_start": 292,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 49,
+                        "highlight_start": 17,
+                        "text": "                if let Err(err) = res.result() {"
+                      },
+                      {
+                        "highlight_end": 91,
+                        "highlight_start": 1,
+                        "text": "                    // Propagate previous error encountered during normal cert validation."
+                      },
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 1,
+                        "text": "                    return Err(err);"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this can be `std::io::Error::other(_)`\n   --> src\\imp\\schannel.rs:306:21\n    |\n306 |                   Err(io::Error::new(\n    |  _____________________^\n307 | |                     io::ErrorKind::Other,\n308 | |                     \"unable to find any user-specified roots in the final cert chain\",\n309 | |                 ))\n    | |_________________^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#io_other_error\n    = note: `#[warn(clippy::io_other_error)]` on by default\nhelp: use `std::io::Error::other`\n    |\n306 ~                 Err(io::Error::other(\n307 ~                     \"unable to find any user-specified roots in the final cert chain\",\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#io_other_error",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::io_other_error)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use `std::io::Error::other`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9255,
+                        "byte_start": 9252,
+                        "column_end": 35,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 306,
+                        "line_start": 306,
+                        "suggested_replacement": "other",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 32,
+                            "text": "                Err(io::Error::new("
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 9319,
+                        "byte_start": 9277,
+                        "column_end": 21,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 308,
+                        "line_start": 307,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 21,
+                            "text": "                    io::ErrorKind::Other,"
+                          },
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 1,
+                            "text": "                    \"unable to find any user-specified roots in the final cert chain\","
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::io_other_error",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this can be `std::io::Error::other(_)`",
+                "spans": [
+                  {
+                    "byte_end": 9403,
+                    "byte_start": 9241,
+                    "column_end": 18,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 309,
+                    "line_start": 306,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 21,
+                        "text": "                Err(io::Error::new("
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "                    io::ErrorKind::Other,"
+                      },
+                      {
+                        "highlight_end": 87,
+                        "highlight_start": 1,
+                        "text": "                    \"unable to find any user-specified roots in the final cert chain\","
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                ))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\imp\\schannel.rs:343:43\n    |\n215 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n...\n343 |     pub fn accept<S>(&self, stream: S) -> Result<TlsStream<S>, HandshakeError<S>>\n    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `imp::HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<imp::HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 6023,
+                    "byte_start": 5987,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 215,
+                    "line_start": 215,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 10344,
+                    "byte_start": 10305,
+                    "column_end": 82,
+                    "column_start": 43,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 343,
+                    "line_start": 343,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 82,
+                        "highlight_start": 43,
+                        "text": "    pub fn accept<S>(&self, stream: S) -> Result<TlsStream<S>, HandshakeError<S>>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unneeded `return` statement\n   --> src\\imp\\schannel.rs:472:13\n    |\n472 |             return Some(&self.pem_block[begin..self.cur_end].as_bytes());\n    |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return\n    = note: `#[warn(clippy::needless_return)]` on by default\nhelp: remove `return`\n    |\n472 -             return Some(&self.pem_block[begin..self.cur_end].as_bytes());\n472 +             Some(&self.pem_block[begin..self.cur_end].as_bytes())\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_return",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_return)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove `return`",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 14192,
+                        "byte_start": 14132,
+                        "column_end": 73,
+                        "column_start": 13,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "Some(&self.pem_block[begin..self.cur_end].as_bytes())",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 73,
+                            "highlight_start": 13,
+                            "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 14193,
+                        "byte_start": 14192,
+                        "column_end": 74,
+                        "column_start": 73,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 74,
+                            "highlight_start": 73,
+                            "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_return",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unneeded `return` statement",
+                "spans": [
+                  {
+                    "byte_end": 14192,
+                    "byte_start": 14132,
+                    "column_end": 73,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 472,
+                    "line_start": 472,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 73,
+                        "highlight_start": 13,
+                        "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: calling `as_bytes` after slicing a string\n   --> src\\imp\\schannel.rs:472:26\n    |\n472 |             return Some(&self.pem_block[begin..self.cur_end].as_bytes());\n    |                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `&self.pem_block.as_bytes()[begin..self.cur_end]`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#sliced_string_as_bytes\n    = note: `#[warn(clippy::sliced_string_as_bytes)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#sliced_string_as_bytes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::sliced_string_as_bytes)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 14191,
+                        "byte_start": 14145,
+                        "column_end": 72,
+                        "column_start": 26,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "&self.pem_block.as_bytes()[begin..self.cur_end]",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 72,
+                            "highlight_start": 26,
+                            "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::sliced_string_as_bytes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "calling `as_bytes` after slicing a string",
+                "spans": [
+                  {
+                    "byte_end": 14191,
+                    "byte_start": 14145,
+                    "column_end": 72,
+                    "column_start": 26,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 472,
+                    "line_start": 472,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 26,
+                        "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\imp\\schannel.rs:472:25\n    |\n472 |             return Some(&self.pem_block[begin..self.cur_end].as_bytes());\n    |                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: change this to: `self.pem_block[begin..self.cur_end].as_bytes()`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 14191,
+                        "byte_start": 14144,
+                        "column_end": 72,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\imp\\schannel.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 472,
+                        "line_start": 472,
+                        "suggested_replacement": "self.pem_block[begin..self.cur_end].as_bytes()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 72,
+                            "highlight_start": 25,
+                            "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 14191,
+                    "byte_start": 14144,
+                    "column_end": 72,
+                    "column_start": 25,
+                    "expansion": null,
+                    "file_name": "src\\imp\\schannel.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 472,
+                    "line_start": 472,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 72,
+                        "highlight_start": 25,
+                        "text": "            return Some(&self.pem_block[begin..self.cur_end].as_bytes());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\lib.rs:249:31\n    |\n249 |     pub fn handshake(self) -> result::Result<TlsStream<S>, HandshakeError<S>> {\n    |                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n...\n269 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n    |\n    = help: try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 8891,
+                    "byte_start": 8855,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 269,
+                    "line_start": 269,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 8297,
+                    "byte_start": 8250,
+                    "column_end": 78,
+                    "column_start": 31,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 249,
+                    "line_start": 249,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 31,
+                        "text": "    pub fn handshake(self) -> result::Result<TlsStream<S>, HandshakeError<S>> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: large size difference between variants\n   --> src\\lib.rs:259:1\n    |\n259 | / pub enum HandshakeError<S> {\n260 | |     /// A fatal error.\n261 | |     Failure(Error),\n    | |     -------------- the second-largest variant contains at least 8 bytes\n...   |\n269 | |     WouldBlock(MidHandshakeTlsStream<S>),\n    | |     ------------------------------------ the largest variant contains at least 244 bytes\n270 | | }\n    | |_^ the entire enum is at least 244 bytes\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant\nhelp: consider boxing the large fields to reduce the total size of the enum\n    |\n269 -     WouldBlock(MidHandshakeTlsStream<S>),\n269 +     WouldBlock(Box<MidHandshakeTlsStream<S>>),\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#large_enum_variant",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider boxing the large fields to reduce the total size of the enum",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8890,
+                        "byte_start": 8866,
+                        "column_end": 40,
+                        "column_start": 16,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 269,
+                        "line_start": 269,
+                        "suggested_replacement": "Box<MidHandshakeTlsStream<S>>",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 16,
+                            "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::large_enum_variant",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "large size difference between variants",
+                "spans": [
+                  {
+                    "byte_end": 8894,
+                    "byte_start": 8502,
+                    "column_end": 2,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": "the entire enum is at least 244 bytes",
+                    "line_end": 270,
+                    "line_start": 259,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 29,
+                        "highlight_start": 1,
+                        "text": "pub enum HandshakeError<S> {"
+                      },
+                      {
+                        "highlight_end": 23,
+                        "highlight_start": 1,
+                        "text": "    /// A fatal error."
+                      },
+                      {
+                        "highlight_end": 20,
+                        "highlight_start": 1,
+                        "text": "    Failure(Error),"
+                      },
+                      {
+                        "highlight_end": 1,
+                        "highlight_start": 1,
+                        "text": ""
+                      },
+                      {
+                        "highlight_end": 75,
+                        "highlight_start": 1,
+                        "text": "    /// A stream interrupted midway through the handshake process due to a"
+                      },
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 1,
+                        "text": "    /// `WouldBlock` error."
+                      },
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 1,
+                        "text": "    ///"
+                      },
+                      {
+                        "highlight_end": 74,
+                        "highlight_start": 1,
+                        "text": "    /// Note that this is not a fatal error and it should be safe to call"
+                      },
+                      {
+                        "highlight_end": 76,
+                        "highlight_start": 1,
+                        "text": "    /// `handshake` at a later time once the stream is ready to perform I/O"
+                      },
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 1,
+                        "text": "    /// again."
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      },
+                      {
+                        "highlight_end": 2,
+                        "highlight_start": 1,
+                        "text": "}"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 8891,
+                    "byte_start": 8855,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 269,
+                    "line_start": 269,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 8572,
+                    "byte_start": 8558,
+                    "column_end": 19,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the second-largest variant contains at least 8 bytes",
+                    "line_end": 261,
+                    "line_start": 261,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 5,
+                        "text": "    Failure(Error),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\lib.rs:507:10\n    |\n269 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n...\n507 |     ) -> result::Result<TlsStream<S>, HandshakeError<S>>\n    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 8891,
+                    "byte_start": 8855,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 269,
+                    "line_start": 269,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 16600,
+                    "byte_start": 16553,
+                    "column_end": 57,
+                    "column_start": 10,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 507,
+                    "line_start": 507,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 10,
+                        "text": "    ) -> result::Result<TlsStream<S>, HandshakeError<S>>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: the `Err`-variant returned from this function is very large\n   --> src\\lib.rs:619:43\n    |\n269 |     WouldBlock(MidHandshakeTlsStream<S>),\n    |     ------------------------------------ the largest variant contains at least 244 bytes\n...\n619 |     pub fn accept<S>(&self, stream: S) -> result::Result<TlsStream<S>, HandshakeError<S>>\n    |                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try reducing the size of `HandshakeError<S>`, for example by boxing large elements or replacing it with `Box<HandshakeError<S>>`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#result_large_err",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::result_large_err",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "the `Err`-variant returned from this function is very large",
+                "spans": [
+                  {
+                    "byte_end": 8891,
+                    "byte_start": 8855,
+                    "column_end": 41,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": false,
+                    "label": "the largest variant contains at least 244 bytes",
+                    "line_end": 269,
+                    "line_start": 269,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 5,
+                        "text": "    WouldBlock(MidHandshakeTlsStream<S>),"
+                      }
+                    ]
+                  },
+                  {
+                    "byte_end": 20096,
+                    "byte_start": 20049,
+                    "column_end": 90,
+                    "column_start": 43,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 619,
+                    "line_start": 619,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 90,
+                        "highlight_start": 43,
+                        "text": "    pub fn accept<S>(&self, stream: S) -> result::Result<TlsStream<S>, HandshakeError<S>>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmph8ad8_j4/native-tls-0.2.14#native-tls@0.2.14",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "native_tls",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmph8ad8_j4\\native-tls-0.2.14\\target\\debug\\deps\\libnative_tls-df281f820c31f7e1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 52
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": true,
+              "count": 1,
+              "list": [
+                {
+                  "advisory": {
+                    "id": "RUSTSEC-2025-0022",
+                    "package": "openssl",
+                    "title": "Use-After-Free in `Md::fetch` and `Cipher::fetch`",
+                    "description": "When a `Some(...)` value was passed to the `properties` argument of either of these functions, a use-after-free would result.\n\nIn practice this would nearly always result in OpenSSL treating the properties as an empty string (due to `CString::drop`'s behavior).\n\nThe maintainers thank [quitbug](https://github.com/quitbug/) for reporting this vulnerability to us.",
+                    "date": "2025-04-04",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [
+                      "memory-corruption"
+                    ],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": null,
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/sfackler/rust-openssl/pull/2390",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "versions": {
+                    "patched": [
+                      ">=0.10.72"
+                    ],
+                    "unaffected": [
+                      "<0.10.39"
+                    ]
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [],
+                    "functions": {
+                      "openssl::cipher::Cipher::fetch": [
+                        ">=0.10.39, <0.10.72"
+                      ],
+                      "openssl::md::Md::fetch": [
+                        ">=0.10.39, <0.10.72"
+                      ]
+                    }
+                  },
+                  "package": {
+                    "name": "openssl",
+                    "version": "0.10.71",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "5e14130c6a98cd258fdcb0fb6d744152343ff729cbfcb28c656a9d12b999fbcd",
+                    "dependencies": [
+                      {
+                        "name": "bitflags",
+                        "version": "2.8.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "cfg-if",
+                        "version": "1.0.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "foreign-types",
+                        "version": "0.3.2",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.169",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "once_cell",
+                        "version": "1.20.3",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "openssl-macros",
+                        "version": "0.1.1",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "openssl-sys",
+                        "version": "0.9.106",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  }
+                }
+              ]
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "native-tls",
+          "version": "0.2.14",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\n[Settings](https://docs.rs/native-tls/latest/settings.html)\n[Help](https://docs.rs/native-tls/latest/help.html)\nSummary[Source](https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719)\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented)How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#supported-features)Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#cargo-features)Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#examples)Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/native-tls/latest/native_tls/#structs)\n\n[Certificate](https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html \"struct native_tls::Certificate\")\n    An X509 certificate.\n\n[Error](https://docs.rs/native-tls/latest/native_tls/struct.Error.html \"struct native_tls::Error\")\n    An error returned from the TLS implementation.\n\n[Identity](https://docs.rs/native-tls/latest/native_tls/struct.Identity.html \"struct native_tls::Identity\")\n    A cryptographic identity.\n\n[MidHandshakeTlsStream](https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html \"struct native_tls::MidHandshakeTlsStream\")\n    A TLS stream which has been interrupted midway through the handshake process.\n\n[TlsAcceptor](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html \"struct native_tls::TlsAcceptor\")\n    A builder for server-side TLS connections.\n\n[TlsAcceptorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html \"struct native_tls::TlsAcceptorBuilder\")\n    A builder for `TlsAcceptor`s.\n\n[TlsConnector](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html \"struct native_tls::TlsConnector\")\n    A builder for client-side TLS connections.\n\n[TlsConnectorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html \"struct native_tls::TlsConnectorBuilder\")\n    A builder for `TlsConnector`s.\n\n[TlsStream](https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html \"struct native_tls::TlsStream\")\n    A stream managing a TLS session.\n## Enums[\u00a7](https://docs.rs/native-tls/latest/native_tls/#enums)\n\n[HandshakeError](https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html \"enum native_tls::HandshakeError\")\n    An error returned from `ClientBuilder::handshake`.\n\n[Protocol](https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html \"enum native_tls::Protocol\")\n    SSL/TLS protocol versions.\n## Type Aliases[\u00a7](https://docs.rs/native-tls/latest/native_tls/#types)\n\n[Result](https://docs.rs/native-tls/latest/native_tls/type.Result.html \"type native_tls::Result\")\n    A typedef of the result-type returned by many methods.\n",
+            "markdown_with_citations": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## \u00a7\u27e84\u27e9How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## \u00a7\u27e85\u27e9Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## \u00a7\u27e86\u27e9Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## \u00a7\u27e87\u27e9Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nCertificate\u27e89\u27e9\n    An X509 certificate.\n\nError\u27e810\u27e9\n    An error returned from the TLS implementation.\n\nIdentity\u27e811\u27e9\n    A cryptographic identity.\n\nMidHandshakeTlsStream\u27e812\u27e9\n    A TLS stream which has been interrupted midway through the handshake process.\n\nTlsAcceptor\u27e813\u27e9\n    A builder for server-side TLS connections.\n\nTlsAcceptorBuilder\u27e814\u27e9\n    A builder for `TlsAcceptor`s.\n\nTlsConnector\u27e815\u27e9\n    A builder for client-side TLS connections.\n\nTlsConnectorBuilder\u27e816\u27e9\n    A builder for `TlsConnector`s.\n\nTlsStream\u27e817\u27e9\n    A stream managing a TLS session.\n## Enums\u00a7\u27e818\u27e9\n\nHandshakeError\u27e819\u27e9\n    An error returned from `ClientBuilder::handshake`.\n\nProtocol\u27e820\u27e9\n    SSL/TLS protocol versions.\n## Type Aliases\u00a7\u27e821\u27e9\n\nResult\u27e822\u27e9\n    A typedef of the result-type returned by many methods.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/native-tls/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/native-tls/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719: Source\n\u27e84\u27e9 https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented: \u00a7\n\u27e85\u27e9 https://docs.rs/native-tls/latest/native_tls/#supported-features: \u00a7\n\u27e86\u27e9 https://docs.rs/native-tls/latest/native_tls/#cargo-features: \u00a7\n\u27e87\u27e9 https://docs.rs/native-tls/latest/native_tls/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/native-tls/latest/native_tls/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html: struct native_tls::Certificate - Certificate\n\u27e810\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Error.html: struct native_tls::Error - Error\n\u27e811\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Identity.html: struct native_tls::Identity - Identity\n\u27e812\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html: struct native_tls::MidHandshakeTlsStream - MidHandshakeTlsStream\n\u27e813\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html: struct native_tls::TlsAcceptor - TlsAcceptor\n\u27e814\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html: struct native_tls::TlsAcceptorBuilder - TlsAcceptorBuilder\n\u27e815\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html: struct native_tls::TlsConnector - TlsConnector\n\u27e816\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html: struct native_tls::TlsConnectorBuilder - TlsConnectorBuilder\n\u27e817\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html: struct native_tls::TlsStream - TlsStream\n\u27e818\u27e9 https://docs.rs/native-tls/latest/native_tls/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html: enum native_tls::HandshakeError - HandshakeError\n\u27e820\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html: enum native_tls::Protocol - Protocol\n\u27e821\u27e9 https://docs.rs/native-tls/latest/native_tls/#types: \u00a7\n\u27e822\u27e9 https://docs.rs/native-tls/latest/native_tls/type.Result.html: type native_tls::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "native-tls",
+          "version": "0.2.14",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\n[Settings](https://docs.rs/native-tls/latest/settings.html)\n[Help](https://docs.rs/native-tls/latest/help.html)\nSummary[Source](https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719)\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented)How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#supported-features)Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#cargo-features)Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## [\u00a7](https://docs.rs/native-tls/latest/native_tls/#examples)Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/native-tls/latest/native_tls/#structs)\n\n[Certificate](https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html \"struct native_tls::Certificate\")\n    An X509 certificate.\n\n[Error](https://docs.rs/native-tls/latest/native_tls/struct.Error.html \"struct native_tls::Error\")\n    An error returned from the TLS implementation.\n\n[Identity](https://docs.rs/native-tls/latest/native_tls/struct.Identity.html \"struct native_tls::Identity\")\n    A cryptographic identity.\n\n[MidHandshakeTlsStream](https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html \"struct native_tls::MidHandshakeTlsStream\")\n    A TLS stream which has been interrupted midway through the handshake process.\n\n[TlsAcceptor](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html \"struct native_tls::TlsAcceptor\")\n    A builder for server-side TLS connections.\n\n[TlsAcceptorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html \"struct native_tls::TlsAcceptorBuilder\")\n    A builder for `TlsAcceptor`s.\n\n[TlsConnector](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html \"struct native_tls::TlsConnector\")\n    A builder for client-side TLS connections.\n\n[TlsConnectorBuilder](https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html \"struct native_tls::TlsConnectorBuilder\")\n    A builder for `TlsConnector`s.\n\n[TlsStream](https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html \"struct native_tls::TlsStream\")\n    A stream managing a TLS session.\n## Enums[\u00a7](https://docs.rs/native-tls/latest/native_tls/#enums)\n\n[HandshakeError](https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html \"enum native_tls::HandshakeError\")\n    An error returned from `ClientBuilder::handshake`.\n\n[Protocol](https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html \"enum native_tls::Protocol\")\n    SSL/TLS protocol versions.\n## Type Aliases[\u00a7](https://docs.rs/native-tls/latest/native_tls/#types)\n\n[Result](https://docs.rs/native-tls/latest/native_tls/type.Result.html \"type native_tls::Result\")\n    A typedef of the result-type returned by many methods.\n",
+            "markdown_with_citations": "[](https://docs.rs/native-tls/latest/native_tls/all.html \"show sidebar\")\n# Crate native_tlsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn abstraction over platform-specific TLS implementations.\nMany applications require TLS/SSL communication in one form or another as part of their implementation, but finding a library for this isn\u2019t always trivial! The purpose of this crate is to provide a seamless integration experience on all platforms with a cross-platform API that deals with all the underlying details for you.\n## \u00a7\u27e84\u27e9How is this implemented?\nThis crate uses SChannel on Windows (via the `schannel` crate), Secure Transport on OSX (via the `security-framework` crate), and OpenSSL (via the `openssl` crate) on all other platforms. Future features may also enable other TLS frameworks as well, but these initial libraries are likely to remain as the defaults.\nNote that this crate also strives to be secure-by-default. For example when using OpenSSL it will configure validation callbacks to ensure that hostnames match certificates, use strong ciphers, etc. This implies that this crate is _not_ just a thin abstraction around the underlying libraries, but also an implementation that strives to strike reasonable defaults.\n## \u00a7\u27e85\u27e9Supported features\nThis crate supports the following features out of the box:\n  * TLS/SSL client communication\n  * TLS/SSL server communication\n  * PKCS#12 encoded identities\n  * X.509/PKCS#8 encoded identities\n  * Secure-by-default for client and server \n    * Includes hostname verification for clients\n  * Supports asynchronous I/O for both the server and the client\n\n\n## \u00a7\u27e86\u27e9Cargo Features\n  * `vendored` - If enabled, the crate will compile and statically link to a vendored copy of OpenSSL. This feature has no effect on Windows and macOS, where OpenSSL is not used.\n\n\n## \u00a7\u27e87\u27e9Examples\nTo connect as a client to a remote server:\n```\nuse native_tls::TlsConnector;\nuse std::io::{Read, Write};\nuse std::net::TcpStream;\nlet connector = TlsConnector::new().unwrap();\nlet stream = TcpStream::connect(\"google.com:443\").unwrap();\nlet mut stream = connector.connect(\"google.com\", stream).unwrap();\nstream.write_all(b\"GET / HTTP/1.0\\r\\n\\r\\n\").unwrap();\nlet mut res = vec![];\nstream.read_to_end(&mut res).unwrap();\nprintln!(\"{}\", String::from_utf8_lossy(&res));\n```\n\nTo accept connections as a server from remote clients:\n```\nuse native_tls::{Identity, TlsAcceptor, TlsStream};\nuse std::fs::File;\nuse std::io::{Read};\nuse std::net::{TcpListener, TcpStream};\nuse std::sync::Arc;\nuse std::thread;\nlet mut file = File::open(\"identity.pfx\").unwrap();\nlet mut identity = vec![];\nfile.read_to_end(&mut identity).unwrap();\nlet identity = Identity::from_pkcs12(&identity, \"hunter2\").unwrap();\nlet listener = TcpListener::bind(\"0.0.0.0:8443\").unwrap();\nlet acceptor = TlsAcceptor::new(identity).unwrap();\nlet acceptor = Arc::new(acceptor);\nfn handle_client(stream: TlsStream<TcpStream>) {\n  // ...\n}\nfor stream in listener.incoming() {\n  match stream {\n    Ok(stream) => {\n      let acceptor = acceptor.clone();\n      thread::spawn(move || {\n        let stream = acceptor.accept(stream).unwrap();\n        handle_client(stream);\n      });\n    }\n    Err(e) => { /* connection failed */ }\n  }\n}\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nCertificate\u27e89\u27e9\n    An X509 certificate.\n\nError\u27e810\u27e9\n    An error returned from the TLS implementation.\n\nIdentity\u27e811\u27e9\n    A cryptographic identity.\n\nMidHandshakeTlsStream\u27e812\u27e9\n    A TLS stream which has been interrupted midway through the handshake process.\n\nTlsAcceptor\u27e813\u27e9\n    A builder for server-side TLS connections.\n\nTlsAcceptorBuilder\u27e814\u27e9\n    A builder for `TlsAcceptor`s.\n\nTlsConnector\u27e815\u27e9\n    A builder for client-side TLS connections.\n\nTlsConnectorBuilder\u27e816\u27e9\n    A builder for `TlsConnector`s.\n\nTlsStream\u27e817\u27e9\n    A stream managing a TLS session.\n## Enums\u00a7\u27e818\u27e9\n\nHandshakeError\u27e819\u27e9\n    An error returned from `ClientBuilder::handshake`.\n\nProtocol\u27e820\u27e9\n    SSL/TLS protocol versions.\n## Type Aliases\u00a7\u27e821\u27e9\n\nResult\u27e822\u27e9\n    A typedef of the result-type returned by many methods.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/native-tls/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/native-tls/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/native-tls/latest/src/native_tls/lib.rs.html#1-719: Source\n\u27e84\u27e9 https://docs.rs/native-tls/latest/native_tls/#how-is-this-implemented: \u00a7\n\u27e85\u27e9 https://docs.rs/native-tls/latest/native_tls/#supported-features: \u00a7\n\u27e86\u27e9 https://docs.rs/native-tls/latest/native_tls/#cargo-features: \u00a7\n\u27e87\u27e9 https://docs.rs/native-tls/latest/native_tls/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/native-tls/latest/native_tls/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Certificate.html: struct native_tls::Certificate - Certificate\n\u27e810\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Error.html: struct native_tls::Error - Error\n\u27e811\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.Identity.html: struct native_tls::Identity - Identity\n\u27e812\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.MidHandshakeTlsStream.html: struct native_tls::MidHandshakeTlsStream - MidHandshakeTlsStream\n\u27e813\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptor.html: struct native_tls::TlsAcceptor - TlsAcceptor\n\u27e814\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsAcceptorBuilder.html: struct native_tls::TlsAcceptorBuilder - TlsAcceptorBuilder\n\u27e815\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnector.html: struct native_tls::TlsConnector - TlsConnector\n\u27e816\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsConnectorBuilder.html: struct native_tls::TlsConnectorBuilder - TlsConnectorBuilder\n\u27e817\u27e9 https://docs.rs/native-tls/latest/native_tls/struct.TlsStream.html: struct native_tls::TlsStream - TlsStream\n\u27e818\u27e9 https://docs.rs/native-tls/latest/native_tls/#enums: \u00a7\n\u27e819\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.HandshakeError.html: enum native_tls::HandshakeError - HandshakeError\n\u27e820\u27e9 https://docs.rs/native-tls/latest/native_tls/enum.Protocol.html: enum native_tls::Protocol - Protocol\n\u27e821\u27e9 https://docs.rs/native-tls/latest/native_tls/#types: \u00a7\n\u27e822\u27e9 https://docs.rs/native-tls/latest/native_tls/type.Result.html: type native_tls::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `native-tls` crate provides a cross-platform abstraction for TLS/SSL communication, leveraging platform-specific implementations like SChannel (Windows), Secure Transport (macOS), and OpenSSL (other platforms). It supports secure-by-default client and server communication, PKCS#12 and X.509 identities, hostname verification, and asynchronous I/O. Additionally, it offers a `vendored` feature to statically link OpenSSL on non-Windows/macOS platforms.",
+          "feature_summary": null,
+          "use_case": "Networking",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: Platform-Specific TLS Implementations  \n\u2705 **Factual:** The `native-tls` crate uses SChannel on Windows, Secure Transport on macOS, and OpenSSL on other platforms to provide platform-specific TLS implementations.  \n\u274c **Counterfactual:** The `native-tls` crate exclusively uses OpenSSL for TLS implementations across all platforms, including Windows and macOS.  \n\n---\n\n### Pair 2: Secure Defaults  \n\u2705 **Factual:** The `native-tls` crate is secure-by-default, ensuring hostname verification, strong cipher usage, and certificate validation when using OpenSSL.  \n\u274c **Counterfactual:** The `native-tls` crate requires developers to manually configure hostname verification and cipher settings to ensure security when using OpenSSL.  \n\n---\n\n### Pair 3: Asynchronous I/O Support  \n\u2705 **Factual:** The `native-tls` crate supports asynchronous I/O for both server-side and client-side TLS communication.  \n\u274c **Counterfactual:** The `native-tls` crate does not support asynchronous I/O, requiring developers to use synchronous methods for TLS communication.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-dd0a00fd-4294fd08-1751261763",
+      "timestamp": "2025-06-30T05:36:03.438199+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

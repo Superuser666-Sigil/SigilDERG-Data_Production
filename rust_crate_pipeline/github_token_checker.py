@@ -1,14 +1,14 @@
-from typing import Dict, List, Tuple, Optional, Any
 # github_token_checker.py
 """
 GitHub Token Checker Module
 Lightweight version of the token checker for integration into the main pipeline.
 """
 
+import logging
 import os
 import sys
+
 import requests
-import logging
 
 
 def check_github_token_quick() -> tuple[bool, str]:
@@ -67,7 +67,8 @@ def prompt_for_token_setup() -> bool:
     print("\n" + "=" * 60)
 
     # Ask if user wants to continue without token (limited functionality)
-    response = input("\nContinue without GitHub token? (y/N): ").strip().lower()
+    response = input(
+        "\nContinue without GitHub token? (y/N): ").strip().lower()
 
     if response in ["y", "yes"]:
         print("[WARNING] Running with limited GitHub API access (60 requests/hour)")
@@ -91,7 +92,8 @@ def check_and_setup_github_token() -> bool:
 
     # Check if we're in a non-interactive environment
     if not sys.stdin.isatty():
-        logging.error("GitHub token not configured and running in non-interactive mode")
+        logging.error(
+            "GitHub token not configured and running in non-interactive mode")
         logging.error("Set GITHUB_TOKEN environment variable before running")
         return False
 

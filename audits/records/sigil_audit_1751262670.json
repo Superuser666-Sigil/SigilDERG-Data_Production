@@ -1,0 +1,666 @@
+[
+  {
+    "execution_id": "exec-4d5b377f-f256d2f2-1751262657",
+    "timestamp": "2025-06-30T05:50:57.412280+00:00",
+    "sacred_chain": {
+      "input_data": "redb",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'redb' -> 'redb'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "redb",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/redb",
+            "title": "redb v2.6.0",
+            "content": {
+              "raw_markdown": "#  redb v2.6.0\nRust Embedded DataBase \n  * [ Readme ](https://crates.io/crates/redb)\n  * [ 61 Versions ](https://crates.io/crates/redb/versions)\n  * [ Dependencies ](https://crates.io/crates/redb/dependencies)\n  * [ Dependents ](https://crates.io/crates/redb/reverse_dependencies)\n\n\n## Metadata\nabout 1 month ago \nv1.85.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n193 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add redb\nOr add the following line to your Cargo.toml:\nredb = \"2.6.0\"\n## Homepage\n[ redb.org ](https://www.redb.org)\n## Repository\n[ github.com/cberner/redb ](https://github.com/cberner/redb)\n## Owners\n[ Report crate ](https://crates.io/support?crate=redb&inquire=crate-violation)\n### Stats Overview\n1,413,309 Downloads all time\n61 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  redb v2.6.0\nRust Embedded DataBase \n  *  Readme \u27e81\u27e9\n  *  61 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\nabout 1 month ago \nv1.85.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n193 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add redb\nOr add the following line to your Cargo.toml:\nredb = \"2.6.0\"\n## Homepage\n redb.org \u27e87\u27e9\n## Repository\n github.com/cberner/redb \u27e88\u27e9\n## Owners\n Report crate \u27e89\u27e9\n### Stats Overview\n1,413,309 Downloads all time\n61 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/redb:  Readme \n\u27e82\u27e9 https://crates.io/crates/redb/versions:  61 Versions \n\u27e83\u27e9 https://crates.io/crates/redb/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/redb/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://www.redb.org:  redb.org \n\u27e88\u27e9 https://github.com/cberner/redb:  github.com/cberner/redb \n\u27e89\u27e9 https://crates.io/support?crate=redb&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 2.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 971,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116447.2863856"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/redb",
+            "title": "Crate redbCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\n[Settings](https://docs.rs/redb/latest/settings.html)\n[Help](https://docs.rs/redb/latest/help.html)\nSummary[Source](https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119)\nExpand description\n## [\u00a7](https://docs.rs/redb/latest/redb/#redb)redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by [lmdb](https://www.lmdb.tech/doc/). Data is stored in a collection of copy-on-write B-trees. For more details, see the [design doc](https://github.com/cberner/redb/blob/master/docs/design.md).\n## [\u00a7](https://docs.rs/redb/latest/redb/#features)Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## [\u00a7](https://docs.rs/redb/latest/redb/#example)Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules[\u00a7](https://docs.rs/redb/latest/redb/#modules)\n\n[backends](https://docs.rs/redb/latest/redb/backends/index.html \"mod redb::backends\")\n\n## Structs[\u00a7](https://docs.rs/redb/latest/redb/#structs)\n\n[AccessGuard](https://docs.rs/redb/latest/redb/struct.AccessGuard.html \"struct redb::AccessGuard\")\n\n\n[AccessGuardMut](https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html \"struct redb::AccessGuardMut\")\n\n\n[Builder](https://docs.rs/redb/latest/redb/struct.Builder.html \"struct redb::Builder\")\n    Configuration builder of a redb [Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\").\n\n[CacheStats](https://docs.rs/redb/latest/redb/struct.CacheStats.html \"struct redb::CacheStats\")\n    Information regarding the usage of the in-memory cache\n\n[Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\")\n    Opened redb database file\n\n[DatabaseStats](https://docs.rs/redb/latest/redb/struct.DatabaseStats.html \"struct redb::DatabaseStats\")\n    Informational storage stats about the database\n\n[ExtractIf](https://docs.rs/redb/latest/redb/struct.ExtractIf.html \"struct redb::ExtractIf\")\n\n\n[MultimapRange](https://docs.rs/redb/latest/redb/struct.MultimapRange.html \"struct redb::MultimapRange\")\n\n\n[MultimapTable](https://docs.rs/redb/latest/redb/struct.MultimapTable.html \"struct redb::MultimapTable\")\n    A multimap table\n\n[MultimapTableDefinition](https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html \"struct redb::MultimapTableDefinition\")\n    Defines the name and types of a multimap table\n\n[MultimapValue](https://docs.rs/redb/latest/redb/struct.MultimapValue.html \"struct redb::MultimapValue\")\n\n\n[Range](https://docs.rs/redb/latest/redb/struct.Range.html \"struct redb::Range\")\n\n\n[ReadOnlyMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html \"struct redb::ReadOnlyMultimapTable\")\n    A read-only multimap table\n\n[ReadOnlyTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html \"struct redb::ReadOnlyTable\")\n    A read-only table\n\n[ReadOnlyUntypedMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html \"struct redb::ReadOnlyUntypedMultimapTable\")\n    A read-only untyped multimap table\n\n[ReadOnlyUntypedTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html \"struct redb::ReadOnlyUntypedTable\")\n    A read-only untyped table\n\n[ReadTransaction](https://docs.rs/redb/latest/redb/struct.ReadTransaction.html \"struct redb::ReadTransaction\")\n    A read-only transaction\n\n[RepairSession](https://docs.rs/redb/latest/redb/struct.RepairSession.html \"struct redb::RepairSession\")\n\n\n[Savepoint](https://docs.rs/redb/latest/redb/struct.Savepoint.html \"struct redb::Savepoint\")\n\n\n[Table](https://docs.rs/redb/latest/redb/struct.Table.html \"struct redb::Table\")\n    A table containing key-value mappings\n\n[TableDefinition](https://docs.rs/redb/latest/redb/struct.TableDefinition.html \"struct redb::TableDefinition\")\n    Defines the name and types of a table\n\n[TableStats](https://docs.rs/redb/latest/redb/struct.TableStats.html \"struct redb::TableStats\")\n    Informational storage stats about a table\n\n[TypeName](https://docs.rs/redb/latest/redb/struct.TypeName.html \"struct redb::TypeName\")\n\n\n[UntypedMultimapTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html \"struct redb::UntypedMultimapTableHandle\")\n\n\n[UntypedTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html \"struct redb::UntypedTableHandle\")\n\n\n[WriteTransaction](https://docs.rs/redb/latest/redb/struct.WriteTransaction.html \"struct redb::WriteTransaction\")\n    A read/write transaction\n## Enums[\u00a7](https://docs.rs/redb/latest/redb/#enums)\n\n[CommitError](https://docs.rs/redb/latest/redb/enum.CommitError.html \"enum redb::CommitError\")\n    Errors related to committing transactions\n\n[CompactionError](https://docs.rs/redb/latest/redb/enum.CompactionError.html \"enum redb::CompactionError\")\n    Errors related to compaction\n\n[DatabaseError](https://docs.rs/redb/latest/redb/enum.DatabaseError.html \"enum redb::DatabaseError\")\n    Errors related to opening a database\n\n[Durability](https://docs.rs/redb/latest/redb/enum.Durability.html \"enum redb::Durability\")\n\n\n[Error](https://docs.rs/redb/latest/redb/enum.Error.html \"enum redb::Error\")\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\n[SavepointError](https://docs.rs/redb/latest/redb/enum.SavepointError.html \"enum redb::SavepointError\")\n    Errors related to savepoints\n\n[StorageError](https://docs.rs/redb/latest/redb/enum.StorageError.html \"enum redb::StorageError\")\n    General errors directly from the storage layer\n\n[TableError](https://docs.rs/redb/latest/redb/enum.TableError.html \"enum redb::TableError\")\n    Errors related to opening tables\n\n[TransactionError](https://docs.rs/redb/latest/redb/enum.TransactionError.html \"enum redb::TransactionError\")\n    Errors related to transactions\n\n[UpgradeError](https://docs.rs/redb/latest/redb/enum.UpgradeError.html \"enum redb::UpgradeError\")\n    Errors related to database upgrades\n## Traits[\u00a7](https://docs.rs/redb/latest/redb/#traits)\n\n[Key](https://docs.rs/redb/latest/redb/trait.Key.html \"trait redb::Key\")\n\n\n[MultimapTableHandle](https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html \"trait redb::MultimapTableHandle\")\n\n\n[MutInPlaceValue](https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html \"trait redb::MutInPlaceValue\")\n    Implementing this trait indicates that the type can be mutated in-place as a &mut [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html \"primitive u8\"). This enables the `.insert_reserve()` method on Table\n\n[ReadableMultimapTable](https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html \"trait redb::ReadableMultimapTable\")\n\n\n[ReadableTable](https://docs.rs/redb/latest/redb/trait.ReadableTable.html \"trait redb::ReadableTable\")\n\n\n[ReadableTableMetadata](https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html \"trait redb::ReadableTableMetadata\")\n\n\n[StorageBackend](https://docs.rs/redb/latest/redb/trait.StorageBackend.html \"trait redb::StorageBackend\")\n    Implements persistent storage for a database.\n\n[TableHandle](https://docs.rs/redb/latest/redb/trait.TableHandle.html \"trait redb::TableHandle\")\n\n\n[Value](https://docs.rs/redb/latest/redb/trait.Value.html \"trait redb::Value\")\n\n## Type Aliases[\u00a7](https://docs.rs/redb/latest/redb/#types)\n\n[Result](https://docs.rs/redb/latest/redb/type.Result.html \"type redb::Result\")\n\n",
+              "markdown_with_citations": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by lmdb\u27e85\u27e9. Data is stored in a collection of copy-on-write B-trees. For more details, see the design doc\u27e86\u27e9.\n## \u00a7\u27e87\u27e9Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## \u00a7\u27e88\u27e9Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules\u00a7\u27e89\u27e9\n\nbackends\u27e810\u27e9\n\n## Structs\u00a7\u27e811\u27e9\n\nAccessGuard\u27e812\u27e9\n\n\nAccessGuardMut\u27e813\u27e9\n\n\nBuilder\u27e814\u27e9\n    Configuration builder of a redb Database\u27e815\u27e9.\n\nCacheStats\u27e816\u27e9\n    Information regarding the usage of the in-memory cache\n\nDatabase\u27e815\u27e9\n    Opened redb database file\n\nDatabaseStats\u27e817\u27e9\n    Informational storage stats about the database\n\nExtractIf\u27e818\u27e9\n\n\nMultimapRange\u27e819\u27e9\n\n\nMultimapTable\u27e820\u27e9\n    A multimap table\n\nMultimapTableDefinition\u27e821\u27e9\n    Defines the name and types of a multimap table\n\nMultimapValue\u27e822\u27e9\n\n\nRange\u27e823\u27e9\n\n\nReadOnlyMultimapTable\u27e824\u27e9\n    A read-only multimap table\n\nReadOnlyTable\u27e825\u27e9\n    A read-only table\n\nReadOnlyUntypedMultimapTable\u27e826\u27e9\n    A read-only untyped multimap table\n\nReadOnlyUntypedTable\u27e827\u27e9\n    A read-only untyped table\n\nReadTransaction\u27e828\u27e9\n    A read-only transaction\n\nRepairSession\u27e829\u27e9\n\n\nSavepoint\u27e830\u27e9\n\n\nTable\u27e831\u27e9\n    A table containing key-value mappings\n\nTableDefinition\u27e832\u27e9\n    Defines the name and types of a table\n\nTableStats\u27e833\u27e9\n    Informational storage stats about a table\n\nTypeName\u27e834\u27e9\n\n\nUntypedMultimapTableHandle\u27e835\u27e9\n\n\nUntypedTableHandle\u27e836\u27e9\n\n\nWriteTransaction\u27e837\u27e9\n    A read/write transaction\n## Enums\u00a7\u27e838\u27e9\n\nCommitError\u27e839\u27e9\n    Errors related to committing transactions\n\nCompactionError\u27e840\u27e9\n    Errors related to compaction\n\nDatabaseError\u27e841\u27e9\n    Errors related to opening a database\n\nDurability\u27e842\u27e9\n\n\nError\u27e843\u27e9\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\nSavepointError\u27e844\u27e9\n    Errors related to savepoints\n\nStorageError\u27e845\u27e9\n    General errors directly from the storage layer\n\nTableError\u27e846\u27e9\n    Errors related to opening tables\n\nTransactionError\u27e847\u27e9\n    Errors related to transactions\n\nUpgradeError\u27e848\u27e9\n    Errors related to database upgrades\n## Traits\u00a7\u27e849\u27e9\n\nKey\u27e850\u27e9\n\n\nMultimapTableHandle\u27e851\u27e9\n\n\nMutInPlaceValue\u27e852\u27e9\n    Implementing this trait indicates that the type can be mutated in-place as a &mut u8\u27e853\u27e9. This enables the `.insert_reserve()` method on Table\n\nReadableMultimapTable\u27e854\u27e9\n\n\nReadableTable\u27e855\u27e9\n\n\nReadableTableMetadata\u27e856\u27e9\n\n\nStorageBackend\u27e857\u27e9\n    Implements persistent storage for a database.\n\nTableHandle\u27e858\u27e9\n\n\nValue\u27e859\u27e9\n\n## Type Aliases\u00a7\u27e860\u27e9\n\nResult\u27e861\u27e9\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/redb/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/redb/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119: Source\n\u27e84\u27e9 https://docs.rs/redb/latest/redb/#redb: \u00a7\n\u27e85\u27e9 https://www.lmdb.tech/doc/: lmdb\n\u27e86\u27e9 https://github.com/cberner/redb/blob/master/docs/design.md: design doc\n\u27e87\u27e9 https://docs.rs/redb/latest/redb/#features: \u00a7\n\u27e88\u27e9 https://docs.rs/redb/latest/redb/#example: \u00a7\n\u27e89\u27e9 https://docs.rs/redb/latest/redb/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/redb/latest/redb/backends/index.html: mod redb::backends - backends\n\u27e811\u27e9 https://docs.rs/redb/latest/redb/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuard.html: struct redb::AccessGuard - AccessGuard\n\u27e813\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html: struct redb::AccessGuardMut - AccessGuardMut\n\u27e814\u27e9 https://docs.rs/redb/latest/redb/struct.Builder.html: struct redb::Builder - Builder\n\u27e815\u27e9 https://docs.rs/redb/latest/redb/struct.Database.html: struct redb::Database - Database\n\u27e816\u27e9 https://docs.rs/redb/latest/redb/struct.CacheStats.html: struct redb::CacheStats - CacheStats\n\u27e817\u27e9 https://docs.rs/redb/latest/redb/struct.DatabaseStats.html: struct redb::DatabaseStats - DatabaseStats\n\u27e818\u27e9 https://docs.rs/redb/latest/redb/struct.ExtractIf.html: struct redb::ExtractIf - ExtractIf\n\u27e819\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapRange.html: struct redb::MultimapRange - MultimapRange\n\u27e820\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTable.html: struct redb::MultimapTable - MultimapTable\n\u27e821\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html: struct redb::MultimapTableDefinition - MultimapTableDefinition\n\u27e822\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapValue.html: struct redb::MultimapValue - MultimapValue\n\u27e823\u27e9 https://docs.rs/redb/latest/redb/struct.Range.html: struct redb::Range - Range\n\u27e824\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html: struct redb::ReadOnlyMultimapTable - ReadOnlyMultimapTable\n\u27e825\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html: struct redb::ReadOnlyTable - ReadOnlyTable\n\u27e826\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html: struct redb::ReadOnlyUntypedMultimapTable - ReadOnlyUntypedMultimapTable\n\u27e827\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html: struct redb::ReadOnlyUntypedTable - ReadOnlyUntypedTable\n\u27e828\u27e9 https://docs.rs/redb/latest/redb/struct.ReadTransaction.html: struct redb::ReadTransaction - ReadTransaction\n\u27e829\u27e9 https://docs.rs/redb/latest/redb/struct.RepairSession.html: struct redb::RepairSession - RepairSession\n\u27e830\u27e9 https://docs.rs/redb/latest/redb/struct.Savepoint.html: struct redb::Savepoint - Savepoint\n\u27e831\u27e9 https://docs.rs/redb/latest/redb/struct.Table.html: struct redb::Table - Table\n\u27e832\u27e9 https://docs.rs/redb/latest/redb/struct.TableDefinition.html: struct redb::TableDefinition - TableDefinition\n\u27e833\u27e9 https://docs.rs/redb/latest/redb/struct.TableStats.html: struct redb::TableStats - TableStats\n\u27e834\u27e9 https://docs.rs/redb/latest/redb/struct.TypeName.html: struct redb::TypeName - TypeName\n\u27e835\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html: struct redb::UntypedMultimapTableHandle - UntypedMultimapTableHandle\n\u27e836\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html: struct redb::UntypedTableHandle - UntypedTableHandle\n\u27e837\u27e9 https://docs.rs/redb/latest/redb/struct.WriteTransaction.html: struct redb::WriteTransaction - WriteTransaction\n\u27e838\u27e9 https://docs.rs/redb/latest/redb/#enums: \u00a7\n\u27e839\u27e9 https://docs.rs/redb/latest/redb/enum.CommitError.html: enum redb::CommitError - CommitError\n\u27e840\u27e9 https://docs.rs/redb/latest/redb/enum.CompactionError.html: enum redb::CompactionError - CompactionError\n\u27e841\u27e9 https://docs.rs/redb/latest/redb/enum.DatabaseError.html: enum redb::DatabaseError - DatabaseError\n\u27e842\u27e9 https://docs.rs/redb/latest/redb/enum.Durability.html: enum redb::Durability - Durability\n\u27e843\u27e9 https://docs.rs/redb/latest/redb/enum.Error.html: enum redb::Error - Error\n\u27e844\u27e9 https://docs.rs/redb/latest/redb/enum.SavepointError.html: enum redb::SavepointError - SavepointError\n\u27e845\u27e9 https://docs.rs/redb/latest/redb/enum.StorageError.html: enum redb::StorageError - StorageError\n\u27e846\u27e9 https://docs.rs/redb/latest/redb/enum.TableError.html: enum redb::TableError - TableError\n\u27e847\u27e9 https://docs.rs/redb/latest/redb/enum.TransactionError.html: enum redb::TransactionError - TransactionError\n\u27e848\u27e9 https://docs.rs/redb/latest/redb/enum.UpgradeError.html: enum redb::UpgradeError - UpgradeError\n\u27e849\u27e9 https://docs.rs/redb/latest/redb/#traits: \u00a7\n\u27e850\u27e9 https://docs.rs/redb/latest/redb/trait.Key.html: trait redb::Key - Key\n\u27e851\u27e9 https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html: trait redb::MultimapTableHandle - MultimapTableHandle\n\u27e852\u27e9 https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html: trait redb::MutInPlaceValue - MutInPlaceValue\n\u27e853\u27e9 https://doc.rust-lang.org/nightly/std/primitive.u8.html: primitive u8 - u8\n\u27e854\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html: trait redb::ReadableMultimapTable - ReadableMultimapTable\n\u27e855\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTable.html: trait redb::ReadableTable - ReadableTable\n\u27e856\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html: trait redb::ReadableTableMetadata - ReadableTableMetadata\n\u27e857\u27e9 https://docs.rs/redb/latest/redb/trait.StorageBackend.html: trait redb::StorageBackend - StorageBackend\n\u27e858\u27e9 https://docs.rs/redb/latest/redb/trait.TableHandle.html: trait redb::TableHandle - TableHandle\n\u27e859\u27e9 https://docs.rs/redb/latest/redb/trait.Value.html: trait redb::Value - Value\n\u27e860\u27e9 https://docs.rs/redb/latest/redb/#types: \u00a7\n\u27e861\u27e9 https://docs.rs/redb/latest/redb/type.Result.html: type redb::Result - Result\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8152,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116447.9158149"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/redb",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [59 releases](https://lib.rs/crates/redb/versions) (23 stable)\nUses new Rust 2024\n2.6.0 |  May 22, 2025   \n---|---  \n2.4.0 |  Dec 30, 2024   \n2.2.0 |  Oct 27, 2024   \n2.1.1 |  Jun 9, 2024   \n0.0.0 |  Sep 23, 2018   \n#**2** in [Database implementations](https://lib.rs/database-implementations \"Database management systems implemented in Rust. Store and query large amounts of data in an efficient manner.\")\nDownload history 26335/week @ 2025-03-10 28855/week @ 2025-03-17 22432/week @ 2025-03-24 19989/week @ 2025-03-31 19800/week @ 2025-04-07 21956/week @ 2025-04-14 22177/week @ 2025-04-21 18066/week @ 2025-04-28 20587/week @ 2025-05-05 18201/week @ 2025-05-12 25510/week @ 2025-05-19 32959/week @ 2025-05-26 36540/week @ 2025-06-02 30672/week @ 2025-06-09 31969/week @ 2025-06-16 52885/week @ 2025-06-23\n**153,681** downloads per month Used in [**137** crates (84 directly)](https://lib.rs/crates/redb/rev)\n**MIT/Apache**\n730KB  18K  SLoC\n# redb\n![CI](https://img.gs/czjpqfbdkz/full/https://github.com/cberner/redb/actions/workflows/ci.yml/badge.svg) [![Crates.io](https://img.shields.io/crates/v/redb.svg)](https://crates.io/crates/redb) [![Documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/redb/badge.svg)](https://docs.rs/redb) [![License](https://img.shields.io/crates/l/redb)](https://crates.io/crates/redb) [![dependency status](https://img.gs/czjpqfbdkz/full/https://deps.rs/repo/github/cberner/redb/status.svg)](https://deps.rs/repo/github/cberner/redb)\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by [lmdb](http://www.lmdb.tech/doc/). Data is stored in a collection of copy-on-write B-trees. For more details, see the [design doc](https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/docs/design.md)\n```\n``use` `redb`::````{`Database`,` Error`,` ReadableTable`,` TableDefinition```}```;`\n`const` `TABLE``:` `TableDefinition`<``&``str`, `u64``>`` `=` `TableDefinition`::``new`(```\"`my_data`\"```)``;`\n``fn` `main`````(````)```` ``->` ``Result``<``(``)`, Error`>``` ````{`\n  `let` db `=` `Database`::``create`(```\"`my_db.redb`\"```)``?``;`\n  `let` write_txn `=` db`.``begin_write``(``)``?``;`\n  `{`\n    `let` `mut` table `=` write_txn`.``open_table``(``TABLE``)``?``;`\n    table`.``insert``(```\"`my_key`\"```,` `&``123``)``?``;`\n  `}`\n  write_txn`.``commit``(``)``?``;`\n  `let` read_txn `=` db`.``begin_read``(``)``?``;`\n  `let` table `=` read_txn`.``open_table``(``TABLE``)``?``;`\n  `assert_eq!``(`table`.``get``(```\"`my_key`\"```)``?``.``unwrap``(``)``.``value``(``)``,` `123``)``;`\n  `Ok``(``(``)``)`\n```}```\n`\n```\n\n## Status\nredb is undergoing active development, and should be considered beta quality. The file format is stable, but redb has not been widely deployed in production systems (at least to my knowledge).\n## Features\n  * Zero-copy, thread-safe, ``BTreeMap`` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## Development\nTo run all the tests and benchmarks a few extra dependencies are required:\n  * ````cargo``` install cargo-deny`` --`locked````\n  * ````cargo``` install cargo-fuzz`` --`locked````\n  * ``apt install libclang`-`dev``\n\n\n## Benchmarks\nredb has similar performance to other top embedded key-value stores such as lmdb and rocksdb\n| redb | lmdb | rocksdb | sled | sanakirja  \n---|---|---|---|---|---  \nbulk load | 2689ms | 1247ms | 5330ms | 5892ms | **1187ms**  \nindividual writes | **226ms** | 419ms | 703ms | 816ms | 398ms  \nbatch writes | 2522ms | 2070ms | **1047ms** | 1867ms | 2776ms  \nlen() | **0ms** | **0ms** | 304ms | 444ms | 64ms  \nrandom reads | 860ms | **624ms** | 2432ms | 1596ms | 875ms  \nrandom reads | 866ms | **624ms** | 2464ms | 1588ms | 842ms  \nrandom range reads | 2347ms | **1179ms** | 4436ms | 4907ms | 1367ms  \nrandom range reads | 2322ms | **1207ms** | 4465ms | 4732ms | 1373ms  \nrandom reads (4 threads) | 337ms | **158ms** | 732ms | 488ms | 349ms  \nrandom reads (8 threads) | 185ms | **81ms** | 433ms | 259ms | 277ms  \nrandom reads (16 threads) | 116ms | **49ms** | 238ms | 165ms | 1708ms  \nrandom reads (32 threads) | 100ms | **44ms** | 203ms | 142ms | 4714ms  \nremovals | 1889ms | **803ms** | 2038ms | 2371ms | 1170ms  \nuncompacted size | 1.00 GiB | 582.22 MiB | **206.38 MiB** | 457.01 MiB | 4.00 GiB  \ncompacted size | 311.23 MiB | 284.46 MiB | **106.26 MiB** | N/A | N/A  \nSource code for benchmark [here](https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/benches/lmdb_benchmark.rs). Results collected on a Ryzen 5900X with Samsung 980 PRO NVMe.\n## License\nLicensed under either of\n  * [Apache License, Version 2.0](https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/LICENSE-APACHE)\n  * [MIT License](https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/LICENSE-MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0.4\u2013740KB  ~15K SLoC\n  * [libc](https://lib.rs/crates/libc \"0.2.104\") unix\n  * [logging?](https://lib.rs/crates/redb/features#feature-logging \"optional feature\") [log](https://lib.rs/crates/log \"0.4.17\")\n  * [python?](https://lib.rs/crates/redb/features#feature-python \"optional feature\") [pyo3](https://lib.rs/crates/pyo3 \"obsolete\") 0.24.1[+extension-module](https://lib.rs/crates/pyo3/features#feature-extension-module)[+abi3-py37](https://lib.rs/crates/pyo3/features#feature-abi3-py37)\n\n\n  * build `build.rs`\n  * build  [python?](https://lib.rs/crates/redb/features#feature-python \"optional feature\") [pyo3-build-config](https://lib.rs/crates/pyo3-build-config \"obsolete\") 0.24.1\n  * dev  [bincode](https://lib.rs/crates/bincode \"new\") 2.0\n  * dev  [byte-unit](https://lib.rs/crates/byte-unit \"new\") 5.1\n  * dev  [comfy-table](https://lib.rs/crates/comfy-table \"7.0.1\") not wasi\n  * dev  [ctrlc](https://lib.rs/crates/ctrlc \"3.2.3\") not wasi\n  * dev  [env_logger](https://lib.rs/crates/env_logger \"new\") 0.11 not wasi\n  * dev  [fastrand](https://lib.rs/crates/fastrand \"2.0.0\")\n  * dev  [fjall](https://lib.rs/crates/fjall \"obsolete\") =2.10 not wasi\n  * dev  [heed](https://lib.rs/crates/heed \"outdated\") 0.20 not wasi\n  * dev  [io-uring](https://lib.rs/crates/io-uring \"new\") 0.7.4 linux\n  * dev  [rand](https://lib.rs/crates/rand \"new\") 0.9\n  * dev  [redb](https://lib.rs/crates/redb \"renamed redb1, obsolete\") =1.0.0\n  * dev  [redb](https://lib.rs/crates/redb \"renamed redb2, obsolete\") =2.0.0\n  * dev  [rocksdb](https://lib.rs/crates/rocksdb \"obsolete\") 0.22[+lz4](https://lib.rs/crates/rocksdb/features#feature-lz4) not wasi\n  * dev  [sanakirja](https://lib.rs/crates/sanakirja \"obsolete\") =1.4.1 not wasi\n  * dev  [sanakirja-core](https://lib.rs/crates/sanakirja-core \"outdated\") =1.4.1 not wasi\n  * dev  [sled](https://lib.rs/crates/sled \"0.34.7\")\n  * dev  [tempfile](https://lib.rs/crates/tempfile \"3.5.0\")\n  * dev  [walkdir](https://lib.rs/crates/walkdir \"2.5.0\")\n\n\n#### [Other feature](https://lib.rs/crates/redb/features)\n  * [cache_metrics](https://lib.rs/crates/redb/features#feature-cache_metrics)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  59 releases\u27e81\u27e9 (23 stable)\nUses new Rust 2024\n2.6.0 |  May 22, 2025   \n---|---  \n2.4.0 |  Dec 30, 2024   \n2.2.0 |  Oct 27, 2024   \n2.1.1 |  Jun 9, 2024   \n0.0.0 |  Sep 23, 2018   \n#**2** in Database implementations\u27e82\u27e9\nDownload history 26335/week @ 2025-03-10 28855/week @ 2025-03-17 22432/week @ 2025-03-24 19989/week @ 2025-03-31 19800/week @ 2025-04-07 21956/week @ 2025-04-14 22177/week @ 2025-04-21 18066/week @ 2025-04-28 20587/week @ 2025-05-05 18201/week @ 2025-05-12 25510/week @ 2025-05-19 32959/week @ 2025-05-26 36540/week @ 2025-06-02 30672/week @ 2025-06-09 31969/week @ 2025-06-16 52885/week @ 2025-06-23\n**153,681** downloads per month Used in **137** crates (84 directly)\u27e83\u27e9\n**MIT/Apache**\n730KB  18K  SLoC\n# redb\n![CI\u27e84\u27e9] ![Crates.io\u27e85\u27e9](https://crates.io/crates/redb) ![Documentation\u27e86\u27e9](https://docs.rs/redb) ![License\u27e87\u27e9](https://crates.io/crates/redb) ![dependency status\u27e88\u27e9](https://deps.rs/repo/github/cberner/redb)\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by lmdb\u27e89\u27e9. Data is stored in a collection of copy-on-write B-trees. For more details, see the design doc\u27e810\u27e9\n```\n``use` `redb`::````{`Database`,` Error`,` ReadableTable`,` TableDefinition```}```;`\n`const` `TABLE``:` `TableDefinition`<``&``str`, `u64``>`` `=` `TableDefinition`::``new`(```\"`my_data`\"```)``;`\n``fn` `main`````(````)```` ``->` ``Result``<``(``)`, Error`>``` ````{`\n  `let` db `=` `Database`::``create`(```\"`my_db.redb`\"```)``?``;`\n  `let` write_txn `=` db`.``begin_write``(``)``?``;`\n  `{`\n    `let` `mut` table `=` write_txn`.``open_table``(``TABLE``)``?``;`\n    table`.``insert``(```\"`my_key`\"```,` `&``123``)``?``;`\n  `}`\n  write_txn`.``commit``(``)``?``;`\n  `let` read_txn `=` db`.``begin_read``(``)``?``;`\n  `let` table `=` read_txn`.``open_table``(``TABLE``)``?``;`\n  `assert_eq!``(`table`.``get``(```\"`my_key`\"```)``?``.``unwrap``(``)``.``value``(``)``,` `123``)``;`\n  `Ok``(``(``)``)`\n```}```\n`\n```\n\n## Status\nredb is undergoing active development, and should be considered beta quality. The file format is stable, but redb has not been widely deployed in production systems (at least to my knowledge).\n## Features\n  * Zero-copy, thread-safe, ``BTreeMap`` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## Development\nTo run all the tests and benchmarks a few extra dependencies are required:\n  * ````cargo``` install cargo-deny`` --`locked````\n  * ````cargo``` install cargo-fuzz`` --`locked````\n  * ``apt install libclang`-`dev``\n\n\n## Benchmarks\nredb has similar performance to other top embedded key-value stores such as lmdb and rocksdb\n| redb | lmdb | rocksdb | sled | sanakirja  \n---|---|---|---|---|---  \nbulk load | 2689ms | 1247ms | 5330ms | 5892ms | **1187ms**  \nindividual writes | **226ms** | 419ms | 703ms | 816ms | 398ms  \nbatch writes | 2522ms | 2070ms | **1047ms** | 1867ms | 2776ms  \nlen() | **0ms** | **0ms** | 304ms | 444ms | 64ms  \nrandom reads | 860ms | **624ms** | 2432ms | 1596ms | 875ms  \nrandom reads | 866ms | **624ms** | 2464ms | 1588ms | 842ms  \nrandom range reads | 2347ms | **1179ms** | 4436ms | 4907ms | 1367ms  \nrandom range reads | 2322ms | **1207ms** | 4465ms | 4732ms | 1373ms  \nrandom reads (4 threads) | 337ms | **158ms** | 732ms | 488ms | 349ms  \nrandom reads (8 threads) | 185ms | **81ms** | 433ms | 259ms | 277ms  \nrandom reads (16 threads) | 116ms | **49ms** | 238ms | 165ms | 1708ms  \nrandom reads (32 threads) | 100ms | **44ms** | 203ms | 142ms | 4714ms  \nremovals | 1889ms | **803ms** | 2038ms | 2371ms | 1170ms  \nuncompacted size | 1.00 GiB | 582.22 MiB | **206.38 MiB** | 457.01 MiB | 4.00 GiB  \ncompacted size | 311.23 MiB | 284.46 MiB | **106.26 MiB** | N/A | N/A  \nSource code for benchmark here\u27e811\u27e9. Results collected on a Ryzen 5900X with Samsung 980 PRO NVMe.\n## License\nLicensed under either of\n  * Apache License, Version 2.0\u27e812\u27e9\n  * MIT License\u27e813\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0.4\u2013740KB  ~15K SLoC\n  * libc\u27e814\u27e9 unix\n  * logging?\u27e815\u27e9 log\u27e816\u27e9\n  * python?\u27e817\u27e9 pyo3\u27e818\u27e9 0.24.1+extension-module\u27e819\u27e9+abi3-py37\u27e820\u27e9\n\n\n  * build `build.rs`\n  * build  python?\u27e817\u27e9 pyo3-build-config\u27e821\u27e9 0.24.1\n  * dev  bincode\u27e822\u27e9 2.0\n  * dev  byte-unit\u27e823\u27e9 5.1\n  * dev  comfy-table\u27e824\u27e9 not wasi\n  * dev  ctrlc\u27e825\u27e9 not wasi\n  * dev  env_logger\u27e826\u27e9 0.11 not wasi\n  * dev  fastrand\u27e827\u27e9\n  * dev  fjall\u27e828\u27e9 =2.10 not wasi\n  * dev  heed\u27e829\u27e9 0.20 not wasi\n  * dev  io-uring\u27e830\u27e9 0.7.4 linux\n  * dev  rand\u27e831\u27e9 0.9\n  * dev  redb\u27e832\u27e9 =1.0.0\n  * dev  redb\u27e832\u27e9 =2.0.0\n  * dev  rocksdb\u27e833\u27e9 0.22+lz4\u27e834\u27e9 not wasi\n  * dev  sanakirja\u27e835\u27e9 =1.4.1 not wasi\n  * dev  sanakirja-core\u27e836\u27e9 =1.4.1 not wasi\n  * dev  sled\u27e837\u27e9\n  * dev  tempfile\u27e838\u27e9\n  * dev  walkdir\u27e839\u27e9\n\n\n#### Other feature\u27e840\u27e9\n  * cache_metrics\u27e841\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/redb/versions: 59 releases\n\u27e82\u27e9 https://lib.rs/database-implementations: Database management systems implemented in Rust. Store and query large amounts of data in an efficient manner. - Database implementations\n\u27e83\u27e9 https://lib.rs/crates/redb/rev: **137** crates (84 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/cberner/redb/actions/workflows/ci.yml/badge.svg: CI\n\u27e85\u27e9 https://img.shields.io/crates/v/redb.svg: ![Crates.io\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/redb/badge.svg: ![Documentation\n\u27e87\u27e9 https://img.shields.io/crates/l/redb: ![License\n\u27e88\u27e9 https://img.gs/czjpqfbdkz/full/https://deps.rs/repo/github/cberner/redb/status.svg: ![dependency status\n\u27e89\u27e9 http://www.lmdb.tech/doc/: lmdb\n\u27e810\u27e9 https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/docs/design.md: design doc\n\u27e811\u27e9 https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/benches/lmdb_benchmark.rs: here\n\u27e812\u27e9 https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/LICENSE-APACHE: Apache License, Version 2.0\n\u27e813\u27e9 https://github.com/cberner/redb/blob/5826cef232e751429172e5696a6edc7628784345/LICENSE-MIT: MIT License\n\u27e814\u27e9 https://lib.rs/crates/libc: 0.2.104 - libc\n\u27e815\u27e9 https://lib.rs/crates/redb/features#feature-logging: optional feature - logging?\n\u27e816\u27e9 https://lib.rs/crates/log: 0.4.17 - log\n\u27e817\u27e9 https://lib.rs/crates/redb/features#feature-python: optional feature - python?\n\u27e818\u27e9 https://lib.rs/crates/pyo3: obsolete - pyo3\n\u27e819\u27e9 https://lib.rs/crates/pyo3/features#feature-extension-module: +extension-module\n\u27e820\u27e9 https://lib.rs/crates/pyo3/features#feature-abi3-py37: +abi3-py37\n\u27e821\u27e9 https://lib.rs/crates/pyo3-build-config: obsolete - pyo3-build-config\n\u27e822\u27e9 https://lib.rs/crates/bincode: new - bincode\n\u27e823\u27e9 https://lib.rs/crates/byte-unit: new - byte-unit\n\u27e824\u27e9 https://lib.rs/crates/comfy-table: 7.0.1 - comfy-table\n\u27e825\u27e9 https://lib.rs/crates/ctrlc: 3.2.3 - ctrlc\n\u27e826\u27e9 https://lib.rs/crates/env_logger: new - env_logger\n\u27e827\u27e9 https://lib.rs/crates/fastrand: 2.0.0 - fastrand\n\u27e828\u27e9 https://lib.rs/crates/fjall: obsolete - fjall\n\u27e829\u27e9 https://lib.rs/crates/heed: outdated - heed\n\u27e830\u27e9 https://lib.rs/crates/io-uring: new - io-uring\n\u27e831\u27e9 https://lib.rs/crates/rand: new - rand\n\u27e832\u27e9 https://lib.rs/crates/redb: renamed redb1, obsolete - redb\n\u27e833\u27e9 https://lib.rs/crates/rocksdb: obsolete - rocksdb\n\u27e834\u27e9 https://lib.rs/crates/rocksdb/features#feature-lz4: +lz4\n\u27e835\u27e9 https://lib.rs/crates/sanakirja: obsolete - sanakirja\n\u27e836\u27e9 https://lib.rs/crates/sanakirja-core: outdated - sanakirja-core\n\u27e837\u27e9 https://lib.rs/crates/sled: 0.34.7 - sled\n\u27e838\u27e9 https://lib.rs/crates/tempfile: 3.5.0 - tempfile\n\u27e839\u27e9 https://lib.rs/crates/walkdir: 2.5.0 - walkdir\n\u27e840\u27e9 https://lib.rs/crates/redb/features: Other feature\n\u27e841\u27e9 https://lib.rs/crates/redb/features#feature-cache_metrics: cache_metrics\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7405,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116448.5092705"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\build.rs",
+                "edition": "2024",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-c24925e570770087\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-c24925e570770087\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-c0b57e0f6587070f\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "crate_types": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "name": "redb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\deps\\libredb-2b61a1d05ebff311.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\build.rs",
+                "edition": "2024",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-da20741886066b2a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-da20741886066b2a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\target\\debug\\build\\redb-21b21f654bbfe162\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "crate_types": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "name": "redb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unnecessary semicolon\n    --> src\\transactions.rs:1416:18\n     |\n1416 |                 };\n     |                  ^ help: remove\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_semicolon\nnote: the lint level is defined here\n    --> src\\lib.rs:1:22\n     |\n1    | #![deny(clippy::all, clippy::pedantic, clippy::disallowed_methods)]\n     |                      ^^^^^^^^^^^^^^^^\n     = note: `#[deny(clippy::unnecessary_semicolon)]` implied by `#[deny(clippy::pedantic)]`\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_semicolon",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "the lint level is defined here",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 37,
+                        "byte_start": 21,
+                        "column_end": 38,
+                        "column_start": 22,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1,
+                        "line_start": 1,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 38,
+                            "highlight_start": 22,
+                            "text": "#![deny(clippy::all, clippy::pedantic, clippy::disallowed_methods)]"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[deny(clippy::unnecessary_semicolon)]` implied by `#[deny(clippy::pedantic)]`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 49139,
+                        "byte_start": 49138,
+                        "column_end": 19,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\transactions.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1416,
+                        "line_start": 1416,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 19,
+                            "highlight_start": 18,
+                            "text": "                };"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_semicolon",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unnecessary semicolon",
+                "spans": [
+                  {
+                    "byte_end": 49139,
+                    "byte_start": 49138,
+                    "column_end": 19,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\transactions.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1416,
+                    "line_start": 1416,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 18,
+                        "text": "                };"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpjo1se5za/redb-2.6.0#redb@2.6.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "crate_types": [
+                  "cdylib",
+                  "rlib"
+                ],
+                "name": "redb",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpjo1se5za\\redb-2.6.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "error: unnecessary semicolon\n    --> src\\transactions.rs:1431:18\n     |\n1431 |                 };\n     |                  ^ help: remove\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_semicolon\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#unnecessary_semicolon",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "remove",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 49774,
+                        "byte_start": 49773,
+                        "column_end": 19,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\transactions.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1431,
+                        "line_start": 1431,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 19,
+                            "highlight_start": 18,
+                            "text": "                };"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::unnecessary_semicolon",
+                  "explanation": null
+                },
+                "level": "error",
+                "message": "unnecessary semicolon",
+                "spans": [
+                  {
+                    "byte_end": 49774,
+                    "byte_start": 49773,
+                    "column_end": 19,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\transactions.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1431,
+                    "line_start": 1431,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 19,
+                        "highlight_start": 18,
+                        "text": "                };"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "build-finished",
+              "success": false
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 246
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "instant",
+                    "version": "0.1.13",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222",
+                    "dependencies": [
+                      {
+                        "name": "cfg-if",
+                        "version": "1.0.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0384",
+                    "package": "instant",
+                    "title": "`instant` is unmaintained",
+                    "description": "This crate is no longer maintained, and the author recommends using the maintained [`web-time`] crate instead.\n\n[`web-time`]: https://crates.io/crates/web-time",
+                    "date": "2024-09-01",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [
+                      "https://crates.io/crates/instant/0.1.13",
+                      "https://github.com/sebcrozet/instant/issues/52"
+                    ],
+                    "source": null,
+                    "url": null,
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "memmap",
+                    "version": "0.7.0",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "6585fd95e7bb50d6cc31e20d4cf9afb4e2ba16c5846fc76793f11218da9c475b",
+                    "dependencies": [
+                      {
+                        "name": "libc",
+                        "version": "0.2.171",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2020-0077",
+                    "package": "memmap",
+                    "title": "memmap is unmaintained",
+                    "description": "The author of the `memmap` crate is unresponsive.\n\nMaintained alternatives:\n\n- [`memmap2`](https://github.com/RazrFalcon/memmap2-rs)",
+                    "date": "2020-12-02",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/danburkert/memmap-rs/issues/90",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": [
+                      ">0.7.0"
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "redb",
+          "version": "2.6.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\n[Settings](https://docs.rs/redb/latest/settings.html)\n[Help](https://docs.rs/redb/latest/help.html)\nSummary[Source](https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119)\nExpand description\n## [\u00a7](https://docs.rs/redb/latest/redb/#redb)redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by [lmdb](https://www.lmdb.tech/doc/). Data is stored in a collection of copy-on-write B-trees. For more details, see the [design doc](https://github.com/cberner/redb/blob/master/docs/design.md).\n## [\u00a7](https://docs.rs/redb/latest/redb/#features)Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## [\u00a7](https://docs.rs/redb/latest/redb/#example)Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules[\u00a7](https://docs.rs/redb/latest/redb/#modules)\n\n[backends](https://docs.rs/redb/latest/redb/backends/index.html \"mod redb::backends\")\n\n## Structs[\u00a7](https://docs.rs/redb/latest/redb/#structs)\n\n[AccessGuard](https://docs.rs/redb/latest/redb/struct.AccessGuard.html \"struct redb::AccessGuard\")\n\n\n[AccessGuardMut](https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html \"struct redb::AccessGuardMut\")\n\n\n[Builder](https://docs.rs/redb/latest/redb/struct.Builder.html \"struct redb::Builder\")\n    Configuration builder of a redb [Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\").\n\n[CacheStats](https://docs.rs/redb/latest/redb/struct.CacheStats.html \"struct redb::CacheStats\")\n    Information regarding the usage of the in-memory cache\n\n[Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\")\n    Opened redb database file\n\n[DatabaseStats](https://docs.rs/redb/latest/redb/struct.DatabaseStats.html \"struct redb::DatabaseStats\")\n    Informational storage stats about the database\n\n[ExtractIf](https://docs.rs/redb/latest/redb/struct.ExtractIf.html \"struct redb::ExtractIf\")\n\n\n[MultimapRange](https://docs.rs/redb/latest/redb/struct.MultimapRange.html \"struct redb::MultimapRange\")\n\n\n[MultimapTable](https://docs.rs/redb/latest/redb/struct.MultimapTable.html \"struct redb::MultimapTable\")\n    A multimap table\n\n[MultimapTableDefinition](https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html \"struct redb::MultimapTableDefinition\")\n    Defines the name and types of a multimap table\n\n[MultimapValue](https://docs.rs/redb/latest/redb/struct.MultimapValue.html \"struct redb::MultimapValue\")\n\n\n[Range](https://docs.rs/redb/latest/redb/struct.Range.html \"struct redb::Range\")\n\n\n[ReadOnlyMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html \"struct redb::ReadOnlyMultimapTable\")\n    A read-only multimap table\n\n[ReadOnlyTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html \"struct redb::ReadOnlyTable\")\n    A read-only table\n\n[ReadOnlyUntypedMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html \"struct redb::ReadOnlyUntypedMultimapTable\")\n    A read-only untyped multimap table\n\n[ReadOnlyUntypedTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html \"struct redb::ReadOnlyUntypedTable\")\n    A read-only untyped table\n\n[ReadTransaction](https://docs.rs/redb/latest/redb/struct.ReadTransaction.html \"struct redb::ReadTransaction\")\n    A read-only transaction\n\n[RepairSession](https://docs.rs/redb/latest/redb/struct.RepairSession.html \"struct redb::RepairSession\")\n\n\n[Savepoint](https://docs.rs/redb/latest/redb/struct.Savepoint.html \"struct redb::Savepoint\")\n\n\n[Table](https://docs.rs/redb/latest/redb/struct.Table.html \"struct redb::Table\")\n    A table containing key-value mappings\n\n[TableDefinition](https://docs.rs/redb/latest/redb/struct.TableDefinition.html \"struct redb::TableDefinition\")\n    Defines the name and types of a table\n\n[TableStats](https://docs.rs/redb/latest/redb/struct.TableStats.html \"struct redb::TableStats\")\n    Informational storage stats about a table\n\n[TypeName](https://docs.rs/redb/latest/redb/struct.TypeName.html \"struct redb::TypeName\")\n\n\n[UntypedMultimapTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html \"struct redb::UntypedMultimapTableHandle\")\n\n\n[UntypedTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html \"struct redb::UntypedTableHandle\")\n\n\n[WriteTransaction](https://docs.rs/redb/latest/redb/struct.WriteTransaction.html \"struct redb::WriteTransaction\")\n    A read/write transaction\n## Enums[\u00a7](https://docs.rs/redb/latest/redb/#enums)\n\n[CommitError](https://docs.rs/redb/latest/redb/enum.CommitError.html \"enum redb::CommitError\")\n    Errors related to committing transactions\n\n[CompactionError](https://docs.rs/redb/latest/redb/enum.CompactionError.html \"enum redb::CompactionError\")\n    Errors related to compaction\n\n[DatabaseError](https://docs.rs/redb/latest/redb/enum.DatabaseError.html \"enum redb::DatabaseError\")\n    Errors related to opening a database\n\n[Durability](https://docs.rs/redb/latest/redb/enum.Durability.html \"enum redb::Durability\")\n\n\n[Error](https://docs.rs/redb/latest/redb/enum.Error.html \"enum redb::Error\")\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\n[SavepointError](https://docs.rs/redb/latest/redb/enum.SavepointError.html \"enum redb::SavepointError\")\n    Errors related to savepoints\n\n[StorageError](https://docs.rs/redb/latest/redb/enum.StorageError.html \"enum redb::StorageError\")\n    General errors directly from the storage layer\n\n[TableError](https://docs.rs/redb/latest/redb/enum.TableError.html \"enum redb::TableError\")\n    Errors related to opening tables\n\n[TransactionError](https://docs.rs/redb/latest/redb/enum.TransactionError.html \"enum redb::TransactionError\")\n    Errors related to transactions\n\n[UpgradeError](https://docs.rs/redb/latest/redb/enum.UpgradeError.html \"enum redb::UpgradeError\")\n    Errors related to database upgrades\n## Traits[\u00a7](https://docs.rs/redb/latest/redb/#traits)\n\n[Key](https://docs.rs/redb/latest/redb/trait.Key.html \"trait redb::Key\")\n\n\n[MultimapTableHandle](https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html \"trait redb::MultimapTableHandle\")\n\n\n[MutInPlaceValue](https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html \"trait redb::MutInPlaceValue\")\n    Implementing this trait indicates that the type can be mutated in-place as a &mut [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html \"primitive u8\"). This enables the `.insert_reserve()` method on Table\n\n[ReadableMultimapTable](https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html \"trait redb::ReadableMultimapTable\")\n\n\n[ReadableTable](https://docs.rs/redb/latest/redb/trait.ReadableTable.html \"trait redb::ReadableTable\")\n\n\n[ReadableTableMetadata](https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html \"trait redb::ReadableTableMetadata\")\n\n\n[StorageBackend](https://docs.rs/redb/latest/redb/trait.StorageBackend.html \"trait redb::StorageBackend\")\n    Implements persistent storage for a database.\n\n[TableHandle](https://docs.rs/redb/latest/redb/trait.TableHandle.html \"trait redb::TableHandle\")\n\n\n[Value](https://docs.rs/redb/latest/redb/trait.Value.html \"trait redb::Value\")\n\n## Type Aliases[\u00a7](https://docs.rs/redb/latest/redb/#types)\n\n[Result](https://docs.rs/redb/latest/redb/type.Result.html \"type redb::Result\")\n\n",
+            "markdown_with_citations": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by lmdb\u27e85\u27e9. Data is stored in a collection of copy-on-write B-trees. For more details, see the design doc\u27e86\u27e9.\n## \u00a7\u27e87\u27e9Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## \u00a7\u27e88\u27e9Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules\u00a7\u27e89\u27e9\n\nbackends\u27e810\u27e9\n\n## Structs\u00a7\u27e811\u27e9\n\nAccessGuard\u27e812\u27e9\n\n\nAccessGuardMut\u27e813\u27e9\n\n\nBuilder\u27e814\u27e9\n    Configuration builder of a redb Database\u27e815\u27e9.\n\nCacheStats\u27e816\u27e9\n    Information regarding the usage of the in-memory cache\n\nDatabase\u27e815\u27e9\n    Opened redb database file\n\nDatabaseStats\u27e817\u27e9\n    Informational storage stats about the database\n\nExtractIf\u27e818\u27e9\n\n\nMultimapRange\u27e819\u27e9\n\n\nMultimapTable\u27e820\u27e9\n    A multimap table\n\nMultimapTableDefinition\u27e821\u27e9\n    Defines the name and types of a multimap table\n\nMultimapValue\u27e822\u27e9\n\n\nRange\u27e823\u27e9\n\n\nReadOnlyMultimapTable\u27e824\u27e9\n    A read-only multimap table\n\nReadOnlyTable\u27e825\u27e9\n    A read-only table\n\nReadOnlyUntypedMultimapTable\u27e826\u27e9\n    A read-only untyped multimap table\n\nReadOnlyUntypedTable\u27e827\u27e9\n    A read-only untyped table\n\nReadTransaction\u27e828\u27e9\n    A read-only transaction\n\nRepairSession\u27e829\u27e9\n\n\nSavepoint\u27e830\u27e9\n\n\nTable\u27e831\u27e9\n    A table containing key-value mappings\n\nTableDefinition\u27e832\u27e9\n    Defines the name and types of a table\n\nTableStats\u27e833\u27e9\n    Informational storage stats about a table\n\nTypeName\u27e834\u27e9\n\n\nUntypedMultimapTableHandle\u27e835\u27e9\n\n\nUntypedTableHandle\u27e836\u27e9\n\n\nWriteTransaction\u27e837\u27e9\n    A read/write transaction\n## Enums\u00a7\u27e838\u27e9\n\nCommitError\u27e839\u27e9\n    Errors related to committing transactions\n\nCompactionError\u27e840\u27e9\n    Errors related to compaction\n\nDatabaseError\u27e841\u27e9\n    Errors related to opening a database\n\nDurability\u27e842\u27e9\n\n\nError\u27e843\u27e9\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\nSavepointError\u27e844\u27e9\n    Errors related to savepoints\n\nStorageError\u27e845\u27e9\n    General errors directly from the storage layer\n\nTableError\u27e846\u27e9\n    Errors related to opening tables\n\nTransactionError\u27e847\u27e9\n    Errors related to transactions\n\nUpgradeError\u27e848\u27e9\n    Errors related to database upgrades\n## Traits\u00a7\u27e849\u27e9\n\nKey\u27e850\u27e9\n\n\nMultimapTableHandle\u27e851\u27e9\n\n\nMutInPlaceValue\u27e852\u27e9\n    Implementing this trait indicates that the type can be mutated in-place as a &mut u8\u27e853\u27e9. This enables the `.insert_reserve()` method on Table\n\nReadableMultimapTable\u27e854\u27e9\n\n\nReadableTable\u27e855\u27e9\n\n\nReadableTableMetadata\u27e856\u27e9\n\n\nStorageBackend\u27e857\u27e9\n    Implements persistent storage for a database.\n\nTableHandle\u27e858\u27e9\n\n\nValue\u27e859\u27e9\n\n## Type Aliases\u00a7\u27e860\u27e9\n\nResult\u27e861\u27e9\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/redb/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/redb/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119: Source\n\u27e84\u27e9 https://docs.rs/redb/latest/redb/#redb: \u00a7\n\u27e85\u27e9 https://www.lmdb.tech/doc/: lmdb\n\u27e86\u27e9 https://github.com/cberner/redb/blob/master/docs/design.md: design doc\n\u27e87\u27e9 https://docs.rs/redb/latest/redb/#features: \u00a7\n\u27e88\u27e9 https://docs.rs/redb/latest/redb/#example: \u00a7\n\u27e89\u27e9 https://docs.rs/redb/latest/redb/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/redb/latest/redb/backends/index.html: mod redb::backends - backends\n\u27e811\u27e9 https://docs.rs/redb/latest/redb/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuard.html: struct redb::AccessGuard - AccessGuard\n\u27e813\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html: struct redb::AccessGuardMut - AccessGuardMut\n\u27e814\u27e9 https://docs.rs/redb/latest/redb/struct.Builder.html: struct redb::Builder - Builder\n\u27e815\u27e9 https://docs.rs/redb/latest/redb/struct.Database.html: struct redb::Database - Database\n\u27e816\u27e9 https://docs.rs/redb/latest/redb/struct.CacheStats.html: struct redb::CacheStats - CacheStats\n\u27e817\u27e9 https://docs.rs/redb/latest/redb/struct.DatabaseStats.html: struct redb::DatabaseStats - DatabaseStats\n\u27e818\u27e9 https://docs.rs/redb/latest/redb/struct.ExtractIf.html: struct redb::ExtractIf - ExtractIf\n\u27e819\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapRange.html: struct redb::MultimapRange - MultimapRange\n\u27e820\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTable.html: struct redb::MultimapTable - MultimapTable\n\u27e821\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html: struct redb::MultimapTableDefinition - MultimapTableDefinition\n\u27e822\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapValue.html: struct redb::MultimapValue - MultimapValue\n\u27e823\u27e9 https://docs.rs/redb/latest/redb/struct.Range.html: struct redb::Range - Range\n\u27e824\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html: struct redb::ReadOnlyMultimapTable - ReadOnlyMultimapTable\n\u27e825\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html: struct redb::ReadOnlyTable - ReadOnlyTable\n\u27e826\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html: struct redb::ReadOnlyUntypedMultimapTable - ReadOnlyUntypedMultimapTable\n\u27e827\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html: struct redb::ReadOnlyUntypedTable - ReadOnlyUntypedTable\n\u27e828\u27e9 https://docs.rs/redb/latest/redb/struct.ReadTransaction.html: struct redb::ReadTransaction - ReadTransaction\n\u27e829\u27e9 https://docs.rs/redb/latest/redb/struct.RepairSession.html: struct redb::RepairSession - RepairSession\n\u27e830\u27e9 https://docs.rs/redb/latest/redb/struct.Savepoint.html: struct redb::Savepoint - Savepoint\n\u27e831\u27e9 https://docs.rs/redb/latest/redb/struct.Table.html: struct redb::Table - Table\n\u27e832\u27e9 https://docs.rs/redb/latest/redb/struct.TableDefinition.html: struct redb::TableDefinition - TableDefinition\n\u27e833\u27e9 https://docs.rs/redb/latest/redb/struct.TableStats.html: struct redb::TableStats - TableStats\n\u27e834\u27e9 https://docs.rs/redb/latest/redb/struct.TypeName.html: struct redb::TypeName - TypeName\n\u27e835\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html: struct redb::UntypedMultimapTableHandle - UntypedMultimapTableHandle\n\u27e836\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html: struct redb::UntypedTableHandle - UntypedTableHandle\n\u27e837\u27e9 https://docs.rs/redb/latest/redb/struct.WriteTransaction.html: struct redb::WriteTransaction - WriteTransaction\n\u27e838\u27e9 https://docs.rs/redb/latest/redb/#enums: \u00a7\n\u27e839\u27e9 https://docs.rs/redb/latest/redb/enum.CommitError.html: enum redb::CommitError - CommitError\n\u27e840\u27e9 https://docs.rs/redb/latest/redb/enum.CompactionError.html: enum redb::CompactionError - CompactionError\n\u27e841\u27e9 https://docs.rs/redb/latest/redb/enum.DatabaseError.html: enum redb::DatabaseError - DatabaseError\n\u27e842\u27e9 https://docs.rs/redb/latest/redb/enum.Durability.html: enum redb::Durability - Durability\n\u27e843\u27e9 https://docs.rs/redb/latest/redb/enum.Error.html: enum redb::Error - Error\n\u27e844\u27e9 https://docs.rs/redb/latest/redb/enum.SavepointError.html: enum redb::SavepointError - SavepointError\n\u27e845\u27e9 https://docs.rs/redb/latest/redb/enum.StorageError.html: enum redb::StorageError - StorageError\n\u27e846\u27e9 https://docs.rs/redb/latest/redb/enum.TableError.html: enum redb::TableError - TableError\n\u27e847\u27e9 https://docs.rs/redb/latest/redb/enum.TransactionError.html: enum redb::TransactionError - TransactionError\n\u27e848\u27e9 https://docs.rs/redb/latest/redb/enum.UpgradeError.html: enum redb::UpgradeError - UpgradeError\n\u27e849\u27e9 https://docs.rs/redb/latest/redb/#traits: \u00a7\n\u27e850\u27e9 https://docs.rs/redb/latest/redb/trait.Key.html: trait redb::Key - Key\n\u27e851\u27e9 https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html: trait redb::MultimapTableHandle - MultimapTableHandle\n\u27e852\u27e9 https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html: trait redb::MutInPlaceValue - MutInPlaceValue\n\u27e853\u27e9 https://doc.rust-lang.org/nightly/std/primitive.u8.html: primitive u8 - u8\n\u27e854\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html: trait redb::ReadableMultimapTable - ReadableMultimapTable\n\u27e855\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTable.html: trait redb::ReadableTable - ReadableTable\n\u27e856\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html: trait redb::ReadableTableMetadata - ReadableTableMetadata\n\u27e857\u27e9 https://docs.rs/redb/latest/redb/trait.StorageBackend.html: trait redb::StorageBackend - StorageBackend\n\u27e858\u27e9 https://docs.rs/redb/latest/redb/trait.TableHandle.html: trait redb::TableHandle - TableHandle\n\u27e859\u27e9 https://docs.rs/redb/latest/redb/trait.Value.html: trait redb::Value - Value\n\u27e860\u27e9 https://docs.rs/redb/latest/redb/#types: \u00a7\n\u27e861\u27e9 https://docs.rs/redb/latest/redb/type.Result.html: type redb::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "redb",
+          "version": "2.6.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\n[Settings](https://docs.rs/redb/latest/settings.html)\n[Help](https://docs.rs/redb/latest/help.html)\nSummary[Source](https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119)\nExpand description\n## [\u00a7](https://docs.rs/redb/latest/redb/#redb)redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by [lmdb](https://www.lmdb.tech/doc/). Data is stored in a collection of copy-on-write B-trees. For more details, see the [design doc](https://github.com/cberner/redb/blob/master/docs/design.md).\n## [\u00a7](https://docs.rs/redb/latest/redb/#features)Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## [\u00a7](https://docs.rs/redb/latest/redb/#example)Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules[\u00a7](https://docs.rs/redb/latest/redb/#modules)\n\n[backends](https://docs.rs/redb/latest/redb/backends/index.html \"mod redb::backends\")\n\n## Structs[\u00a7](https://docs.rs/redb/latest/redb/#structs)\n\n[AccessGuard](https://docs.rs/redb/latest/redb/struct.AccessGuard.html \"struct redb::AccessGuard\")\n\n\n[AccessGuardMut](https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html \"struct redb::AccessGuardMut\")\n\n\n[Builder](https://docs.rs/redb/latest/redb/struct.Builder.html \"struct redb::Builder\")\n    Configuration builder of a redb [Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\").\n\n[CacheStats](https://docs.rs/redb/latest/redb/struct.CacheStats.html \"struct redb::CacheStats\")\n    Information regarding the usage of the in-memory cache\n\n[Database](https://docs.rs/redb/latest/redb/struct.Database.html \"struct redb::Database\")\n    Opened redb database file\n\n[DatabaseStats](https://docs.rs/redb/latest/redb/struct.DatabaseStats.html \"struct redb::DatabaseStats\")\n    Informational storage stats about the database\n\n[ExtractIf](https://docs.rs/redb/latest/redb/struct.ExtractIf.html \"struct redb::ExtractIf\")\n\n\n[MultimapRange](https://docs.rs/redb/latest/redb/struct.MultimapRange.html \"struct redb::MultimapRange\")\n\n\n[MultimapTable](https://docs.rs/redb/latest/redb/struct.MultimapTable.html \"struct redb::MultimapTable\")\n    A multimap table\n\n[MultimapTableDefinition](https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html \"struct redb::MultimapTableDefinition\")\n    Defines the name and types of a multimap table\n\n[MultimapValue](https://docs.rs/redb/latest/redb/struct.MultimapValue.html \"struct redb::MultimapValue\")\n\n\n[Range](https://docs.rs/redb/latest/redb/struct.Range.html \"struct redb::Range\")\n\n\n[ReadOnlyMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html \"struct redb::ReadOnlyMultimapTable\")\n    A read-only multimap table\n\n[ReadOnlyTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html \"struct redb::ReadOnlyTable\")\n    A read-only table\n\n[ReadOnlyUntypedMultimapTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html \"struct redb::ReadOnlyUntypedMultimapTable\")\n    A read-only untyped multimap table\n\n[ReadOnlyUntypedTable](https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html \"struct redb::ReadOnlyUntypedTable\")\n    A read-only untyped table\n\n[ReadTransaction](https://docs.rs/redb/latest/redb/struct.ReadTransaction.html \"struct redb::ReadTransaction\")\n    A read-only transaction\n\n[RepairSession](https://docs.rs/redb/latest/redb/struct.RepairSession.html \"struct redb::RepairSession\")\n\n\n[Savepoint](https://docs.rs/redb/latest/redb/struct.Savepoint.html \"struct redb::Savepoint\")\n\n\n[Table](https://docs.rs/redb/latest/redb/struct.Table.html \"struct redb::Table\")\n    A table containing key-value mappings\n\n[TableDefinition](https://docs.rs/redb/latest/redb/struct.TableDefinition.html \"struct redb::TableDefinition\")\n    Defines the name and types of a table\n\n[TableStats](https://docs.rs/redb/latest/redb/struct.TableStats.html \"struct redb::TableStats\")\n    Informational storage stats about a table\n\n[TypeName](https://docs.rs/redb/latest/redb/struct.TypeName.html \"struct redb::TypeName\")\n\n\n[UntypedMultimapTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html \"struct redb::UntypedMultimapTableHandle\")\n\n\n[UntypedTableHandle](https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html \"struct redb::UntypedTableHandle\")\n\n\n[WriteTransaction](https://docs.rs/redb/latest/redb/struct.WriteTransaction.html \"struct redb::WriteTransaction\")\n    A read/write transaction\n## Enums[\u00a7](https://docs.rs/redb/latest/redb/#enums)\n\n[CommitError](https://docs.rs/redb/latest/redb/enum.CommitError.html \"enum redb::CommitError\")\n    Errors related to committing transactions\n\n[CompactionError](https://docs.rs/redb/latest/redb/enum.CompactionError.html \"enum redb::CompactionError\")\n    Errors related to compaction\n\n[DatabaseError](https://docs.rs/redb/latest/redb/enum.DatabaseError.html \"enum redb::DatabaseError\")\n    Errors related to opening a database\n\n[Durability](https://docs.rs/redb/latest/redb/enum.Durability.html \"enum redb::Durability\")\n\n\n[Error](https://docs.rs/redb/latest/redb/enum.Error.html \"enum redb::Error\")\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\n[SavepointError](https://docs.rs/redb/latest/redb/enum.SavepointError.html \"enum redb::SavepointError\")\n    Errors related to savepoints\n\n[StorageError](https://docs.rs/redb/latest/redb/enum.StorageError.html \"enum redb::StorageError\")\n    General errors directly from the storage layer\n\n[TableError](https://docs.rs/redb/latest/redb/enum.TableError.html \"enum redb::TableError\")\n    Errors related to opening tables\n\n[TransactionError](https://docs.rs/redb/latest/redb/enum.TransactionError.html \"enum redb::TransactionError\")\n    Errors related to transactions\n\n[UpgradeError](https://docs.rs/redb/latest/redb/enum.UpgradeError.html \"enum redb::UpgradeError\")\n    Errors related to database upgrades\n## Traits[\u00a7](https://docs.rs/redb/latest/redb/#traits)\n\n[Key](https://docs.rs/redb/latest/redb/trait.Key.html \"trait redb::Key\")\n\n\n[MultimapTableHandle](https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html \"trait redb::MultimapTableHandle\")\n\n\n[MutInPlaceValue](https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html \"trait redb::MutInPlaceValue\")\n    Implementing this trait indicates that the type can be mutated in-place as a &mut [u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html \"primitive u8\"). This enables the `.insert_reserve()` method on Table\n\n[ReadableMultimapTable](https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html \"trait redb::ReadableMultimapTable\")\n\n\n[ReadableTable](https://docs.rs/redb/latest/redb/trait.ReadableTable.html \"trait redb::ReadableTable\")\n\n\n[ReadableTableMetadata](https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html \"trait redb::ReadableTableMetadata\")\n\n\n[StorageBackend](https://docs.rs/redb/latest/redb/trait.StorageBackend.html \"trait redb::StorageBackend\")\n    Implements persistent storage for a database.\n\n[TableHandle](https://docs.rs/redb/latest/redb/trait.TableHandle.html \"trait redb::TableHandle\")\n\n\n[Value](https://docs.rs/redb/latest/redb/trait.Value.html \"trait redb::Value\")\n\n## Type Aliases[\u00a7](https://docs.rs/redb/latest/redb/#types)\n\n[Result](https://docs.rs/redb/latest/redb/type.Result.html \"type redb::Result\")\n\n",
+            "markdown_with_citations": "[](https://docs.rs/redb/latest/redb/all.html \"show sidebar\")\n# Crate redbCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9redb\nA simple, portable, high-performance, ACID, embedded key-value store.\nredb is written in pure Rust and is loosely inspired by lmdb\u27e85\u27e9. Data is stored in a collection of copy-on-write B-trees. For more details, see the design doc\u27e86\u27e9.\n## \u00a7\u27e87\u27e9Features\n  * Zero-copy, thread-safe, `BTreeMap` based API\n  * Fully ACID-compliant transactions\n  * MVCC support for concurrent readers & writer, without blocking\n  * Crash-safe by default\n  * Savepoints and rollbacks\n\n\n## \u00a7\u27e88\u27e9Example\n```\nuse redb::{Database, Error, ReadableTable, TableDefinition};\nconst TABLE: TableDefinition<&str, u64> = TableDefinition::new(\"my_data\");\n#[cfg(not(target_os = \"wasi\"))]\nfn main() -> Result<(), Error> {\n  let file = tempfile::NamedTempFile::new().unwrap();\n  let db = Database::create(file.path())?;\n  let write_txn = db.begin_write()?;\n  {\n    let mut table = write_txn.open_table(TABLE)?;\n    table.insert(\"my_key\", &123)?;\n  }\n  write_txn.commit()?;\n  let read_txn = db.begin_read()?;\n  let table = read_txn.open_table(TABLE)?;\n  assert_eq!(table.get(\"my_key\")?.unwrap().value(), 123);\n  Ok(())\n}\n```\n\n## Modules\u00a7\u27e89\u27e9\n\nbackends\u27e810\u27e9\n\n## Structs\u00a7\u27e811\u27e9\n\nAccessGuard\u27e812\u27e9\n\n\nAccessGuardMut\u27e813\u27e9\n\n\nBuilder\u27e814\u27e9\n    Configuration builder of a redb Database\u27e815\u27e9.\n\nCacheStats\u27e816\u27e9\n    Information regarding the usage of the in-memory cache\n\nDatabase\u27e815\u27e9\n    Opened redb database file\n\nDatabaseStats\u27e817\u27e9\n    Informational storage stats about the database\n\nExtractIf\u27e818\u27e9\n\n\nMultimapRange\u27e819\u27e9\n\n\nMultimapTable\u27e820\u27e9\n    A multimap table\n\nMultimapTableDefinition\u27e821\u27e9\n    Defines the name and types of a multimap table\n\nMultimapValue\u27e822\u27e9\n\n\nRange\u27e823\u27e9\n\n\nReadOnlyMultimapTable\u27e824\u27e9\n    A read-only multimap table\n\nReadOnlyTable\u27e825\u27e9\n    A read-only table\n\nReadOnlyUntypedMultimapTable\u27e826\u27e9\n    A read-only untyped multimap table\n\nReadOnlyUntypedTable\u27e827\u27e9\n    A read-only untyped table\n\nReadTransaction\u27e828\u27e9\n    A read-only transaction\n\nRepairSession\u27e829\u27e9\n\n\nSavepoint\u27e830\u27e9\n\n\nTable\u27e831\u27e9\n    A table containing key-value mappings\n\nTableDefinition\u27e832\u27e9\n    Defines the name and types of a table\n\nTableStats\u27e833\u27e9\n    Informational storage stats about a table\n\nTypeName\u27e834\u27e9\n\n\nUntypedMultimapTableHandle\u27e835\u27e9\n\n\nUntypedTableHandle\u27e836\u27e9\n\n\nWriteTransaction\u27e837\u27e9\n    A read/write transaction\n## Enums\u00a7\u27e838\u27e9\n\nCommitError\u27e839\u27e9\n    Errors related to committing transactions\n\nCompactionError\u27e840\u27e9\n    Errors related to compaction\n\nDatabaseError\u27e841\u27e9\n    Errors related to opening a database\n\nDurability\u27e842\u27e9\n\n\nError\u27e843\u27e9\n    Superset of all other errors that can occur. Convenience enum so that users can convert all errors into a single type\n\nSavepointError\u27e844\u27e9\n    Errors related to savepoints\n\nStorageError\u27e845\u27e9\n    General errors directly from the storage layer\n\nTableError\u27e846\u27e9\n    Errors related to opening tables\n\nTransactionError\u27e847\u27e9\n    Errors related to transactions\n\nUpgradeError\u27e848\u27e9\n    Errors related to database upgrades\n## Traits\u00a7\u27e849\u27e9\n\nKey\u27e850\u27e9\n\n\nMultimapTableHandle\u27e851\u27e9\n\n\nMutInPlaceValue\u27e852\u27e9\n    Implementing this trait indicates that the type can be mutated in-place as a &mut u8\u27e853\u27e9. This enables the `.insert_reserve()` method on Table\n\nReadableMultimapTable\u27e854\u27e9\n\n\nReadableTable\u27e855\u27e9\n\n\nReadableTableMetadata\u27e856\u27e9\n\n\nStorageBackend\u27e857\u27e9\n    Implements persistent storage for a database.\n\nTableHandle\u27e858\u27e9\n\n\nValue\u27e859\u27e9\n\n## Type Aliases\u00a7\u27e860\u27e9\n\nResult\u27e861\u27e9\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/redb/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/redb/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/redb/latest/src/redb/lib.rs.html#1-119: Source\n\u27e84\u27e9 https://docs.rs/redb/latest/redb/#redb: \u00a7\n\u27e85\u27e9 https://www.lmdb.tech/doc/: lmdb\n\u27e86\u27e9 https://github.com/cberner/redb/blob/master/docs/design.md: design doc\n\u27e87\u27e9 https://docs.rs/redb/latest/redb/#features: \u00a7\n\u27e88\u27e9 https://docs.rs/redb/latest/redb/#example: \u00a7\n\u27e89\u27e9 https://docs.rs/redb/latest/redb/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/redb/latest/redb/backends/index.html: mod redb::backends - backends\n\u27e811\u27e9 https://docs.rs/redb/latest/redb/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuard.html: struct redb::AccessGuard - AccessGuard\n\u27e813\u27e9 https://docs.rs/redb/latest/redb/struct.AccessGuardMut.html: struct redb::AccessGuardMut - AccessGuardMut\n\u27e814\u27e9 https://docs.rs/redb/latest/redb/struct.Builder.html: struct redb::Builder - Builder\n\u27e815\u27e9 https://docs.rs/redb/latest/redb/struct.Database.html: struct redb::Database - Database\n\u27e816\u27e9 https://docs.rs/redb/latest/redb/struct.CacheStats.html: struct redb::CacheStats - CacheStats\n\u27e817\u27e9 https://docs.rs/redb/latest/redb/struct.DatabaseStats.html: struct redb::DatabaseStats - DatabaseStats\n\u27e818\u27e9 https://docs.rs/redb/latest/redb/struct.ExtractIf.html: struct redb::ExtractIf - ExtractIf\n\u27e819\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapRange.html: struct redb::MultimapRange - MultimapRange\n\u27e820\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTable.html: struct redb::MultimapTable - MultimapTable\n\u27e821\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapTableDefinition.html: struct redb::MultimapTableDefinition - MultimapTableDefinition\n\u27e822\u27e9 https://docs.rs/redb/latest/redb/struct.MultimapValue.html: struct redb::MultimapValue - MultimapValue\n\u27e823\u27e9 https://docs.rs/redb/latest/redb/struct.Range.html: struct redb::Range - Range\n\u27e824\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyMultimapTable.html: struct redb::ReadOnlyMultimapTable - ReadOnlyMultimapTable\n\u27e825\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyTable.html: struct redb::ReadOnlyTable - ReadOnlyTable\n\u27e826\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedMultimapTable.html: struct redb::ReadOnlyUntypedMultimapTable - ReadOnlyUntypedMultimapTable\n\u27e827\u27e9 https://docs.rs/redb/latest/redb/struct.ReadOnlyUntypedTable.html: struct redb::ReadOnlyUntypedTable - ReadOnlyUntypedTable\n\u27e828\u27e9 https://docs.rs/redb/latest/redb/struct.ReadTransaction.html: struct redb::ReadTransaction - ReadTransaction\n\u27e829\u27e9 https://docs.rs/redb/latest/redb/struct.RepairSession.html: struct redb::RepairSession - RepairSession\n\u27e830\u27e9 https://docs.rs/redb/latest/redb/struct.Savepoint.html: struct redb::Savepoint - Savepoint\n\u27e831\u27e9 https://docs.rs/redb/latest/redb/struct.Table.html: struct redb::Table - Table\n\u27e832\u27e9 https://docs.rs/redb/latest/redb/struct.TableDefinition.html: struct redb::TableDefinition - TableDefinition\n\u27e833\u27e9 https://docs.rs/redb/latest/redb/struct.TableStats.html: struct redb::TableStats - TableStats\n\u27e834\u27e9 https://docs.rs/redb/latest/redb/struct.TypeName.html: struct redb::TypeName - TypeName\n\u27e835\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedMultimapTableHandle.html: struct redb::UntypedMultimapTableHandle - UntypedMultimapTableHandle\n\u27e836\u27e9 https://docs.rs/redb/latest/redb/struct.UntypedTableHandle.html: struct redb::UntypedTableHandle - UntypedTableHandle\n\u27e837\u27e9 https://docs.rs/redb/latest/redb/struct.WriteTransaction.html: struct redb::WriteTransaction - WriteTransaction\n\u27e838\u27e9 https://docs.rs/redb/latest/redb/#enums: \u00a7\n\u27e839\u27e9 https://docs.rs/redb/latest/redb/enum.CommitError.html: enum redb::CommitError - CommitError\n\u27e840\u27e9 https://docs.rs/redb/latest/redb/enum.CompactionError.html: enum redb::CompactionError - CompactionError\n\u27e841\u27e9 https://docs.rs/redb/latest/redb/enum.DatabaseError.html: enum redb::DatabaseError - DatabaseError\n\u27e842\u27e9 https://docs.rs/redb/latest/redb/enum.Durability.html: enum redb::Durability - Durability\n\u27e843\u27e9 https://docs.rs/redb/latest/redb/enum.Error.html: enum redb::Error - Error\n\u27e844\u27e9 https://docs.rs/redb/latest/redb/enum.SavepointError.html: enum redb::SavepointError - SavepointError\n\u27e845\u27e9 https://docs.rs/redb/latest/redb/enum.StorageError.html: enum redb::StorageError - StorageError\n\u27e846\u27e9 https://docs.rs/redb/latest/redb/enum.TableError.html: enum redb::TableError - TableError\n\u27e847\u27e9 https://docs.rs/redb/latest/redb/enum.TransactionError.html: enum redb::TransactionError - TransactionError\n\u27e848\u27e9 https://docs.rs/redb/latest/redb/enum.UpgradeError.html: enum redb::UpgradeError - UpgradeError\n\u27e849\u27e9 https://docs.rs/redb/latest/redb/#traits: \u00a7\n\u27e850\u27e9 https://docs.rs/redb/latest/redb/trait.Key.html: trait redb::Key - Key\n\u27e851\u27e9 https://docs.rs/redb/latest/redb/trait.MultimapTableHandle.html: trait redb::MultimapTableHandle - MultimapTableHandle\n\u27e852\u27e9 https://docs.rs/redb/latest/redb/trait.MutInPlaceValue.html: trait redb::MutInPlaceValue - MutInPlaceValue\n\u27e853\u27e9 https://doc.rust-lang.org/nightly/std/primitive.u8.html: primitive u8 - u8\n\u27e854\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableMultimapTable.html: trait redb::ReadableMultimapTable - ReadableMultimapTable\n\u27e855\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTable.html: trait redb::ReadableTable - ReadableTable\n\u27e856\u27e9 https://docs.rs/redb/latest/redb/trait.ReadableTableMetadata.html: trait redb::ReadableTableMetadata - ReadableTableMetadata\n\u27e857\u27e9 https://docs.rs/redb/latest/redb/trait.StorageBackend.html: trait redb::StorageBackend - StorageBackend\n\u27e858\u27e9 https://docs.rs/redb/latest/redb/trait.TableHandle.html: trait redb::TableHandle - TableHandle\n\u27e859\u27e9 https://docs.rs/redb/latest/redb/trait.Value.html: trait redb::Value - Value\n\u27e860\u27e9 https://docs.rs/redb/latest/redb/#types: \u00a7\n\u27e861\u27e9 https://docs.rs/redb/latest/redb/type.Result.html: type redb::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `redb` crate is a simple, portable, high-performance, ACID-compliant embedded key-value store written in pure Rust. It features a zero-copy, thread-safe API based on copy-on-write B-trees, supports MVCC for concurrent readers and writers without blocking, and ensures crash safety by default. Additional capabilities include savepoints, rollbacks, and comprehensive transaction management for robust data handling.",
+          "feature_summary": null,
+          "use_case": "Database",
+          "score": 6.5,
+          "factual_counterfactual": "### Pair 1: ACID Compliance  \n\u2705 Factual: The `redb` crate provides fully ACID-compliant transactions, ensuring atomicity, consistency, isolation, and durability for all database operations.  \n\u274c Counterfactual: The `redb` crate sacrifices durability to achieve higher performance, making it unsuitable for applications requiring strict data integrity guarantees.  \n\n---\n\n### Pair 2: Zero-Copy API  \n\u2705 Factual: `redb` features a zero-copy, thread-safe API based on `BTreeMap`, allowing efficient access to data without unnecessary memory allocations.  \n\u274c Counterfactual: `redb` relies on heavy memory copying during data access, which can lead to performance bottlenecks in high-throughput applications.  \n\n---\n\n### Pair 3: Crash Safety  \n\u2705 Factual: `redb` is crash-safe by default, meaning that even in the event of an application or system crash, the database remains consistent and recoverable.  \n\u274c Counterfactual: `redb` requires manual intervention to recover data after a crash, as it does not provide built-in crash safety mechanisms.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-4d5b377f-f256d2f2-1751262657",
+      "timestamp": "2025-06-30T05:50:57.412280+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

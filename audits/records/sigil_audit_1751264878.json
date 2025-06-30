@@ -1,0 +1,291 @@
+[
+  {
+    "execution_id": "exec-4ff4e7d2-35dffaf3-1751264865",
+    "timestamp": "2025-06-30T06:27:45.713301+00:00",
+    "sacred_chain": {
+      "input_data": "rand_core",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'rand_core' -> 'rand_core'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "rand_core",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/rand_core",
+            "title": "rand_core v0.9.3",
+            "content": {
+              "raw_markdown": "#  rand_core v0.9.3\nCore random number generator traits and tools for implementation. \n  * [ #random ](https://crates.io/keywords/random)\n  * [ #rng ](https://crates.io/keywords/rng)\n\n\n  * [ Readme ](https://crates.io/crates/rand_core)\n  * [ 28 Versions ](https://crates.io/crates/rand_core/versions)\n  * [ Dependencies ](https://crates.io/crates/rand_core/dependencies)\n  * [ Dependents ](https://crates.io/crates/rand_core/reverse_dependencies)\n\n\n## Metadata\n4 months ago \nv1.63.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n24 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add rand_core\nOr add the following line to your Cargo.toml:\nrand_core = \"0.9.3\"\n## Homepage\n[ rust-random.github.io/book ](https://rust-random.github.io/book)\n## Documentation\n[ docs.rs/rand_core ](https://docs.rs/rand_core)\n## Repository\n[ github.com/rust-random/rand ](https://github.com/rust-random/rand)\n## Owners\n## Categories\n  * [Algorithms](https://crates.io/categories/algorithms)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=rand_core&inquire=crate-violation)\n### Stats Overview\n588,071,441 Downloads all time\n28 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  rand_core v0.9.3\nCore random number generator traits and tools for implementation. \n  *  #random \u27e81\u27e9\n  *  #rng \u27e82\u27e9\n\n\n  *  Readme \u27e83\u27e9\n  *  28 Versions \u27e84\u27e9\n  *  Dependencies \u27e85\u27e9\n  *  Dependents \u27e86\u27e9\n\n\n## Metadata\n4 months ago \nv1.63.0 \n MIT \u27e87\u27e9 OR  Apache-2.0 \u27e88\u27e9\n24 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add rand_core\nOr add the following line to your Cargo.toml:\nrand_core = \"0.9.3\"\n## Homepage\n rust-random.github.io/book \u27e89\u27e9\n## Documentation\n docs.rs/rand_core \u27e810\u27e9\n## Repository\n github.com/rust-random/rand \u27e811\u27e9\n## Owners\n## Categories\n  * Algorithms\u27e812\u27e9\n  * No standard library\u27e813\u27e9\n\n\n Report crate \u27e814\u27e9\n### Stats Overview\n588,071,441 Downloads all time\n28 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/random:  #random \n\u27e82\u27e9 https://crates.io/keywords/rng:  #rng \n\u27e83\u27e9 https://crates.io/crates/rand_core:  Readme \n\u27e84\u27e9 https://crates.io/crates/rand_core/versions:  28 Versions \n\u27e85\u27e9 https://crates.io/crates/rand_core/dependencies:  Dependencies \n\u27e86\u27e9 https://crates.io/crates/rand_core/reverse_dependencies:  Dependents \n\u27e87\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e88\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e89\u27e9 https://rust-random.github.io/book:  rust-random.github.io/book \n\u27e810\u27e9 https://docs.rs/rand_core:  docs.rs/rand_core \n\u27e811\u27e9 https://github.com/rust-random/rand:  github.com/rust-random/rand \n\u27e812\u27e9 https://crates.io/categories/algorithms: Algorithms\n\u27e813\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e814\u27e9 https://crates.io/support?crate=rand_core&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1391,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118655.4740403"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/rand_core",
+            "title": "Crate rand_coreCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\n[Settings](https://docs.rs/rand_core/latest/settings.html)\n[Help](https://docs.rs/rand_core/latest/help.html)\nSummary[Source](https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771)\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\"). Other users are encouraged to use the [`rand`](https://docs.rs/rand) crate instead which re-exports the main traits and error types.\n[`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n[`SeedableRng`](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\") is an extension trait for construction from fixed seeds and other random number generators.\nThe [`impls`](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\") and [`le`](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\") sub-modules include a few small functions to assist implementation of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n## Modules[\u00a7](https://docs.rs/rand_core/latest/rand_core/#modules)\n\n[block](https://docs.rs/rand_core/latest/rand_core/block/index.html \"mod rand_core::block\")\n    The `BlockRngCore` trait and implementation helpers\n\n[impls](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\")\n    Helper functions for implementing `RngCore` functions.\n\n[le](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\")\n    Little-Endian utilities\n## Structs[\u00a7](https://docs.rs/rand_core/latest/rand_core/#structs)\n\n[OsError](https://docs.rs/rand_core/latest/rand_core/struct.OsError.html \"struct rand_core::OsError\")`os_rng`\n    Error type of [`OsRng`](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")\n\n[OsRng](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")`os_rng`\n    An interface over the operating-system\u2019s random data source\n\n[RngReadAdapter](https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html \"struct rand_core::RngReadAdapter\")`std`\n    Adapter that enables reading through a [`io::Read`](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") from a [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n\n[UnwrapErr](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html \"struct rand_core::UnwrapErr\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n\n[UnwrapMut](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html \"struct rand_core::UnwrapMut\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n## Traits[\u00a7](https://docs.rs/rand_core/latest/rand_core/#traits)\n\n[CryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html \"trait rand_core::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") for securely unpredictable RNGs\n\n[RngCore](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html \"trait rand_core::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n",
+              "markdown_with_citations": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of `RngCore`\u27e84\u27e9. Other users are encouraged to use the `rand`\u27e85\u27e9 crate instead which re-exports the main traits and error types.\n`RngCore`\u27e84\u27e9 is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n`SeedableRng`\u27e86\u27e9 is an extension trait for construction from fixed seeds and other random number generators.\nThe `impls`\u27e87\u27e9 and `le`\u27e88\u27e9 sub-modules include a few small functions to assist implementation of `RngCore`\u27e84\u27e9.\n## Modules\u00a7\u27e89\u27e9\n\nblock\u27e810\u27e9\n    The `BlockRngCore` trait and implementation helpers\n\nimpls\u27e87\u27e9\n    Helper functions for implementing `RngCore` functions.\n\nle\u27e88\u27e9\n    Little-Endian utilities\n## Structs\u00a7\u27e811\u27e9\n\nOsError\u27e812\u27e9`os_rng`\n    Error type of `OsRng`\u27e813\u27e9\n\nOsRng\u27e813\u27e9`os_rng`\n    An interface over the operating-system\u2019s random data source\n\nRngReadAdapter\u27e814\u27e9`std`\n    Adapter that enables reading through a `io::Read`\u27e815\u27e9 from a `RngCore`\u27e84\u27e9.\n\nUnwrapErr\u27e816\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n\nUnwrapMut\u27e818\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n## Traits\u00a7\u27e819\u27e9\n\nCryptoRng\u27e820\u27e9\n    A marker trait over `RngCore`\u27e84\u27e9 for securely unpredictable RNGs\n\nRngCore\u27e84\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e86\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e821\u27e9\n    A marker trait over `TryRngCore`\u27e817\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e817\u27e9\n    A potentially fallible variant of `RngCore`\u27e84\u27e9\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand_core/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand_core/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771: Source\n\u27e84\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html: trait rand_core::RngCore - `RngCore`\n\u27e85\u27e9 https://docs.rs/rand: `rand`\n\u27e86\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html: trait rand_core::SeedableRng - `SeedableRng`\n\u27e87\u27e9 https://docs.rs/rand_core/latest/rand_core/impls/index.html: mod rand_core::impls - `impls`\n\u27e88\u27e9 https://docs.rs/rand_core/latest/rand_core/le/index.html: mod rand_core::le - `le`\n\u27e89\u27e9 https://docs.rs/rand_core/latest/rand_core/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/rand_core/latest/rand_core/block/index.html: mod rand_core::block - block\n\u27e811\u27e9 https://docs.rs/rand_core/latest/rand_core/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsError.html: struct rand_core::OsError - OsError\n\u27e813\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html: struct rand_core::OsRng - `OsRng`\n\u27e814\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html: struct rand_core::RngReadAdapter - RngReadAdapter\n\u27e815\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - `io::Read`\n\u27e816\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html: struct rand_core::UnwrapErr - UnwrapErr\n\u27e817\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html: trait rand_core::TryRngCore - `TryRngCore`\n\u27e818\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html: struct rand_core::UnwrapMut - UnwrapMut\n\u27e819\u27e9 https://docs.rs/rand_core/latest/rand_core/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html: trait rand_core::CryptoRng - CryptoRng\n\u27e821\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html: trait rand_core::TryCryptoRng - TryCryptoRng\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4751,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118656.2986673"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/rand_core",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [24 releases](https://lib.rs/crates/rand_core/versions)\n0.9.3 |  Mar 1, 2025   \n---|---  \n0.9.0 |  Jan 27, 2025   \n0.9.0-beta.1 |  Nov 30, 2024   \n0.9.0-alpha.2 |  Jul 29, 2024   \n0.0.1 |  ~~Sep 14, 2017~~  \n#**887** in [Algorithms](https://lib.rs/algorithms \"Rust implementations of core algorithms such as hashing, sorting, searching, and more.\")\nDownload history 6384794/week @ 2025-03-07 7091481/week @ 2025-03-14 9330178/week @ 2025-03-21 7141260/week @ 2025-03-28 7731356/week @ 2025-04-04 7516294/week @ 2025-04-11 6927232/week @ 2025-04-18 6898887/week @ 2025-04-25 6946169/week @ 2025-05-02 7280884/week @ 2025-05-09 7738073/week @ 2025-05-16 6368893/week @ 2025-05-23 6999242/week @ 2025-05-30 7206465/week @ 2025-06-06 8210818/week @ 2025-06-13 8474515/week @ 2025-06-20\n**32,074,097** downloads per month Used in [**53,122** crates (1,309 directly)](https://lib.rs/crates/rand_core/rev)\n**MIT/Apache**\n64KB  829 lines\n# rand_core\n[![Test Status](https://img.gs/czjpqfbdkz/full/https://github.com/rust-random/rand/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/rust-random/rand/actions) [![Latest version](https://img.shields.io/crates/v/rand_core.svg)](https://crates.io/crates/rand_core) [![Book](https://img.shields.io/badge/book-master-yellow.svg)](https://rust-random.github.io/book/) [![API](https://img.shields.io/badge/api-master-yellow.svg)](https://rust-random.github.io/rand/rand_core) [![API](https://img.gs/czjpqfbdkz/full/https://docs.rs/rand_core/badge.svg)](https://docs.rs/rand_core)\nCore traits and error types of the [rand](https://lib.rs/crates/rand) library, plus tools for implementing RNGs.\nThis crate is intended for use when implementing the core trait, ``RngCore``; it defines the core traits to be implemented as well as several small functions to aid in their implementation and types required for error handling.\nThe main [rand](https://lib.rs/crates/rand) crate re-exports most items defined in this crate, along with tools to convert the integer samples generated by ``RngCore`` to many different applications (including sampling from restricted ranges, conversion to floating point, list permutations and secure initialisation of RNGs). Most users should prefer to use the main [rand](https://lib.rs/crates/rand) crate.\nLinks:\n  * [API documentation (master)](https://rust-random.github.io/rand/rand_core)\n  * [API documentation (docs.rs)](https://docs.rs/rand_core)\n  * [Changelog](https://github.com/rust-random/rand/blob/master/rand_core/CHANGELOG.md)\n\n\n## Functionality\nThe ``rand_core`` crate provides:\n  * base random number generator traits\n  * error-reporting types\n  * functionality to aid implementation of RNGs\n\n\nThe traits and error types are also available via ``rand``.\n## Versions\nThe current version is:\n```\n`rand_core = \"0.9.0\"\n`\n```\n\n# License\n``rand_core`` is distributed under the terms of both the MIT license and the Apache License (Version 2.0).\nSee [LICENSE-APACHE](https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/LICENSE-APACHE) and [LICENSE-MIT](https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/LICENSE-MIT), and [COPYRIGHT](https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/COPYRIGHT) for details.\n#### Dependencies\n~0\u2013380KB \n  * [os_rng?](https://lib.rs/crates/rand_core/features#feature-os_rng \"optional feature\") [std?](https://lib.rs/crates/rand_core/features#feature-std \"optional feature\") [getrandom](https://lib.rs/crates/getrandom \"new\") 0.3\n  * [ optional ](https://lib.rs/crates/rand_core/features#feature-serde \"serde is optional feature\") [serde](https://lib.rs/crates/serde \"1\")[+derive](https://lib.rs/crates/serde/features#feature-derive)\n\n\n",
+              "markdown_with_citations": "###  24 releases\u27e81\u27e9\n0.9.3 |  Mar 1, 2025   \n---|---  \n0.9.0 |  Jan 27, 2025   \n0.9.0-beta.1 |  Nov 30, 2024   \n0.9.0-alpha.2 |  Jul 29, 2024   \n0.0.1 |  ~~Sep 14, 2017~~  \n#**887** in Algorithms\u27e82\u27e9\nDownload history 6384794/week @ 2025-03-07 7091481/week @ 2025-03-14 9330178/week @ 2025-03-21 7141260/week @ 2025-03-28 7731356/week @ 2025-04-04 7516294/week @ 2025-04-11 6927232/week @ 2025-04-18 6898887/week @ 2025-04-25 6946169/week @ 2025-05-02 7280884/week @ 2025-05-09 7738073/week @ 2025-05-16 6368893/week @ 2025-05-23 6999242/week @ 2025-05-30 7206465/week @ 2025-06-06 8210818/week @ 2025-06-13 8474515/week @ 2025-06-20\n**32,074,097** downloads per month Used in **53,122** crates (1,309 directly)\u27e83\u27e9\n**MIT/Apache**\n64KB  829 lines\n# rand_core\n![Test Status\u27e84\u27e9](https://github.com/rust-random/rand/actions) ![Latest version\u27e85\u27e9](https://crates.io/crates/rand_core) ![Book\u27e86\u27e9](https://rust-random.github.io/book/) ![API\u27e87\u27e9](https://rust-random.github.io/rand/rand_core) ![API\u27e88\u27e9](https://docs.rs/rand_core)\nCore traits and error types of the rand\u27e89\u27e9 library, plus tools for implementing RNGs.\nThis crate is intended for use when implementing the core trait, ``RngCore``; it defines the core traits to be implemented as well as several small functions to aid in their implementation and types required for error handling.\nThe main rand\u27e89\u27e9 crate re-exports most items defined in this crate, along with tools to convert the integer samples generated by ``RngCore`` to many different applications (including sampling from restricted ranges, conversion to floating point, list permutations and secure initialisation of RNGs). Most users should prefer to use the main rand\u27e89\u27e9 crate.\nLinks:\n  * API documentation (master)\u27e810\u27e9\n  * API documentation (docs.rs)\u27e811\u27e9\n  * Changelog\u27e812\u27e9\n\n\n## Functionality\nThe ``rand_core`` crate provides:\n  * base random number generator traits\n  * error-reporting types\n  * functionality to aid implementation of RNGs\n\n\nThe traits and error types are also available via ``rand``.\n## Versions\nThe current version is:\n```\n`rand_core = \"0.9.0\"\n`\n```\n\n# License\n``rand_core`` is distributed under the terms of both the MIT license and the Apache License (Version 2.0).\nSee LICENSE-APACHE\u27e813\u27e9 and LICENSE-MIT\u27e814\u27e9, and COPYRIGHT\u27e815\u27e9 for details.\n#### Dependencies\n~0\u2013380KB \n  * os_rng?\u27e816\u27e9 std?\u27e817\u27e9 getrandom\u27e818\u27e9 0.3\n  *  optional \u27e819\u27e9 serde\u27e820\u27e9+derive\u27e821\u27e9\n\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/rand_core/versions: 24 releases\n\u27e82\u27e9 https://lib.rs/algorithms: Rust implementations of core algorithms such as hashing, sorting, searching, and more. - Algorithms\n\u27e83\u27e9 https://lib.rs/crates/rand_core/rev: **53,122** crates (1,309 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/rust-random/rand/actions/workflows/test.yml/badge.svg?event=push: ![Test Status\n\u27e85\u27e9 https://img.shields.io/crates/v/rand_core.svg: ![Latest version\n\u27e86\u27e9 https://img.shields.io/badge/book-master-yellow.svg: ![Book\n\u27e87\u27e9 https://img.shields.io/badge/api-master-yellow.svg: ![API\n\u27e88\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/rand_core/badge.svg: ![API\n\u27e89\u27e9 https://lib.rs/crates/rand: rand\n\u27e810\u27e9 https://rust-random.github.io/rand/rand_core: API documentation (master)\n\u27e811\u27e9 https://docs.rs/rand_core: API documentation (docs.rs)\n\u27e812\u27e9 https://github.com/rust-random/rand/blob/master/rand_core/CHANGELOG.md: Changelog\n\u27e813\u27e9 https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/LICENSE-APACHE: LICENSE-APACHE\n\u27e814\u27e9 https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/LICENSE-MIT: LICENSE-MIT\n\u27e815\u27e9 https://github.com/rust-random/rand/blob/340849e53b71da0f15af448d10511c2e62e50ba1/rand_core/COPYRIGHT: COPYRIGHT\n\u27e816\u27e9 https://lib.rs/crates/rand_core/features#feature-os_rng: optional feature - os_rng?\n\u27e817\u27e9 https://lib.rs/crates/rand_core/features#feature-std: optional feature - std?\n\u27e818\u27e9 https://lib.rs/crates/getrandom: new - getrandom\n\u27e819\u27e9 https://lib.rs/crates/rand_core/features#feature-serde: serde is optional feature -  optional \n\u27e820\u27e9 https://lib.rs/crates/serde: 1 - serde\n\u27e821\u27e9 https://lib.rs/crates/serde/features#feature-derive: +derive\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3783,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118656.833746"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpv6ppmko_/rand_core-0.9.3#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\target\\debug\\deps\\librand_core-7b60f88060b45b03.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpv6ppmko_/rand_core-0.9.3#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpv6ppmko_\\rand_core-0.9.3\\target\\debug\\deps\\librand_core-1a14da4a3b6ced38.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 22
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "rand_core",
+          "version": "0.9.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\n[Settings](https://docs.rs/rand_core/latest/settings.html)\n[Help](https://docs.rs/rand_core/latest/help.html)\nSummary[Source](https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771)\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\"). Other users are encouraged to use the [`rand`](https://docs.rs/rand) crate instead which re-exports the main traits and error types.\n[`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n[`SeedableRng`](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\") is an extension trait for construction from fixed seeds and other random number generators.\nThe [`impls`](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\") and [`le`](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\") sub-modules include a few small functions to assist implementation of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n## Modules[\u00a7](https://docs.rs/rand_core/latest/rand_core/#modules)\n\n[block](https://docs.rs/rand_core/latest/rand_core/block/index.html \"mod rand_core::block\")\n    The `BlockRngCore` trait and implementation helpers\n\n[impls](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\")\n    Helper functions for implementing `RngCore` functions.\n\n[le](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\")\n    Little-Endian utilities\n## Structs[\u00a7](https://docs.rs/rand_core/latest/rand_core/#structs)\n\n[OsError](https://docs.rs/rand_core/latest/rand_core/struct.OsError.html \"struct rand_core::OsError\")`os_rng`\n    Error type of [`OsRng`](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")\n\n[OsRng](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")`os_rng`\n    An interface over the operating-system\u2019s random data source\n\n[RngReadAdapter](https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html \"struct rand_core::RngReadAdapter\")`std`\n    Adapter that enables reading through a [`io::Read`](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") from a [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n\n[UnwrapErr](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html \"struct rand_core::UnwrapErr\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n\n[UnwrapMut](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html \"struct rand_core::UnwrapMut\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n## Traits[\u00a7](https://docs.rs/rand_core/latest/rand_core/#traits)\n\n[CryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html \"trait rand_core::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") for securely unpredictable RNGs\n\n[RngCore](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html \"trait rand_core::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n",
+            "markdown_with_citations": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of `RngCore`\u27e84\u27e9. Other users are encouraged to use the `rand`\u27e85\u27e9 crate instead which re-exports the main traits and error types.\n`RngCore`\u27e84\u27e9 is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n`SeedableRng`\u27e86\u27e9 is an extension trait for construction from fixed seeds and other random number generators.\nThe `impls`\u27e87\u27e9 and `le`\u27e88\u27e9 sub-modules include a few small functions to assist implementation of `RngCore`\u27e84\u27e9.\n## Modules\u00a7\u27e89\u27e9\n\nblock\u27e810\u27e9\n    The `BlockRngCore` trait and implementation helpers\n\nimpls\u27e87\u27e9\n    Helper functions for implementing `RngCore` functions.\n\nle\u27e88\u27e9\n    Little-Endian utilities\n## Structs\u00a7\u27e811\u27e9\n\nOsError\u27e812\u27e9`os_rng`\n    Error type of `OsRng`\u27e813\u27e9\n\nOsRng\u27e813\u27e9`os_rng`\n    An interface over the operating-system\u2019s random data source\n\nRngReadAdapter\u27e814\u27e9`std`\n    Adapter that enables reading through a `io::Read`\u27e815\u27e9 from a `RngCore`\u27e84\u27e9.\n\nUnwrapErr\u27e816\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n\nUnwrapMut\u27e818\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n## Traits\u00a7\u27e819\u27e9\n\nCryptoRng\u27e820\u27e9\n    A marker trait over `RngCore`\u27e84\u27e9 for securely unpredictable RNGs\n\nRngCore\u27e84\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e86\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e821\u27e9\n    A marker trait over `TryRngCore`\u27e817\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e817\u27e9\n    A potentially fallible variant of `RngCore`\u27e84\u27e9\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand_core/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand_core/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771: Source\n\u27e84\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html: trait rand_core::RngCore - `RngCore`\n\u27e85\u27e9 https://docs.rs/rand: `rand`\n\u27e86\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html: trait rand_core::SeedableRng - `SeedableRng`\n\u27e87\u27e9 https://docs.rs/rand_core/latest/rand_core/impls/index.html: mod rand_core::impls - `impls`\n\u27e88\u27e9 https://docs.rs/rand_core/latest/rand_core/le/index.html: mod rand_core::le - `le`\n\u27e89\u27e9 https://docs.rs/rand_core/latest/rand_core/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/rand_core/latest/rand_core/block/index.html: mod rand_core::block - block\n\u27e811\u27e9 https://docs.rs/rand_core/latest/rand_core/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsError.html: struct rand_core::OsError - OsError\n\u27e813\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html: struct rand_core::OsRng - `OsRng`\n\u27e814\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html: struct rand_core::RngReadAdapter - RngReadAdapter\n\u27e815\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - `io::Read`\n\u27e816\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html: struct rand_core::UnwrapErr - UnwrapErr\n\u27e817\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html: trait rand_core::TryRngCore - `TryRngCore`\n\u27e818\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html: struct rand_core::UnwrapMut - UnwrapMut\n\u27e819\u27e9 https://docs.rs/rand_core/latest/rand_core/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html: trait rand_core::CryptoRng - CryptoRng\n\u27e821\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html: trait rand_core::TryCryptoRng - TryCryptoRng\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "rand_core",
+          "version": "0.9.3",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\n[Settings](https://docs.rs/rand_core/latest/settings.html)\n[Help](https://docs.rs/rand_core/latest/help.html)\nSummary[Source](https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771)\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\"). Other users are encouraged to use the [`rand`](https://docs.rs/rand) crate instead which re-exports the main traits and error types.\n[`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n[`SeedableRng`](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\") is an extension trait for construction from fixed seeds and other random number generators.\nThe [`impls`](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\") and [`le`](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\") sub-modules include a few small functions to assist implementation of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n## Modules[\u00a7](https://docs.rs/rand_core/latest/rand_core/#modules)\n\n[block](https://docs.rs/rand_core/latest/rand_core/block/index.html \"mod rand_core::block\")\n    The `BlockRngCore` trait and implementation helpers\n\n[impls](https://docs.rs/rand_core/latest/rand_core/impls/index.html \"mod rand_core::impls\")\n    Helper functions for implementing `RngCore` functions.\n\n[le](https://docs.rs/rand_core/latest/rand_core/le/index.html \"mod rand_core::le\")\n    Little-Endian utilities\n## Structs[\u00a7](https://docs.rs/rand_core/latest/rand_core/#structs)\n\n[OsError](https://docs.rs/rand_core/latest/rand_core/struct.OsError.html \"struct rand_core::OsError\")`os_rng`\n    Error type of [`OsRng`](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")\n\n[OsRng](https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html \"struct rand_core::OsRng\")`os_rng`\n    An interface over the operating-system\u2019s random data source\n\n[RngReadAdapter](https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html \"struct rand_core::RngReadAdapter\")`std`\n    Adapter that enables reading through a [`io::Read`](https://doc.rust-lang.org/nightly/std/io/trait.Read.html \"trait std::io::Read\") from a [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\").\n\n[UnwrapErr](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html \"struct rand_core::UnwrapErr\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n\n[UnwrapMut](https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html \"struct rand_core::UnwrapMut\")\n    Wrapper around [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") implementation which implements [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") by panicking on potential errors.\n## Traits[\u00a7](https://docs.rs/rand_core/latest/rand_core/#traits)\n\n[CryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html \"trait rand_core::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\") for securely unpredictable RNGs\n\n[RngCore](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html \"trait rand_core::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html \"trait rand_core::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html \"trait rand_core::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html \"trait rand_core::RngCore\")\n",
+            "markdown_with_citations": "[](https://docs.rs/rand_core/latest/rand_core/all.html \"show sidebar\")\n# Crate rand_coreCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nRandom number generation traits\nThis crate is mainly of interest to crates publishing implementations of `RngCore`\u27e84\u27e9. Other users are encouraged to use the `rand`\u27e85\u27e9 crate instead which re-exports the main traits and error types.\n`RngCore`\u27e84\u27e9 is the core trait implemented by algorithmic pseudo-random number generators and external random-number sources.\n`SeedableRng`\u27e86\u27e9 is an extension trait for construction from fixed seeds and other random number generators.\nThe `impls`\u27e87\u27e9 and `le`\u27e88\u27e9 sub-modules include a few small functions to assist implementation of `RngCore`\u27e84\u27e9.\n## Modules\u00a7\u27e89\u27e9\n\nblock\u27e810\u27e9\n    The `BlockRngCore` trait and implementation helpers\n\nimpls\u27e87\u27e9\n    Helper functions for implementing `RngCore` functions.\n\nle\u27e88\u27e9\n    Little-Endian utilities\n## Structs\u00a7\u27e811\u27e9\n\nOsError\u27e812\u27e9`os_rng`\n    Error type of `OsRng`\u27e813\u27e9\n\nOsRng\u27e813\u27e9`os_rng`\n    An interface over the operating-system\u2019s random data source\n\nRngReadAdapter\u27e814\u27e9`std`\n    Adapter that enables reading through a `io::Read`\u27e815\u27e9 from a `RngCore`\u27e84\u27e9.\n\nUnwrapErr\u27e816\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n\nUnwrapMut\u27e818\u27e9\n    Wrapper around `TryRngCore`\u27e817\u27e9 implementation which implements `RngCore`\u27e84\u27e9 by panicking on potential errors.\n## Traits\u00a7\u27e819\u27e9\n\nCryptoRng\u27e820\u27e9\n    A marker trait over `RngCore`\u27e84\u27e9 for securely unpredictable RNGs\n\nRngCore\u27e84\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e86\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e821\u27e9\n    A marker trait over `TryRngCore`\u27e817\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e817\u27e9\n    A potentially fallible variant of `RngCore`\u27e84\u27e9\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand_core/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand_core/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand_core/latest/src/rand_core/lib.rs.html#10-771: Source\n\u27e84\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html: trait rand_core::RngCore - `RngCore`\n\u27e85\u27e9 https://docs.rs/rand: `rand`\n\u27e86\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.SeedableRng.html: trait rand_core::SeedableRng - `SeedableRng`\n\u27e87\u27e9 https://docs.rs/rand_core/latest/rand_core/impls/index.html: mod rand_core::impls - `impls`\n\u27e88\u27e9 https://docs.rs/rand_core/latest/rand_core/le/index.html: mod rand_core::le - `le`\n\u27e89\u27e9 https://docs.rs/rand_core/latest/rand_core/#modules: \u00a7\n\u27e810\u27e9 https://docs.rs/rand_core/latest/rand_core/block/index.html: mod rand_core::block - block\n\u27e811\u27e9 https://docs.rs/rand_core/latest/rand_core/#structs: \u00a7\n\u27e812\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsError.html: struct rand_core::OsError - OsError\n\u27e813\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.OsRng.html: struct rand_core::OsRng - `OsRng`\n\u27e814\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.RngReadAdapter.html: struct rand_core::RngReadAdapter - RngReadAdapter\n\u27e815\u27e9 https://doc.rust-lang.org/nightly/std/io/trait.Read.html: trait std::io::Read - `io::Read`\n\u27e816\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapErr.html: struct rand_core::UnwrapErr - UnwrapErr\n\u27e817\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryRngCore.html: trait rand_core::TryRngCore - `TryRngCore`\n\u27e818\u27e9 https://docs.rs/rand_core/latest/rand_core/struct.UnwrapMut.html: struct rand_core::UnwrapMut - UnwrapMut\n\u27e819\u27e9 https://docs.rs/rand_core/latest/rand_core/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.CryptoRng.html: trait rand_core::CryptoRng - CryptoRng\n\u27e821\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.TryCryptoRng.html: trait rand_core::TryCryptoRng - TryCryptoRng\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `rand_core` crate provides foundational traits and utilities for implementing random number generators (RNGs) in Rust. Key features include the `RngCore` trait for core RNG functionality, `SeedableRng` for constructing RNGs with fixed seeds, and marker traits like `CryptoRng` for securely unpredictable RNGs. It also offers helper modules (`impls`, `le`, `block`) and structs like `OsRng` for accessing OS-level randomness.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1:\n\u2705 Factual: The `rand_core` crate provides the `RngCore` trait, which is the fundamental interface for implementing random number generators in Rust.  \n\u274c Counterfactual: The `rand_core` crate includes pre-built implementations of popular random number generators like Mersenne Twister and Xoshiro.  \n\n---\n\n### Pair 2:\n\u2705 Factual: The `SeedableRng` trait in `rand_core` allows random number generators to be initialized with fixed seeds or other RNGs, enabling reproducible sequences of random numbers.  \n\u274c Counterfactual: The `SeedableRng` trait requires all seed types to be cryptographically secure, making it unsuitable for non-secure RNGs.  \n\n---\n\n### Pair 3:\n\u2705 Factual: The `CryptoRng` marker trait in `rand_core` is used to indicate that an RNG is suitable for cryptographic applications due to its unpredictability.  \n\u274c Counterfactual: The `CryptoRng` marker trait automatically provides cryptographic guarantees for any RNG that implements it, without requiring additional implementation or verification.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-4ff4e7d2-35dffaf3-1751264865",
+      "timestamp": "2025-06-30T06:27:45.713301+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

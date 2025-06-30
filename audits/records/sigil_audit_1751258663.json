@@ -1,0 +1,1393 @@
+[
+  {
+    "execution_id": "exec-5e3b5fd6-5395a094-1751258652",
+    "timestamp": "2025-06-30T04:44:12.777292+00:00",
+    "sacred_chain": {
+      "input_data": "async-broadcast",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'async-broadcast' -> 'async-broadcast'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "async-broadcast",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/async-broadcast",
+            "title": "async-broadcast v0.7.2",
+            "content": {
+              "raw_markdown": "#  async-broadcast v0.7.2\nAsync broadcast channels \n  * [ Readme ](https://crates.io/crates/async-broadcast)\n  * [ 15 Versions ](https://crates.io/crates/async-broadcast/versions)\n  * [ Dependencies ](https://crates.io/crates/async-broadcast/dependencies)\n  * [ Dependents ](https://crates.io/crates/async-broadcast/reverse_dependencies)\n\n\n## Metadata\n6 months ago \nv1.60.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n22.2 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add async-broadcast\nOr add the following line to your Cargo.toml:\nasync-broadcast = \"0.7.2\"\n## Documentation\n[ docs.rs/async-broadcast ](https://docs.rs/async-broadcast)\n## Repository\n[ github.com/smol-rs/async-broadcast ](https://github.com/smol-rs/async-broadcast)\n## Owners\n[ Report crate ](https://crates.io/support?crate=async-broadcast&inquire=crate-violation)\n### Stats Overview\n28,972,002 Downloads all time\n15 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  async-broadcast v0.7.2\nAsync broadcast channels \n  *  Readme \u27e81\u27e9\n  *  15 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n6 months ago \nv1.60.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n22.2 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add async-broadcast\nOr add the following line to your Cargo.toml:\nasync-broadcast = \"0.7.2\"\n## Documentation\n docs.rs/async-broadcast \u27e87\u27e9\n## Repository\n github.com/smol-rs/async-broadcast \u27e88\u27e9\n## Owners\n Report crate \u27e89\u27e9\n### Stats Overview\n28,972,002 Downloads all time\n15 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/async-broadcast:  Readme \n\u27e82\u27e9 https://crates.io/crates/async-broadcast/versions:  15 Versions \n\u27e83\u27e9 https://crates.io/crates/async-broadcast/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/async-broadcast/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://docs.rs/async-broadcast:  docs.rs/async-broadcast \n\u27e88\u27e9 https://github.com/smol-rs/async-broadcast:  github.com/smol-rs/async-broadcast \n\u27e89\u27e9 https://crates.io/support?crate=async-broadcast&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1111,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112442.5768183"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/async-broadcast",
+            "title": "Crate async_broadcastCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\n[Settings](https://docs.rs/async-broadcast/latest/settings.html)\n[Help](https://docs.rs/async-broadcast/latest/help.html)\nSummary[Source](https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098)\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement [`Clone`](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html \"trait core::clone::Clone\").\nA channel has the [`Sender`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\") and [`Receiver`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\") side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling [`Sender::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close \"method async_broadcast::Sender::close\") or [`Receiver::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close \"method async_broadcast::Receiver::close\").\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#examples)Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel)Difference with `async-channel`\nThis crate is similar to [`async-channel`](https://crates.io/crates/async-channel) in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates)Difference with other broadcast crates\n  * [`broadcaster`](https://crates.io/crates/broadcaster): The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * [`postage`](https://crates.io/crates/postage): this crate provides a [broadcast API](https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html) similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates [futures](https://crates.io/crates/futures) API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * [`tokio::sync`](https://docs.rs/tokio/1.6.0/tokio/sync): Tokio\u2019s `sync` module provides a [broadcast channel](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html) API. The differences here are:\n    * While this implementation does provide [overflow mode](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging), it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#structs)\n\n[InactiveReceiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html \"struct async_broadcast::InactiveReceiver\")\n    An inactive receiver.\n\n[Receiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\")\n    The receiving side of a channel.\n\n[Recv](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html \"struct async_broadcast::Recv\")\n    A future returned by [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[Send](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html \"struct async_broadcast::Send\")\n    A future returned by [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[SendError](https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html \"struct async_broadcast::SendError\")\n    An error returned from [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[Sender](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\")\n    The sending side of the broadcast channel.\n## Enums[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#enums)\n\n[RecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html \"enum async_broadcast::RecvError\")\n    An error returned from [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[TryRecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html \"enum async_broadcast::TryRecvError\")\n    An error returned from [`Receiver::try_recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv \"method async_broadcast::Receiver::try_recv\").\n\n[TrySendError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html \"enum async_broadcast::TrySendError\")\n    An error returned from [`Sender::try_broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast \"method async_broadcast::Sender::try_broadcast\").\n## Functions[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#functions)\n\n[broadcast](https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html \"fn async_broadcast::broadcast\")\n    Create a new broadcast channel.\n",
+              "markdown_with_citations": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement `Clone`\u27e84\u27e9.\nA channel has the `Sender`\u27e85\u27e9 and `Receiver`\u27e86\u27e9 side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling `Sender::close()`\u27e87\u27e9 or `Receiver::close()`\u27e88\u27e9.\n### \u00a7\u27e89\u27e9Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### \u00a7\u27e810\u27e9Difference with `async-channel`\nThis crate is similar to `async-channel`\u27e811\u27e9 in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### \u00a7\u27e812\u27e9Difference with other broadcast crates\n  * `broadcaster`\u27e813\u27e9: The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * `postage`\u27e814\u27e9: this crate provides a broadcast API\u27e815\u27e9 similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates futures\u27e816\u27e9 API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * `tokio::sync`\u27e817\u27e9: Tokio\u2019s `sync` module provides a broadcast channel\u27e818\u27e9 API. The differences here are:\n    * While this implementation does provide overflow mode\u27e819\u27e9, it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs\u00a7\u27e820\u27e9\n\nInactiveReceiver\u27e821\u27e9\n    An inactive receiver.\n\nReceiver\u27e86\u27e9\n    The receiving side of a channel.\n\nRecv\u27e822\u27e9\n    A future returned by `Receiver::recv()`\u27e823\u27e9.\n\nSend\u27e824\u27e9\n    A future returned by `Sender::broadcast()`\u27e825\u27e9.\n\nSendError\u27e826\u27e9\n    An error returned from `Sender::broadcast()`\u27e825\u27e9.\n\nSender\u27e85\u27e9\n    The sending side of the broadcast channel.\n## Enums\u00a7\u27e827\u27e9\n\nRecvError\u27e828\u27e9\n    An error returned from `Receiver::recv()`\u27e823\u27e9.\n\nTryRecvError\u27e829\u27e9\n    An error returned from `Receiver::try_recv()`\u27e830\u27e9.\n\nTrySendError\u27e831\u27e9\n    An error returned from `Sender::try_broadcast()`\u27e832\u27e9.\n## Functions\u00a7\u27e833\u27e9\n\nbroadcast\u27e834\u27e9\n    Create a new broadcast channel.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/async-broadcast/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/async-broadcast/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html: trait core::clone::Clone - `Clone`\n\u27e85\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html: struct async_broadcast::Sender - `Sender`\n\u27e86\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html: struct async_broadcast::Receiver - `Receiver`\n\u27e87\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close: method async_broadcast::Sender::close - `Sender::close()`\n\u27e88\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close: method async_broadcast::Receiver::close - `Receiver::close()`\n\u27e89\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#examples: \u00a7\n\u27e810\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel: \u00a7\n\u27e811\u27e9 https://crates.io/crates/async-channel: `async-channel`\n\u27e812\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates: \u00a7\n\u27e813\u27e9 https://crates.io/crates/broadcaster: `broadcaster`\n\u27e814\u27e9 https://crates.io/crates/postage: `postage`\n\u27e815\u27e9 https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html: broadcast API\n\u27e816\u27e9 https://crates.io/crates/futures: futures\n\u27e817\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync: `tokio::sync`\n\u27e818\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html: broadcast channel\n\u27e819\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging: overflow mode\n\u27e820\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#structs: \u00a7\n\u27e821\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html: struct async_broadcast::InactiveReceiver - InactiveReceiver\n\u27e822\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html: struct async_broadcast::Recv - Recv\n\u27e823\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv: method async_broadcast::Receiver::recv - `Receiver::recv()`\n\u27e824\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html: struct async_broadcast::Send - Send\n\u27e825\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast: method async_broadcast::Sender::broadcast - `Sender::broadcast()`\n\u27e826\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html: struct async_broadcast::SendError - SendError\n\u27e827\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#enums: \u00a7\n\u27e828\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html: enum async_broadcast::RecvError - RecvError\n\u27e829\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html: enum async_broadcast::TryRecvError - TryRecvError\n\u27e830\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv: method async_broadcast::Receiver::try_recv - `Receiver::try_recv()`\n\u27e831\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html: enum async_broadcast::TrySendError - TrySendError\n\u27e832\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast: method async_broadcast::Sender::try_broadcast - `Sender::try_broadcast()`\n\u27e833\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html: fn async_broadcast::broadcast - broadcast\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7823,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112443.3953478"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/async-broadcast",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [14 releases](https://lib.rs/crates/async-broadcast/versions)\n0.7.2 |  Dec 23, 2024   \n---|---  \n0.7.1 |  Jun 2, 2024   \n0.7.0 |  Feb 8, 2024   \n0.6.0 |  Oct 16, 2023   \n0.1.0 |  ~~May 29, 2020~~  \n#**24** in [Asynchronous](https://lib.rs/asynchronous \"Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing.\")\nDownload history 574958/week @ 2025-03-09 553771/week @ 2025-03-16 557014/week @ 2025-03-23 533127/week @ 2025-03-30 557719/week @ 2025-04-06 467032/week @ 2025-04-13 455570/week @ 2025-04-20 450555/week @ 2025-04-27 485641/week @ 2025-05-04 508676/week @ 2025-05-11 500089/week @ 2025-05-18 462263/week @ 2025-05-25 545699/week @ 2025-06-01 505440/week @ 2025-06-08 509145/week @ 2025-06-15 518390/week @ 2025-06-22\n**2,105,147** downloads per month Used in [**1,531** crates (64 directly)](https://lib.rs/crates/async-broadcast/rev)\n**MIT/Apache**\n76KB  734 lines\n# async-broadcast\n[![Build](https://img.gs/czjpqfbdkz/full/https://github.com/smol-rs/async-broadcast/workflows/Build%20and%20test/badge.svg)](https://github.com/smol-rs/async-broadcast/actions) [![License](https://img.shields.io/badge/license-Apache--2.0_OR_MIT-blue.svg)](https://github.com/smol-rs/async-broadcast) [![Cargo](https://img.shields.io/crates/v/async-broadcast.svg)](https://crates.io/crates/async-broadcast) [![Documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/async-broadcast/badge.svg)](https://docs.rs/async-broadcast)\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement ```Clone```.\nA channel has the ``Sender`` and ``Receiver`` side. Both sides are cloneable and can be shared among multiple threads.\nWhen all ``Sender``s or all ``Receiver``s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling ```Sender`::``close`(``)``` or ```Receiver`::``close`(``)```.\n## Examples\n```\n``use` `async_broadcast`::````{`broadcast`,` TryRecvError```}```;`\n`use` `futures_lite`::````{``future`::``block_on`,` `stream`::``StreamExt```}```;`\n`block_on``(`async `move` ``{`\n  `let` `(`s1`,` `mut` r1`)` `=` `broadcast``(``2``)``;`\n  `let` s2 `=` s1`.``clone``(``)``;`\n  `let` `mut` r2 `=` r1`.``clone``(``)``;`\n  ``//` Send 2 messages from two different senders.`\n  s1`.``broadcast``(``7``)``.`await`.``unwrap``(``)``;`\n  s2`.``broadcast``(``8``)``.`await`.``unwrap``(``)``;`\n  ``//` Channel is now at capacity so sending more messages will result in an error.`\n  `assert!``(`s2`.``try_broadcast``(``9``)``.``unwrap_err``(``)``.``is_full``(``)``)``;`\n  `assert!``(`s1`.``try_broadcast``(``10``)``.``unwrap_err``(``)``.``is_full``(``)``)``;`\n  ``//` We can use `recv` method of the `Stream` implementation to receive messages.`\n  `assert_eq!``(`r1`.``next``(``)``.`await`.``unwrap``(``)``,` `7``)``;`\n  `assert_eq!``(`r1`.``recv``(``)``.`await`.``unwrap``(``)``,` `8``)``;`\n  `assert_eq!``(`r2`.``next``(``)``.`await`.``unwrap``(``)``,` `7``)``;`\n  `assert_eq!``(`r2`.``recv``(``)``.`await`.``unwrap``(``)``,` `8``)``;`\n  ``//` All receiver got all messages so channel is now empty.`\n  `assert_eq!``(`r1`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Empty`)``)``;`\n  `assert_eq!``(`r2`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Empty`)``)``;`\n  ``//` Drop both senders, which closes the channel.`\n  `drop``(`s1`)``;`\n  `drop``(`s2`)``;`\n  `assert_eq!``(`r1`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Closed`)``)``;`\n  `assert_eq!``(`r2`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Closed`)``)``;`\n```}```)`\n`\n```\n\n## Difference with ``async-channel``\nThis crate is similar to [``async-channel``](https://lib.rs/crates/async-channel) in that they both provide an MPMC channel but the main difference being that in ``async-channel``, each message sent on the channel is only received by one of the receivers. ``async-broadcast`` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n## Difference with other broadcast crates\n  * [``broadcaster``](https://lib.rs/crates/broadcaster): The main difference would be that ``broadcaster`` doesn't have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you'll find yourself having to drain the channel on the sending side yourself.\n  * [``postage``](https://lib.rs/crates/postage): this crate provides a [broadcast API](https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html) similar to ``async_broadcast``. However, it:\n    * (at the time of this writing) duplicates [futures](https://lib.rs/crates/futures) API, which isn't ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, ``async_broadcast`` is probably a better choice.\n  * [```tokio`::``sync``](https://docs.rs/tokio/1.6.0/tokio/sync): Tokio's ``sync`` module provides a [broadcast channel](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html) API. The differences here are:\n    * While this implementation does provide [overflow mode](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging), it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it's possible to build tokio with only the ``sync`` module, it comes with other APIs that you may not need.\n\n\n## Safety\nThis crate uses ````#!``[``deny```(```unsafe_code```)```]```` to ensure everything is implemented in 100% Safe Rust.\n## Contributing\nWant to join us? Check out our [\"Contributing\" guide](https://github.com/smol-rs/async-broadcast/blob/master/.github/CONTRIBUTING.md) and take a look at some of these issues:\n  * [Issues labeled \"good first issue\"](https://github.com/smol-rs/async-broadcast/labels/good%20first%20issue)\n  * [Issues labeled \"help wanted\"](https://github.com/smol-rs/async-broadcast/labels/help%20wanted)\n\n\n## License\nLicensed under either of [Apache License, Version 2.0](https://github.com/smol-rs/async-broadcast/blob/f7a99132b7e12cb03945013df78b93a35ceafbc1/LICENSE-APACHE) or [MIT license](https://github.com/smol-rs/async-broadcast/blob/f7a99132b7e12cb03945013df78b93a35ceafbc1/LICENSE-MIT) at your option.  Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in this crate by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions. \n#### Dependencies\n~395KB \n  * [event-listener](https://lib.rs/crates/event-listener \"new\") 5.0\n  * [event-listener-strategy](https://lib.rs/crates/event-listener-strategy \"0.5.0\")\n  * [futures-core](https://lib.rs/crates/futures-core \"0.3.21\")\n  * [pin-project-lite](https://lib.rs/crates/pin-project-lite \"0.2.13\")\n\n\n  * dev  [criterion](https://lib.rs/crates/criterion \"obsolete\") 0.3.5\n  * dev  [doc-comment](https://lib.rs/crates/doc-comment \"0.3.3\")\n  * dev  [easy-parallel](https://lib.rs/crates/easy-parallel \"3.2.0\")\n  * dev  [futures-lite](https://lib.rs/crates/futures-lite \"obsolete\") 1.11\n  * dev  [futures-util](https://lib.rs/crates/futures-util \"0.3.21\")\n\n\n",
+              "markdown_with_citations": "###  14 releases\u27e81\u27e9\n0.7.2 |  Dec 23, 2024   \n---|---  \n0.7.1 |  Jun 2, 2024   \n0.7.0 |  Feb 8, 2024   \n0.6.0 |  Oct 16, 2023   \n0.1.0 |  ~~May 29, 2020~~  \n#**24** in Asynchronous\u27e82\u27e9\nDownload history 574958/week @ 2025-03-09 553771/week @ 2025-03-16 557014/week @ 2025-03-23 533127/week @ 2025-03-30 557719/week @ 2025-04-06 467032/week @ 2025-04-13 455570/week @ 2025-04-20 450555/week @ 2025-04-27 485641/week @ 2025-05-04 508676/week @ 2025-05-11 500089/week @ 2025-05-18 462263/week @ 2025-05-25 545699/week @ 2025-06-01 505440/week @ 2025-06-08 509145/week @ 2025-06-15 518390/week @ 2025-06-22\n**2,105,147** downloads per month Used in **1,531** crates (64 directly)\u27e83\u27e9\n**MIT/Apache**\n76KB  734 lines\n# async-broadcast\n![Build\u27e84\u27e9](https://github.com/smol-rs/async-broadcast/actions) ![License\u27e85\u27e9](https://github.com/smol-rs/async-broadcast) ![Cargo\u27e86\u27e9](https://crates.io/crates/async-broadcast) ![Documentation\u27e87\u27e9](https://docs.rs/async-broadcast)\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement ```Clone```.\nA channel has the ``Sender`` and ``Receiver`` side. Both sides are cloneable and can be shared among multiple threads.\nWhen all ``Sender``s or all ``Receiver``s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling ```Sender`::``close`(``)``` or ```Receiver`::``close`(``)```.\n## Examples\n```\n``use` `async_broadcast`::````{`broadcast`,` TryRecvError```}```;`\n`use` `futures_lite`::````{``future`::``block_on`,` `stream`::``StreamExt```}```;`\n`block_on``(`async `move` ``{`\n  `let` `(`s1`,` `mut` r1`)` `=` `broadcast``(``2``)``;`\n  `let` s2 `=` s1`.``clone``(``)``;`\n  `let` `mut` r2 `=` r1`.``clone``(``)``;`\n  ``//` Send 2 messages from two different senders.`\n  s1`.``broadcast``(``7``)``.`await`.``unwrap``(``)``;`\n  s2`.``broadcast``(``8``)``.`await`.``unwrap``(``)``;`\n  ``//` Channel is now at capacity so sending more messages will result in an error.`\n  `assert!``(`s2`.``try_broadcast``(``9``)``.``unwrap_err``(``)``.``is_full``(``)``)``;`\n  `assert!``(`s1`.``try_broadcast``(``10``)``.``unwrap_err``(``)``.``is_full``(``)``)``;`\n  ``//` We can use `recv` method of the `Stream` implementation to receive messages.`\n  `assert_eq!``(`r1`.``next``(``)``.`await`.``unwrap``(``)``,` `7``)``;`\n  `assert_eq!``(`r1`.``recv``(``)``.`await`.``unwrap``(``)``,` `8``)``;`\n  `assert_eq!``(`r2`.``next``(``)``.`await`.``unwrap``(``)``,` `7``)``;`\n  `assert_eq!``(`r2`.``recv``(``)``.`await`.``unwrap``(``)``,` `8``)``;`\n  ``//` All receiver got all messages so channel is now empty.`\n  `assert_eq!``(`r1`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Empty`)``)``;`\n  `assert_eq!``(`r2`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Empty`)``)``;`\n  ``//` Drop both senders, which closes the channel.`\n  `drop``(`s1`)``;`\n  `drop``(`s2`)``;`\n  `assert_eq!``(`r1`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Closed`)``)``;`\n  `assert_eq!``(`r2`.``try_recv``(``)``,` `Err``(``TryRecvError`::``Closed`)``)``;`\n```}```)`\n`\n```\n\n## Difference with ``async-channel``\nThis crate is similar to ``async-channel``\u27e88\u27e9 in that they both provide an MPMC channel but the main difference being that in ``async-channel``, each message sent on the channel is only received by one of the receivers. ``async-broadcast`` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n## Difference with other broadcast crates\n  * ``broadcaster``\u27e89\u27e9: The main difference would be that ``broadcaster`` doesn't have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you'll find yourself having to drain the channel on the sending side yourself.\n  * ``postage``\u27e810\u27e9: this crate provides a broadcast API\u27e811\u27e9 similar to ``async_broadcast``. However, it:\n    * (at the time of this writing) duplicates futures\u27e812\u27e9 API, which isn't ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, ``async_broadcast`` is probably a better choice.\n  * ```tokio`::``sync``\u27e813\u27e9: Tokio's ``sync`` module provides a broadcast channel\u27e814\u27e9 API. The differences here are:\n    * While this implementation does provide overflow mode\u27e815\u27e9, it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it's possible to build tokio with only the ``sync`` module, it comes with other APIs that you may not need.\n\n\n## Safety\nThis crate uses ````#!``[``deny```(```unsafe_code```)```]```` to ensure everything is implemented in 100% Safe Rust.\n## Contributing\nWant to join us? Check out our \"Contributing\" guide\u27e816\u27e9 and take a look at some of these issues:\n  * Issues labeled \"good first issue\"\u27e817\u27e9\n  * Issues labeled \"help wanted\"\u27e818\u27e9\n\n\n## License\nLicensed under either of Apache License, Version 2.0\u27e819\u27e9 or MIT license\u27e820\u27e9 at your option.  Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in this crate by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions. \n#### Dependencies\n~395KB \n  * event-listener\u27e821\u27e9 5.0\n  * event-listener-strategy\u27e822\u27e9\n  * futures-core\u27e823\u27e9\n  * pin-project-lite\u27e824\u27e9\n\n\n  * dev  criterion\u27e825\u27e9 0.3.5\n  * dev  doc-comment\u27e826\u27e9\n  * dev  easy-parallel\u27e827\u27e9\n  * dev  futures-lite\u27e828\u27e9 1.11\n  * dev  futures-util\u27e829\u27e9\n\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/async-broadcast/versions: 14 releases\n\u27e82\u27e9 https://lib.rs/asynchronous: Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing. - Asynchronous\n\u27e83\u27e9 https://lib.rs/crates/async-broadcast/rev: **1,531** crates (64 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/smol-rs/async-broadcast/workflows/Build%20and%20test/badge.svg: ![Build\n\u27e85\u27e9 https://img.shields.io/badge/license-Apache--2.0_OR_MIT-blue.svg: ![License\n\u27e86\u27e9 https://img.shields.io/crates/v/async-broadcast.svg: ![Cargo\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/async-broadcast/badge.svg: ![Documentation\n\u27e88\u27e9 https://lib.rs/crates/async-channel: ``async-channel``\n\u27e89\u27e9 https://lib.rs/crates/broadcaster: ``broadcaster``\n\u27e810\u27e9 https://lib.rs/crates/postage: ``postage``\n\u27e811\u27e9 https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html: broadcast API\n\u27e812\u27e9 https://lib.rs/crates/futures: futures\n\u27e813\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync: ```tokio`::``sync``\n\u27e814\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html: broadcast channel\n\u27e815\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging: overflow mode\n\u27e816\u27e9 https://github.com/smol-rs/async-broadcast/blob/master/.github/CONTRIBUTING.md: \"Contributing\" guide\n\u27e817\u27e9 https://github.com/smol-rs/async-broadcast/labels/good%20first%20issue: Issues labeled \"good first issue\"\n\u27e818\u27e9 https://github.com/smol-rs/async-broadcast/labels/help%20wanted: Issues labeled \"help wanted\"\n\u27e819\u27e9 https://github.com/smol-rs/async-broadcast/blob/f7a99132b7e12cb03945013df78b93a35ceafbc1/LICENSE-APACHE: Apache License, Version 2.0\n\u27e820\u27e9 https://github.com/smol-rs/async-broadcast/blob/f7a99132b7e12cb03945013df78b93a35ceafbc1/LICENSE-MIT: MIT license\n\u27e821\u27e9 https://lib.rs/crates/event-listener: new - event-listener\n\u27e822\u27e9 https://lib.rs/crates/event-listener-strategy: 0.5.0 - event-listener-strategy\n\u27e823\u27e9 https://lib.rs/crates/futures-core: 0.3.21 - futures-core\n\u27e824\u27e9 https://lib.rs/crates/pin-project-lite: 0.2.13 - pin-project-lite\n\u27e825\u27e9 https://lib.rs/crates/criterion: obsolete - criterion\n\u27e826\u27e9 https://lib.rs/crates/doc-comment: 0.3.3 - doc-comment\n\u27e827\u27e9 https://lib.rs/crates/easy-parallel: 3.2.0 - easy-parallel\n\u27e828\u27e9 https://lib.rs/crates/futures-lite: obsolete - futures-lite\n\u27e829\u27e9 https://lib.rs/crates/futures-util: 0.3.21 - futures-util\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7651,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112443.8310067"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking@2.2.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking-2.2.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking-2.2.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libparking-bd9888c8dfceec72.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-058eff74cbd551a4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-058eff74cbd551a4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-8d9c1eff06854c8d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libcrossbeam_utils-0f4f22ec3e3ec06e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#concurrent-queue@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\concurrent-queue-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "concurrent_queue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\concurrent-queue-2.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libconcurrent_queue-6d8464127a7463ef.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#event-listener@5.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-5.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "event_listener",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-5.4.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libevent_listener-974bfe08cdc10b61.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#event-listener-strategy@0.5.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-strategy-0.5.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "event_listener_strategy",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-strategy-0.5.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libevent_listener_strategy-f8b8c124c6a02ea2.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnpluzp_3/async-broadcast-0.7.2#async-broadcast@0.7.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "async_broadcast",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libasync_broadcast-dd8cf2e321da5260.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-058eff74cbd551a4\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-058eff74cbd551a4\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\build\\crossbeam-utils-8d9c1eff06854c8d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking@2.2.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking-2.2.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking-2.2.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libparking-bd9888c8dfceec72.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libfutures_core-308f9a7b9ba0908e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crossbeam-utils@0.8.21",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crossbeam_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-utils-0.8.21\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libcrossbeam_utils-0f4f22ec3e3ec06e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#concurrent-queue@2.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\concurrent-queue-2.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "concurrent_queue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\concurrent-queue-2.5.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libconcurrent_queue-6d8464127a7463ef.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#event-listener@5.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-5.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "event_listener",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-5.4.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libevent_listener-974bfe08cdc10b61.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#event-listener-strategy@0.5.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-strategy-0.5.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "event_listener_strategy",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\event-listener-strategy-0.5.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libevent_listener_strategy-f8b8c124c6a02ea2.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnpluzp_3/async-broadcast-0.7.2#async-broadcast@0.7.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "async_broadcast",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: doc list item overindented\n  --> src\\lib.rs:79:5\n   |\n79 | //!    here are:\n   |     ^^^ help: try using `  ` (2 spaces)\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items\n   = note: `#[warn(clippy::doc_overindented_list_items)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#doc_overindented_list_items",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::doc_overindented_list_items)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try using `  ` (2 spaces)",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3656,
+                        "byte_start": 3653,
+                        "column_end": 8,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 79,
+                        "line_start": 79,
+                        "suggested_replacement": "  ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 8,
+                            "highlight_start": 5,
+                            "text": "//!    here are:"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::doc_overindented_list_items",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "doc list item overindented",
+                "spans": [
+                  {
+                    "byte_end": 3656,
+                    "byte_start": 3653,
+                    "column_end": 8,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 79,
+                    "line_start": 79,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 8,
+                        "highlight_start": 5,
+                        "text": "//!    here are:"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnpluzp_3/async-broadcast-0.7.2#async-broadcast@0.7.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "async_broadcast",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n    --> src\\lib.rs:1653:36\n     |\n1653 |             Self::Overflowed(n) => write!(f, \"receiving skipped {} messages\", n),\n     |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n     = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n     |\n1653 -             Self::Overflowed(n) => write!(f, \"receiving skipped {} messages\", n),\n1653 +             Self::Overflowed(n) => write!(f, \"receiving skipped {n} messages\"),\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 53755,
+                        "byte_start": 53755,
+                        "column_end": 66,
+                        "column_start": 66,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1653,
+                        "line_start": 1653,
+                        "suggested_replacement": "n",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 66,
+                            "highlight_start": 66,
+                            "text": "            Self::Overflowed(n) => write!(f, \"receiving skipped {} messages\", n),"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 53769,
+                        "byte_start": 53766,
+                        "column_end": 80,
+                        "column_start": 77,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1653,
+                        "line_start": 1653,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 80,
+                            "highlight_start": 77,
+                            "text": "            Self::Overflowed(n) => write!(f, \"receiving skipped {} messages\", n),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 53770,
+                    "byte_start": 53725,
+                    "column_end": 81,
+                    "column_start": 36,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1653,
+                    "line_start": 1653,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 81,
+                        "highlight_start": 36,
+                        "text": "            Self::Overflowed(n) => write!(f, \"receiving skipped {} messages\", n),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnpluzp_3/async-broadcast-0.7.2#async-broadcast@0.7.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "async_broadcast",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n    --> src\\lib.rs:1710:17\n     |\n1710 |                 write!(f, \"receiving operation observed {} lost messages\", n)\n     |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n     |\n1710 -                 write!(f, \"receiving operation observed {} lost messages\", n)\n1710 +                 write!(f, \"receiving operation observed {n} lost messages\")\n     |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 55575,
+                        "byte_start": 55575,
+                        "column_end": 58,
+                        "column_start": 58,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1710,
+                        "line_start": 1710,
+                        "suggested_replacement": "n",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 58,
+                            "highlight_start": 58,
+                            "text": "                write!(f, \"receiving operation observed {} lost messages\", n)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 55594,
+                        "byte_start": 55591,
+                        "column_end": 77,
+                        "column_start": 74,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1710,
+                        "line_start": 1710,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 77,
+                            "highlight_start": 74,
+                            "text": "                write!(f, \"receiving operation observed {} lost messages\", n)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 55595,
+                    "byte_start": 55534,
+                    "column_end": 78,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1710,
+                    "line_start": 1710,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 78,
+                        "highlight_start": 17,
+                        "text": "                write!(f, \"receiving operation observed {} lost messages\", n)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnpluzp_3/async-broadcast-0.7.2#async-broadcast@0.7.2",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "async_broadcast",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnpluzp_3\\async-broadcast-0.7.2\\target\\debug\\deps\\libasync_broadcast-bb8b5fa5109f88d3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 90
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.174",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0375",
+                    "package": "atty",
+                    "title": "`atty` is unmaintained",
+                    "description": "The maintainer of `atty` has [published](https://github.com/softprops/atty/commit/5bfdbe9e48c6ca6a4909e8d5b04f5e843a257e93) an official notice that the crate is no longer\nunder development, and that users should instead rely on the functionality in the standard library's [`IsTerminal`](https://doc.rust-lang.org/std/io/trait.IsTerminal.html) trait.\n\n## Alternative(s)\n\n- [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0 and the recommended replacement per the `atty` maintainer.\n- [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2024-09-25",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/57",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "instant",
+                    "version": "0.1.13",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "e0242819d153cba4b4b05a5a8f2a7e9bbf97b6055b2a002b395c96b5ff3c0222",
+                    "dependencies": [
+                      {
+                        "name": "cfg-if",
+                        "version": "1.0.1",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0384",
+                    "package": "instant",
+                    "title": "`instant` is unmaintained",
+                    "description": "This crate is no longer maintained, and the author recommends using the maintained [`web-time`] crate instead.\n\n[`web-time`]: https://crates.io/crates/web-time",
+                    "date": "2024-09-01",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [
+                      "https://crates.io/crates/instant/0.1.13",
+                      "https://github.com/sebcrozet/instant/issues/52"
+                    ],
+                    "source": null,
+                    "url": null,
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "serde_cbor",
+                    "version": "0.11.2",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "2bef2ebfde456fb76bbcf9f59315333decc4fda0b2b44b420243c11e0f5ec1f5",
+                    "dependencies": [
+                      {
+                        "name": "half",
+                        "version": "1.8.3",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "serde",
+                        "version": "1.0.219",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2021-0127",
+                    "package": "serde_cbor",
+                    "title": "serde_cbor is unmaintained",
+                    "description": "The `serde_cbor` crate is unmaintained. The author has archived the github repository.\n\nAlternatives proposed by the author:\n\n * [`ciborium`](https://crates.io/crates/ciborium)\n * [`minicbor`](https://crates.io/crates/minicbor)",
+                    "date": "2021-08-15",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/pyfisch/cbor",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "unsound": [
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.174",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2021-0145",
+                    "package": "atty",
+                    "title": "Potential unaligned read",
+                    "description": "On windows, `atty` dereferences a potentially unaligned pointer.\n\nIn practice however, the pointer won't be unaligned unless a custom global allocator is used.\n\nIn particular, the `System` allocator on windows uses `HeapAlloc`, which guarantees a large enough alignment.\n\n# atty is Unmaintained\n\nA Pull Request with a fix has been provided over a year ago but the maintainer seems to be unreachable.\n\nLast release of `atty` was almost 3 years ago.\n\n## Possible Alternative(s)\n\nThe below list has not been vetted in any way and may or may not contain alternatives;\n\n - [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0\n - [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2021-07-04",
+                    "aliases": [
+                      "GHSA-g98v-hv3f-hcfr"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [
+                      "unaligned-read"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "references": [
+                      "https://github.com/softprops/atty/pull/51",
+                      "https://github.com/softprops/atty/issues/57"
+                    ],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/50",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [
+                      "windows"
+                    ],
+                    "functions": {}
+                  },
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "async-broadcast",
+          "version": "0.7.2",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\n[Settings](https://docs.rs/async-broadcast/latest/settings.html)\n[Help](https://docs.rs/async-broadcast/latest/help.html)\nSummary[Source](https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098)\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement [`Clone`](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html \"trait core::clone::Clone\").\nA channel has the [`Sender`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\") and [`Receiver`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\") side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling [`Sender::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close \"method async_broadcast::Sender::close\") or [`Receiver::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close \"method async_broadcast::Receiver::close\").\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#examples)Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel)Difference with `async-channel`\nThis crate is similar to [`async-channel`](https://crates.io/crates/async-channel) in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates)Difference with other broadcast crates\n  * [`broadcaster`](https://crates.io/crates/broadcaster): The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * [`postage`](https://crates.io/crates/postage): this crate provides a [broadcast API](https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html) similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates [futures](https://crates.io/crates/futures) API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * [`tokio::sync`](https://docs.rs/tokio/1.6.0/tokio/sync): Tokio\u2019s `sync` module provides a [broadcast channel](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html) API. The differences here are:\n    * While this implementation does provide [overflow mode](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging), it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#structs)\n\n[InactiveReceiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html \"struct async_broadcast::InactiveReceiver\")\n    An inactive receiver.\n\n[Receiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\")\n    The receiving side of a channel.\n\n[Recv](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html \"struct async_broadcast::Recv\")\n    A future returned by [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[Send](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html \"struct async_broadcast::Send\")\n    A future returned by [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[SendError](https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html \"struct async_broadcast::SendError\")\n    An error returned from [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[Sender](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\")\n    The sending side of the broadcast channel.\n## Enums[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#enums)\n\n[RecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html \"enum async_broadcast::RecvError\")\n    An error returned from [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[TryRecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html \"enum async_broadcast::TryRecvError\")\n    An error returned from [`Receiver::try_recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv \"method async_broadcast::Receiver::try_recv\").\n\n[TrySendError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html \"enum async_broadcast::TrySendError\")\n    An error returned from [`Sender::try_broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast \"method async_broadcast::Sender::try_broadcast\").\n## Functions[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#functions)\n\n[broadcast](https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html \"fn async_broadcast::broadcast\")\n    Create a new broadcast channel.\n",
+            "markdown_with_citations": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement `Clone`\u27e84\u27e9.\nA channel has the `Sender`\u27e85\u27e9 and `Receiver`\u27e86\u27e9 side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling `Sender::close()`\u27e87\u27e9 or `Receiver::close()`\u27e88\u27e9.\n### \u00a7\u27e89\u27e9Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### \u00a7\u27e810\u27e9Difference with `async-channel`\nThis crate is similar to `async-channel`\u27e811\u27e9 in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### \u00a7\u27e812\u27e9Difference with other broadcast crates\n  * `broadcaster`\u27e813\u27e9: The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * `postage`\u27e814\u27e9: this crate provides a broadcast API\u27e815\u27e9 similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates futures\u27e816\u27e9 API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * `tokio::sync`\u27e817\u27e9: Tokio\u2019s `sync` module provides a broadcast channel\u27e818\u27e9 API. The differences here are:\n    * While this implementation does provide overflow mode\u27e819\u27e9, it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs\u00a7\u27e820\u27e9\n\nInactiveReceiver\u27e821\u27e9\n    An inactive receiver.\n\nReceiver\u27e86\u27e9\n    The receiving side of a channel.\n\nRecv\u27e822\u27e9\n    A future returned by `Receiver::recv()`\u27e823\u27e9.\n\nSend\u27e824\u27e9\n    A future returned by `Sender::broadcast()`\u27e825\u27e9.\n\nSendError\u27e826\u27e9\n    An error returned from `Sender::broadcast()`\u27e825\u27e9.\n\nSender\u27e85\u27e9\n    The sending side of the broadcast channel.\n## Enums\u00a7\u27e827\u27e9\n\nRecvError\u27e828\u27e9\n    An error returned from `Receiver::recv()`\u27e823\u27e9.\n\nTryRecvError\u27e829\u27e9\n    An error returned from `Receiver::try_recv()`\u27e830\u27e9.\n\nTrySendError\u27e831\u27e9\n    An error returned from `Sender::try_broadcast()`\u27e832\u27e9.\n## Functions\u00a7\u27e833\u27e9\n\nbroadcast\u27e834\u27e9\n    Create a new broadcast channel.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/async-broadcast/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/async-broadcast/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html: trait core::clone::Clone - `Clone`\n\u27e85\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html: struct async_broadcast::Sender - `Sender`\n\u27e86\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html: struct async_broadcast::Receiver - `Receiver`\n\u27e87\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close: method async_broadcast::Sender::close - `Sender::close()`\n\u27e88\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close: method async_broadcast::Receiver::close - `Receiver::close()`\n\u27e89\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#examples: \u00a7\n\u27e810\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel: \u00a7\n\u27e811\u27e9 https://crates.io/crates/async-channel: `async-channel`\n\u27e812\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates: \u00a7\n\u27e813\u27e9 https://crates.io/crates/broadcaster: `broadcaster`\n\u27e814\u27e9 https://crates.io/crates/postage: `postage`\n\u27e815\u27e9 https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html: broadcast API\n\u27e816\u27e9 https://crates.io/crates/futures: futures\n\u27e817\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync: `tokio::sync`\n\u27e818\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html: broadcast channel\n\u27e819\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging: overflow mode\n\u27e820\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#structs: \u00a7\n\u27e821\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html: struct async_broadcast::InactiveReceiver - InactiveReceiver\n\u27e822\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html: struct async_broadcast::Recv - Recv\n\u27e823\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv: method async_broadcast::Receiver::recv - `Receiver::recv()`\n\u27e824\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html: struct async_broadcast::Send - Send\n\u27e825\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast: method async_broadcast::Sender::broadcast - `Sender::broadcast()`\n\u27e826\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html: struct async_broadcast::SendError - SendError\n\u27e827\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#enums: \u00a7\n\u27e828\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html: enum async_broadcast::RecvError - RecvError\n\u27e829\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html: enum async_broadcast::TryRecvError - TryRecvError\n\u27e830\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv: method async_broadcast::Receiver::try_recv - `Receiver::try_recv()`\n\u27e831\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html: enum async_broadcast::TrySendError - TrySendError\n\u27e832\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast: method async_broadcast::Sender::try_broadcast - `Sender::try_broadcast()`\n\u27e833\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html: fn async_broadcast::broadcast - broadcast\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "async-broadcast",
+          "version": "0.7.2",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\n[Settings](https://docs.rs/async-broadcast/latest/settings.html)\n[Help](https://docs.rs/async-broadcast/latest/help.html)\nSummary[Source](https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098)\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement [`Clone`](https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html \"trait core::clone::Clone\").\nA channel has the [`Sender`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\") and [`Receiver`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\") side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling [`Sender::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close \"method async_broadcast::Sender::close\") or [`Receiver::close()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close \"method async_broadcast::Receiver::close\").\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#examples)Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel)Difference with `async-channel`\nThis crate is similar to [`async-channel`](https://crates.io/crates/async-channel) in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### [\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates)Difference with other broadcast crates\n  * [`broadcaster`](https://crates.io/crates/broadcaster): The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * [`postage`](https://crates.io/crates/postage): this crate provides a [broadcast API](https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html) similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates [futures](https://crates.io/crates/futures) API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * [`tokio::sync`](https://docs.rs/tokio/1.6.0/tokio/sync): Tokio\u2019s `sync` module provides a [broadcast channel](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html) API. The differences here are:\n    * While this implementation does provide [overflow mode](https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging), it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#structs)\n\n[InactiveReceiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html \"struct async_broadcast::InactiveReceiver\")\n    An inactive receiver.\n\n[Receiver](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html \"struct async_broadcast::Receiver\")\n    The receiving side of a channel.\n\n[Recv](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html \"struct async_broadcast::Recv\")\n    A future returned by [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[Send](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html \"struct async_broadcast::Send\")\n    A future returned by [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[SendError](https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html \"struct async_broadcast::SendError\")\n    An error returned from [`Sender::broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast \"method async_broadcast::Sender::broadcast\").\n\n[Sender](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html \"struct async_broadcast::Sender\")\n    The sending side of the broadcast channel.\n## Enums[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#enums)\n\n[RecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html \"enum async_broadcast::RecvError\")\n    An error returned from [`Receiver::recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv \"method async_broadcast::Receiver::recv\").\n\n[TryRecvError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html \"enum async_broadcast::TryRecvError\")\n    An error returned from [`Receiver::try_recv()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv \"method async_broadcast::Receiver::try_recv\").\n\n[TrySendError](https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html \"enum async_broadcast::TrySendError\")\n    An error returned from [`Sender::try_broadcast()`](https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast \"method async_broadcast::Sender::try_broadcast\").\n## Functions[\u00a7](https://docs.rs/async-broadcast/latest/async_broadcast/#functions)\n\n[broadcast](https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html \"fn async_broadcast::broadcast\")\n    Create a new broadcast channel.\n",
+            "markdown_with_citations": "[](https://docs.rs/async-broadcast/latest/async_broadcast/all.html \"show sidebar\")\n# Crate async_broadcastCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAsync broadcast channel\nAn async multi-producer multi-consumer broadcast channel, where each consumer gets a clone of every message sent on the channel. For obvious reasons, the channel can only be used to broadcast types that implement `Clone`\u27e84\u27e9.\nA channel has the `Sender`\u27e85\u27e9 and `Receiver`\u27e86\u27e9 side. Both sides are cloneable and can be shared among multiple threads.\nWhen all `Sender`s or all `Receiver`s are dropped, the channel becomes closed. When a channel is closed, no more messages can be sent, but remaining messages can still be received.\nThe channel can also be closed manually by calling `Sender::close()`\u27e87\u27e9 or `Receiver::close()`\u27e88\u27e9.\n### \u00a7\u27e89\u27e9Examples\n```\nuse async_broadcast::{broadcast, TryRecvError};\nuse futures_lite::{future::block_on, stream::StreamExt};\nblock_on(async move {\n  let (s1, mut r1) = broadcast(2);\n  let s2 = s1.clone();\n  let mut r2 = r1.clone();\n  // Send 2 messages from two different senders.\n  s1.broadcast(7).await.unwrap();\n  s2.broadcast(8).await.unwrap();\n  // Channel is now at capacity so sending more messages will result in an error.\n  assert!(s2.try_broadcast(9).unwrap_err().is_full());\n  assert!(s1.try_broadcast(10).unwrap_err().is_full());\n  // We can use `recv` method of the `Stream` implementation to receive messages.\n  assert_eq!(r1.next().await.unwrap(), 7);\n  assert_eq!(r1.recv().await.unwrap(), 8);\n  assert_eq!(r2.next().await.unwrap(), 7);\n  assert_eq!(r2.recv().await.unwrap(), 8);\n  // All receiver got all messages so channel is now empty.\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Empty));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Empty));\n  // Drop both senders, which closes the channel.\n  drop(s1);\n  drop(s2);\n  assert_eq!(r1.try_recv(), Err(TryRecvError::Closed));\n  assert_eq!(r2.try_recv(), Err(TryRecvError::Closed));\n})\n```\n\n### \u00a7\u27e810\u27e9Difference with `async-channel`\nThis crate is similar to `async-channel`\u27e811\u27e9 in that they both provide an MPMC channel but the main difference being that in `async-channel`, each message sent on the channel is only received by one of the receivers. `async-broadcast` on the other hand, delivers each message to every receiver (IOW broadcast) by cloning it for each receiver.\n### \u00a7\u27e812\u27e9Difference with other broadcast crates\n  * `broadcaster`\u27e813\u27e9: The main difference would be that `broadcaster` doesn\u2019t have a sender and receiver split and both sides use clones of the same BroadcastChannel instance. The messages are sent are sent to all channel clones. While this can work for many cases, the lack of sender and receiver split, means that often times, you\u2019ll find yourself having to drain the channel on the sending side yourself.\n  * `postage`\u27e814\u27e9: this crate provides a broadcast API\u27e815\u27e9 similar to `async_broadcast`. However, it:\n    * (at the time of this writing) duplicates futures\u27e816\u27e9 API, which isn\u2019t ideal.\n    * Does not support overflow mode nor has the concept of inactive receivers, so a slow or inactive receiver blocking the whole channel is not a solvable problem.\n    * Provides all kinds of channels, which is generally good but if you just need a broadcast channel, `async_broadcast` is probably a better choice.\n  * `tokio::sync`\u27e817\u27e9: Tokio\u2019s `sync` module provides a broadcast channel\u27e818\u27e9 API. The differences here are:\n    * While this implementation does provide overflow mode\u27e819\u27e9, it is the default behavior and not opt-in.\n    * There is no equivalent of inactive receivers.\n    * While it\u2019s possible to build tokio with only the `sync` module, it comes with other APIs that you may not need.\n\n\n## Structs\u00a7\u27e820\u27e9\n\nInactiveReceiver\u27e821\u27e9\n    An inactive receiver.\n\nReceiver\u27e86\u27e9\n    The receiving side of a channel.\n\nRecv\u27e822\u27e9\n    A future returned by `Receiver::recv()`\u27e823\u27e9.\n\nSend\u27e824\u27e9\n    A future returned by `Sender::broadcast()`\u27e825\u27e9.\n\nSendError\u27e826\u27e9\n    An error returned from `Sender::broadcast()`\u27e825\u27e9.\n\nSender\u27e85\u27e9\n    The sending side of the broadcast channel.\n## Enums\u00a7\u27e827\u27e9\n\nRecvError\u27e828\u27e9\n    An error returned from `Receiver::recv()`\u27e823\u27e9.\n\nTryRecvError\u27e829\u27e9\n    An error returned from `Receiver::try_recv()`\u27e830\u27e9.\n\nTrySendError\u27e831\u27e9\n    An error returned from `Sender::try_broadcast()`\u27e832\u27e9.\n## Functions\u00a7\u27e833\u27e9\n\nbroadcast\u27e834\u27e9\n    Create a new broadcast channel.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/async-broadcast/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/async-broadcast/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/async-broadcast/latest/src/async_broadcast/lib.rs.html#1-2098: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html: trait core::clone::Clone - `Clone`\n\u27e85\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html: struct async_broadcast::Sender - `Sender`\n\u27e86\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html: struct async_broadcast::Receiver - `Receiver`\n\u27e87\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.close: method async_broadcast::Sender::close - `Sender::close()`\n\u27e88\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.close: method async_broadcast::Receiver::close - `Receiver::close()`\n\u27e89\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#examples: \u00a7\n\u27e810\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-async-channel: \u00a7\n\u27e811\u27e9 https://crates.io/crates/async-channel: `async-channel`\n\u27e812\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#difference-with-other-broadcast-crates: \u00a7\n\u27e813\u27e9 https://crates.io/crates/broadcaster: `broadcaster`\n\u27e814\u27e9 https://crates.io/crates/postage: `postage`\n\u27e815\u27e9 https://docs.rs/postage/0.4.1/postage/broadcast/fn.channel.html: broadcast API\n\u27e816\u27e9 https://crates.io/crates/futures: futures\n\u27e817\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync: `tokio::sync`\n\u27e818\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html: broadcast channel\n\u27e819\u27e9 https://docs.rs/tokio/1.6.0/tokio/sync/broadcast/index.html#lagging: overflow mode\n\u27e820\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#structs: \u00a7\n\u27e821\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.InactiveReceiver.html: struct async_broadcast::InactiveReceiver - InactiveReceiver\n\u27e822\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Recv.html: struct async_broadcast::Recv - Recv\n\u27e823\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.recv: method async_broadcast::Receiver::recv - `Receiver::recv()`\n\u27e824\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Send.html: struct async_broadcast::Send - Send\n\u27e825\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.broadcast: method async_broadcast::Sender::broadcast - `Sender::broadcast()`\n\u27e826\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.SendError.html: struct async_broadcast::SendError - SendError\n\u27e827\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#enums: \u00a7\n\u27e828\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.RecvError.html: enum async_broadcast::RecvError - RecvError\n\u27e829\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TryRecvError.html: enum async_broadcast::TryRecvError - TryRecvError\n\u27e830\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Receiver.html#method.try_recv: method async_broadcast::Receiver::try_recv - `Receiver::try_recv()`\n\u27e831\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/enum.TrySendError.html: enum async_broadcast::TrySendError - TrySendError\n\u27e832\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/struct.Sender.html#method.try_broadcast: method async_broadcast::Sender::try_broadcast - `Sender::try_broadcast()`\n\u27e833\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/async-broadcast/latest/async_broadcast/fn.broadcast.html: fn async_broadcast::broadcast - broadcast\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `async-broadcast` crate provides an asynchronous multi-producer, multi-consumer broadcast channel where each consumer receives a clone of every message sent. It supports manual or automatic channel closure, overflow handling, and inactive receivers to prevent slow consumers from blocking the channel. Compared to similar crates, it offers a lightweight and focused API for broadcasting messages with optional overflow modes and better handling of inactive receivers.",
+          "feature_summary": null,
+          "use_case": "Networking",
+          "score": 6.5,
+          "factual_counterfactual": "### Pair 1: Sender and Receiver Behavior  \n\u2705 **Factual:** The `async-broadcast` crate provides a multi-producer, multi-consumer broadcast channel where each message sent is cloned and delivered to all receivers.  \n\u274c **Counterfactual:** The `async-broadcast` crate delivers each message to only one receiver, chosen randomly among the available receivers.  \n\n---\n\n### Pair 2: Overflow Mode  \n\u2705 **Factual:** `async-broadcast` supports an overflow mode where messages can be dropped when the channel is at capacity, ensuring that slow or inactive receivers do not block the channel.  \n\u274c **Counterfactual:** `async-broadcast` does not support overflow mode, and slow receivers always block the channel when it reaches capacity.  \n\n---\n\n### Pair 3: Comparison with `async-channel`  \n\u2705 **Factual:** Unlike `async-channel`, which delivers each message to only one receiver, `async-broadcast` ensures that every receiver gets a clone of each message sent.  \n\u274c **Counterfactual:** Similar to `async-channel`, `async-broadcast` delivers each message to only one receiver, making it unsuitable for broadcast use cases.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-5e3b5fd6-5395a094-1751258652",
+      "timestamp": "2025-06-30T04:44:12.777292+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

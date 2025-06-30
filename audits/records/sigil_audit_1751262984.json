@@ -1,0 +1,2413 @@
+[
+  {
+    "execution_id": "exec-a5a2729f-055bc1b1-1751262973",
+    "timestamp": "2025-06-30T05:56:13.765967+00:00",
+    "sacred_chain": {
+      "input_data": "spin",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'spin' -> 'spin'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "spin",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/spin",
+            "title": "spin v0.10.0",
+            "content": {
+              "raw_markdown": "#  spin v0.10.0\nSpin-based synchronization primitives \n  * [ #mutex ](https://crates.io/keywords/mutex)\n  * [ #rwlock ](https://crates.io/keywords/rwlock)\n  * [ #spinlock ](https://crates.io/keywords/spinlock)\n\n\n  * [ Readme ](https://crates.io/crates/spin)\n  * [ 39 Versions ](https://crates.io/crates/spin/versions)\n  * [ Dependencies ](https://crates.io/crates/spin/dependencies)\n  * [ Dependents ](https://crates.io/crates/spin/reverse_dependencies)\n\n\n## Metadata\n3 months ago \nv1.60.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n38.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add spin\nOr add the following line to your Cargo.toml:\nspin = \"0.10.0\"\n## Repository\n[ github.com/mvdnes/spin-rs ](https://github.com/mvdnes/spin-rs.git)\n## Owners\n[ Report crate ](https://crates.io/support?crate=spin&inquire=crate-violation)\n### Stats Overview\n293,529,718 Downloads all time\n39 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  spin v0.10.0\nSpin-based synchronization primitives \n  *  #mutex \u27e81\u27e9\n  *  #rwlock \u27e82\u27e9\n  *  #spinlock \u27e83\u27e9\n\n\n  *  Readme \u27e84\u27e9\n  *  39 Versions \u27e85\u27e9\n  *  Dependencies \u27e86\u27e9\n  *  Dependents \u27e87\u27e9\n\n\n## Metadata\n3 months ago \nv1.60.0 \n MIT \u27e88\u27e9\n38.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add spin\nOr add the following line to your Cargo.toml:\nspin = \"0.10.0\"\n## Repository\n github.com/mvdnes/spin-rs \u27e89\u27e9\n## Owners\n Report crate \u27e810\u27e9\n### Stats Overview\n293,529,718 Downloads all time\n39 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/mutex:  #mutex \n\u27e82\u27e9 https://crates.io/keywords/rwlock:  #rwlock \n\u27e83\u27e9 https://crates.io/keywords/spinlock:  #spinlock \n\u27e84\u27e9 https://crates.io/crates/spin:  Readme \n\u27e85\u27e9 https://crates.io/crates/spin/versions:  39 Versions \n\u27e86\u27e9 https://crates.io/crates/spin/dependencies:  Dependencies \n\u27e87\u27e9 https://crates.io/crates/spin/reverse_dependencies:  Dependents \n\u27e88\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e89\u27e9 https://github.com/mvdnes/spin-rs.git:  github.com/mvdnes/spin-rs \n\u27e810\u27e9 https://crates.io/support?crate=spin&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1038,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116763.672897"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/spin",
+            "title": "Crate spinCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\n[Settings](https://docs.rs/spin/latest/settings.html)\n[Help](https://docs.rs/spin/latest/help.html)\nSummary[Source](https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228)\nExpand description\nThis crate provides [spin-based](https://en.wikipedia.org/wiki/Spinlock) versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## [\u00a7](https://docs.rs/spin/latest/spin/#features)Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * [`lock_api`](https://crates.io/crates/lock_api) compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## [\u00a7](https://docs.rs/spin/latest/spin/#relationship-with-stdsync)Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and [should not be considered as such](https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html)) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards ([`MutexGuard`](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\"), [`RwLockReadGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\"), [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"), etc.) may be sent and shared between threads.\n  * [`RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\") supports being upgraded into a [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\").\n  * Guards support [leaking](https://doc.rust-lang.org/nomicon/leaking.html).\n  * [`Once`](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\") owns the value returned by its `call_once` initializer.\n  * [`RwLock`](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\") supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track [panic poisoning](https://doc.rust-lang.org/nomicon/poisoning.html).\n\n\n### [\u00a7](https://docs.rs/spin/latest/spin/#feature-flags)Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for [`lock_api`](https://crates.io/crates/lock_api)\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports[\u00a7](https://docs.rs/spin/latest/spin/#reexports)\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules[\u00a7](https://docs.rs/spin/latest/spin/#modules)\n\n[barrier](https://docs.rs/spin/latest/spin/barrier/index.html \"mod spin::barrier\")`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\n[lazy](https://docs.rs/spin/latest/spin/lazy/index.html \"mod spin::lazy\")`lazy`\n    Synchronization primitives for lazy evaluation.\n\n[lock_api](https://docs.rs/spin/latest/spin/lock_api/index.html \"mod spin::lock_api\")`lock_api`\n    Spin synchronisation primitives, but compatible with [`lock_api`](https://crates.io/crates/lock_api).\n\n[mutex](https://docs.rs/spin/latest/spin/mutex/index.html \"mod spin::mutex\")`mutex`\n    Locks that have the same behaviour as a mutex.\n\n[once](https://docs.rs/spin/latest/spin/once/index.html \"mod spin::once\")`once`\n    Synchronization primitives for one-time evaluation.\n\n[relax](https://docs.rs/spin/latest/spin/relax/index.html \"mod spin::relax\")\n    Strategies that determine the behaviour of locks when encountering contention.\n\n[rwlock](https://docs.rs/spin/latest/spin/rwlock/index.html \"mod spin::rwlock\")`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases[\u00a7](https://docs.rs/spin/latest/spin/#types)\n\n[Barrier](https://docs.rs/spin/latest/spin/type.Barrier.html \"type spin::Barrier\")`barrier`\n    A primitive that synchronizes the execution of multiple threads. See [`barrier::Barrier`](https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html \"struct spin::barrier::Barrier\") for documentation.\n\n[Lazy](https://docs.rs/spin/latest/spin/type.Lazy.html \"type spin::Lazy\")`lazy`\n    A value which is initialized on the first access. See [`lazy::Lazy`](https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html \"struct spin::lazy::Lazy\") for documentation.\n\n[Mutex](https://docs.rs/spin/latest/spin/type.Mutex.html \"type spin::Mutex\")`mutex`\n    A primitive that synchronizes the execution of multiple threads. See [`mutex::Mutex`](https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html \"struct spin::mutex::Mutex\") for documentation.\n\n[Once](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\")`once`\n    A primitive that provides lazy one-time initialization. See [`once::Once`](https://docs.rs/spin/latest/spin/once/struct.Once.html \"struct spin::once::Once\") for documentation.\n\n[RwLock](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\")`rwlock`\n    A lock that provides data access to either one writer or many readers. See [`rwlock::RwLock`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html \"struct spin::rwlock::RwLock\") for documentation.\n\n[RwLockUpgradableGuard](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\")`rwlock`\n    A guard that provides immutable data access but can be upgraded to [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"). See [`rwlock::RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html \"struct spin::rwlock::RwLockUpgradableGuard\") for documentation.\n\n[RwLockWriteGuard](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\")`rwlock`\n    A guard that provides mutable data access. See [`rwlock::RwLockWriteGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html \"struct spin::rwlock::RwLockWriteGuard\") for documentation.\n",
+              "markdown_with_citations": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis crate provides spin-based\u27e84\u27e9 versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## \u00a7\u27e85\u27e9Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * `lock_api`\u27e86\u27e9 compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## \u00a7\u27e87\u27e9Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and should not be considered as such\u27e88\u27e9) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards (`MutexGuard`\u27e89\u27e9, `RwLockReadGuard`\u27e810\u27e9, `RwLockWriteGuard`\u27e811\u27e9, etc.) may be sent and shared between threads.\n  * `RwLockUpgradableGuard`\u27e812\u27e9 supports being upgraded into a `RwLockWriteGuard`\u27e811\u27e9.\n  * Guards support leaking\u27e813\u27e9.\n  * `Once`\u27e814\u27e9 owns the value returned by its `call_once` initializer.\n  * `RwLock`\u27e815\u27e9 supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track panic poisoning\u27e816\u27e9.\n\n\n### \u00a7\u27e817\u27e9Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for `lock_api`\u27e86\u27e9\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports\u00a7\u27e818\u27e9\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules\u00a7\u27e819\u27e9\n\nbarrier\u27e820\u27e9`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\nlazy\u27e821\u27e9`lazy`\n    Synchronization primitives for lazy evaluation.\n\nlock_api\u27e822\u27e9`lock_api`\n    Spin synchronisation primitives, but compatible with `lock_api`\u27e86\u27e9.\n\nmutex\u27e823\u27e9`mutex`\n    Locks that have the same behaviour as a mutex.\n\nonce\u27e824\u27e9`once`\n    Synchronization primitives for one-time evaluation.\n\nrelax\u27e825\u27e9\n    Strategies that determine the behaviour of locks when encountering contention.\n\nrwlock\u27e826\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases\u00a7\u27e827\u27e9\n\nBarrier\u27e828\u27e9`barrier`\n    A primitive that synchronizes the execution of multiple threads. See `barrier::Barrier`\u27e829\u27e9 for documentation.\n\nLazy\u27e830\u27e9`lazy`\n    A value which is initialized on the first access. See `lazy::Lazy`\u27e831\u27e9 for documentation.\n\nMutex\u27e832\u27e9`mutex`\n    A primitive that synchronizes the execution of multiple threads. See `mutex::Mutex`\u27e833\u27e9 for documentation.\n\nOnce\u27e814\u27e9`once`\n    A primitive that provides lazy one-time initialization. See `once::Once`\u27e834\u27e9 for documentation.\n\nRwLock\u27e815\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers. See `rwlock::RwLock`\u27e835\u27e9 for documentation.\n\nRwLockUpgradableGuard\u27e812\u27e9`rwlock`\n    A guard that provides immutable data access but can be upgraded to `RwLockWriteGuard`\u27e811\u27e9. See `rwlock::RwLockUpgradableGuard`\u27e836\u27e9 for documentation.\n\nRwLockWriteGuard\u27e811\u27e9`rwlock`\n    A guard that provides mutable data access. See `rwlock::RwLockWriteGuard`\u27e837\u27e9 for documentation.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/spin/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/spin/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/Spinlock: spin-based\n\u27e85\u27e9 https://docs.rs/spin/latest/spin/#features: \u00a7\n\u27e86\u27e9 https://crates.io/crates/lock_api: `lock_api`\n\u27e87\u27e9 https://docs.rs/spin/latest/spin/#relationship-with-stdsync: \u00a7\n\u27e88\u27e9 https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html: should not be considered as such\n\u27e89\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html: struct spin::mutex::MutexGuard - `MutexGuard`\n\u27e810\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html: struct spin::rwlock::RwLockReadGuard - `RwLockReadGuard`\n\u27e811\u27e9 https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html: type spin::RwLockWriteGuard - `RwLockWriteGuard`\n\u27e812\u27e9 https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html: type spin::RwLockUpgradableGuard - `RwLockUpgradableGuard`\n\u27e813\u27e9 https://doc.rust-lang.org/nomicon/leaking.html: leaking\n\u27e814\u27e9 https://docs.rs/spin/latest/spin/type.Once.html: type spin::Once - `Once`\n\u27e815\u27e9 https://docs.rs/spin/latest/spin/type.RwLock.html: type spin::RwLock - `RwLock`\n\u27e816\u27e9 https://doc.rust-lang.org/nomicon/poisoning.html: panic poisoning\n\u27e817\u27e9 https://docs.rs/spin/latest/spin/#feature-flags: \u00a7\n\u27e818\u27e9 https://docs.rs/spin/latest/spin/#reexports: \u00a7\n\u27e819\u27e9 https://docs.rs/spin/latest/spin/#modules: \u00a7\n\u27e820\u27e9 https://docs.rs/spin/latest/spin/barrier/index.html: mod spin::barrier - barrier\n\u27e821\u27e9 https://docs.rs/spin/latest/spin/lazy/index.html: mod spin::lazy - lazy\n\u27e822\u27e9 https://docs.rs/spin/latest/spin/lock_api/index.html: mod spin::lock_api - lock_api\n\u27e823\u27e9 https://docs.rs/spin/latest/spin/mutex/index.html: mod spin::mutex - mutex\n\u27e824\u27e9 https://docs.rs/spin/latest/spin/once/index.html: mod spin::once - once\n\u27e825\u27e9 https://docs.rs/spin/latest/spin/relax/index.html: mod spin::relax - relax\n\u27e826\u27e9 https://docs.rs/spin/latest/spin/rwlock/index.html: mod spin::rwlock - rwlock\n\u27e827\u27e9 https://docs.rs/spin/latest/spin/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/spin/latest/spin/type.Barrier.html: type spin::Barrier - Barrier\n\u27e829\u27e9 https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html: struct spin::barrier::Barrier - `barrier::Barrier`\n\u27e830\u27e9 https://docs.rs/spin/latest/spin/type.Lazy.html: type spin::Lazy - Lazy\n\u27e831\u27e9 https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html: struct spin::lazy::Lazy - `lazy::Lazy`\n\u27e832\u27e9 https://docs.rs/spin/latest/spin/type.Mutex.html: type spin::Mutex - Mutex\n\u27e833\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html: struct spin::mutex::Mutex - `mutex::Mutex`\n\u27e834\u27e9 https://docs.rs/spin/latest/spin/once/struct.Once.html: struct spin::once::Once - `once::Once`\n\u27e835\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html: struct spin::rwlock::RwLock - `rwlock::RwLock`\n\u27e836\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html: struct spin::rwlock::RwLockUpgradableGuard - `rwlock::RwLockUpgradableGuard`\n\u27e837\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html: struct spin::rwlock::RwLockWriteGuard - `rwlock::RwLockWriteGuard`\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7630,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116764.4585072"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/spin",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [34 releases](https://lib.rs/crates/spin/versions)\nUses old Rust 2015\n0.10.0 |  Mar 26, 2025   \n---|---  \n0.9.8 |  Apr 3, 2023   \n0.9.7 |  ~~Mar 27, 2023~~  \n0.9.4 |  ~~Jul 14, 2022~~  \n0.1.3 |  Jan 30, 2015   \n#**2** in [Concurrency](https://lib.rs/concurrency \"Crates for implementing concurrent and parallel computation.\")\nDownload history 3472284/week @ 2025-03-08 3565429/week @ 2025-03-15 3505575/week @ 2025-03-22 2784167/week @ 2025-03-29 2871393/week @ 2025-04-05 2528006/week @ 2025-04-12 2507635/week @ 2025-04-19 2318699/week @ 2025-04-26 2420178/week @ 2025-05-03 2522214/week @ 2025-05-10 2523766/week @ 2025-05-17 2212562/week @ 2025-05-24 2461883/week @ 2025-05-31 2494104/week @ 2025-06-07 2575029/week @ 2025-06-14 2810109/week @ 2025-06-21\n**10,747,564** downloads per month Used in [**12,084** crates (364 directly)](https://lib.rs/crates/spin/rev)\n**MIT** license \n160KB  2.5K  SLoC\n# spin-rs\n[![Crates.io version](https://img.shields.io/crates/v/spin.svg)](https://crates.io/crates/spin) [![docs.rs](https://img.gs/czjpqfbdkz/full/https://docs.rs/spin/badge.svg)](https://docs.rs/spin/) [![Build Status](https://img.gs/czjpqfbdkz/full/https://travis-ci.org/mvdnes/spin-rs.svg)](https://travis-ci.org/mvdnes/spin-rs)\nSpin-based synchronization primitives.\nThis crate provides [spin-based](https://en.wikipedia.org/wiki/Spinlock) versions of the primitives in ```std`::``sync``. Because synchronization is done through spinning, the primitives are suitable for use in ``no_std`` environments.\nBefore deciding to use ``spin``, we recommend reading [this superb blog post](https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html) by [@matklad](https://github.com/matklad/) that discusses the pros and cons of spinlocks. If you have access to ``std``, it's likely that the primitives in ```std`::``sync`` will serve you better except in very specific circumstances.\n## Features\n  * ``Mutex``, ``RwLock``, ``Once``, ``Lazy`` and ``Barrier`` equivalents\n  * Support for ``no_std`` environments\n  * [``lock_api``](https://lib.rs/crates/lock_api) compatibility\n  * Upgradeable ``RwLock`` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## Usage\nInclude the following under the ````[``dependencies``]```` section in your ``Cargo.toml`` file.\n```\n`spin = \"x.y\"\n`\n```\n\n## Example\nWhen calling ``lock`` on a ``Mutex`` you will get a guard value that provides access to the data. When this guard is dropped, the mutex will become available again.\n```\n``extern` `crate` spin`;`\n`use` `std`::````{``sync`::``Arc`,` thread```}```;`\n``fn` `main`````(````)``````{`\n  `let` counter `=` `Arc`::``new`(``spin`::```Mutex`::``new`(``0``)``)``;`\n  `let` thread `=` `thread`::``spawn`(``{`\n    `let` counter `=` counter`.``clone``(``)``;`\n    `move` `||` `{`\n      `for` `_` `in` `0``..``100` `{`\n        `*`counter`.``lock``(``)` `+=` `1``;`\n      `}`\n    `}`\n  `}``)``;`\n  `for` `_` `in` `0``..``100` `{`\n    `*`counter`.``lock``(``)` `+=` `1``;`\n  `}`\n  thread`.``join``(``)``.``unwrap``(``)``;`\n  `assert_eq!``(``*`counter`.``lock``(``)``,` `200``)``;`\n```}```\n`\n```\n\n## Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * ``mutex`` enables the ``Mutex`` type.\n  * ``spin_mutex`` enables the ``SpinMutex`` type.\n  * ``ticket_mutex`` enables the ``TicketMutex`` type.\n  * ``use_ticket_mutex`` switches to a ticket lock for the implementation of ``Mutex``. This is recommended only on targets for which ordinary spinning locks perform very badly because it will change the implementation used by other crates that depend on ``spin``.\n  * ``rwlock`` enables the ``RwLock`` type.\n  * ``once`` enables the ``Once`` type.\n  * ``lazy`` enables the ``Lazy`` type.\n  * ``barrier`` enables the ``Barrier`` type.\n  * ``lock_api`` enables support for [``lock_api``](https://lib.rs/crates/lock_api)\n  * ``std`` enables support for thread yielding instead of spinning.\n  * ``portable-atomic`` enables usage of the ``portable-atomic`` crate to support platforms without native atomic operations (Cortex-M0, etc.). The ``portable_atomic_unsafe_assume_single_core`` or ``critical-section`` feature of ``portable-atomic`` crate must also be set by the final binary crate. See the documentation for the ``portable-atomic`` crate for more information with some requirements for no-std build: <https://github.com/taiki-e/portable-atomic#optional-features>\n\n\n## Remarks\nIt is often desirable to have a lock shared between threads. Wrapping the lock in an ```std`::```sync`::``Arc`` is route through which this might be achieved.\nLocks provide zero-overhead access to their data when accessed through a mutable reference by using their ``get_mut`` methods.\nThe behaviour of these lock is similar to their namesakes in ```std`::``sync``. they differ on the following:\n  * Locks will not be poisoned in case of failure.\n  * Threads will not yield to the OS scheduler when encounter a lock that cannot be accessed. Instead, they will 'spin' in a busy loop until the lock becomes available.\n\n\nMany of the feature flags listed above are enabled by default. If you're writing a library, we recommend disabling those that you don't use to avoid increasing compilation time for your crate's users. You can do this like so:\n```\n```[``dependencies``]`\n`spin = { version = \"x.y\", default-features = false, features ``=` ``[`...`]`` }\n``\n```\n\n## Minimum Safe Rust Version (MSRV)\nThis crate is guaranteed to compile on a Minimum Safe Rust Version (MSRV) of 1.60.0 and above. This version will not be changed without a minor version bump.\n## License\n``spin`` is distributed under the MIT License, (See ``LICENSE``).\n#### Dependencies\n~0\u2013305KB \n  * [lock_api](https://lib.rs/crates/spin/features#feature-lock_api \"default feature\") [lock_api](https://lib.rs/crates/lock_api \"renamed lock_api_crate, 0.4\")\n  * [ optional ](https://lib.rs/crates/spin/features#feature-portable-atomic \"portable-atomic is optional feature\") [portable-atomic](https://lib.rs/crates/portable-atomic \"1.3\")[+require-cas](https://lib.rs/crates/portable-atomic/features#feature-require-cas)\n\n\n  * dev  [criterion](https://lib.rs/crates/criterion \"obsolete\") 0.4\n\n\n#### [Other features](https://lib.rs/crates/spin/features)\n  * [barrier](https://lib.rs/crates/spin/features#feature-barrier)\n  * [fair_mutex](https://lib.rs/crates/spin/features#feature-fair_mutex)\n  * [lazy](https://lib.rs/crates/spin/features#feature-lazy)\n  * [mutex](https://lib.rs/crates/spin/features#feature-mutex)\n  * [once](https://lib.rs/crates/spin/features#feature-once)\n  * [portable_atomic](https://lib.rs/crates/spin/features#feature-portable_atomic)\n  * [rwlock](https://lib.rs/crates/spin/features#feature-rwlock)\n  * [spin_mutex](https://lib.rs/crates/spin/features#feature-spin_mutex)\n  * [std](https://lib.rs/crates/spin/features#feature-std)\n  * [ticket_mutex](https://lib.rs/crates/spin/features#feature-ticket_mutex)\n  * [use_ticket_mutex](https://lib.rs/crates/spin/features#feature-use_ticket_mutex)\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  34 releases\u27e81\u27e9\nUses old Rust 2015\n0.10.0 |  Mar 26, 2025   \n---|---  \n0.9.8 |  Apr 3, 2023   \n0.9.7 |  ~~Mar 27, 2023~~  \n0.9.4 |  ~~Jul 14, 2022~~  \n0.1.3 |  Jan 30, 2015   \n#**2** in Concurrency\u27e82\u27e9\nDownload history 3472284/week @ 2025-03-08 3565429/week @ 2025-03-15 3505575/week @ 2025-03-22 2784167/week @ 2025-03-29 2871393/week @ 2025-04-05 2528006/week @ 2025-04-12 2507635/week @ 2025-04-19 2318699/week @ 2025-04-26 2420178/week @ 2025-05-03 2522214/week @ 2025-05-10 2523766/week @ 2025-05-17 2212562/week @ 2025-05-24 2461883/week @ 2025-05-31 2494104/week @ 2025-06-07 2575029/week @ 2025-06-14 2810109/week @ 2025-06-21\n**10,747,564** downloads per month Used in **12,084** crates (364 directly)\u27e83\u27e9\n**MIT** license \n160KB  2.5K  SLoC\n# spin-rs\n![Crates.io version\u27e84\u27e9](https://crates.io/crates/spin) ![docs.rs\u27e85\u27e9](https://docs.rs/spin/) ![Build Status\u27e86\u27e9](https://travis-ci.org/mvdnes/spin-rs)\nSpin-based synchronization primitives.\nThis crate provides spin-based\u27e87\u27e9 versions of the primitives in ```std`::``sync``. Because synchronization is done through spinning, the primitives are suitable for use in ``no_std`` environments.\nBefore deciding to use ``spin``, we recommend reading this superb blog post\u27e88\u27e9 by @matklad\u27e89\u27e9 that discusses the pros and cons of spinlocks. If you have access to ``std``, it's likely that the primitives in ```std`::``sync`` will serve you better except in very specific circumstances.\n## Features\n  * ``Mutex``, ``RwLock``, ``Once``, ``Lazy`` and ``Barrier`` equivalents\n  * Support for ``no_std`` environments\n  * ``lock_api``\u27e810\u27e9 compatibility\n  * Upgradeable ``RwLock`` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## Usage\nInclude the following under the ````[``dependencies``]```` section in your ``Cargo.toml`` file.\n```\n`spin = \"x.y\"\n`\n```\n\n## Example\nWhen calling ``lock`` on a ``Mutex`` you will get a guard value that provides access to the data. When this guard is dropped, the mutex will become available again.\n```\n``extern` `crate` spin`;`\n`use` `std`::````{``sync`::``Arc`,` thread```}```;`\n``fn` `main`````(````)``````{`\n  `let` counter `=` `Arc`::``new`(``spin`::```Mutex`::``new`(``0``)``)``;`\n  `let` thread `=` `thread`::``spawn`(``{`\n    `let` counter `=` counter`.``clone``(``)``;`\n    `move` `||` `{`\n      `for` `_` `in` `0``..``100` `{`\n        `*`counter`.``lock``(``)` `+=` `1``;`\n      `}`\n    `}`\n  `}``)``;`\n  `for` `_` `in` `0``..``100` `{`\n    `*`counter`.``lock``(``)` `+=` `1``;`\n  `}`\n  thread`.``join``(``)``.``unwrap``(``)``;`\n  `assert_eq!``(``*`counter`.``lock``(``)``,` `200``)``;`\n```}```\n`\n```\n\n## Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * ``mutex`` enables the ``Mutex`` type.\n  * ``spin_mutex`` enables the ``SpinMutex`` type.\n  * ``ticket_mutex`` enables the ``TicketMutex`` type.\n  * ``use_ticket_mutex`` switches to a ticket lock for the implementation of ``Mutex``. This is recommended only on targets for which ordinary spinning locks perform very badly because it will change the implementation used by other crates that depend on ``spin``.\n  * ``rwlock`` enables the ``RwLock`` type.\n  * ``once`` enables the ``Once`` type.\n  * ``lazy`` enables the ``Lazy`` type.\n  * ``barrier`` enables the ``Barrier`` type.\n  * ``lock_api`` enables support for ``lock_api``\u27e810\u27e9\n  * ``std`` enables support for thread yielding instead of spinning.\n  * ``portable-atomic`` enables usage of the ``portable-atomic`` crate to support platforms without native atomic operations (Cortex-M0, etc.). The ``portable_atomic_unsafe_assume_single_core`` or ``critical-section`` feature of ``portable-atomic`` crate must also be set by the final binary crate. See the documentation for the ``portable-atomic`` crate for more information with some requirements for no-std build: <https://github.com/taiki-e/portable-atomic#optional-features>\n\n\n## Remarks\nIt is often desirable to have a lock shared between threads. Wrapping the lock in an ```std`::```sync`::``Arc`` is route through which this might be achieved.\nLocks provide zero-overhead access to their data when accessed through a mutable reference by using their ``get_mut`` methods.\nThe behaviour of these lock is similar to their namesakes in ```std`::``sync``. they differ on the following:\n  * Locks will not be poisoned in case of failure.\n  * Threads will not yield to the OS scheduler when encounter a lock that cannot be accessed. Instead, they will 'spin' in a busy loop until the lock becomes available.\n\n\nMany of the feature flags listed above are enabled by default. If you're writing a library, we recommend disabling those that you don't use to avoid increasing compilation time for your crate's users. You can do this like so:\n```\n```[``dependencies``]`\n`spin = { version = \"x.y\", default-features = false, features ``=` ``[`...`]`` }\n``\n```\n\n## Minimum Safe Rust Version (MSRV)\nThis crate is guaranteed to compile on a Minimum Safe Rust Version (MSRV) of 1.60.0 and above. This version will not be changed without a minor version bump.\n## License\n``spin`` is distributed under the MIT License, (See ``LICENSE``).\n#### Dependencies\n~0\u2013305KB \n  * lock_api\u27e811\u27e9 lock_api\u27e810\u27e9\n  *  optional \u27e812\u27e9 portable-atomic\u27e813\u27e9+require-cas\u27e814\u27e9\n\n\n  * dev  criterion\u27e815\u27e9 0.4\n\n\n#### Other features\u27e816\u27e9\n  * barrier\u27e817\u27e9\n  * fair_mutex\u27e818\u27e9\n  * lazy\u27e819\u27e9\n  * mutex\u27e820\u27e9\n  * once\u27e821\u27e9\n  * portable_atomic\u27e822\u27e9\n  * rwlock\u27e823\u27e9\n  * spin_mutex\u27e824\u27e9\n  * std\u27e825\u27e9\n  * ticket_mutex\u27e826\u27e9\n  * use_ticket_mutex\u27e827\u27e9\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/spin/versions: 34 releases\n\u27e82\u27e9 https://lib.rs/concurrency: Crates for implementing concurrent and parallel computation. - Concurrency\n\u27e83\u27e9 https://lib.rs/crates/spin/rev: **12,084** crates (364 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/spin.svg: ![Crates.io version\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/spin/badge.svg: ![docs.rs\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://travis-ci.org/mvdnes/spin-rs.svg: ![Build Status\n\u27e87\u27e9 https://en.wikipedia.org/wiki/Spinlock: spin-based\n\u27e88\u27e9 https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html: this superb blog post\n\u27e89\u27e9 https://github.com/matklad/: @matklad\n\u27e810\u27e9 https://lib.rs/crates/lock_api: ``lock_api``\n\u27e811\u27e9 https://lib.rs/crates/spin/features#feature-lock_api: default feature - lock_api\n\u27e812\u27e9 https://lib.rs/crates/spin/features#feature-portable-atomic: portable-atomic is optional feature -  optional \n\u27e813\u27e9 https://lib.rs/crates/portable-atomic: 1.3 - portable-atomic\n\u27e814\u27e9 https://lib.rs/crates/portable-atomic/features#feature-require-cas: +require-cas\n\u27e815\u27e9 https://lib.rs/crates/criterion: obsolete - criterion\n\u27e816\u27e9 https://lib.rs/crates/spin/features: Other features\n\u27e817\u27e9 https://lib.rs/crates/spin/features#feature-barrier: barrier\n\u27e818\u27e9 https://lib.rs/crates/spin/features#feature-fair_mutex: fair_mutex\n\u27e819\u27e9 https://lib.rs/crates/spin/features#feature-lazy: lazy\n\u27e820\u27e9 https://lib.rs/crates/spin/features#feature-mutex: mutex\n\u27e821\u27e9 https://lib.rs/crates/spin/features#feature-once: once\n\u27e822\u27e9 https://lib.rs/crates/spin/features#feature-portable_atomic: portable_atomic\n\u27e823\u27e9 https://lib.rs/crates/spin/features#feature-rwlock: rwlock\n\u27e824\u27e9 https://lib.rs/crates/spin/features#feature-spin_mutex: spin_mutex\n\u27e825\u27e9 https://lib.rs/crates/spin/features#feature-std: std\n\u27e826\u27e9 https://lib.rs/crates/spin/features#feature-ticket_mutex: ticket_mutex\n\u27e827\u27e9 https://lib.rs/crates/spin/features#feature-use_ticket_mutex: use_ticket_mutex\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7126,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116764.8663617"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.1.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\libscopeguard-b9c5b28c83a30656.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\liblock_api-003dffd9180b0853.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `lock_api1`\n   --> src\\rwlock.rs:934:7\n    |\n934 | #[cfg(feature = \"lock_api1\")]\n    |       ^^^^^^^^^^-----------\n    |                 |\n    |                 help: there is a expected value with a similar name: `\"lock_api\"`\n    |\n    = note: expected values for `feature` are: `barrier`, `default`, `fair_mutex`, `lazy`, `lock_api`, `mutex`, `once`, `portable-atomic`, `portable_atomic`, `rwlock`, `spin_mutex`, `std`, `ticket_mutex`, and `use_ticket_mutex`\n    = help: consider adding `lock_api1` as a feature in `Cargo.toml`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `barrier`, `default`, `fair_mutex`, `lazy`, `lock_api`, `mutex`, `once`, `portable-atomic`, `portable_atomic`, `rwlock`, `spin_mutex`, `std`, `ticket_mutex`, and `use_ticket_mutex`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `lock_api1` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "there is a expected value with a similar name",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30365,
+                        "byte_start": 30354,
+                        "column_end": 28,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 934,
+                        "line_start": 934,
+                        "suggested_replacement": "\"lock_api\"",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 28,
+                            "highlight_start": 17,
+                            "text": "#[cfg(feature = \"lock_api1\")]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `lock_api1`",
+                "spans": [
+                  {
+                    "byte_end": 30365,
+                    "byte_start": 30344,
+                    "column_end": 28,
+                    "column_start": 7,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 934,
+                    "line_start": 934,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 7,
+                        "text": "#[cfg(feature = \"lock_api1\")]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "barrier",
+                "default",
+                "lazy",
+                "lock_api",
+                "mutex",
+                "once",
+                "rwlock",
+                "spin_mutex"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\libspin-f63afe047ae796a5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.1.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\libscopeguard-b9c5b28c83a30656.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\liblock_api-003dffd9180b0853.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `lock_api1`\n   --> src\\rwlock.rs:934:7\n    |\n934 | #[cfg(feature = \"lock_api1\")]\n    |       ^^^^^^^^^^-----------\n    |                 |\n    |                 help: there is a expected value with a similar name: `\"lock_api\"`\n    |\n    = note: expected values for `feature` are: `barrier`, `default`, `fair_mutex`, `lazy`, `lock_api`, `mutex`, `once`, `portable-atomic`, `portable_atomic`, `rwlock`, `spin_mutex`, `std`, `ticket_mutex`, and `use_ticket_mutex`\n    = help: consider adding `lock_api1` as a feature in `Cargo.toml`\n    = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n    = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `barrier`, `default`, `fair_mutex`, `lazy`, `lock_api`, `mutex`, `once`, `portable-atomic`, `portable_atomic`, `rwlock`, `spin_mutex`, `std`, `ticket_mutex`, and `use_ticket_mutex`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `lock_api1` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "there is a expected value with a similar name",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30365,
+                        "byte_start": 30354,
+                        "column_end": 28,
+                        "column_start": 17,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 934,
+                        "line_start": 934,
+                        "suggested_replacement": "\"lock_api\"",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 28,
+                            "highlight_start": 17,
+                            "text": "#[cfg(feature = \"lock_api1\")]"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `lock_api1`",
+                "spans": [
+                  {
+                    "byte_end": 30365,
+                    "byte_start": 30344,
+                    "column_end": 28,
+                    "column_start": 7,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 934,
+                    "line_start": 934,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 7,
+                        "text": "#[cfg(feature = \"lock_api1\")]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression borrows a value the compiler would automatically borrow\n   --> src\\mutex\\spin.rs:293:32\n    |\n293 |                 .and_then(|()| (&*guard).fmt(f))\n    |                                ^^^^^^^^^ help: change this to: `(*guard)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8746,
+                        "byte_start": 8737,
+                        "column_end": 41,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\mutex\\spin.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 293,
+                        "line_start": 293,
+                        "suggested_replacement": "(*guard)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 32,
+                            "text": "                .and_then(|()| (&*guard).fmt(f))"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression borrows a value the compiler would automatically borrow",
+                "spans": [
+                  {
+                    "byte_end": 8746,
+                    "byte_start": 8737,
+                    "column_end": 41,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\mutex\\spin.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 293,
+                    "line_start": 293,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 32,
+                        "text": "                .and_then(|()| (&*guard).fmt(f))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: `?Sized` bound is ignored because of a `Sized` requirement\n   --> src\\mutex\\spin.rs:300:9\n    |\n300 | impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {\n    |         ^^^^^^\n    |\nnote: `T` cannot be unsized because of the bound\n   --> src\\mutex\\spin.rs:300:18\n    |\n300 | impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {\n    |                  ^^^^^^^\n    = note: ...because `Default` has the bound `Sized`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized\n    = note: `#[warn(clippy::needless_maybe_sized)]` on by default\nhelp: change the bounds that require `Sized`, or remove the `?Sized` bound\n    |\n300 - impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {\n300 + impl<T: Default, R> Default for SpinMutex<T, R> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`T` cannot be unsized because of the bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8903,
+                        "byte_start": 8896,
+                        "column_end": 25,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\mutex\\spin.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 300,
+                        "line_start": 300,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 18,
+                            "text": "impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "...because `Default` has the bound `Sized`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_maybe_sized)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change the bounds that require `Sized`, or remove the `?Sized` bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 8896,
+                        "byte_start": 8887,
+                        "column_end": 18,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\mutex\\spin.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 300,
+                        "line_start": 300,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 9,
+                            "text": "impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_maybe_sized",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "`?Sized` bound is ignored because of a `Sized` requirement",
+                "spans": [
+                  {
+                    "byte_end": 8893,
+                    "byte_start": 8887,
+                    "column_end": 15,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\mutex\\spin.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 300,
+                    "line_start": 300,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 9,
+                        "text": "impl<T: ?Sized + Default, R> Default for SpinMutex<T, R> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n   --> src\\mutex\\spin.rs:372:5\n    |\n372 |     const INIT: Self = Self::new(());\n    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n    = note: `#[warn(clippy::declare_interior_mutable_const)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::declare_interior_mutable_const)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 11038,
+                    "byte_start": 11005,
+                    "column_end": 38,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\mutex\\spin.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 372,
+                    "line_start": 372,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 5,
+                        "text": "    const INIT: Self = Self::new(());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: `?Sized` bound is ignored because of a `Sized` requirement\n   --> src\\mutex.rs:261:9\n    |\n261 | impl<T: ?Sized + Default, R> Default for Mutex<T, R> {\n    |         ^^^^^^\n    |\nnote: `T` cannot be unsized because of the bound\n   --> src\\mutex.rs:261:18\n    |\n261 | impl<T: ?Sized + Default, R> Default for Mutex<T, R> {\n    |                  ^^^^^^^\n    = note: ...because `Default` has the bound `Sized`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized\nhelp: change the bounds that require `Sized`, or remove the `?Sized` bound\n    |\n261 - impl<T: ?Sized + Default, R> Default for Mutex<T, R> {\n261 + impl<T: Default, R> Default for Mutex<T, R> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`T` cannot be unsized because of the bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7903,
+                        "byte_start": 7896,
+                        "column_end": 25,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\mutex.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 261,
+                        "line_start": 261,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 18,
+                            "text": "impl<T: ?Sized + Default, R> Default for Mutex<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "...because `Default` has the bound `Sized`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change the bounds that require `Sized`, or remove the `?Sized` bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7896,
+                        "byte_start": 7887,
+                        "column_end": 18,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\mutex.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 261,
+                        "line_start": 261,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 9,
+                            "text": "impl<T: ?Sized + Default, R> Default for Mutex<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_maybe_sized",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "`?Sized` bound is ignored because of a `Sized` requirement",
+                "spans": [
+                  {
+                    "byte_end": 7893,
+                    "byte_start": 7887,
+                    "column_end": 15,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 261,
+                    "line_start": 261,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 9,
+                        "text": "impl<T: ?Sized + Default, R> Default for Mutex<T, R> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: deref which would be done by auto-deref\n   --> src\\mutex.rs:307:9\n    |\n307 |         &*self.inner\n    |         ^^^^^^^^^^^^ help: try: `&self.inner`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n    = note: `#[warn(clippy::explicit_auto_deref)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::explicit_auto_deref)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9109,
+                        "byte_start": 9097,
+                        "column_end": 21,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\mutex.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 307,
+                        "line_start": 307,
+                        "suggested_replacement": "&self.inner",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 9,
+                            "text": "        &*self.inner"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 9109,
+                    "byte_start": 9097,
+                    "column_end": 21,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 307,
+                    "line_start": 307,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 21,
+                        "highlight_start": 9,
+                        "text": "        &*self.inner"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: deref which would be done by auto-deref\n   --> src\\mutex.rs:313:9\n    |\n313 |         &mut *self.inner\n    |         ^^^^^^^^^^^^^^^^ help: try: `&mut self.inner`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#explicit_auto_deref",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9236,
+                        "byte_start": 9220,
+                        "column_end": 25,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\mutex.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 313,
+                        "line_start": 313,
+                        "suggested_replacement": "&mut self.inner",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 9,
+                            "text": "        &mut *self.inner"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::explicit_auto_deref",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "deref which would be done by auto-deref",
+                "spans": [
+                  {
+                    "byte_end": 9236,
+                    "byte_start": 9220,
+                    "column_end": 25,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 313,
+                    "line_start": 313,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 25,
+                        "highlight_start": 9,
+                        "text": "        &mut *self.inner"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n   --> src\\mutex.rs:321:5\n    |\n321 |     const INIT: Self = Self::new(());\n    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 9437,
+                    "byte_start": 9404,
+                    "column_end": 38,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 321,
+                    "line_start": 321,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 5,
+                        "text": "    const INIT: Self = Self::new(());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: usage of a legacy numeric constant\n   --> src\\rwlock.rs:263:36\n    |\n263 |         const MAX_READERS: usize = core::usize::MAX / READER / 2;\n    |                                    ^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants\n    = note: `#[warn(clippy::legacy_numeric_constants)]` on by default\nhelp: use the associated constant instead\n    |\n263 -         const MAX_READERS: usize = core::usize::MAX / READER / 2;\n263 +         const MAX_READERS: usize = usize::MAX / READER / 2;\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#legacy_numeric_constants",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::legacy_numeric_constants)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use the associated constant instead",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 9105,
+                        "byte_start": 9089,
+                        "column_end": 52,
+                        "column_start": 36,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 263,
+                        "line_start": 263,
+                        "suggested_replacement": "usize::MAX",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 52,
+                            "highlight_start": 36,
+                            "text": "        const MAX_READERS: usize = core::usize::MAX / READER / 2;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::legacy_numeric_constants",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "usage of a legacy numeric constant",
+                "spans": [
+                  {
+                    "byte_end": 9105,
+                    "byte_start": 9089,
+                    "column_end": 52,
+                    "column_start": 36,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 263,
+                    "line_start": 263,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 52,
+                        "highlight_start": 36,
+                        "text": "        const MAX_READERS: usize = core::usize::MAX / READER / 2;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression borrows a value the compiler would automatically borrow\n   --> src\\rwlock.rs:460:32\n    |\n460 |                 .and_then(|()| (&*guard).fmt(f))\n    |                                ^^^^^^^^^ help: change this to: `(*guard)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16405,
+                        "byte_start": 16396,
+                        "column_end": 41,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 460,
+                        "line_start": 460,
+                        "suggested_replacement": "(*guard)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 32,
+                            "text": "                .and_then(|()| (&*guard).fmt(f))"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression borrows a value the compiler would automatically borrow",
+                "spans": [
+                  {
+                    "byte_end": 16405,
+                    "byte_start": 16396,
+                    "column_end": 41,
+                    "column_start": 32,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 460,
+                    "line_start": 460,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 32,
+                        "text": "                .and_then(|()| (&*guard).fmt(f))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: `?Sized` bound is ignored because of a `Sized` requirement\n   --> src\\rwlock.rs:467:9\n    |\n467 | impl<T: ?Sized + Default, R> Default for RwLock<T, R> {\n    |         ^^^^^^\n    |\nnote: `T` cannot be unsized because of the bound\n   --> src\\rwlock.rs:467:18\n    |\n467 | impl<T: ?Sized + Default, R> Default for RwLock<T, R> {\n    |                  ^^^^^^^\n    = note: ...because `Default` has the bound `Sized`\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized\nhelp: change the bounds that require `Sized`, or remove the `?Sized` bound\n    |\n467 - impl<T: ?Sized + Default, R> Default for RwLock<T, R> {\n467 + impl<T: Default, R> Default for RwLock<T, R> {\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`T` cannot be unsized because of the bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16563,
+                        "byte_start": 16556,
+                        "column_end": 25,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 467,
+                        "line_start": 467,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 18,
+                            "text": "impl<T: ?Sized + Default, R> Default for RwLock<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "...because `Default` has the bound `Sized`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_maybe_sized",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change the bounds that require `Sized`, or remove the `?Sized` bound",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 16556,
+                        "byte_start": 16547,
+                        "column_end": 18,
+                        "column_start": 9,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 467,
+                        "line_start": 467,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 9,
+                            "text": "impl<T: ?Sized + Default, R> Default for RwLock<T, R> {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_maybe_sized",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "`?Sized` bound is ignored because of a `Sized` requirement",
+                "spans": [
+                  {
+                    "byte_end": 16553,
+                    "byte_start": 16547,
+                    "column_end": 15,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 467,
+                    "line_start": 467,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 15,
+                        "highlight_start": 9,
+                        "text": "impl<T: ?Sized + Default, R> Default for RwLock<T, R> {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n   --> src\\rwlock.rs:824:5\n    |\n824 |     const INIT: Self = Self::new(());\n    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 27611,
+                    "byte_start": 27578,
+                    "column_end": 38,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 824,
+                    "line_start": 824,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 5,
+                        "text": "    const INIT: Self = Self::new(());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant closure\n   --> src\\rwlock.rs:835:30\n    |\n835 |         self.try_write().map(|g| core::mem::forget(g)).is_some()\n    |                              ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace the closure with the function itself: `core::mem::forget`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure\n    = note: `#[warn(clippy::redundant_closure)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_closure)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the closure with the function itself",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 27920,
+                        "byte_start": 27896,
+                        "column_end": 54,
+                        "column_start": 30,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 835,
+                        "line_start": 835,
+                        "suggested_replacement": "core::mem::forget",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 54,
+                            "highlight_start": 30,
+                            "text": "        self.try_write().map(|g| core::mem::forget(g)).is_some()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_closure",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant closure",
+                "spans": [
+                  {
+                    "byte_end": 27920,
+                    "byte_start": 27896,
+                    "column_end": 54,
+                    "column_start": 30,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 835,
+                    "line_start": 835,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 54,
+                        "highlight_start": 30,
+                        "text": "        self.try_write().map(|g| core::mem::forget(g)).is_some()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant closure\n   --> src\\rwlock.rs:856:29\n    |\n856 |         self.try_read().map(|g| core::mem::forget(g)).is_some()\n    |                             ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace the closure with the function itself: `core::mem::forget`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the closure with the function itself",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28437,
+                        "byte_start": 28413,
+                        "column_end": 53,
+                        "column_start": 29,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 856,
+                        "line_start": 856,
+                        "suggested_replacement": "core::mem::forget",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 53,
+                            "highlight_start": 29,
+                            "text": "        self.try_read().map(|g| core::mem::forget(g)).is_some()"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_closure",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant closure",
+                "spans": [
+                  {
+                    "byte_end": 28437,
+                    "byte_start": 28413,
+                    "column_end": 53,
+                    "column_start": 29,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 856,
+                    "line_start": 856,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 53,
+                        "highlight_start": 29,
+                        "text": "        self.try_read().map(|g| core::mem::forget(g)).is_some()"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant closure\n   --> src\\rwlock.rs:885:18\n    |\n885 |             .map(|g| core::mem::forget(g))\n    |                  ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace the closure with the function itself: `core::mem::forget`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the closure with the function itself",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 29186,
+                        "byte_start": 29162,
+                        "column_end": 42,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 885,
+                        "line_start": 885,
+                        "suggested_replacement": "core::mem::forget",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 18,
+                            "text": "            .map(|g| core::mem::forget(g))"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_closure",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant closure",
+                "spans": [
+                  {
+                    "byte_end": 29186,
+                    "byte_start": 29162,
+                    "column_end": 42,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 885,
+                    "line_start": 885,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 18,
+                        "text": "            .map(|g| core::mem::forget(g))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant closure\n   --> src\\rwlock.rs:917:18\n    |\n917 |             .map(|g| core::mem::forget(g))\n    |                  ^^^^^^^^^^^^^^^^^^^^^^^^ help: replace the closure with the function itself: `core::mem::forget`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_closure",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace the closure with the function itself",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 29960,
+                        "byte_start": 29936,
+                        "column_end": 42,
+                        "column_start": 18,
+                        "expansion": null,
+                        "file_name": "src\\rwlock.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 917,
+                        "line_start": 917,
+                        "suggested_replacement": "core::mem::forget",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 42,
+                            "highlight_start": 18,
+                            "text": "            .map(|g| core::mem::forget(g))"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_closure",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant closure",
+                "spans": [
+                  {
+                    "byte_end": 29960,
+                    "byte_start": 29936,
+                    "column_end": 42,
+                    "column_start": 18,
+                    "expansion": null,
+                    "file_name": "src\\rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 917,
+                    "line_start": 917,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 18,
+                        "text": "            .map(|g| core::mem::forget(g))"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp7il1v883/spin-0.10.0#spin@0.10.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "spin",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "barrier",
+                "default",
+                "lazy",
+                "lock_api",
+                "mutex",
+                "once",
+                "rwlock",
+                "spin_mutex"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp7il1v883\\spin-0.10.0\\target\\debug\\deps\\libspin-50539fd215af7499.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 68
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.133",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0375",
+                    "package": "atty",
+                    "title": "`atty` is unmaintained",
+                    "description": "The maintainer of `atty` has [published](https://github.com/softprops/atty/commit/5bfdbe9e48c6ca6a4909e8d5b04f5e843a257e93) an official notice that the crate is no longer\nunder development, and that users should instead rely on the functionality in the standard library's [`IsTerminal`](https://doc.rust-lang.org/std/io/trait.IsTerminal.html) trait.\n\n## Alternative(s)\n\n- [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0 and the recommended replacement per the `atty` maintainer.\n- [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2024-09-25",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/57",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "unsound": [
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "atty",
+                    "version": "0.2.14",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "d9b39be18770d11421cdb1b9947a45dd3f37e93092cbf377614828a319d5fee8",
+                    "dependencies": [
+                      {
+                        "name": "hermit-abi",
+                        "version": "0.1.19",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "libc",
+                        "version": "0.2.133",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "winapi",
+                        "version": "0.3.9",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2021-0145",
+                    "package": "atty",
+                    "title": "Potential unaligned read",
+                    "description": "On windows, `atty` dereferences a potentially unaligned pointer.\n\nIn practice however, the pointer won't be unaligned unless a custom global allocator is used.\n\nIn particular, the `System` allocator on windows uses `HeapAlloc`, which guarantees a large enough alignment.\n\n# atty is Unmaintained\n\nA Pull Request with a fix has been provided over a year ago but the maintainer seems to be unreachable.\n\nLast release of `atty` was almost 3 years ago.\n\n## Possible Alternative(s)\n\nThe below list has not been vetted in any way and may or may not contain alternatives;\n\n - [std::io::IsTerminal](https://doc.rust-lang.org/stable/std/io/trait.IsTerminal.html) - Stable since Rust 1.70.0\n - [is-terminal](https://crates.io/crates/is-terminal) - Standalone crate supporting Rust older than 1.70.0",
+                    "date": "2021-07-04",
+                    "aliases": [
+                      "GHSA-g98v-hv3f-hcfr"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [
+                      "unaligned-read"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "references": [
+                      "https://github.com/softprops/atty/pull/51",
+                      "https://github.com/softprops/atty/issues/57"
+                    ],
+                    "source": null,
+                    "url": "https://github.com/softprops/atty/issues/50",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [
+                      "windows"
+                    ],
+                    "functions": {}
+                  },
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                },
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "bumpalo",
+                    "version": "3.11.0",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "c1ad822118d20d2c234f427000d5acc36eabe1e29a348c89b63dd60b13f28e5d",
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2022-0078",
+                    "package": "bumpalo",
+                    "title": "Use-after-free due to a lifetime error in `Vec::into_iter()`",
+                    "description": "In affected versions of this crate, the lifetime of the iterator produced by\n`Vec::into_iter()` is not constrained to the lifetime of the `Bump` that\nallocated the vector's memory. Using the iterator after the `Bump` is dropped\ncauses use-after-free accesses.\n\nThe following example demonstrates memory corruption arising from a misuse of\nthis unsoundness.\n\n```rust\nuse bumpalo::{collections::Vec, Bump};\n\nfn main() {\n    let bump = Bump::new();\n    let mut vec = Vec::new_in(&bump);\n    vec.extend([0x01u8; 32]);\n    let into_iter = vec.into_iter();\n    drop(bump);\n\n    for _ in 0..100 {\n        let reuse_bump = Bump::new();\n        let _reuse_alloc = reuse_bump.alloc([0x41u8; 10]);\n    }\n\n    for x in into_iter {\n        print!(\"0x{:02x} \", x);\n    }\n    println!();\n}\n```\n\nThe issue was corrected in version 3.11.1 by adding a lifetime to the `IntoIter`\ntype, and updating the signature of `Vec::into_iter()` to constrain this\nlifetime.",
+                    "date": "2022-01-14",
+                    "aliases": [
+                      "GHSA-f85w-wvc7-crwc"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [
+                      "memory-corruption",
+                      "memory-exposure"
+                    ],
+                    "keywords": [
+                      "use-after-free"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/fitzgen/bumpalo/blob/main/CHANGELOG.md#3111",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [],
+                    "functions": {
+                      "bumpalo::collections::vec::Vec::into_iter": [
+                        "<3.11.1"
+                      ]
+                    }
+                  },
+                  "versions": {
+                    "patched": [
+                      ">=3.11.1"
+                    ],
+                    "unaffected": [
+                      "<1.1.0"
+                    ]
+                  }
+                },
+                {
+                  "kind": "unsound",
+                  "package": {
+                    "name": "lock_api",
+                    "version": "0.4.1",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "28247cc5a5be2f05fbcd76dd0cf2c7d3b5400cb978a28042abcd4fa0b3f8261c",
+                    "dependencies": [
+                      {
+                        "name": "scopeguard",
+                        "version": "1.1.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2020-0070",
+                    "package": "lock_api",
+                    "title": "Some lock_api lock guard objects can cause data races",
+                    "description": "Affected versions of lock_api had unsound implementations of the `Send` or\n`Sync` traits for some guard objects, namely:\n\n* MappedMutexGuard\n* MappedRwLockReadGuard\n* MappedRwLockWriteGuard\n* RwLockReadGuard\n* RwLockWriteGuard\n\nThese guards could allow data races through types that are not safe to `Send`\nacross thread boundaries in safe Rust code.\n\nThis issue was fixed by changing the trait bounds on the `Mapped` guard types\nand removing the `Sync` trait for the `RwLock` guards.",
+                    "date": "2020-11-08",
+                    "aliases": [
+                      "CVE-2020-35910",
+                      "CVE-2020-35911",
+                      "CVE-2020-35912",
+                      "CVE-2020-35913",
+                      "CVE-2020-35914",
+                      "GHSA-5wg8-7c9q-794v",
+                      "GHSA-gmv4-vmx3-x9f3",
+                      "GHSA-hj9h-wrgg-hgmx",
+                      "GHSA-ppj3-7jw3-8vc4",
+                      "GHSA-vh4p-6j7g-f4j9"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [
+                      "memory-corruption",
+                      "thread-safety"
+                    ],
+                    "keywords": [
+                      "concurrency"
+                    ],
+                    "cvss": null,
+                    "informational": "unsound",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/Amanieu/parking_lot/pull/262",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": {
+                    "arch": [],
+                    "os": [],
+                    "functions": {
+                      "lock_api::MappedMutexGuard": [
+                        ">=0.1.0"
+                      ],
+                      "lock_api::MappedRwLockReadGuard": [
+                        ">=0.1.0"
+                      ],
+                      "lock_api::MappedRwLockWriteGuard": [
+                        ">=0.1.0"
+                      ],
+                      "lock_api::RwLockReadGuard": [
+                        ">=0.1.0"
+                      ],
+                      "lock_api::RwLockWriteGuard": [
+                        ">=0.1.0"
+                      ]
+                    }
+                  },
+                  "versions": {
+                    "patched": [
+                      ">=0.4.2"
+                    ],
+                    "unaffected": []
+                  }
+                }
+              ],
+              "yanked": [
+                {
+                  "kind": "yanked",
+                  "package": {
+                    "name": "crossbeam-channel",
+                    "version": "0.5.6",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "c2dd04ddaf88237dc3b8d8f9a3c1004b506b54b3313403944054d23c0870c521",
+                    "dependencies": [
+                      {
+                        "name": "cfg-if",
+                        "version": "1.0.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      },
+                      {
+                        "name": "crossbeam-utils",
+                        "version": "0.8.11",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  },
+                  "advisory": null,
+                  "affected": null,
+                  "versions": null
+                },
+                {
+                  "kind": "yanked",
+                  "package": {
+                    "name": "textwrap",
+                    "version": "0.15.1",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "949517c0cf1bf4ee812e2e07e08ab448e3ae0d23472aee8a06c985f0c8815b16",
+                    "replace": null
+                  },
+                  "advisory": null,
+                  "affected": null,
+                  "versions": null
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "spin",
+          "version": "0.10.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\n[Settings](https://docs.rs/spin/latest/settings.html)\n[Help](https://docs.rs/spin/latest/help.html)\nSummary[Source](https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228)\nExpand description\nThis crate provides [spin-based](https://en.wikipedia.org/wiki/Spinlock) versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## [\u00a7](https://docs.rs/spin/latest/spin/#features)Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * [`lock_api`](https://crates.io/crates/lock_api) compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## [\u00a7](https://docs.rs/spin/latest/spin/#relationship-with-stdsync)Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and [should not be considered as such](https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html)) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards ([`MutexGuard`](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\"), [`RwLockReadGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\"), [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"), etc.) may be sent and shared between threads.\n  * [`RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\") supports being upgraded into a [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\").\n  * Guards support [leaking](https://doc.rust-lang.org/nomicon/leaking.html).\n  * [`Once`](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\") owns the value returned by its `call_once` initializer.\n  * [`RwLock`](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\") supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track [panic poisoning](https://doc.rust-lang.org/nomicon/poisoning.html).\n\n\n### [\u00a7](https://docs.rs/spin/latest/spin/#feature-flags)Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for [`lock_api`](https://crates.io/crates/lock_api)\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports[\u00a7](https://docs.rs/spin/latest/spin/#reexports)\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules[\u00a7](https://docs.rs/spin/latest/spin/#modules)\n\n[barrier](https://docs.rs/spin/latest/spin/barrier/index.html \"mod spin::barrier\")`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\n[lazy](https://docs.rs/spin/latest/spin/lazy/index.html \"mod spin::lazy\")`lazy`\n    Synchronization primitives for lazy evaluation.\n\n[lock_api](https://docs.rs/spin/latest/spin/lock_api/index.html \"mod spin::lock_api\")`lock_api`\n    Spin synchronisation primitives, but compatible with [`lock_api`](https://crates.io/crates/lock_api).\n\n[mutex](https://docs.rs/spin/latest/spin/mutex/index.html \"mod spin::mutex\")`mutex`\n    Locks that have the same behaviour as a mutex.\n\n[once](https://docs.rs/spin/latest/spin/once/index.html \"mod spin::once\")`once`\n    Synchronization primitives for one-time evaluation.\n\n[relax](https://docs.rs/spin/latest/spin/relax/index.html \"mod spin::relax\")\n    Strategies that determine the behaviour of locks when encountering contention.\n\n[rwlock](https://docs.rs/spin/latest/spin/rwlock/index.html \"mod spin::rwlock\")`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases[\u00a7](https://docs.rs/spin/latest/spin/#types)\n\n[Barrier](https://docs.rs/spin/latest/spin/type.Barrier.html \"type spin::Barrier\")`barrier`\n    A primitive that synchronizes the execution of multiple threads. See [`barrier::Barrier`](https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html \"struct spin::barrier::Barrier\") for documentation.\n\n[Lazy](https://docs.rs/spin/latest/spin/type.Lazy.html \"type spin::Lazy\")`lazy`\n    A value which is initialized on the first access. See [`lazy::Lazy`](https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html \"struct spin::lazy::Lazy\") for documentation.\n\n[Mutex](https://docs.rs/spin/latest/spin/type.Mutex.html \"type spin::Mutex\")`mutex`\n    A primitive that synchronizes the execution of multiple threads. See [`mutex::Mutex`](https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html \"struct spin::mutex::Mutex\") for documentation.\n\n[Once](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\")`once`\n    A primitive that provides lazy one-time initialization. See [`once::Once`](https://docs.rs/spin/latest/spin/once/struct.Once.html \"struct spin::once::Once\") for documentation.\n\n[RwLock](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\")`rwlock`\n    A lock that provides data access to either one writer or many readers. See [`rwlock::RwLock`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html \"struct spin::rwlock::RwLock\") for documentation.\n\n[RwLockUpgradableGuard](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\")`rwlock`\n    A guard that provides immutable data access but can be upgraded to [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"). See [`rwlock::RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html \"struct spin::rwlock::RwLockUpgradableGuard\") for documentation.\n\n[RwLockWriteGuard](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\")`rwlock`\n    A guard that provides mutable data access. See [`rwlock::RwLockWriteGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html \"struct spin::rwlock::RwLockWriteGuard\") for documentation.\n",
+            "markdown_with_citations": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis crate provides spin-based\u27e84\u27e9 versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## \u00a7\u27e85\u27e9Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * `lock_api`\u27e86\u27e9 compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## \u00a7\u27e87\u27e9Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and should not be considered as such\u27e88\u27e9) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards (`MutexGuard`\u27e89\u27e9, `RwLockReadGuard`\u27e810\u27e9, `RwLockWriteGuard`\u27e811\u27e9, etc.) may be sent and shared between threads.\n  * `RwLockUpgradableGuard`\u27e812\u27e9 supports being upgraded into a `RwLockWriteGuard`\u27e811\u27e9.\n  * Guards support leaking\u27e813\u27e9.\n  * `Once`\u27e814\u27e9 owns the value returned by its `call_once` initializer.\n  * `RwLock`\u27e815\u27e9 supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track panic poisoning\u27e816\u27e9.\n\n\n### \u00a7\u27e817\u27e9Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for `lock_api`\u27e86\u27e9\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports\u00a7\u27e818\u27e9\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules\u00a7\u27e819\u27e9\n\nbarrier\u27e820\u27e9`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\nlazy\u27e821\u27e9`lazy`\n    Synchronization primitives for lazy evaluation.\n\nlock_api\u27e822\u27e9`lock_api`\n    Spin synchronisation primitives, but compatible with `lock_api`\u27e86\u27e9.\n\nmutex\u27e823\u27e9`mutex`\n    Locks that have the same behaviour as a mutex.\n\nonce\u27e824\u27e9`once`\n    Synchronization primitives for one-time evaluation.\n\nrelax\u27e825\u27e9\n    Strategies that determine the behaviour of locks when encountering contention.\n\nrwlock\u27e826\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases\u00a7\u27e827\u27e9\n\nBarrier\u27e828\u27e9`barrier`\n    A primitive that synchronizes the execution of multiple threads. See `barrier::Barrier`\u27e829\u27e9 for documentation.\n\nLazy\u27e830\u27e9`lazy`\n    A value which is initialized on the first access. See `lazy::Lazy`\u27e831\u27e9 for documentation.\n\nMutex\u27e832\u27e9`mutex`\n    A primitive that synchronizes the execution of multiple threads. See `mutex::Mutex`\u27e833\u27e9 for documentation.\n\nOnce\u27e814\u27e9`once`\n    A primitive that provides lazy one-time initialization. See `once::Once`\u27e834\u27e9 for documentation.\n\nRwLock\u27e815\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers. See `rwlock::RwLock`\u27e835\u27e9 for documentation.\n\nRwLockUpgradableGuard\u27e812\u27e9`rwlock`\n    A guard that provides immutable data access but can be upgraded to `RwLockWriteGuard`\u27e811\u27e9. See `rwlock::RwLockUpgradableGuard`\u27e836\u27e9 for documentation.\n\nRwLockWriteGuard\u27e811\u27e9`rwlock`\n    A guard that provides mutable data access. See `rwlock::RwLockWriteGuard`\u27e837\u27e9 for documentation.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/spin/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/spin/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/Spinlock: spin-based\n\u27e85\u27e9 https://docs.rs/spin/latest/spin/#features: \u00a7\n\u27e86\u27e9 https://crates.io/crates/lock_api: `lock_api`\n\u27e87\u27e9 https://docs.rs/spin/latest/spin/#relationship-with-stdsync: \u00a7\n\u27e88\u27e9 https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html: should not be considered as such\n\u27e89\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html: struct spin::mutex::MutexGuard - `MutexGuard`\n\u27e810\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html: struct spin::rwlock::RwLockReadGuard - `RwLockReadGuard`\n\u27e811\u27e9 https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html: type spin::RwLockWriteGuard - `RwLockWriteGuard`\n\u27e812\u27e9 https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html: type spin::RwLockUpgradableGuard - `RwLockUpgradableGuard`\n\u27e813\u27e9 https://doc.rust-lang.org/nomicon/leaking.html: leaking\n\u27e814\u27e9 https://docs.rs/spin/latest/spin/type.Once.html: type spin::Once - `Once`\n\u27e815\u27e9 https://docs.rs/spin/latest/spin/type.RwLock.html: type spin::RwLock - `RwLock`\n\u27e816\u27e9 https://doc.rust-lang.org/nomicon/poisoning.html: panic poisoning\n\u27e817\u27e9 https://docs.rs/spin/latest/spin/#feature-flags: \u00a7\n\u27e818\u27e9 https://docs.rs/spin/latest/spin/#reexports: \u00a7\n\u27e819\u27e9 https://docs.rs/spin/latest/spin/#modules: \u00a7\n\u27e820\u27e9 https://docs.rs/spin/latest/spin/barrier/index.html: mod spin::barrier - barrier\n\u27e821\u27e9 https://docs.rs/spin/latest/spin/lazy/index.html: mod spin::lazy - lazy\n\u27e822\u27e9 https://docs.rs/spin/latest/spin/lock_api/index.html: mod spin::lock_api - lock_api\n\u27e823\u27e9 https://docs.rs/spin/latest/spin/mutex/index.html: mod spin::mutex - mutex\n\u27e824\u27e9 https://docs.rs/spin/latest/spin/once/index.html: mod spin::once - once\n\u27e825\u27e9 https://docs.rs/spin/latest/spin/relax/index.html: mod spin::relax - relax\n\u27e826\u27e9 https://docs.rs/spin/latest/spin/rwlock/index.html: mod spin::rwlock - rwlock\n\u27e827\u27e9 https://docs.rs/spin/latest/spin/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/spin/latest/spin/type.Barrier.html: type spin::Barrier - Barrier\n\u27e829\u27e9 https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html: struct spin::barrier::Barrier - `barrier::Barrier`\n\u27e830\u27e9 https://docs.rs/spin/latest/spin/type.Lazy.html: type spin::Lazy - Lazy\n\u27e831\u27e9 https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html: struct spin::lazy::Lazy - `lazy::Lazy`\n\u27e832\u27e9 https://docs.rs/spin/latest/spin/type.Mutex.html: type spin::Mutex - Mutex\n\u27e833\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html: struct spin::mutex::Mutex - `mutex::Mutex`\n\u27e834\u27e9 https://docs.rs/spin/latest/spin/once/struct.Once.html: struct spin::once::Once - `once::Once`\n\u27e835\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html: struct spin::rwlock::RwLock - `rwlock::RwLock`\n\u27e836\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html: struct spin::rwlock::RwLockUpgradableGuard - `rwlock::RwLockUpgradableGuard`\n\u27e837\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html: struct spin::rwlock::RwLockWriteGuard - `rwlock::RwLockWriteGuard`\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "spin",
+          "version": "0.10.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\n[Settings](https://docs.rs/spin/latest/settings.html)\n[Help](https://docs.rs/spin/latest/help.html)\nSummary[Source](https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228)\nExpand description\nThis crate provides [spin-based](https://en.wikipedia.org/wiki/Spinlock) versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## [\u00a7](https://docs.rs/spin/latest/spin/#features)Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * [`lock_api`](https://crates.io/crates/lock_api) compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## [\u00a7](https://docs.rs/spin/latest/spin/#relationship-with-stdsync)Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and [should not be considered as such](https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html)) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards ([`MutexGuard`](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\"), [`RwLockReadGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\"), [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"), etc.) may be sent and shared between threads.\n  * [`RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\") supports being upgraded into a [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\").\n  * Guards support [leaking](https://doc.rust-lang.org/nomicon/leaking.html).\n  * [`Once`](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\") owns the value returned by its `call_once` initializer.\n  * [`RwLock`](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\") supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track [panic poisoning](https://doc.rust-lang.org/nomicon/poisoning.html).\n\n\n### [\u00a7](https://docs.rs/spin/latest/spin/#feature-flags)Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for [`lock_api`](https://crates.io/crates/lock_api)\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports[\u00a7](https://docs.rs/spin/latest/spin/#reexports)\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules[\u00a7](https://docs.rs/spin/latest/spin/#modules)\n\n[barrier](https://docs.rs/spin/latest/spin/barrier/index.html \"mod spin::barrier\")`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\n[lazy](https://docs.rs/spin/latest/spin/lazy/index.html \"mod spin::lazy\")`lazy`\n    Synchronization primitives for lazy evaluation.\n\n[lock_api](https://docs.rs/spin/latest/spin/lock_api/index.html \"mod spin::lock_api\")`lock_api`\n    Spin synchronisation primitives, but compatible with [`lock_api`](https://crates.io/crates/lock_api).\n\n[mutex](https://docs.rs/spin/latest/spin/mutex/index.html \"mod spin::mutex\")`mutex`\n    Locks that have the same behaviour as a mutex.\n\n[once](https://docs.rs/spin/latest/spin/once/index.html \"mod spin::once\")`once`\n    Synchronization primitives for one-time evaluation.\n\n[relax](https://docs.rs/spin/latest/spin/relax/index.html \"mod spin::relax\")\n    Strategies that determine the behaviour of locks when encountering contention.\n\n[rwlock](https://docs.rs/spin/latest/spin/rwlock/index.html \"mod spin::rwlock\")`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases[\u00a7](https://docs.rs/spin/latest/spin/#types)\n\n[Barrier](https://docs.rs/spin/latest/spin/type.Barrier.html \"type spin::Barrier\")`barrier`\n    A primitive that synchronizes the execution of multiple threads. See [`barrier::Barrier`](https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html \"struct spin::barrier::Barrier\") for documentation.\n\n[Lazy](https://docs.rs/spin/latest/spin/type.Lazy.html \"type spin::Lazy\")`lazy`\n    A value which is initialized on the first access. See [`lazy::Lazy`](https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html \"struct spin::lazy::Lazy\") for documentation.\n\n[Mutex](https://docs.rs/spin/latest/spin/type.Mutex.html \"type spin::Mutex\")`mutex`\n    A primitive that synchronizes the execution of multiple threads. See [`mutex::Mutex`](https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html \"struct spin::mutex::Mutex\") for documentation.\n\n[Once](https://docs.rs/spin/latest/spin/type.Once.html \"type spin::Once\")`once`\n    A primitive that provides lazy one-time initialization. See [`once::Once`](https://docs.rs/spin/latest/spin/once/struct.Once.html \"struct spin::once::Once\") for documentation.\n\n[RwLock](https://docs.rs/spin/latest/spin/type.RwLock.html \"type spin::RwLock\")`rwlock`\n    A lock that provides data access to either one writer or many readers. See [`rwlock::RwLock`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html \"struct spin::rwlock::RwLock\") for documentation.\n\n[RwLockUpgradableGuard](https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html \"type spin::RwLockUpgradableGuard\")`rwlock`\n    A guard that provides immutable data access but can be upgraded to [`RwLockWriteGuard`](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\"). See [`rwlock::RwLockUpgradableGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html \"struct spin::rwlock::RwLockUpgradableGuard\") for documentation.\n\n[RwLockWriteGuard](https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html \"type spin::RwLockWriteGuard\")`rwlock`\n    A guard that provides mutable data access. See [`rwlock::RwLockWriteGuard`](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html \"struct spin::rwlock::RwLockWriteGuard\") for documentation.\n",
+            "markdown_with_citations": "[](https://docs.rs/spin/latest/spin/all.html \"show sidebar\")\n# Crate spinCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis crate provides spin-based\u27e84\u27e9 versions of the primitives in `std::sync` and `std::lazy`. Because synchronization is done through spinning, the primitives are suitable for use in `no_std` environments.\n## \u00a7\u27e85\u27e9Features\n  * `Mutex`, `RwLock`, `Once`/`SyncOnceCell`, and `SyncLazy` equivalents\n  * Support for `no_std` environments\n  * `lock_api`\u27e86\u27e9 compatibility\n  * Upgradeable `RwLock` guards\n  * Guards can be sent and shared between threads\n  * Guard leaking\n  * Ticket locks\n  * Different strategies for dealing with contention\n\n\n## \u00a7\u27e87\u27e9Relationship with `std::sync`\nWhile `spin` is not a drop-in replacement for `std::sync` (and should not be considered as such\u27e88\u27e9) an effort is made to keep this crate reasonably consistent with `std::sync`.\nMany of the types defined in this crate have \u2018additional capabilities\u2019 when compared to `std::sync`:\n  * Because spinning does not depend on the thread-driven model of `std::sync`, guards (`MutexGuard`\u27e89\u27e9, `RwLockReadGuard`\u27e810\u27e9, `RwLockWriteGuard`\u27e811\u27e9, etc.) may be sent and shared between threads.\n  * `RwLockUpgradableGuard`\u27e812\u27e9 supports being upgraded into a `RwLockWriteGuard`\u27e811\u27e9.\n  * Guards support leaking\u27e813\u27e9.\n  * `Once`\u27e814\u27e9 owns the value returned by its `call_once` initializer.\n  * `RwLock`\u27e815\u27e9 supports counting readers and writers.\n\n\nConversely, the types in this crate do not have some of the features `std::sync` has:\n  * Locks do not track panic poisoning\u27e816\u27e9.\n\n\n### \u00a7\u27e817\u27e9Feature flags\nThe crate comes with a few feature flags that you may wish to use.\n  * `lock_api` enables support for `lock_api`\u27e86\u27e9\n  * `ticket_mutex` uses a ticket lock for the implementation of `Mutex`\n  * `fair_mutex` enables a fairer implementation of `Mutex` that uses eventual fairness to avoid starvation\n  * `std` enables support for thread yielding instead of spinning\n  * `portable-atomic` enables usage of the `portable-atomic` crate to support platforms without native atomic operations (Cortex-M0, etc.). See the documentation for the `portable-atomic` crate for more information with some requirements for no-std build: https://github.com/taiki-e/portable-atomic#optional-features\n\n\n## Re-exports\u00a7\u27e818\u27e9\n\n`pub use mutex::MutexGuard[](https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html \"struct spin::mutex::MutexGuard\");``mutex`\n\n\n`pub use relax::Yield[](https://docs.rs/spin/latest/spin/relax/struct.Yield.html \"struct spin::relax::Yield\");``std`\n\n\n`pub use relax::RelaxStrategy[](https://docs.rs/spin/latest/spin/relax/trait.RelaxStrategy.html \"trait spin::relax::RelaxStrategy\");`\n\n\n`pub use relax::Spin[](https://docs.rs/spin/latest/spin/relax/struct.Spin.html \"struct spin::relax::Spin\");`\n\n\n`pub use rwlock::RwLockReadGuard[](https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html \"struct spin::rwlock::RwLockReadGuard\");``rwlock`\n\n## Modules\u00a7\u27e819\u27e9\n\nbarrier\u27e820\u27e9`barrier`\n    Synchronization primitive allowing multiple threads to synchronize the beginning of some computation.\n\nlazy\u27e821\u27e9`lazy`\n    Synchronization primitives for lazy evaluation.\n\nlock_api\u27e822\u27e9`lock_api`\n    Spin synchronisation primitives, but compatible with `lock_api`\u27e86\u27e9.\n\nmutex\u27e823\u27e9`mutex`\n    Locks that have the same behaviour as a mutex.\n\nonce\u27e824\u27e9`once`\n    Synchronization primitives for one-time evaluation.\n\nrelax\u27e825\u27e9\n    Strategies that determine the behaviour of locks when encountering contention.\n\nrwlock\u27e826\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers.\n## Type Aliases\u00a7\u27e827\u27e9\n\nBarrier\u27e828\u27e9`barrier`\n    A primitive that synchronizes the execution of multiple threads. See `barrier::Barrier`\u27e829\u27e9 for documentation.\n\nLazy\u27e830\u27e9`lazy`\n    A value which is initialized on the first access. See `lazy::Lazy`\u27e831\u27e9 for documentation.\n\nMutex\u27e832\u27e9`mutex`\n    A primitive that synchronizes the execution of multiple threads. See `mutex::Mutex`\u27e833\u27e9 for documentation.\n\nOnce\u27e814\u27e9`once`\n    A primitive that provides lazy one-time initialization. See `once::Once`\u27e834\u27e9 for documentation.\n\nRwLock\u27e815\u27e9`rwlock`\n    A lock that provides data access to either one writer or many readers. See `rwlock::RwLock`\u27e835\u27e9 for documentation.\n\nRwLockUpgradableGuard\u27e812\u27e9`rwlock`\n    A guard that provides immutable data access but can be upgraded to `RwLockWriteGuard`\u27e811\u27e9. See `rwlock::RwLockUpgradableGuard`\u27e836\u27e9 for documentation.\n\nRwLockWriteGuard\u27e811\u27e9`rwlock`\n    A guard that provides mutable data access. See `rwlock::RwLockWriteGuard`\u27e837\u27e9 for documentation.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/spin/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/spin/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/spin/latest/src/spin/lib.rs.html#1-228: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/Spinlock: spin-based\n\u27e85\u27e9 https://docs.rs/spin/latest/spin/#features: \u00a7\n\u27e86\u27e9 https://crates.io/crates/lock_api: `lock_api`\n\u27e87\u27e9 https://docs.rs/spin/latest/spin/#relationship-with-stdsync: \u00a7\n\u27e88\u27e9 https://matklad.github.io/2020/01/02/spinlocks-considered-harmful.html: should not be considered as such\n\u27e89\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.MutexGuard.html: struct spin::mutex::MutexGuard - `MutexGuard`\n\u27e810\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockReadGuard.html: struct spin::rwlock::RwLockReadGuard - `RwLockReadGuard`\n\u27e811\u27e9 https://docs.rs/spin/latest/spin/type.RwLockWriteGuard.html: type spin::RwLockWriteGuard - `RwLockWriteGuard`\n\u27e812\u27e9 https://docs.rs/spin/latest/spin/type.RwLockUpgradableGuard.html: type spin::RwLockUpgradableGuard - `RwLockUpgradableGuard`\n\u27e813\u27e9 https://doc.rust-lang.org/nomicon/leaking.html: leaking\n\u27e814\u27e9 https://docs.rs/spin/latest/spin/type.Once.html: type spin::Once - `Once`\n\u27e815\u27e9 https://docs.rs/spin/latest/spin/type.RwLock.html: type spin::RwLock - `RwLock`\n\u27e816\u27e9 https://doc.rust-lang.org/nomicon/poisoning.html: panic poisoning\n\u27e817\u27e9 https://docs.rs/spin/latest/spin/#feature-flags: \u00a7\n\u27e818\u27e9 https://docs.rs/spin/latest/spin/#reexports: \u00a7\n\u27e819\u27e9 https://docs.rs/spin/latest/spin/#modules: \u00a7\n\u27e820\u27e9 https://docs.rs/spin/latest/spin/barrier/index.html: mod spin::barrier - barrier\n\u27e821\u27e9 https://docs.rs/spin/latest/spin/lazy/index.html: mod spin::lazy - lazy\n\u27e822\u27e9 https://docs.rs/spin/latest/spin/lock_api/index.html: mod spin::lock_api - lock_api\n\u27e823\u27e9 https://docs.rs/spin/latest/spin/mutex/index.html: mod spin::mutex - mutex\n\u27e824\u27e9 https://docs.rs/spin/latest/spin/once/index.html: mod spin::once - once\n\u27e825\u27e9 https://docs.rs/spin/latest/spin/relax/index.html: mod spin::relax - relax\n\u27e826\u27e9 https://docs.rs/spin/latest/spin/rwlock/index.html: mod spin::rwlock - rwlock\n\u27e827\u27e9 https://docs.rs/spin/latest/spin/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/spin/latest/spin/type.Barrier.html: type spin::Barrier - Barrier\n\u27e829\u27e9 https://docs.rs/spin/latest/spin/barrier/struct.Barrier.html: struct spin::barrier::Barrier - `barrier::Barrier`\n\u27e830\u27e9 https://docs.rs/spin/latest/spin/type.Lazy.html: type spin::Lazy - Lazy\n\u27e831\u27e9 https://docs.rs/spin/latest/spin/lazy/struct.Lazy.html: struct spin::lazy::Lazy - `lazy::Lazy`\n\u27e832\u27e9 https://docs.rs/spin/latest/spin/type.Mutex.html: type spin::Mutex - Mutex\n\u27e833\u27e9 https://docs.rs/spin/latest/spin/mutex/struct.Mutex.html: struct spin::mutex::Mutex - `mutex::Mutex`\n\u27e834\u27e9 https://docs.rs/spin/latest/spin/once/struct.Once.html: struct spin::once::Once - `once::Once`\n\u27e835\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLock.html: struct spin::rwlock::RwLock - `rwlock::RwLock`\n\u27e836\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockUpgradableGuard.html: struct spin::rwlock::RwLockUpgradableGuard - `rwlock::RwLockUpgradableGuard`\n\u27e837\u27e9 https://docs.rs/spin/latest/spin/rwlock/struct.RwLockWriteGuard.html: struct spin::rwlock::RwLockWriteGuard - `rwlock::RwLockWriteGuard`\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `spin` crate offers spinlock-based synchronization primitives, including `Mutex`, `RwLock`, `Once`, `SyncLazy`, and `SyncOnceCell`, designed for `no_std` environments. It provides advanced features like upgradeable `RwLock` guards, guard leaking, ticket locks, and compatibility with the `lock_api` crate, while supporting contention strategies and thread-safe guard sharing. Unlike `std::sync`, it lacks panic poisoning but adds unique capabilities such as reader/writer counting and thread portability.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1: Mutex Implementation\n\u2705 Factual: The `spin` crate provides a `Mutex` implementation that uses spinning rather than thread-blocking, making it suitable for `no_std` environments.  \n\u274c Counterfactual: The `spin` crate's `Mutex` implementation includes panic poisoning, similar to `std::sync::Mutex`.  \n\n---\n\n### Pair 2: Feature Flags\n\u2705 Factual: The `spin` crate includes a `fair_mutex` feature flag, which enables a fairer implementation of `Mutex` to avoid starvation during contention.  \n\u274c Counterfactual: The `spin` crate's `fair_mutex` feature flag ensures strict priority ordering for threads, guaranteeing that threads acquire the lock in the exact order they request it.  \n\n---\n\n### Pair 3: Relationship with `std::sync`\n\u2705 Factual: The synchronization primitives in the `spin` crate, such as `MutexGuard` and `RwLockReadGuard`, can be sent and shared between threads, unlike their counterparts in `std::sync`.  \n\u274c Counterfactual: The `spin` crate's primitives are designed as a drop-in replacement for `std::sync`, offering identical functionality and performance characteristics.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-a5a2729f-055bc1b1-1751262973",
+      "timestamp": "2025-06-30T05:56:13.765967+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

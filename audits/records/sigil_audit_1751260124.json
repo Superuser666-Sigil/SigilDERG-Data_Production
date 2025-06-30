@@ -1,0 +1,1504 @@
+[
+  {
+    "execution_id": "exec-2b5a7b41-b8bce0d0-1751260118",
+    "timestamp": "2025-06-30T05:08:38.030054+00:00",
+    "sacred_chain": {
+      "input_data": "getopts",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'getopts' -> 'getopts'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "getopts",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/getopts",
+            "title": "getopts v0.2.23",
+            "content": {
+              "raw_markdown": "#  getopts v0.2.23\ngetopts-like option parsing \n  * [ Readme ](https://crates.io/crates/getopts)\n  * [ 29 Versions ](https://crates.io/crates/getopts/versions)\n  * [ Dependencies ](https://crates.io/crates/getopts/dependencies)\n  * [ Dependents ](https://crates.io/crates/getopts/reverse_dependencies)\n\n\n## Metadata\n21 days ago \nv1.66.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n20.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add getopts\nOr add the following line to your Cargo.toml:\ngetopts = \"0.2.23\"\n## Repository\n[ github.com/rust-lang/getopts ](https://github.com/rust-lang/getopts)\n## Owners\n## Categories\n  * [Command-line interface](https://crates.io/categories/command-line-interface)\n\n\n[ Report crate ](https://crates.io/support?crate=getopts&inquire=crate-violation)\n### Stats Overview\n45,086,371 Downloads all time\n29 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  getopts v0.2.23\ngetopts-like option parsing \n  *  Readme \u27e81\u27e9\n  *  29 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n21 days ago \nv1.66.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n20.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add getopts\nOr add the following line to your Cargo.toml:\ngetopts = \"0.2.23\"\n## Repository\n github.com/rust-lang/getopts \u27e87\u27e9\n## Owners\n## Categories\n  * Command-line interface\u27e88\u27e9\n\n\n Report crate \u27e89\u27e9\n### Stats Overview\n45,086,371 Downloads all time\n29 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/getopts:  Readme \n\u27e82\u27e9 https://crates.io/crates/getopts/versions:  29 Versions \n\u27e83\u27e9 https://crates.io/crates/getopts/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/getopts/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://github.com/rust-lang/getopts:  github.com/rust-lang/getopts \n\u27e88\u27e9 https://crates.io/categories/command-line-interface: Command-line interface\n\u27e89\u27e9 https://crates.io/support?crate=getopts&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1059,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113907.6890297"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/getopts",
+            "title": "Crate getoptsCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\n[Settings](https://docs.rs/getopts/latest/settings.html)\n[Help](https://docs.rs/getopts/latest/help.html)\nSummary[Source](https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282)\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#usage)Usage\nThis crate is [on crates.io](https://crates.io/crates/getopts) and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#example)Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs[\u00a7](https://docs.rs/getopts/latest/getopts/#structs)\n\n[Matches](https://docs.rs/getopts/latest/getopts/struct.Matches.html \"struct getopts::Matches\")\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\n[Options](https://docs.rs/getopts/latest/getopts/struct.Options.html \"struct getopts::Options\")\n    A description of the options that a program can handle.\n## Enums[\u00a7](https://docs.rs/getopts/latest/getopts/#enums)\n\n[Fail](https://docs.rs/getopts/latest/getopts/enum.Fail.html \"enum getopts::Fail\")\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\n[HasArg](https://docs.rs/getopts/latest/getopts/enum.HasArg.html \"enum getopts::HasArg\")\n    Describes whether an option has an argument.\n\n[Occur](https://docs.rs/getopts/latest/getopts/enum.Occur.html \"enum getopts::Occur\")\n    Describes how often an option may occur.\n\n[ParsingStyle](https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html \"enum getopts::ParsingStyle\")\n    What parsing style to use when parsing arguments.\n## Type Aliases[\u00a7](https://docs.rs/getopts/latest/getopts/#types)\n\n[Result](https://docs.rs/getopts/latest/getopts/type.Result.html \"type getopts::Result\")\n    The result of parsing a command line with a set of options.\n",
+              "markdown_with_citations": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## \u00a7\u27e84\u27e9Usage\nThis crate is on crates.io\u27e85\u27e9 and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## \u00a7\u27e86\u27e9Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nMatches\u27e88\u27e9\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\nOptions\u27e89\u27e9\n    A description of the options that a program can handle.\n## Enums\u00a7\u27e810\u27e9\n\nFail\u27e811\u27e9\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\nHasArg\u27e812\u27e9\n    Describes whether an option has an argument.\n\nOccur\u27e813\u27e9\n    Describes how often an option may occur.\n\nParsingStyle\u27e814\u27e9\n    What parsing style to use when parsing arguments.\n## Type Aliases\u00a7\u27e815\u27e9\n\nResult\u27e816\u27e9\n    The result of parsing a command line with a set of options.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/getopts/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/getopts/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282: Source\n\u27e84\u27e9 https://docs.rs/getopts/latest/getopts/#usage: \u00a7\n\u27e85\u27e9 https://crates.io/crates/getopts: on crates.io\n\u27e86\u27e9 https://docs.rs/getopts/latest/getopts/#example: \u00a7\n\u27e87\u27e9 https://docs.rs/getopts/latest/getopts/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/getopts/latest/getopts/struct.Matches.html: struct getopts::Matches - Matches\n\u27e89\u27e9 https://docs.rs/getopts/latest/getopts/struct.Options.html: struct getopts::Options - Options\n\u27e810\u27e9 https://docs.rs/getopts/latest/getopts/#enums: \u00a7\n\u27e811\u27e9 https://docs.rs/getopts/latest/getopts/enum.Fail.html: enum getopts::Fail - Fail\n\u27e812\u27e9 https://docs.rs/getopts/latest/getopts/enum.HasArg.html: enum getopts::HasArg - HasArg\n\u27e813\u27e9 https://docs.rs/getopts/latest/getopts/enum.Occur.html: enum getopts::Occur - Occur\n\u27e814\u27e9 https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html: enum getopts::ParsingStyle - ParsingStyle\n\u27e815\u27e9 https://docs.rs/getopts/latest/getopts/#types: \u00a7\n\u27e816\u27e9 https://docs.rs/getopts/latest/getopts/type.Result.html: type getopts::Result - Result\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4176,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113908.5347642"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/getopts",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [29 releases](https://lib.rs/crates/getopts/versions)\n0.2.23 |  Jun 9, 2025   \n---|---  \n0.2.21 |  Aug 19, 2019   \n0.2.19 |  May 2, 2019   \n0.2.18 |  Jul 5, 2018   \n0.1.0 |  Dec 13, 2014   \n#**72** in [Command-line interface](https://lib.rs/command-line-interface \"Crates to help create command line interfaces, such as argument parsers, line-editing, or output coloring and formatting.\")\nDownload history 470251/week @ 2025-03-08 450146/week @ 2025-03-15 442652/week @ 2025-03-22 454977/week @ 2025-03-29 487504/week @ 2025-04-05 466797/week @ 2025-04-12 498877/week @ 2025-04-19 479076/week @ 2025-04-26 431457/week @ 2025-05-03 436283/week @ 2025-05-10 465806/week @ 2025-05-17 437459/week @ 2025-05-24 437858/week @ 2025-05-31 466774/week @ 2025-06-07 490801/week @ 2025-06-14 600798/week @ 2025-06-21\n**2,080,578** downloads per month Used in [**1,701** crates (502 directly)](https://lib.rs/crates/getopts/rev)\n**MIT/Apache**\n82KB  2K  SLoC\n# getopts\nA Rust library for option parsing for CLI utilities.\n[Documentation](https://docs.rs/getopts)\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`getopts ``=` ``\"`0.2`\"``\n``\n```\n\n## Contributing\nThe ``getopts`` library is used by ``rustc``, so we have to be careful about not changing its behavior.\n###  [`lib.rs`](https://docs.rs/getopts): \nSimple getopt alternative.\nConstruct instance of ``Options`` and configure it by using ```reqopt``(``)```, ```optopt``(``)``` and other methods that add option configuration. Then call ```parse``(``)``` method and pass into it a vector of actual arguments (not including ``argv`[``0``]```).\nYou'll either get a failure code back, or a match. You'll have to verify whether the amount of 'free' arguments in the match is what you expect. Use ``opt_`*``` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don't require the space. Everything after double-dash \"--\" argument is considered to be a 'free' argument, even if it starts with dash.\n# Usage\nThis crate is [on crates.io](https://crates.io/crates/getopts) and can be used by adding ``getopts`` to the dependencies in your project's ``Cargo.toml``.\n```\n```[``dependencies``]`\n`getopts ``=` ``\"`0.2`\"``\n``\n```\n\nand this to your crate root:\n```\n``extern` `crate` getopts`;`\n`\n```\n\n# Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following ```-`o``, and accepts both ```-`h`` and ``--`help``` as optional flags.\n```\n``extern` `crate` getopts`;`\n`use` `getopts`::``Options`;`\n`use` `std`::``env`;`\n``fn` `do_work`````(``inp``:` `&``str`, `out``:` ``Option``<``String``>`````)``````{`\n  `println!``(```\"``{}``\"```,` inp`)``;`\n  `match` out `{`\n    `Some``(`x`)` `=>` `println!``(```\"``{}``\"```,` x`)``,`\n    `None` `=>` `println!``(```\"`No Output`\"```)``,`\n  `}`\n```}```\n``fn` `print_usage`````(``program``:` `&``str`, `opts``:` Options```)``````{`\n  `let` brief `=` `format!``(```\"`Usage: `{}` FILE [options]`\"```,` program`)``;`\n  `print!``(```\"``{}``\"```,` opts`.``usage``(``&`brief`)``)``;`\n```}```\n``fn` `main`````(````)``````{`\n  `let` args`:` ``Vec``<``String``>`` `=` `env`::``args`(``)``.``collect``(``)``;`\n  `let` program `=` args`[``0``]``.``clone``(``)``;`\n  `let` `mut` opts `=` `Options`::``new`(``)``;`\n  opts`.``optopt``(```\"`o`\"```,` ``\"``\"```,` ``\"`set output file name`\"```,` ``\"`NAME`\"```)``;`\n  opts`.``optflag``(```\"`h`\"```,` ``\"`help`\"```,` ``\"`print this help menu`\"```)``;`\n  `let` matches `=` `match` opts`.``parse``(``&`args`[``1``..``]``)` `{`\n    `Ok``(`m`)` `=>` `{` m `}`\n    `Err``(`f`)` `=>` `{` `panic!``(```\"`{}`\"```,` f`.``to_string``(``)``)` `}`\n  `}``;`\n  `if` matches`.``opt_present``(```\"`h`\"```)` `{`\n    `print_usage``(``&`program`,` opts`)``;`\n    `return``;`\n  `}`\n  `let` output `=` matches`.``opt_str``(```\"`o`\"```)``;`\n  `let` input `=` `if` `!`matches`.`free`.``is_empty``(``)` `{`\n    matches`.`free`[``0``]``.``clone``(``)`\n  `}` `else` `{`\n    `print_usage``(``&`program`,` opts`)``;`\n    `return``;`\n  `}``;`\n  `do_work``(``&`input`,` output`)``;`\n```}```\n`\n```\n\n#### Dependencies\n~1.5MB  ~22K SLoC\n  * [rustc-dep-of-std?](https://lib.rs/crates/getopts/features#feature-rustc-dep-of-std \"optional feature\") [rustc-std-workspace-core](https://lib.rs/crates/rustc-std-workspace-core \"renamed core, 1.0\")\n  * [rustc-dep-of-std?](https://lib.rs/crates/getopts/features#feature-rustc-dep-of-std \"optional feature\") [rustc-std-workspace-std](https://lib.rs/crates/rustc-std-workspace-std \"renamed std, 1.0\")\n  * [unicode-width](https://lib.rs/crates/unicode-width \"new\") 0.2\n\n\n  * dev  [log](https://lib.rs/crates/log \"0.4\")\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  29 releases\u27e81\u27e9\n0.2.23 |  Jun 9, 2025   \n---|---  \n0.2.21 |  Aug 19, 2019   \n0.2.19 |  May 2, 2019   \n0.2.18 |  Jul 5, 2018   \n0.1.0 |  Dec 13, 2014   \n#**72** in Command-line interface\u27e82\u27e9\nDownload history 470251/week @ 2025-03-08 450146/week @ 2025-03-15 442652/week @ 2025-03-22 454977/week @ 2025-03-29 487504/week @ 2025-04-05 466797/week @ 2025-04-12 498877/week @ 2025-04-19 479076/week @ 2025-04-26 431457/week @ 2025-05-03 436283/week @ 2025-05-10 465806/week @ 2025-05-17 437459/week @ 2025-05-24 437858/week @ 2025-05-31 466774/week @ 2025-06-07 490801/week @ 2025-06-14 600798/week @ 2025-06-21\n**2,080,578** downloads per month Used in **1,701** crates (502 directly)\u27e83\u27e9\n**MIT/Apache**\n82KB  2K  SLoC\n# getopts\nA Rust library for option parsing for CLI utilities.\nDocumentation\u27e84\u27e9\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`getopts ``=` ``\"`0.2`\"``\n``\n```\n\n## Contributing\nThe ``getopts`` library is used by ``rustc``, so we have to be careful about not changing its behavior.\n###  `lib.rs`\u27e84\u27e9: \nSimple getopt alternative.\nConstruct instance of ``Options`` and configure it by using ```reqopt``(``)```, ```optopt``(``)``` and other methods that add option configuration. Then call ```parse``(``)``` method and pass into it a vector of actual arguments (not including ``argv`[``0``]```).\nYou'll either get a failure code back, or a match. You'll have to verify whether the amount of 'free' arguments in the match is what you expect. Use ``opt_`*``` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don't require the space. Everything after double-dash \"--\" argument is considered to be a 'free' argument, even if it starts with dash.\n# Usage\nThis crate is on crates.io\u27e85\u27e9 and can be used by adding ``getopts`` to the dependencies in your project's ``Cargo.toml``.\n```\n```[``dependencies``]`\n`getopts ``=` ``\"`0.2`\"``\n``\n```\n\nand this to your crate root:\n```\n``extern` `crate` getopts`;`\n`\n```\n\n# Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following ```-`o``, and accepts both ```-`h`` and ``--`help``` as optional flags.\n```\n``extern` `crate` getopts`;`\n`use` `getopts`::``Options`;`\n`use` `std`::``env`;`\n``fn` `do_work`````(``inp``:` `&``str`, `out``:` ``Option``<``String``>`````)``````{`\n  `println!``(```\"``{}``\"```,` inp`)``;`\n  `match` out `{`\n    `Some``(`x`)` `=>` `println!``(```\"``{}``\"```,` x`)``,`\n    `None` `=>` `println!``(```\"`No Output`\"```)``,`\n  `}`\n```}```\n``fn` `print_usage`````(``program``:` `&``str`, `opts``:` Options```)``````{`\n  `let` brief `=` `format!``(```\"`Usage: `{}` FILE [options]`\"```,` program`)``;`\n  `print!``(```\"``{}``\"```,` opts`.``usage``(``&`brief`)``)``;`\n```}```\n``fn` `main`````(````)``````{`\n  `let` args`:` ``Vec``<``String``>`` `=` `env`::``args`(``)``.``collect``(``)``;`\n  `let` program `=` args`[``0``]``.``clone``(``)``;`\n  `let` `mut` opts `=` `Options`::``new`(``)``;`\n  opts`.``optopt``(```\"`o`\"```,` ``\"``\"```,` ``\"`set output file name`\"```,` ``\"`NAME`\"```)``;`\n  opts`.``optflag``(```\"`h`\"```,` ``\"`help`\"```,` ``\"`print this help menu`\"```)``;`\n  `let` matches `=` `match` opts`.``parse``(``&`args`[``1``..``]``)` `{`\n    `Ok``(`m`)` `=>` `{` m `}`\n    `Err``(`f`)` `=>` `{` `panic!``(```\"`{}`\"```,` f`.``to_string``(``)``)` `}`\n  `}``;`\n  `if` matches`.``opt_present``(```\"`h`\"```)` `{`\n    `print_usage``(``&`program`,` opts`)``;`\n    `return``;`\n  `}`\n  `let` output `=` matches`.``opt_str``(```\"`o`\"```)``;`\n  `let` input `=` `if` `!`matches`.`free`.``is_empty``(``)` `{`\n    matches`.`free`[``0``]``.``clone``(``)`\n  `}` `else` `{`\n    `print_usage``(``&`program`,` opts`)``;`\n    `return``;`\n  `}``;`\n  `do_work``(``&`input`,` output`)``;`\n```}```\n`\n```\n\n#### Dependencies\n~1.5MB  ~22K SLoC\n  * rustc-dep-of-std?\u27e86\u27e9 rustc-std-workspace-core\u27e87\u27e9\n  * rustc-dep-of-std?\u27e86\u27e9 rustc-std-workspace-std\u27e88\u27e9\n  * unicode-width\u27e89\u27e9 0.2\n\n\n  * dev  log\u27e810\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/getopts/versions: 29 releases\n\u27e82\u27e9 https://lib.rs/command-line-interface: Crates to help create command line interfaces, such as argument parsers, line-editing, or output coloring and formatting. - Command-line interface\n\u27e83\u27e9 https://lib.rs/crates/getopts/rev: **1,701** crates (502 directly)\n\u27e84\u27e9 https://docs.rs/getopts: Documentation\n\u27e85\u27e9 https://crates.io/crates/getopts: on crates.io\n\u27e86\u27e9 https://lib.rs/crates/getopts/features#feature-rustc-dep-of-std: optional feature - rustc-dep-of-std?\n\u27e87\u27e9 https://lib.rs/crates/rustc-std-workspace-core: renamed core, 1.0 - rustc-std-workspace-core\n\u27e88\u27e9 https://lib.rs/crates/rustc-std-workspace-std: renamed std, 1.0 - rustc-std-workspace-std\n\u27e89\u27e9 https://lib.rs/crates/unicode-width: new - unicode-width\n\u27e810\u27e9 https://lib.rs/crates/log: 0.4 - log\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5008,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "113909.0997184"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\target\\debug\\deps\\libunicode_width-911e5fa1d8ca1fe0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\target\\debug\\deps\\libgetopts-a8275e97b6f15986.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-width@0.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_width",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-width-0.2.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cjk",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\target\\debug\\deps\\libunicode_width-911e5fa1d8ca1fe0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant field names in struct initialization\n   --> src\\lib.rs:870:21\n    |\n870 |                     hasarg: hasarg,\n    |                     ^^^^^^^^^^^^^^ help: replace it with: `hasarg`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n    = note: `#[warn(clippy::redundant_field_names)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::redundant_field_names)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28791,
+                        "byte_start": 28777,
+                        "column_end": 35,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 870,
+                        "line_start": 870,
+                        "suggested_replacement": "hasarg",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 21,
+                            "text": "                    hasarg: hasarg,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 28791,
+                    "byte_start": 28777,
+                    "column_end": 35,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 870,
+                    "line_start": 870,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 35,
+                        "highlight_start": 21,
+                        "text": "                    hasarg: hasarg,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: redundant field names in struct initialization\n   --> src\\lib.rs:871:21\n    |\n871 |                     occur: occur,\n    |                     ^^^^^^^^^^^^ help: replace it with: `occur`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#redundant_field_names",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace it with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 28825,
+                        "byte_start": 28813,
+                        "column_end": 33,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 871,
+                        "line_start": 871,
+                        "suggested_replacement": "occur",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 33,
+                            "highlight_start": 21,
+                            "text": "                    occur: occur,"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::redundant_field_names",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "redundant field names in struct initialization",
+                "spans": [
+                  {
+                    "byte_end": 28825,
+                    "byte_start": 28813,
+                    "column_end": 33,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 871,
+                    "line_start": 871,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 21,
+                        "text": "                    occur: occur,"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:531:87\n    |\n531 | ...                   } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {\n    |                                                                                 ^^ help: change this to: `n`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n    = note: `#[warn(clippy::needless_borrow)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::needless_borrow)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 18432,
+                        "byte_start": 18430,
+                        "column_end": 89,
+                        "column_start": 87,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 531,
+                        "line_start": 531,
+                        "suggested_replacement": "n",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 89,
+                            "highlight_start": 87,
+                            "text": "                            } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 18432,
+                    "byte_start": 18430,
+                    "column_end": 89,
+                    "column_start": 87,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 531,
+                    "line_start": 531,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 89,
+                        "highlight_start": 87,
+                        "text": "                            } else if was_long || args.peek().map_or(true, |n| is_arg(&n)) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\lib.rs:575:24\n    |\n575 |         let mut line = format!(\"Usage: {} \", program_name);\n    |                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n    = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n    |\n575 -         let mut line = format!(\"Usage: {} \", program_name);\n575 +         let mut line = format!(\"Usage: {program_name} \");\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 20156,
+                        "byte_start": 20156,
+                        "column_end": 41,
+                        "column_start": 41,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 575,
+                        "line_start": 575,
+                        "suggested_replacement": "program_name",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 41,
+                            "text": "        let mut line = format!(\"Usage: {} \", program_name);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 20173,
+                        "byte_start": 20159,
+                        "column_end": 58,
+                        "column_start": 44,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 575,
+                        "line_start": 575,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 58,
+                            "highlight_start": 44,
+                            "text": "        let mut line = format!(\"Usage: {} \", program_name);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 20174,
+                    "byte_start": 20139,
+                    "column_end": 59,
+                    "column_start": 24,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 575,
+                    "line_start": 575,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 59,
+                        "highlight_start": 24,
+                        "text": "        let mut line = format!(\"Usage: {} \", program_name);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: manual implementation of `str::repeat` using iterators\n   --> src\\lib.rs:609:40\n    |\n609 |         let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());\n    |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `\" \".repeat(24)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_str_repeat\n    = note: `#[warn(clippy::manual_str_repeat)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#manual_str_repeat",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::manual_str_repeat)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 21251,
+                        "byte_start": 21211,
+                        "column_end": 80,
+                        "column_start": 40,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 609,
+                        "line_start": 609,
+                        "suggested_replacement": "\" \".repeat(24)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 80,
+                            "highlight_start": 40,
+                            "text": "        let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::manual_str_repeat",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "manual implementation of `str::repeat` using iterators",
+                "spans": [
+                  {
+                    "byte_end": 21251,
+                    "byte_start": 21211,
+                    "column_end": 80,
+                    "column_start": 40,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 609,
+                    "line_start": 609,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 80,
+                        "highlight_start": 40,
+                        "text": "        let desc_sep = format!(\"\\n{}\", repeat(\" \").take(24).collect::<String>());"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: implementation of inherent method `to_string(&self) -> String` for type `Name`\n   --> src\\lib.rs:830:5\n    |\n830 | /     fn to_string(&self) -> String {\n831 | |         match *self {\n832 | |             Short(ch) => ch.to_string(),\n833 | |             Long(ref s) => s.to_string(),\n834 | |         }\n835 | |     }\n    | |_____^\n    |\n    = help: implement trait `Display` for type `Name` instead\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inherent_to_string\n    = note: `#[warn(clippy::inherent_to_string)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "implement trait `Display` for type `Name` instead",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#inherent_to_string",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::inherent_to_string)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::inherent_to_string",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "implementation of inherent method `to_string(&self) -> String` for type `Name`",
+                "spans": [
+                  {
+                    "byte_end": 27743,
+                    "byte_start": 27591,
+                    "column_end": 6,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 835,
+                    "line_start": 830,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 5,
+                        "text": "    fn to_string(&self) -> String {"
+                      },
+                      {
+                        "highlight_end": 22,
+                        "highlight_start": 1,
+                        "text": "        match *self {"
+                      },
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 1,
+                        "text": "            Short(ch) => ch.to_string(),"
+                      },
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 1,
+                        "text": "            Long(ref s) => s.to_string(),"
+                      },
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 1,
+                        "text": "        }"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\lib.rs:884:21\n    |\n884 |             None => panic!(\"No option '{}' defined\", nm),\n    |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n    |\n884 -             None => panic!(\"No option '{}' defined\", nm),\n884 +             None => panic!(\"No option '{nm}' defined\"),\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 29216,
+                        "byte_start": 29216,
+                        "column_end": 41,
+                        "column_start": 41,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 884,
+                        "line_start": 884,
+                        "suggested_replacement": "nm",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 41,
+                            "text": "            None => panic!(\"No option '{}' defined\", nm),"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 29231,
+                        "byte_start": 29227,
+                        "column_end": 56,
+                        "column_start": 52,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 884,
+                        "line_start": 884,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 56,
+                            "highlight_start": 52,
+                            "text": "            None => panic!(\"No option '{}' defined\", nm),"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 29232,
+                    "byte_start": 29196,
+                    "column_end": 57,
+                    "column_start": 21,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 884,
+                    "line_start": 884,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 57,
+                        "highlight_start": 21,
+                        "text": "            None => panic!(\"No option '{}' defined\", nm),"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: match expression looks like `matches!` macro\n   --> src\\lib.rs:930:23\n    |\n930 |               .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {\n    |  _______________________^\n931 | |                 Some(id) if !self.vals[id].is_empty() => true,\n932 | |                 _ => false,\n933 | |             })\n    | |_____________^ help: try: `matches!(find_opt(&self.opts, &Name::from_str(&nm)), Some(id) if !self.vals[id].is_empty())`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro\n    = note: `#[warn(clippy::match_like_matches_macro)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#match_like_matches_macro",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::match_like_matches_macro)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30722,
+                        "byte_start": 30567,
+                        "column_end": 14,
+                        "column_start": 23,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 933,
+                        "line_start": 930,
+                        "suggested_replacement": "matches!(find_opt(&self.opts, &Name::from_str(&nm)), Some(id) if !self.vals[id].is_empty())",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 73,
+                            "highlight_start": 23,
+                            "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                          },
+                          {
+                            "highlight_end": 63,
+                            "highlight_start": 1,
+                            "text": "                Some(id) if !self.vals[id].is_empty() => true,"
+                          },
+                          {
+                            "highlight_end": 28,
+                            "highlight_start": 1,
+                            "text": "                _ => false,"
+                          },
+                          {
+                            "highlight_end": 14,
+                            "highlight_start": 1,
+                            "text": "            })"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::match_like_matches_macro",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "match expression looks like `matches!` macro",
+                "spans": [
+                  {
+                    "byte_end": 30722,
+                    "byte_start": 30567,
+                    "column_end": 14,
+                    "column_start": 23,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 933,
+                    "line_start": 930,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 73,
+                        "highlight_start": 23,
+                        "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                      },
+                      {
+                        "highlight_end": 63,
+                        "highlight_start": 1,
+                        "text": "                Some(id) if !self.vals[id].is_empty() => true,"
+                      },
+                      {
+                        "highlight_end": 28,
+                        "highlight_start": 1,
+                        "text": "                _ => false,"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "            })"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:930:66\n    |\n930 |             .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {\n    |                                                                  ^^^ help: change this to: `nm`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 30613,
+                        "byte_start": 30610,
+                        "column_end": 69,
+                        "column_start": 66,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 930,
+                        "line_start": 930,
+                        "suggested_replacement": "nm",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 66,
+                            "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 30613,
+                    "byte_start": 30610,
+                    "column_end": 69,
+                    "column_start": 66,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 930,
+                    "line_start": 930,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 66,
+                        "text": "            .any(|nm| match find_opt(&self.opts, &Name::from_str(&nm)) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this expression creates a reference which is immediately dereferenced by the compiler\n   --> src\\lib.rs:975:49\n    |\n975 |             .filter_map(|nm| match self.opt_val(&nm) {\n    |                                                 ^^^ help: change this to: `nm`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#needless_borrow",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 32017,
+                        "byte_start": 32014,
+                        "column_end": 52,
+                        "column_start": 49,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 975,
+                        "line_start": 975,
+                        "suggested_replacement": "nm",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 52,
+                            "highlight_start": 49,
+                            "text": "            .filter_map(|nm| match self.opt_val(&nm) {"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::needless_borrow",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this expression creates a reference which is immediately dereferenced by the compiler",
+                "spans": [
+                  {
+                    "byte_end": 32017,
+                    "byte_start": 32014,
+                    "column_end": 52,
+                    "column_start": 49,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 975,
+                    "line_start": 975,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 52,
+                        "highlight_start": 49,
+                        "text": "            .filter_map(|nm| match self.opt_val(&nm) {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: accessing first element with `arg.as_bytes().get(0)`\n    --> src\\lib.rs:1164:5\n     |\n1164 |     arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1\n     |     ^^^^^^^^^^^^^^^^^^^^^ help: try: `arg.as_bytes().first()`\n     |\n     = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#get_first\n     = note: `#[warn(clippy::get_first)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#get_first",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::get_first)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 37893,
+                        "byte_start": 37872,
+                        "column_end": 26,
+                        "column_start": 5,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 1164,
+                        "line_start": 1164,
+                        "suggested_replacement": "arg.as_bytes().first()",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 5,
+                            "text": "    arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::get_first",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "accessing first element with `arg.as_bytes().get(0)`",
+                "spans": [
+                  {
+                    "byte_end": 37893,
+                    "byte_start": 37872,
+                    "column_end": 26,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 1164,
+                    "line_start": 1164,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 26,
+                        "highlight_start": 5,
+                        "text": "    arg.as_bytes().get(0) == Some(&b'-') && arg.len() > 1"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp_z71mgj4/getopts-0.2.23#getopts@0.2.23",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getopts",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp_z71mgj4\\getopts-0.2.23\\target\\debug\\deps\\libgetopts-77c33a01a45d33d9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 6
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "getopts",
+          "version": "0.2.23",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\n[Settings](https://docs.rs/getopts/latest/settings.html)\n[Help](https://docs.rs/getopts/latest/help.html)\nSummary[Source](https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282)\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#usage)Usage\nThis crate is [on crates.io](https://crates.io/crates/getopts) and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#example)Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs[\u00a7](https://docs.rs/getopts/latest/getopts/#structs)\n\n[Matches](https://docs.rs/getopts/latest/getopts/struct.Matches.html \"struct getopts::Matches\")\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\n[Options](https://docs.rs/getopts/latest/getopts/struct.Options.html \"struct getopts::Options\")\n    A description of the options that a program can handle.\n## Enums[\u00a7](https://docs.rs/getopts/latest/getopts/#enums)\n\n[Fail](https://docs.rs/getopts/latest/getopts/enum.Fail.html \"enum getopts::Fail\")\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\n[HasArg](https://docs.rs/getopts/latest/getopts/enum.HasArg.html \"enum getopts::HasArg\")\n    Describes whether an option has an argument.\n\n[Occur](https://docs.rs/getopts/latest/getopts/enum.Occur.html \"enum getopts::Occur\")\n    Describes how often an option may occur.\n\n[ParsingStyle](https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html \"enum getopts::ParsingStyle\")\n    What parsing style to use when parsing arguments.\n## Type Aliases[\u00a7](https://docs.rs/getopts/latest/getopts/#types)\n\n[Result](https://docs.rs/getopts/latest/getopts/type.Result.html \"type getopts::Result\")\n    The result of parsing a command line with a set of options.\n",
+            "markdown_with_citations": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## \u00a7\u27e84\u27e9Usage\nThis crate is on crates.io\u27e85\u27e9 and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## \u00a7\u27e86\u27e9Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nMatches\u27e88\u27e9\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\nOptions\u27e89\u27e9\n    A description of the options that a program can handle.\n## Enums\u00a7\u27e810\u27e9\n\nFail\u27e811\u27e9\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\nHasArg\u27e812\u27e9\n    Describes whether an option has an argument.\n\nOccur\u27e813\u27e9\n    Describes how often an option may occur.\n\nParsingStyle\u27e814\u27e9\n    What parsing style to use when parsing arguments.\n## Type Aliases\u00a7\u27e815\u27e9\n\nResult\u27e816\u27e9\n    The result of parsing a command line with a set of options.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/getopts/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/getopts/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282: Source\n\u27e84\u27e9 https://docs.rs/getopts/latest/getopts/#usage: \u00a7\n\u27e85\u27e9 https://crates.io/crates/getopts: on crates.io\n\u27e86\u27e9 https://docs.rs/getopts/latest/getopts/#example: \u00a7\n\u27e87\u27e9 https://docs.rs/getopts/latest/getopts/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/getopts/latest/getopts/struct.Matches.html: struct getopts::Matches - Matches\n\u27e89\u27e9 https://docs.rs/getopts/latest/getopts/struct.Options.html: struct getopts::Options - Options\n\u27e810\u27e9 https://docs.rs/getopts/latest/getopts/#enums: \u00a7\n\u27e811\u27e9 https://docs.rs/getopts/latest/getopts/enum.Fail.html: enum getopts::Fail - Fail\n\u27e812\u27e9 https://docs.rs/getopts/latest/getopts/enum.HasArg.html: enum getopts::HasArg - HasArg\n\u27e813\u27e9 https://docs.rs/getopts/latest/getopts/enum.Occur.html: enum getopts::Occur - Occur\n\u27e814\u27e9 https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html: enum getopts::ParsingStyle - ParsingStyle\n\u27e815\u27e9 https://docs.rs/getopts/latest/getopts/#types: \u00a7\n\u27e816\u27e9 https://docs.rs/getopts/latest/getopts/type.Result.html: type getopts::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "getopts",
+          "version": "0.2.23",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\n[Settings](https://docs.rs/getopts/latest/settings.html)\n[Help](https://docs.rs/getopts/latest/help.html)\nSummary[Source](https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282)\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#usage)Usage\nThis crate is [on crates.io](https://crates.io/crates/getopts) and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## [\u00a7](https://docs.rs/getopts/latest/getopts/#example)Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs[\u00a7](https://docs.rs/getopts/latest/getopts/#structs)\n\n[Matches](https://docs.rs/getopts/latest/getopts/struct.Matches.html \"struct getopts::Matches\")\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\n[Options](https://docs.rs/getopts/latest/getopts/struct.Options.html \"struct getopts::Options\")\n    A description of the options that a program can handle.\n## Enums[\u00a7](https://docs.rs/getopts/latest/getopts/#enums)\n\n[Fail](https://docs.rs/getopts/latest/getopts/enum.Fail.html \"enum getopts::Fail\")\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\n[HasArg](https://docs.rs/getopts/latest/getopts/enum.HasArg.html \"enum getopts::HasArg\")\n    Describes whether an option has an argument.\n\n[Occur](https://docs.rs/getopts/latest/getopts/enum.Occur.html \"enum getopts::Occur\")\n    Describes how often an option may occur.\n\n[ParsingStyle](https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html \"enum getopts::ParsingStyle\")\n    What parsing style to use when parsing arguments.\n## Type Aliases[\u00a7](https://docs.rs/getopts/latest/getopts/#types)\n\n[Result](https://docs.rs/getopts/latest/getopts/type.Result.html \"type getopts::Result\")\n    The result of parsing a command line with a set of options.\n",
+            "markdown_with_citations": "[](https://docs.rs/getopts/latest/getopts/all.html \"show sidebar\")\n# Crate getoptsCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nSimple getopt alternative.\nConstruct instance of `Options` and configure it by using `reqopt()`, `optopt()` and other methods that add option configuration. Then call `parse()` method and pass into it a vector of actual arguments (not including `argv[0]`).\nYou\u2019ll either get a failure code back, or a match. You\u2019ll have to verify whether the amount of \u2018free\u2019 arguments in the match is what you expect. Use `opt_*` accessors to get argument values out of the matches object.\nSingle-character options are expected to appear on the command line with a single preceding dash; multiple-character options are expected to be proceeded by two dashes. Options that expect an argument accept their argument following either a space or an equals sign. Single-character options don\u2019t require the space. Everything after double-dash \u201c\u2013\u201d argument is considered to be a \u2018free\u2019 argument, even if it starts with dash.\n## \u00a7\u27e84\u27e9Usage\nThis crate is on crates.io\u27e85\u27e9 and can be used by adding `getopts` to the dependencies in your project\u2019s `Cargo.toml`.\n```\n[dependencies]\ngetopts = \"0.2\"\n```\n\nand this to your crate root:\n```\nextern crate getopts;\n```\n\n## \u00a7\u27e86\u27e9Example\nThe following example shows simple command line parsing for an application that requires an input file to be specified, accepts an optional output file name following `-o`, and accepts both `-h` and `--help` as optional flags.\n```\nextern crate getopts;\nuse getopts::Options;\nuse std::env;\nfn do_work(inp: &str, out: Option<String>) {\n  println!(\"{}\", inp);\n  match out {\n    Some(x) => println!(\"{}\", x),\n    None => println!(\"No Output\"),\n  }\n}\nfn print_usage(program: &str, opts: Options) {\n  let brief = format!(\"Usage: {} FILE [options]\", program);\n  print!(\"{}\", opts.usage(&brief));\n}\nfn main() {\n  let args: Vec<String> = env::args().collect();\n  let program = args[0].clone();\n  let mut opts = Options::new();\n  opts.optopt(\"o\", \"\", \"set output file name\", \"NAME\");\n  opts.optflag(\"h\", \"help\", \"print this help menu\");\n  let matches = match opts.parse(&args[1..]) {\n    Ok(m) => { m }\n    Err(f) => { panic!(\"{}\", f.to_string()) }\n  };\n  if matches.opt_present(\"h\") {\n    print_usage(&program, opts);\n    return;\n  }\n  let output = matches.opt_str(\"o\");\n  let input = if !matches.free.is_empty() {\n    matches.free[0].clone()\n  } else {\n    print_usage(&program, opts);\n    return;\n  };\n  do_work(&input, output);\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nMatches\u27e88\u27e9\n    The result of checking command line arguments. Contains a vector of matches and a vector of free strings.\n\nOptions\u27e89\u27e9\n    A description of the options that a program can handle.\n## Enums\u00a7\u27e810\u27e9\n\nFail\u27e811\u27e9\n    The type returned when the command line does not conform to the expected format. Use the `Debug` implementation to output detailed information.\n\nHasArg\u27e812\u27e9\n    Describes whether an option has an argument.\n\nOccur\u27e813\u27e9\n    Describes how often an option may occur.\n\nParsingStyle\u27e814\u27e9\n    What parsing style to use when parsing arguments.\n## Type Aliases\u00a7\u27e815\u27e9\n\nResult\u27e816\u27e9\n    The result of parsing a command line with a set of options.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/getopts/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/getopts/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/getopts/latest/src/getopts/lib.rs.html#13-1282: Source\n\u27e84\u27e9 https://docs.rs/getopts/latest/getopts/#usage: \u00a7\n\u27e85\u27e9 https://crates.io/crates/getopts: on crates.io\n\u27e86\u27e9 https://docs.rs/getopts/latest/getopts/#example: \u00a7\n\u27e87\u27e9 https://docs.rs/getopts/latest/getopts/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/getopts/latest/getopts/struct.Matches.html: struct getopts::Matches - Matches\n\u27e89\u27e9 https://docs.rs/getopts/latest/getopts/struct.Options.html: struct getopts::Options - Options\n\u27e810\u27e9 https://docs.rs/getopts/latest/getopts/#enums: \u00a7\n\u27e811\u27e9 https://docs.rs/getopts/latest/getopts/enum.Fail.html: enum getopts::Fail - Fail\n\u27e812\u27e9 https://docs.rs/getopts/latest/getopts/enum.HasArg.html: enum getopts::HasArg - HasArg\n\u27e813\u27e9 https://docs.rs/getopts/latest/getopts/enum.Occur.html: enum getopts::Occur - Occur\n\u27e814\u27e9 https://docs.rs/getopts/latest/getopts/enum.ParsingStyle.html: enum getopts::ParsingStyle - ParsingStyle\n\u27e815\u27e9 https://docs.rs/getopts/latest/getopts/#types: \u00a7\n\u27e816\u27e9 https://docs.rs/getopts/latest/getopts/type.Result.html: type getopts::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `getopts` crate is a simple and lightweight library for parsing command-line options in Rust. It supports single-character (`-o`) and multi-character (`--help`) options, optional arguments, and free arguments (positional parameters). Key features include customizable option definitions via `Options`, detailed error handling with `Fail`, and flexible argument parsing styles.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 3.0,
+          "factual_counterfactual": "### Pair 1: Command-line argument parsing  \n\u2705 Factual: The `getopts` crate allows parsing single-character options with a single preceding dash (`-`) and multiple-character options with two preceding dashes (`--`).  \n\u274c Counterfactual: The `getopts` crate requires all options, whether single- or multiple-character, to be preceded by two dashes (`--`).  \n\n---\n\n### Pair 2: Handling free arguments  \n\u2705 Factual: The `getopts` crate treats everything after a double-dash (`--`) as free arguments, even if the arguments start with a dash.  \n\u274c Counterfactual: The `getopts` crate automatically ignores arguments starting with a dash after a double-dash (`--`).  \n\n---\n\n### Pair 3: Error handling during parsing  \n\u2705 Factual: When command-line arguments fail to conform to the expected format, the `getopts` crate returns a `Fail` enum that provides detailed information about the error.  \n\u274c Counterfactual: The `getopts` crate silently ignores malformed command-line arguments and continues parsing without returning an error.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-2b5a7b41-b8bce0d0-1751260118",
+      "timestamp": "2025-06-30T05:08:38.030054+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

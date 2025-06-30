@@ -1,11 +1,13 @@
 # unified_llm_processor.py
+import logging
 import re
 import time
-import logging
-import json
-from typing import TypedDict, Union, Optional, Dict, Any, List, TYPE_CHECKING
 from collections.abc import Callable
 from dataclasses import dataclass
+from typing import TYPE_CHECKING, Any, Dict, List, Optional, Tuple, Union
+import json
+
+from .common_types import Section
 
 if TYPE_CHECKING:
     from typing import Tuple
@@ -19,7 +21,21 @@ except ImportError:
     LITELLM_AVAILABLE = False
     logging.warning("LiteLLM not available. Install with: pip install litellm")
 
-from .config import PipelineConfig, CrateMetadata, EnrichedCrate
+from .config import CrateMetadata, EnrichedCrate, PipelineConfig
+from utils.serialization_utils import to_serializable
+
+# Azure AI Inference imports for Azure AI Services
+try:
+    from azure.ai.inference import ChatCompletionsClient
+    from azure.ai.inference.models import SystemMessage, UserMessage
+    from azure.core.credentials import AzureKeyCredential
+    AZURE_AI_INFERENCE_AVAILABLE = True
+except ImportError:
+    AZURE_AI_INFERENCE_AVAILABLE = False
+    ChatCompletionsClient = None
+    AzureKeyCredential = None
+    SystemMessage = None
+    UserMessage = None
 
 
 @dataclass
@@ -33,14 +49,14 @@ class LLMConfig:
     max_tokens: int = 256
     timeout: int = 30
     max_retries: int = 3
-    
+
     # Provider-specific settings
     azure_deployment: Optional[str] = None
     azure_api_version: Optional[str] = None
-    
+
     # Ollama specific
     ollama_host: Optional[str] = None
-    
+
     # LM Studio specific
     lmstudio_host: Optional[str] = None
 
@@ -52,7 +68,11 @@ class BudgetManager:
         self.budget = budget
         self.total_cost = 0.0
 
-    def update_cost(self, model: str, completion_tokens: int, prompt_tokens: int) -> None:
+    def update_cost(
+            self,
+            model: str,
+            completion_tokens: int,
+            prompt_tokens: int) -> None:
         """Update the total cost with the latest API call."""
         try:
             cost, _ = cost_per_token(
@@ -74,10 +94,7 @@ class BudgetManager:
         return self.total_cost
 
 
-class Section(TypedDict, total=True):
-    heading: str
-    content: str
-    priority: int
+# Import shared types
 
 
 class UnifiedLLMProcessor:
@@ -91,18 +108,22 @@ class UnifiedLLMProcessor:
     - Google AI
     - And all other LiteLLM providers
     """
-    
-    def __init__(self, config: LLMConfig, budget_manager: Optional[BudgetManager] = None) -> None:
+
+    def __init__(
+            self,
+            config: LLMConfig,
+            budget_manager: Optional[BudgetManager] = None) -> None:
         self.config = config
         self.logger = logging.getLogger(__name__)
         self.budget_manager = budget_manager or BudgetManager()
-        
+
         if not LITELLM_AVAILABLE:
-            raise ImportError("LiteLLM is required. Install with: pip install litellm")
-        
+            raise ImportError(
+                "LiteLLM is required. Install with: pip install litellm")
+
         # Configure LiteLLM based on provider
         self._configure_litellm()
-    
+
     def _configure_litellm(self) -> None:
         """Configure LiteLLM based on the provider"""
         if self.config.provider == "azure":
@@ -110,38 +131,44 @@ class UnifiedLLMProcessor:
             if self.config.api_base and self.config.api_key:
                 # Azure config is handled in the completion call
                 pass
-                
+
         elif self.config.provider == "ollama":
             # Ollama configuration
             if self.config.ollama_host:
                 litellm.api_base = self.config.ollama_host
             else:
                 litellm.api_base = "http://localhost:11434"
-                
+
         elif self.config.provider == "lmstudio":
             # LM Studio configuration
             if self.config.lmstudio_host:
                 litellm.api_base = self.config.lmstudio_host
             else:
                 litellm.api_base = "http://localhost:1234/v1"
-                
+
         elif self.config.provider in ["openai", "anthropic", "google"]:
             # These use standard API keys
             if self.config.api_key:
                 # API key is set in the completion call
                 pass
-    
+
     def _get_model_name(self) -> str:
         """Get the appropriate model name for the provider"""
         if self.config.provider == "azure":
-            return f"azure/{self.config.model}"
+            # For Azure AI Services (cognitiveservices.azure.com), use Azure OpenAI format
+            if "cognitiveservices.azure.com" in (self.config.api_base or ""):
+                # This is Azure AI Services using Azure OpenAI format
+                return self.config.azure_deployment or self.config.model
+            else:
+                # Standard Azure OpenAI
+                return f"azure/{self.config.model}"
         elif self.config.provider == "ollama":
-            return self.config.model
+            return f"ollama/{self.config.model}"
         elif self.config.provider == "lmstudio":
             return self.config.model
         else:
             return self.config.model
-    
+
     def _get_api_base(self) -> Optional[str]:
         """Get the API base URL for the provider"""
         if self.config.provider == "azure":
@@ -152,7 +179,7 @@ class UnifiedLLMProcessor:
             return self.config.lmstudio_host or "http://localhost:1234/v1"
         else:
             return self.config.api_base
-    
+
     def estimate_tokens(self, text: str) -> int:
         """Rough token estimation (4 characters per token)"""
         return len(text) // 4
@@ -199,7 +226,10 @@ class UnifiedLLMProcessor:
                 priority = 5  # Default priority
 
                 # Assign priority based on content type
-                if re.search(r"\b(usage|example|getting started)\b", heading, re.I):
+                if re.search(
+                    r"\b(usage|example|getting started)\b",
+                    heading,
+                        re.I):
                     priority = 10
                 elif re.search(r"\b(feature|overview|about)\b", heading, re.I):
                     priority = 9
@@ -218,7 +248,8 @@ class UnifiedLLMProcessor:
 
                 # Boost priority if code block is found
                 if "```rust" in line or "```no_run" in line:
-                    current_section["priority"] = max(current_section["priority"], 8)
+                    current_section["priority"] = max(
+                        current_section["priority"], 8)
 
         # Add the last section
         if current_section["content"].strip():
@@ -252,68 +283,73 @@ class UnifiedLLMProcessor:
         return result
 
     def clean_output(self, output: str, task: str = "general") -> str:
-        """Task-specific output cleaning"""
-        if not output:
+        """Clean and validate LLM output"""
+        if output is None:
             return ""
-
-        # Remove any remaining prompt artifacts
-        output = output.split("<|end|>")[0].strip()
-
+        
+        # Convert any MarkdownGenerationResult objects to strings
+        if not isinstance(output, str):
+            output = str(to_serializable(output))
+        
+        # Basic cleaning
+        output = output.strip()
+        
+        # Remove common LLM artifacts
+        artifacts = [
+            "As an AI assistant",
+            "I cannot", 
+            "I don't have access",
+            "I need more information",
+            "Based on the information provided"
+        ]
+        
+        for artifact in artifacts:
+            if output.startswith(artifact):
+                # Try to extract useful content after the artifact
+                lines = output.split('\n')
+                for i, line in enumerate(lines):
+                    if line.strip() and not any(art in line for art in artifacts):
+                        output = '\n'.join(lines[i:])
+                        break
+                else:
+                    output = output  # Keep original if no useful content found
+        
+        # Task-specific cleaning
         if task == "classification":
-            # For classification tasks, extract just the category
-            categories = [
-                "AI",
-                "Database",
-                "Web Framework",
-                "Networking",
-                "Serialization",
-                "Utilities",
-                "DevTools",
-                "ML",
-                "Cryptography",
-                "Unknown",
-            ]
-            for category in categories:
-                if re.search(
-                    r"\b" + re.escape(category) + r"\b", output, re.IGNORECASE
-                ):
+            # Extract classification from potential longer response
+            for category in ["AI", "Database", "Web Framework", "Networking", 
+                           "Serialization", "Utilities", "DevTools", "ML", 
+                           "Cryptography", "Unknown"]:
+                if category.lower() in output.lower():
                     return category
-            return "Unknown"
-
+        
         elif task == "factual_pairs":
-            # For factual pairs, ensure proper formatting
-            pairs: List[str] = []
-            facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL)
-            counterfacts = re.findall(
-                r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", output, re.DOTALL
-            )
-
-            # Pair them up
-            for i in range(min(len(facts), len(counterfacts))):
-                pairs.append(
-                    f"✅ Factual: {facts[i].strip()}\n"
-                    f"❌ Counterfactual: {counterfacts[i].strip()}"
-                )
-
-            return "\n\n".join(pairs)
-
+            # Ensure we have factual/counterfactual markers
+            if "✅" not in output and "❌" not in output:
+                return f"✅ Factual: {output}\n❌ Counterfactual: Alternative interpretation"
+        
+        # Final length check
+        if len(output) > 2000:
+            output = output[:2000] + "..."
+        
         return output
 
     def call_llm(
-        self, 
-        prompt: str, 
-        temperature: Optional[float] = None, 
+        self,
+        prompt: str,
+        temperature: Optional[float] = None,
         max_tokens: Optional[int] = None,
-        system_message: str = "You are a helpful AI assistant that analyzes Rust crates and provides insights."
+        system_message: str = "You are a helpful AI assistant that analyzes "
+        "Rust crates and provides insights."
     ) -> Optional[str]:
         """Call the LLM with the given prompt and parameters."""
-        
+
         if self.budget_manager and self.budget_manager.is_over_budget():
             self.logger.warning("Budget exceeded. Skipping LLM call.")
             return None
 
         model_name = self._get_model_name()
-        
+
         # Prepare arguments for the completion call
         args: Dict[str, Any] = {
             "model": model_name,
@@ -325,29 +361,70 @@ class UnifiedLLMProcessor:
             "max_tokens": max_tokens if max_tokens is not None else self.config.max_tokens,
             "timeout": self.config.timeout
         }
-        
+
         # Provider-specific arguments
         if self.config.provider == "azure":
             args["api_base"] = self.config.api_base
             args["api_key"] = self.config.api_key
             args["api_version"] = self.config.azure_api_version
-            # For Azure, model can be just the deployment name
-            args["model"] = self.config.azure_deployment or self.config.model
+            
+            # Check if this is Azure AI Foundry (services.ai.azure.com)
+            if self.config.api_base and "services.ai.azure.com" in self.config.api_base:
+                # Azure AI Foundry: LiteLLM automatically appends /chat/completions, so just provide base + /models
+                base_url = self.config.api_base.rstrip('/')
+                if base_url.endswith("/models"):
+                    args["api_base"] = base_url  # LiteLLM will append /chat/completions
+                elif base_url.endswith("/models/chat/completions"):
+                    args["api_base"] = base_url.replace("/chat/completions", "")  # Remove it, LiteLLM will add it back
+                else:
+                    args["api_base"] = f"{base_url}/models"  # LiteLLM will append /chat/completions
+                args["model"] = self.config.azure_deployment or self.config.model
+                self.logger.info(f"🔧 Using Azure AI Foundry configuration")
+                self.logger.info(f"   Base URL (LiteLLM will append /chat/completions): {args['api_base']}")
+                self.logger.info(f"   Model: {args['model']}")
+            # Check if this is Azure AI Services (cognitiveservices.azure.com)
+            elif self.config.api_base and "cognitiveservices.azure.com" in self.config.api_base:
+                # Azure AI Services uses Azure OpenAI format with deployment-specific endpoint
+                deployment_name = self.config.azure_deployment or self.config.model
+                args["api_base"] = f"{self.config.api_base.rstrip('/')}/openai/deployments/{deployment_name}"
+                args["model"] = deployment_name
+                self.logger.info(f"🔧 Using Azure AI Services configuration")
+                self.logger.info(f"   Endpoint: {args['api_base']}")
+                self.logger.info(f"   Model: {args['model']}")
+            else:
+                # For standard Azure OpenAI, model can be just the deployment name
+                args["model"] = self.config.azure_deployment or self.config.model
+                self.logger.info(f"🔧 Using standard Azure OpenAI configuration")
+                self.logger.info(f"   Model: {args['model']}")
         else:
             args["api_base"] = self._get_api_base()
             args["api_key"] = self.config.api_key
 
         try:
+            self.logger.info(f"🤖 Making LLM call to {self.config.provider} with model: {args['model']}")
+            self.logger.info(f"🌐 API Base: {args.get('api_base', 'Not set')}")
             response = completion(**args)
-            
+
             # Update budget
             if self.budget_manager:
-                completion_tokens = response.usage.completion_tokens # type: ignore
-                prompt_tokens = response.usage.prompt_tokens # type: ignore
-                self.budget_manager.update_cost(model=model_name, completion_tokens=completion_tokens, prompt_tokens=prompt_tokens)
+                completion_tokens = response.usage.completion_tokens  # type: ignore
+                prompt_tokens = response.usage.prompt_tokens  # type: ignore
+                self.budget_manager.update_cost(
+                    model=model_name,
+                    completion_tokens=completion_tokens,
+                    prompt_tokens=prompt_tokens)
 
-            return response.choices[0].message.content # type: ignore
+            # Extract the content and ensure it's a string
+            content = response.choices[0].message.content  # type: ignore
             
+            # Convert MarkdownGenerationResult and other objects to strings
+            if content is not None:
+                content = to_serializable(content)
+                if not isinstance(content, str):
+                    content = str(content)
+            
+            return content
+
         except Exception as e:
             self.logger.error(f"LLM call failed: {e}")
             return None
@@ -359,26 +436,30 @@ class UnifiedLLMProcessor:
         temperature: Optional[float] = None,
         max_tokens: Optional[int] = None,
         retries: Optional[int] = None,
-        system_message: str = "You are a helpful AI assistant that analyzes Rust crates and provides insights."
+        system_message: str = "You are a helpful AI assistant that analyzes "
+        "Rust crates and provides insights."
     ) -> Optional[str]:
         """Call LLM with validation and retry logic"""
         max_retries = retries if retries is not None else self.config.max_retries
-        
+
         for attempt in range(max_retries + 1):
             try:
-                result = self.call_llm(prompt, temperature, max_tokens, system_message)
+                result = self.call_llm(
+                    prompt, temperature, max_tokens, system_message)
                 if result and validation_func(result):
                     return result
-                    
+
                 if attempt < max_retries:
-                    self.logger.warning(f"Validation failed, retrying... (attempt {attempt + 1}/{max_retries})")
+                    self.logger.warning(
+                        f"Validation failed, retrying... (attempt {
+                            attempt + 1}/{max_retries})")
                     time.sleep(1 * (attempt + 1))  # Exponential backoff
-                    
+
             except Exception as e:
                 self.logger.error(f"Error in attempt {attempt + 1}: {str(e)}")
                 if attempt < max_retries:
                     time.sleep(1 * (attempt + 1))
-                    
+
         self.logger.error(f"Failed after {max_retries + 1} attempts")
         return None
 
@@ -391,8 +472,17 @@ class UnifiedLLMProcessor:
 
     def validate_classification(self, result: str) -> bool:
         """Validate classification output"""
-        categories = ["AI", "Database", "Web Framework", "Networking", "Serialization", 
-                     "Utilities", "DevTools", "ML", "Cryptography", "Unknown"]
+        categories = [
+            "AI",
+            "Database",
+            "Web Framework",
+            "Networking",
+            "Serialization",
+            "Utilities",
+            "DevTools",
+            "ML",
+            "Cryptography",
+            "Unknown"]
         return any(cat.lower() in result.lower() for cat in categories)
 
     def validate_factual_pairs(self, result: str) -> bool:
@@ -402,55 +492,99 @@ class UnifiedLLMProcessor:
     def enrich_crate(self, crate: CrateMetadata) -> EnrichedCrate:
         """Enrich a crate with LLM analysis"""
         self.logger.info(f"Enriching crate: {crate.name}")
-        
+
         # Create enriched crate with base metadata
         enriched = EnrichedCrate(**crate.__dict__)
-        
+
         # Summarize README
         if crate.readme:
             readme_summary = self.summarize_features(crate)
-            enriched.readme_summary = readme_summary
-            
+            # Ensure it's a string
+            enriched.readme_summary = str(to_serializable(readme_summary)) if readme_summary else None
+
             # Classify use case
-            use_case = self.classify_use_case(crate, readme_summary)
-            enriched.use_case = use_case
-            
+            use_case = self.classify_use_case(crate, enriched.readme_summary or "")
+            # Ensure it's a string
+            enriched.use_case = str(to_serializable(use_case)) if use_case else None
+
             # Generate factual pairs
             factual_pairs = self.generate_factual_pairs(crate)
-            enriched.factual_counterfactual = factual_pairs
-            
+            # Ensure it's a string
+            enriched.factual_counterfactual = str(to_serializable(factual_pairs)) if factual_pairs else None
+
             # Score crate
             score = self.score_crate(crate)
-            enriched.score = score
+            # Ensure it's a proper float
+            enriched.score = float(score) if score is not None else None
+
+        # ULTRA-ROBUST FINAL SAFEGUARD: Ensure NO MarkdownGenerationResult objects exist
+        def deep_clean_object(obj):
+            """Recursively clean any object to ensure no MarkdownGenerationResult objects exist"""
+            if hasattr(obj, '__dict__'):
+                # Handle dataclass objects
+                for field_name in obj.__dict__:
+                    field_value = getattr(obj, field_name)
+                    if field_value is not None:
+                        # Check if it's a MarkdownGenerationResult or similar problematic type
+                        # Skip numeric fields like score, downloads, github_stars
+                        if field_name not in ['score', 'downloads', 'github_stars'] and not isinstance(field_value, (str, int, float, bool, list, dict, type(None))):
+                            setattr(obj, field_name, str(field_value))
+                        elif isinstance(field_value, list):
+                            # Clean list items
+                            cleaned_list = []
+                            for item in field_value:
+                                if not isinstance(item, (str, int, float, bool, type(None))):
+                                    cleaned_list.append(str(item))
+                                else:
+                                    cleaned_list.append(item)
+                            setattr(obj, field_name, cleaned_list)
+                        elif isinstance(field_value, dict):
+                            # Clean dictionary values
+                            cleaned_dict = {}
+                            for key, value in field_value.items():
+                                if not isinstance(value, (str, int, float, bool, type(None))):
+                                    cleaned_dict[key] = str(value)
+                                else:
+                                    cleaned_dict[key] = value
+                            setattr(obj, field_name, cleaned_dict)
+            return obj
         
+        # Apply deep cleaning to the enriched object
+        enriched = deep_clean_object(enriched)
+
         return enriched
 
     def summarize_features(self, crate: CrateMetadata) -> str:
         """Summarize crate features using LLM"""
         prompt = f"""
         Summarize the key features and capabilities of the Rust crate '{crate.name}' based on its README.
-        
+
         Crate: {crate.name} v{crate.version}
         Description: {crate.description}
         Keywords: {', '.join(crate.keywords)}
         Categories: {', '.join(crate.categories)}
-        
+
         README Content:
         {self.smart_truncate(crate.readme, 2000)}
-        
+
         Provide a concise summary (2-3 sentences) of what this crate does and its main features.
         """
-        
+
         result = self.call_llm(
             self.simplify_prompt(prompt),
             temperature=0.3,
             max_tokens=150,
-            system_message="You are an expert Rust developer who summarizes crate features concisely."
+            system_message="You are an expert Rust developer who summarizes "
+            "crate features concisely."
         )
-        
-        return self.clean_output(result or "Unable to summarize features", "general")
 
-    def classify_use_case(self, crate: CrateMetadata, readme_summary: str) -> str:
+        return self.clean_output(
+            result or "Unable to summarize features", "general")
+
+    def classify_use_case(
+            self,
+            crate: CrateMetadata,
+            readme_summary: str) -> str:
         """Classify the primary use case of the crate"""
         prompt = f"""
         Classify the primary use case of the Rust crate '{crate.name}' into one of these categories:
@@ -464,58 +598,62 @@ class UnifiedLLMProcessor:
         - ML: Machine learning specific (subset of AI)
         - Cryptography: Security, encryption, or cryptographic operations
         - Unknown: If none of the above categories fit
-        
+
         Crate: {crate.name} v{crate.version}
         Description: {crate.description}
         Summary: {readme_summary}
         Keywords: {', '.join(crate.keywords)}
         Categories: {', '.join(crate.categories)}
-        
+
         Respond with only the category name.
         """
-        
+
         result = self.validate_and_retry(
             self.simplify_prompt(prompt),
             self.validate_classification,
             temperature=0.1,
             max_tokens=50,
-            system_message="You are a Rust ecosystem expert who classifies crates accurately."
+            system_message="You are a Rust ecosystem expert who classifies "
+            "crates accurately."
         )
-        
+
         return self.clean_output(result or "Unknown", "classification")
 
     def generate_factual_pairs(self, crate: CrateMetadata) -> str:
         """Generate factual and counterfactual statements about the crate"""
         prompt = f"""
         Generate 2-3 pairs of factual and counterfactual statements about the Rust crate '{crate.name}'.
-        
+
         Crate: {crate.name} v{crate.version}
         Description: {crate.description}
         Keywords: {', '.join(crate.keywords)}
-        
+
         README Content:
         {self.smart_truncate(crate.readme, 1500)}
-        
+
         For each pair:
         - ✅ Factual: A true statement about the crate's capabilities or features
         - ❌ Counterfactual: A false statement that sounds plausible but is incorrect
-        
+
         Format each pair as:
         ✅ Factual: [true statement]
         ❌ Counterfactual: [false statement]
-        
+
         Focus on technical capabilities, performance characteristics, and use cases.
         """
-        
+
         result = self.validate_and_retry(
             self.simplify_prompt(prompt),
             self.validate_factual_pairs,
             temperature=0.4,
             max_tokens=300,
-            system_message="You are a Rust expert who generates accurate factual statements and plausible counterfactuals."
+            system_message="You are a Rust expert who generates accurate "
+            "factual statements and plausible counterfactuals."
         )
-        
-        return self.clean_output(result or "Unable to generate factual pairs", "factual_pairs")
+
+        return self.clean_output(
+            result or "Unable to generate factual pairs",
+            "factual_pairs")
 
     def score_crate(self, crate: CrateMetadata) -> float:
         """Score the crate based on various factors"""
@@ -526,26 +664,27 @@ class UnifiedLLMProcessor:
         - Community adoption (downloads, stars)
         - Code quality indicators
         - Practical usefulness
-        
+
         Crate: {crate.name} v{crate.version}
         Description: {crate.description}
         Downloads: {crate.downloads}
         GitHub Stars: {crate.github_stars}
         Keywords: {', '.join(crate.keywords)}
-        
+
         README Content:
         {self.smart_truncate(crate.readme, 1000)}
-        
+
         Respond with only a number between 0.0 and 10.0 (e.g., 7.5).
         """
-        
+
         result = self.call_llm(
             self.simplify_prompt(prompt),
             temperature=0.2,
             max_tokens=10,
-            system_message="You are a Rust ecosystem expert who rates crates objectively."
+            system_message="You are a Rust ecosystem expert who rates crates "
+            "objectively."
         )
-        
+
         if result:
             try:
                 # Extract numeric score
@@ -555,31 +694,31 @@ class UnifiedLLMProcessor:
                     return max(0.0, min(10.0, score))  # Clamp between 0-10
             except (ValueError, TypeError):
                 pass
-        
+
         return 5.0  # Default score
 
     def batch_process_prompts(
-        self, 
-        prompts: "List[Tuple[str, float, int]]", 
+        self,
+        prompts: "List[Tuple[str, float, int]]",
         batch_size: int = 4
     ) -> List[Optional[str]]:
         """Process multiple prompts in batches"""
         results = []
-        
+
         for i in range(0, len(prompts), batch_size):
             batch = prompts[i:i + batch_size]
             batch_results = []
-            
+
             for prompt, temp, tokens in batch:
                 result = self.call_llm(prompt, float(temp), int(tokens))
                 batch_results.append(result)
-                
+
             results.extend(batch_results)
-            
+
             # Small delay between batches
             if i + batch_size < len(prompts):
                 time.sleep(0.5)
-        
+
         return results
 
     def smart_context_management(
@@ -594,10 +733,96 @@ class UnifiedLLMProcessor:
         """Return the current total cost."""
         return self.budget_manager.get_total_cost()
 
+    def _is_azure_ai_services(self) -> bool:
+        """Check if this is Azure AI Services (cognitiveservices.azure.com)"""
+        return (self.config.provider == "azure" and 
+                bool(self.config.api_base) and 
+                "cognitiveservices.azure.com" in self.config.api_base and
+                AZURE_AI_INFERENCE_AVAILABLE)
 
-def create_llm_processor_from_config(pipeline_config: PipelineConfig) -> UnifiedLLMProcessor:
+    def _create_azure_ai_client(self):
+        """Create Azure AI Inference client for Azure AI Services"""
+        if not self._is_azure_ai_services():
+            return None
+        
+        if not AZURE_AI_INFERENCE_AVAILABLE or not ChatCompletionsClient or not AzureKeyCredential:
+            return None
+            
+        if not self.config.api_base or not self.config.api_key:
+            return None
+            
+        try:
+            return ChatCompletionsClient(
+                endpoint=self.config.api_base,
+                credential=AzureKeyCredential(self.config.api_key)
+            )
+        except Exception as e:
+            self.logger.error(f"Failed to create Azure AI client: {e}")
+            return None
+
+    def _call_azure_ai_services(
+        self,
+        prompt: str,
+        temperature: float,
+        max_tokens: int,
+        system_message: str
+    ) -> Optional[str]:
+        """Call Azure AI Services using the official Azure AI Inference library"""
+        if not self._is_azure_ai_services():
+            return None
+        
+        if not AZURE_AI_INFERENCE_AVAILABLE or not SystemMessage or not UserMessage:
+            return None
+        
+        try:
+            client = self._create_azure_ai_client()
+            if not client:
+                return None
+            
+            # Prepare messages
+            messages = [
+                SystemMessage(content=system_message),
+                UserMessage(content=prompt)
+            ]
+            
+            # Make the call
+            self.logger.info(f"🤖 Making Azure AI Services call with model: {self.config.model}")
+            self.logger.info(f"🌐 API Base: {self.config.api_base}")
+            
+            response = client.complete(
+                messages=messages,
+                model=self.config.azure_deployment or self.config.model,
+                temperature=temperature,
+                max_tokens=max_tokens
+            )
+            
+            # Extract content
+            if response.choices and len(response.choices) > 0:
+                content = response.choices[0].message.content
+                
+                # Update budget tracking
+                if hasattr(response, 'usage') and response.usage:
+                    self.budget_manager.update_cost(
+                        model=self.config.model,
+                        completion_tokens=getattr(response.usage, 'completion_tokens', 0),
+                        prompt_tokens=getattr(response.usage, 'prompt_tokens', 0)
+                    )
+                
+                self.logger.info("✅ Azure AI Services call successful")
+                return content
+            else:
+                self.logger.warning("❌ Azure AI Services returned no choices")
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"Azure AI Services call failed: {e}")
+            return None
+
+
+def create_llm_processor_from_config(
+        pipeline_config: PipelineConfig) -> UnifiedLLMProcessor:
     """Create LLM processor from pipeline configuration"""
-    
+
     # Determine which provider to use based on config
     if pipeline_config.use_azure_openai:
         llm_config = LLMConfig(
@@ -616,15 +841,16 @@ def create_llm_processor_from_config(pipeline_config: PipelineConfig) -> Unified
         # Default to local model
         llm_config = LLMConfig(
             provider="ollama",  # Default local provider
-            model="llama2",  # Default model
+            model="qwen2.5-coder:1.5b",  # Use the model we actually have
             temperature=0.2,
             max_tokens=pipeline_config.max_tokens,
             timeout=30,
             max_retries=pipeline_config.max_retries
         )
-    
-    budget_manager = BudgetManager(budget=pipeline_config.budget) if pipeline_config.budget is not None else None
-    
+
+    budget_manager = BudgetManager(
+        budget=pipeline_config.budget) if pipeline_config.budget is not None else None
+
     return UnifiedLLMProcessor(llm_config, budget_manager=budget_manager)
 
 
@@ -639,7 +865,7 @@ def create_llm_processor_from_args(
     **kwargs
 ) -> UnifiedLLMProcessor:
     """Create a UnifiedLLMProcessor from command-line arguments."""
-    
+
     llm_config = LLMConfig(
         provider=provider,
         model=model,
@@ -649,7 +875,8 @@ def create_llm_processor_from_args(
         max_tokens=max_tokens,
         **kwargs
     )
-    
-    budget_manager = BudgetManager(budget=budget) if budget is not None else None
-    
-    return UnifiedLLMProcessor(llm_config, budget_manager=budget_manager) 
+
+    budget_manager = BudgetManager(
+        budget=budget) if budget is not None else None
+
+    return UnifiedLLMProcessor(llm_config, budget_manager=budget_manager)

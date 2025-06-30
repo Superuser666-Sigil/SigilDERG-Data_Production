@@ -1,0 +1,1445 @@
+[
+  {
+    "execution_id": "exec-4696e752-088ef00e-1751262957",
+    "timestamp": "2025-06-30T05:55:57.706629+00:00",
+    "sacred_chain": {
+      "input_data": "parking_lot",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'parking_lot' -> 'parking_lot'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "parking_lot",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/parking_lot",
+            "title": "parking_lot v0.12.4",
+            "content": {
+              "raw_markdown": "#  parking_lot v0.12.4\nMore compact and efficient implementations of the standard synchronization primitives. \n  * [ #condvar ](https://crates.io/keywords/condvar)\n  * [ #mutex ](https://crates.io/keywords/mutex)\n  * [ #once ](https://crates.io/keywords/once)\n  * [ #rwlock ](https://crates.io/keywords/rwlock)\n  * [ #thread ](https://crates.io/keywords/thread)\n\n\n  * [ Readme ](https://crates.io/crates/parking_lot)\n  * [ 57 Versions ](https://crates.io/crates/parking_lot/versions)\n  * [ Dependencies ](https://crates.io/crates/parking_lot/dependencies)\n  * [ Dependents ](https://crates.io/crates/parking_lot/reverse_dependencies)\n\n\n## Metadata\nabout 1 month ago \nv1.64.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n45.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add parking_lot\nOr add the following line to your Cargo.toml:\nparking_lot = \"0.12.4\"\n## Repository\n[ github.com/Amanieu/parking_lot ](https://github.com/Amanieu/parking_lot)\n## Owners\n## Categories\n  * [Concurrency](https://crates.io/categories/concurrency)\n\n\n[ Report crate ](https://crates.io/support?crate=parking_lot&inquire=crate-violation)\n### Stats Overview\n429,528,725 Downloads all time\n57 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  parking_lot v0.12.4\nMore compact and efficient implementations of the standard synchronization primitives. \n  *  #condvar \u27e81\u27e9\n  *  #mutex \u27e82\u27e9\n  *  #once \u27e83\u27e9\n  *  #rwlock \u27e84\u27e9\n  *  #thread \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  57 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nabout 1 month ago \nv1.64.0 \n MIT \u27e810\u27e9 OR  Apache-2.0 \u27e811\u27e9\n45.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add parking_lot\nOr add the following line to your Cargo.toml:\nparking_lot = \"0.12.4\"\n## Repository\n github.com/Amanieu/parking_lot \u27e812\u27e9\n## Owners\n## Categories\n  * Concurrency\u27e813\u27e9\n\n\n Report crate \u27e814\u27e9\n### Stats Overview\n429,528,725 Downloads all time\n57 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/condvar:  #condvar \n\u27e82\u27e9 https://crates.io/keywords/mutex:  #mutex \n\u27e83\u27e9 https://crates.io/keywords/once:  #once \n\u27e84\u27e9 https://crates.io/keywords/rwlock:  #rwlock \n\u27e85\u27e9 https://crates.io/keywords/thread:  #thread \n\u27e86\u27e9 https://crates.io/crates/parking_lot:  Readme \n\u27e87\u27e9 https://crates.io/crates/parking_lot/versions:  57 Versions \n\u27e88\u27e9 https://crates.io/crates/parking_lot/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/parking_lot/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e812\u27e9 https://github.com/Amanieu/parking_lot:  github.com/Amanieu/parking_lot \n\u27e813\u27e9 https://crates.io/categories/concurrency: Concurrency\n\u27e814\u27e9 https://crates.io/support?crate=parking_lot&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1392,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116747.5654777"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/parking_lot",
+            "title": "Crate parking_lotCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\n[Settings](https://docs.rs/parking_lot/latest/settings.html)\n[Help](https://docs.rs/parking_lot/latest/help.html)\nSummary[Source](https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59)\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#reexports)\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#modules)\n\n[deadlock](https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html \"mod parking_lot::deadlock\")\n    [Experimental] Deadlock detection\n## Structs[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#structs)\n\n[ArcMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html \"struct parking_lot::ArcMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\n[ArcReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html \"struct parking_lot::ArcReentrantMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\n[ArcRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html \"struct parking_lot::ArcRwLockReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\n[ArcRwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html \"struct parking_lot::ArcRwLockUpgradableReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[ArcRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html \"struct parking_lot::ArcRwLockWriteGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[Condvar](https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html \"struct parking_lot::Condvar\")\n    A Condition Variable\n\n[Once](https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html \"struct parking_lot::Once\")\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\n[RawFairMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html \"struct parking_lot::RawFairMutex\")\n    Raw fair mutex type backed by the parking lot.\n\n[RawMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html \"struct parking_lot::RawMutex\")\n    Raw mutex type backed by the parking lot.\n\n[RawRwLock](https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html \"struct parking_lot::RawRwLock\")\n    Raw reader-writer lock type backed by the parking lot.\n\n[RawThreadId](https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html \"struct parking_lot::RawThreadId\")\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\n[WaitTimeoutResult](https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html \"struct parking_lot::WaitTimeoutResult\")\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#enums)\n\n[OnceState](https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html \"enum parking_lot::OnceState\")\n    Current state of a `Once`.\n## Functions[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#functions)\n\n[const_fair_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html \"fn parking_lot::const_fair_mutex\")\n    Creates a new fair mutex in an unlocked state ready for use.\n\n[const_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html \"fn parking_lot::const_mutex\")\n    Creates a new mutex in an unlocked state ready for use.\n\n[const_reentrant_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html \"fn parking_lot::const_reentrant_mutex\")\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\n[const_rwlock](https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html \"fn parking_lot::const_rwlock\")\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#types)\n\n[FairMutex](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html \"type parking_lot::FairMutex\")\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\n[FairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html \"type parking_lot::FairMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[MappedFairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html \"type parking_lot::MappedFairMutexGuard\")\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html \"type parking_lot::MappedMutexGuard\")\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html \"type parking_lot::MappedReentrantMutexGuard\")\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html \"type parking_lot::MappedRwLockReadGuard\")\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html \"type parking_lot::MappedRwLockWriteGuard\")\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\n[Mutex](https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html \"type parking_lot::Mutex\")\n    A mutual exclusion primitive useful for protecting shared data\n\n[MutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html \"type parking_lot::MutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[ReentrantMutex](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html \"type parking_lot::ReentrantMutex\")\n    A mutex which can be recursively locked by a single thread.\n\n[ReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html \"type parking_lot::ReentrantMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[RwLock](https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html \"type parking_lot::RwLock\")\n    A reader-writer lock\n\n[RwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html \"type parking_lot::RwLockReadGuard\")\n    RAII structure used to release the shared read access of a lock when dropped.\n\n[RwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html \"type parking_lot::RwLockUpgradableReadGuard\")\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\n[RwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html \"type parking_lot::RwLockWriteGuard\")\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+              "markdown_with_citations": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports\u00a7\u27e84\u27e9\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules\u00a7\u27e85\u27e9\n\ndeadlock\u27e86\u27e9\n    [Experimental] Deadlock detection\n## Structs\u00a7\u27e87\u27e9\n\nArcMutexGuard\u27e88\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\nArcReentrantMutexGuard\u27e89\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\nArcRwLockReadGuard\u27e810\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\nArcRwLockUpgradableReadGuard\u27e811\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nArcRwLockWriteGuard\u27e812\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nCondvar\u27e813\u27e9\n    A Condition Variable\n\nOnce\u27e814\u27e9\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\nRawFairMutex\u27e815\u27e9\n    Raw fair mutex type backed by the parking lot.\n\nRawMutex\u27e816\u27e9\n    Raw mutex type backed by the parking lot.\n\nRawRwLock\u27e817\u27e9\n    Raw reader-writer lock type backed by the parking lot.\n\nRawThreadId\u27e818\u27e9\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\nWaitTimeoutResult\u27e819\u27e9\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums\u00a7\u27e820\u27e9\n\nOnceState\u27e821\u27e9\n    Current state of a `Once`.\n## Functions\u00a7\u27e822\u27e9\n\nconst_fair_mutex\u27e823\u27e9\n    Creates a new fair mutex in an unlocked state ready for use.\n\nconst_mutex\u27e824\u27e9\n    Creates a new mutex in an unlocked state ready for use.\n\nconst_reentrant_mutex\u27e825\u27e9\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\nconst_rwlock\u27e826\u27e9\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases\u00a7\u27e827\u27e9\n\nFairMutex\u27e828\u27e9\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\nFairMutexGuard\u27e829\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nMappedFairMutexGuard\u27e830\u27e9\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedMutexGuard\u27e831\u27e9\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedReentrantMutexGuard\u27e832\u27e9\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockReadGuard\u27e833\u27e9\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockWriteGuard\u27e834\u27e9\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\nMutex\u27e835\u27e9\n    A mutual exclusion primitive useful for protecting shared data\n\nMutexGuard\u27e836\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nReentrantMutex\u27e837\u27e9\n    A mutex which can be recursively locked by a single thread.\n\nReentrantMutexGuard\u27e838\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nRwLock\u27e839\u27e9\n    A reader-writer lock\n\nRwLockReadGuard\u27e840\u27e9\n    RAII structure used to release the shared read access of a lock when dropped.\n\nRwLockUpgradableReadGuard\u27e841\u27e9\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\nRwLockWriteGuard\u27e842\u27e9\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/parking_lot/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/parking_lot/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59: Source\n\u27e84\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#reexports: \u00a7\n\u27e85\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html: mod parking_lot::deadlock - deadlock\n\u27e87\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html: struct parking_lot::ArcMutexGuard - ArcMutexGuard\n\u27e89\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html: struct parking_lot::ArcReentrantMutexGuard - ArcReentrantMutexGuard\n\u27e810\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html: struct parking_lot::ArcRwLockReadGuard - ArcRwLockReadGuard\n\u27e811\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html: struct parking_lot::ArcRwLockUpgradableReadGuard - ArcRwLockUpgradableReadGuard\n\u27e812\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html: struct parking_lot::ArcRwLockWriteGuard - ArcRwLockWriteGuard\n\u27e813\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html: struct parking_lot::Condvar - Condvar\n\u27e814\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html: struct parking_lot::Once - Once\n\u27e815\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html: struct parking_lot::RawFairMutex - RawFairMutex\n\u27e816\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html: struct parking_lot::RawMutex - RawMutex\n\u27e817\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html: struct parking_lot::RawRwLock - RawRwLock\n\u27e818\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html: struct parking_lot::RawThreadId - RawThreadId\n\u27e819\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html: struct parking_lot::WaitTimeoutResult - WaitTimeoutResult\n\u27e820\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#enums: \u00a7\n\u27e821\u27e9 https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html: enum parking_lot::OnceState - OnceState\n\u27e822\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#functions: \u00a7\n\u27e823\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html: fn parking_lot::const_fair_mutex - const_fair_mutex\n\u27e824\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html: fn parking_lot::const_mutex - const_mutex\n\u27e825\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html: fn parking_lot::const_reentrant_mutex - const_reentrant_mutex\n\u27e826\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html: fn parking_lot::const_rwlock - const_rwlock\n\u27e827\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html: type parking_lot::FairMutex - FairMutex\n\u27e829\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html: type parking_lot::FairMutexGuard - FairMutexGuard\n\u27e830\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html: type parking_lot::MappedFairMutexGuard - MappedFairMutexGuard\n\u27e831\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html: type parking_lot::MappedMutexGuard - MappedMutexGuard\n\u27e832\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html: type parking_lot::MappedReentrantMutexGuard - MappedReentrantMutexGuard\n\u27e833\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html: type parking_lot::MappedRwLockReadGuard - MappedRwLockReadGuard\n\u27e834\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html: type parking_lot::MappedRwLockWriteGuard - MappedRwLockWriteGuard\n\u27e835\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html: type parking_lot::Mutex - Mutex\n\u27e836\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html: type parking_lot::MutexGuard - MutexGuard\n\u27e837\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html: type parking_lot::ReentrantMutex - ReentrantMutex\n\u27e838\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html: type parking_lot::ReentrantMutexGuard - ReentrantMutexGuard\n\u27e839\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html: type parking_lot::RwLock - RwLock\n\u27e840\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html: type parking_lot::RwLockReadGuard - RwLockReadGuard\n\u27e841\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html: type parking_lot::RwLockUpgradableReadGuard - RwLockUpgradableReadGuard\n\u27e842\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html: type parking_lot::RwLockWriteGuard - RwLockWriteGuard\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8516,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116748.2209897"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/parking_lot",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [56 releases](https://lib.rs/crates/parking_lot/versions)\n0.12.4 |  May 29, 2025   \n---|---  \n0.12.3 |  May 24, 2024   \n0.12.2 |  Apr 25, 2024   \n0.12.1 |  May 31, 2022   \n0.2.7 |  Jul 28, 2016   \n#**1** in [Concurrency](https://lib.rs/concurrency \"Crates for implementing concurrent and parallel computation.\")\nDownload history 4433723/week @ 2025-03-10 4975623/week @ 2025-03-17 5163803/week @ 2025-03-24 4187829/week @ 2025-03-31 4363604/week @ 2025-04-07 3911296/week @ 2025-04-14 3717840/week @ 2025-04-21 3690726/week @ 2025-04-28 3854577/week @ 2025-05-05 4037397/week @ 2025-05-12 3944104/week @ 2025-05-19 3588490/week @ 2025-05-26 4035769/week @ 2025-06-02 4228446/week @ 2025-06-09 4675166/week @ 2025-06-16 4316655/week @ 2025-06-23\n**17,476,825** downloads per month Used in [**39,404** crates (3,377 directly)](https://lib.rs/crates/parking_lot/rev)\n**MIT/Apache**\n415KB  7.5K  SLoC\n# parking_lot\n[![Rust](https://img.gs/czjpqfbdkz/full/https://github.com/Amanieu/parking_lot/workflows/Rust/badge.svg)](https://github.com/Amanieu/parking_lot/actions) [![Crates.io](https://img.shields.io/crates/v/parking_lot.svg)](https://crates.io/crates/parking_lot)\n[Documentation (synchronization primitives)](https://docs.rs/parking_lot/)\n[Documentation (core parking lot API)](https://docs.rs/parking_lot_core/)\n[Documentation (type-safe lock API)](https://docs.rs/lock_api/)\nThis library provides implementations of ``Mutex``, ``RwLock``, ``Condvar`` and ``Once`` that are smaller, faster and more flexible than those in the Rust standard library, as well as a ``ReentrantMutex`` type which supports recursive locking. It also exposes a low-level API for creating your own efficient synchronization primitives.\nWhen tested on x86_64 Linux, ```parking_lot`::``Mutex`` was found to be 1.5x faster than ```std`::```sync`::``Mutex`` when uncontended, and up to 5x faster when contended from multiple threads. The numbers for ``RwLock`` vary depending on the number of reader and writer threads, but are almost always faster than the standard library ``RwLock``, and even up to 50x faster in some cases.\n## Features\nThe primitives provided by this library have several advantages over those in the Rust standard library:\n  1. ``Mutex`` and ``Once`` only require 1 byte of storage space, while ``Condvar`` and ``RwLock`` only require 1 word of storage space. On the other hand on some platforms (macOS and a few others) the standard library primitives require a dynamically allocated ```Box``` to hold OS-specific synchronization primitives. The small size of ``Mutex`` in particular encourages the use of fine-grained locks to increase parallelism.\n  2. Uncontended lock acquisition and release is done through fast inline paths which only require a single atomic operation.\n  3. Microcontention (a contended lock with a short critical section) is efficiently handled by spinning a few times while trying to acquire a lock.\n  4. The locks are adaptive and will suspend a thread after a few failed spin attempts. This makes the locks suitable for both long and short critical sections.\n  5. ``Condvar``, ``RwLock`` and ``Once`` work on Windows XP, unlike the standard library versions of those types.\n  6. ``RwLock`` takes advantage of hardware lock elision on processors that support it, which can lead to huge performance wins with many readers. This must be enabled with the ``hardware-lock-elision`` feature.\n  7. ``RwLock`` uses a task-fair locking policy, which avoids reader and writer starvation, whereas the standard library version makes no guarantees.\n  8. ``Condvar`` is guaranteed not to produce spurious wakeups. A thread will only be woken up if it timed out or it was woken up by a notification.\n  9. ```Condvar`::``notify_all`` will only wake up a single thread and requeue the rest to wait on the associated ``Mutex``. This avoids a thundering herd problem where all threads try to acquire the lock at the same time.\n  10. ``RwLock`` supports atomically downgrading a write lock into a read lock.\n  11. ``Mutex`` and ``RwLock`` allow raw unlocking without a RAII guard object.\n  12. ```Mutex`<``(``)``>```` and ```RwLock`<``(``)``>```` allow raw locking without a RAII guard object.\n  13. ``Mutex`` and ``RwLock`` support [eventual fairness](https://trac.webkit.org/changeset/203350) which allows them to be fair on average without sacrificing performance.\n  14. A ``ReentrantMutex`` type which supports recursive locking.\n  15. An _experimental_ deadlock detector that works for ``Mutex``, ``RwLock`` and ``ReentrantMutex``. This feature is disabled by default and can be enabled via the ``deadlock_detection`` feature.\n  16. ``RwLock`` supports atomically upgrading an \"upgradable\" read lock into a write lock.\n  17. Optional support for [serde](https://docs.serde.rs/serde/). Enable via the feature ``serde``. **NOTE!** this support is for ``Mutex``, ``ReentrantMutex``, and ``RwLock`` only; ``Condvar`` and ``Once`` are not currently supported.\n  18. Lock guards can be sent to other threads when the ``send_guard`` feature is enabled.\n\n\n## The parking lot\nTo keep these primitives small, all thread queuing and suspending functionality is offloaded to the _parking lot_. The idea behind this is based on the Webkit [```WTF```::``ParkingLot``](https://webkit.org/blog/6161/locking-in-webkit/) class, which essentially consists of a hash table mapping of lock addresses to queues of parked (sleeping) threads. The Webkit parking lot was itself inspired by Linux [futexes](https://man7.org/linux/man-pages/man2/futex.2.html), but it is more powerful since it allows invoking callbacks while holding a queue lock.\n## Nightly vs stable\nThere are a few restrictions when using this library on stable Rust:\n  * The ``wasm32-unknown-unknown`` target is only fully supported on nightly with ```-`C target`-`feature`=``+`atomics`` in ``RUSTFLAGS`` and ```-`Zbuild`-`std`=`panic_abort`,`std`` passed to cargo. parking_lot will work mostly fine on stable, the only difference is it will panic instead of block forever if you hit a deadlock. Just make sure not to enable ```-`C target`-`feature`=``+`atomics`` on stable as that will allow wasm to run with multiple threads which will completely break parking_lot's concurrency guarantees.\n\n\nTo enable nightly-only functionality, you need to enable the ``nightly`` feature in Cargo (see below).\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`parking_lot ``=` ``\"`0.12`\"``\n``\n```\n\nTo enable nightly-only features, add this to your ``Cargo.toml`` instead:\n```\n```[``dependencies``]`\n`parking_lot = { version = \"0.12\", features ``=` ``[```\"`nightly`\"```]`` }\n``\n```\n\nThe experimental deadlock detector can be enabled with the ``deadlock_detection`` Cargo feature.\nTo allow sending ``MutexGuard``s and ``RwLock`*`Guard``s to other threads, enable the ``send_guard`` option.\nNote that the ``deadlock_detection`` and ``send_guard`` features are incompatible and cannot be used together.\nHardware lock elision support for x86 can be enabled with the ``hardware-lock-elision`` feature. This requires Rust 1.59 due to the use of inline assembly.\nThe core parking lot API is provided by the ``parking_lot_core`` crate. It is separate from the synchronization primitives in the ``parking_lot`` crate so that changes to the core API do not cause breaking changes for users of ``parking_lot``.\n## Minimum Rust version\nThe current minimum required Rust version is 1.64. Any change to this is considered a breaking change and will require a major version bump.\n## License\nLicensed under either of\n  * Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/amanieu/parking_lot/blob/df66e66b99f2650043b588cb0172b40958bc4277/LICENSE-APACHE) or <https://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license ([LICENSE-MIT](https://github.com/amanieu/parking_lot/blob/df66e66b99f2650043b588cb0172b40958bc4277/LICENSE-MIT) or <https://opensource.org/licenses/MIT>)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0\u20136MB  ~22K SLoC\n  * [lock_api](https://lib.rs/crates/lock_api \"0.4.13\")\n  * [parking_lot_core](https://lib.rs/crates/parking_lot_core \"0.9.11\")\n\n\n  * dev  [bincode](https://lib.rs/crates/bincode \"1.3.3\")\n  * dev  [rand](https://lib.rs/crates/rand \"outdated\") 0.8.3\n\n\n#### [Other features](https://lib.rs/crates/parking_lot/features)\n  * [arc_lock](https://lib.rs/crates/parking_lot/features#feature-arc_lock)\n  * [deadlock_detection](https://lib.rs/crates/parking_lot/features#feature-deadlock_detection)\n  * [hardware-lock-elision](https://lib.rs/crates/parking_lot/features#feature-hardware-lock-elision)\n  * [nightly](https://lib.rs/crates/parking_lot/features#feature-nightly)\n  * [owning_ref](https://lib.rs/crates/parking_lot/features#feature-owning_ref)\n  * [send_guard](https://lib.rs/crates/parking_lot/features#feature-send_guard)\n  * [serde](https://lib.rs/crates/parking_lot/features#feature-serde)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  56 releases\u27e81\u27e9\n0.12.4 |  May 29, 2025   \n---|---  \n0.12.3 |  May 24, 2024   \n0.12.2 |  Apr 25, 2024   \n0.12.1 |  May 31, 2022   \n0.2.7 |  Jul 28, 2016   \n#**1** in Concurrency\u27e82\u27e9\nDownload history 4433723/week @ 2025-03-10 4975623/week @ 2025-03-17 5163803/week @ 2025-03-24 4187829/week @ 2025-03-31 4363604/week @ 2025-04-07 3911296/week @ 2025-04-14 3717840/week @ 2025-04-21 3690726/week @ 2025-04-28 3854577/week @ 2025-05-05 4037397/week @ 2025-05-12 3944104/week @ 2025-05-19 3588490/week @ 2025-05-26 4035769/week @ 2025-06-02 4228446/week @ 2025-06-09 4675166/week @ 2025-06-16 4316655/week @ 2025-06-23\n**17,476,825** downloads per month Used in **39,404** crates (3,377 directly)\u27e83\u27e9\n**MIT/Apache**\n415KB  7.5K  SLoC\n# parking_lot\n![Rust\u27e84\u27e9](https://github.com/Amanieu/parking_lot/actions) ![Crates.io\u27e85\u27e9](https://crates.io/crates/parking_lot)\nDocumentation (synchronization primitives)\u27e86\u27e9\nDocumentation (core parking lot API)\u27e87\u27e9\nDocumentation (type-safe lock API)\u27e88\u27e9\nThis library provides implementations of ``Mutex``, ``RwLock``, ``Condvar`` and ``Once`` that are smaller, faster and more flexible than those in the Rust standard library, as well as a ``ReentrantMutex`` type which supports recursive locking. It also exposes a low-level API for creating your own efficient synchronization primitives.\nWhen tested on x86_64 Linux, ```parking_lot`::``Mutex`` was found to be 1.5x faster than ```std`::```sync`::``Mutex`` when uncontended, and up to 5x faster when contended from multiple threads. The numbers for ``RwLock`` vary depending on the number of reader and writer threads, but are almost always faster than the standard library ``RwLock``, and even up to 50x faster in some cases.\n## Features\nThe primitives provided by this library have several advantages over those in the Rust standard library:\n  1. ``Mutex`` and ``Once`` only require 1 byte of storage space, while ``Condvar`` and ``RwLock`` only require 1 word of storage space. On the other hand on some platforms (macOS and a few others) the standard library primitives require a dynamically allocated ```Box``` to hold OS-specific synchronization primitives. The small size of ``Mutex`` in particular encourages the use of fine-grained locks to increase parallelism.\n  2. Uncontended lock acquisition and release is done through fast inline paths which only require a single atomic operation.\n  3. Microcontention (a contended lock with a short critical section) is efficiently handled by spinning a few times while trying to acquire a lock.\n  4. The locks are adaptive and will suspend a thread after a few failed spin attempts. This makes the locks suitable for both long and short critical sections.\n  5. ``Condvar``, ``RwLock`` and ``Once`` work on Windows XP, unlike the standard library versions of those types.\n  6. ``RwLock`` takes advantage of hardware lock elision on processors that support it, which can lead to huge performance wins with many readers. This must be enabled with the ``hardware-lock-elision`` feature.\n  7. ``RwLock`` uses a task-fair locking policy, which avoids reader and writer starvation, whereas the standard library version makes no guarantees.\n  8. ``Condvar`` is guaranteed not to produce spurious wakeups. A thread will only be woken up if it timed out or it was woken up by a notification.\n  9. ```Condvar`::``notify_all`` will only wake up a single thread and requeue the rest to wait on the associated ``Mutex``. This avoids a thundering herd problem where all threads try to acquire the lock at the same time.\n  10. ``RwLock`` supports atomically downgrading a write lock into a read lock.\n  11. ``Mutex`` and ``RwLock`` allow raw unlocking without a RAII guard object.\n  12. ```Mutex`<``(``)``>```` and ```RwLock`<``(``)``>```` allow raw locking without a RAII guard object.\n  13. ``Mutex`` and ``RwLock`` support eventual fairness\u27e89\u27e9 which allows them to be fair on average without sacrificing performance.\n  14. A ``ReentrantMutex`` type which supports recursive locking.\n  15. An _experimental_ deadlock detector that works for ``Mutex``, ``RwLock`` and ``ReentrantMutex``. This feature is disabled by default and can be enabled via the ``deadlock_detection`` feature.\n  16. ``RwLock`` supports atomically upgrading an \"upgradable\" read lock into a write lock.\n  17. Optional support for serde\u27e810\u27e9. Enable via the feature ``serde``. **NOTE!** this support is for ``Mutex``, ``ReentrantMutex``, and ``RwLock`` only; ``Condvar`` and ``Once`` are not currently supported.\n  18. Lock guards can be sent to other threads when the ``send_guard`` feature is enabled.\n\n\n## The parking lot\nTo keep these primitives small, all thread queuing and suspending functionality is offloaded to the _parking lot_. The idea behind this is based on the Webkit ```WTF```::``ParkingLot``\u27e811\u27e9 class, which essentially consists of a hash table mapping of lock addresses to queues of parked (sleeping) threads. The Webkit parking lot was itself inspired by Linux futexes\u27e812\u27e9, but it is more powerful since it allows invoking callbacks while holding a queue lock.\n## Nightly vs stable\nThere are a few restrictions when using this library on stable Rust:\n  * The ``wasm32-unknown-unknown`` target is only fully supported on nightly with ```-`C target`-`feature`=``+`atomics`` in ``RUSTFLAGS`` and ```-`Zbuild`-`std`=`panic_abort`,`std`` passed to cargo. parking_lot will work mostly fine on stable, the only difference is it will panic instead of block forever if you hit a deadlock. Just make sure not to enable ```-`C target`-`feature`=``+`atomics`` on stable as that will allow wasm to run with multiple threads which will completely break parking_lot's concurrency guarantees.\n\n\nTo enable nightly-only functionality, you need to enable the ``nightly`` feature in Cargo (see below).\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`parking_lot ``=` ``\"`0.12`\"``\n``\n```\n\nTo enable nightly-only features, add this to your ``Cargo.toml`` instead:\n```\n```[``dependencies``]`\n`parking_lot = { version = \"0.12\", features ``=` ``[```\"`nightly`\"```]`` }\n``\n```\n\nThe experimental deadlock detector can be enabled with the ``deadlock_detection`` Cargo feature.\nTo allow sending ``MutexGuard``s and ``RwLock`*`Guard``s to other threads, enable the ``send_guard`` option.\nNote that the ``deadlock_detection`` and ``send_guard`` features are incompatible and cannot be used together.\nHardware lock elision support for x86 can be enabled with the ``hardware-lock-elision`` feature. This requires Rust 1.59 due to the use of inline assembly.\nThe core parking lot API is provided by the ``parking_lot_core`` crate. It is separate from the synchronization primitives in the ``parking_lot`` crate so that changes to the core API do not cause breaking changes for users of ``parking_lot``.\n## Minimum Rust version\nThe current minimum required Rust version is 1.64. Any change to this is considered a breaking change and will require a major version bump.\n## License\nLicensed under either of\n  * Apache License, Version 2.0, (LICENSE-APACHE\u27e813\u27e9 or <https://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license (LICENSE-MIT\u27e814\u27e9 or <https://opensource.org/licenses/MIT>)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~0\u20136MB  ~22K SLoC\n  * lock_api\u27e815\u27e9\n  * parking_lot_core\u27e816\u27e9\n\n\n  * dev  bincode\u27e817\u27e9\n  * dev  rand\u27e818\u27e9 0.8.3\n\n\n#### Other features\u27e819\u27e9\n  * arc_lock\u27e820\u27e9\n  * deadlock_detection\u27e821\u27e9\n  * hardware-lock-elision\u27e822\u27e9\n  * nightly\u27e823\u27e9\n  * owning_ref\u27e824\u27e9\n  * send_guard\u27e825\u27e9\n  * serde\u27e826\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/parking_lot/versions: 56 releases\n\u27e82\u27e9 https://lib.rs/concurrency: Crates for implementing concurrent and parallel computation. - Concurrency\n\u27e83\u27e9 https://lib.rs/crates/parking_lot/rev: **39,404** crates (3,377 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/Amanieu/parking_lot/workflows/Rust/badge.svg: ![Rust\n\u27e85\u27e9 https://img.shields.io/crates/v/parking_lot.svg: ![Crates.io\n\u27e86\u27e9 https://docs.rs/parking_lot/: Documentation (synchronization primitives)\n\u27e87\u27e9 https://docs.rs/parking_lot_core/: Documentation (core parking lot API)\n\u27e88\u27e9 https://docs.rs/lock_api/: Documentation (type-safe lock API)\n\u27e89\u27e9 https://trac.webkit.org/changeset/203350: eventual fairness\n\u27e810\u27e9 https://docs.serde.rs/serde/: serde\n\u27e811\u27e9 https://webkit.org/blog/6161/locking-in-webkit/: ```WTF```::``ParkingLot``\n\u27e812\u27e9 https://man7.org/linux/man-pages/man2/futex.2.html: futexes\n\u27e813\u27e9 https://github.com/amanieu/parking_lot/blob/df66e66b99f2650043b588cb0172b40958bc4277/LICENSE-APACHE: LICENSE-APACHE\n\u27e814\u27e9 https://github.com/amanieu/parking_lot/blob/df66e66b99f2650043b588cb0172b40958bc4277/LICENSE-MIT: LICENSE-MIT\n\u27e815\u27e9 https://lib.rs/crates/lock_api: 0.4.13 - lock_api\n\u27e816\u27e9 https://lib.rs/crates/parking_lot_core: 0.9.11 - parking_lot_core\n\u27e817\u27e9 https://lib.rs/crates/bincode: 1.3.3 - bincode\n\u27e818\u27e9 https://lib.rs/crates/rand: outdated - rand\n\u27e819\u27e9 https://lib.rs/crates/parking_lot/features: Other features\n\u27e820\u27e9 https://lib.rs/crates/parking_lot/features#feature-arc_lock: arc_lock\n\u27e821\u27e9 https://lib.rs/crates/parking_lot/features#feature-deadlock_detection: deadlock_detection\n\u27e822\u27e9 https://lib.rs/crates/parking_lot/features#feature-hardware-lock-elision: hardware-lock-elision\n\u27e823\u27e9 https://lib.rs/crates/parking_lot/features#feature-nightly: nightly\n\u27e824\u27e9 https://lib.rs/crates/parking_lot/features#feature-owning_ref: owning_ref\n\u27e825\u27e9 https://lib.rs/crates/parking_lot/features#feature-send_guard: send_guard\n\u27e826\u27e9 https://lib.rs/crates/parking_lot/features#feature-serde: serde\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 9182,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116748.8068256"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libscopeguard-b3036dac4c63d524.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#smallvec@1.15.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "smallvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libsmallvec-eb9c68e8246af032.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-9928602ef8bb032d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libparking_lot_core-fac05cc621859081.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-c08fb49aafa79c7d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-c08fb49aafa79c7d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_const_fn_trait_bound"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-e43b25c4124e1920\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\liblock_api-e0f2ca9a5611d23c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libparking_lot-b2e003a1f67768f5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.4.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.4.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libautocfg-962de8d6b4bbcb9a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libscopeguard-b3036dac4c63d524.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#smallvec@1.15.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "smallvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libsmallvec-eb9c68e8246af032.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-c08fb49aafa79c7d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-c08fb49aafa79c7d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\parking_lot_core-9928602ef8bb032d\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_const_fn_trait_bound"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\build\\lock_api-e43b25c4124e1920\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libparking_lot_core-fac05cc621859081.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\liblock_api-e0f2ca9a5611d23c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n  --> src\\raw_fair_mutex.rs:15:5\n   |\n15 |     const INIT: Self = RawFairMutex(<RawMutex as lock_api::RawMutex>::INIT);\n   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n   = note: `#[warn(clippy::declare_interior_mutable_const)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::declare_interior_mutable_const)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 607,
+                    "byte_start": 535,
+                    "column_end": 77,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\raw_fair_mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 15,
+                    "line_start": 15,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 77,
+                        "highlight_start": 5,
+                        "text": "    const INIT: Self = RawFairMutex(<RawMutex as lock_api::RawMutex>::INIT);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n  --> src\\raw_mutex.rs:59:5\n   |\n59 | /     const INIT: RawMutex = RawMutex {\n60 | |         state: AtomicU8::new(0),\n61 | |     };\n   | |______^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 3296,
+                    "byte_start": 3223,
+                    "column_end": 7,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\raw_mutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 61,
+                    "line_start": 59,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 38,
+                        "highlight_start": 5,
+                        "text": "    const INIT: RawMutex = RawMutex {"
+                      },
+                      {
+                        "highlight_end": 33,
+                        "highlight_start": 1,
+                        "text": "        state: AtomicU8::new(0),"
+                      },
+                      {
+                        "highlight_end": 7,
+                        "highlight_start": 1,
+                        "text": "    };"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: a `const` item should not be interior mutable\n  --> src\\raw_rwlock.rs:60:5\n   |\n60 | /     const INIT: RawRwLock = RawRwLock {\n61 | |         state: AtomicUsize::new(0),\n62 | |     };\n   | |______^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#declare_interior_mutable_const",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::declare_interior_mutable_const",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "a `const` item should not be interior mutable",
+                "spans": [
+                  {
+                    "byte_end": 2729,
+                    "byte_start": 2651,
+                    "column_end": 7,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\raw_rwlock.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 62,
+                    "line_start": 60,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 40,
+                        "highlight_start": 5,
+                        "text": "    const INIT: RawRwLock = RawRwLock {"
+                      },
+                      {
+                        "highlight_end": 36,
+                        "highlight_start": 1,
+                        "text": "        state: AtomicUsize::new(0),"
+                      },
+                      {
+                        "highlight_end": 7,
+                        "highlight_start": 1,
+                        "text": "    };"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: initializer for `thread_local` value can be made `const`\n  --> src\\remutex.rs:22:40\n   |\n22 |         thread_local!(static KEY: u8 = 0);\n   |                                        ^ help: replace with: `const { 0 }`\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local\n   = note: `#[warn(clippy::missing_const_for_thread_local)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_const_for_thread_local",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::missing_const_for_thread_local)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "replace with",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 965,
+                        "byte_start": 964,
+                        "column_end": 41,
+                        "column_start": 40,
+                        "expansion": null,
+                        "file_name": "src\\remutex.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 22,
+                        "line_start": 22,
+                        "suggested_replacement": "const { 0 }",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 40,
+                            "text": "        thread_local!(static KEY: u8 = 0);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_const_for_thread_local",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "initializer for `thread_local` value can be made `const`",
+                "spans": [
+                  {
+                    "byte_end": 965,
+                    "byte_start": 964,
+                    "column_end": 41,
+                    "column_start": 40,
+                    "expansion": null,
+                    "file_name": "src\\remutex.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 22,
+                    "line_start": 22,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 41,
+                        "highlight_start": 40,
+                        "text": "        thread_local!(static KEY: u8 = 0);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp1k7g6jcs/parking_lot-0.12.4#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp1k7g6jcs\\parking_lot-0.12.4\\target\\debug\\deps\\libparking_lot-3f169c373fbf0781.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 53
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": true,
+              "count": 1,
+              "list": [
+                {
+                  "advisory": {
+                    "id": "RUSTSEC-2022-0040",
+                    "package": "owning_ref",
+                    "title": "Multiple soundness issues in `owning_ref`",
+                    "description": "- `OwningRef::map_with_owner` is [unsound](https://github.com/Kimundi/owning-ref-rs/issues/77) and may result in a use-after-free.\n- `OwningRef::map` is [unsound](https://github.com/Kimundi/owning-ref-rs/issues/71) and may result in a use-after-free.\n- `OwningRefMut::as_owner` and `OwningRefMut::as_owner_mut` are [unsound](https://github.com/Kimundi/owning-ref-rs/issues/61) and may result in a use-after-free.\n- The crate [violates Rust's aliasing rules](https://github.com/Kimundi/owning-ref-rs/issues/49), which may cause miscompilations on recent compilers that emit the LLVM `noalias` attribute.\n\n`safer_owning_ref` is a replacement crate which fixes these issues.\nNo patched versions of the original crate are available, and the maintainer is unresponsive.",
+                    "date": "2022-01-26",
+                    "aliases": [
+                      "GHSA-9qxh-258v-666c"
+                    ],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [
+                      "memory-corruption"
+                    ],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": null,
+                    "references": [
+                      "https://github.com/Kimundi/owning-ref-rs/issues/49",
+                      "https://github.com/Kimundi/owning-ref-rs/issues/61",
+                      "https://github.com/Kimundi/owning-ref-rs/issues/71",
+                      "https://github.com/Kimundi/owning-ref-rs/issues/77"
+                    ],
+                    "source": null,
+                    "url": "https://github.com/noamtashma/owning-ref-unsoundness",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  },
+                  "affected": null,
+                  "package": {
+                    "name": "owning_ref",
+                    "version": "0.4.1",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "6ff55baddef9e4ad00f88b6c743a2a8062d4c6ade126c2a528644b8e444d52ce",
+                    "dependencies": [
+                      {
+                        "name": "stable_deref_trait",
+                        "version": "1.2.0",
+                        "source": "registry+https://github.com/rust-lang/crates.io-index"
+                      }
+                    ],
+                    "replace": null
+                  }
+                }
+              ]
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "parking_lot",
+          "version": "0.12.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\n[Settings](https://docs.rs/parking_lot/latest/settings.html)\n[Help](https://docs.rs/parking_lot/latest/help.html)\nSummary[Source](https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59)\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#reexports)\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#modules)\n\n[deadlock](https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html \"mod parking_lot::deadlock\")\n    [Experimental] Deadlock detection\n## Structs[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#structs)\n\n[ArcMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html \"struct parking_lot::ArcMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\n[ArcReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html \"struct parking_lot::ArcReentrantMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\n[ArcRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html \"struct parking_lot::ArcRwLockReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\n[ArcRwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html \"struct parking_lot::ArcRwLockUpgradableReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[ArcRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html \"struct parking_lot::ArcRwLockWriteGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[Condvar](https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html \"struct parking_lot::Condvar\")\n    A Condition Variable\n\n[Once](https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html \"struct parking_lot::Once\")\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\n[RawFairMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html \"struct parking_lot::RawFairMutex\")\n    Raw fair mutex type backed by the parking lot.\n\n[RawMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html \"struct parking_lot::RawMutex\")\n    Raw mutex type backed by the parking lot.\n\n[RawRwLock](https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html \"struct parking_lot::RawRwLock\")\n    Raw reader-writer lock type backed by the parking lot.\n\n[RawThreadId](https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html \"struct parking_lot::RawThreadId\")\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\n[WaitTimeoutResult](https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html \"struct parking_lot::WaitTimeoutResult\")\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#enums)\n\n[OnceState](https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html \"enum parking_lot::OnceState\")\n    Current state of a `Once`.\n## Functions[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#functions)\n\n[const_fair_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html \"fn parking_lot::const_fair_mutex\")\n    Creates a new fair mutex in an unlocked state ready for use.\n\n[const_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html \"fn parking_lot::const_mutex\")\n    Creates a new mutex in an unlocked state ready for use.\n\n[const_reentrant_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html \"fn parking_lot::const_reentrant_mutex\")\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\n[const_rwlock](https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html \"fn parking_lot::const_rwlock\")\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#types)\n\n[FairMutex](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html \"type parking_lot::FairMutex\")\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\n[FairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html \"type parking_lot::FairMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[MappedFairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html \"type parking_lot::MappedFairMutexGuard\")\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html \"type parking_lot::MappedMutexGuard\")\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html \"type parking_lot::MappedReentrantMutexGuard\")\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html \"type parking_lot::MappedRwLockReadGuard\")\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html \"type parking_lot::MappedRwLockWriteGuard\")\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\n[Mutex](https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html \"type parking_lot::Mutex\")\n    A mutual exclusion primitive useful for protecting shared data\n\n[MutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html \"type parking_lot::MutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[ReentrantMutex](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html \"type parking_lot::ReentrantMutex\")\n    A mutex which can be recursively locked by a single thread.\n\n[ReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html \"type parking_lot::ReentrantMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[RwLock](https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html \"type parking_lot::RwLock\")\n    A reader-writer lock\n\n[RwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html \"type parking_lot::RwLockReadGuard\")\n    RAII structure used to release the shared read access of a lock when dropped.\n\n[RwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html \"type parking_lot::RwLockUpgradableReadGuard\")\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\n[RwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html \"type parking_lot::RwLockWriteGuard\")\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+            "markdown_with_citations": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports\u00a7\u27e84\u27e9\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules\u00a7\u27e85\u27e9\n\ndeadlock\u27e86\u27e9\n    [Experimental] Deadlock detection\n## Structs\u00a7\u27e87\u27e9\n\nArcMutexGuard\u27e88\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\nArcReentrantMutexGuard\u27e89\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\nArcRwLockReadGuard\u27e810\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\nArcRwLockUpgradableReadGuard\u27e811\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nArcRwLockWriteGuard\u27e812\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nCondvar\u27e813\u27e9\n    A Condition Variable\n\nOnce\u27e814\u27e9\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\nRawFairMutex\u27e815\u27e9\n    Raw fair mutex type backed by the parking lot.\n\nRawMutex\u27e816\u27e9\n    Raw mutex type backed by the parking lot.\n\nRawRwLock\u27e817\u27e9\n    Raw reader-writer lock type backed by the parking lot.\n\nRawThreadId\u27e818\u27e9\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\nWaitTimeoutResult\u27e819\u27e9\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums\u00a7\u27e820\u27e9\n\nOnceState\u27e821\u27e9\n    Current state of a `Once`.\n## Functions\u00a7\u27e822\u27e9\n\nconst_fair_mutex\u27e823\u27e9\n    Creates a new fair mutex in an unlocked state ready for use.\n\nconst_mutex\u27e824\u27e9\n    Creates a new mutex in an unlocked state ready for use.\n\nconst_reentrant_mutex\u27e825\u27e9\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\nconst_rwlock\u27e826\u27e9\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases\u00a7\u27e827\u27e9\n\nFairMutex\u27e828\u27e9\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\nFairMutexGuard\u27e829\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nMappedFairMutexGuard\u27e830\u27e9\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedMutexGuard\u27e831\u27e9\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedReentrantMutexGuard\u27e832\u27e9\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockReadGuard\u27e833\u27e9\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockWriteGuard\u27e834\u27e9\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\nMutex\u27e835\u27e9\n    A mutual exclusion primitive useful for protecting shared data\n\nMutexGuard\u27e836\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nReentrantMutex\u27e837\u27e9\n    A mutex which can be recursively locked by a single thread.\n\nReentrantMutexGuard\u27e838\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nRwLock\u27e839\u27e9\n    A reader-writer lock\n\nRwLockReadGuard\u27e840\u27e9\n    RAII structure used to release the shared read access of a lock when dropped.\n\nRwLockUpgradableReadGuard\u27e841\u27e9\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\nRwLockWriteGuard\u27e842\u27e9\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/parking_lot/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/parking_lot/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59: Source\n\u27e84\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#reexports: \u00a7\n\u27e85\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html: mod parking_lot::deadlock - deadlock\n\u27e87\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html: struct parking_lot::ArcMutexGuard - ArcMutexGuard\n\u27e89\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html: struct parking_lot::ArcReentrantMutexGuard - ArcReentrantMutexGuard\n\u27e810\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html: struct parking_lot::ArcRwLockReadGuard - ArcRwLockReadGuard\n\u27e811\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html: struct parking_lot::ArcRwLockUpgradableReadGuard - ArcRwLockUpgradableReadGuard\n\u27e812\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html: struct parking_lot::ArcRwLockWriteGuard - ArcRwLockWriteGuard\n\u27e813\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html: struct parking_lot::Condvar - Condvar\n\u27e814\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html: struct parking_lot::Once - Once\n\u27e815\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html: struct parking_lot::RawFairMutex - RawFairMutex\n\u27e816\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html: struct parking_lot::RawMutex - RawMutex\n\u27e817\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html: struct parking_lot::RawRwLock - RawRwLock\n\u27e818\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html: struct parking_lot::RawThreadId - RawThreadId\n\u27e819\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html: struct parking_lot::WaitTimeoutResult - WaitTimeoutResult\n\u27e820\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#enums: \u00a7\n\u27e821\u27e9 https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html: enum parking_lot::OnceState - OnceState\n\u27e822\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#functions: \u00a7\n\u27e823\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html: fn parking_lot::const_fair_mutex - const_fair_mutex\n\u27e824\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html: fn parking_lot::const_mutex - const_mutex\n\u27e825\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html: fn parking_lot::const_reentrant_mutex - const_reentrant_mutex\n\u27e826\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html: fn parking_lot::const_rwlock - const_rwlock\n\u27e827\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html: type parking_lot::FairMutex - FairMutex\n\u27e829\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html: type parking_lot::FairMutexGuard - FairMutexGuard\n\u27e830\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html: type parking_lot::MappedFairMutexGuard - MappedFairMutexGuard\n\u27e831\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html: type parking_lot::MappedMutexGuard - MappedMutexGuard\n\u27e832\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html: type parking_lot::MappedReentrantMutexGuard - MappedReentrantMutexGuard\n\u27e833\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html: type parking_lot::MappedRwLockReadGuard - MappedRwLockReadGuard\n\u27e834\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html: type parking_lot::MappedRwLockWriteGuard - MappedRwLockWriteGuard\n\u27e835\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html: type parking_lot::Mutex - Mutex\n\u27e836\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html: type parking_lot::MutexGuard - MutexGuard\n\u27e837\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html: type parking_lot::ReentrantMutex - ReentrantMutex\n\u27e838\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html: type parking_lot::ReentrantMutexGuard - ReentrantMutexGuard\n\u27e839\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html: type parking_lot::RwLock - RwLock\n\u27e840\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html: type parking_lot::RwLockReadGuard - RwLockReadGuard\n\u27e841\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html: type parking_lot::RwLockUpgradableReadGuard - RwLockUpgradableReadGuard\n\u27e842\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html: type parking_lot::RwLockWriteGuard - RwLockWriteGuard\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "parking_lot",
+          "version": "0.12.4",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\n[Settings](https://docs.rs/parking_lot/latest/settings.html)\n[Help](https://docs.rs/parking_lot/latest/help.html)\nSummary[Source](https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59)\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#reexports)\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#modules)\n\n[deadlock](https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html \"mod parking_lot::deadlock\")\n    [Experimental] Deadlock detection\n## Structs[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#structs)\n\n[ArcMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html \"struct parking_lot::ArcMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\n[ArcReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html \"struct parking_lot::ArcReentrantMutexGuard\")\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\n[ArcRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html \"struct parking_lot::ArcRwLockReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\n[ArcRwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html \"struct parking_lot::ArcRwLockUpgradableReadGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[ArcRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html \"struct parking_lot::ArcRwLockWriteGuard\")\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\n[Condvar](https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html \"struct parking_lot::Condvar\")\n    A Condition Variable\n\n[Once](https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html \"struct parking_lot::Once\")\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\n[RawFairMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html \"struct parking_lot::RawFairMutex\")\n    Raw fair mutex type backed by the parking lot.\n\n[RawMutex](https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html \"struct parking_lot::RawMutex\")\n    Raw mutex type backed by the parking lot.\n\n[RawRwLock](https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html \"struct parking_lot::RawRwLock\")\n    Raw reader-writer lock type backed by the parking lot.\n\n[RawThreadId](https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html \"struct parking_lot::RawThreadId\")\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\n[WaitTimeoutResult](https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html \"struct parking_lot::WaitTimeoutResult\")\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#enums)\n\n[OnceState](https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html \"enum parking_lot::OnceState\")\n    Current state of a `Once`.\n## Functions[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#functions)\n\n[const_fair_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html \"fn parking_lot::const_fair_mutex\")\n    Creates a new fair mutex in an unlocked state ready for use.\n\n[const_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html \"fn parking_lot::const_mutex\")\n    Creates a new mutex in an unlocked state ready for use.\n\n[const_reentrant_mutex](https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html \"fn parking_lot::const_reentrant_mutex\")\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\n[const_rwlock](https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html \"fn parking_lot::const_rwlock\")\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases[\u00a7](https://docs.rs/parking_lot/latest/parking_lot/#types)\n\n[FairMutex](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html \"type parking_lot::FairMutex\")\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\n[FairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html \"type parking_lot::FairMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[MappedFairMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html \"type parking_lot::MappedFairMutexGuard\")\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html \"type parking_lot::MappedMutexGuard\")\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html \"type parking_lot::MappedReentrantMutexGuard\")\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html \"type parking_lot::MappedRwLockReadGuard\")\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\n[MappedRwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html \"type parking_lot::MappedRwLockWriteGuard\")\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\n[Mutex](https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html \"type parking_lot::Mutex\")\n    A mutual exclusion primitive useful for protecting shared data\n\n[MutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html \"type parking_lot::MutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[ReentrantMutex](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html \"type parking_lot::ReentrantMutex\")\n    A mutex which can be recursively locked by a single thread.\n\n[ReentrantMutexGuard](https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html \"type parking_lot::ReentrantMutexGuard\")\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\n[RwLock](https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html \"type parking_lot::RwLock\")\n    A reader-writer lock\n\n[RwLockReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html \"type parking_lot::RwLockReadGuard\")\n    RAII structure used to release the shared read access of a lock when dropped.\n\n[RwLockUpgradableReadGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html \"type parking_lot::RwLockUpgradableReadGuard\")\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\n[RwLockWriteGuard](https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html \"type parking_lot::RwLockWriteGuard\")\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+            "markdown_with_citations": "[](https://docs.rs/parking_lot/latest/parking_lot/all.html \"show sidebar\")\n# Crate parking_lotCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nThis library provides implementations of `Mutex`, `RwLock`, `Condvar` and `Once` that are smaller, faster and more flexible than those in the Rust standard library. It also provides a `ReentrantMutex` type.\n## Re-exports\u00a7\u27e84\u27e9\n\n`pub use ::lock_api[](https://docs.rs/lock_api/0.4.13/x86_64-unknown-linux-gnu/lock_api/index.html \"mod lock_api\");`\n\n## Modules\u00a7\u27e85\u27e9\n\ndeadlock\u27e86\u27e9\n    [Experimental] Deadlock detection\n## Structs\u00a7\u27e87\u27e9\n\nArcMutexGuard\u27e88\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `Mutex`.\n\nArcReentrantMutexGuard\u27e89\u27e9\n    An RAII mutex guard returned by the `Arc` locking operations on `ReentrantMutex`.\n\nArcRwLockReadGuard\u27e810\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`.\n\nArcRwLockUpgradableReadGuard\u27e811\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockUpgradableReadGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nArcRwLockWriteGuard\u27e812\u27e9\n    An RAII rwlock guard returned by the `Arc` locking operations on `RwLock`. This is similar to the `RwLockWriteGuard` struct, except instead of using a reference to unlock the `RwLock` it uses an `Arc<RwLock>`. This has several advantages, most notably that it has an `'static` lifetime.\n\nCondvar\u27e813\u27e9\n    A Condition Variable\n\nOnce\u27e814\u27e9\n    A synchronization primitive which can be used to run a one-time initialization. Useful for one-time initialization for globals, FFI or related functionality.\n\nRawFairMutex\u27e815\u27e9\n    Raw fair mutex type backed by the parking lot.\n\nRawMutex\u27e816\u27e9\n    Raw mutex type backed by the parking lot.\n\nRawRwLock\u27e817\u27e9\n    Raw reader-writer lock type backed by the parking lot.\n\nRawThreadId\u27e818\u27e9\n    Implementation of the `GetThreadId` trait for `lock_api::ReentrantMutex`.\n\nWaitTimeoutResult\u27e819\u27e9\n    A type indicating whether a timed wait on a condition variable returned due to a time out or not.\n## Enums\u00a7\u27e820\u27e9\n\nOnceState\u27e821\u27e9\n    Current state of a `Once`.\n## Functions\u00a7\u27e822\u27e9\n\nconst_fair_mutex\u27e823\u27e9\n    Creates a new fair mutex in an unlocked state ready for use.\n\nconst_mutex\u27e824\u27e9\n    Creates a new mutex in an unlocked state ready for use.\n\nconst_reentrant_mutex\u27e825\u27e9\n    Creates a new reentrant mutex in an unlocked state ready for use.\n\nconst_rwlock\u27e826\u27e9\n    Creates a new instance of an `RwLock<T>` which is unlocked.\n## Type Aliases\u00a7\u27e827\u27e9\n\nFairMutex\u27e828\u27e9\n    A mutual exclusive primitive that is always fair, useful for protecting shared data\n\nFairMutexGuard\u27e829\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nMappedFairMutexGuard\u27e830\u27e9\n    An RAII mutex guard returned by `FairMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedMutexGuard\u27e831\u27e9\n    An RAII mutex guard returned by `MutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedReentrantMutexGuard\u27e832\u27e9\n    An RAII mutex guard returned by `ReentrantMutexGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockReadGuard\u27e833\u27e9\n    An RAII read lock guard returned by `RwLockReadGuard::map`, which can point to a subfield of the protected data.\n\nMappedRwLockWriteGuard\u27e834\u27e9\n    An RAII write lock guard returned by `RwLockWriteGuard::map`, which can point to a subfield of the protected data.\n\nMutex\u27e835\u27e9\n    A mutual exclusion primitive useful for protecting shared data\n\nMutexGuard\u27e836\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nReentrantMutex\u27e837\u27e9\n    A mutex which can be recursively locked by a single thread.\n\nReentrantMutexGuard\u27e838\u27e9\n    An RAII implementation of a \u201cscoped lock\u201d of a reentrant mutex. When this structure is dropped (falls out of scope), the lock will be unlocked.\n\nRwLock\u27e839\u27e9\n    A reader-writer lock\n\nRwLockReadGuard\u27e840\u27e9\n    RAII structure used to release the shared read access of a lock when dropped.\n\nRwLockUpgradableReadGuard\u27e841\u27e9\n    RAII structure used to release the upgradable read access of a lock when dropped.\n\nRwLockWriteGuard\u27e842\u27e9\n    RAII structure used to release the exclusive write access of a lock when dropped.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/parking_lot/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/parking_lot/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/parking_lot/latest/src/parking_lot/lib.rs.html#8-59: Source\n\u27e84\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#reexports: \u00a7\n\u27e85\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/parking_lot/latest/parking_lot/deadlock/index.html: mod parking_lot::deadlock - deadlock\n\u27e87\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcMutexGuard.html: struct parking_lot::ArcMutexGuard - ArcMutexGuard\n\u27e89\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcReentrantMutexGuard.html: struct parking_lot::ArcReentrantMutexGuard - ArcReentrantMutexGuard\n\u27e810\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockReadGuard.html: struct parking_lot::ArcRwLockReadGuard - ArcRwLockReadGuard\n\u27e811\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockUpgradableReadGuard.html: struct parking_lot::ArcRwLockUpgradableReadGuard - ArcRwLockUpgradableReadGuard\n\u27e812\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.ArcRwLockWriteGuard.html: struct parking_lot::ArcRwLockWriteGuard - ArcRwLockWriteGuard\n\u27e813\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Condvar.html: struct parking_lot::Condvar - Condvar\n\u27e814\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.Once.html: struct parking_lot::Once - Once\n\u27e815\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawFairMutex.html: struct parking_lot::RawFairMutex - RawFairMutex\n\u27e816\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawMutex.html: struct parking_lot::RawMutex - RawMutex\n\u27e817\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawRwLock.html: struct parking_lot::RawRwLock - RawRwLock\n\u27e818\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.RawThreadId.html: struct parking_lot::RawThreadId - RawThreadId\n\u27e819\u27e9 https://docs.rs/parking_lot/latest/parking_lot/struct.WaitTimeoutResult.html: struct parking_lot::WaitTimeoutResult - WaitTimeoutResult\n\u27e820\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#enums: \u00a7\n\u27e821\u27e9 https://docs.rs/parking_lot/latest/parking_lot/enum.OnceState.html: enum parking_lot::OnceState - OnceState\n\u27e822\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#functions: \u00a7\n\u27e823\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_fair_mutex.html: fn parking_lot::const_fair_mutex - const_fair_mutex\n\u27e824\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_mutex.html: fn parking_lot::const_mutex - const_mutex\n\u27e825\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_reentrant_mutex.html: fn parking_lot::const_reentrant_mutex - const_reentrant_mutex\n\u27e826\u27e9 https://docs.rs/parking_lot/latest/parking_lot/fn.const_rwlock.html: fn parking_lot::const_rwlock - const_rwlock\n\u27e827\u27e9 https://docs.rs/parking_lot/latest/parking_lot/#types: \u00a7\n\u27e828\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutex.html: type parking_lot::FairMutex - FairMutex\n\u27e829\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.FairMutexGuard.html: type parking_lot::FairMutexGuard - FairMutexGuard\n\u27e830\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedFairMutexGuard.html: type parking_lot::MappedFairMutexGuard - MappedFairMutexGuard\n\u27e831\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedMutexGuard.html: type parking_lot::MappedMutexGuard - MappedMutexGuard\n\u27e832\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedReentrantMutexGuard.html: type parking_lot::MappedReentrantMutexGuard - MappedReentrantMutexGuard\n\u27e833\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockReadGuard.html: type parking_lot::MappedRwLockReadGuard - MappedRwLockReadGuard\n\u27e834\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MappedRwLockWriteGuard.html: type parking_lot::MappedRwLockWriteGuard - MappedRwLockWriteGuard\n\u27e835\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.Mutex.html: type parking_lot::Mutex - Mutex\n\u27e836\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.MutexGuard.html: type parking_lot::MutexGuard - MutexGuard\n\u27e837\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutex.html: type parking_lot::ReentrantMutex - ReentrantMutex\n\u27e838\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.ReentrantMutexGuard.html: type parking_lot::ReentrantMutexGuard - ReentrantMutexGuard\n\u27e839\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLock.html: type parking_lot::RwLock - RwLock\n\u27e840\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockReadGuard.html: type parking_lot::RwLockReadGuard - RwLockReadGuard\n\u27e841\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockUpgradableReadGuard.html: type parking_lot::RwLockUpgradableReadGuard - RwLockUpgradableReadGuard\n\u27e842\u27e9 https://docs.rs/parking_lot/latest/parking_lot/type.RwLockWriteGuard.html: type parking_lot::RwLockWriteGuard - RwLockWriteGuard\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `parking_lot` crate provides highly optimized implementations of synchronization primitives such as `Mutex`, `RwLock`, `Condvar`, and `Once`, which are smaller, faster, and more flexible than their standard library counterparts. It also includes advanced features like `ReentrantMutex` for recursive locking, fair mutexes, and experimental deadlock detection. Additionally, it offers RAII-based guards and utilities for scoped locking and thread-safe initialization.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: Mutex Implementation  \n\u2705 **Factual:** The `parking_lot` crate provides a `Mutex` implementation that is faster and more memory-efficient than the standard library's `std::sync::Mutex`, as it avoids using OS-level primitives in uncontested cases.  \n\u274c **Counterfactual:** The `parking_lot` crate's `Mutex` implementation sacrifices memory efficiency for faster locking performance compared to `std::sync::Mutex`.  \n\n---\n\n### Pair 2: Deadlock Detection  \n\u2705 **Factual:** The `parking_lot` crate includes an experimental `deadlock` module that can detect deadlocks in applications by analyzing lock usage patterns.  \n\u274c **Counterfactual:** The `parking_lot` crate guarantees deadlock prevention by automatically resolving lock contention through priority-based scheduling.  \n\n---\n\n### Pair 3: Reentrant Mutex  \n\u2705 **Factual:** The `parking_lot` crate provides a `ReentrantMutex` type, which allows the same thread to acquire the lock multiple times without causing a deadlock.  \n\u274c **Counterfactual:** The `parking_lot` crate's `ReentrantMutex` type allows multiple threads to acquire the lock simultaneously, bypassing mutual exclusion for improved concurrency.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-4696e752-088ef00e-1751262957",
+      "timestamp": "2025-06-30T05:55:57.706629+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

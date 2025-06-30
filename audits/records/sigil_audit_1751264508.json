@@ -1,0 +1,1677 @@
+[
+  {
+    "execution_id": "exec-0f3e9641-35b293fa-1751264496",
+    "timestamp": "2025-06-30T06:21:36.783370+00:00",
+    "sacred_chain": {
+      "input_data": "chacha20poly1305",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'chacha20poly1305' -> 'chacha20poly1305'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "chacha20poly1305",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/chacha20poly1305",
+            "title": "chacha20poly1305 v0.10.1",
+            "content": {
+              "raw_markdown": "#  chacha20poly1305 v0.10.1\nPure Rust implementation of the ChaCha20Poly1305 Authenticated Encryption with Additional Data Cipher (RFC 8439) with optional architecture-specific hardware acceleration. Also contains implementations of the XChaCha20Poly1305 extended nonce variant of ChaCha20Poly1305, and the reduced-round ChaCha8Poly1305 and ChaCha12Poly1305 lightweight variants. \n  * [ #aead ](https://crates.io/keywords/aead)\n  * [ #chacha20 ](https://crates.io/keywords/chacha20)\n  * [ #poly1305 ](https://crates.io/keywords/poly1305)\n  * [ #xchacha20 ](https://crates.io/keywords/xchacha20)\n  * [ #xchacha20poly1305 ](https://crates.io/keywords/xchacha20poly1305)\n\n\n  * [ Readme ](https://crates.io/crates/chacha20poly1305)\n  * [ 31 Versions ](https://crates.io/crates/chacha20poly1305/versions)\n  * [ Dependencies ](https://crates.io/crates/chacha20poly1305/dependencies)\n  * [ Dependents ](https://crates.io/crates/chacha20poly1305/reverse_dependencies)\n\n\n## Metadata\nalmost 3 years ago \n2021 edition \n[ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0) OR [ MIT ](https://choosealicense.com/licenses/mit)\n66.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add chacha20poly1305\nOr add the following line to your Cargo.toml:\nchacha20poly1305 = \"0.10.1\"\n## Homepage\n[ github.com/RustCrypto/AEADs/tree/master/chacha20poly1305 ](https://github.com/RustCrypto/AEADs/tree/master/chacha20poly1305)\n## Documentation\n[ docs.rs/chacha20poly1305 ](https://docs.rs/chacha20poly1305)\n## Repository\n[ github.com/RustCrypto/AEADs ](https://github.com/RustCrypto/AEADs)\n## Owners\n## Categories\n  * [No standard library](https://crates.io/categories/no-std)\n  * [Cryptography](https://crates.io/categories/cryptography)\n\n\n[ Report crate ](https://crates.io/support?crate=chacha20poly1305&inquire=crate-violation)\n### Stats Overview\n27,221,398 Downloads all time\n31 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  chacha20poly1305 v0.10.1\nPure Rust implementation of the ChaCha20Poly1305 Authenticated Encryption with Additional Data Cipher (RFC 8439) with optional architecture-specific hardware acceleration. Also contains implementations of the XChaCha20Poly1305 extended nonce variant of ChaCha20Poly1305, and the reduced-round ChaCha8Poly1305 and ChaCha12Poly1305 lightweight variants. \n  *  #aead \u27e81\u27e9\n  *  #chacha20 \u27e82\u27e9\n  *  #poly1305 \u27e83\u27e9\n  *  #xchacha20 \u27e84\u27e9\n  *  #xchacha20poly1305 \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  31 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nalmost 3 years ago \n2021 edition \n Apache-2.0 \u27e810\u27e9 OR  MIT \u27e811\u27e9\n66.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add chacha20poly1305\nOr add the following line to your Cargo.toml:\nchacha20poly1305 = \"0.10.1\"\n## Homepage\n github.com/RustCrypto/AEADs/tree/master/chacha20poly1305 \u27e812\u27e9\n## Documentation\n docs.rs/chacha20poly1305 \u27e813\u27e9\n## Repository\n github.com/RustCrypto/AEADs \u27e814\u27e9\n## Owners\n## Categories\n  * No standard library\u27e815\u27e9\n  * Cryptography\u27e816\u27e9\n\n\n Report crate \u27e817\u27e9\n### Stats Overview\n27,221,398 Downloads all time\n31 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/aead:  #aead \n\u27e82\u27e9 https://crates.io/keywords/chacha20:  #chacha20 \n\u27e83\u27e9 https://crates.io/keywords/poly1305:  #poly1305 \n\u27e84\u27e9 https://crates.io/keywords/xchacha20:  #xchacha20 \n\u27e85\u27e9 https://crates.io/keywords/xchacha20poly1305:  #xchacha20poly1305 \n\u27e86\u27e9 https://crates.io/crates/chacha20poly1305:  Readme \n\u27e87\u27e9 https://crates.io/crates/chacha20poly1305/versions:  31 Versions \n\u27e88\u27e9 https://crates.io/crates/chacha20poly1305/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/chacha20poly1305/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e811\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e812\u27e9 https://github.com/RustCrypto/AEADs/tree/master/chacha20poly1305:  github.com/RustCrypto/AEADs/tree/master/chacha20poly1305 \n\u27e813\u27e9 https://docs.rs/chacha20poly1305:  docs.rs/chacha20poly1305 \n\u27e814\u27e9 https://github.com/RustCrypto/AEADs:  github.com/RustCrypto/AEADs \n\u27e815\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e816\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e817\u27e9 https://crates.io/support?crate=chacha20poly1305&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 2016,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118286.6706621"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/chacha20poly1305",
+            "title": "Crate chacha20poly1305Copy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\n[Settings](https://docs.rs/chacha20poly1305/latest/settings.html)\n[Help](https://docs.rs/chacha20poly1305/latest/help.html)\nSummary[Source](https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301)\nExpand description\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305)RustCrypto: ChaCha20Poly1305\n[![crate](https://buildstats.info/crate/chacha20poly1305)](https://crates.io/crates/chacha20poly1305) [![Docs](https://docs.rs/chacha20poly1305/badge.svg)](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.56+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) [![Build Status](https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push)](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** ([RFC 8439](https://tools.ietf.org/html/rfc8439)): an [Authenticated Encryption with Associated Data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption) cipher amenable to fast, constant-time implementations in software, based on the [ChaCha20](https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20) stream cipher and [Poly1305](https://github.com/RustCrypto/universal-hashes/tree/master/poly1305) universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\n[Documentation](https://docs.rs/chacha20poly1305/)\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about)About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes)Security Notes\nThis crate has received one [security audit by NCC Group](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/), with no significant findings. We would like to thank [MobileCoin](https://www.mobilecoin.com/) for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license)License\nLicensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms)Supported Algorithms\nThis crate contains pure Rust implementations of [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\") (with optional AVX2 acceleration) as well as the following variants thereof:\n  * [`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\") - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * [`ChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\") / [`ChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\") - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the [Too Much Crypto](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/) paper for background and rationale on when these constructions could be used. When in doubt, prefer [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\").\n  * [`XChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\") / [`XChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\") - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement)In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe [`AeadInPlace::encrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place \"method chacha20poly1305::AeadInPlace::encrypt_in_place\") and [`AeadInPlace::decrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place \"method chacha20poly1305::AeadInPlace::decrypt_in_place\") methods accept any type that impls the [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") for `heapless::Vec` (re-exported from the [`aead`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\") crate as [`aead::heapless::Vec`](https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html \"struct heapless::vec::Vec\")), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305)[`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports)\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules)\n\n[consts](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html \"mod chacha20poly1305::consts\")\n\n## Structs[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs)\n\n[ChaChaPoly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html \"struct chacha20poly1305::ChaChaPoly1305\")\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\n[Error](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html \"struct chacha20poly1305::Error\")\n    Error type.\n## Traits[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits)\n\n[AeadCore](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html \"trait chacha20poly1305::AeadCore\")\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\n[AeadInPlace](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html \"trait chacha20poly1305::AeadInPlace\")\n    In-place stateless AEAD trait.\n\n[KeyInit](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html \"trait chacha20poly1305::KeyInit\")\n    Types which can be initialized from key.\n\n[KeySizeUser](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html \"trait chacha20poly1305::KeySizeUser\")\n    Types which use key for initialization.\n## Type Aliases[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types)\n\n[ChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\")`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\")`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\")\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[Key](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html \"type chacha20poly1305::Key\")\n    Key type (256-bits/32-bytes).\n\n[Nonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html \"type chacha20poly1305::Nonce\")\n    Nonce type (96-bits/12-bytes).\n\n[Tag](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html \"type chacha20poly1305::Tag\")\n    Poly1305 tag.\n\n[XChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\")`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\")`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[XNonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html \"type chacha20poly1305::XNonce\")\n    XNonce type (192-bits/24-bytes).\n",
+              "markdown_with_citations": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto: ChaCha20Poly1305\n![crate\u27e85\u27e9](https://crates.io/crates/chacha20poly1305) ![Docs\u27e86\u27e9](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed\u27e87\u27e9] ![Rust Version\u27e88\u27e9] ![Project Chat\u27e89\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) ![Build Status\u27e810\u27e9](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** (RFC 8439\u27e811\u27e9): an Authenticated Encryption with Associated Data (AEAD)\u27e812\u27e9 cipher amenable to fast, constant-time implementations in software, based on the ChaCha20\u27e813\u27e9 stream cipher and Poly1305\u27e814\u27e9 universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\nDocumentation\u27e815\u27e9\n### \u00a7\u27e816\u27e9About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### \u00a7\u27e817\u27e9Security Notes\nThis crate has received one security audit by NCC Group\u27e818\u27e9, with no significant findings. We would like to thank MobileCoin\u27e819\u27e9 for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### \u00a7\u27e820\u27e9License\nLicensed under either of:\n  * Apache License, Version 2.0\u27e821\u27e9\n  * MIT license\u27e822\u27e9\n\n\nat your option.\n#### \u00a7\u27e823\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e824\u27e9Supported Algorithms\nThis crate contains pure Rust implementations of `ChaCha20Poly1305`\u27e825\u27e9 (with optional AVX2 acceleration) as well as the following variants thereof:\n  * `XChaCha20Poly1305`\u27e826\u27e9 - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * `ChaCha8Poly1305`\u27e827\u27e9 / `ChaCha12Poly1305`\u27e828\u27e9 - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the Too Much Crypto\u27e818\u27e9 paper for background and rationale on when these constructions could be used. When in doubt, prefer `ChaCha20Poly1305`\u27e825\u27e9.\n  * `XChaCha8Poly1305`\u27e829\u27e9 / `XChaCha12Poly1305`\u27e830\u27e9 - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## \u00a7\u27e831\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### \u00a7\u27e832\u27e9In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe `AeadInPlace::encrypt_in_place`\u27e833\u27e9 and `AeadInPlace::decrypt_in_place`\u27e834\u27e9 methods accept any type that impls the `aead::Buffer`\u27e835\u27e9 trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of `aead::Buffer`\u27e835\u27e9 for `heapless::Vec` (re-exported from the `aead`\u27e836\u27e9 crate as `aead::heapless::Vec`\u27e837\u27e9), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### \u00a7\u27e838\u27e9`XChaCha20Poly1305`\u27e826\u27e9\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## \u00a7\u27e839\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports\u00a7\u27e840\u27e9\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules\u00a7\u27e841\u27e9\n\nconsts\u27e842\u27e9\n\n## Structs\u00a7\u27e843\u27e9\n\nChaChaPoly1305\u27e844\u27e9\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\nError\u27e845\u27e9\n    Error type.\n## Traits\u00a7\u27e846\u27e9\n\nAeadCore\u27e847\u27e9\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\nAeadInPlace\u27e848\u27e9\n    In-place stateless AEAD trait.\n\nKeyInit\u27e849\u27e9\n    Types which can be initialized from key.\n\nKeySizeUser\u27e850\u27e9\n    Types which use key for initialization.\n## Type Aliases\u00a7\u27e851\u27e9\n\nChaCha8Poly1305\u27e827\u27e9`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha12Poly1305\u27e828\u27e9`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha20Poly1305\u27e825\u27e9\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nKey\u27e852\u27e9\n    Key type (256-bits/32-bytes).\n\nNonce\u27e853\u27e9\n    Nonce type (96-bits/12-bytes).\n\nTag\u27e854\u27e9\n    Poly1305 tag.\n\nXChaCha8Poly1305\u27e829\u27e9`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha12Poly1305\u27e830\u27e9`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha20Poly1305\u27e826\u27e9\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nXNonce\u27e855\u27e9\n    XNonce type (192-bits/24-bytes).\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/chacha20poly1305/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/chacha20poly1305/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301: Source\n\u27e84\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305: \u00a7\n\u27e85\u27e9 https://buildstats.info/crate/chacha20poly1305: ![crate\n\u27e86\u27e9 https://docs.rs/chacha20poly1305/badge.svg: ![Docs\n\u27e87\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e88\u27e9 https://img.shields.io/badge/rustc-1.56+-blue.svg: Rust Version\n\u27e89\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e810\u27e9 https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push: ![Build Status\n\u27e811\u27e9 https://tools.ietf.org/html/rfc8439: RFC 8439\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Authenticated_encryption: Authenticated Encryption with Associated Data (AEAD)\n\u27e813\u27e9 https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20: ChaCha20\n\u27e814\u27e9 https://github.com/RustCrypto/universal-hashes/tree/master/poly1305: Poly1305\n\u27e815\u27e9 https://docs.rs/chacha20poly1305/: Documentation\n\u27e816\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about: \u00a7\n\u27e817\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes: \u00a7\n\u27e818\u27e9 https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/: security audit by NCC Group\n\u27e819\u27e9 https://www.mobilecoin.com/: MobileCoin\n\u27e820\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license: \u00a7\n\u27e821\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e822\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e823\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution: \u00a7\n\u27e824\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms: \u00a7\n\u27e825\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html: type chacha20poly1305::ChaCha20Poly1305 - `ChaCha20Poly1305`\n\u27e826\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html: type chacha20poly1305::XChaCha20Poly1305 - `XChaCha20Poly1305`\n\u27e827\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html: type chacha20poly1305::ChaCha8Poly1305 - `ChaCha8Poly1305`\n\u27e828\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html: type chacha20poly1305::ChaCha12Poly1305 - `ChaCha12Poly1305`\n\u27e829\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html: type chacha20poly1305::XChaCha8Poly1305 - `XChaCha8Poly1305`\n\u27e830\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html: type chacha20poly1305::XChaCha12Poly1305 - `XChaCha12Poly1305`\n\u27e831\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage: \u00a7\n\u27e832\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement: \u00a7\n\u27e833\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place: method chacha20poly1305::AeadInPlace::encrypt_in_place - `AeadInPlace::encrypt_in_place`\n\u27e834\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place: method chacha20poly1305::AeadInPlace::decrypt_in_place - `AeadInPlace::decrypt_in_place`\n\u27e835\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html: trait aead::Buffer - `aead::Buffer`\n\u27e836\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html: mod aead - `aead`\n\u27e837\u27e9 https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html: struct heapless::vec::Vec - `aead::heapless::Vec`\n\u27e838\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305: \u00a7\n\u27e839\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1: \u00a7\n\u27e840\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports: \u00a7\n\u27e841\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules: \u00a7\n\u27e842\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html: mod chacha20poly1305::consts - consts\n\u27e843\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs: \u00a7\n\u27e844\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html: struct chacha20poly1305::ChaChaPoly1305 - ChaChaPoly1305\n\u27e845\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html: struct chacha20poly1305::Error - Error\n\u27e846\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits: \u00a7\n\u27e847\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html: trait chacha20poly1305::AeadCore - AeadCore\n\u27e848\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html: trait chacha20poly1305::AeadInPlace - AeadInPlace\n\u27e849\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html: trait chacha20poly1305::KeyInit - KeyInit\n\u27e850\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html: trait chacha20poly1305::KeySizeUser - KeySizeUser\n\u27e851\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types: \u00a7\n\u27e852\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html: type chacha20poly1305::Key - Key\n\u27e853\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html: type chacha20poly1305::Nonce - Nonce\n\u27e854\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html: type chacha20poly1305::Tag - Tag\n\u27e855\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html: type chacha20poly1305::XNonce - XNonce\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 14335,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118287.4283256"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/chacha20poly1305",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [29 releases](https://lib.rs/crates/chacha20poly1305/versions)\n0.11.0-pre.2 |  Oct 7, 2024   \n---|---  \n0.11.0-pre.1 |  Jul 27, 2024   \n0.10.1 |  Aug 10, 2022   \n0.10.0-pre.2 |  Jul 20, 2022   \n0.0.0 |  Oct 6, 2016   \n#**1755** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 246390/week @ 2025-01-28 285266/week @ 2025-02-04 268875/week @ 2025-02-11 270023/week @ 2025-02-18 263406/week @ 2025-02-25 261831/week @ 2025-03-04 277426/week @ 2025-03-11 253046/week @ 2025-03-18 261756/week @ 2025-03-25 247272/week @ 2025-04-01 265468/week @ 2025-04-08 244433/week @ 2025-04-15 281050/week @ 2025-04-22 249249/week @ 2025-04-29 241276/week @ 2025-05-06 203835/week @ 2025-05-13\n**1,009,994** downloads per month Used in [**1,348** crates (303 directly)](https://lib.rs/crates/chacha20poly1305/rev)\n**Apache-2.0 OR MIT**\n69KB  202 lines\n# RustCrypto: ChaCha20Poly1305\n[![crate](https://img.shields.io/crates/v/chacha20poly1305)](https://crates.io/crates/chacha20poly1305) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/chacha20poly1305/badge.svg)](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.56+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) [![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push)](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** ([RFC 8439](https://tools.ietf.org/html/rfc8439)): an [Authenticated Encryption with Associated Data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption) cipher amenable to fast, constant-time implementations in software, based on the [ChaCha20](https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20) stream cipher and [Poly1305](https://github.com/RustCrypto/universal-hashes/tree/master/poly1305) universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\n[Documentation](https://docs.rs/chacha20poly1305/)\n## About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \"ARX\"), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn't received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it's mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n## Security Notes\nThis crate has received one [security audit by NCC Group](https://web.archive.org/web/20200606025324/https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/), with no significant findings. We would like to thank [MobileCoin](https://www.mobilecoin.com/) for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n## License\nLicensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~1MB  ~25K SLoC\n  * [aead](https://lib.rs/crates/aead \"new\") 0.6.0-rc.0\n  * [chacha20](https://lib.rs/crates/chacha20 \"obsolete\") =0.10.0-pre.2[+xchacha](https://lib.rs/crates/chacha20/features#feature-xchacha)[+zeroize](https://lib.rs/crates/chacha20/features#feature-zeroize)\n  * [cipher](https://lib.rs/crates/cipher \"obsolete\") =0.5.0-pre.7\n  * [poly1305](https://lib.rs/crates/poly1305 \"new\") 0.9.0-rc.0\n  * [zeroize](https://lib.rs/crates/zeroize \"1.8\")\n\n\n#### [Other features](https://lib.rs/crates/chacha20poly1305/features)\n  * [alloc](https://lib.rs/crates/chacha20poly1305/features#feature-alloc)\n  * [arrayvec](https://lib.rs/crates/chacha20poly1305/features#feature-arrayvec)\n  * [bytes](https://lib.rs/crates/chacha20poly1305/features#feature-bytes)\n  * [getrandom](https://lib.rs/crates/chacha20poly1305/features#feature-getrandom)\n  * [heapless](https://lib.rs/crates/chacha20poly1305/features#feature-heapless)\n  * [rand_core](https://lib.rs/crates/chacha20poly1305/features#feature-rand_core)\n  * [reduced-round](https://lib.rs/crates/chacha20poly1305/features#feature-reduced-round)\n  * [std](https://lib.rs/crates/chacha20poly1305/features#feature-std)\n  * [stream](https://lib.rs/crates/chacha20poly1305/features#feature-stream)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  29 releases\u27e81\u27e9\n0.11.0-pre.2 |  Oct 7, 2024   \n---|---  \n0.11.0-pre.1 |  Jul 27, 2024   \n0.10.1 |  Aug 10, 2022   \n0.10.0-pre.2 |  Jul 20, 2022   \n0.0.0 |  Oct 6, 2016   \n#**1755** in Cryptography\u27e82\u27e9\nDownload history 246390/week @ 2025-01-28 285266/week @ 2025-02-04 268875/week @ 2025-02-11 270023/week @ 2025-02-18 263406/week @ 2025-02-25 261831/week @ 2025-03-04 277426/week @ 2025-03-11 253046/week @ 2025-03-18 261756/week @ 2025-03-25 247272/week @ 2025-04-01 265468/week @ 2025-04-08 244433/week @ 2025-04-15 281050/week @ 2025-04-22 249249/week @ 2025-04-29 241276/week @ 2025-05-06 203835/week @ 2025-05-13\n**1,009,994** downloads per month Used in **1,348** crates (303 directly)\u27e83\u27e9\n**Apache-2.0 OR MIT**\n69KB  202 lines\n# RustCrypto: ChaCha20Poly1305\n![crate\u27e84\u27e9](https://crates.io/crates/chacha20poly1305) ![Docs\u27e85\u27e9](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed\u27e86\u27e9] ![Rust Version\u27e87\u27e9] ![Project Chat\u27e88\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) ![Build Status\u27e89\u27e9](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** (RFC 8439\u27e810\u27e9): an Authenticated Encryption with Associated Data (AEAD)\u27e811\u27e9 cipher amenable to fast, constant-time implementations in software, based on the ChaCha20\u27e812\u27e9 stream cipher and Poly1305\u27e813\u27e9 universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\nDocumentation\u27e814\u27e9\n## About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \"ARX\"), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn't received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it's mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n## Security Notes\nThis crate has received one security audit by NCC Group\u27e815\u27e9, with no significant findings. We would like to thank MobileCoin\u27e816\u27e9 for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n## License\nLicensed under either of:\n  * Apache License, Version 2.0\u27e817\u27e9\n  * MIT license\u27e818\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~1MB  ~25K SLoC\n  * aead\u27e819\u27e9 0.6.0-rc.0\n  * chacha20\u27e820\u27e9 =0.10.0-pre.2+xchacha\u27e821\u27e9+zeroize\u27e822\u27e9\n  * cipher\u27e823\u27e9 =0.5.0-pre.7\n  * poly1305\u27e824\u27e9 0.9.0-rc.0\n  * zeroize\u27e825\u27e9\n\n\n#### Other features\u27e826\u27e9\n  * alloc\u27e827\u27e9\n  * arrayvec\u27e828\u27e9\n  * bytes\u27e829\u27e9\n  * getrandom\u27e830\u27e9\n  * heapless\u27e831\u27e9\n  * rand_core\u27e832\u27e9\n  * reduced-round\u27e833\u27e9\n  * std\u27e834\u27e9\n  * stream\u27e835\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/chacha20poly1305/versions: 29 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/chacha20poly1305/rev: **1,348** crates (303 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/chacha20poly1305: ![crate\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/chacha20poly1305/badge.svg: ![Docs\n\u27e86\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e87\u27e9 https://img.shields.io/badge/rustc-1.56+-blue.svg: Rust Version\n\u27e88\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e89\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push: ![Build Status\n\u27e810\u27e9 https://tools.ietf.org/html/rfc8439: RFC 8439\n\u27e811\u27e9 https://en.wikipedia.org/wiki/Authenticated_encryption: Authenticated Encryption with Associated Data (AEAD)\n\u27e812\u27e9 https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20: ChaCha20\n\u27e813\u27e9 https://github.com/RustCrypto/universal-hashes/tree/master/poly1305: Poly1305\n\u27e814\u27e9 https://docs.rs/chacha20poly1305/: Documentation\n\u27e815\u27e9 https://web.archive.org/web/20200606025324/https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/: security audit by NCC Group\n\u27e816\u27e9 https://www.mobilecoin.com/: MobileCoin\n\u27e817\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e818\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e819\u27e9 https://lib.rs/crates/aead: new - aead\n\u27e820\u27e9 https://lib.rs/crates/chacha20: obsolete - chacha20\n\u27e821\u27e9 https://lib.rs/crates/chacha20/features#feature-xchacha: +xchacha\n\u27e822\u27e9 https://lib.rs/crates/chacha20/features#feature-zeroize: +zeroize\n\u27e823\u27e9 https://lib.rs/crates/cipher: obsolete - cipher\n\u27e824\u27e9 https://lib.rs/crates/poly1305: new - poly1305\n\u27e825\u27e9 https://lib.rs/crates/zeroize: 1.8 - zeroize\n\u27e826\u27e9 https://lib.rs/crates/chacha20poly1305/features: Other features\n\u27e827\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-alloc: alloc\n\u27e828\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-arrayvec: arrayvec\n\u27e829\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-bytes: bytes\n\u27e830\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-getrandom: getrandom\n\u27e831\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-heapless: heapless\n\u27e832\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-rand_core: rand_core\n\u27e833\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-reduced-round: reduced-round\n\u27e834\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-std: std\n\u27e835\u27e9 https://lib.rs/crates/chacha20poly1305/features#feature-stream: stream\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5556,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118287.8997575"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#opaque-debug@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\opaque-debug-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "opaque_debug",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\opaque-debug-0.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libopaque_debug-3bfd2b91078f8694.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-7e047a39102e0a91\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-7e047a39102e0a91\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-ad7b5980f5e2ca20\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libgetrandom-5493454d9267c68e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-main",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\build\\main.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-9f34e931e50aab85\\build-script-main.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-9f34e931e50aab85\\build_script_main.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\librand_core-c618f5f562283d03.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-2dc06310c2d6584a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-a7cd99abe58a935e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-706aee5fdb66bb3c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#inout@0.2.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\inout-0.2.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "inout",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\inout-0.2.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libinout-93757c0a9ef211e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-8dd1c6bcb6d2c48f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#universal-hash@0.6.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\universal-hash-0.6.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "universal_hash",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\universal-hash-0.6.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libuniversal_hash-c81595757694a1d7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#aead@0.6.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\aead-0.6.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "aead",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\aead-0.6.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libaead-252784b182814786.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cipher@0.5.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cipher-0.5.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cipher",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cipher-0.5.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcipher-3c6bc3af3bb73fb5.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#poly1305@0.9.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\poly1305-0.9.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "poly1305",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\poly1305-0.9.0-rc.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libpoly1305-05dc9c68821218c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#chacha20@0.10.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\chacha20-0.10.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "chacha20",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\chacha20-0.10.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cipher",
+                "xchacha"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libchacha20-9b7ec5b57c902e23.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplvg4bw1_/chacha20poly1305-0.11.0-rc.0#chacha20poly1305@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "chacha20poly1305",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libchacha20poly1305-8d2f67519bada75e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-main",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\build\\main.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-9f34e931e50aab85\\build-script-main.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-9f34e931e50aab85\\build_script_main.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-7e047a39102e0a91\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-7e047a39102e0a91\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#opaque-debug@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\opaque-debug-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "opaque_debug",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\opaque-debug-0.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libopaque_debug-3bfd2b91078f8694.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\typenum-2dc06310c2d6584a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\build\\getrandom-ad7b5980f5e2ca20\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.17.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.17.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-a7cd99abe58a935e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-706aee5fdb66bb3c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libgetrandom-5493454d9267c68e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\librand_core-c618f5f562283d03.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#inout@0.2.0-rc.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\inout-0.2.0-rc.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "inout",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\inout-0.2.0-rc.5\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libinout-93757c0a9ef211e4.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-8dd1c6bcb6d2c48f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cipher@0.5.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cipher-0.5.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cipher",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cipher-0.5.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libcipher-3c6bc3af3bb73fb5.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#universal-hash@0.6.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\universal-hash-0.6.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "universal_hash",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\universal-hash-0.6.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libuniversal_hash-c81595757694a1d7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#aead@0.6.0-rc.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\aead-0.6.0-rc.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "aead",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\aead-0.6.0-rc.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libaead-252784b182814786.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#poly1305@0.9.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\poly1305-0.9.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "poly1305",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\poly1305-0.9.0-rc.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libpoly1305-05dc9c68821218c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#chacha20@0.10.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\chacha20-0.10.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "chacha20",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\chacha20-0.10.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "cipher",
+                "xchacha"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libchacha20-9b7ec5b57c902e23.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplvg4bw1_/chacha20poly1305-0.11.0-rc.0#chacha20poly1305@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "chacha20poly1305",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "os_rng",
+                "rand_core"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplvg4bw1_\\chacha20poly1305-0.11.0-rc.0\\target\\debug\\deps\\libchacha20poly1305-e1124e25ef256000.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 37
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "chacha20poly1305",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\n[Settings](https://docs.rs/chacha20poly1305/latest/settings.html)\n[Help](https://docs.rs/chacha20poly1305/latest/help.html)\nSummary[Source](https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301)\nExpand description\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305)RustCrypto: ChaCha20Poly1305\n[![crate](https://buildstats.info/crate/chacha20poly1305)](https://crates.io/crates/chacha20poly1305) [![Docs](https://docs.rs/chacha20poly1305/badge.svg)](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.56+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) [![Build Status](https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push)](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** ([RFC 8439](https://tools.ietf.org/html/rfc8439)): an [Authenticated Encryption with Associated Data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption) cipher amenable to fast, constant-time implementations in software, based on the [ChaCha20](https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20) stream cipher and [Poly1305](https://github.com/RustCrypto/universal-hashes/tree/master/poly1305) universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\n[Documentation](https://docs.rs/chacha20poly1305/)\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about)About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes)Security Notes\nThis crate has received one [security audit by NCC Group](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/), with no significant findings. We would like to thank [MobileCoin](https://www.mobilecoin.com/) for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license)License\nLicensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms)Supported Algorithms\nThis crate contains pure Rust implementations of [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\") (with optional AVX2 acceleration) as well as the following variants thereof:\n  * [`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\") - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * [`ChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\") / [`ChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\") - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the [Too Much Crypto](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/) paper for background and rationale on when these constructions could be used. When in doubt, prefer [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\").\n  * [`XChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\") / [`XChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\") - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement)In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe [`AeadInPlace::encrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place \"method chacha20poly1305::AeadInPlace::encrypt_in_place\") and [`AeadInPlace::decrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place \"method chacha20poly1305::AeadInPlace::decrypt_in_place\") methods accept any type that impls the [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") for `heapless::Vec` (re-exported from the [`aead`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\") crate as [`aead::heapless::Vec`](https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html \"struct heapless::vec::Vec\")), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305)[`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports)\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules)\n\n[consts](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html \"mod chacha20poly1305::consts\")\n\n## Structs[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs)\n\n[ChaChaPoly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html \"struct chacha20poly1305::ChaChaPoly1305\")\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\n[Error](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html \"struct chacha20poly1305::Error\")\n    Error type.\n## Traits[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits)\n\n[AeadCore](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html \"trait chacha20poly1305::AeadCore\")\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\n[AeadInPlace](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html \"trait chacha20poly1305::AeadInPlace\")\n    In-place stateless AEAD trait.\n\n[KeyInit](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html \"trait chacha20poly1305::KeyInit\")\n    Types which can be initialized from key.\n\n[KeySizeUser](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html \"trait chacha20poly1305::KeySizeUser\")\n    Types which use key for initialization.\n## Type Aliases[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types)\n\n[ChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\")`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\")`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\")\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[Key](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html \"type chacha20poly1305::Key\")\n    Key type (256-bits/32-bytes).\n\n[Nonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html \"type chacha20poly1305::Nonce\")\n    Nonce type (96-bits/12-bytes).\n\n[Tag](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html \"type chacha20poly1305::Tag\")\n    Poly1305 tag.\n\n[XChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\")`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\")`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[XNonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html \"type chacha20poly1305::XNonce\")\n    XNonce type (192-bits/24-bytes).\n",
+            "markdown_with_citations": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto: ChaCha20Poly1305\n![crate\u27e85\u27e9](https://crates.io/crates/chacha20poly1305) ![Docs\u27e86\u27e9](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed\u27e87\u27e9] ![Rust Version\u27e88\u27e9] ![Project Chat\u27e89\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) ![Build Status\u27e810\u27e9](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** (RFC 8439\u27e811\u27e9): an Authenticated Encryption with Associated Data (AEAD)\u27e812\u27e9 cipher amenable to fast, constant-time implementations in software, based on the ChaCha20\u27e813\u27e9 stream cipher and Poly1305\u27e814\u27e9 universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\nDocumentation\u27e815\u27e9\n### \u00a7\u27e816\u27e9About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### \u00a7\u27e817\u27e9Security Notes\nThis crate has received one security audit by NCC Group\u27e818\u27e9, with no significant findings. We would like to thank MobileCoin\u27e819\u27e9 for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### \u00a7\u27e820\u27e9License\nLicensed under either of:\n  * Apache License, Version 2.0\u27e821\u27e9\n  * MIT license\u27e822\u27e9\n\n\nat your option.\n#### \u00a7\u27e823\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e824\u27e9Supported Algorithms\nThis crate contains pure Rust implementations of `ChaCha20Poly1305`\u27e825\u27e9 (with optional AVX2 acceleration) as well as the following variants thereof:\n  * `XChaCha20Poly1305`\u27e826\u27e9 - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * `ChaCha8Poly1305`\u27e827\u27e9 / `ChaCha12Poly1305`\u27e828\u27e9 - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the Too Much Crypto\u27e818\u27e9 paper for background and rationale on when these constructions could be used. When in doubt, prefer `ChaCha20Poly1305`\u27e825\u27e9.\n  * `XChaCha8Poly1305`\u27e829\u27e9 / `XChaCha12Poly1305`\u27e830\u27e9 - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## \u00a7\u27e831\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### \u00a7\u27e832\u27e9In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe `AeadInPlace::encrypt_in_place`\u27e833\u27e9 and `AeadInPlace::decrypt_in_place`\u27e834\u27e9 methods accept any type that impls the `aead::Buffer`\u27e835\u27e9 trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of `aead::Buffer`\u27e835\u27e9 for `heapless::Vec` (re-exported from the `aead`\u27e836\u27e9 crate as `aead::heapless::Vec`\u27e837\u27e9), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### \u00a7\u27e838\u27e9`XChaCha20Poly1305`\u27e826\u27e9\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## \u00a7\u27e839\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports\u00a7\u27e840\u27e9\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules\u00a7\u27e841\u27e9\n\nconsts\u27e842\u27e9\n\n## Structs\u00a7\u27e843\u27e9\n\nChaChaPoly1305\u27e844\u27e9\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\nError\u27e845\u27e9\n    Error type.\n## Traits\u00a7\u27e846\u27e9\n\nAeadCore\u27e847\u27e9\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\nAeadInPlace\u27e848\u27e9\n    In-place stateless AEAD trait.\n\nKeyInit\u27e849\u27e9\n    Types which can be initialized from key.\n\nKeySizeUser\u27e850\u27e9\n    Types which use key for initialization.\n## Type Aliases\u00a7\u27e851\u27e9\n\nChaCha8Poly1305\u27e827\u27e9`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha12Poly1305\u27e828\u27e9`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha20Poly1305\u27e825\u27e9\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nKey\u27e852\u27e9\n    Key type (256-bits/32-bytes).\n\nNonce\u27e853\u27e9\n    Nonce type (96-bits/12-bytes).\n\nTag\u27e854\u27e9\n    Poly1305 tag.\n\nXChaCha8Poly1305\u27e829\u27e9`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha12Poly1305\u27e830\u27e9`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha20Poly1305\u27e826\u27e9\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nXNonce\u27e855\u27e9\n    XNonce type (192-bits/24-bytes).\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/chacha20poly1305/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/chacha20poly1305/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301: Source\n\u27e84\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305: \u00a7\n\u27e85\u27e9 https://buildstats.info/crate/chacha20poly1305: ![crate\n\u27e86\u27e9 https://docs.rs/chacha20poly1305/badge.svg: ![Docs\n\u27e87\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e88\u27e9 https://img.shields.io/badge/rustc-1.56+-blue.svg: Rust Version\n\u27e89\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e810\u27e9 https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push: ![Build Status\n\u27e811\u27e9 https://tools.ietf.org/html/rfc8439: RFC 8439\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Authenticated_encryption: Authenticated Encryption with Associated Data (AEAD)\n\u27e813\u27e9 https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20: ChaCha20\n\u27e814\u27e9 https://github.com/RustCrypto/universal-hashes/tree/master/poly1305: Poly1305\n\u27e815\u27e9 https://docs.rs/chacha20poly1305/: Documentation\n\u27e816\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about: \u00a7\n\u27e817\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes: \u00a7\n\u27e818\u27e9 https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/: security audit by NCC Group\n\u27e819\u27e9 https://www.mobilecoin.com/: MobileCoin\n\u27e820\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license: \u00a7\n\u27e821\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e822\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e823\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution: \u00a7\n\u27e824\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms: \u00a7\n\u27e825\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html: type chacha20poly1305::ChaCha20Poly1305 - `ChaCha20Poly1305`\n\u27e826\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html: type chacha20poly1305::XChaCha20Poly1305 - `XChaCha20Poly1305`\n\u27e827\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html: type chacha20poly1305::ChaCha8Poly1305 - `ChaCha8Poly1305`\n\u27e828\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html: type chacha20poly1305::ChaCha12Poly1305 - `ChaCha12Poly1305`\n\u27e829\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html: type chacha20poly1305::XChaCha8Poly1305 - `XChaCha8Poly1305`\n\u27e830\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html: type chacha20poly1305::XChaCha12Poly1305 - `XChaCha12Poly1305`\n\u27e831\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage: \u00a7\n\u27e832\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement: \u00a7\n\u27e833\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place: method chacha20poly1305::AeadInPlace::encrypt_in_place - `AeadInPlace::encrypt_in_place`\n\u27e834\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place: method chacha20poly1305::AeadInPlace::decrypt_in_place - `AeadInPlace::decrypt_in_place`\n\u27e835\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html: trait aead::Buffer - `aead::Buffer`\n\u27e836\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html: mod aead - `aead`\n\u27e837\u27e9 https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html: struct heapless::vec::Vec - `aead::heapless::Vec`\n\u27e838\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305: \u00a7\n\u27e839\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1: \u00a7\n\u27e840\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports: \u00a7\n\u27e841\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules: \u00a7\n\u27e842\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html: mod chacha20poly1305::consts - consts\n\u27e843\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs: \u00a7\n\u27e844\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html: struct chacha20poly1305::ChaChaPoly1305 - ChaChaPoly1305\n\u27e845\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html: struct chacha20poly1305::Error - Error\n\u27e846\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits: \u00a7\n\u27e847\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html: trait chacha20poly1305::AeadCore - AeadCore\n\u27e848\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html: trait chacha20poly1305::AeadInPlace - AeadInPlace\n\u27e849\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html: trait chacha20poly1305::KeyInit - KeyInit\n\u27e850\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html: trait chacha20poly1305::KeySizeUser - KeySizeUser\n\u27e851\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types: \u00a7\n\u27e852\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html: type chacha20poly1305::Key - Key\n\u27e853\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html: type chacha20poly1305::Nonce - Nonce\n\u27e854\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html: type chacha20poly1305::Tag - Tag\n\u27e855\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html: type chacha20poly1305::XNonce - XNonce\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "chacha20poly1305",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\n[Settings](https://docs.rs/chacha20poly1305/latest/settings.html)\n[Help](https://docs.rs/chacha20poly1305/latest/help.html)\nSummary[Source](https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301)\nExpand description\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305)RustCrypto: ChaCha20Poly1305\n[![crate](https://buildstats.info/crate/chacha20poly1305)](https://crates.io/crates/chacha20poly1305) [![Docs](https://docs.rs/chacha20poly1305/badge.svg)](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.56+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) [![Build Status](https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push)](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** ([RFC 8439](https://tools.ietf.org/html/rfc8439)): an [Authenticated Encryption with Associated Data (AEAD)](https://en.wikipedia.org/wiki/Authenticated_encryption) cipher amenable to fast, constant-time implementations in software, based on the [ChaCha20](https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20) stream cipher and [Poly1305](https://github.com/RustCrypto/universal-hashes/tree/master/poly1305) universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\n[Documentation](https://docs.rs/chacha20poly1305/)\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about)About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes)Security Notes\nThis crate has received one [security audit by NCC Group](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/), with no significant findings. We would like to thank [MobileCoin](https://www.mobilecoin.com/) for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license)License\nLicensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n#### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution)Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms)Supported Algorithms\nThis crate contains pure Rust implementations of [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\") (with optional AVX2 acceleration) as well as the following variants thereof:\n  * [`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\") - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * [`ChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\") / [`ChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\") - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the [Too Much Crypto](https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/) paper for background and rationale on when these constructions could be used. When in doubt, prefer [`ChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\").\n  * [`XChaCha8Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\") / [`XChaCha12Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\") - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement)In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe [`AeadInPlace::encrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place \"method chacha20poly1305::AeadInPlace::encrypt_in_place\") and [`AeadInPlace::decrypt_in_place`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place \"method chacha20poly1305::AeadInPlace::decrypt_in_place\") methods accept any type that impls the [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of [`aead::Buffer`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html \"trait aead::Buffer\") for `heapless::Vec` (re-exported from the [`aead`](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\") crate as [`aead::heapless::Vec`](https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html \"struct heapless::vec::Vec\")), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305)[`XChaCha20Poly1305`](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## [\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1)Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports)\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules)\n\n[consts](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html \"mod chacha20poly1305::consts\")\n\n## Structs[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs)\n\n[ChaChaPoly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html \"struct chacha20poly1305::ChaChaPoly1305\")\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\n[Error](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html \"struct chacha20poly1305::Error\")\n    Error type.\n## Traits[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits)\n\n[AeadCore](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html \"trait chacha20poly1305::AeadCore\")\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\n[AeadInPlace](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html \"trait chacha20poly1305::AeadInPlace\")\n    In-place stateless AEAD trait.\n\n[KeyInit](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html \"trait chacha20poly1305::KeyInit\")\n    Types which can be initialized from key.\n\n[KeySizeUser](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html \"trait chacha20poly1305::KeySizeUser\")\n    Types which use key for initialization.\n## Type Aliases[\u00a7](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types)\n\n[ChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html \"type chacha20poly1305::ChaCha8Poly1305\")`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html \"type chacha20poly1305::ChaCha12Poly1305\")`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[ChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html \"type chacha20poly1305::ChaCha20Poly1305\")\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[Key](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html \"type chacha20poly1305::Key\")\n    Key type (256-bits/32-bytes).\n\n[Nonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html \"type chacha20poly1305::Nonce\")\n    Nonce type (96-bits/12-bytes).\n\n[Tag](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html \"type chacha20poly1305::Tag\")\n    Poly1305 tag.\n\n[XChaCha8Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html \"type chacha20poly1305::XChaCha8Poly1305\")`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha12Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html \"type chacha20poly1305::XChaCha12Poly1305\")`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\n[XChaCha20Poly1305](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html \"type chacha20poly1305::XChaCha20Poly1305\")\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\n[XNonce](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html \"type chacha20poly1305::XNonce\")\n    XNonce type (192-bits/24-bytes).\n",
+            "markdown_with_citations": "[](https://docs.rs/chacha20poly1305/latest/chacha20poly1305/all.html \"show sidebar\")\n# Crate chacha20poly1305Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9RustCrypto: ChaCha20Poly1305\n![crate\u27e85\u27e9](https://crates.io/crates/chacha20poly1305) ![Docs\u27e86\u27e9](https://docs.rs/chacha20poly1305/) ![Apache2/MIT licensed\u27e87\u27e9] ![Rust Version\u27e88\u27e9] ![Project Chat\u27e89\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260038-AEADs) ![Build Status\u27e810\u27e9](https://github.com/RustCrypto/AEADs/actions)\nPure Rust implementation of **ChaCha20Poly1305** (RFC 8439\u27e811\u27e9): an Authenticated Encryption with Associated Data (AEAD)\u27e812\u27e9 cipher amenable to fast, constant-time implementations in software, based on the ChaCha20\u27e813\u27e9 stream cipher and Poly1305\u27e814\u27e9 universal hash function.\nThis crate also contains an implementation of **XChaCha20Poly1305** : a variant of ChaCha20Poly1305 with an extended 192-bit (24-byte) nonce.\nDocumentation\u27e815\u27e9\n### \u00a7\u27e816\u27e9About\nChaCha20Poly1305 is notable for being simple and fast when implemented in pure software. The underlying ChaCha20 stream cipher uses a simple combination of add, rotate, and XOR instructions (a.k.a. \u201cARX\u201d), and the Poly1305 hash function is likewise extremely simple.\nWhile it hasn\u2019t received approval from certain standards bodies (i.e. NIST) the algorithm is widely used and deployed. Notably it\u2019s mandatory to implement in the Transport Layer Security (TLS) protocol. The underlying ChaCha20 cipher is also widely used as a cryptographically secure random number generator, including internal use by the Rust standard library.\n### \u00a7\u27e817\u27e9Security Notes\nThis crate has received one security audit by NCC Group\u27e818\u27e9, with no significant findings. We would like to thank MobileCoin\u27e819\u27e9 for funding the audit.\nAll implementations contained in the crate are designed to execute in constant time, either by relying on hardware intrinsics (i.e. AVX2 on x86/x86_64), or using a portable implementation which is only constant time on processors which implement constant-time multiplication.\nIt is not suitable for use on processors with a variable-time multiplication operation (e.g. short circuit on multiply-by-zero / multiply-by-one, such as certain 32-bit PowerPC CPUs and some non-ARM microcontrollers).\n### \u00a7\u27e820\u27e9License\nLicensed under either of:\n  * Apache License, Version 2.0\u27e821\u27e9\n  * MIT license\u27e822\u27e9\n\n\nat your option.\n#### \u00a7\u27e823\u27e9Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n### \u00a7\u27e824\u27e9Supported Algorithms\nThis crate contains pure Rust implementations of `ChaCha20Poly1305`\u27e825\u27e9 (with optional AVX2 acceleration) as well as the following variants thereof:\n  * `XChaCha20Poly1305`\u27e826\u27e9 - ChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\n  * `ChaCha8Poly1305`\u27e827\u27e9 / `ChaCha12Poly1305`\u27e828\u27e9 - non-standard, reduced-round variants (gated under the `reduced-round` Cargo feature). See the Too Much Crypto\u27e818\u27e9 paper for background and rationale on when these constructions could be used. When in doubt, prefer `ChaCha20Poly1305`\u27e825\u27e9.\n  * `XChaCha8Poly1305`\u27e829\u27e9 / `XChaCha12Poly1305`\u27e830\u27e9 - same as above, but with an extended 192-bit (24-byte) nonce.\n\n\n## \u00a7\u27e831\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  ChaCha20Poly1305, Nonce\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n### \u00a7\u27e832\u27e9In-place Usage (eliminates `alloc` requirement)\nThis crate has an optional `alloc` feature which can be disabled in e.g. microcontroller environments that don\u2019t have a heap.\nThe `AeadInPlace::encrypt_in_place`\u27e833\u27e9 and `AeadInPlace::decrypt_in_place`\u27e834\u27e9 methods accept any type that impls the `aead::Buffer`\u27e835\u27e9 trait which contains the plaintext for encryption or ciphertext for decryption.\nNote that if you enable the `heapless` feature of this crate, you will receive an impl of `aead::Buffer`\u27e835\u27e9 for `heapless::Vec` (re-exported from the `aead`\u27e836\u27e9 crate as `aead::heapless::Vec`\u27e837\u27e9), which can then be passed as the `buffer` parameter to the in-place encrypt and decrypt methods:\n```\nuse chacha20poly1305::{\n  aead::{AeadCore, AeadInPlace, KeyInit, OsRng, heapless::Vec},\n  ChaCha20Poly1305, Nonce,\n};\nlet key = ChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = ChaCha20Poly1305::new(&key);\nlet nonce = ChaCha20Poly1305::generate_nonce(&mut OsRng); // 96-bits; unique per message\nlet mut buffer: Vec<u8, 128> = Vec::new(); // Note: buffer needs 16-bytes overhead for auth tag\nbuffer.extend_from_slice(b\"plaintext message\");\n// Encrypt `buffer` in-place, replacing the plaintext contents with ciphertext\ncipher.encrypt_in_place(&nonce, b\"\", &mut buffer)?;\n// `buffer` now contains the message ciphertext\nassert_ne!(&buffer, b\"plaintext message\");\n// Decrypt `buffer` in-place, replacing its ciphertext context with the original plaintext\ncipher.decrypt_in_place(&nonce, b\"\", &mut buffer)?;\nassert_eq!(&buffer, b\"plaintext message\");\n```\n\n### \u00a7\u27e838\u27e9`XChaCha20Poly1305`\u27e826\u27e9\nChaCha20Poly1305 variant with an extended 192-bit (24-byte) nonce.\nThe construction is an adaptation of the same techniques used by XSalsa20 as described in the paper \u201cExtending the Salsa20 Nonce\u201d to the 96-bit nonce variant of ChaCha20, which derive a separate subkey/nonce for each extended nonce:\n<https://cr.yp.to/snuffle/xsalsa-20081128.pdf>\nNo authoritative specification exists for XChaCha20Poly1305, however the construction has \u201crough consensus and running code\u201d in the form of several interoperable libraries and protocols (e.g. libsodium, WireGuard) and is documented in an (expired) IETF draft, which also applies the proof from the XSalsa20 paper to the construction in order to demonstrate that XChaCha20 is secure if ChaCha20 is secure (see Section 3.1):\n<https://tools.ietf.org/html/draft-arciszewski-xchacha-03>\nIt is worth noting that NaCl/libsodium\u2019s default \u201csecretbox\u201d algorithm is XSalsa20Poly1305, not XChaCha20Poly1305, and thus not compatible with this library. If you are interested in that construction, please see the `xsalsa20poly1305` crate:\n<https://docs.rs/xsalsa20poly1305/>\n## \u00a7\u27e839\u27e9Usage\n```\nuse chacha20poly1305::{\n  aead::{Aead, AeadCore, KeyInit, OsRng},\n  XChaCha20Poly1305, XNonce\n};\nlet key = XChaCha20Poly1305::generate_key(&mut OsRng);\nlet cipher = XChaCha20Poly1305::new(&key);\nlet nonce = XChaCha20Poly1305::generate_nonce(&mut OsRng); // 192-bits; unique per message\nlet ciphertext = cipher.encrypt(&nonce, b\"plaintext message\".as_ref())?;\nlet plaintext = cipher.decrypt(&nonce, ciphertext.as_ref())?;\nassert_eq!(&plaintext, b\"plaintext message\");\n```\n\n## Re-exports\u00a7\u27e840\u27e9\n\n`pub use aead[](https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html \"mod aead\");`\n\n## Modules\u00a7\u27e841\u27e9\n\nconsts\u27e842\u27e9\n\n## Structs\u00a7\u27e843\u27e9\n\nChaChaPoly1305\u27e844\u27e9\n    Generic ChaCha+Poly1305 Authenticated Encryption with Additional Data (AEAD) construction.\n\nError\u27e845\u27e9\n    Error type.\n## Traits\u00a7\u27e846\u27e9\n\nAeadCore\u27e847\u27e9\n    Authenticated Encryption with Associated Data (AEAD) algorithm core trait.\n\nAeadInPlace\u27e848\u27e9\n    In-place stateless AEAD trait.\n\nKeyInit\u27e849\u27e9\n    Types which can be initialized from key.\n\nKeySizeUser\u27e850\u27e9\n    Types which use key for initialization.\n## Type Aliases\u00a7\u27e851\u27e9\n\nChaCha8Poly1305\u27e827\u27e9`reduced-round`\n    ChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha12Poly1305\u27e828\u27e9`reduced-round`\n    ChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nChaCha20Poly1305\u27e825\u27e9\n    ChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nKey\u27e852\u27e9\n    Key type (256-bits/32-bytes).\n\nNonce\u27e853\u27e9\n    Nonce type (96-bits/12-bytes).\n\nTag\u27e854\u27e9\n    Poly1305 tag.\n\nXChaCha8Poly1305\u27e829\u27e9`reduced-round`\n    XChaCha8Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha12Poly1305\u27e830\u27e9`reduced-round`\n    XChaCha12Poly1305 (reduced round variant) Authenticated Encryption with Additional Data (AEAD).\n\nXChaCha20Poly1305\u27e826\u27e9\n    XChaCha20Poly1305 Authenticated Encryption with Additional Data (AEAD).\n\nXNonce\u27e855\u27e9\n    XNonce type (192-bits/24-bytes).\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/chacha20poly1305/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/chacha20poly1305/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/chacha20poly1305/latest/src/chacha20poly1305/lib.rs.html#1-301: Source\n\u27e84\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#rustcrypto-chacha20poly1305: \u00a7\n\u27e85\u27e9 https://buildstats.info/crate/chacha20poly1305: ![crate\n\u27e86\u27e9 https://docs.rs/chacha20poly1305/badge.svg: ![Docs\n\u27e87\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e88\u27e9 https://img.shields.io/badge/rustc-1.56+-blue.svg: Rust Version\n\u27e89\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e810\u27e9 https://github.com/RustCrypto/AEADs/workflows/chacha20poly1305/badge.svg?branch=master&event=push: ![Build Status\n\u27e811\u27e9 https://tools.ietf.org/html/rfc8439: RFC 8439\n\u27e812\u27e9 https://en.wikipedia.org/wiki/Authenticated_encryption: Authenticated Encryption with Associated Data (AEAD)\n\u27e813\u27e9 https://github.com/RustCrypto/stream-ciphers/tree/master/chacha20: ChaCha20\n\u27e814\u27e9 https://github.com/RustCrypto/universal-hashes/tree/master/poly1305: Poly1305\n\u27e815\u27e9 https://docs.rs/chacha20poly1305/: Documentation\n\u27e816\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#about: \u00a7\n\u27e817\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#security-notes: \u00a7\n\u27e818\u27e9 https://research.nccgroup.com/2020/02/26/public-report-rustcrypto-aes-gcm-and-chacha20poly1305-implementation-review/: security audit by NCC Group\n\u27e819\u27e9 https://www.mobilecoin.com/: MobileCoin\n\u27e820\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#license: \u00a7\n\u27e821\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e822\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e823\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#contribution: \u00a7\n\u27e824\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#supported-algorithms: \u00a7\n\u27e825\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha20Poly1305.html: type chacha20poly1305::ChaCha20Poly1305 - `ChaCha20Poly1305`\n\u27e826\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha20Poly1305.html: type chacha20poly1305::XChaCha20Poly1305 - `XChaCha20Poly1305`\n\u27e827\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha8Poly1305.html: type chacha20poly1305::ChaCha8Poly1305 - `ChaCha8Poly1305`\n\u27e828\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.ChaCha12Poly1305.html: type chacha20poly1305::ChaCha12Poly1305 - `ChaCha12Poly1305`\n\u27e829\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha8Poly1305.html: type chacha20poly1305::XChaCha8Poly1305 - `XChaCha8Poly1305`\n\u27e830\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XChaCha12Poly1305.html: type chacha20poly1305::XChaCha12Poly1305 - `XChaCha12Poly1305`\n\u27e831\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage: \u00a7\n\u27e832\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#in-place-usage-eliminates-alloc-requirement: \u00a7\n\u27e833\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.encrypt_in_place: method chacha20poly1305::AeadInPlace::encrypt_in_place - `AeadInPlace::encrypt_in_place`\n\u27e834\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html#method.decrypt_in_place: method chacha20poly1305::AeadInPlace::decrypt_in_place - `AeadInPlace::decrypt_in_place`\n\u27e835\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/trait.Buffer.html: trait aead::Buffer - `aead::Buffer`\n\u27e836\u27e9 https://docs.rs/aead/0.5.2/x86_64-unknown-linux-gnu/aead/index.html: mod aead - `aead`\n\u27e837\u27e9 https://docs.rs/heapless/0.7.17/x86_64-unknown-linux-gnu/heapless/vec/struct.Vec.html: struct heapless::vec::Vec - `aead::heapless::Vec`\n\u27e838\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#xchacha20poly1305: \u00a7\n\u27e839\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#usage-1: \u00a7\n\u27e840\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#reexports: \u00a7\n\u27e841\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#modules: \u00a7\n\u27e842\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/consts/index.html: mod chacha20poly1305::consts - consts\n\u27e843\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#structs: \u00a7\n\u27e844\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.ChaChaPoly1305.html: struct chacha20poly1305::ChaChaPoly1305 - ChaChaPoly1305\n\u27e845\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/struct.Error.html: struct chacha20poly1305::Error - Error\n\u27e846\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#traits: \u00a7\n\u27e847\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadCore.html: trait chacha20poly1305::AeadCore - AeadCore\n\u27e848\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.AeadInPlace.html: trait chacha20poly1305::AeadInPlace - AeadInPlace\n\u27e849\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeyInit.html: trait chacha20poly1305::KeyInit - KeyInit\n\u27e850\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/trait.KeySizeUser.html: trait chacha20poly1305::KeySizeUser - KeySizeUser\n\u27e851\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/#types: \u00a7\n\u27e852\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Key.html: type chacha20poly1305::Key - Key\n\u27e853\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Nonce.html: type chacha20poly1305::Nonce - Nonce\n\u27e854\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.Tag.html: type chacha20poly1305::Tag - Tag\n\u27e855\u27e9 https://docs.rs/chacha20poly1305/latest/chacha20poly1305/type.XNonce.html: type chacha20poly1305::XNonce - XNonce\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `chacha20poly1305` crate provides a pure Rust implementation of the ChaCha20Poly1305 AEAD cipher (RFC 8439) and its XChaCha20Poly1305 variant, enabling fast, constant-time authenticated encryption with associated data. It supports in-place encryption/decryption to eliminate heap allocation, making it suitable for constrained environments, and offers features like secure random key/nonce generation. The crate has undergone a security audit and is licensed under Apache 2.0/MIT.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: Features and Usage\n\u2705 Factual: The `chacha20poly1305` crate supports in-place encryption and decryption, allowing users to avoid heap allocation by using the `heapless` feature and `heapless::Vec` as a buffer.  \n\u274c Counterfactual: The `chacha20poly1305` crate requires heap allocation for all encryption and decryption operations, even when using the `heapless` feature.\n\n---\n\n### Pair 2: Algorithm Characteristics\n\u2705 Factual: ChaCha20Poly1305 is a widely deployed encryption algorithm, mandatory for implementation in the TLS protocol, despite not being approved by NIST.  \n\u274c Counterfactual: ChaCha20Poly1305 is a NIST-approved encryption algorithm and is not mandatory for implementation in the TLS protocol.\n\n---\n\n### Pair 3: Nonce Size\n\u2705 Factual: The `XChaCha20Poly1305` variant in the crate uses a 192-bit nonce, which provides extended security for scenarios requiring a larger nonce space.  \n\u274c Counterfactual: The `XChaCha20Poly1305` variant in the crate uses a 96-bit nonce, identical to the standard ChaCha20Poly1305 implementation.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-0f3e9641-35b293fa-1751264496",
+      "timestamp": "2025-06-30T06:21:36.783370+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

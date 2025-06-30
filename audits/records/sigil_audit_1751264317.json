@@ -1,0 +1,853 @@
+[
+  {
+    "execution_id": "exec-4ff5a360-9467c93f-1751264301",
+    "timestamp": "2025-06-30T06:18:21.936702+00:00",
+    "sacred_chain": {
+      "input_data": "sha3",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'sha3' -> 'sha3'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "sha3",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/sha3",
+            "title": "sha3 v0.10.8",
+            "content": {
+              "raw_markdown": "#  sha3 v0.10.8\nPure Rust implementation of SHA-3, a family of Keccak-based hash functions including the SHAKE family of eXtendable-Output Functions (XOFs), as well as the accelerated variant TurboSHAKE \n  * [ #crypto ](https://crates.io/keywords/crypto)\n  * [ #digest ](https://crates.io/keywords/digest)\n  * [ #hash ](https://crates.io/keywords/hash)\n  * [ #keccak ](https://crates.io/keywords/keccak)\n  * [ #sha3 ](https://crates.io/keywords/sha3)\n\n\n  * [ Readme ](https://crates.io/crates/sha3)\n  * [ 36 Versions ](https://crates.io/crates/sha3/versions)\n  * [ Dependencies ](https://crates.io/crates/sha3/dependencies)\n  * [ Dependents ](https://crates.io/crates/sha3/reverse_dependencies)\n\n\n## Metadata\nabout 2 years ago \n2018 edition \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n838 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add sha3\nOr add the following line to your Cargo.toml:\nsha3 = \"0.10.8\"\n## Documentation\n[ docs.rs/sha3 ](https://docs.rs/sha3)\n## Repository\n[ github.com/RustCrypto/hashes ](https://github.com/RustCrypto/hashes)\n## Owners\n## Categories\n  * [No standard library](https://crates.io/categories/no-std)\n  * [Cryptography](https://crates.io/categories/cryptography)\n\n\n[ Report crate ](https://crates.io/support?crate=sha3&inquire=crate-violation)\n### Stats Overview\n67,219,597 Downloads all time\n36 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  sha3 v0.10.8\nPure Rust implementation of SHA-3, a family of Keccak-based hash functions including the SHAKE family of eXtendable-Output Functions (XOFs), as well as the accelerated variant TurboSHAKE \n  *  #crypto \u27e81\u27e9\n  *  #digest \u27e82\u27e9\n  *  #hash \u27e83\u27e9\n  *  #keccak \u27e84\u27e9\n  *  #sha3 \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  36 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nabout 2 years ago \n2018 edition \n MIT \u27e810\u27e9 OR  Apache-2.0 \u27e811\u27e9\n838 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add sha3\nOr add the following line to your Cargo.toml:\nsha3 = \"0.10.8\"\n## Documentation\n docs.rs/sha3 \u27e812\u27e9\n## Repository\n github.com/RustCrypto/hashes \u27e813\u27e9\n## Owners\n## Categories\n  * No standard library\u27e814\u27e9\n  * Cryptography\u27e815\u27e9\n\n\n Report crate \u27e816\u27e9\n### Stats Overview\n67,219,597 Downloads all time\n36 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/crypto:  #crypto \n\u27e82\u27e9 https://crates.io/keywords/digest:  #digest \n\u27e83\u27e9 https://crates.io/keywords/hash:  #hash \n\u27e84\u27e9 https://crates.io/keywords/keccak:  #keccak \n\u27e85\u27e9 https://crates.io/keywords/sha3:  #sha3 \n\u27e86\u27e9 https://crates.io/crates/sha3:  Readme \n\u27e87\u27e9 https://crates.io/crates/sha3/versions:  36 Versions \n\u27e88\u27e9 https://crates.io/crates/sha3/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/sha3/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e812\u27e9 https://docs.rs/sha3:  docs.rs/sha3 \n\u27e813\u27e9 https://github.com/RustCrypto/hashes:  github.com/RustCrypto/hashes \n\u27e814\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e815\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e816\u27e9 https://crates.io/support?crate=sha3&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1552,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118091.6136682"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/sha3",
+            "title": "Crate sha3Copy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\n[Settings](https://docs.rs/sha3/latest/settings.html)\n[Help](https://docs.rs/sha3/latest/help.html)\nSummary[Source](https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217)\nExpand description\nAn implementation of the [SHA-3](https://en.wikipedia.org/wiki/SHA-3) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## [\u00a7](https://docs.rs/sha3/latest/sha3/#examples)Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha3/latest/sha3/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha3/latest/sha3/#structs)\n\n[CShake128Core](https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html \"struct sha3::CShake128Core\")\n    Core CSHAKE128 hasher state.\n\n[CShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html \"struct sha3::CShake128ReaderCore\")\n    Core CSHAKE128 reader state.\n\n[CShake256Core](https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html \"struct sha3::CShake256Core\")\n    Core CSHAKE256 hasher state.\n\n[CShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html \"struct sha3::CShake256ReaderCore\")\n    Core CSHAKE256 reader state.\n\n[Keccak224Core](https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html \"struct sha3::Keccak224Core\")\n    Core Keccak-224 hasher state.\n\n[Keccak256Core](https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html \"struct sha3::Keccak256Core\")\n    Core Keccak-256 hasher state.\n\n[Keccak256FullCore](https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html \"struct sha3::Keccak256FullCore\")\n    Core SHA-3 CryptoNight variant hasher state.\n\n[Keccak384Core](https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html \"struct sha3::Keccak384Core\")\n    Core Keccak-384 hasher state.\n\n[Keccak512Core](https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html \"struct sha3::Keccak512Core\")\n    Core Keccak-512 hasher state.\n\n[Sha3_224Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html \"struct sha3::Sha3_224Core\")\n    Core SHA-3-224 hasher state.\n\n[Sha3_256Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html \"struct sha3::Sha3_256Core\")\n    Core SHA-3-256 hasher state.\n\n[Sha3_384Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html \"struct sha3::Sha3_384Core\")\n    Core SHA-3-384 hasher state.\n\n[Sha3_512Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html \"struct sha3::Sha3_512Core\")\n    Core SHA-3-512 hasher state.\n\n[Shake128Core](https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html \"struct sha3::Shake128Core\")\n    Core SHAKE128 hasher state.\n\n[Shake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html \"struct sha3::Shake128ReaderCore\")\n    Core SHAKE128 reader state.\n\n[Shake256Core](https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html \"struct sha3::Shake256Core\")\n    Core SHAKE256 hasher state.\n\n[Shake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html \"struct sha3::Shake256ReaderCore\")\n    Core SHAKE256 reader state.\n\n[TurboShake128Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html \"struct sha3::TurboShake128Core\")\n    Core TurboSHAKE128 hasher state.\n\n[TurboShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html \"struct sha3::TurboShake128ReaderCore\")\n    Core TurboSHAKE128 reader state.\n\n[TurboShake256Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html \"struct sha3::TurboShake256Core\")\n    Core TurboSHAKE256 hasher state.\n\n[TurboShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html \"struct sha3::TurboShake256ReaderCore\")\n    Core TurboSHAKE256 reader state.\n## Traits[\u00a7](https://docs.rs/sha3/latest/sha3/#traits)\n\n[Digest](https://docs.rs/sha3/latest/sha3/trait.Digest.html \"trait sha3::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases[\u00a7](https://docs.rs/sha3/latest/sha3/#types)\n\n[CShake128](https://docs.rs/sha3/latest/sha3/type.CShake128.html \"type sha3::CShake128\")\n    CSHAKE128 hasher state.\n\n[CShake256](https://docs.rs/sha3/latest/sha3/type.CShake256.html \"type sha3::CShake256\")\n    CSHAKE256 hasher state.\n\n[CShake128Reader](https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html \"type sha3::CShake128Reader\")\n    CSHAKE128 reader state.\n\n[CShake256Reader](https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html \"type sha3::CShake256Reader\")\n    CSHAKE256 reader state.\n\n[Keccak224](https://docs.rs/sha3/latest/sha3/type.Keccak224.html \"type sha3::Keccak224\")\n    Keccak-224 hasher state.\n\n[Keccak256](https://docs.rs/sha3/latest/sha3/type.Keccak256.html \"type sha3::Keccak256\")\n    Keccak-256 hasher state.\n\n[Keccak384](https://docs.rs/sha3/latest/sha3/type.Keccak384.html \"type sha3::Keccak384\")\n    Keccak-384 hasher state.\n\n[Keccak512](https://docs.rs/sha3/latest/sha3/type.Keccak512.html \"type sha3::Keccak512\")\n    Keccak-512 hasher state.\n\n[Keccak256Full](https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html \"type sha3::Keccak256Full\")\n    SHA-3 CryptoNight variant hasher state.\n\n[Sha3_224](https://docs.rs/sha3/latest/sha3/type.Sha3_224.html \"type sha3::Sha3_224\")\n    SHA-3-224 hasher state.\n\n[Sha3_256](https://docs.rs/sha3/latest/sha3/type.Sha3_256.html \"type sha3::Sha3_256\")\n    SHA-3-256 hasher state.\n\n[Sha3_384](https://docs.rs/sha3/latest/sha3/type.Sha3_384.html \"type sha3::Sha3_384\")\n    SHA-3-384 hasher state.\n\n[Sha3_512](https://docs.rs/sha3/latest/sha3/type.Sha3_512.html \"type sha3::Sha3_512\")\n    SHA-3-512 hasher state.\n\n[Shake128](https://docs.rs/sha3/latest/sha3/type.Shake128.html \"type sha3::Shake128\")\n    SHAKE128 hasher state.\n\n[Shake256](https://docs.rs/sha3/latest/sha3/type.Shake256.html \"type sha3::Shake256\")\n    SHAKE256 hasher state.\n\n[Shake128Reader](https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html \"type sha3::Shake128Reader\")\n    SHAKE128 reader state.\n\n[Shake256Reader](https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html \"type sha3::Shake256Reader\")\n    SHAKE256 reader state.\n\n[TurboShake128](https://docs.rs/sha3/latest/sha3/type.TurboShake128.html \"type sha3::TurboShake128\")\n    TurboSHAKE128 hasher state.\n\n[TurboShake256](https://docs.rs/sha3/latest/sha3/type.TurboShake256.html \"type sha3::TurboShake256\")\n    TurboSHAKE256 hasher state.\n\n[TurboShake128Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html \"type sha3::TurboShake128Reader\")\n    TurboSHAKE128 reader state.\n\n[TurboShake256Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html \"type sha3::TurboShake256Reader\")\n    TurboSHAKE256 reader state.\n",
+              "markdown_with_citations": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-3\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## \u00a7\u27e85\u27e9Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see RustCrypto/hashes\u27e86\u27e9 readme.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e88\u27e9\n\nCShake128Core\u27e89\u27e9\n    Core CSHAKE128 hasher state.\n\nCShake128ReaderCore\u27e810\u27e9\n    Core CSHAKE128 reader state.\n\nCShake256Core\u27e811\u27e9\n    Core CSHAKE256 hasher state.\n\nCShake256ReaderCore\u27e812\u27e9\n    Core CSHAKE256 reader state.\n\nKeccak224Core\u27e813\u27e9\n    Core Keccak-224 hasher state.\n\nKeccak256Core\u27e814\u27e9\n    Core Keccak-256 hasher state.\n\nKeccak256FullCore\u27e815\u27e9\n    Core SHA-3 CryptoNight variant hasher state.\n\nKeccak384Core\u27e816\u27e9\n    Core Keccak-384 hasher state.\n\nKeccak512Core\u27e817\u27e9\n    Core Keccak-512 hasher state.\n\nSha3_224Core\u27e818\u27e9\n    Core SHA-3-224 hasher state.\n\nSha3_256Core\u27e819\u27e9\n    Core SHA-3-256 hasher state.\n\nSha3_384Core\u27e820\u27e9\n    Core SHA-3-384 hasher state.\n\nSha3_512Core\u27e821\u27e9\n    Core SHA-3-512 hasher state.\n\nShake128Core\u27e822\u27e9\n    Core SHAKE128 hasher state.\n\nShake128ReaderCore\u27e823\u27e9\n    Core SHAKE128 reader state.\n\nShake256Core\u27e824\u27e9\n    Core SHAKE256 hasher state.\n\nShake256ReaderCore\u27e825\u27e9\n    Core SHAKE256 reader state.\n\nTurboShake128Core\u27e826\u27e9\n    Core TurboSHAKE128 hasher state.\n\nTurboShake128ReaderCore\u27e827\u27e9\n    Core TurboSHAKE128 reader state.\n\nTurboShake256Core\u27e828\u27e9\n    Core TurboSHAKE256 hasher state.\n\nTurboShake256ReaderCore\u27e829\u27e9\n    Core TurboSHAKE256 reader state.\n## Traits\u00a7\u27e830\u27e9\n\nDigest\u27e831\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases\u00a7\u27e832\u27e9\n\nCShake128\u27e833\u27e9\n    CSHAKE128 hasher state.\n\nCShake256\u27e834\u27e9\n    CSHAKE256 hasher state.\n\nCShake128Reader\u27e835\u27e9\n    CSHAKE128 reader state.\n\nCShake256Reader\u27e836\u27e9\n    CSHAKE256 reader state.\n\nKeccak224\u27e837\u27e9\n    Keccak-224 hasher state.\n\nKeccak256\u27e838\u27e9\n    Keccak-256 hasher state.\n\nKeccak384\u27e839\u27e9\n    Keccak-384 hasher state.\n\nKeccak512\u27e840\u27e9\n    Keccak-512 hasher state.\n\nKeccak256Full\u27e841\u27e9\n    SHA-3 CryptoNight variant hasher state.\n\nSha3_224\u27e842\u27e9\n    SHA-3-224 hasher state.\n\nSha3_256\u27e843\u27e9\n    SHA-3-256 hasher state.\n\nSha3_384\u27e844\u27e9\n    SHA-3-384 hasher state.\n\nSha3_512\u27e845\u27e9\n    SHA-3-512 hasher state.\n\nShake128\u27e846\u27e9\n    SHAKE128 hasher state.\n\nShake256\u27e847\u27e9\n    SHAKE256 hasher state.\n\nShake128Reader\u27e848\u27e9\n    SHAKE128 reader state.\n\nShake256Reader\u27e849\u27e9\n    SHAKE256 reader state.\n\nTurboShake128\u27e850\u27e9\n    TurboSHAKE128 hasher state.\n\nTurboShake256\u27e851\u27e9\n    TurboSHAKE256 hasher state.\n\nTurboShake128Reader\u27e852\u27e9\n    TurboSHAKE128 reader state.\n\nTurboShake256Reader\u27e853\u27e9\n    TurboSHAKE256 reader state.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha3/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha3/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-3: SHA-3\n\u27e85\u27e9 https://docs.rs/sha3/latest/sha3/#examples: \u00a7\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e87\u27e9 https://docs.rs/sha3/latest/sha3/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/sha3/latest/sha3/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html: struct sha3::CShake128Core - CShake128Core\n\u27e810\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html: struct sha3::CShake128ReaderCore - CShake128ReaderCore\n\u27e811\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html: struct sha3::CShake256Core - CShake256Core\n\u27e812\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html: struct sha3::CShake256ReaderCore - CShake256ReaderCore\n\u27e813\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html: struct sha3::Keccak224Core - Keccak224Core\n\u27e814\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html: struct sha3::Keccak256Core - Keccak256Core\n\u27e815\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html: struct sha3::Keccak256FullCore - Keccak256FullCore\n\u27e816\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html: struct sha3::Keccak384Core - Keccak384Core\n\u27e817\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html: struct sha3::Keccak512Core - Keccak512Core\n\u27e818\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html: struct sha3::Sha3_224Core - Sha3_224Core\n\u27e819\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html: struct sha3::Sha3_256Core - Sha3_256Core\n\u27e820\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html: struct sha3::Sha3_384Core - Sha3_384Core\n\u27e821\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html: struct sha3::Sha3_512Core - Sha3_512Core\n\u27e822\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html: struct sha3::Shake128Core - Shake128Core\n\u27e823\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html: struct sha3::Shake128ReaderCore - Shake128ReaderCore\n\u27e824\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html: struct sha3::Shake256Core - Shake256Core\n\u27e825\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html: struct sha3::Shake256ReaderCore - Shake256ReaderCore\n\u27e826\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html: struct sha3::TurboShake128Core - TurboShake128Core\n\u27e827\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html: struct sha3::TurboShake128ReaderCore - TurboShake128ReaderCore\n\u27e828\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html: struct sha3::TurboShake256Core - TurboShake256Core\n\u27e829\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html: struct sha3::TurboShake256ReaderCore - TurboShake256ReaderCore\n\u27e830\u27e9 https://docs.rs/sha3/latest/sha3/#traits: \u00a7\n\u27e831\u27e9 https://docs.rs/sha3/latest/sha3/trait.Digest.html: trait sha3::Digest - Digest\n\u27e832\u27e9 https://docs.rs/sha3/latest/sha3/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128.html: type sha3::CShake128 - CShake128\n\u27e834\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256.html: type sha3::CShake256 - CShake256\n\u27e835\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html: type sha3::CShake128Reader - CShake128Reader\n\u27e836\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html: type sha3::CShake256Reader - CShake256Reader\n\u27e837\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak224.html: type sha3::Keccak224 - Keccak224\n\u27e838\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256.html: type sha3::Keccak256 - Keccak256\n\u27e839\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak384.html: type sha3::Keccak384 - Keccak384\n\u27e840\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak512.html: type sha3::Keccak512 - Keccak512\n\u27e841\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html: type sha3::Keccak256Full - Keccak256Full\n\u27e842\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_224.html: type sha3::Sha3_224 - Sha3_224\n\u27e843\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_256.html: type sha3::Sha3_256 - Sha3_256\n\u27e844\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_384.html: type sha3::Sha3_384 - Sha3_384\n\u27e845\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_512.html: type sha3::Sha3_512 - Sha3_512\n\u27e846\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128.html: type sha3::Shake128 - Shake128\n\u27e847\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256.html: type sha3::Shake256 - Shake256\n\u27e848\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html: type sha3::Shake128Reader - Shake128Reader\n\u27e849\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html: type sha3::Shake256Reader - Shake256Reader\n\u27e850\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128.html: type sha3::TurboShake128 - TurboShake128\n\u27e851\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256.html: type sha3::TurboShake256 - TurboShake256\n\u27e852\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html: type sha3::TurboShake128Reader - TurboShake128Reader\n\u27e853\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html: type sha3::TurboShake256Reader - TurboShake256Reader\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8120,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118092.4917891"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/sha3",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [34 releases](https://lib.rs/crates/sha3/versions)\nUses new Rust 2024\n0.11.0-rc.0 |  May 29, 2025   \n---|---  \n0.11.0-pre.5 |  Mar 5, 2025   \n0.11.0-pre.4 |  Jul 26, 2024   \n0.11.0-pre.3 |  Feb 1, 2024   \n0.3.0 |  Nov 17, 2016   \n#**778** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 1025976/week @ 2025-03-06 677780/week @ 2025-03-13 623906/week @ 2025-03-20 602143/week @ 2025-03-27 672766/week @ 2025-04-03 651324/week @ 2025-04-10 619764/week @ 2025-04-17 671697/week @ 2025-04-24 584337/week @ 2025-05-01 622398/week @ 2025-05-08 670632/week @ 2025-05-15 585125/week @ 2025-05-22 557940/week @ 2025-05-29 571958/week @ 2025-06-05 642458/week @ 2025-06-12 651879/week @ 2025-06-19\n**2,537,055** downloads per month Used in [**6,857** crates (1,038 directly)](https://lib.rs/crates/sha3/rev)\n**MIT/Apache**\n1MB  665 lines\n# RustCrypto: SHA-3\n[![crate](https://img.shields.io/crates/v/sha3.svg)](https://crates.io/crates/sha3) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/sha3/badge.svg)](https://docs.rs/sha3/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.85+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260041-hashes) [![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/hashes/actions/workflows/sha3.yml/badge.svg?branch=master)](https://github.com/RustCrypto/hashes/actions/workflows/sha3.yml?query=branch:master)\nPure Rust implementation of the [SHA-3](https://en.wikipedia.org/wiki/SHA-3) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * ```SHA3``-``224```, ```SHA3``-``256```, ```SHA3``-``384```, ```SHA3``-``512```\n  * ```SHAKE128``` and ```SHAKE256``` (an extendable output function (XOF))\n\n\nAdditionally, this crate supports:\n  * ``cSHAKE128`` and ``cSHAKE256`` the customizable XOFs as defined in the NIST [SHA-3 Derived Functions](https://csrc.nist.gov/pubs/sp/800/185/final)\n  * ``TurboSHAKE`` XOF variant\n  * CryptoNight variant of SHA-3\n  * ``Keccak224``, ``Keccak256``, ``Keccak384``, ``Keccak512`` (NIST submission without padding changes)\n\n\n## Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the ``Digest`` trait:\n```\n``use` `hex_literal`::``hex`;`\n`use` `sha3`::````{`Digest`,` Sha3_256```}```;`\n`let` `mut` hasher `=` `Sha3_256`::``new`(``)``;`\nhasher`.``update``(```b``\"`abc`\"```)``;`\n`let` hash `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash`,` `hex!``(```\"`3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532`\"```)``)``;`\n``//` Hex-encode hash using https://docs.rs/base16ct`\n`let` hex_hash `=` `base16ct`::```lower`::``encode_string`(``&`hash`)``;`\n`assert_eq!``(`hex_hash`,` ``\"`3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532`\"```)``;`\n`\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement ``Digest``, so lower-level traits have to be imported:\n```\n``use` `sha3`::````{`Shake128`,` `digest`::```{`Update`,` ExtendableOutput`,` XofReader`}````}```;`\n`use` `hex_literal`::``hex`;`\n`let` `mut` hasher `=` `Shake128`::``default`(``)``;`\nhasher`.``update``(```b``\"`abc`\"```)``;`\n`let` `mut` reader `=` hasher`.``finalize_xof``(``)``;`\n`let` `mut` buf `=` `[``0``u8``;` `10``]``;`\nreader`.``read``(``&``mut` buf`)``;`\n`assert_eq!``(`buf`,` `hex!``(```\"`5881092dd818bf5cf8a3`\"```)``)``;`\n`\n```\n\nAlso, see the [examples section](https://github.com/RustCrypto/hashes#Examples) in the RustCrypto/hashes readme.\n## License\nThe crate is licensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n  * [digest](https://lib.rs/crates/digest \"new\") 0.11.0-rc.0\n  * [keccak](https://lib.rs/crates/keccak \"new\") =0.2.0-pre.0\n\n\n  * dev  [base16ct](https://lib.rs/crates/base16ct \"0.2\")[+alloc](https://lib.rs/crates/base16ct/features#feature-alloc)\n  * dev  [hex-literal](https://lib.rs/crates/hex-literal \"new\") 1.0\n\n\n#### [Other features](https://lib.rs/crates/sha3/features)\n  * [alloc](https://lib.rs/crates/sha3/features#feature-alloc)\n  * [asm](https://lib.rs/crates/sha3/features#feature-asm)\n  * [oid](https://lib.rs/crates/sha3/features#feature-oid)\n  * [zeroize](https://lib.rs/crates/sha3/features#feature-zeroize)\n\n\n",
+              "markdown_with_citations": "###  34 releases\u27e81\u27e9\nUses new Rust 2024\n0.11.0-rc.0 |  May 29, 2025   \n---|---  \n0.11.0-pre.5 |  Mar 5, 2025   \n0.11.0-pre.4 |  Jul 26, 2024   \n0.11.0-pre.3 |  Feb 1, 2024   \n0.3.0 |  Nov 17, 2016   \n#**778** in Cryptography\u27e82\u27e9\nDownload history 1025976/week @ 2025-03-06 677780/week @ 2025-03-13 623906/week @ 2025-03-20 602143/week @ 2025-03-27 672766/week @ 2025-04-03 651324/week @ 2025-04-10 619764/week @ 2025-04-17 671697/week @ 2025-04-24 584337/week @ 2025-05-01 622398/week @ 2025-05-08 670632/week @ 2025-05-15 585125/week @ 2025-05-22 557940/week @ 2025-05-29 571958/week @ 2025-06-05 642458/week @ 2025-06-12 651879/week @ 2025-06-19\n**2,537,055** downloads per month Used in **6,857** crates (1,038 directly)\u27e83\u27e9\n**MIT/Apache**\n1MB  665 lines\n# RustCrypto: SHA-3\n![crate\u27e84\u27e9](https://crates.io/crates/sha3) ![Docs\u27e85\u27e9](https://docs.rs/sha3/) ![Apache2/MIT licensed\u27e86\u27e9] ![Rust Version\u27e87\u27e9] ![Project Chat\u27e88\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260041-hashes) ![Build Status\u27e89\u27e9](https://github.com/RustCrypto/hashes/actions/workflows/sha3.yml?query=branch:master)\nPure Rust implementation of the SHA-3\u27e810\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * ```SHA3``-``224```, ```SHA3``-``256```, ```SHA3``-``384```, ```SHA3``-``512```\n  * ```SHAKE128``` and ```SHAKE256``` (an extendable output function (XOF))\n\n\nAdditionally, this crate supports:\n  * ``cSHAKE128`` and ``cSHAKE256`` the customizable XOFs as defined in the NIST SHA-3 Derived Functions\u27e811\u27e9\n  * ``TurboSHAKE`` XOF variant\n  * CryptoNight variant of SHA-3\n  * ``Keccak224``, ``Keccak256``, ``Keccak384``, ``Keccak512`` (NIST submission without padding changes)\n\n\n## Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the ``Digest`` trait:\n```\n``use` `hex_literal`::``hex`;`\n`use` `sha3`::````{`Digest`,` Sha3_256```}```;`\n`let` `mut` hasher `=` `Sha3_256`::``new`(``)``;`\nhasher`.``update``(```b``\"`abc`\"```)``;`\n`let` hash `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash`,` `hex!``(```\"`3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532`\"```)``)``;`\n``//` Hex-encode hash using https://docs.rs/base16ct`\n`let` hex_hash `=` `base16ct`::```lower`::``encode_string`(``&`hash`)``;`\n`assert_eq!``(`hex_hash`,` ``\"`3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532`\"```)``;`\n`\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement ``Digest``, so lower-level traits have to be imported:\n```\n``use` `sha3`::````{`Shake128`,` `digest`::```{`Update`,` ExtendableOutput`,` XofReader`}````}```;`\n`use` `hex_literal`::``hex`;`\n`let` `mut` hasher `=` `Shake128`::``default`(``)``;`\nhasher`.``update``(```b``\"`abc`\"```)``;`\n`let` `mut` reader `=` hasher`.``finalize_xof``(``)``;`\n`let` `mut` buf `=` `[``0``u8``;` `10``]``;`\nreader`.``read``(``&``mut` buf`)``;`\n`assert_eq!``(`buf`,` `hex!``(```\"`5881092dd818bf5cf8a3`\"```)``)``;`\n`\n```\n\nAlso, see the examples section\u27e812\u27e9 in the RustCrypto/hashes readme.\n## License\nThe crate is licensed under either of:\n  * Apache License, Version 2.0\u27e813\u27e9\n  * MIT license\u27e814\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n  * digest\u27e815\u27e9 0.11.0-rc.0\n  * keccak\u27e816\u27e9 =0.2.0-pre.0\n\n\n  * dev  base16ct\u27e817\u27e9+alloc\u27e818\u27e9\n  * dev  hex-literal\u27e819\u27e9 1.0\n\n\n#### Other features\u27e820\u27e9\n  * alloc\u27e821\u27e9\n  * asm\u27e822\u27e9\n  * oid\u27e823\u27e9\n  * zeroize\u27e824\u27e9\n\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/sha3/versions: 34 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/sha3/rev: **6,857** crates (1,038 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/sha3.svg: ![crate\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/sha3/badge.svg: ![Docs\n\u27e86\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e87\u27e9 https://img.shields.io/badge/rustc-1.85+-blue.svg: Rust Version\n\u27e88\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e89\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/hashes/actions/workflows/sha3.yml/badge.svg?branch=master: ![Build Status\n\u27e810\u27e9 https://en.wikipedia.org/wiki/SHA-3: SHA-3\n\u27e811\u27e9 https://csrc.nist.gov/pubs/sp/800/185/final: SHA-3 Derived Functions\n\u27e812\u27e9 https://github.com/RustCrypto/hashes#Examples: examples section\n\u27e813\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e814\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e815\u27e9 https://lib.rs/crates/digest: new - digest\n\u27e816\u27e9 https://lib.rs/crates/keccak: new - keccak\n\u27e817\u27e9 https://lib.rs/crates/base16ct: 0.2 - base16ct\n\u27e818\u27e9 https://lib.rs/crates/base16ct/features#feature-alloc: +alloc\n\u27e819\u27e9 https://lib.rs/crates/hex-literal: new - hex-literal\n\u27e820\u27e9 https://lib.rs/crates/sha3/features: Other features\n\u27e821\u27e9 https://lib.rs/crates/sha3/features#feature-alloc: alloc\n\u27e822\u27e9 https://lib.rs/crates/sha3/features#feature-asm: asm\n\u27e823\u27e9 https://lib.rs/crates/sha3/features#feature-oid: oid\n\u27e824\u27e9 https://lib.rs/crates/sha3/features#feature-zeroize: zeroize\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4859,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118093.0510324"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#keccak@0.2.0-pre.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\keccak-0.2.0-pre.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "keccak",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\keccak-0.2.0-pre.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libkeccak-11e2c00310623d6c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libdigest-d1d696da5d7ffba3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpwclp38lu/sha3-0.11.0-rc.0#sha3@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sha3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libsha3-449e389b80b72f74.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#keccak@0.2.0-pre.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\keccak-0.2.0-pre.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "keccak",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\keccak-0.2.0-pre.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libkeccak-11e2c00310623d6c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libdigest-d1d696da5d7ffba3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpwclp38lu/sha3-0.11.0-rc.0#sha3@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sha3",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpwclp38lu\\sha3-0.11.0-rc.0\\target\\debug\\deps\\libsha3-4358317d8cdcecf0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 14
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "sha3",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\n[Settings](https://docs.rs/sha3/latest/settings.html)\n[Help](https://docs.rs/sha3/latest/help.html)\nSummary[Source](https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217)\nExpand description\nAn implementation of the [SHA-3](https://en.wikipedia.org/wiki/SHA-3) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## [\u00a7](https://docs.rs/sha3/latest/sha3/#examples)Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha3/latest/sha3/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha3/latest/sha3/#structs)\n\n[CShake128Core](https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html \"struct sha3::CShake128Core\")\n    Core CSHAKE128 hasher state.\n\n[CShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html \"struct sha3::CShake128ReaderCore\")\n    Core CSHAKE128 reader state.\n\n[CShake256Core](https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html \"struct sha3::CShake256Core\")\n    Core CSHAKE256 hasher state.\n\n[CShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html \"struct sha3::CShake256ReaderCore\")\n    Core CSHAKE256 reader state.\n\n[Keccak224Core](https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html \"struct sha3::Keccak224Core\")\n    Core Keccak-224 hasher state.\n\n[Keccak256Core](https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html \"struct sha3::Keccak256Core\")\n    Core Keccak-256 hasher state.\n\n[Keccak256FullCore](https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html \"struct sha3::Keccak256FullCore\")\n    Core SHA-3 CryptoNight variant hasher state.\n\n[Keccak384Core](https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html \"struct sha3::Keccak384Core\")\n    Core Keccak-384 hasher state.\n\n[Keccak512Core](https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html \"struct sha3::Keccak512Core\")\n    Core Keccak-512 hasher state.\n\n[Sha3_224Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html \"struct sha3::Sha3_224Core\")\n    Core SHA-3-224 hasher state.\n\n[Sha3_256Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html \"struct sha3::Sha3_256Core\")\n    Core SHA-3-256 hasher state.\n\n[Sha3_384Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html \"struct sha3::Sha3_384Core\")\n    Core SHA-3-384 hasher state.\n\n[Sha3_512Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html \"struct sha3::Sha3_512Core\")\n    Core SHA-3-512 hasher state.\n\n[Shake128Core](https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html \"struct sha3::Shake128Core\")\n    Core SHAKE128 hasher state.\n\n[Shake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html \"struct sha3::Shake128ReaderCore\")\n    Core SHAKE128 reader state.\n\n[Shake256Core](https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html \"struct sha3::Shake256Core\")\n    Core SHAKE256 hasher state.\n\n[Shake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html \"struct sha3::Shake256ReaderCore\")\n    Core SHAKE256 reader state.\n\n[TurboShake128Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html \"struct sha3::TurboShake128Core\")\n    Core TurboSHAKE128 hasher state.\n\n[TurboShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html \"struct sha3::TurboShake128ReaderCore\")\n    Core TurboSHAKE128 reader state.\n\n[TurboShake256Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html \"struct sha3::TurboShake256Core\")\n    Core TurboSHAKE256 hasher state.\n\n[TurboShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html \"struct sha3::TurboShake256ReaderCore\")\n    Core TurboSHAKE256 reader state.\n## Traits[\u00a7](https://docs.rs/sha3/latest/sha3/#traits)\n\n[Digest](https://docs.rs/sha3/latest/sha3/trait.Digest.html \"trait sha3::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases[\u00a7](https://docs.rs/sha3/latest/sha3/#types)\n\n[CShake128](https://docs.rs/sha3/latest/sha3/type.CShake128.html \"type sha3::CShake128\")\n    CSHAKE128 hasher state.\n\n[CShake256](https://docs.rs/sha3/latest/sha3/type.CShake256.html \"type sha3::CShake256\")\n    CSHAKE256 hasher state.\n\n[CShake128Reader](https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html \"type sha3::CShake128Reader\")\n    CSHAKE128 reader state.\n\n[CShake256Reader](https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html \"type sha3::CShake256Reader\")\n    CSHAKE256 reader state.\n\n[Keccak224](https://docs.rs/sha3/latest/sha3/type.Keccak224.html \"type sha3::Keccak224\")\n    Keccak-224 hasher state.\n\n[Keccak256](https://docs.rs/sha3/latest/sha3/type.Keccak256.html \"type sha3::Keccak256\")\n    Keccak-256 hasher state.\n\n[Keccak384](https://docs.rs/sha3/latest/sha3/type.Keccak384.html \"type sha3::Keccak384\")\n    Keccak-384 hasher state.\n\n[Keccak512](https://docs.rs/sha3/latest/sha3/type.Keccak512.html \"type sha3::Keccak512\")\n    Keccak-512 hasher state.\n\n[Keccak256Full](https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html \"type sha3::Keccak256Full\")\n    SHA-3 CryptoNight variant hasher state.\n\n[Sha3_224](https://docs.rs/sha3/latest/sha3/type.Sha3_224.html \"type sha3::Sha3_224\")\n    SHA-3-224 hasher state.\n\n[Sha3_256](https://docs.rs/sha3/latest/sha3/type.Sha3_256.html \"type sha3::Sha3_256\")\n    SHA-3-256 hasher state.\n\n[Sha3_384](https://docs.rs/sha3/latest/sha3/type.Sha3_384.html \"type sha3::Sha3_384\")\n    SHA-3-384 hasher state.\n\n[Sha3_512](https://docs.rs/sha3/latest/sha3/type.Sha3_512.html \"type sha3::Sha3_512\")\n    SHA-3-512 hasher state.\n\n[Shake128](https://docs.rs/sha3/latest/sha3/type.Shake128.html \"type sha3::Shake128\")\n    SHAKE128 hasher state.\n\n[Shake256](https://docs.rs/sha3/latest/sha3/type.Shake256.html \"type sha3::Shake256\")\n    SHAKE256 hasher state.\n\n[Shake128Reader](https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html \"type sha3::Shake128Reader\")\n    SHAKE128 reader state.\n\n[Shake256Reader](https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html \"type sha3::Shake256Reader\")\n    SHAKE256 reader state.\n\n[TurboShake128](https://docs.rs/sha3/latest/sha3/type.TurboShake128.html \"type sha3::TurboShake128\")\n    TurboSHAKE128 hasher state.\n\n[TurboShake256](https://docs.rs/sha3/latest/sha3/type.TurboShake256.html \"type sha3::TurboShake256\")\n    TurboSHAKE256 hasher state.\n\n[TurboShake128Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html \"type sha3::TurboShake128Reader\")\n    TurboSHAKE128 reader state.\n\n[TurboShake256Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html \"type sha3::TurboShake256Reader\")\n    TurboSHAKE256 reader state.\n",
+            "markdown_with_citations": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-3\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## \u00a7\u27e85\u27e9Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see RustCrypto/hashes\u27e86\u27e9 readme.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e88\u27e9\n\nCShake128Core\u27e89\u27e9\n    Core CSHAKE128 hasher state.\n\nCShake128ReaderCore\u27e810\u27e9\n    Core CSHAKE128 reader state.\n\nCShake256Core\u27e811\u27e9\n    Core CSHAKE256 hasher state.\n\nCShake256ReaderCore\u27e812\u27e9\n    Core CSHAKE256 reader state.\n\nKeccak224Core\u27e813\u27e9\n    Core Keccak-224 hasher state.\n\nKeccak256Core\u27e814\u27e9\n    Core Keccak-256 hasher state.\n\nKeccak256FullCore\u27e815\u27e9\n    Core SHA-3 CryptoNight variant hasher state.\n\nKeccak384Core\u27e816\u27e9\n    Core Keccak-384 hasher state.\n\nKeccak512Core\u27e817\u27e9\n    Core Keccak-512 hasher state.\n\nSha3_224Core\u27e818\u27e9\n    Core SHA-3-224 hasher state.\n\nSha3_256Core\u27e819\u27e9\n    Core SHA-3-256 hasher state.\n\nSha3_384Core\u27e820\u27e9\n    Core SHA-3-384 hasher state.\n\nSha3_512Core\u27e821\u27e9\n    Core SHA-3-512 hasher state.\n\nShake128Core\u27e822\u27e9\n    Core SHAKE128 hasher state.\n\nShake128ReaderCore\u27e823\u27e9\n    Core SHAKE128 reader state.\n\nShake256Core\u27e824\u27e9\n    Core SHAKE256 hasher state.\n\nShake256ReaderCore\u27e825\u27e9\n    Core SHAKE256 reader state.\n\nTurboShake128Core\u27e826\u27e9\n    Core TurboSHAKE128 hasher state.\n\nTurboShake128ReaderCore\u27e827\u27e9\n    Core TurboSHAKE128 reader state.\n\nTurboShake256Core\u27e828\u27e9\n    Core TurboSHAKE256 hasher state.\n\nTurboShake256ReaderCore\u27e829\u27e9\n    Core TurboSHAKE256 reader state.\n## Traits\u00a7\u27e830\u27e9\n\nDigest\u27e831\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases\u00a7\u27e832\u27e9\n\nCShake128\u27e833\u27e9\n    CSHAKE128 hasher state.\n\nCShake256\u27e834\u27e9\n    CSHAKE256 hasher state.\n\nCShake128Reader\u27e835\u27e9\n    CSHAKE128 reader state.\n\nCShake256Reader\u27e836\u27e9\n    CSHAKE256 reader state.\n\nKeccak224\u27e837\u27e9\n    Keccak-224 hasher state.\n\nKeccak256\u27e838\u27e9\n    Keccak-256 hasher state.\n\nKeccak384\u27e839\u27e9\n    Keccak-384 hasher state.\n\nKeccak512\u27e840\u27e9\n    Keccak-512 hasher state.\n\nKeccak256Full\u27e841\u27e9\n    SHA-3 CryptoNight variant hasher state.\n\nSha3_224\u27e842\u27e9\n    SHA-3-224 hasher state.\n\nSha3_256\u27e843\u27e9\n    SHA-3-256 hasher state.\n\nSha3_384\u27e844\u27e9\n    SHA-3-384 hasher state.\n\nSha3_512\u27e845\u27e9\n    SHA-3-512 hasher state.\n\nShake128\u27e846\u27e9\n    SHAKE128 hasher state.\n\nShake256\u27e847\u27e9\n    SHAKE256 hasher state.\n\nShake128Reader\u27e848\u27e9\n    SHAKE128 reader state.\n\nShake256Reader\u27e849\u27e9\n    SHAKE256 reader state.\n\nTurboShake128\u27e850\u27e9\n    TurboSHAKE128 hasher state.\n\nTurboShake256\u27e851\u27e9\n    TurboSHAKE256 hasher state.\n\nTurboShake128Reader\u27e852\u27e9\n    TurboSHAKE128 reader state.\n\nTurboShake256Reader\u27e853\u27e9\n    TurboSHAKE256 reader state.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha3/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha3/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-3: SHA-3\n\u27e85\u27e9 https://docs.rs/sha3/latest/sha3/#examples: \u00a7\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e87\u27e9 https://docs.rs/sha3/latest/sha3/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/sha3/latest/sha3/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html: struct sha3::CShake128Core - CShake128Core\n\u27e810\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html: struct sha3::CShake128ReaderCore - CShake128ReaderCore\n\u27e811\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html: struct sha3::CShake256Core - CShake256Core\n\u27e812\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html: struct sha3::CShake256ReaderCore - CShake256ReaderCore\n\u27e813\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html: struct sha3::Keccak224Core - Keccak224Core\n\u27e814\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html: struct sha3::Keccak256Core - Keccak256Core\n\u27e815\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html: struct sha3::Keccak256FullCore - Keccak256FullCore\n\u27e816\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html: struct sha3::Keccak384Core - Keccak384Core\n\u27e817\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html: struct sha3::Keccak512Core - Keccak512Core\n\u27e818\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html: struct sha3::Sha3_224Core - Sha3_224Core\n\u27e819\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html: struct sha3::Sha3_256Core - Sha3_256Core\n\u27e820\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html: struct sha3::Sha3_384Core - Sha3_384Core\n\u27e821\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html: struct sha3::Sha3_512Core - Sha3_512Core\n\u27e822\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html: struct sha3::Shake128Core - Shake128Core\n\u27e823\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html: struct sha3::Shake128ReaderCore - Shake128ReaderCore\n\u27e824\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html: struct sha3::Shake256Core - Shake256Core\n\u27e825\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html: struct sha3::Shake256ReaderCore - Shake256ReaderCore\n\u27e826\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html: struct sha3::TurboShake128Core - TurboShake128Core\n\u27e827\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html: struct sha3::TurboShake128ReaderCore - TurboShake128ReaderCore\n\u27e828\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html: struct sha3::TurboShake256Core - TurboShake256Core\n\u27e829\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html: struct sha3::TurboShake256ReaderCore - TurboShake256ReaderCore\n\u27e830\u27e9 https://docs.rs/sha3/latest/sha3/#traits: \u00a7\n\u27e831\u27e9 https://docs.rs/sha3/latest/sha3/trait.Digest.html: trait sha3::Digest - Digest\n\u27e832\u27e9 https://docs.rs/sha3/latest/sha3/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128.html: type sha3::CShake128 - CShake128\n\u27e834\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256.html: type sha3::CShake256 - CShake256\n\u27e835\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html: type sha3::CShake128Reader - CShake128Reader\n\u27e836\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html: type sha3::CShake256Reader - CShake256Reader\n\u27e837\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak224.html: type sha3::Keccak224 - Keccak224\n\u27e838\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256.html: type sha3::Keccak256 - Keccak256\n\u27e839\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak384.html: type sha3::Keccak384 - Keccak384\n\u27e840\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak512.html: type sha3::Keccak512 - Keccak512\n\u27e841\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html: type sha3::Keccak256Full - Keccak256Full\n\u27e842\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_224.html: type sha3::Sha3_224 - Sha3_224\n\u27e843\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_256.html: type sha3::Sha3_256 - Sha3_256\n\u27e844\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_384.html: type sha3::Sha3_384 - Sha3_384\n\u27e845\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_512.html: type sha3::Sha3_512 - Sha3_512\n\u27e846\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128.html: type sha3::Shake128 - Shake128\n\u27e847\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256.html: type sha3::Shake256 - Shake256\n\u27e848\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html: type sha3::Shake128Reader - Shake128Reader\n\u27e849\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html: type sha3::Shake256Reader - Shake256Reader\n\u27e850\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128.html: type sha3::TurboShake128 - TurboShake128\n\u27e851\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256.html: type sha3::TurboShake256 - TurboShake256\n\u27e852\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html: type sha3::TurboShake128Reader - TurboShake128Reader\n\u27e853\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html: type sha3::TurboShake256Reader - TurboShake256Reader\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "sha3",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\n[Settings](https://docs.rs/sha3/latest/settings.html)\n[Help](https://docs.rs/sha3/latest/help.html)\nSummary[Source](https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217)\nExpand description\nAn implementation of the [SHA-3](https://en.wikipedia.org/wiki/SHA-3) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## [\u00a7](https://docs.rs/sha3/latest/sha3/#examples)Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha3/latest/sha3/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha3/latest/sha3/#structs)\n\n[CShake128Core](https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html \"struct sha3::CShake128Core\")\n    Core CSHAKE128 hasher state.\n\n[CShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html \"struct sha3::CShake128ReaderCore\")\n    Core CSHAKE128 reader state.\n\n[CShake256Core](https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html \"struct sha3::CShake256Core\")\n    Core CSHAKE256 hasher state.\n\n[CShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html \"struct sha3::CShake256ReaderCore\")\n    Core CSHAKE256 reader state.\n\n[Keccak224Core](https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html \"struct sha3::Keccak224Core\")\n    Core Keccak-224 hasher state.\n\n[Keccak256Core](https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html \"struct sha3::Keccak256Core\")\n    Core Keccak-256 hasher state.\n\n[Keccak256FullCore](https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html \"struct sha3::Keccak256FullCore\")\n    Core SHA-3 CryptoNight variant hasher state.\n\n[Keccak384Core](https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html \"struct sha3::Keccak384Core\")\n    Core Keccak-384 hasher state.\n\n[Keccak512Core](https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html \"struct sha3::Keccak512Core\")\n    Core Keccak-512 hasher state.\n\n[Sha3_224Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html \"struct sha3::Sha3_224Core\")\n    Core SHA-3-224 hasher state.\n\n[Sha3_256Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html \"struct sha3::Sha3_256Core\")\n    Core SHA-3-256 hasher state.\n\n[Sha3_384Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html \"struct sha3::Sha3_384Core\")\n    Core SHA-3-384 hasher state.\n\n[Sha3_512Core](https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html \"struct sha3::Sha3_512Core\")\n    Core SHA-3-512 hasher state.\n\n[Shake128Core](https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html \"struct sha3::Shake128Core\")\n    Core SHAKE128 hasher state.\n\n[Shake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html \"struct sha3::Shake128ReaderCore\")\n    Core SHAKE128 reader state.\n\n[Shake256Core](https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html \"struct sha3::Shake256Core\")\n    Core SHAKE256 hasher state.\n\n[Shake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html \"struct sha3::Shake256ReaderCore\")\n    Core SHAKE256 reader state.\n\n[TurboShake128Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html \"struct sha3::TurboShake128Core\")\n    Core TurboSHAKE128 hasher state.\n\n[TurboShake128ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html \"struct sha3::TurboShake128ReaderCore\")\n    Core TurboSHAKE128 reader state.\n\n[TurboShake256Core](https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html \"struct sha3::TurboShake256Core\")\n    Core TurboSHAKE256 hasher state.\n\n[TurboShake256ReaderCore](https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html \"struct sha3::TurboShake256ReaderCore\")\n    Core TurboSHAKE256 reader state.\n## Traits[\u00a7](https://docs.rs/sha3/latest/sha3/#traits)\n\n[Digest](https://docs.rs/sha3/latest/sha3/trait.Digest.html \"trait sha3::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases[\u00a7](https://docs.rs/sha3/latest/sha3/#types)\n\n[CShake128](https://docs.rs/sha3/latest/sha3/type.CShake128.html \"type sha3::CShake128\")\n    CSHAKE128 hasher state.\n\n[CShake256](https://docs.rs/sha3/latest/sha3/type.CShake256.html \"type sha3::CShake256\")\n    CSHAKE256 hasher state.\n\n[CShake128Reader](https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html \"type sha3::CShake128Reader\")\n    CSHAKE128 reader state.\n\n[CShake256Reader](https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html \"type sha3::CShake256Reader\")\n    CSHAKE256 reader state.\n\n[Keccak224](https://docs.rs/sha3/latest/sha3/type.Keccak224.html \"type sha3::Keccak224\")\n    Keccak-224 hasher state.\n\n[Keccak256](https://docs.rs/sha3/latest/sha3/type.Keccak256.html \"type sha3::Keccak256\")\n    Keccak-256 hasher state.\n\n[Keccak384](https://docs.rs/sha3/latest/sha3/type.Keccak384.html \"type sha3::Keccak384\")\n    Keccak-384 hasher state.\n\n[Keccak512](https://docs.rs/sha3/latest/sha3/type.Keccak512.html \"type sha3::Keccak512\")\n    Keccak-512 hasher state.\n\n[Keccak256Full](https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html \"type sha3::Keccak256Full\")\n    SHA-3 CryptoNight variant hasher state.\n\n[Sha3_224](https://docs.rs/sha3/latest/sha3/type.Sha3_224.html \"type sha3::Sha3_224\")\n    SHA-3-224 hasher state.\n\n[Sha3_256](https://docs.rs/sha3/latest/sha3/type.Sha3_256.html \"type sha3::Sha3_256\")\n    SHA-3-256 hasher state.\n\n[Sha3_384](https://docs.rs/sha3/latest/sha3/type.Sha3_384.html \"type sha3::Sha3_384\")\n    SHA-3-384 hasher state.\n\n[Sha3_512](https://docs.rs/sha3/latest/sha3/type.Sha3_512.html \"type sha3::Sha3_512\")\n    SHA-3-512 hasher state.\n\n[Shake128](https://docs.rs/sha3/latest/sha3/type.Shake128.html \"type sha3::Shake128\")\n    SHAKE128 hasher state.\n\n[Shake256](https://docs.rs/sha3/latest/sha3/type.Shake256.html \"type sha3::Shake256\")\n    SHAKE256 hasher state.\n\n[Shake128Reader](https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html \"type sha3::Shake128Reader\")\n    SHAKE128 reader state.\n\n[Shake256Reader](https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html \"type sha3::Shake256Reader\")\n    SHAKE256 reader state.\n\n[TurboShake128](https://docs.rs/sha3/latest/sha3/type.TurboShake128.html \"type sha3::TurboShake128\")\n    TurboSHAKE128 hasher state.\n\n[TurboShake256](https://docs.rs/sha3/latest/sha3/type.TurboShake256.html \"type sha3::TurboShake256\")\n    TurboSHAKE256 hasher state.\n\n[TurboShake128Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html \"type sha3::TurboShake128Reader\")\n    TurboSHAKE128 reader state.\n\n[TurboShake256Reader](https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html \"type sha3::TurboShake256Reader\")\n    TurboSHAKE256 reader state.\n",
+            "markdown_with_citations": "[](https://docs.rs/sha3/latest/sha3/all.html \"show sidebar\")\n# Crate sha3Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-3\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-3 standard:\n  * `SHA3-224`\n  * `SHA3-256`\n  * `SHA3-384`\n  * `SHA3-512`\n  * `SHAKE128`, an extendable output function (XOF)\n  * `SHAKE256`, an extendable output function (XOF)\n  * `Keccak224`, `Keccak256`, `Keccak384`, `Keccak512` (NIST submission without padding changes)\n\n\nAdditionally supports `TurboSHAKE`.\n## \u00a7\u27e85\u27e9Examples\nOutput size of SHA3-256 is fixed, so its functionality is usually accessed via the `Digest` trait:\n```\nuse hex_literal::hex;\nuse sha3::{Digest, Sha3_256};\n// create a SHA3-256 object\nlet mut hasher = Sha3_256::new();\n// write input message\nhasher.update(b\"abc\");\n// read hash digest\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  3a985da74fe225b2045c172d6bd390bd855f086e3e9d525b46bfe24511431532\n\")[..]);\n```\n\nSHAKE functions have an extendable output, so finalization method returns XOF reader from which results of arbitrary length can be read. Note that these functions do not implement `Digest`, so lower-level traits have to be imported:\n```\nuse sha3::{Shake128, digest::{Update, ExtendableOutput, XofReader}};\nuse hex_literal::hex;\nlet mut hasher = Shake128::default();\nhasher.update(b\"abc\");\nlet mut reader = hasher.finalize_xof();\nlet mut res1 = [0u8; 10];\nreader.read(&mut res1);\nassert_eq!(res1, hex!(\"5881092dd818bf5cf8a3\"));\n```\n\nAlso see RustCrypto/hashes\u27e86\u27e9 readme.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e88\u27e9\n\nCShake128Core\u27e89\u27e9\n    Core CSHAKE128 hasher state.\n\nCShake128ReaderCore\u27e810\u27e9\n    Core CSHAKE128 reader state.\n\nCShake256Core\u27e811\u27e9\n    Core CSHAKE256 hasher state.\n\nCShake256ReaderCore\u27e812\u27e9\n    Core CSHAKE256 reader state.\n\nKeccak224Core\u27e813\u27e9\n    Core Keccak-224 hasher state.\n\nKeccak256Core\u27e814\u27e9\n    Core Keccak-256 hasher state.\n\nKeccak256FullCore\u27e815\u27e9\n    Core SHA-3 CryptoNight variant hasher state.\n\nKeccak384Core\u27e816\u27e9\n    Core Keccak-384 hasher state.\n\nKeccak512Core\u27e817\u27e9\n    Core Keccak-512 hasher state.\n\nSha3_224Core\u27e818\u27e9\n    Core SHA-3-224 hasher state.\n\nSha3_256Core\u27e819\u27e9\n    Core SHA-3-256 hasher state.\n\nSha3_384Core\u27e820\u27e9\n    Core SHA-3-384 hasher state.\n\nSha3_512Core\u27e821\u27e9\n    Core SHA-3-512 hasher state.\n\nShake128Core\u27e822\u27e9\n    Core SHAKE128 hasher state.\n\nShake128ReaderCore\u27e823\u27e9\n    Core SHAKE128 reader state.\n\nShake256Core\u27e824\u27e9\n    Core SHAKE256 hasher state.\n\nShake256ReaderCore\u27e825\u27e9\n    Core SHAKE256 reader state.\n\nTurboShake128Core\u27e826\u27e9\n    Core TurboSHAKE128 hasher state.\n\nTurboShake128ReaderCore\u27e827\u27e9\n    Core TurboSHAKE128 reader state.\n\nTurboShake256Core\u27e828\u27e9\n    Core TurboSHAKE256 hasher state.\n\nTurboShake256ReaderCore\u27e829\u27e9\n    Core TurboSHAKE256 reader state.\n## Traits\u00a7\u27e830\u27e9\n\nDigest\u27e831\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Type Aliases\u00a7\u27e832\u27e9\n\nCShake128\u27e833\u27e9\n    CSHAKE128 hasher state.\n\nCShake256\u27e834\u27e9\n    CSHAKE256 hasher state.\n\nCShake128Reader\u27e835\u27e9\n    CSHAKE128 reader state.\n\nCShake256Reader\u27e836\u27e9\n    CSHAKE256 reader state.\n\nKeccak224\u27e837\u27e9\n    Keccak-224 hasher state.\n\nKeccak256\u27e838\u27e9\n    Keccak-256 hasher state.\n\nKeccak384\u27e839\u27e9\n    Keccak-384 hasher state.\n\nKeccak512\u27e840\u27e9\n    Keccak-512 hasher state.\n\nKeccak256Full\u27e841\u27e9\n    SHA-3 CryptoNight variant hasher state.\n\nSha3_224\u27e842\u27e9\n    SHA-3-224 hasher state.\n\nSha3_256\u27e843\u27e9\n    SHA-3-256 hasher state.\n\nSha3_384\u27e844\u27e9\n    SHA-3-384 hasher state.\n\nSha3_512\u27e845\u27e9\n    SHA-3-512 hasher state.\n\nShake128\u27e846\u27e9\n    SHAKE128 hasher state.\n\nShake256\u27e847\u27e9\n    SHAKE256 hasher state.\n\nShake128Reader\u27e848\u27e9\n    SHAKE128 reader state.\n\nShake256Reader\u27e849\u27e9\n    SHAKE256 reader state.\n\nTurboShake128\u27e850\u27e9\n    TurboSHAKE128 hasher state.\n\nTurboShake256\u27e851\u27e9\n    TurboSHAKE256 hasher state.\n\nTurboShake128Reader\u27e852\u27e9\n    TurboSHAKE128 reader state.\n\nTurboShake256Reader\u27e853\u27e9\n    TurboSHAKE256 reader state.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha3/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha3/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha3/latest/src/sha3/lib.rs.html#1-217: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-3: SHA-3\n\u27e85\u27e9 https://docs.rs/sha3/latest/sha3/#examples: \u00a7\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e87\u27e9 https://docs.rs/sha3/latest/sha3/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/sha3/latest/sha3/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128Core.html: struct sha3::CShake128Core - CShake128Core\n\u27e810\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake128ReaderCore.html: struct sha3::CShake128ReaderCore - CShake128ReaderCore\n\u27e811\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256Core.html: struct sha3::CShake256Core - CShake256Core\n\u27e812\u27e9 https://docs.rs/sha3/latest/sha3/struct.CShake256ReaderCore.html: struct sha3::CShake256ReaderCore - CShake256ReaderCore\n\u27e813\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak224Core.html: struct sha3::Keccak224Core - Keccak224Core\n\u27e814\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256Core.html: struct sha3::Keccak256Core - Keccak256Core\n\u27e815\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak256FullCore.html: struct sha3::Keccak256FullCore - Keccak256FullCore\n\u27e816\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak384Core.html: struct sha3::Keccak384Core - Keccak384Core\n\u27e817\u27e9 https://docs.rs/sha3/latest/sha3/struct.Keccak512Core.html: struct sha3::Keccak512Core - Keccak512Core\n\u27e818\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_224Core.html: struct sha3::Sha3_224Core - Sha3_224Core\n\u27e819\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_256Core.html: struct sha3::Sha3_256Core - Sha3_256Core\n\u27e820\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_384Core.html: struct sha3::Sha3_384Core - Sha3_384Core\n\u27e821\u27e9 https://docs.rs/sha3/latest/sha3/struct.Sha3_512Core.html: struct sha3::Sha3_512Core - Sha3_512Core\n\u27e822\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128Core.html: struct sha3::Shake128Core - Shake128Core\n\u27e823\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake128ReaderCore.html: struct sha3::Shake128ReaderCore - Shake128ReaderCore\n\u27e824\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256Core.html: struct sha3::Shake256Core - Shake256Core\n\u27e825\u27e9 https://docs.rs/sha3/latest/sha3/struct.Shake256ReaderCore.html: struct sha3::Shake256ReaderCore - Shake256ReaderCore\n\u27e826\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128Core.html: struct sha3::TurboShake128Core - TurboShake128Core\n\u27e827\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake128ReaderCore.html: struct sha3::TurboShake128ReaderCore - TurboShake128ReaderCore\n\u27e828\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256Core.html: struct sha3::TurboShake256Core - TurboShake256Core\n\u27e829\u27e9 https://docs.rs/sha3/latest/sha3/struct.TurboShake256ReaderCore.html: struct sha3::TurboShake256ReaderCore - TurboShake256ReaderCore\n\u27e830\u27e9 https://docs.rs/sha3/latest/sha3/#traits: \u00a7\n\u27e831\u27e9 https://docs.rs/sha3/latest/sha3/trait.Digest.html: trait sha3::Digest - Digest\n\u27e832\u27e9 https://docs.rs/sha3/latest/sha3/#types: \u00a7\n\u27e833\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128.html: type sha3::CShake128 - CShake128\n\u27e834\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256.html: type sha3::CShake256 - CShake256\n\u27e835\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake128Reader.html: type sha3::CShake128Reader - CShake128Reader\n\u27e836\u27e9 https://docs.rs/sha3/latest/sha3/type.CShake256Reader.html: type sha3::CShake256Reader - CShake256Reader\n\u27e837\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak224.html: type sha3::Keccak224 - Keccak224\n\u27e838\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256.html: type sha3::Keccak256 - Keccak256\n\u27e839\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak384.html: type sha3::Keccak384 - Keccak384\n\u27e840\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak512.html: type sha3::Keccak512 - Keccak512\n\u27e841\u27e9 https://docs.rs/sha3/latest/sha3/type.Keccak256Full.html: type sha3::Keccak256Full - Keccak256Full\n\u27e842\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_224.html: type sha3::Sha3_224 - Sha3_224\n\u27e843\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_256.html: type sha3::Sha3_256 - Sha3_256\n\u27e844\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_384.html: type sha3::Sha3_384 - Sha3_384\n\u27e845\u27e9 https://docs.rs/sha3/latest/sha3/type.Sha3_512.html: type sha3::Sha3_512 - Sha3_512\n\u27e846\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128.html: type sha3::Shake128 - Shake128\n\u27e847\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256.html: type sha3::Shake256 - Shake256\n\u27e848\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake128Reader.html: type sha3::Shake128Reader - Shake128Reader\n\u27e849\u27e9 https://docs.rs/sha3/latest/sha3/type.Shake256Reader.html: type sha3::Shake256Reader - Shake256Reader\n\u27e850\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128.html: type sha3::TurboShake128 - TurboShake128\n\u27e851\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256.html: type sha3::TurboShake256 - TurboShake256\n\u27e852\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake128Reader.html: type sha3::TurboShake128Reader - TurboShake128Reader\n\u27e853\u27e9 https://docs.rs/sha3/latest/sha3/type.TurboShake256Reader.html: type sha3::TurboShake256Reader - TurboShake256Reader\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `sha3` crate provides a comprehensive implementation of the SHA-3 cryptographic hash algorithms, including standard variants like `SHA3-224`, `SHA3-256`, `SHA3-384`, `SHA3-512`, and extendable output functions (`SHAKE128`, `SHAKE256`). It also supports Keccak algorithms (pre-NIST padding changes) and TurboSHAKE for enhanced performance. The crate integrates with the `Digest` trait for fixed-size outputs and offers low-level traits for extendable output functionality.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1: SHA-3 Algorithm Support  \n\u2705 Factual: The `sha3` crate supports six standard algorithms specified in the SHA-3 standard, including `SHA3-224`, `SHA3-256`, `SHA3-384`, `SHA3-512`, `SHAKE128`, and `SHAKE256`.  \n\u274c Counterfactual: The `sha3` crate only supports the `SHA3-256` algorithm and does not provide implementations for other SHA-3 variants like `SHA3-224` or `SHAKE128`.\n\n---\n\n### Pair 2: Extendable Output Functions (XOFs)  \n\u2705 Factual: The `SHAKE128` and `SHAKE256` algorithms in the `sha3` crate are extendable output functions (XOFs) that allow generating hash outputs of arbitrary length.  \n\u274c Counterfactual: The `SHAKE128` and `SHAKE256` algorithms in the `sha3` crate produce fixed-length outputs, similar to `SHA3-256` and `SHA3-512`.\n\n---\n\n### Pair 3: Digest Trait Implementation  \n\u2705 Factual: Cryptographic hash functions with fixed output sizes, such as `SHA3-256`, implement the `Digest` trait in the `sha3` crate, enabling a convenient API for hashing operations.  \n\u274c Counterfactual: The `SHAKE128` and `SHAKE256` algorithms in the `sha3",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-4ff5a360-9467c93f-1751264301",
+      "timestamp": "2025-06-30T06:18:21.936702+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

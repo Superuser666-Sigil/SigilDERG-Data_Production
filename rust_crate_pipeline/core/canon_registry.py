@@ -1,8 +1,8 @@
 import hashlib
 import logging
-from datetime import datetime, timezone
-from typing import Dict, List, Optional, Any
 from dataclasses import dataclass
+from datetime import datetime, timezone
+from typing import Any, Dict, List, Optional
 
 
 @dataclass
@@ -22,15 +22,15 @@ class CanonEntry:
 
 
 class CanonRegistry:
-    
+
     def __init__(self) -> None:
         self.canon_entries: Dict[str, CanonEntry] = {}
         self.authority_chain: List[str] = []
         self.version = "1.4.0"
         self.logger = logging.getLogger(__name__)
-        
+
         self._initialize_default_canon()
-    
+
     def _initialize_default_canon(self) -> None:
         default_sources = {
             "crates.io": {
@@ -58,7 +58,7 @@ class CanonRegistry:
                 "last_validated": datetime.now(timezone.utc).isoformat(),
             },
         }
-        
+
         for key, source_info in default_sources.items():
             self.register_canon(
                 key=key,
@@ -66,7 +66,7 @@ class CanonRegistry:
                 content=f"Default Canon source: {key}",
                 authority_level=source_info["authority_level"]
             )
-    
+
     def register_canon(
         self, key: str, source: str, content: str, authority_level: int = 5
     ) -> bool:
@@ -85,7 +85,8 @@ class CanonRegistry:
             self.canon_entries[key] = canon_entry
             self.authority_chain.append(f"{timestamp}:{key}:{authority_level}")
 
-            self.logger.info(f"Canon registered: {key} with authority {authority_level}")
+            self.logger.info(
+                f"Canon registered: {key} with authority {authority_level}")
             return True
         except Exception as e:
             self.logger.error(f"Failed to register Canon {key}: {e}")
@@ -114,20 +115,20 @@ class CanonRegistry:
 
     def audit_trail(self) -> List[str]:
         return self.authority_chain.copy()
-    
+
     def get_canon_summary(self) -> Dict[str, Any]:
         valid_count = len(self.get_valid_canon_sources())
         total_count = len(self.canon_entries)
-        
+
         authority_levels = {}
         for key, entry in self.canon_entries.items():
             level = entry.authority_level
             authority_levels[level] = authority_levels.get(level, 0) + 1
-        
+
         return {
             "total_canon_entries": total_count,
             "valid_canon_entries": valid_count,
             "authority_level_distribution": authority_levels,
             "version": self.version,
             "last_operation": self.authority_chain[-1] if self.authority_chain else None,
-        } 
+        }

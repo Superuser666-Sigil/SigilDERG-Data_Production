@@ -172,22 +172,22 @@ class WebScraper:
         "problem_description": "Need for flexible configuration across different environments and deployment scenarios",
         "solution_description": "Environment variable-based configuration with validation and default values",
         "code_snippet": """
-# Configuration management
-class PipelineConfig:
-    def __init__(self):
-        self.azure_endpoint = os.getenv('AZURE_OPENAI_ENDPOINT')
-        self.azure_api_key = os.getenv('AZURE_OPENAI_API_KEY')
-        self.github_token = os.getenv('GITHUB_TOKEN')
-        self.pypi_token = os.getenv('PYPI_TOKEN')
-        
-        # Validate required settings
-        self.validate_config()
-    
-    def validate_config(self):
-        if not self.github_token:
-            logger.warning("GitHub token not set - limited API access")
-        if not self.azure_endpoint and not self.openai_api_key:
-            logger.warning("No LLM provider configured")
+# Configuration management - CENTRALIZED APPROACH
+from rust_crate_pipeline.config import PipelineConfig
+
+# Proper usage - configuration is centralized
+config = PipelineConfig()  # Automatically loads from environment variables
+
+# All Azure configuration is handled in one place:
+# - config.azure_openai_endpoint
+# - config.azure_openai_api_key  
+# - config.azure_openai_deployment_name
+# - config.azure_openai_api_version
+
+# Validation is automatic
+if config.use_azure_openai:
+    # Configuration is guaranteed to be valid here
+    process_with_azure(config)
         """,
         "source_of_truth": "rust_crate_pipeline/config.py",
         "tags": "configuration,environment,validation",

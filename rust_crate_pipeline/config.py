@@ -1,14 +1,29 @@
 # config.py
+"""Configuration module for the Rust Crate Pipeline.
+
+This module provides configuration classes and utilities for managing
+pipeline settings, credentials, and runtime parameters.
+
+All configuration follows PEP 8 style guidelines and enterprise security
+best practices.
+"""
 import os
 import warnings
-from dataclasses import dataclass, field, asdict
-from typing import Any, Union, TYPE_CHECKING, Optional
+from dataclasses import asdict, dataclass, field
+from typing import TYPE_CHECKING, Any, Optional, Union
 
 if TYPE_CHECKING:
     from typing import Dict, List
 
+# Import the centralized exception
+from .exceptions import ConfigurationError
+
+# Import the robust serialization utility
+from utils.serialization_utils import to_serializable
+
 # Filter Pydantic deprecation warnings from dependencies
-# Rule Zero Compliance: Suppress third-party warnings while maintaining awareness
+# Rule Zero Compliance: Suppress third-party warnings while maintaining
+# awareness
 warnings.filterwarnings(
     "ignore",
     message=".*Support for class-based `config` is deprecated.*",
@@ -19,35 +34,99 @@ warnings.filterwarnings(
 
 @dataclass
 class PipelineConfig:
+    # Model configuration
     model_path: str = os.path.expanduser(
         "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
     )
     max_tokens: int = 256
     model_token_limit: int = 4096
     prompt_token_margin: int = 3000
+
+    # Pipeline configuration
     checkpoint_interval: int = 10
     max_retries: int = 3
-    github_token: str = os.getenv("GITHUB_TOKEN", "")
     cache_ttl: int = 3600  # 1 hour
     batch_size: int = 10
-    n_workers: int = 4  # Enhanced scraping configuration
+    n_workers: int = 4
+
+    # GitHub configuration
+    github_token: str = field(
+        default_factory=lambda: os.getenv(
+            "GITHUB_TOKEN", ""))
+
+    # Enhanced scraping configuration
     enable_crawl4ai: bool = True
     crawl4ai_model: str = os.path.expanduser(
         "~/models/deepseek/deepseek-coder-6.7b-instruct.Q4_K_M.gguf"
     )
     crawl4ai_timeout: int = 30
+
+    # Output configuration
     output_path: str = "output"
-    llm_max_retries: int = 3
     output_dir: str = "output"
     verbose: bool = False
     budget: Optional[float] = None
-    
-    # Azure OpenAI Configuration
-    use_azure_openai: bool = True
-    azure_openai_endpoint: str = os.getenv("AZURE_OPENAI_ENDPOINT", "https://david-mc08tirc-eastus2.services.ai.azure.com/")
-    azure_openai_api_key: str = os.getenv("AZURE_OPENAI_API_KEY", "2hw0jjqwjtKke7DMGiJSPtlj6GhuLCNdQWPXoDGN2I3JMvzp4PmGJQQJ99BFACHYHv6XJ3w3AAAAACOGFPYA")
-    azure_openai_deployment_name: str = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o")
-    azure_openai_api_version: str = "2024-02-15-preview"
+    llm_max_retries: int = 3
+
+    # Azure OpenAI Configuration - NO DEFAULTS FOR SENSITIVE DATA
+    use_azure_openai: bool = field(
+        default_factory=lambda: os.getenv(
+            "USE_AZURE_OPENAI",
+            "false").lower() == "true")
+    azure_openai_endpoint: str = field(
+        default_factory=lambda: os.getenv("AZURE_OPENAI_ENDPOINT", "")
+    )
+    azure_openai_api_key: str = field(
+        default_factory=lambda: os.getenv("AZURE_OPENAI_API_KEY", "")
+    )
+    azure_openai_deployment_name: str = field(
+        default_factory=lambda: os.getenv(
+            "AZURE_OPENAI_DEPLOYMENT_NAME", "gpt-4o"))
+    azure_openai_api_version: str = field(
+        default_factory=lambda: os.getenv(
+            "AZURE_OPENAI_API_VERSION",
+            "2024-02-15-preview"))
+
+    # Environment configuration
+    environment: str = field(
+        default_factory=lambda: os.getenv("ENVIRONMENT", "development")
+    )
+
+    def __post_init__(self):
+        """Validate configuration after initialization."""
+        self._validate_config()
+
+    def _validate_config(self):
+        """Validate configuration values."""
+        # Validate Azure OpenAI configuration if enabled
+        if self.use_azure_openai:
+            if not self.azure_openai_endpoint:
+                raise ConfigurationError(
+                    "Azure OpenAI is enabled but AZURE_OPENAI_ENDPOINT is not set"
+                )
+            if not self.azure_openai_api_key:
+                raise ConfigurationError(
+                    "Azure OpenAI is enabled but AZURE_OPENAI_API_KEY is not set"
+                )
+
+        # Validate GitHub token if needed (can be optional for public repos)
+        if not self.github_token and self.environment == "production":
+            warnings.warn(
+                "No GitHub token provided. API rate limits will be restricted.",
+                RuntimeWarning)
+
+        # Validate numeric configurations
+        if self.batch_size <= 0:
+            raise ConfigurationError(
+                f"batch_size must be positive, got {
+                    self.batch_size}")
+        if self.n_workers <= 0:
+            raise ConfigurationError(
+                f"n_workers must be positive, got {
+                    self.n_workers}")
+        if self.max_retries < 0:
+            raise ConfigurationError(
+                f"max_retries must be non-negative, got {self.max_retries}")
 
     class Config:
         validate_assignment = True
@@ -76,7 +155,7 @@ class CrateMetadata:
     enhanced_dependencies: "List[str]" = field(default_factory=list)
 
     def to_dict(self) -> "Dict[str, Any]":
-        return asdict(self)
+        return to_serializable(asdict(self))
 
 
 @dataclass

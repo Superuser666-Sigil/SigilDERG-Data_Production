@@ -1,0 +1,1723 @@
+[
+  {
+    "execution_id": "exec-3a38a479-39f796e2-1751263260",
+    "timestamp": "2025-06-30T06:01:00.169939+00:00",
+    "sacred_chain": {
+      "input_data": "protobuf",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'protobuf' -> 'protobuf'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "protobuf",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/protobuf",
+            "title": "protobuf v3.7.2",
+            "content": {
+              "raw_markdown": "#  protobuf v3.7.2\nProtocol Buffers - Google's data interchange format \n  * [ Readme ](https://crates.io/crates/protobuf)\n  * [ 154 Versions ](https://crates.io/crates/protobuf/versions)\n  * [ Dependencies ](https://crates.io/crates/protobuf/dependencies)\n  * [ Dependents ](https://crates.io/crates/protobuf/reverse_dependencies)\n\n\n## Metadata\n4 months ago \n2021 edition \n[ MIT ](https://choosealicense.com/licenses/mit)\n207 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add protobuf\nOr add the following line to your Cargo.toml:\nprotobuf = \"3.7.2\"\n## Owners\n[ Report crate ](https://crates.io/support?crate=protobuf&inquire=crate-violation)\n### Stats Overview\n58,627,824 Downloads all time\n154 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  protobuf v3.7.2\nProtocol Buffers - Google's data interchange format \n  *  Readme \u27e81\u27e9\n  *  154 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n4 months ago \n2021 edition \n MIT \u27e85\u27e9\n207 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add protobuf\nOr add the following line to your Cargo.toml:\nprotobuf = \"3.7.2\"\n## Owners\n Report crate \u27e86\u27e9\n### Stats Overview\n58,627,824 Downloads all time\n154 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/protobuf:  Readme \n\u27e82\u27e9 https://crates.io/crates/protobuf/versions:  154 Versions \n\u27e83\u27e9 https://crates.io/crates/protobuf/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/protobuf/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://crates.io/support?crate=protobuf&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 2.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 847,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117050.3771665"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/protobuf",
+            "title": "Crate protobufCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\n[Settings](https://docs.rs/protobuf/latest/settings.html)\n[Help](https://docs.rs/protobuf/latest/help.html)\nSummary[Source](https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108)\nExpand description\n## [\u00a7](https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data)Library to read and write protocol buffers data\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#features)Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for [`bytes` crate](https://github.com/tokio-rs/bytes): when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in [`protobuf-codegen` crate](https://docs.rs/protobuf-codegen).\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#accompanying-crates)Accompanying crates\n  * [`protobuf-json-mapping`](https://docs.rs/protobuf-json-mapping) implements JSON parsing and serialization for protobuf messages.\n  * [`protobuf-codegen`](https://docs.rs/protobuf-codegen) can be used to generate rust code from `.proto` crates.\n  * [`protoc-bin-vendored`](https://docs.rs/protoc-bin-vendored) contains `protoc` command packed into the crate.\n  * [`protobuf-parse`](https://docs.rs/protobuf-parse) contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules[\u00a7](https://docs.rs/protobuf/latest/protobuf/#modules)\n\n[descriptor](https://docs.rs/protobuf/latest/protobuf/descriptor/index.html \"mod protobuf::descriptor\")\n    Generated file from `google/protobuf/descriptor.proto`\n\n[ext](https://docs.rs/protobuf/latest/protobuf/ext/index.html \"mod protobuf::ext\")\n    Utilities to support \u201cextension\u201d fields.\n\n[plugin](https://docs.rs/protobuf/latest/protobuf/plugin/index.html \"mod protobuf::plugin\")\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\n[reflect](https://docs.rs/protobuf/latest/protobuf/reflect/index.html \"mod protobuf::reflect\")\n    Reflection implementation for protobuf data\n\n[rt](https://docs.rs/protobuf/latest/protobuf/rt/index.html \"mod protobuf::rt\")\n    Functions and types used by generated protobuf code\n\n[rustproto](https://docs.rs/protobuf/latest/protobuf/rustproto/index.html \"mod protobuf::rustproto\")\n    Generated file from `rustproto.proto`\n\n[text_format](https://docs.rs/protobuf/latest/protobuf/text_format/index.html \"mod protobuf::text_format\")\n    Protobuf \u201ctext format\u201d implementation.\n\n[well_known_types](https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html \"mod protobuf::well_known_types\")\n    Generated code for \u201cwell known types\u201d\n## Structs[\u00a7](https://docs.rs/protobuf/latest/protobuf/#structs)\n\n[Chars](https://docs.rs/protobuf/latest/protobuf/struct.Chars.html \"struct protobuf::Chars\")\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\n[CodedInputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html \"struct protobuf::CodedInputStream\")\n    Buffered read with handy utilities.\n\n[CodedOutputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html \"struct protobuf::CodedOutputStream\")\n    Buffered write with handy utilities\n\n[EnumOrUnknown](https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html \"struct protobuf::EnumOrUnknown\")\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\n[Error](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\")\n    Error type for protobuf operations.\n\n[MessageField](https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html \"struct protobuf::MessageField\")\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\n[SpecialFields](https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html \"struct protobuf::SpecialFields\")\n    Special fields included in each generated message.\n\n[UnknownFields](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n    Hold \u201cunknown\u201d fields in parsed message.\n\n[UnknownFieldsIter](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html \"struct protobuf::UnknownFieldsIter\")\n    Iterator over [`UnknownFields`](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n## Enums[\u00a7](https://docs.rs/protobuf/latest/protobuf/#enums)\n\n[UnknownValue](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html \"enum protobuf::UnknownValue\")\n    Unknown value.\n\n[UnknownValueRef](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html \"enum protobuf::UnknownValueRef\")\n    Reference to unknown value.\n## Constants[\u00a7](https://docs.rs/protobuf/latest/protobuf/#constants)\n\n[VERSION](https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html \"constant protobuf::VERSION\")\n    protobuf crate version\n\n[VERSION_3_7_2](https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html \"constant protobuf::VERSION_3_7_2\")\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits[\u00a7](https://docs.rs/protobuf/latest/protobuf/#traits)\n\n[Enum](https://docs.rs/protobuf/latest/protobuf/trait.Enum.html \"trait protobuf::Enum\")\n    Trait implemented by all protobuf enum types.\n\n[EnumFull](https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html \"trait protobuf::EnumFull\")\n    Trait is implemented for all enum types if lite runtime is not requested.\n\n[Message](https://docs.rs/protobuf/latest/protobuf/trait.Message.html \"trait protobuf::Message\")\n    Trait which is implemented by all generated message.\n\n[MessageDyn](https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html \"trait protobuf::MessageDyn\")\n    Dynamic-dispatch version of either generated message or dynamic message.\n\n[MessageFull](https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html \"trait protobuf::MessageFull\")\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\n[Oneof](https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html \"trait protobuf::Oneof\")\n    Trait implemented by all oneof types in generated code.\n\n[OneofFull](https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html \"trait protobuf::OneofFull\")\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases[\u00a7](https://docs.rs/protobuf/latest/protobuf/#types)\n\n[Result](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\")\n    [`Result`](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\") alias for [`Error`](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\").\n",
+              "markdown_with_citations": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Library to read and write protocol buffers data\n### \u00a7\u27e85\u27e9Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for `bytes` crate\u27e86\u27e9: when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in `protobuf-codegen` crate\u27e87\u27e9.\n### \u00a7\u27e88\u27e9Accompanying crates\n  * `protobuf-json-mapping`\u27e89\u27e9 implements JSON parsing and serialization for protobuf messages.\n  * `protobuf-codegen`\u27e87\u27e9 can be used to generate rust code from `.proto` crates.\n  * `protoc-bin-vendored`\u27e810\u27e9 contains `protoc` command packed into the crate.\n  * `protobuf-parse`\u27e811\u27e9 contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules\u00a7\u27e812\u27e9\n\ndescriptor\u27e813\u27e9\n    Generated file from `google/protobuf/descriptor.proto`\n\next\u27e814\u27e9\n    Utilities to support \u201cextension\u201d fields.\n\nplugin\u27e815\u27e9\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\nreflect\u27e816\u27e9\n    Reflection implementation for protobuf data\n\nrt\u27e817\u27e9\n    Functions and types used by generated protobuf code\n\nrustproto\u27e818\u27e9\n    Generated file from `rustproto.proto`\n\ntext_format\u27e819\u27e9\n    Protobuf \u201ctext format\u201d implementation.\n\nwell_known_types\u27e820\u27e9\n    Generated code for \u201cwell known types\u201d\n## Structs\u00a7\u27e821\u27e9\n\nChars\u27e822\u27e9\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\nCodedInputStream\u27e823\u27e9\n    Buffered read with handy utilities.\n\nCodedOutputStream\u27e824\u27e9\n    Buffered write with handy utilities\n\nEnumOrUnknown\u27e825\u27e9\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\nError\u27e826\u27e9\n    Error type for protobuf operations.\n\nMessageField\u27e827\u27e9\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\nSpecialFields\u27e828\u27e9\n    Special fields included in each generated message.\n\nUnknownFields\u27e829\u27e9\n    Hold \u201cunknown\u201d fields in parsed message.\n\nUnknownFieldsIter\u27e830\u27e9\n    Iterator over `UnknownFields`\u27e829\u27e9\n## Enums\u00a7\u27e831\u27e9\n\nUnknownValue\u27e832\u27e9\n    Unknown value.\n\nUnknownValueRef\u27e833\u27e9\n    Reference to unknown value.\n## Constants\u00a7\u27e834\u27e9\n\nVERSION\u27e835\u27e9\n    protobuf crate version\n\nVERSION_3_7_2\u27e836\u27e9\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits\u00a7\u27e837\u27e9\n\nEnum\u27e838\u27e9\n    Trait implemented by all protobuf enum types.\n\nEnumFull\u27e839\u27e9\n    Trait is implemented for all enum types if lite runtime is not requested.\n\nMessage\u27e840\u27e9\n    Trait which is implemented by all generated message.\n\nMessageDyn\u27e841\u27e9\n    Dynamic-dispatch version of either generated message or dynamic message.\n\nMessageFull\u27e842\u27e9\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\nOneof\u27e843\u27e9\n    Trait implemented by all oneof types in generated code.\n\nOneofFull\u27e844\u27e9\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases\u00a7\u27e845\u27e9\n\nResult\u27e846\u27e9\n    `Result`\u27e846\u27e9 alias for `Error`\u27e826\u27e9.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/protobuf/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/protobuf/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108: Source\n\u27e84\u27e9 https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data: \u00a7\n\u27e85\u27e9 https://docs.rs/protobuf/latest/protobuf/#features: \u00a7\n\u27e86\u27e9 https://github.com/tokio-rs/bytes: `bytes` crate\n\u27e87\u27e9 https://docs.rs/protobuf-codegen: `protobuf-codegen` crate\n\u27e88\u27e9 https://docs.rs/protobuf/latest/protobuf/#accompanying-crates: \u00a7\n\u27e89\u27e9 https://docs.rs/protobuf-json-mapping: `protobuf-json-mapping`\n\u27e810\u27e9 https://docs.rs/protoc-bin-vendored: `protoc-bin-vendored`\n\u27e811\u27e9 https://docs.rs/protobuf-parse: `protobuf-parse`\n\u27e812\u27e9 https://docs.rs/protobuf/latest/protobuf/#modules: \u00a7\n\u27e813\u27e9 https://docs.rs/protobuf/latest/protobuf/descriptor/index.html: mod protobuf::descriptor - descriptor\n\u27e814\u27e9 https://docs.rs/protobuf/latest/protobuf/ext/index.html: mod protobuf::ext - ext\n\u27e815\u27e9 https://docs.rs/protobuf/latest/protobuf/plugin/index.html: mod protobuf::plugin - plugin\n\u27e816\u27e9 https://docs.rs/protobuf/latest/protobuf/reflect/index.html: mod protobuf::reflect - reflect\n\u27e817\u27e9 https://docs.rs/protobuf/latest/protobuf/rt/index.html: mod protobuf::rt - rt\n\u27e818\u27e9 https://docs.rs/protobuf/latest/protobuf/rustproto/index.html: mod protobuf::rustproto - rustproto\n\u27e819\u27e9 https://docs.rs/protobuf/latest/protobuf/text_format/index.html: mod protobuf::text_format - text_format\n\u27e820\u27e9 https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html: mod protobuf::well_known_types - well_known_types\n\u27e821\u27e9 https://docs.rs/protobuf/latest/protobuf/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Chars.html: struct protobuf::Chars - Chars\n\u27e823\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html: struct protobuf::CodedInputStream - CodedInputStream\n\u27e824\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html: struct protobuf::CodedOutputStream - CodedOutputStream\n\u27e825\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html: struct protobuf::EnumOrUnknown - EnumOrUnknown\n\u27e826\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Error.html: struct protobuf::Error - Error\n\u27e827\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html: struct protobuf::MessageField - MessageField\n\u27e828\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html: struct protobuf::SpecialFields - SpecialFields\n\u27e829\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html: struct protobuf::UnknownFields - UnknownFields\n\u27e830\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html: struct protobuf::UnknownFieldsIter - UnknownFieldsIter\n\u27e831\u27e9 https://docs.rs/protobuf/latest/protobuf/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html: enum protobuf::UnknownValue - UnknownValue\n\u27e833\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html: enum protobuf::UnknownValueRef - UnknownValueRef\n\u27e834\u27e9 https://docs.rs/protobuf/latest/protobuf/#constants: \u00a7\n\u27e835\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html: constant protobuf::VERSION - VERSION\n\u27e836\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html: constant protobuf::VERSION_3_7_2 - VERSION_3_7_2\n\u27e837\u27e9 https://docs.rs/protobuf/latest/protobuf/#traits: \u00a7\n\u27e838\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Enum.html: trait protobuf::Enum - Enum\n\u27e839\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html: trait protobuf::EnumFull - EnumFull\n\u27e840\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Message.html: trait protobuf::Message - Message\n\u27e841\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html: trait protobuf::MessageDyn - MessageDyn\n\u27e842\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html: trait protobuf::MessageFull - MessageFull\n\u27e843\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html: trait protobuf::Oneof - Oneof\n\u27e844\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html: trait protobuf::OneofFull - OneofFull\n\u27e845\u27e9 https://docs.rs/protobuf/latest/protobuf/#types: \u00a7\n\u27e846\u27e9 https://docs.rs/protobuf/latest/protobuf/type.Result.html: type protobuf::Result - Result\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7066,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117050.911884"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/protobuf",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [123 stable releases](https://lib.rs/crates/protobuf/versions)\n4.31.1-release |  May 28, 2025   \n---|---  \n4.31.0-rc.2 |  Apr 30, 2025   \n4.31.0-beta1 |  Mar 6, 2025   \n4.30.0-beta1 |  Dec 18, 2024   \n0.0.5 |  Nov 28, 2014   \n#**173** in [Parser implementations](https://lib.rs/parser-implementations \"Parsers implemented for particular formats or languages.\")\nDownload history 646365/week @ 2025-03-09 600863/week @ 2025-03-16 598907/week @ 2025-03-23 592969/week @ 2025-03-30 625423/week @ 2025-04-06 632184/week @ 2025-04-13 632884/week @ 2025-04-20 601008/week @ 2025-04-27 631430/week @ 2025-05-04 636247/week @ 2025-05-11 622937/week @ 2025-05-18 560881/week @ 2025-05-25 634201/week @ 2025-06-01 625581/week @ 2025-06-08 577987/week @ 2025-06-15 630767/week @ 2025-06-22\n**2,503,259** downloads per month Used in [**1,792** crates (495 directly)](https://lib.rs/crates/protobuf/rev)\n**BSD-3-Clause**\n1.5MB  **32K** SLoC\nC 26K SLoC // 0.1% comments  Rust 5.5K SLoC // 0.1% comments  Bitbake 806 SLoC // 0.2% comments  Bazel 58 SLoC // 0.1% comments \nThe runtime of the official Google Rust Protobuf implementation.\nThis is currently a beta release: the API is subject to change, and there may be some rough edges, including missing documentation and features.\nAn example for how to use this crate can be found in the [protobuf_example crate](http://crates.io/crates/protobuf_example)\n# V4 ownership and implementation change\nV4 of this crate is officially supported by the Protobuf team at Google. Prior major versions were developed by as a community project by [stepancheg](https://github.com/stepancheg) who generously donated the crate name to Google.\nV4 is a completely new implementation with a different API, as well as a fundamentally different approach than prior versions of this crate. It focuses on delivering a high-quality Rust API which is backed by either a pure C implementation (upb) or the Protobuf C++ implementation. This choice was made for performance, feature parity, development velocity, and security reasons. More discussion about the rationale and design philosophy can be found at <https://protobuf.dev/reference/rust/>.\nIt is not planned for the V3 pure Rust lineage to be actively developed going forward. While it is not expected to receive significant further development, as a stable and high quality pure Rust implementation, many open source projects may reasonably continue to stay on the V3 API.\n# How to get a compatible version of protoc\nThe protoc binary that you use to generate code needs to have a version that exactly matches the version of the protobuf crate you are using. More specifically, if you are using Rust protobuf ``x`.`y`.`z`` then you need to use protoc ``y`.`z``. See [here](https://protobuf.dev/support/version-support/) for more details on our versioning scheme.\nThe easiest way to get ahold of protoc is to download a prebuilt binary from the matching release [here](https://github.com/protocolbuffers/protobuf/releases). Just make sure protoc is on your `````$``PATH````` when you run ``cargo``.\n#### Dependencies\n  * [paste](https://lib.rs/crates/paste \"1.0.15\")\n  * links `upb`\n\n\n  * build `build.rs`\n  * build  [cc](https://lib.rs/crates/cc \"1.1.6\")\n  * dev  [googletest](https://lib.rs/crates/googletest \"outdated\") 0.13\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  123 stable releases\u27e81\u27e9\n4.31.1-release |  May 28, 2025   \n---|---  \n4.31.0-rc.2 |  Apr 30, 2025   \n4.31.0-beta1 |  Mar 6, 2025   \n4.30.0-beta1 |  Dec 18, 2024   \n0.0.5 |  Nov 28, 2014   \n#**173** in Parser implementations\u27e82\u27e9\nDownload history 646365/week @ 2025-03-09 600863/week @ 2025-03-16 598907/week @ 2025-03-23 592969/week @ 2025-03-30 625423/week @ 2025-04-06 632184/week @ 2025-04-13 632884/week @ 2025-04-20 601008/week @ 2025-04-27 631430/week @ 2025-05-04 636247/week @ 2025-05-11 622937/week @ 2025-05-18 560881/week @ 2025-05-25 634201/week @ 2025-06-01 625581/week @ 2025-06-08 577987/week @ 2025-06-15 630767/week @ 2025-06-22\n**2,503,259** downloads per month Used in **1,792** crates (495 directly)\u27e83\u27e9\n**BSD-3-Clause**\n1.5MB  **32K** SLoC\nC 26K SLoC // 0.1% comments  Rust 5.5K SLoC // 0.1% comments  Bitbake 806 SLoC // 0.2% comments  Bazel 58 SLoC // 0.1% comments \nThe runtime of the official Google Rust Protobuf implementation.\nThis is currently a beta release: the API is subject to change, and there may be some rough edges, including missing documentation and features.\nAn example for how to use this crate can be found in the protobuf_example crate\u27e84\u27e9\n# V4 ownership and implementation change\nV4 of this crate is officially supported by the Protobuf team at Google. Prior major versions were developed by as a community project by stepancheg\u27e85\u27e9 who generously donated the crate name to Google.\nV4 is a completely new implementation with a different API, as well as a fundamentally different approach than prior versions of this crate. It focuses on delivering a high-quality Rust API which is backed by either a pure C implementation (upb) or the Protobuf C++ implementation. This choice was made for performance, feature parity, development velocity, and security reasons. More discussion about the rationale and design philosophy can be found at <https://protobuf.dev/reference/rust/>.\nIt is not planned for the V3 pure Rust lineage to be actively developed going forward. While it is not expected to receive significant further development, as a stable and high quality pure Rust implementation, many open source projects may reasonably continue to stay on the V3 API.\n# How to get a compatible version of protoc\nThe protoc binary that you use to generate code needs to have a version that exactly matches the version of the protobuf crate you are using. More specifically, if you are using Rust protobuf ``x`.`y`.`z`` then you need to use protoc ``y`.`z``. See here\u27e86\u27e9 for more details on our versioning scheme.\nThe easiest way to get ahold of protoc is to download a prebuilt binary from the matching release here\u27e87\u27e9. Just make sure protoc is on your `````$``PATH````` when you run ``cargo``.\n#### Dependencies\n  * paste\u27e88\u27e9\n  * links `upb`\n\n\n  * build `build.rs`\n  * build  cc\u27e89\u27e9\n  * dev  googletest\u27e810\u27e9 0.13\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/protobuf/versions: 123 stable releases\n\u27e82\u27e9 https://lib.rs/parser-implementations: Parsers implemented for particular formats or languages. - Parser implementations\n\u27e83\u27e9 https://lib.rs/crates/protobuf/rev: **1,792** crates (495 directly)\n\u27e84\u27e9 http://crates.io/crates/protobuf_example: protobuf_example crate\n\u27e85\u27e9 https://github.com/stepancheg: stepancheg\n\u27e86\u27e9 https://protobuf.dev/support/version-support/: here\n\u27e87\u27e9 https://github.com/protocolbuffers/protobuf/releases: here\n\u27e88\u27e9 https://lib.rs/crates/paste: 1.0.15 - paste\n\u27e89\u27e9 https://lib.rs/crates/cc: 1.1.6 - cc\n\u27e810\u27e9 https://lib.rs/crates/googletest: outdated - googletest\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3346,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "117051.2732593"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libshlex-25724775bd6ea405.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libshlex-25724775bd6ea405.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-6d6b8744b3b7eee8\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-6d6b8744b3b7eee8\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-aa068a1285d656ea\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "paste",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.24",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.24\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libcc-9639138d951f437c.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libcc-9639138d951f437c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-14edf3cf2c97e13d\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-14edf3cf2c97e13d\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "linked_libs": [
+                "static=libupb"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-53e81a82dd413f01\\out"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-53e81a82dd413f01\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libprotobuf-56ee0038bb3aa18f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#shlex@1.3.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "shlex",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\shlex-1.3.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libshlex-25724775bd6ea405.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libshlex-25724775bd6ea405.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cc@1.2.24",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.24\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cc-1.2.24\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libcc-9639138d951f437c.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libcc-9639138d951f437c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-6d6b8744b3b7eee8\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-6d6b8744b3b7eee8\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\paste-aa068a1285d656ea\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#paste@1.0.15",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "paste",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\paste-1.0.15\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\paste-cb904e5b1edfca26.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n  --> build.rs:26:5\n   |\n26 |     println!(\"cargo:version={}\", VERSION);\n   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n   = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n   |\n26 -     println!(\"cargo:version={}\", VERSION);\n26 +     println!(\"cargo:version={VERSION}\");\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 905,
+                        "byte_start": 905,
+                        "column_end": 30,
+                        "column_start": 30,
+                        "expansion": null,
+                        "file_name": "build.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 26,
+                        "line_start": 26,
+                        "suggested_replacement": "VERSION",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 30,
+                            "highlight_start": 30,
+                            "text": "    println!(\"cargo:version={}\", VERSION);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 916,
+                        "byte_start": 907,
+                        "column_end": 41,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "build.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 26,
+                        "line_start": 26,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 32,
+                            "text": "    println!(\"cargo:version={}\", VERSION);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 917,
+                    "byte_start": 880,
+                    "column_end": 42,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "build.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 26,
+                    "line_start": 26,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 5,
+                        "text": "    println!(\"cargo:version={}\", VERSION);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-307527805ad82a7a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-307527805ad82a7a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "linked_libs": [
+                "static=libupb"
+              ],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-a48309896ea93672\\out"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\build\\protobuf-a48309896ea93672\\out"
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this lifetime isn't used in the impl\n   --> src\\map.rs:423:6\n    |\n423 | impl<'msg, 'k, 'v, K, KView, V, VView, I> IntoProxied<Map<K, V>> for I\n    |      ^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes\n    = note: `#[warn(clippy::extra_unused_lifetimes)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::extra_unused_lifetimes)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::extra_unused_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this lifetime isn't used in the impl",
+                "spans": [
+                  {
+                    "byte_end": 11711,
+                    "byte_start": 11707,
+                    "column_end": 10,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 423,
+                    "line_start": 423,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 6,
+                        "text": "impl<'msg, 'k, 'v, K, KView, V, VView, I> IntoProxied<Map<K, V>> for I"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this lifetime isn't used in the impl\n   --> src\\map.rs:423:16\n    |\n423 | impl<'msg, 'k, 'v, K, KView, V, VView, I> IntoProxied<Map<K, V>> for I\n    |                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::extra_unused_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this lifetime isn't used in the impl",
+                "spans": [
+                  {
+                    "byte_end": 11719,
+                    "byte_start": 11717,
+                    "column_end": 18,
+                    "column_start": 16,
+                    "expansion": null,
+                    "file_name": "src\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 423,
+                    "line_start": 423,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 16,
+                        "text": "impl<'msg, 'k, 'v, K, KView, V, VView, I> IntoProxied<Map<K, V>> for I"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this lifetime isn't used in the impl\n   --> src\\map.rs:530:16\n    |\n530 | impl<'msg, 'k, 'v, KView, VView, K, V> Extend<(KView, VView)> for MapMut<'msg, K, V>\n    |                ^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::extra_unused_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this lifetime isn't used in the impl",
+                "spans": [
+                  {
+                    "byte_end": 14519,
+                    "byte_start": 14517,
+                    "column_end": 18,
+                    "column_start": 16,
+                    "expansion": null,
+                    "file_name": "src\\map.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 530,
+                    "line_start": 530,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 16,
+                        "text": "impl<'msg, 'k, 'v, KView, VView, K, V> Extend<(KView, VView)> for MapMut<'msg, K, V>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this lifetime isn't used in the impl\n   --> src\\repeated.rs:284:6\n    |\n284 | impl<'msg, T, I, U> IntoProxied<Repeated<T>> for I\n    |      ^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::extra_unused_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this lifetime isn't used in the impl",
+                "spans": [
+                  {
+                    "byte_end": 7981,
+                    "byte_start": 7977,
+                    "column_end": 10,
+                    "column_start": 6,
+                    "expansion": null,
+                    "file_name": "src\\repeated.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 284,
+                    "line_start": 284,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 10,
+                        "highlight_start": 6,
+                        "text": "impl<'msg, T, I, U> IntoProxied<Repeated<T>> for I"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: this lifetime isn't used in the impl\n   --> src\\repeated.rs:613:12\n    |\n613 | impl<'msg, 'view, T, ViewT> Extend<ViewT> for RepeatedMut<'msg, T>\n    |            ^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#extra_unused_lifetimes",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::extra_unused_lifetimes",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "this lifetime isn't used in the impl",
+                "spans": [
+                  {
+                    "byte_end": 16851,
+                    "byte_start": 16846,
+                    "column_end": 17,
+                    "column_start": 12,
+                    "expansion": null,
+                    "file_name": "src\\repeated.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 613,
+                    "line_start": 613,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 17,
+                        "highlight_start": 12,
+                        "text": "impl<'msg, 'view, T, ViewT> Extend<ViewT> for RepeatedMut<'msg, T>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: method `from_str` can be confused for the standard trait method `std::str::FromStr::from_str`\n   --> src\\string.rs:452:5\n    |\n452 | /     pub fn from_str(string: &str) -> &Self {\n453 | |         // SAFETY: `string.as_bytes()` is valid UTF-8.\n454 | |         unsafe { Self::from_utf8_unchecked(string.as_bytes()) }\n455 | |     }\n    | |_____^\n    |\n    = help: consider implementing the trait `std::str::FromStr` or choosing a less ambiguous method name\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#should_implement_trait\n    = note: `#[warn(clippy::should_implement_trait)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider implementing the trait `std::str::FromStr` or choosing a less ambiguous method name",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#should_implement_trait",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::should_implement_trait)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::should_implement_trait",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "method `from_str` can be confused for the standard trait method `std::str::FromStr::from_str`",
+                "spans": [
+                  {
+                    "byte_end": 14310,
+                    "byte_start": 14145,
+                    "column_end": 6,
+                    "column_start": 5,
+                    "expansion": null,
+                    "file_name": "src\\string.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 455,
+                    "line_start": 452,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 45,
+                        "highlight_start": 5,
+                        "text": "    pub fn from_str(string: &str) -> &Self {"
+                      },
+                      {
+                        "highlight_end": 55,
+                        "highlight_start": 1,
+                        "text": "        // SAFETY: `string.as_bytes()` is valid UTF-8."
+                      },
+                      {
+                        "highlight_end": 64,
+                        "highlight_start": 1,
+                        "text": "        unsafe { Self::from_utf8_unchecked(string.as_bytes()) }"
+                      },
+                      {
+                        "highlight_end": 6,
+                        "highlight_start": 1,
+                        "text": "    }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: non-canonical implementation of `partial_cmp` on an `Ord` type\n   --> src\\string.rs:570:13\n    |\n570 | /              impl<$($generics)*> PartialOrd<$rhs> for $lhs {\n571 | |                  fn partial_cmp(&self, other: &$rhs) -> Option<Ordering> {\n    | | _________________________________________________________________________-\n572 | ||                     AsRef::<[u8]>::as_ref(self).partial_cmp(AsRef::<[u8]>::as_ref(other))\n573 | ||                 }\n    | ||_________________- help: change this to: `{ Some(self.cmp(other)) }`\n574 | |              }\n    | |______________^\n...\n579 |  / impl_bytes_partial_cmp!(\n580 |  |     // `ProtoStr` against protobuf types\n581 |  |     <()> ProtoStr => ProtoStr,\n...    |\n585 |  |     <()> str => ProtoStr,\n586 |  | );\n    |  |_- in this macro invocation\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#non_canonical_partial_ord_impl\n    = note: `#[warn(clippy::non_canonical_partial_ord_impl)]` on by default\n    = note: this warning originates in the macro `impl_bytes_partial_cmp` (in Nightly builds, run with -Z macro-backtrace for more info)\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#non_canonical_partial_ord_impl",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::non_canonical_partial_ord_impl)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 17325,
+                        "byte_start": 17216,
+                        "column_end": 18,
+                        "column_start": 73,
+                        "expansion": {
+                          "def_site_span": {
+                            "byte_end": 16784,
+                            "byte_start": 16749,
+                            "column_end": 36,
+                            "column_start": 1,
+                            "expansion": null,
+                            "file_name": "src\\string.rs",
+                            "is_primary": false,
+                            "label": null,
+                            "line_end": 562,
+                            "line_start": 562,
+                            "suggested_replacement": null,
+                            "suggestion_applicability": null,
+                            "text": [
+                              {
+                                "highlight_end": 36,
+                                "highlight_start": 1,
+                                "text": "macro_rules! impl_bytes_partial_cmp {"
+                              }
+                            ]
+                          },
+                          "macro_decl_name": "impl_bytes_partial_cmp!",
+                          "span": {
+                            "byte_end": 17552,
+                            "byte_start": 17361,
+                            "column_end": 2,
+                            "column_start": 1,
+                            "expansion": null,
+                            "file_name": "src\\string.rs",
+                            "is_primary": false,
+                            "label": null,
+                            "line_end": 586,
+                            "line_start": 579,
+                            "suggested_replacement": null,
+                            "suggestion_applicability": null,
+                            "text": [
+                              {
+                                "highlight_end": 25,
+                                "highlight_start": 1,
+                                "text": "impl_bytes_partial_cmp!("
+                              },
+                              {
+                                "highlight_end": 41,
+                                "highlight_start": 1,
+                                "text": "    // `ProtoStr` against protobuf types"
+                              },
+                              {
+                                "highlight_end": 31,
+                                "highlight_start": 1,
+                                "text": "    <()> ProtoStr => ProtoStr,"
+                              },
+                              {
+                                "highlight_end": 1,
+                                "highlight_start": 1,
+                                "text": ""
+                              },
+                              {
+                                "highlight_end": 40,
+                                "highlight_start": 1,
+                                "text": "    // `ProtoStr` against foreign types"
+                              },
+                              {
+                                "highlight_end": 26,
+                                "highlight_start": 1,
+                                "text": "    <()> ProtoStr => str,"
+                              },
+                              {
+                                "highlight_end": 26,
+                                "highlight_start": 1,
+                                "text": "    <()> str => ProtoStr,"
+                              },
+                              {
+                                "highlight_end": 2,
+                                "highlight_start": 1,
+                                "text": ");"
+                              }
+                            ]
+                          }
+                        },
+                        "file_name": "src\\string.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 573,
+                        "line_start": 571,
+                        "suggested_replacement": "{ Some(self.cmp(other)) }",
+                        "suggestion_applicability": "Unspecified",
+                        "text": [
+                          {
+                            "highlight_end": 74,
+                            "highlight_start": 73,
+                            "text": "                fn partial_cmp(&self, other: &$rhs) -> Option<Ordering> {"
+                          },
+                          {
+                            "highlight_end": 90,
+                            "highlight_start": 1,
+                            "text": "                    AsRef::<[u8]>::as_ref(self).partial_cmp(AsRef::<[u8]>::as_ref(other))"
+                          },
+                          {
+                            "highlight_end": 18,
+                            "highlight_start": 1,
+                            "text": "                }"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::non_canonical_partial_ord_impl",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "non-canonical implementation of `partial_cmp` on an `Ord` type",
+                "spans": [
+                  {
+                    "byte_end": 17339,
+                    "byte_start": 17096,
+                    "column_end": 14,
+                    "column_start": 13,
+                    "expansion": {
+                      "def_site_span": {
+                        "byte_end": 16784,
+                        "byte_start": 16749,
+                        "column_end": 36,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\string.rs",
+                        "is_primary": false,
+                        "label": null,
+                        "line_end": 562,
+                        "line_start": 562,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 36,
+                            "highlight_start": 1,
+                            "text": "macro_rules! impl_bytes_partial_cmp {"
+                          }
+                        ]
+                      },
+                      "macro_decl_name": "impl_bytes_partial_cmp!",
+                      "span": {
+                        "byte_end": 17552,
+                        "byte_start": 17361,
+                        "column_end": 2,
+                        "column_start": 1,
+                        "expansion": null,
+                        "file_name": "src\\string.rs",
+                        "is_primary": false,
+                        "label": null,
+                        "line_end": 586,
+                        "line_start": 579,
+                        "suggested_replacement": null,
+                        "suggestion_applicability": null,
+                        "text": [
+                          {
+                            "highlight_end": 25,
+                            "highlight_start": 1,
+                            "text": "impl_bytes_partial_cmp!("
+                          },
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 1,
+                            "text": "    // `ProtoStr` against protobuf types"
+                          },
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 1,
+                            "text": "    <()> ProtoStr => ProtoStr,"
+                          },
+                          {
+                            "highlight_end": 1,
+                            "highlight_start": 1,
+                            "text": ""
+                          },
+                          {
+                            "highlight_end": 40,
+                            "highlight_start": 1,
+                            "text": "    // `ProtoStr` against foreign types"
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "    <()> ProtoStr => str,"
+                          },
+                          {
+                            "highlight_end": 26,
+                            "highlight_start": 1,
+                            "text": "    <()> str => ProtoStr,"
+                          },
+                          {
+                            "highlight_end": 2,
+                            "highlight_start": 1,
+                            "text": ");"
+                          }
+                        ]
+                      }
+                    },
+                    "file_name": "src\\string.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 574,
+                    "line_start": 570,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 60,
+                        "highlight_start": 13,
+                        "text": "            impl<$($generics)*> PartialOrd<$rhs> for $lhs {"
+                      },
+                      {
+                        "highlight_end": 74,
+                        "highlight_start": 1,
+                        "text": "                fn partial_cmp(&self, other: &$rhs) -> Option<Ordering> {"
+                      },
+                      {
+                        "highlight_end": 90,
+                        "highlight_start": 1,
+                        "text": "                    AsRef::<[u8]>::as_ref(self).partial_cmp(AsRef::<[u8]>::as_ref(other))"
+                      },
+                      {
+                        "highlight_end": 18,
+                        "highlight_start": 1,
+                        "text": "                }"
+                      },
+                      {
+                        "highlight_end": 14,
+                        "highlight_start": 1,
+                        "text": "            }"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: docs for unsafe trait missing `# Safety` section\n  --> src\\upb\\associated_mini_table.rs:34:1\n   |\n34 | pub unsafe trait AssociatedMiniTable {\n   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc\n   = note: `#[warn(clippy::missing_safety_doc)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#missing_safety_doc",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::missing_safety_doc)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "clippy::missing_safety_doc",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "docs for unsafe trait missing `# Safety` section",
+                "spans": [
+                  {
+                    "byte_end": 1672,
+                    "byte_start": 1636,
+                    "column_end": 37,
+                    "column_start": 1,
+                    "expansion": null,
+                    "file_name": "src\\upb\\associated_mini_table.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 34,
+                    "line_start": 34,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 37,
+                        "highlight_start": 1,
+                        "text": "pub unsafe trait AssociatedMiniTable {"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\utf8.rs:114:17\n    |\n114 |                 write!(f, \"\\\\x{:02X}\", b)?;\n    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n    = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n    |\n114 -                 write!(f, \"\\\\x{:02X}\", b)?;\n114 +                 write!(f, \"\\\\x{b:02X}\")?;\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 3730,
+                        "byte_start": 3730,
+                        "column_end": 32,
+                        "column_start": 32,
+                        "expansion": null,
+                        "file_name": "src\\utf8.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 114,
+                        "line_start": 114,
+                        "suggested_replacement": "b",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 32,
+                            "highlight_start": 32,
+                            "text": "                write!(f, \"\\\\x{:02X}\", b)?;"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 3739,
+                        "byte_start": 3736,
+                        "column_end": 41,
+                        "column_start": 38,
+                        "expansion": null,
+                        "file_name": "src\\utf8.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 114,
+                        "line_start": 114,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 41,
+                            "highlight_start": 38,
+                            "text": "                write!(f, \"\\\\x{:02X}\", b)?;"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 3740,
+                    "byte_start": 3715,
+                    "column_end": 42,
+                    "column_start": 17,
+                    "expansion": null,
+                    "file_name": "src\\utf8.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 114,
+                    "line_start": 114,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 42,
+                        "highlight_start": 17,
+                        "text": "                write!(f, \"\\\\x{:02X}\", b)?;"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpal8w5gk4/protobuf-4.31.1-release#protobuf@4.31.1-release",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "protobuf",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\src\\shared.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpal8w5gk4\\protobuf-4.31.1-release\\target\\debug\\deps\\libprotobuf-051c6e56daad5149.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 18
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {
+              "unmaintained": [
+                {
+                  "kind": "unmaintained",
+                  "package": {
+                    "name": "paste",
+                    "version": "1.0.15",
+                    "source": "registry+https://github.com/rust-lang/crates.io-index",
+                    "checksum": "57c0d7b74b563b49d38dae00a0c37d4d6de9b432382b2892f0574ddcae73fd0a",
+                    "replace": null
+                  },
+                  "advisory": {
+                    "id": "RUSTSEC-2024-0436",
+                    "package": "paste",
+                    "title": "paste - no longer maintained",
+                    "description": "The creator of the crate `paste` has stated in the [`README.md`](https://github.com/dtolnay/paste/blob/master/README.md) \nthat this project is not longer maintained as well as archived the repository",
+                    "date": "2024-10-07",
+                    "aliases": [],
+                    "related": [],
+                    "collection": "crates",
+                    "categories": [],
+                    "keywords": [],
+                    "cvss": null,
+                    "informational": "unmaintained",
+                    "references": [],
+                    "source": null,
+                    "url": "https://github.com/dtolnay/paste",
+                    "withdrawn": null,
+                    "license": "CC0-1.0"
+                  },
+                  "affected": null,
+                  "versions": {
+                    "patched": [],
+                    "unaffected": []
+                  }
+                }
+              ]
+            }
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "protobuf",
+          "version": "4.31.1-release",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\n[Settings](https://docs.rs/protobuf/latest/settings.html)\n[Help](https://docs.rs/protobuf/latest/help.html)\nSummary[Source](https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108)\nExpand description\n## [\u00a7](https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data)Library to read and write protocol buffers data\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#features)Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for [`bytes` crate](https://github.com/tokio-rs/bytes): when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in [`protobuf-codegen` crate](https://docs.rs/protobuf-codegen).\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#accompanying-crates)Accompanying crates\n  * [`protobuf-json-mapping`](https://docs.rs/protobuf-json-mapping) implements JSON parsing and serialization for protobuf messages.\n  * [`protobuf-codegen`](https://docs.rs/protobuf-codegen) can be used to generate rust code from `.proto` crates.\n  * [`protoc-bin-vendored`](https://docs.rs/protoc-bin-vendored) contains `protoc` command packed into the crate.\n  * [`protobuf-parse`](https://docs.rs/protobuf-parse) contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules[\u00a7](https://docs.rs/protobuf/latest/protobuf/#modules)\n\n[descriptor](https://docs.rs/protobuf/latest/protobuf/descriptor/index.html \"mod protobuf::descriptor\")\n    Generated file from `google/protobuf/descriptor.proto`\n\n[ext](https://docs.rs/protobuf/latest/protobuf/ext/index.html \"mod protobuf::ext\")\n    Utilities to support \u201cextension\u201d fields.\n\n[plugin](https://docs.rs/protobuf/latest/protobuf/plugin/index.html \"mod protobuf::plugin\")\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\n[reflect](https://docs.rs/protobuf/latest/protobuf/reflect/index.html \"mod protobuf::reflect\")\n    Reflection implementation for protobuf data\n\n[rt](https://docs.rs/protobuf/latest/protobuf/rt/index.html \"mod protobuf::rt\")\n    Functions and types used by generated protobuf code\n\n[rustproto](https://docs.rs/protobuf/latest/protobuf/rustproto/index.html \"mod protobuf::rustproto\")\n    Generated file from `rustproto.proto`\n\n[text_format](https://docs.rs/protobuf/latest/protobuf/text_format/index.html \"mod protobuf::text_format\")\n    Protobuf \u201ctext format\u201d implementation.\n\n[well_known_types](https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html \"mod protobuf::well_known_types\")\n    Generated code for \u201cwell known types\u201d\n## Structs[\u00a7](https://docs.rs/protobuf/latest/protobuf/#structs)\n\n[Chars](https://docs.rs/protobuf/latest/protobuf/struct.Chars.html \"struct protobuf::Chars\")\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\n[CodedInputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html \"struct protobuf::CodedInputStream\")\n    Buffered read with handy utilities.\n\n[CodedOutputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html \"struct protobuf::CodedOutputStream\")\n    Buffered write with handy utilities\n\n[EnumOrUnknown](https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html \"struct protobuf::EnumOrUnknown\")\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\n[Error](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\")\n    Error type for protobuf operations.\n\n[MessageField](https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html \"struct protobuf::MessageField\")\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\n[SpecialFields](https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html \"struct protobuf::SpecialFields\")\n    Special fields included in each generated message.\n\n[UnknownFields](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n    Hold \u201cunknown\u201d fields in parsed message.\n\n[UnknownFieldsIter](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html \"struct protobuf::UnknownFieldsIter\")\n    Iterator over [`UnknownFields`](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n## Enums[\u00a7](https://docs.rs/protobuf/latest/protobuf/#enums)\n\n[UnknownValue](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html \"enum protobuf::UnknownValue\")\n    Unknown value.\n\n[UnknownValueRef](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html \"enum protobuf::UnknownValueRef\")\n    Reference to unknown value.\n## Constants[\u00a7](https://docs.rs/protobuf/latest/protobuf/#constants)\n\n[VERSION](https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html \"constant protobuf::VERSION\")\n    protobuf crate version\n\n[VERSION_3_7_2](https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html \"constant protobuf::VERSION_3_7_2\")\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits[\u00a7](https://docs.rs/protobuf/latest/protobuf/#traits)\n\n[Enum](https://docs.rs/protobuf/latest/protobuf/trait.Enum.html \"trait protobuf::Enum\")\n    Trait implemented by all protobuf enum types.\n\n[EnumFull](https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html \"trait protobuf::EnumFull\")\n    Trait is implemented for all enum types if lite runtime is not requested.\n\n[Message](https://docs.rs/protobuf/latest/protobuf/trait.Message.html \"trait protobuf::Message\")\n    Trait which is implemented by all generated message.\n\n[MessageDyn](https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html \"trait protobuf::MessageDyn\")\n    Dynamic-dispatch version of either generated message or dynamic message.\n\n[MessageFull](https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html \"trait protobuf::MessageFull\")\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\n[Oneof](https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html \"trait protobuf::Oneof\")\n    Trait implemented by all oneof types in generated code.\n\n[OneofFull](https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html \"trait protobuf::OneofFull\")\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases[\u00a7](https://docs.rs/protobuf/latest/protobuf/#types)\n\n[Result](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\")\n    [`Result`](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\") alias for [`Error`](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\").\n",
+            "markdown_with_citations": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Library to read and write protocol buffers data\n### \u00a7\u27e85\u27e9Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for `bytes` crate\u27e86\u27e9: when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in `protobuf-codegen` crate\u27e87\u27e9.\n### \u00a7\u27e88\u27e9Accompanying crates\n  * `protobuf-json-mapping`\u27e89\u27e9 implements JSON parsing and serialization for protobuf messages.\n  * `protobuf-codegen`\u27e87\u27e9 can be used to generate rust code from `.proto` crates.\n  * `protoc-bin-vendored`\u27e810\u27e9 contains `protoc` command packed into the crate.\n  * `protobuf-parse`\u27e811\u27e9 contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules\u00a7\u27e812\u27e9\n\ndescriptor\u27e813\u27e9\n    Generated file from `google/protobuf/descriptor.proto`\n\next\u27e814\u27e9\n    Utilities to support \u201cextension\u201d fields.\n\nplugin\u27e815\u27e9\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\nreflect\u27e816\u27e9\n    Reflection implementation for protobuf data\n\nrt\u27e817\u27e9\n    Functions and types used by generated protobuf code\n\nrustproto\u27e818\u27e9\n    Generated file from `rustproto.proto`\n\ntext_format\u27e819\u27e9\n    Protobuf \u201ctext format\u201d implementation.\n\nwell_known_types\u27e820\u27e9\n    Generated code for \u201cwell known types\u201d\n## Structs\u00a7\u27e821\u27e9\n\nChars\u27e822\u27e9\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\nCodedInputStream\u27e823\u27e9\n    Buffered read with handy utilities.\n\nCodedOutputStream\u27e824\u27e9\n    Buffered write with handy utilities\n\nEnumOrUnknown\u27e825\u27e9\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\nError\u27e826\u27e9\n    Error type for protobuf operations.\n\nMessageField\u27e827\u27e9\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\nSpecialFields\u27e828\u27e9\n    Special fields included in each generated message.\n\nUnknownFields\u27e829\u27e9\n    Hold \u201cunknown\u201d fields in parsed message.\n\nUnknownFieldsIter\u27e830\u27e9\n    Iterator over `UnknownFields`\u27e829\u27e9\n## Enums\u00a7\u27e831\u27e9\n\nUnknownValue\u27e832\u27e9\n    Unknown value.\n\nUnknownValueRef\u27e833\u27e9\n    Reference to unknown value.\n## Constants\u00a7\u27e834\u27e9\n\nVERSION\u27e835\u27e9\n    protobuf crate version\n\nVERSION_3_7_2\u27e836\u27e9\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits\u00a7\u27e837\u27e9\n\nEnum\u27e838\u27e9\n    Trait implemented by all protobuf enum types.\n\nEnumFull\u27e839\u27e9\n    Trait is implemented for all enum types if lite runtime is not requested.\n\nMessage\u27e840\u27e9\n    Trait which is implemented by all generated message.\n\nMessageDyn\u27e841\u27e9\n    Dynamic-dispatch version of either generated message or dynamic message.\n\nMessageFull\u27e842\u27e9\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\nOneof\u27e843\u27e9\n    Trait implemented by all oneof types in generated code.\n\nOneofFull\u27e844\u27e9\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases\u00a7\u27e845\u27e9\n\nResult\u27e846\u27e9\n    `Result`\u27e846\u27e9 alias for `Error`\u27e826\u27e9.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/protobuf/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/protobuf/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108: Source\n\u27e84\u27e9 https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data: \u00a7\n\u27e85\u27e9 https://docs.rs/protobuf/latest/protobuf/#features: \u00a7\n\u27e86\u27e9 https://github.com/tokio-rs/bytes: `bytes` crate\n\u27e87\u27e9 https://docs.rs/protobuf-codegen: `protobuf-codegen` crate\n\u27e88\u27e9 https://docs.rs/protobuf/latest/protobuf/#accompanying-crates: \u00a7\n\u27e89\u27e9 https://docs.rs/protobuf-json-mapping: `protobuf-json-mapping`\n\u27e810\u27e9 https://docs.rs/protoc-bin-vendored: `protoc-bin-vendored`\n\u27e811\u27e9 https://docs.rs/protobuf-parse: `protobuf-parse`\n\u27e812\u27e9 https://docs.rs/protobuf/latest/protobuf/#modules: \u00a7\n\u27e813\u27e9 https://docs.rs/protobuf/latest/protobuf/descriptor/index.html: mod protobuf::descriptor - descriptor\n\u27e814\u27e9 https://docs.rs/protobuf/latest/protobuf/ext/index.html: mod protobuf::ext - ext\n\u27e815\u27e9 https://docs.rs/protobuf/latest/protobuf/plugin/index.html: mod protobuf::plugin - plugin\n\u27e816\u27e9 https://docs.rs/protobuf/latest/protobuf/reflect/index.html: mod protobuf::reflect - reflect\n\u27e817\u27e9 https://docs.rs/protobuf/latest/protobuf/rt/index.html: mod protobuf::rt - rt\n\u27e818\u27e9 https://docs.rs/protobuf/latest/protobuf/rustproto/index.html: mod protobuf::rustproto - rustproto\n\u27e819\u27e9 https://docs.rs/protobuf/latest/protobuf/text_format/index.html: mod protobuf::text_format - text_format\n\u27e820\u27e9 https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html: mod protobuf::well_known_types - well_known_types\n\u27e821\u27e9 https://docs.rs/protobuf/latest/protobuf/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Chars.html: struct protobuf::Chars - Chars\n\u27e823\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html: struct protobuf::CodedInputStream - CodedInputStream\n\u27e824\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html: struct protobuf::CodedOutputStream - CodedOutputStream\n\u27e825\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html: struct protobuf::EnumOrUnknown - EnumOrUnknown\n\u27e826\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Error.html: struct protobuf::Error - Error\n\u27e827\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html: struct protobuf::MessageField - MessageField\n\u27e828\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html: struct protobuf::SpecialFields - SpecialFields\n\u27e829\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html: struct protobuf::UnknownFields - UnknownFields\n\u27e830\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html: struct protobuf::UnknownFieldsIter - UnknownFieldsIter\n\u27e831\u27e9 https://docs.rs/protobuf/latest/protobuf/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html: enum protobuf::UnknownValue - UnknownValue\n\u27e833\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html: enum protobuf::UnknownValueRef - UnknownValueRef\n\u27e834\u27e9 https://docs.rs/protobuf/latest/protobuf/#constants: \u00a7\n\u27e835\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html: constant protobuf::VERSION - VERSION\n\u27e836\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html: constant protobuf::VERSION_3_7_2 - VERSION_3_7_2\n\u27e837\u27e9 https://docs.rs/protobuf/latest/protobuf/#traits: \u00a7\n\u27e838\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Enum.html: trait protobuf::Enum - Enum\n\u27e839\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html: trait protobuf::EnumFull - EnumFull\n\u27e840\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Message.html: trait protobuf::Message - Message\n\u27e841\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html: trait protobuf::MessageDyn - MessageDyn\n\u27e842\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html: trait protobuf::MessageFull - MessageFull\n\u27e843\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html: trait protobuf::Oneof - Oneof\n\u27e844\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html: trait protobuf::OneofFull - OneofFull\n\u27e845\u27e9 https://docs.rs/protobuf/latest/protobuf/#types: \u00a7\n\u27e846\u27e9 https://docs.rs/protobuf/latest/protobuf/type.Result.html: type protobuf::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "protobuf",
+          "version": "4.31.1-release",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\n[Settings](https://docs.rs/protobuf/latest/settings.html)\n[Help](https://docs.rs/protobuf/latest/help.html)\nSummary[Source](https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108)\nExpand description\n## [\u00a7](https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data)Library to read and write protocol buffers data\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#features)Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for [`bytes` crate](https://github.com/tokio-rs/bytes): when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in [`protobuf-codegen` crate](https://docs.rs/protobuf-codegen).\n### [\u00a7](https://docs.rs/protobuf/latest/protobuf/#accompanying-crates)Accompanying crates\n  * [`protobuf-json-mapping`](https://docs.rs/protobuf-json-mapping) implements JSON parsing and serialization for protobuf messages.\n  * [`protobuf-codegen`](https://docs.rs/protobuf-codegen) can be used to generate rust code from `.proto` crates.\n  * [`protoc-bin-vendored`](https://docs.rs/protoc-bin-vendored) contains `protoc` command packed into the crate.\n  * [`protobuf-parse`](https://docs.rs/protobuf-parse) contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules[\u00a7](https://docs.rs/protobuf/latest/protobuf/#modules)\n\n[descriptor](https://docs.rs/protobuf/latest/protobuf/descriptor/index.html \"mod protobuf::descriptor\")\n    Generated file from `google/protobuf/descriptor.proto`\n\n[ext](https://docs.rs/protobuf/latest/protobuf/ext/index.html \"mod protobuf::ext\")\n    Utilities to support \u201cextension\u201d fields.\n\n[plugin](https://docs.rs/protobuf/latest/protobuf/plugin/index.html \"mod protobuf::plugin\")\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\n[reflect](https://docs.rs/protobuf/latest/protobuf/reflect/index.html \"mod protobuf::reflect\")\n    Reflection implementation for protobuf data\n\n[rt](https://docs.rs/protobuf/latest/protobuf/rt/index.html \"mod protobuf::rt\")\n    Functions and types used by generated protobuf code\n\n[rustproto](https://docs.rs/protobuf/latest/protobuf/rustproto/index.html \"mod protobuf::rustproto\")\n    Generated file from `rustproto.proto`\n\n[text_format](https://docs.rs/protobuf/latest/protobuf/text_format/index.html \"mod protobuf::text_format\")\n    Protobuf \u201ctext format\u201d implementation.\n\n[well_known_types](https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html \"mod protobuf::well_known_types\")\n    Generated code for \u201cwell known types\u201d\n## Structs[\u00a7](https://docs.rs/protobuf/latest/protobuf/#structs)\n\n[Chars](https://docs.rs/protobuf/latest/protobuf/struct.Chars.html \"struct protobuf::Chars\")\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\n[CodedInputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html \"struct protobuf::CodedInputStream\")\n    Buffered read with handy utilities.\n\n[CodedOutputStream](https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html \"struct protobuf::CodedOutputStream\")\n    Buffered write with handy utilities\n\n[EnumOrUnknown](https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html \"struct protobuf::EnumOrUnknown\")\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\n[Error](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\")\n    Error type for protobuf operations.\n\n[MessageField](https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html \"struct protobuf::MessageField\")\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\n[SpecialFields](https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html \"struct protobuf::SpecialFields\")\n    Special fields included in each generated message.\n\n[UnknownFields](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n    Hold \u201cunknown\u201d fields in parsed message.\n\n[UnknownFieldsIter](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html \"struct protobuf::UnknownFieldsIter\")\n    Iterator over [`UnknownFields`](https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html \"struct protobuf::UnknownFields\")\n## Enums[\u00a7](https://docs.rs/protobuf/latest/protobuf/#enums)\n\n[UnknownValue](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html \"enum protobuf::UnknownValue\")\n    Unknown value.\n\n[UnknownValueRef](https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html \"enum protobuf::UnknownValueRef\")\n    Reference to unknown value.\n## Constants[\u00a7](https://docs.rs/protobuf/latest/protobuf/#constants)\n\n[VERSION](https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html \"constant protobuf::VERSION\")\n    protobuf crate version\n\n[VERSION_3_7_2](https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html \"constant protobuf::VERSION_3_7_2\")\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits[\u00a7](https://docs.rs/protobuf/latest/protobuf/#traits)\n\n[Enum](https://docs.rs/protobuf/latest/protobuf/trait.Enum.html \"trait protobuf::Enum\")\n    Trait implemented by all protobuf enum types.\n\n[EnumFull](https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html \"trait protobuf::EnumFull\")\n    Trait is implemented for all enum types if lite runtime is not requested.\n\n[Message](https://docs.rs/protobuf/latest/protobuf/trait.Message.html \"trait protobuf::Message\")\n    Trait which is implemented by all generated message.\n\n[MessageDyn](https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html \"trait protobuf::MessageDyn\")\n    Dynamic-dispatch version of either generated message or dynamic message.\n\n[MessageFull](https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html \"trait protobuf::MessageFull\")\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\n[Oneof](https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html \"trait protobuf::Oneof\")\n    Trait implemented by all oneof types in generated code.\n\n[OneofFull](https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html \"trait protobuf::OneofFull\")\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases[\u00a7](https://docs.rs/protobuf/latest/protobuf/#types)\n\n[Result](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\")\n    [`Result`](https://docs.rs/protobuf/latest/protobuf/type.Result.html \"type protobuf::Result\") alias for [`Error`](https://docs.rs/protobuf/latest/protobuf/struct.Error.html \"struct protobuf::Error\").\n",
+            "markdown_with_citations": "[](https://docs.rs/protobuf/latest/protobuf/all.html \"show sidebar\")\n# Crate protobufCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9Library to read and write protocol buffers data\n### \u00a7\u27e85\u27e9Features\nThis crate has one feature, which is `with-bytes`.\n`with-bytes` enables `protobuf` crate support for `bytes` crate\u27e86\u27e9: when parsing bytes or strings from `bytes::Bytes`, `protobuf` will be able to reference the input instead of allocating subarrays.\nNote, codegen also need to be instructed to generate `Bytes` or `Chars` for `bytes` or `string` protobuf types instead of default `Vec<u8>` or `String`, just enabling option on this crate is not enough.\nSee `Customize` struct in `protobuf-codegen` crate\u27e87\u27e9.\n### \u00a7\u27e88\u27e9Accompanying crates\n  * `protobuf-json-mapping`\u27e89\u27e9 implements JSON parsing and serialization for protobuf messages.\n  * `protobuf-codegen`\u27e87\u27e9 can be used to generate rust code from `.proto` crates.\n  * `protoc-bin-vendored`\u27e810\u27e9 contains `protoc` command packed into the crate.\n  * `protobuf-parse`\u27e811\u27e9 contains `.proto` file parser. Rarely need to be used directly, but can be used for mechanical processing of `.proto` files.\n\n\n## Modules\u00a7\u27e812\u27e9\n\ndescriptor\u27e813\u27e9\n    Generated file from `google/protobuf/descriptor.proto`\n\next\u27e814\u27e9\n    Utilities to support \u201cextension\u201d fields.\n\nplugin\u27e815\u27e9\n    Generated file from `google/protobuf/compiler/plugin.proto`\n\nreflect\u27e816\u27e9\n    Reflection implementation for protobuf data\n\nrt\u27e817\u27e9\n    Functions and types used by generated protobuf code\n\nrustproto\u27e818\u27e9\n    Generated file from `rustproto.proto`\n\ntext_format\u27e819\u27e9\n    Protobuf \u201ctext format\u201d implementation.\n\nwell_known_types\u27e820\u27e9\n    Generated code for \u201cwell known types\u201d\n## Structs\u00a7\u27e821\u27e9\n\nChars\u27e822\u27e9\n    Thin wrapper around `Bytes` which guarantees that bytes are valid UTF-8 string. Should be API-compatible to `String`.\n\nCodedInputStream\u27e823\u27e9\n    Buffered read with handy utilities.\n\nCodedOutputStream\u27e824\u27e9\n    Buffered write with handy utilities\n\nEnumOrUnknown\u27e825\u27e9\n    Protobuf enums with possibly unknown values are preserved in this struct.\n\nError\u27e826\u27e9\n    Error type for protobuf operations.\n\nMessageField\u27e827\u27e9\n    Wrapper around `Option<Box<T>>`, convenient newtype.\n\nSpecialFields\u27e828\u27e9\n    Special fields included in each generated message.\n\nUnknownFields\u27e829\u27e9\n    Hold \u201cunknown\u201d fields in parsed message.\n\nUnknownFieldsIter\u27e830\u27e9\n    Iterator over `UnknownFields`\u27e829\u27e9\n## Enums\u00a7\u27e831\u27e9\n\nUnknownValue\u27e832\u27e9\n    Unknown value.\n\nUnknownValueRef\u27e833\u27e9\n    Reference to unknown value.\n## Constants\u00a7\u27e834\u27e9\n\nVERSION\u27e835\u27e9\n    protobuf crate version\n\nVERSION_3_7_2\u27e836\u27e9\n    This symbol can be referenced to assert that proper version of crate is used\n## Traits\u00a7\u27e837\u27e9\n\nEnum\u27e838\u27e9\n    Trait implemented by all protobuf enum types.\n\nEnumFull\u27e839\u27e9\n    Trait is implemented for all enum types if lite runtime is not requested.\n\nMessage\u27e840\u27e9\n    Trait which is implemented by all generated message.\n\nMessageDyn\u27e841\u27e9\n    Dynamic-dispatch version of either generated message or dynamic message.\n\nMessageFull\u27e842\u27e9\n    Trait implemented for all the generated messages, except when lite runtime is enabled.\n\nOneof\u27e843\u27e9\n    Trait implemented by all oneof types in generated code.\n\nOneofFull\u27e844\u27e9\n    Implemented by all oneof types when lite runtime is not enabled.\n## Type Aliases\u00a7\u27e845\u27e9\n\nResult\u27e846\u27e9\n    `Result`\u27e846\u27e9 alias for `Error`\u27e826\u27e9.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/protobuf/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/protobuf/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/protobuf/latest/src/protobuf/lib.rs.html#1-108: Source\n\u27e84\u27e9 https://docs.rs/protobuf/latest/protobuf/#library-to-read-and-write-protocol-buffers-data: \u00a7\n\u27e85\u27e9 https://docs.rs/protobuf/latest/protobuf/#features: \u00a7\n\u27e86\u27e9 https://github.com/tokio-rs/bytes: `bytes` crate\n\u27e87\u27e9 https://docs.rs/protobuf-codegen: `protobuf-codegen` crate\n\u27e88\u27e9 https://docs.rs/protobuf/latest/protobuf/#accompanying-crates: \u00a7\n\u27e89\u27e9 https://docs.rs/protobuf-json-mapping: `protobuf-json-mapping`\n\u27e810\u27e9 https://docs.rs/protoc-bin-vendored: `protoc-bin-vendored`\n\u27e811\u27e9 https://docs.rs/protobuf-parse: `protobuf-parse`\n\u27e812\u27e9 https://docs.rs/protobuf/latest/protobuf/#modules: \u00a7\n\u27e813\u27e9 https://docs.rs/protobuf/latest/protobuf/descriptor/index.html: mod protobuf::descriptor - descriptor\n\u27e814\u27e9 https://docs.rs/protobuf/latest/protobuf/ext/index.html: mod protobuf::ext - ext\n\u27e815\u27e9 https://docs.rs/protobuf/latest/protobuf/plugin/index.html: mod protobuf::plugin - plugin\n\u27e816\u27e9 https://docs.rs/protobuf/latest/protobuf/reflect/index.html: mod protobuf::reflect - reflect\n\u27e817\u27e9 https://docs.rs/protobuf/latest/protobuf/rt/index.html: mod protobuf::rt - rt\n\u27e818\u27e9 https://docs.rs/protobuf/latest/protobuf/rustproto/index.html: mod protobuf::rustproto - rustproto\n\u27e819\u27e9 https://docs.rs/protobuf/latest/protobuf/text_format/index.html: mod protobuf::text_format - text_format\n\u27e820\u27e9 https://docs.rs/protobuf/latest/protobuf/well_known_types/index.html: mod protobuf::well_known_types - well_known_types\n\u27e821\u27e9 https://docs.rs/protobuf/latest/protobuf/#structs: \u00a7\n\u27e822\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Chars.html: struct protobuf::Chars - Chars\n\u27e823\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedInputStream.html: struct protobuf::CodedInputStream - CodedInputStream\n\u27e824\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.CodedOutputStream.html: struct protobuf::CodedOutputStream - CodedOutputStream\n\u27e825\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.EnumOrUnknown.html: struct protobuf::EnumOrUnknown - EnumOrUnknown\n\u27e826\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.Error.html: struct protobuf::Error - Error\n\u27e827\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.MessageField.html: struct protobuf::MessageField - MessageField\n\u27e828\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.SpecialFields.html: struct protobuf::SpecialFields - SpecialFields\n\u27e829\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFields.html: struct protobuf::UnknownFields - UnknownFields\n\u27e830\u27e9 https://docs.rs/protobuf/latest/protobuf/struct.UnknownFieldsIter.html: struct protobuf::UnknownFieldsIter - UnknownFieldsIter\n\u27e831\u27e9 https://docs.rs/protobuf/latest/protobuf/#enums: \u00a7\n\u27e832\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValue.html: enum protobuf::UnknownValue - UnknownValue\n\u27e833\u27e9 https://docs.rs/protobuf/latest/protobuf/enum.UnknownValueRef.html: enum protobuf::UnknownValueRef - UnknownValueRef\n\u27e834\u27e9 https://docs.rs/protobuf/latest/protobuf/#constants: \u00a7\n\u27e835\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION.html: constant protobuf::VERSION - VERSION\n\u27e836\u27e9 https://docs.rs/protobuf/latest/protobuf/constant.VERSION_3_7_2.html: constant protobuf::VERSION_3_7_2 - VERSION_3_7_2\n\u27e837\u27e9 https://docs.rs/protobuf/latest/protobuf/#traits: \u00a7\n\u27e838\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Enum.html: trait protobuf::Enum - Enum\n\u27e839\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.EnumFull.html: trait protobuf::EnumFull - EnumFull\n\u27e840\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Message.html: trait protobuf::Message - Message\n\u27e841\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageDyn.html: trait protobuf::MessageDyn - MessageDyn\n\u27e842\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.MessageFull.html: trait protobuf::MessageFull - MessageFull\n\u27e843\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.Oneof.html: trait protobuf::Oneof - Oneof\n\u27e844\u27e9 https://docs.rs/protobuf/latest/protobuf/trait.OneofFull.html: trait protobuf::OneofFull - OneofFull\n\u27e845\u27e9 https://docs.rs/protobuf/latest/protobuf/#types: \u00a7\n\u27e846\u27e9 https://docs.rs/protobuf/latest/protobuf/type.Result.html: type protobuf::Result - Result\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `protobuf` crate provides functionality for reading and writing Protocol Buffers data in Rust, including serialization, deserialization, and reflection. It supports integration with the `bytes` crate via the `with-bytes` feature for efficient handling of byte and string data. Accompanying crates like `protobuf-codegen` enable code generation from `.proto` files, while others provide JSON mapping, `.proto` file parsing, and bundled `protoc` binaries.",
+          "feature_summary": null,
+          "use_case": "Serialization",
+          "score": 5.0,
+          "factual_counterfactual": "### Pair 1: Feature Integration  \n\u2705 **Factual**: The `protobuf` crate supports the `with-bytes` feature, enabling integration with the `bytes` crate to reference input data directly without allocating subarrays.  \n\u274c **Counterfactual**: The `protobuf` crate requires the `with-bytes` feature to parse any protocol buffer data, as it cannot function without it.  \n\n---\n\n### Pair 2: Code Generation  \n\u2705 **Factual**: The `protobuf-codegen` crate can be used alongside `protobuf` to generate Rust code from `.proto` files, supporting customization of generated types like `Bytes` or `Chars`.  \n\u274c **Counterfactual**: The `protobuf` crate natively generates Rust code from `.proto` files without requiring the `protobuf-codegen` crate.  \n\n---\n\n### Pair 3: JSON Serialization  \n\u2705 **Factual**: The `protobuf-json-mapping` crate provides JSON serialization and parsing capabilities for protocol buffer messages, complementing the `protobuf` crate.  \n\u274c **Counterfactual**: The `protobuf` crate has built-in JSON serialization and parsing capabilities, eliminating the need for the `protobuf-json-mapping` crate.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-3a38a479-39f796e2-1751263260",
+      "timestamp": "2025-06-30T06:01:00.169939+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

@@ -1,19 +1,17 @@
 # azure_ai_processing.py
+import logging
 import re
 import time
-import logging
-import json
-from typing import TypedDict, Union, Optional
 from collections.abc import Callable
+from typing import Optional
 
 import requests  # type: ignore  # May lack stubs in some environments
-from .config import PipelineConfig, CrateMetadata, EnrichedCrate  # Ensure these are defined and correct
 
+# Import shared types
+from .common_types import Section
 
-class Section(TypedDict, total=True):
-    heading: str
-    content: str
-    priority: int
+# Ensure these are defined and correct
+from .config import CrateMetadata, EnrichedCrate, PipelineConfig
 
 
 class AzureOpenAIEnricher:
@@ -24,9 +22,11 @@ class AzureOpenAIEnricher:
             "Content-Type": "application/json",
             "api-key": config.azure_openai_api_key
         })
-        
+
         # Construct the Azure OpenAI API URL
-        self.api_url = f"{config.azure_openai_endpoint}openai/deployments/{config.azure_openai_deployment_name}/chat/completions"
+        self.api_url = f"{
+            config.azure_openai_endpoint}openai/deployments/{
+            config.azure_openai_deployment_name}/chat/completions"
         self.api_url += f"?api-version={config.azure_openai_api_version}"
 
     def estimate_tokens(self, text: str) -> int:
@@ -75,7 +75,10 @@ class AzureOpenAIEnricher:
                 priority = 5  # Default priority
 
                 # Assign priority based on content type
-                if re.search(r"\b(usage|example|getting started)\b", heading, re.I):
+                if re.search(
+                    r"\b(usage|example|getting started)\b",
+                    heading,
+                        re.I):
                     priority = 10
                 elif re.search(r"\b(feature|overview|about)\b", heading, re.I):
                     priority = 9
@@ -94,7 +97,8 @@ class AzureOpenAIEnricher:
 
                 # Boost priority if code block is found
                 if "```rust" in line or "```no_run" in line:
-                    current_section["priority"] = max(current_section["priority"], 8)
+                    current_section["priority"] = max(
+                        current_section["priority"], 8)
 
         # Add the last section
         if current_section["content"].strip():
@@ -159,7 +163,10 @@ class AzureOpenAIEnricher:
         elif task == "factual_pairs":
             # For factual pairs, ensure proper formatting
             pairs: list[str] = []
-            facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL)
+            facts = re.findall(
+                r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)",
+                output,
+                re.DOTALL)
             counterfacts = re.findall(
                 r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", output, re.DOTALL
             )
@@ -176,9 +183,9 @@ class AzureOpenAIEnricher:
         return output
 
     def call_azure_openai(
-        self, 
-        prompt: str, 
-        temperature: float = 0.2, 
+        self,
+        prompt: str,
+        temperature: float = 0.2,
         max_tokens: int = 256,
         system_message: str = "You are a helpful AI assistant that analyzes Rust crates and provides insights."
     ) -> Optional[str]:
@@ -201,14 +208,15 @@ class AzureOpenAIEnricher:
                 json=payload,
                 timeout=60
             )
-            
+
             if response.status_code == 200:
                 result = response.json()
                 return result["choices"][0]["message"]["content"]
             else:
-                logging.error(f"Azure OpenAI API error: {response.status_code} - {response.text}")
+                logging.error(
+                    f"Azure OpenAI API error: {response.status_code} - {response.text}")
                 return None
-                
+
         except Exception as e:
             logging.error(f"Error calling Azure OpenAI: {e}")
             return None
@@ -225,21 +233,22 @@ class AzureOpenAIEnricher:
         """Run prompt with validation and retry logic"""
         for attempt in range(retries):
             try:
-                result = self.call_azure_openai(prompt, temperature, max_tokens, system_message)
-                
+                result = self.call_azure_openai(
+                    prompt, temperature, max_tokens, system_message)
+
                 if result and validation_func(result):
                     return result
-                    
+
                 # If validation failed, try with a different temperature
                 if attempt < retries - 1:
                     temperature = min(0.8, temperature + 0.1)
                     time.sleep(1)  # Brief delay between retries
-                    
+
             except Exception as e:
                 logging.warning(f"Attempt {attempt + 1} failed: {e}")
                 if attempt < retries - 1:
                     time.sleep(2 ** attempt)  # Exponential backoff
-                    
+
         return None
 
     def simplify_prompt(self, prompt: str) -> str:
@@ -247,18 +256,18 @@ class AzureOpenAIEnricher:
         # Remove excessive whitespace and newlines
         prompt = re.sub(r'\n\s*\n', '\n\n', prompt)
         prompt = re.sub(r' +', ' ', prompt)
-        
+
         # Truncate if too long (Azure OpenAI has limits)
         if len(prompt) > 8000:  # Conservative limit
             prompt = prompt[:8000] + "..."
-            
+
         return prompt.strip()
 
     def validate_classification(self, result: str) -> bool:
         """Validate classification output"""
         valid_categories = [
-            "AI", "Database", "Web Framework", "Networking", 
-            "Serialization", "Utilities", "DevTools", "ML", 
+            "AI", "Database", "Web Framework", "Networking",
+            "Serialization", "Utilities", "DevTools", "ML",
             "Cryptography", "Unknown"
         ]
         return any(cat.lower() in result.lower() for cat in valid_categories)
@@ -270,7 +279,7 @@ class AzureOpenAIEnricher:
     def enrich_crate(self, crate: CrateMetadata) -> EnrichedCrate:
         """Enrich crate with AI-generated insights using Azure OpenAI"""
         enriched = EnrichedCrate(**crate.__dict__)
-        
+
         # Generate readme summary
         if crate.readme:
             readme_content = self.smart_truncate(crate.readme, 2000)
@@ -279,14 +288,15 @@ class AzureOpenAIEnricher:
 {readme_content}
 
 Summary:"""
-            
+
             enriched.readme_summary = self.call_azure_openai(
                 prompt, temperature=0.3, max_tokens=150
             )
 
         # Classify use case
         if crate.readme:
-            enriched.use_case = self.classify_use_case(crate, enriched.readme_summary or "")
+            enriched.use_case = self.classify_use_case(
+                crate, enriched.readme_summary or "")
 
         # Generate factual pairs
         enriched.factual_counterfactual = self.generate_factual_pairs(crate)
@@ -309,7 +319,8 @@ Summary:"""
             ])
         elif isinstance(crate.features, list):
             features_text = "\n".join([
-                f"- {feature}" if isinstance(feature, str) else f"- {str(feature)}"
+                f"- {feature}" if isinstance(feature,
+                                             str) else f"- {str(feature)}"
                 for feature in crate.features
             ])
         else:
@@ -321,10 +332,14 @@ Summary:"""
 
 Summary:"""
 
-        result = self.call_azure_openai(prompt, temperature=0.3, max_tokens=150)
+        result = self.call_azure_openai(
+            prompt, temperature=0.3, max_tokens=150)
         return result or "Features analysis unavailable."
 
-    def classify_use_case(self, crate: CrateMetadata, readme_summary: str) -> str:
+    def classify_use_case(
+            self,
+            crate: CrateMetadata,
+            readme_summary: str) -> str:
         """Classify crate use case using Azure OpenAI"""
         context = f"""
 Crate: {crate.name}
@@ -351,12 +366,12 @@ Categories: {', '.join(crate.categories)}
 Category:"""
 
         result = self.validate_and_retry(
-            prompt, 
-            self.validate_classification, 
-            temperature=0.1, 
+            prompt,
+            self.validate_classification,
+            temperature=0.1,
             max_tokens=50
         )
-        
+
         return result or "Unknown"
 
     def generate_factual_pairs(self, crate: CrateMetadata) -> str:
@@ -379,12 +394,12 @@ Format each pair as:
 Factual/Counterfactual pairs:"""
 
         result = self.validate_and_retry(
-            prompt, 
-            self.validate_factual_pairs, 
-            temperature=0.4, 
+            prompt,
+            self.validate_factual_pairs,
+            temperature=0.4,
             max_tokens=300
         )
-        
+
         return result or "Factual analysis unavailable."
 
     def score_crate(self, crate: CrateMetadata) -> float:
@@ -409,7 +424,7 @@ Categories: {', '.join(crate.categories)}
 Score (1-10):"""
 
         result = self.call_azure_openai(prompt, temperature=0.1, max_tokens=10)
-        
+
         if result:
             # Extract numeric score
             score_match = re.search(r'(\d+(?:\.\d+)?)', result)
@@ -419,29 +434,29 @@ Score (1-10):"""
                     return min(10.0, max(1.0, score))  # Clamp between 1-10
                 except ValueError:
                     pass
-        
+
         return 5.0  # Default score
 
     def batch_process_prompts(
-        self, 
-        prompts: "list[tuple[str, float, int]]", 
+        self,
+        prompts: "list[tuple[str, float, int]]",
         batch_size: int = 4
     ) -> "list[Optional[str]]":
         """Process multiple prompts in batches"""
         results: "list[Optional[str]]" = []
-        
+
         for i in range(0, len(prompts), batch_size):
             batch = prompts[i:i + batch_size]
             batch_results: "list[Optional[str]]" = []
-            
+
             for prompt_tuple in batch:
                 prompt, temp, max_tokens = prompt_tuple
                 result = self.call_azure_openai(prompt, temp, max_tokens)
                 batch_results.append(result)
                 time.sleep(0.1)  # Rate limiting
-                
+
             results.extend(batch_results)
-            
+
         return results
 
     def smart_context_management(
@@ -450,13 +465,14 @@ Score (1-10):"""
         """Manage context for long conversations"""
         # For Azure OpenAI, we can be more generous with context
         # but still need to manage it carefully
-        
+
         total_context = "\n".join(context_history) + "\n" + new_prompt
         max_context_tokens = 6000  # Conservative limit for Azure OpenAI
-        
+
         if self.estimate_tokens(total_context) <= max_context_tokens:
             return total_context
-            
+
         # If too long, keep most recent context
-        recent_context = context_history[-2:] if len(context_history) >= 2 else context_history
-        return "\n".join(recent_context) + "\n" + new_prompt 
+        recent_context = context_history[-2:] if len(
+            context_history) >= 2 else context_history
+        return "\n".join(recent_context) + "\n" + new_prompt

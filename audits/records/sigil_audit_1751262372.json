@@ -1,0 +1,1559 @@
+[
+  {
+    "execution_id": "exec-9b77dcc2-0f082346-1751262361",
+    "timestamp": "2025-06-30T05:46:01.277500+00:00",
+    "sacred_chain": {
+      "input_data": "bb8",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'bb8' -> 'bb8'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "bb8",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/bb8",
+            "title": "bb8 v0.9.0",
+            "content": {
+              "raw_markdown": "#  bb8 v0.9.0\nFull-featured async (tokio-based) connection pool (like r2d2) \n  * [ Readme ](https://crates.io/crates/bb8)\n  * [ 21 Versions ](https://crates.io/crates/bb8/versions)\n  * [ Dependencies ](https://crates.io/crates/bb8/dependencies)\n  * [ Dependents ](https://crates.io/crates/bb8/reverse_dependencies)\n\n\n## Metadata\n7 months ago \nv1.75.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n15.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add bb8\nOr add the following line to your Cargo.toml:\nbb8 = \"0.9.0\"\n## Repository\n[ github.com/djc/bb8 ](https://github.com/djc/bb8)\n## Owners\n[ Report crate ](https://crates.io/support?crate=bb8&inquire=crate-violation)\n### Stats Overview\n13,845,984 Downloads all time\n21 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  bb8 v0.9.0\nFull-featured async (tokio-based) connection pool (like r2d2) \n  *  Readme \u27e81\u27e9\n  *  21 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n7 months ago \nv1.75.0 \n MIT \u27e85\u27e9\n15.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add bb8\nOr add the following line to your Cargo.toml:\nbb8 = \"0.9.0\"\n## Repository\n github.com/djc/bb8 \u27e86\u27e9\n## Owners\n Report crate \u27e87\u27e9\n### Stats Overview\n13,845,984 Downloads all time\n21 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/bb8:  Readme \n\u27e82\u27e9 https://crates.io/crates/bb8/versions:  21 Versions \n\u27e83\u27e9 https://crates.io/crates/bb8/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/bb8/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://github.com/djc/bb8:  github.com/djc/bb8 \n\u27e87\u27e9 https://crates.io/support?crate=bb8&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 2.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 876,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116151.0234734"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/bb8",
+            "title": "Crate bb8Copy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\n[Settings](https://docs.rs/bb8/latest/settings.html)\n[Help](https://docs.rs/bb8/latest/help.html)\nSummary[Source](https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73)\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on [r2d2](https://github.com/sfackler/r2d2).\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## [\u00a7](https://docs.rs/bb8/latest/bb8/#example)Example\nUsing an imaginary \u201cfoodb\u201d database.\n[\u24d8](https://docs.rs/bb8/latest/bb8/ \"This example is not tested\")```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/bb8/latest/bb8/#structs)\n\n[Builder](https://docs.rs/bb8/latest/bb8/struct.Builder.html \"struct bb8::Builder\")\n    A builder for a connection pool.\n\n[NopErrorSink](https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html \"struct bb8::NopErrorSink\")\n    An `ErrorSink` implementation that does nothing.\n\n[Pool](https://docs.rs/bb8/latest/bb8/struct.Pool.html \"struct bb8::Pool\")\n    A generic connection pool.\n\n[PooledConnection](https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html \"struct bb8::PooledConnection\")\n    A smart pointer wrapping a connection.\n\n[State](https://docs.rs/bb8/latest/bb8/struct.State.html \"struct bb8::State\")\n    Information about the state of a `Pool`.\n\n[Statistics](https://docs.rs/bb8/latest/bb8/struct.Statistics.html \"struct bb8::Statistics\")\n    Statistics about the historical usage of the `Pool`.\n## Enums[\u00a7](https://docs.rs/bb8/latest/bb8/#enums)\n\n[AddError](https://docs.rs/bb8/latest/bb8/enum.AddError.html \"enum bb8::AddError\")\n    Error type returned by `Pool::add(conn)`\n\n[QueueStrategy](https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html \"enum bb8::QueueStrategy\")\n    bb8\u2019s queue strategy when getting pool resources\n\n[RunError](https://docs.rs/bb8/latest/bb8/enum.RunError.html \"enum bb8::RunError\")\n    bb8\u2019s error type.\n## Traits[\u00a7](https://docs.rs/bb8/latest/bb8/#traits)\n\n[CustomizeConnection](https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html \"trait bb8::CustomizeConnection\")\n    A trait which provides functionality to initialize a connection\n\n[ErrorSink](https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html \"trait bb8::ErrorSink\")\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\n[ManageConnection](https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html \"trait bb8::ManageConnection\")\n    A trait which provides connection-specific functionality.\n",
+              "markdown_with_citations": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on r2d2\u27e84\u27e9.\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## \u00a7\u27e85\u27e9Example\nUsing an imaginary \u201cfoodb\u201d database.\n\u24d8\u27e86\u27e9```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nBuilder\u27e88\u27e9\n    A builder for a connection pool.\n\nNopErrorSink\u27e89\u27e9\n    An `ErrorSink` implementation that does nothing.\n\nPool\u27e810\u27e9\n    A generic connection pool.\n\nPooledConnection\u27e811\u27e9\n    A smart pointer wrapping a connection.\n\nState\u27e812\u27e9\n    Information about the state of a `Pool`.\n\nStatistics\u27e813\u27e9\n    Statistics about the historical usage of the `Pool`.\n## Enums\u00a7\u27e814\u27e9\n\nAddError\u27e815\u27e9\n    Error type returned by `Pool::add(conn)`\n\nQueueStrategy\u27e816\u27e9\n    bb8\u2019s queue strategy when getting pool resources\n\nRunError\u27e817\u27e9\n    bb8\u2019s error type.\n## Traits\u00a7\u27e818\u27e9\n\nCustomizeConnection\u27e819\u27e9\n    A trait which provides functionality to initialize a connection\n\nErrorSink\u27e820\u27e9\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\nManageConnection\u27e821\u27e9\n    A trait which provides connection-specific functionality.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bb8/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bb8/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73: Source\n\u27e84\u27e9 https://github.com/sfackler/r2d2: r2d2\n\u27e85\u27e9 https://docs.rs/bb8/latest/bb8/#example: \u00a7\n\u27e86\u27e9 https://docs.rs/bb8/latest/bb8/: This example is not tested - \u24d8\n\u27e87\u27e9 https://docs.rs/bb8/latest/bb8/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/bb8/latest/bb8/struct.Builder.html: struct bb8::Builder - Builder\n\u27e89\u27e9 https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html: struct bb8::NopErrorSink - NopErrorSink\n\u27e810\u27e9 https://docs.rs/bb8/latest/bb8/struct.Pool.html: struct bb8::Pool - Pool\n\u27e811\u27e9 https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html: struct bb8::PooledConnection - PooledConnection\n\u27e812\u27e9 https://docs.rs/bb8/latest/bb8/struct.State.html: struct bb8::State - State\n\u27e813\u27e9 https://docs.rs/bb8/latest/bb8/struct.Statistics.html: struct bb8::Statistics - Statistics\n\u27e814\u27e9 https://docs.rs/bb8/latest/bb8/#enums: \u00a7\n\u27e815\u27e9 https://docs.rs/bb8/latest/bb8/enum.AddError.html: enum bb8::AddError - AddError\n\u27e816\u27e9 https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html: enum bb8::QueueStrategy - QueueStrategy\n\u27e817\u27e9 https://docs.rs/bb8/latest/bb8/enum.RunError.html: enum bb8::RunError - RunError\n\u27e818\u27e9 https://docs.rs/bb8/latest/bb8/#traits: \u00a7\n\u27e819\u27e9 https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html: trait bb8::CustomizeConnection - CustomizeConnection\n\u27e820\u27e9 https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html: trait bb8::ErrorSink - ErrorSink\n\u27e821\u27e9 https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html: trait bb8::ManageConnection - ManageConnection\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3335,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116151.819659"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/bb8",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [21 releases](https://lib.rs/crates/bb8/versions)\n0.9.0 |  Dec 9, 2024   \n---|---  \n0.8.6 |  Oct 17, 2024   \n0.8.5 |  Jun 14, 2024   \n0.8.3 |  Feb 1, 2024   \n0.3.0 |  Mar 17, 2019   \n#**27** in [Asynchronous](https://lib.rs/asynchronous \"Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing.\")\nDownload history 518239/week @ 2025-03-03 439395/week @ 2025-03-10 706384/week @ 2025-03-17 830928/week @ 2025-03-24 344436/week @ 2025-03-31 344062/week @ 2025-04-07 250751/week @ 2025-04-14 199586/week @ 2025-04-21 189657/week @ 2025-04-28 206747/week @ 2025-05-05 197311/week @ 2025-05-12 183984/week @ 2025-05-19 153639/week @ 2025-05-26 157237/week @ 2025-06-02 148676/week @ 2025-06-09 155091/week @ 2025-06-16\n**623,718** downloads per month Used in [**186** crates (106 directly)](https://lib.rs/crates/bb8/rev)\n**MIT** license \n48KB  1K  SLoC\n# bb8\n[![Documentation](https://img.gs/czjpqfbdkz/full/https://docs.rs/bb8/badge.svg)](https://docs.rs/bb8/) [![Crates.io](https://img.shields.io/crates/v/bb8.svg)](https://crates.io/crates/bb8) [![Build status](https://img.gs/czjpqfbdkz/full/https://github.com/djc/bb8/workflows/CI/badge.svg)](https://github.com/djc/bb8/actions?query=workflow%3ACI) [![codecov](https://img.gs/czjpqfbdkz/full/https://codecov.io/gh/djc/bb8/branch/main/graph/badge.svg)](https://codecov.io/gh/djc/bb8) [![Chat](https://img.shields.io/discord/976380008299917365?logo=discord)](https://discord.gg/E4DuUP83V2) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/djc/bb8/blob/6e2a58629c586b3b69a408a85bcae73d92236298/bb8/LICENSE)\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on [r2d2](https://github.com/sfackler/r2d2).\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the ``ManageConnection`` trait provide the database-specific logic to create and check the health of connections.\nA (possibly not exhaustive) list of adapters for different backends:\nBackend | Adapter Crate  \n---|---  \n[tokio-postgres](https://github.com/sfackler/rust-postgres) | [bb8-postgres](https://lib.rs/crates/bb8-postgres) (in-tree)  \n[redis](https://github.com/mitsuhiko/redis-rs) | [bb8-redis](https://lib.rs/crates/bb8-redis) (in-tree)  \n[redis_cluster_async](https://lib.rs/crates/redis_cluster_async) | [bb8-redis-cluster](https://lib.rs/crates/bb8-redis-cluster)  \n[rsmq](https://github.com/smrchy/rsmq) | [rsmq_async](https://lib.rs/crates/rsmq_async)  \n[bolt-client](https://lib.rs/crates/bolt-client) | [bb8-bolt](https://lib.rs/crates/bb8-bolt)  \n[diesel](https://lib.rs/crates/diesel) | [bb8-diesel](https://lib.rs/crates/bb8-diesel)  \n[tiberius](https://lib.rs/crates/tiberius) | [bb8-tiberius](https://lib.rs/crates/bb8-tiberius)  \n[nebula-client](https://lib.rs/crates/nebula-client) | [bb8-nebula](https://lib.rs/crates/bb8-nebula)  \n[memcache-async](https://github.com/vavrusa/memcache-async) | [bb8-memcached](https://lib.rs/crates/bb8-memcached)  \n[lapin](https://lib.rs/crates/lapin) | [bb8-lapin](https://lib.rs/crates/bb8-lapin)  \n[arangors](https://lib.rs/crates/arangors) | [bb8-arangodb](https://lib.rs/crates/bb8-arangodb)  \n## Example\nUsing an imaginary \"foodb\" database.\n```\n```#``[``tokio`::`main``]``\nasync ``fn` `main`````(````)``````{`\n  `let` manager `=` `bb8_foodb`::```FooConnectionManager`::``new`(```\"`localhost:1234`\"```)``;`\n  `let` pool `=` `bb8`::```Pool`::``builder`(``)`\n    `.``max_size``(``15``)`\n    `.``build``(`manager`)`\n    `.`await\n    `.``unwrap``(``)``;`\n  `for` `_` `in` `0``..``20` `{`\n    `let` pool `=` pool`.``clone``(``)``;`\n    `tokio`::``spawn`(`async `move` `{`\n      `let` conn `=` pool`.``get``(``)``.`await`.``unwrap``(``)``;`\n      ``//` use the connection`\n      ``//` it will be returned to the pool when it falls out of scope.`\n    `}``)``;`\n  `}`\n```}```\n`\n```\n\n## License\nLicensed under the MIT license ([LICENSE](https://github.com/djc/bb8/blob/6e2a58629c586b3b69a408a85bcae73d92236298/bb8/LICENSE)).\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you shall be licensed as above, without any additional terms or conditions.\n#### Dependencies\n~2.7\u20138.5MB  ~68K SLoC\n  * [futures-util](https://lib.rs/crates/futures-util \"0.3.2\")[+alloc](https://lib.rs/crates/futures-util/features#feature-alloc)\n  * [ default ](https://lib.rs/crates/bb8/features#feature-parking_lot \"parking_lot enabled by default feature\") [parking_lot](https://lib.rs/crates/parking_lot \"0.12\")\n  * [tokio](https://lib.rs/crates/tokio \"1.0\")[+rt](https://lib.rs/crates/tokio/features#feature-rt)[+sync](https://lib.rs/crates/tokio/features#feature-sync)[+time](https://lib.rs/crates/tokio/features#feature-time)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  21 releases\u27e81\u27e9\n0.9.0 |  Dec 9, 2024   \n---|---  \n0.8.6 |  Oct 17, 2024   \n0.8.5 |  Jun 14, 2024   \n0.8.3 |  Feb 1, 2024   \n0.3.0 |  Mar 17, 2019   \n#**27** in Asynchronous\u27e82\u27e9\nDownload history 518239/week @ 2025-03-03 439395/week @ 2025-03-10 706384/week @ 2025-03-17 830928/week @ 2025-03-24 344436/week @ 2025-03-31 344062/week @ 2025-04-07 250751/week @ 2025-04-14 199586/week @ 2025-04-21 189657/week @ 2025-04-28 206747/week @ 2025-05-05 197311/week @ 2025-05-12 183984/week @ 2025-05-19 153639/week @ 2025-05-26 157237/week @ 2025-06-02 148676/week @ 2025-06-09 155091/week @ 2025-06-16\n**623,718** downloads per month Used in **186** crates (106 directly)\u27e83\u27e9\n**MIT** license \n48KB  1K  SLoC\n# bb8\n![Documentation\u27e84\u27e9](https://docs.rs/bb8/) ![Crates.io\u27e85\u27e9](https://crates.io/crates/bb8) ![Build status\u27e86\u27e9](https://github.com/djc/bb8/actions?query=workflow%3ACI) ![codecov\u27e87\u27e9](https://codecov.io/gh/djc/bb8) ![Chat\u27e88\u27e9](https://discord.gg/E4DuUP83V2) ![License: MIT\u27e89\u27e9](https://github.com/djc/bb8/blob/6e2a58629c586b3b69a408a85bcae73d92236298/bb8/LICENSE)\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on r2d2\u27e810\u27e9.\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the ``ManageConnection`` trait provide the database-specific logic to create and check the health of connections.\nA (possibly not exhaustive) list of adapters for different backends:\nBackend | Adapter Crate  \n---|---  \ntokio-postgres\u27e811\u27e9 | bb8-postgres\u27e812\u27e9 (in-tree)  \nredis\u27e813\u27e9 | bb8-redis\u27e814\u27e9 (in-tree)  \nredis_cluster_async\u27e815\u27e9 | bb8-redis-cluster\u27e816\u27e9  \nrsmq\u27e817\u27e9 | rsmq_async\u27e818\u27e9  \nbolt-client\u27e819\u27e9 | bb8-bolt\u27e820\u27e9  \ndiesel\u27e821\u27e9 | bb8-diesel\u27e822\u27e9  \ntiberius\u27e823\u27e9 | bb8-tiberius\u27e824\u27e9  \nnebula-client\u27e825\u27e9 | bb8-nebula\u27e826\u27e9  \nmemcache-async\u27e827\u27e9 | bb8-memcached\u27e828\u27e9  \nlapin\u27e829\u27e9 | bb8-lapin\u27e830\u27e9  \narangors\u27e831\u27e9 | bb8-arangodb\u27e832\u27e9  \n## Example\nUsing an imaginary \"foodb\" database.\n```\n```#``[``tokio`::`main``]``\nasync ``fn` `main`````(````)``````{`\n  `let` manager `=` `bb8_foodb`::```FooConnectionManager`::``new`(```\"`localhost:1234`\"```)``;`\n  `let` pool `=` `bb8`::```Pool`::``builder`(``)`\n    `.``max_size``(``15``)`\n    `.``build``(`manager`)`\n    `.`await\n    `.``unwrap``(``)``;`\n  `for` `_` `in` `0``..``20` `{`\n    `let` pool `=` pool`.``clone``(``)``;`\n    `tokio`::``spawn`(`async `move` `{`\n      `let` conn `=` pool`.``get``(``)``.`await`.``unwrap``(``)``;`\n      ``//` use the connection`\n      ``//` it will be returned to the pool when it falls out of scope.`\n    `}``)``;`\n  `}`\n```}```\n`\n```\n\n## License\nLicensed under the MIT license (LICENSE\u27e833\u27e9).\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you shall be licensed as above, without any additional terms or conditions.\n#### Dependencies\n~2.7\u20138.5MB  ~68K SLoC\n  * futures-util\u27e834\u27e9+alloc\u27e835\u27e9\n  *  default \u27e836\u27e9 parking_lot\u27e837\u27e9\n  * tokio\u27e838\u27e9+rt\u27e839\u27e9+sync\u27e840\u27e9+time\u27e841\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/bb8/versions: 21 releases\n\u27e82\u27e9 https://lib.rs/asynchronous: Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing. - Asynchronous\n\u27e83\u27e9 https://lib.rs/crates/bb8/rev: **186** crates (106 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/bb8/badge.svg: ![Documentation\n\u27e85\u27e9 https://img.shields.io/crates/v/bb8.svg: ![Crates.io\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/djc/bb8/workflows/CI/badge.svg: ![Build status\n\u27e87\u27e9 https://img.gs/czjpqfbdkz/full/https://codecov.io/gh/djc/bb8/branch/main/graph/badge.svg: ![codecov\n\u27e88\u27e9 https://img.shields.io/discord/976380008299917365?logo=discord: ![Chat\n\u27e89\u27e9 https://img.shields.io/badge/License-MIT-blue.svg: ![License: MIT\n\u27e810\u27e9 https://github.com/sfackler/r2d2: r2d2\n\u27e811\u27e9 https://github.com/sfackler/rust-postgres: tokio-postgres\n\u27e812\u27e9 https://lib.rs/crates/bb8-postgres: bb8-postgres\n\u27e813\u27e9 https://github.com/mitsuhiko/redis-rs: redis\n\u27e814\u27e9 https://lib.rs/crates/bb8-redis: bb8-redis\n\u27e815\u27e9 https://lib.rs/crates/redis_cluster_async: redis_cluster_async\n\u27e816\u27e9 https://lib.rs/crates/bb8-redis-cluster: bb8-redis-cluster\n\u27e817\u27e9 https://github.com/smrchy/rsmq: rsmq\n\u27e818\u27e9 https://lib.rs/crates/rsmq_async: rsmq_async\n\u27e819\u27e9 https://lib.rs/crates/bolt-client: bolt-client\n\u27e820\u27e9 https://lib.rs/crates/bb8-bolt: bb8-bolt\n\u27e821\u27e9 https://lib.rs/crates/diesel: diesel\n\u27e822\u27e9 https://lib.rs/crates/bb8-diesel: bb8-diesel\n\u27e823\u27e9 https://lib.rs/crates/tiberius: tiberius\n\u27e824\u27e9 https://lib.rs/crates/bb8-tiberius: bb8-tiberius\n\u27e825\u27e9 https://lib.rs/crates/nebula-client: nebula-client\n\u27e826\u27e9 https://lib.rs/crates/bb8-nebula: bb8-nebula\n\u27e827\u27e9 https://github.com/vavrusa/memcache-async: memcache-async\n\u27e828\u27e9 https://lib.rs/crates/bb8-memcached: bb8-memcached\n\u27e829\u27e9 https://lib.rs/crates/lapin: lapin\n\u27e830\u27e9 https://lib.rs/crates/bb8-lapin: bb8-lapin\n\u27e831\u27e9 https://lib.rs/crates/arangors: arangors\n\u27e832\u27e9 https://lib.rs/crates/bb8-arangodb: bb8-arangodb\n\u27e833\u27e9 https://github.com/djc/bb8/blob/6e2a58629c586b3b69a408a85bcae73d92236298/bb8/LICENSE: LICENSE\n\u27e834\u27e9 https://lib.rs/crates/futures-util: 0.3.2 - futures-util\n\u27e835\u27e9 https://lib.rs/crates/futures-util/features#feature-alloc: +alloc\n\u27e836\u27e9 https://lib.rs/crates/bb8/features#feature-parking_lot: parking_lot enabled by default feature -  default \n\u27e837\u27e9 https://lib.rs/crates/parking_lot: 0.12 - parking_lot\n\u27e838\u27e9 https://lib.rs/crates/tokio: 1.0 - tokio\n\u27e839\u27e9 https://lib.rs/crates/tokio/features#feature-rt: +rt\n\u27e840\u27e9 https://lib.rs/crates/tokio/features#feature-sync: +sync\n\u27e841\u27e9 https://lib.rs/crates/tokio/features#feature-time: +time\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 5135,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116152.3713381"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libpin_utils-9d9a9e5e1b2c045c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libscopeguard-b3036dac4c63d524.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_core-0a703a179237bb43.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_task-fca6e7fc144838cf.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#smallvec@1.15.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "smallvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libsmallvec-6a440c251b58272a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libautocfg-ff5884693664d457.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libautocfg-ff5884693664d457.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-9928602ef8bb032d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-d2343c0fe6ff07ff\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-d2343c0fe6ff07ff\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libparking_lot_core-371fd459e255aab1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_const_fn_trait_bound"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-26a72cfa18e2caea\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\liblock_api-9c180e8e0f8b9e04.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libparking_lot-9292917706b43cc2.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_util-9e10f2605ef7ded4.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.45.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking_lot",
+                "rt",
+                "sync",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libtokio-60c3bfbcb8b1abcf.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp97723j9a/bb8-0.9.0#bb8@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bb8",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking_lot"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libbb8-9d119e7103b801e8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-733c1e19d91d737a\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "linked_libs": [],
+              "linked_paths": [
+                "native=C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\lib"
+              ],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\windows_x86_64_msvc-a8b60e91c970423e\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#autocfg@1.5.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "autocfg",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\autocfg-1.5.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libautocfg-ff5884693664d457.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libautocfg-ff5884693664d457.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-fda95fe9f127d56b\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#smallvec@1.15.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "smallvec",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\smallvec-1.15.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libsmallvec-6a440c251b58272a.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#scopeguard@1.2.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "scopeguard",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\scopeguard-1.2.0\\src\\lib.rs",
+                "edition": "2015",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libscopeguard-b3036dac4c63d524.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_task-fca6e7fc144838cf.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_core-0a703a179237bb43.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libpin_utils-9d9a9e5e1b2c045c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-d2343c0fe6ff07ff\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-d2343c0fe6ff07ff\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows_x86_64_msvc@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_x86_64_msvc",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows_x86_64_msvc-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libwindows_x86_64_msvc-2b925ab0435b4697.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\parking_lot_core-9928602ef8bb032d\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libfutures_util-9e10f2605ef7ded4.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "has_const_fn_trait_bound"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\build\\lock_api-26a72cfa18e2caea\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#windows-targets@0.52.6",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "windows_targets",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\windows-targets-0.52.6\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libwindows_targets-88f43bd664d6863b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#lock_api@0.4.13",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "lock_api",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\lock_api-0.4.13\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "atomic_usize",
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\liblock_api-9c180e8e0f8b9e04.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot_core@0.9.11",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot_core-0.9.11\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libparking_lot_core-371fd459e255aab1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#parking_lot@0.12.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "parking_lot",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\parking_lot-0.12.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libparking_lot-9292917706b43cc2.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#tokio@1.45.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "tokio",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\tokio-1.45.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking_lot",
+                "rt",
+                "sync",
+                "time"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libtokio-60c3bfbcb8b1abcf.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp97723j9a/bb8-0.9.0#bb8@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bb8",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "parking_lot"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp97723j9a\\bb8-0.9.0\\target\\debug\\deps\\libbb8-7495e8816c5f94d0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 39
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "bb8",
+          "version": "0.9.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\n[Settings](https://docs.rs/bb8/latest/settings.html)\n[Help](https://docs.rs/bb8/latest/help.html)\nSummary[Source](https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73)\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on [r2d2](https://github.com/sfackler/r2d2).\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## [\u00a7](https://docs.rs/bb8/latest/bb8/#example)Example\nUsing an imaginary \u201cfoodb\u201d database.\n[\u24d8](https://docs.rs/bb8/latest/bb8/ \"This example is not tested\")```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/bb8/latest/bb8/#structs)\n\n[Builder](https://docs.rs/bb8/latest/bb8/struct.Builder.html \"struct bb8::Builder\")\n    A builder for a connection pool.\n\n[NopErrorSink](https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html \"struct bb8::NopErrorSink\")\n    An `ErrorSink` implementation that does nothing.\n\n[Pool](https://docs.rs/bb8/latest/bb8/struct.Pool.html \"struct bb8::Pool\")\n    A generic connection pool.\n\n[PooledConnection](https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html \"struct bb8::PooledConnection\")\n    A smart pointer wrapping a connection.\n\n[State](https://docs.rs/bb8/latest/bb8/struct.State.html \"struct bb8::State\")\n    Information about the state of a `Pool`.\n\n[Statistics](https://docs.rs/bb8/latest/bb8/struct.Statistics.html \"struct bb8::Statistics\")\n    Statistics about the historical usage of the `Pool`.\n## Enums[\u00a7](https://docs.rs/bb8/latest/bb8/#enums)\n\n[AddError](https://docs.rs/bb8/latest/bb8/enum.AddError.html \"enum bb8::AddError\")\n    Error type returned by `Pool::add(conn)`\n\n[QueueStrategy](https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html \"enum bb8::QueueStrategy\")\n    bb8\u2019s queue strategy when getting pool resources\n\n[RunError](https://docs.rs/bb8/latest/bb8/enum.RunError.html \"enum bb8::RunError\")\n    bb8\u2019s error type.\n## Traits[\u00a7](https://docs.rs/bb8/latest/bb8/#traits)\n\n[CustomizeConnection](https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html \"trait bb8::CustomizeConnection\")\n    A trait which provides functionality to initialize a connection\n\n[ErrorSink](https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html \"trait bb8::ErrorSink\")\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\n[ManageConnection](https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html \"trait bb8::ManageConnection\")\n    A trait which provides connection-specific functionality.\n",
+            "markdown_with_citations": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on r2d2\u27e84\u27e9.\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## \u00a7\u27e85\u27e9Example\nUsing an imaginary \u201cfoodb\u201d database.\n\u24d8\u27e86\u27e9```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nBuilder\u27e88\u27e9\n    A builder for a connection pool.\n\nNopErrorSink\u27e89\u27e9\n    An `ErrorSink` implementation that does nothing.\n\nPool\u27e810\u27e9\n    A generic connection pool.\n\nPooledConnection\u27e811\u27e9\n    A smart pointer wrapping a connection.\n\nState\u27e812\u27e9\n    Information about the state of a `Pool`.\n\nStatistics\u27e813\u27e9\n    Statistics about the historical usage of the `Pool`.\n## Enums\u00a7\u27e814\u27e9\n\nAddError\u27e815\u27e9\n    Error type returned by `Pool::add(conn)`\n\nQueueStrategy\u27e816\u27e9\n    bb8\u2019s queue strategy when getting pool resources\n\nRunError\u27e817\u27e9\n    bb8\u2019s error type.\n## Traits\u00a7\u27e818\u27e9\n\nCustomizeConnection\u27e819\u27e9\n    A trait which provides functionality to initialize a connection\n\nErrorSink\u27e820\u27e9\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\nManageConnection\u27e821\u27e9\n    A trait which provides connection-specific functionality.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bb8/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bb8/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73: Source\n\u27e84\u27e9 https://github.com/sfackler/r2d2: r2d2\n\u27e85\u27e9 https://docs.rs/bb8/latest/bb8/#example: \u00a7\n\u27e86\u27e9 https://docs.rs/bb8/latest/bb8/: This example is not tested - \u24d8\n\u27e87\u27e9 https://docs.rs/bb8/latest/bb8/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/bb8/latest/bb8/struct.Builder.html: struct bb8::Builder - Builder\n\u27e89\u27e9 https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html: struct bb8::NopErrorSink - NopErrorSink\n\u27e810\u27e9 https://docs.rs/bb8/latest/bb8/struct.Pool.html: struct bb8::Pool - Pool\n\u27e811\u27e9 https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html: struct bb8::PooledConnection - PooledConnection\n\u27e812\u27e9 https://docs.rs/bb8/latest/bb8/struct.State.html: struct bb8::State - State\n\u27e813\u27e9 https://docs.rs/bb8/latest/bb8/struct.Statistics.html: struct bb8::Statistics - Statistics\n\u27e814\u27e9 https://docs.rs/bb8/latest/bb8/#enums: \u00a7\n\u27e815\u27e9 https://docs.rs/bb8/latest/bb8/enum.AddError.html: enum bb8::AddError - AddError\n\u27e816\u27e9 https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html: enum bb8::QueueStrategy - QueueStrategy\n\u27e817\u27e9 https://docs.rs/bb8/latest/bb8/enum.RunError.html: enum bb8::RunError - RunError\n\u27e818\u27e9 https://docs.rs/bb8/latest/bb8/#traits: \u00a7\n\u27e819\u27e9 https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html: trait bb8::CustomizeConnection - CustomizeConnection\n\u27e820\u27e9 https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html: trait bb8::ErrorSink - ErrorSink\n\u27e821\u27e9 https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html: trait bb8::ManageConnection - ManageConnection\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "bb8",
+          "version": "0.9.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\n[Settings](https://docs.rs/bb8/latest/settings.html)\n[Help](https://docs.rs/bb8/latest/help.html)\nSummary[Source](https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73)\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on [r2d2](https://github.com/sfackler/r2d2).\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## [\u00a7](https://docs.rs/bb8/latest/bb8/#example)Example\nUsing an imaginary \u201cfoodb\u201d database.\n[\u24d8](https://docs.rs/bb8/latest/bb8/ \"This example is not tested\")```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs[\u00a7](https://docs.rs/bb8/latest/bb8/#structs)\n\n[Builder](https://docs.rs/bb8/latest/bb8/struct.Builder.html \"struct bb8::Builder\")\n    A builder for a connection pool.\n\n[NopErrorSink](https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html \"struct bb8::NopErrorSink\")\n    An `ErrorSink` implementation that does nothing.\n\n[Pool](https://docs.rs/bb8/latest/bb8/struct.Pool.html \"struct bb8::Pool\")\n    A generic connection pool.\n\n[PooledConnection](https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html \"struct bb8::PooledConnection\")\n    A smart pointer wrapping a connection.\n\n[State](https://docs.rs/bb8/latest/bb8/struct.State.html \"struct bb8::State\")\n    Information about the state of a `Pool`.\n\n[Statistics](https://docs.rs/bb8/latest/bb8/struct.Statistics.html \"struct bb8::Statistics\")\n    Statistics about the historical usage of the `Pool`.\n## Enums[\u00a7](https://docs.rs/bb8/latest/bb8/#enums)\n\n[AddError](https://docs.rs/bb8/latest/bb8/enum.AddError.html \"enum bb8::AddError\")\n    Error type returned by `Pool::add(conn)`\n\n[QueueStrategy](https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html \"enum bb8::QueueStrategy\")\n    bb8\u2019s queue strategy when getting pool resources\n\n[RunError](https://docs.rs/bb8/latest/bb8/enum.RunError.html \"enum bb8::RunError\")\n    bb8\u2019s error type.\n## Traits[\u00a7](https://docs.rs/bb8/latest/bb8/#traits)\n\n[CustomizeConnection](https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html \"trait bb8::CustomizeConnection\")\n    A trait which provides functionality to initialize a connection\n\n[ErrorSink](https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html \"trait bb8::ErrorSink\")\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\n[ManageConnection](https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html \"trait bb8::ManageConnection\")\n    A trait which provides connection-specific functionality.\n",
+            "markdown_with_citations": "[](https://docs.rs/bb8/latest/bb8/all.html \"show sidebar\")\n# Crate bb8Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nA full-featured connection pool, designed for asynchronous connections (using tokio). Originally based on r2d2\u27e84\u27e9.\nOpening a new database connection every time one is needed is both inefficient and can lead to resource exhaustion under high traffic conditions. A connection pool maintains a set of open connections to a database, handing them out for repeated use.\nbb8 is agnostic to the connection type it is managing. Implementors of the `ManageConnection` trait provide the database-specific logic to create and check the health of connections.\n## \u00a7\u27e85\u27e9Example\nUsing an imaginary \u201cfoodb\u201d database.\n\u24d8\u27e86\u27e9```\n#[tokio::main]\nasync fn main() {\n  let manager = bb8_foodb::FooConnectionManager::new(\"localhost:1234\");\n  let pool = bb8::Pool::builder().build(manager).await.unwrap();\n  for _ in 0..20 {\n    let pool = pool.clone();\n    tokio::spawn(async move {\n      let conn = pool.get().await.unwrap();\n      // use the connection\n      // it will be returned to the pool when it falls out of scope.\n    });\n  }\n}\n```\n\n## Structs\u00a7\u27e87\u27e9\n\nBuilder\u27e88\u27e9\n    A builder for a connection pool.\n\nNopErrorSink\u27e89\u27e9\n    An `ErrorSink` implementation that does nothing.\n\nPool\u27e810\u27e9\n    A generic connection pool.\n\nPooledConnection\u27e811\u27e9\n    A smart pointer wrapping a connection.\n\nState\u27e812\u27e9\n    Information about the state of a `Pool`.\n\nStatistics\u27e813\u27e9\n    Statistics about the historical usage of the `Pool`.\n## Enums\u00a7\u27e814\u27e9\n\nAddError\u27e815\u27e9\n    Error type returned by `Pool::add(conn)`\n\nQueueStrategy\u27e816\u27e9\n    bb8\u2019s queue strategy when getting pool resources\n\nRunError\u27e817\u27e9\n    bb8\u2019s error type.\n## Traits\u00a7\u27e818\u27e9\n\nCustomizeConnection\u27e819\u27e9\n    A trait which provides functionality to initialize a connection\n\nErrorSink\u27e820\u27e9\n    A trait to receive errors generated by connection management that aren\u2019t tied to any particular caller.\n\nManageConnection\u27e821\u27e9\n    A trait which provides connection-specific functionality.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bb8/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bb8/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bb8/latest/src/bb8/lib.rs.html#1-73: Source\n\u27e84\u27e9 https://github.com/sfackler/r2d2: r2d2\n\u27e85\u27e9 https://docs.rs/bb8/latest/bb8/#example: \u00a7\n\u27e86\u27e9 https://docs.rs/bb8/latest/bb8/: This example is not tested - \u24d8\n\u27e87\u27e9 https://docs.rs/bb8/latest/bb8/#structs: \u00a7\n\u27e88\u27e9 https://docs.rs/bb8/latest/bb8/struct.Builder.html: struct bb8::Builder - Builder\n\u27e89\u27e9 https://docs.rs/bb8/latest/bb8/struct.NopErrorSink.html: struct bb8::NopErrorSink - NopErrorSink\n\u27e810\u27e9 https://docs.rs/bb8/latest/bb8/struct.Pool.html: struct bb8::Pool - Pool\n\u27e811\u27e9 https://docs.rs/bb8/latest/bb8/struct.PooledConnection.html: struct bb8::PooledConnection - PooledConnection\n\u27e812\u27e9 https://docs.rs/bb8/latest/bb8/struct.State.html: struct bb8::State - State\n\u27e813\u27e9 https://docs.rs/bb8/latest/bb8/struct.Statistics.html: struct bb8::Statistics - Statistics\n\u27e814\u27e9 https://docs.rs/bb8/latest/bb8/#enums: \u00a7\n\u27e815\u27e9 https://docs.rs/bb8/latest/bb8/enum.AddError.html: enum bb8::AddError - AddError\n\u27e816\u27e9 https://docs.rs/bb8/latest/bb8/enum.QueueStrategy.html: enum bb8::QueueStrategy - QueueStrategy\n\u27e817\u27e9 https://docs.rs/bb8/latest/bb8/enum.RunError.html: enum bb8::RunError - RunError\n\u27e818\u27e9 https://docs.rs/bb8/latest/bb8/#traits: \u00a7\n\u27e819\u27e9 https://docs.rs/bb8/latest/bb8/trait.CustomizeConnection.html: trait bb8::CustomizeConnection - CustomizeConnection\n\u27e820\u27e9 https://docs.rs/bb8/latest/bb8/trait.ErrorSink.html: trait bb8::ErrorSink - ErrorSink\n\u27e821\u27e9 https://docs.rs/bb8/latest/bb8/trait.ManageConnection.html: trait bb8::ManageConnection - ManageConnection\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `bb8` crate is an asynchronous, generic connection pool designed to efficiently manage reusable connections, reducing overhead and preventing resource exhaustion under high traffic. It is agnostic to connection types, relying on the `ManageConnection` trait for database-specific logic, and offers features like customizable connection initialization, error handling, and pool usage statistics. Key components include a pool builder, smart pointer for connections, and configurable queue strategies.",
+          "feature_summary": null,
+          "use_case": "Database",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: Connection Pooling  \n\u2705 Factual: The `bb8` crate provides a full-featured, asynchronous connection pool designed for managing database connections efficiently under high traffic conditions.  \n\u274c Counterfactual: The `bb8` crate only supports synchronous connections and cannot be used with asynchronous frameworks like `tokio`.  \n\n---\n\n### Pair 2: Connection Type Agnosticism  \n\u2705 Factual: `bb8` is agnostic to the type of connection it manages, allowing developers to implement the `ManageConnection` trait for any database or resource type.  \n\u274c Counterfactual: `bb8` is specifically designed for PostgreSQL connections and cannot be adapted for other database systems.  \n\n---\n\n### Pair 3: Error Handling  \n\u2705 Factual: The `bb8` crate includes the `ErrorSink` trait, which allows developers to handle errors generated during connection management that are not tied to a specific caller.  \n\u274c Counterfactual: The `bb8` crate automatically retries failed connections without providing any mechanism for error handling customization.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-9b77dcc2-0f082346-1751262361",
+      "timestamp": "2025-06-30T05:46:01.277500+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

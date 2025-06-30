@@ -1,9 +1,9 @@
-import subprocess
-import tempfile
-import shutil
 import os
+import subprocess
+from typing import Any, Dict
+
 import toml
-from typing import Dict, Any, Optional
+
 
 class CrateAnalyzer:
     def __init__(self, crate_source_path: str):
@@ -30,19 +30,24 @@ class CrateAnalyzer:
     def analyze(self) -> Dict[str, Any]:
         results = {}
         # Build & test
-        results["build"] = self.run_cargo_cmd(["cargo", "build", "--all-features"])
-        results["test"] = self.run_cargo_cmd(["cargo", "test", "--all-features"])
+        results["build"] = self.run_cargo_cmd(
+            ["cargo", "+stable", "build", "--all-features"])
+        results["test"] = self.run_cargo_cmd(
+            ["cargo", "+stable", "test", "--all-features"])
         # Lint & format
-        results["clippy"] = self.run_cargo_cmd(["cargo", "clippy", "--all-features", "--", "-D", "warnings"])
-        results["fmt"] = self.run_cargo_cmd(["cargo", "fmt", "--", "--check"])
+        results["clippy"] = self.run_cargo_cmd(
+            ["cargo", "+stable", "clippy", "--all-features", "--", "-D", "warnings"])
+        results["fmt"] = self.run_cargo_cmd(["cargo", "+stable", "fmt", "--", "--check"])
         # Security
-        results["audit"] = self.run_cargo_cmd(["cargo", "audit"])
+        results["audit"] = self.run_cargo_cmd(["cargo", "+stable", "audit"])
         # Dependency graph
-        results["tree"] = self.run_cargo_cmd(["cargo", "tree"])
+        results["tree"] = self.run_cargo_cmd(["cargo", "+stable", "tree"])
         # Documentation
-        results["doc"] = self.run_cargo_cmd(["cargo", "doc", "--no-deps"])
+        results["doc"] = self.run_cargo_cmd(["cargo", "+stable", "doc", "--no-deps"])
         # Provenance
-        vcs_info_path = os.path.join(self.crate_source_path, ".cargo_vcs_info.json")
+        vcs_info_path = os.path.join(
+            self.crate_source_path,
+            ".cargo_vcs_info.json")
         if os.path.exists(vcs_info_path):
             with open(vcs_info_path) as f:
                 results["vcs_info"] = f.read()
@@ -51,4 +56,4 @@ class CrateAnalyzer:
         if os.path.exists(cargo_toml):
             with open(cargo_toml) as f:
                 results["metadata"] = toml.load(f)
-        return results 
+        return results

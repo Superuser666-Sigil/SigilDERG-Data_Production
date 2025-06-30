@@ -1,0 +1,811 @@
+[
+  {
+    "execution_id": "exec-badb5fd2-1f0ece80-1751261161",
+    "timestamp": "2025-06-30T05:26:01.902411+00:00",
+    "sacred_chain": {
+      "input_data": "percent-encoding",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'percent-encoding' -> 'percent-encoding'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "percent-encoding",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/percent-encoding",
+            "title": "percent-encoding v2.3.1",
+            "content": {
+              "raw_markdown": "#  percent-encoding v2.3.1\nPercent encoding and decoding \n  * [ Readme ](https://crates.io/crates/percent-encoding)\n  * [ 7 Versions ](https://crates.io/crates/percent-encoding/versions)\n  * [ Dependencies ](https://crates.io/crates/percent-encoding/dependencies)\n  * [ Dependents ](https://crates.io/crates/percent-encoding/reverse_dependencies)\n\n\n## Metadata\nover 1 year ago \nv1.51.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n10 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add percent-encoding\nOr add the following line to your Cargo.toml:\npercent-encoding = \"2.3.1\"\n## Repository\n[ github.com/servo/rust-url ](https://github.com/servo/rust-url/)\n## Owners\n[ Report crate ](https://crates.io/support?crate=percent-encoding&inquire=crate-violation)\n### Stats Overview\n339,618,472 Downloads all time\n7 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  percent-encoding v2.3.1\nPercent encoding and decoding \n  *  Readme \u27e81\u27e9\n  *  7 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\nover 1 year ago \nv1.51.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n10 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add percent-encoding\nOr add the following line to your Cargo.toml:\npercent-encoding = \"2.3.1\"\n## Repository\n github.com/servo/rust-url \u27e87\u27e9\n## Owners\n Report crate \u27e88\u27e9\n### Stats Overview\n339,618,472 Downloads all time\n7 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/percent-encoding:  Readme \n\u27e82\u27e9 https://crates.io/crates/percent-encoding/versions:  7 Versions \n\u27e83\u27e9 https://crates.io/crates/percent-encoding/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/percent-encoding/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://github.com/servo/rust-url/:  github.com/servo/rust-url \n\u27e88\u27e9 https://crates.io/support?crate=percent-encoding&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1029,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114951.7465562"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/percent-encoding",
+            "title": "Crate percent_encodingCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\n[Settings](https://docs.rs/percent-encoding/latest/settings.html)\n[Help](https://docs.rs/percent-encoding/latest/help.html)\nSummary[Source](https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477)\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The [`AsciiSet`](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\") parameter of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\") lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## [\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#examples)Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#structs)\n\n[AsciiSet](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\")\n    Represents a set of characters or bytes in the ASCII range.\n\n[PercentDecode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html \"struct percent_encoding::PercentDecode\")\n    The return type of [`percent_decode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\").\n\n[PercentEncode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html \"struct percent_encoding::PercentEncode\")\n    The return type of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\").\n## Constants[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#constants)\n\n[CONTROLS](https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html \"constant percent_encoding::CONTROLS\")\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\n[NON_ALPHANUMERIC](https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html \"constant percent_encoding::NON_ALPHANUMERIC\")\n    Everything that is not an ASCII letter or digit.\n## Functions[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#functions)\n\n[percent_decode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\")\n    Percent-decode the given bytes.\n\n[percent_decode_str](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html \"fn percent_encoding::percent_decode_str\")\n    Percent-decode the given string.\n\n[percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\")\n    Percent-encode the given bytes with the given set.\n\n[percent_encode_byte](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html \"fn percent_encoding::percent_encode_byte\")\n    Return the percent-encoding of the given byte.\n\n[utf8_percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\")\n    Percent-encode the UTF-8 encoding of the given string.\n",
+              "markdown_with_citations": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The `AsciiSet`\u27e84\u27e9 parameter of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9 lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## \u00a7\u27e87\u27e9Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nAsciiSet\u27e84\u27e9\n    Represents a set of characters or bytes in the ASCII range.\n\nPercentDecode\u27e89\u27e9\n    The return type of `percent_decode`\u27e810\u27e9.\n\nPercentEncode\u27e811\u27e9\n    The return type of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9.\n## Constants\u00a7\u27e812\u27e9\n\nCONTROLS\u27e813\u27e9\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\nNON_ALPHANUMERIC\u27e814\u27e9\n    Everything that is not an ASCII letter or digit.\n## Functions\u00a7\u27e815\u27e9\n\npercent_decode\u27e810\u27e9\n    Percent-decode the given bytes.\n\npercent_decode_str\u27e816\u27e9\n    Percent-decode the given string.\n\npercent_encode\u27e85\u27e9\n    Percent-encode the given bytes with the given set.\n\npercent_encode_byte\u27e817\u27e9\n    Return the percent-encoding of the given byte.\n\nutf8_percent_encode\u27e86\u27e9\n    Percent-encode the UTF-8 encoding of the given string.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/percent-encoding/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/percent-encoding/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477: Source\n\u27e84\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html: struct percent_encoding::AsciiSet - `AsciiSet`\n\u27e85\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html: fn percent_encoding::percent_encode - `percent_encode`\n\u27e86\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html: fn percent_encoding::utf8_percent_encode - `utf8_percent_encode`\n\u27e87\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html: struct percent_encoding::PercentDecode - PercentDecode\n\u27e810\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html: fn percent_encoding::percent_decode - `percent_decode`\n\u27e811\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html: struct percent_encoding::PercentEncode - PercentEncode\n\u27e812\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#constants: \u00a7\n\u27e813\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html: constant percent_encoding::CONTROLS - CONTROLS\n\u27e814\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html: constant percent_encoding::NON_ALPHANUMERIC - NON_ALPHANUMERIC\n\u27e815\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#functions: \u00a7\n\u27e816\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html: fn percent_encoding::percent_decode_str - percent_decode_str\n\u27e817\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html: fn percent_encoding::percent_encode_byte - percent_encode_byte\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4728,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114952.6152283"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/percent-encoding",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [7 stable releases](https://lib.rs/crates/percent-encoding/versions)\n2.3.1 |  Nov 22, 2023   \n---|---  \n2.3.0 |  Jun 5, 2023   \n2.2.0 |  Sep 8, 2022   \n2.1.0 |  Aug 5, 2019   \n1.0.0 |  Jun 13, 2017   \n#**20** in [Value formatting](https://lib.rs/value-formatting \"Crates to allow an application to format values for display to a user, potentially adapting the display to various languages and regions.\")\nDownload history 2968266/week @ 2025-02-02 2984772/week @ 2025-02-09 3065715/week @ 2025-02-16 3164983/week @ 2025-02-23 3452987/week @ 2025-03-02 3557288/week @ 2025-03-09 3873729/week @ 2025-03-16 3978453/week @ 2025-03-23 3483230/week @ 2025-03-30 3693984/week @ 2025-04-06 3383126/week @ 2025-04-13 3252447/week @ 2025-04-20 3189877/week @ 2025-04-27 3237642/week @ 2025-05-04 3337374/week @ 2025-05-11 3172773/week @ 2025-05-18\n**13,148,706** downloads per month Used in [**41,392** crates (1,074 directly)](https://lib.rs/crates/percent-encoding/rev)\n**MIT/Apache**\n18KB  400 lines\nURLs use special characters to indicate the parts of the request. For example, a ```?``` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the ```%``` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with ```%``20```.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The ```?``` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The [``AsciiSet``](https://docs.rs/percent-encoding/latest/percent_encoding/?search=AsciiSet \"`AsciiSet`\") parameter of [``percent_encode``](https://docs.rs/percent-encoding/latest/percent_encoding/?search=percent_encode \"`percent_encode`\") and [``utf8_percent_encode``](https://docs.rs/percent-encoding/latest/percent_encoding/?search=utf8_percent_encode \"`utf8_percent_encode`\") lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the ``add`` method of an existing set.\n# Examples\n```\n``use` `percent_encoding`::````{`utf8_percent_encode`,` AsciiSet`,` `CONTROLS````}```;`\n``///` https://url.spec.whatwg.org/#fragment-percent-encode-set`\n`const` `FRAGMENT``:` `&`AsciiSet `=` `&``CONTROLS``.``add``(```b``'` `'```)``.``add``(```b``'`\"`'```)``.``add``(```b``'`<`'```)``.``add``(```b``'`>`'```)``.``add``(```b``'```'```)``;`\n`assert_eq!``(``utf8_percent_encode``(```\"`foo <bar>`\"```,` `FRAGMENT``)``.``to_string``(``)``,` ``\"`foo%20%3Cbar%3E`\"```)``;`\n`\n```\n\n#### No runtime deps\n#### [Features](https://lib.rs/crates/percent-encoding/features)\n  * [alloc](https://lib.rs/crates/percent-encoding/features#feature-alloc)\n  * [std](https://lib.rs/crates/percent-encoding/features#feature-std)\n\n\n",
+              "markdown_with_citations": "###  7 stable releases\u27e81\u27e9\n2.3.1 |  Nov 22, 2023   \n---|---  \n2.3.0 |  Jun 5, 2023   \n2.2.0 |  Sep 8, 2022   \n2.1.0 |  Aug 5, 2019   \n1.0.0 |  Jun 13, 2017   \n#**20** in Value formatting\u27e82\u27e9\nDownload history 2968266/week @ 2025-02-02 2984772/week @ 2025-02-09 3065715/week @ 2025-02-16 3164983/week @ 2025-02-23 3452987/week @ 2025-03-02 3557288/week @ 2025-03-09 3873729/week @ 2025-03-16 3978453/week @ 2025-03-23 3483230/week @ 2025-03-30 3693984/week @ 2025-04-06 3383126/week @ 2025-04-13 3252447/week @ 2025-04-20 3189877/week @ 2025-04-27 3237642/week @ 2025-05-04 3337374/week @ 2025-05-11 3172773/week @ 2025-05-18\n**13,148,706** downloads per month Used in **41,392** crates (1,074 directly)\u27e83\u27e9\n**MIT/Apache**\n18KB  400 lines\nURLs use special characters to indicate the parts of the request. For example, a ```?``` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the ```%``` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with ```%``20```.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The ```?``` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The ``AsciiSet``\u27e84\u27e9 parameter of ``percent_encode``\u27e85\u27e9 and ``utf8_percent_encode``\u27e86\u27e9 lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the ``add`` method of an existing set.\n# Examples\n```\n``use` `percent_encoding`::````{`utf8_percent_encode`,` AsciiSet`,` `CONTROLS````}```;`\n``///` https://url.spec.whatwg.org/#fragment-percent-encode-set`\n`const` `FRAGMENT``:` `&`AsciiSet `=` `&``CONTROLS``.``add``(```b``'` `'```)``.``add``(```b``'`\"`'```)``.``add``(```b``'`<`'```)``.``add``(```b``'`>`'```)``.``add``(```b``'```'```)``;`\n`assert_eq!``(``utf8_percent_encode``(```\"`foo <bar>`\"```,` `FRAGMENT``)``.``to_string``(``)``,` ``\"`foo%20%3Cbar%3E`\"```)``;`\n`\n```\n\n#### No runtime deps\n#### Features\u27e87\u27e9\n  * alloc\u27e88\u27e9\n  * std\u27e89\u27e9\n\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/percent-encoding/versions: 7 stable releases\n\u27e82\u27e9 https://lib.rs/value-formatting: Crates to allow an application to format values for display to a user, potentially adapting the display to various languages and regions. - Value formatting\n\u27e83\u27e9 https://lib.rs/crates/percent-encoding/rev: **41,392** crates (1,074 directly)\n\u27e84\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/?search=AsciiSet: `AsciiSet` - ``AsciiSet``\n\u27e85\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/?search=percent_encode: `percent_encode` - ``percent_encode``\n\u27e86\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/?search=utf8_percent_encode: `utf8_percent_encode` - ``utf8_percent_encode``\n\u27e87\u27e9 https://lib.rs/crates/percent-encoding/features: Features\n\u27e88\u27e9 https://lib.rs/crates/percent-encoding/features#feature-alloc: alloc\n\u27e89\u27e9 https://lib.rs/crates/percent-encoding/features#feature-std: std\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3080,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114952.9833448"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplogwlcyu/percent-encoding-2.3.1#percent-encoding@2.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "percent_encoding",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: ambiguous wide pointer comparison, the comparison includes metadata which may not be expected\n   --> src\\lib.rs:466:35\n    |\n466 |                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(ambiguous_wide_pointer_comparisons)]` on by default\nhelp: use `std::ptr::addr_eq` or untyped pointers to only compare their addresses\n    |\n466 -                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n466 +                     debug_assert!(std::ptr::addr_eq(raw_utf8, &*bytes as *const [u8]));\n    |\nhelp: use explicit `std::ptr::eq` method to compare metadata and addresses\n    |\n466 -                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n466 +                     debug_assert!(std::ptr::eq(raw_utf8, &*bytes as *const [u8]));\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(ambiguous_wide_pointer_comparisons)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use `std::ptr::addr_eq` or untyped pointers to only compare their addresses",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15228,
+                        "byte_start": 15228,
+                        "column_end": 35,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": "std::ptr::addr_eq(",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 35,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15240,
+                        "byte_start": 15236,
+                        "column_end": 47,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ", ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 43,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15262,
+                        "byte_start": 15262,
+                        "column_end": 69,
+                        "column_start": 69,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ")",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 69,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use explicit `std::ptr::eq` method to compare metadata and addresses",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15228,
+                        "byte_start": 15228,
+                        "column_end": 35,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": "std::ptr::eq(",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 35,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15240,
+                        "byte_start": 15236,
+                        "column_end": 47,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ", ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 43,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15262,
+                        "byte_start": 15262,
+                        "column_end": 69,
+                        "column_start": 69,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ")",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 69,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "ambiguous_wide_pointer_comparisons",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "ambiguous wide pointer comparison, the comparison includes metadata which may not be expected",
+                "spans": [
+                  {
+                    "byte_end": 15262,
+                    "byte_start": 15228,
+                    "column_end": 69,
+                    "column_start": 35,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 466,
+                    "line_start": 466,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 35,
+                        "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplogwlcyu/percent-encoding-2.3.1#percent-encoding@2.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "percent_encoding",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\target\\debug\\deps\\libpercent_encoding-a3bf6070bbbc9c91.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplogwlcyu/percent-encoding-2.3.1#percent-encoding@2.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "percent_encoding",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: use `core::ptr::eq` when comparing raw pointers\n   --> src\\lib.rs:466:35\n    |\n466 |                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ help: try: `core::ptr::eq(raw_utf8, &*bytes)`\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_eq\n    = note: `#[warn(clippy::ptr_eq)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#ptr_eq",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::ptr_eq)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "try",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15262,
+                        "byte_start": 15228,
+                        "column_end": 69,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": "core::ptr::eq(raw_utf8, &*bytes)",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 35,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::ptr_eq",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "use `core::ptr::eq` when comparing raw pointers",
+                "spans": [
+                  {
+                    "byte_end": 15262,
+                    "byte_start": 15228,
+                    "column_end": 69,
+                    "column_start": 35,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 466,
+                    "line_start": 466,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 35,
+                        "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplogwlcyu/percent-encoding-2.3.1#percent-encoding@2.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "percent_encoding",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: ambiguous wide pointer comparison, the comparison includes metadata which may not be expected\n   --> src\\lib.rs:466:35\n    |\n466 |                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n    |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(ambiguous_wide_pointer_comparisons)]` on by default\nhelp: use `std::ptr::addr_eq` or untyped pointers to only compare their addresses\n    |\n466 -                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n466 +                     debug_assert!(std::ptr::addr_eq(raw_utf8, &*bytes as *const [u8]));\n    |\nhelp: use explicit `std::ptr::eq` method to compare metadata and addresses\n    |\n466 -                     debug_assert!(raw_utf8 == &*bytes as *const [u8]);\n466 +                     debug_assert!(std::ptr::eq(raw_utf8, &*bytes as *const [u8]));\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(ambiguous_wide_pointer_comparisons)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use `std::ptr::addr_eq` or untyped pointers to only compare their addresses",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15228,
+                        "byte_start": 15228,
+                        "column_end": 35,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": "std::ptr::addr_eq(",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 35,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15240,
+                        "byte_start": 15236,
+                        "column_end": 47,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ", ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 43,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15262,
+                        "byte_start": 15262,
+                        "column_end": 69,
+                        "column_start": 69,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ")",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 69,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "use explicit `std::ptr::eq` method to compare metadata and addresses",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 15228,
+                        "byte_start": 15228,
+                        "column_end": 35,
+                        "column_start": 35,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": "std::ptr::eq(",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 35,
+                            "highlight_start": 35,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15240,
+                        "byte_start": 15236,
+                        "column_end": 47,
+                        "column_start": 43,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ", ",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 47,
+                            "highlight_start": 43,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 15262,
+                        "byte_start": 15262,
+                        "column_end": 69,
+                        "column_start": 69,
+                        "expansion": null,
+                        "file_name": "src\\lib.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 466,
+                        "line_start": 466,
+                        "suggested_replacement": ")",
+                        "suggestion_applicability": "MaybeIncorrect",
+                        "text": [
+                          {
+                            "highlight_end": 69,
+                            "highlight_start": 69,
+                            "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "ambiguous_wide_pointer_comparisons",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "ambiguous wide pointer comparison, the comparison includes metadata which may not be expected",
+                "spans": [
+                  {
+                    "byte_end": 15262,
+                    "byte_start": 15228,
+                    "column_end": 69,
+                    "column_start": 35,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 466,
+                    "line_start": 466,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 69,
+                        "highlight_start": 35,
+                        "text": "                    debug_assert!(raw_utf8 == &*bytes as *const [u8]);"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmplogwlcyu/percent-encoding-2.3.1#percent-encoding@2.3.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "percent_encoding",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmplogwlcyu\\percent-encoding-2.3.1\\target\\debug\\deps\\libpercent_encoding-38e8fea5630a6b63.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 1
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "percent-encoding",
+          "version": "2.3.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\n[Settings](https://docs.rs/percent-encoding/latest/settings.html)\n[Help](https://docs.rs/percent-encoding/latest/help.html)\nSummary[Source](https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477)\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The [`AsciiSet`](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\") parameter of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\") lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## [\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#examples)Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#structs)\n\n[AsciiSet](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\")\n    Represents a set of characters or bytes in the ASCII range.\n\n[PercentDecode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html \"struct percent_encoding::PercentDecode\")\n    The return type of [`percent_decode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\").\n\n[PercentEncode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html \"struct percent_encoding::PercentEncode\")\n    The return type of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\").\n## Constants[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#constants)\n\n[CONTROLS](https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html \"constant percent_encoding::CONTROLS\")\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\n[NON_ALPHANUMERIC](https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html \"constant percent_encoding::NON_ALPHANUMERIC\")\n    Everything that is not an ASCII letter or digit.\n## Functions[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#functions)\n\n[percent_decode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\")\n    Percent-decode the given bytes.\n\n[percent_decode_str](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html \"fn percent_encoding::percent_decode_str\")\n    Percent-decode the given string.\n\n[percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\")\n    Percent-encode the given bytes with the given set.\n\n[percent_encode_byte](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html \"fn percent_encoding::percent_encode_byte\")\n    Return the percent-encoding of the given byte.\n\n[utf8_percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\")\n    Percent-encode the UTF-8 encoding of the given string.\n",
+            "markdown_with_citations": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The `AsciiSet`\u27e84\u27e9 parameter of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9 lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## \u00a7\u27e87\u27e9Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nAsciiSet\u27e84\u27e9\n    Represents a set of characters or bytes in the ASCII range.\n\nPercentDecode\u27e89\u27e9\n    The return type of `percent_decode`\u27e810\u27e9.\n\nPercentEncode\u27e811\u27e9\n    The return type of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9.\n## Constants\u00a7\u27e812\u27e9\n\nCONTROLS\u27e813\u27e9\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\nNON_ALPHANUMERIC\u27e814\u27e9\n    Everything that is not an ASCII letter or digit.\n## Functions\u00a7\u27e815\u27e9\n\npercent_decode\u27e810\u27e9\n    Percent-decode the given bytes.\n\npercent_decode_str\u27e816\u27e9\n    Percent-decode the given string.\n\npercent_encode\u27e85\u27e9\n    Percent-encode the given bytes with the given set.\n\npercent_encode_byte\u27e817\u27e9\n    Return the percent-encoding of the given byte.\n\nutf8_percent_encode\u27e86\u27e9\n    Percent-encode the UTF-8 encoding of the given string.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/percent-encoding/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/percent-encoding/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477: Source\n\u27e84\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html: struct percent_encoding::AsciiSet - `AsciiSet`\n\u27e85\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html: fn percent_encoding::percent_encode - `percent_encode`\n\u27e86\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html: fn percent_encoding::utf8_percent_encode - `utf8_percent_encode`\n\u27e87\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html: struct percent_encoding::PercentDecode - PercentDecode\n\u27e810\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html: fn percent_encoding::percent_decode - `percent_decode`\n\u27e811\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html: struct percent_encoding::PercentEncode - PercentEncode\n\u27e812\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#constants: \u00a7\n\u27e813\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html: constant percent_encoding::CONTROLS - CONTROLS\n\u27e814\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html: constant percent_encoding::NON_ALPHANUMERIC - NON_ALPHANUMERIC\n\u27e815\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#functions: \u00a7\n\u27e816\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html: fn percent_encoding::percent_decode_str - percent_decode_str\n\u27e817\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html: fn percent_encoding::percent_encode_byte - percent_encode_byte\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "percent-encoding",
+          "version": "2.3.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\n[Settings](https://docs.rs/percent-encoding/latest/settings.html)\n[Help](https://docs.rs/percent-encoding/latest/help.html)\nSummary[Source](https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477)\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The [`AsciiSet`](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\") parameter of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\") lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## [\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#examples)Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#structs)\n\n[AsciiSet](https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html \"struct percent_encoding::AsciiSet\")\n    Represents a set of characters or bytes in the ASCII range.\n\n[PercentDecode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html \"struct percent_encoding::PercentDecode\")\n    The return type of [`percent_decode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\").\n\n[PercentEncode](https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html \"struct percent_encoding::PercentEncode\")\n    The return type of [`percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\") and [`utf8_percent_encode`](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\").\n## Constants[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#constants)\n\n[CONTROLS](https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html \"constant percent_encoding::CONTROLS\")\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\n[NON_ALPHANUMERIC](https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html \"constant percent_encoding::NON_ALPHANUMERIC\")\n    Everything that is not an ASCII letter or digit.\n## Functions[\u00a7](https://docs.rs/percent-encoding/latest/percent_encoding/#functions)\n\n[percent_decode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html \"fn percent_encoding::percent_decode\")\n    Percent-decode the given bytes.\n\n[percent_decode_str](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html \"fn percent_encoding::percent_decode_str\")\n    Percent-decode the given string.\n\n[percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html \"fn percent_encoding::percent_encode\")\n    Percent-encode the given bytes with the given set.\n\n[percent_encode_byte](https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html \"fn percent_encoding::percent_encode_byte\")\n    Return the percent-encoding of the given byte.\n\n[utf8_percent_encode](https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html \"fn percent_encoding::utf8_percent_encode\")\n    Percent-encode the UTF-8 encoding of the given string.\n",
+            "markdown_with_citations": "[](https://docs.rs/percent-encoding/latest/percent_encoding/all.html \"show sidebar\")\n# Crate percent_encodingCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nURLs use special characters to indicate the parts of the request. For example, a `?` question mark marks the end of a path and the start of a query string. In order for that character to exist inside a path, it needs to be encoded differently.\nPercent encoding replaces reserved characters with the `%` escape character followed by a byte value as two hexadecimal digits. For example, an ASCII space is replaced with `%20`.\nWhen encoding, the set of characters that can (and should, for readability) be left alone depends on the context. The `?` question mark mentioned above is not a separator when used literally inside of a query string, and therefore does not need to be encoded. The `AsciiSet`\u27e84\u27e9 parameter of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9 lets callers configure this.\nThis crate deliberately does not provide many different sets. Users should consider in what context the encoded string will be used, read relevant specifications, and define their own set. This is done by using the `add` method of an existing set.\n## \u00a7\u27e87\u27e9Examples\n```\nuse percent_encoding::{utf8_percent_encode, AsciiSet, CONTROLS};\n/// https://url.spec.whatwg.org/#fragment-percent-encode-set\nconst FRAGMENT: &AsciiSet = &CONTROLS.add(b' ').add(b'\"').add(b'<').add(b'>').add(b'`');\nassert_eq!(utf8_percent_encode(\"foo <bar>\", FRAGMENT).to_string(), \"foo%20%3Cbar%3E\");\n```\n\n## Structs\u00a7\u27e88\u27e9\n\nAsciiSet\u27e84\u27e9\n    Represents a set of characters or bytes in the ASCII range.\n\nPercentDecode\u27e89\u27e9\n    The return type of `percent_decode`\u27e810\u27e9.\n\nPercentEncode\u27e811\u27e9\n    The return type of `percent_encode`\u27e85\u27e9 and `utf8_percent_encode`\u27e86\u27e9.\n## Constants\u00a7\u27e812\u27e9\n\nCONTROLS\u27e813\u27e9\n    The set of 0x00 to 0x1F (C0 controls), and 0x7F (DEL).\n\nNON_ALPHANUMERIC\u27e814\u27e9\n    Everything that is not an ASCII letter or digit.\n## Functions\u00a7\u27e815\u27e9\n\npercent_decode\u27e810\u27e9\n    Percent-decode the given bytes.\n\npercent_decode_str\u27e816\u27e9\n    Percent-decode the given string.\n\npercent_encode\u27e85\u27e9\n    Percent-encode the given bytes with the given set.\n\npercent_encode_byte\u27e817\u27e9\n    Return the percent-encoding of the given byte.\n\nutf8_percent_encode\u27e86\u27e9\n    Percent-encode the UTF-8 encoding of the given string.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/percent-encoding/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/percent-encoding/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/percent-encoding/latest/src/percent_encoding/lib.rs.html#9-477: Source\n\u27e84\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.AsciiSet.html: struct percent_encoding::AsciiSet - `AsciiSet`\n\u27e85\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode.html: fn percent_encoding::percent_encode - `percent_encode`\n\u27e86\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.utf8_percent_encode.html: fn percent_encoding::utf8_percent_encode - `utf8_percent_encode`\n\u27e87\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#examples: \u00a7\n\u27e88\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#structs: \u00a7\n\u27e89\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentDecode.html: struct percent_encoding::PercentDecode - PercentDecode\n\u27e810\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode.html: fn percent_encoding::percent_decode - `percent_decode`\n\u27e811\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/struct.PercentEncode.html: struct percent_encoding::PercentEncode - PercentEncode\n\u27e812\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#constants: \u00a7\n\u27e813\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.CONTROLS.html: constant percent_encoding::CONTROLS - CONTROLS\n\u27e814\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/constant.NON_ALPHANUMERIC.html: constant percent_encoding::NON_ALPHANUMERIC - NON_ALPHANUMERIC\n\u27e815\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/#functions: \u00a7\n\u27e816\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_decode_str.html: fn percent_encoding::percent_decode_str - percent_decode_str\n\u27e817\u27e9 https://docs.rs/percent-encoding/latest/percent_encoding/fn.percent_encode_byte.html: fn percent_encoding::percent_encode_byte - percent_encode_byte\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `percent-encoding` crate provides utilities for percent-encoding and decoding strings and bytes, commonly used in URLs to escape reserved characters. It features customizable encoding via the `AsciiSet` struct, allowing users to define character sets based on specific contexts. Key functions include `percent_encode`, `utf8_percent_encode`, and `percent_decode`, with built-in constants like `CONTROLS` and `NON_ALPHANUMERIC` for convenience.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: Encoding and Decoding Capabilities  \n\u2705 Factual: The `percent-encoding` crate provides functions like `percent_encode` and `percent_decode` to encode and decode strings based on customizable sets of ASCII characters.  \n\u274c Counterfactual: The `percent-encoding` crate automatically determines the appropriate ASCII set for encoding based on the input string's context, without requiring user configuration.  \n\n---\n\n### Pair 2: Customizable Character Sets  \n\u2705 Factual: The crate allows users to define custom ASCII sets for encoding by using the `add` method on predefined sets such as `CONTROLS`.  \n\u274c Counterfactual: The crate provides a fixed set of predefined ASCII sets for all encoding scenarios, and users cannot create their own custom sets.  \n\n---\n\n### Pair 3: UTF-8 Encoding Support  \n\u2705 Factual: The `utf8_percent_encode` function in the crate is specifically designed to percent-encode strings in UTF-8 format, ensuring compatibility with non-ASCII characters.  \n\u274c Counterfactual: The `utf8_percent_encode` function only supports ASCII characters and does not handle UTF-8 encoded strings.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-badb5fd2-1f0ece80-1751261161",
+      "timestamp": "2025-06-30T05:26:01.902411+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

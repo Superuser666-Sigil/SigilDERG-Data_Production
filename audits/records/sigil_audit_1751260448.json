@@ -1,0 +1,735 @@
+[
+  {
+    "execution_id": "exec-1c1c65e8-66075b43-1751260440",
+    "timestamp": "2025-06-30T05:14:00.007975+00:00",
+    "sacred_chain": {
+      "input_data": "rand",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'rand' -> 'rand'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "rand",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/rand",
+            "title": "rand v0.9.1",
+            "content": {
+              "raw_markdown": "#  rand v0.9.1\nRandom number generators and other randomness functionality. \n  * [ #random ](https://crates.io/keywords/random)\n  * [ #rng ](https://crates.io/keywords/rng)\n\n\n  * [ Readme ](https://crates.io/crates/rand)\n  * [ 76 Versions ](https://crates.io/crates/rand/versions)\n  * [ Dependencies ](https://crates.io/crates/rand/dependencies)\n  * [ Dependents ](https://crates.io/crates/rand/reverse_dependencies)\n\n\n## Metadata\n2 months ago \nv1.63.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n95.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add rand\nOr add the following line to your Cargo.toml:\nrand = \"0.9.1\"\n## Homepage\n[ rust-random.github.io/book ](https://rust-random.github.io/book)\n## Documentation\n[ docs.rs/rand ](https://docs.rs/rand)\n## Repository\n[ github.com/rust-random/rand ](https://github.com/rust-random/rand)\n## Owners\n## Categories\n  * [Algorithms](https://crates.io/categories/algorithms)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=rand&inquire=crate-violation)\n### Stats Overview\n573,926,687 Downloads all time\n76 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  rand v0.9.1\nRandom number generators and other randomness functionality. \n  *  #random \u27e81\u27e9\n  *  #rng \u27e82\u27e9\n\n\n  *  Readme \u27e83\u27e9\n  *  76 Versions \u27e84\u27e9\n  *  Dependencies \u27e85\u27e9\n  *  Dependents \u27e86\u27e9\n\n\n## Metadata\n2 months ago \nv1.63.0 \n MIT \u27e87\u27e9 OR  Apache-2.0 \u27e88\u27e9\n95.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add rand\nOr add the following line to your Cargo.toml:\nrand = \"0.9.1\"\n## Homepage\n rust-random.github.io/book \u27e89\u27e9\n## Documentation\n docs.rs/rand \u27e810\u27e9\n## Repository\n github.com/rust-random/rand \u27e811\u27e9\n## Owners\n## Categories\n  * Algorithms\u27e812\u27e9\n  * No standard library\u27e813\u27e9\n\n\n Report crate \u27e814\u27e9\n### Stats Overview\n573,926,687 Downloads all time\n76 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/random:  #random \n\u27e82\u27e9 https://crates.io/keywords/rng:  #rng \n\u27e83\u27e9 https://crates.io/crates/rand:  Readme \n\u27e84\u27e9 https://crates.io/crates/rand/versions:  76 Versions \n\u27e85\u27e9 https://crates.io/crates/rand/dependencies:  Dependencies \n\u27e86\u27e9 https://crates.io/crates/rand/reverse_dependencies:  Dependents \n\u27e87\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e88\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e89\u27e9 https://rust-random.github.io/book:  rust-random.github.io/book \n\u27e810\u27e9 https://docs.rs/rand:  docs.rs/rand \n\u27e811\u27e9 https://github.com/rust-random/rand:  github.com/rust-random/rand \n\u27e812\u27e9 https://crates.io/categories/algorithms: Algorithms\n\u27e813\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e814\u27e9 https://crates.io/support?crate=rand&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1338,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114229.9335658"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/rand",
+            "title": "Crate randCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\n[Settings](https://docs.rs/rand/latest/settings.html)\n[Help](https://docs.rs/rand/latest/help.html)\nSummary[Source](https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332)\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## [\u00a7](https://docs.rs/rand/latest/rand/#quick-start)Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## [\u00a7](https://docs.rs/rand/latest/rand/#the-book)The Book\nFor the user guide and further documentation, please read [The Rust Rand Book](https://rust-random.github.io/book).\n## Re-exports[\u00a7](https://docs.rs/rand/latest/rand/#reexports)\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules[\u00a7](https://docs.rs/rand/latest/rand/#modules)\n\n[distr](https://docs.rs/rand/latest/rand/distr/index.html \"mod rand::distr\")\n    Generating random samples from probability distributions\n\n[prelude](https://docs.rs/rand/latest/rand/prelude/index.html \"mod rand::prelude\")\n    Convenience re-export of common members\n\n[rngs](https://docs.rs/rand/latest/rand/rngs/index.html \"mod rand::rngs\")\n    Random number generators and adapters\n\n[seq](https://docs.rs/rand/latest/rand/seq/index.html \"mod rand::seq\")\n    Sequence-related functionality\n## Traits[\u00a7](https://docs.rs/rand/latest/rand/#traits)\n\n[CryptoRng](https://docs.rs/rand/latest/rand/trait.CryptoRng.html \"trait rand::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\") for securely unpredictable RNGs\n\n[Fill](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\")\n    Types which may be filled with random data\n\n[Rng](https://docs.rs/rand/latest/rand/trait.Rng.html \"trait rand::Rng\")\n    User-level interface for RNGs\n\n[RngCore](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand/latest/rand/trait.SeedableRng.html \"trait rand::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html \"trait rand::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n## Functions[\u00a7](https://docs.rs/rand/latest/rand/#functions)\n\n[fill](https://docs.rs/rand/latest/rand/fn.fill.html \"fn rand::fill\")`thread_rng`\n    Fill any type implementing [`Fill`](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\") with random data\n\n[random](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\")`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\n[random_bool](https://docs.rs/rand/latest/rand/fn.random_bool.html \"fn rand::random_bool\")`thread_rng`\n    Return a bool with a probability `p` of being true.\n\n[random_iter](https://docs.rs/rand/latest/rand/fn.random_iter.html \"fn rand::random_iter\")`thread_rng`\n    Return an iterator over [`random()`](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\") variates\n\n[random_range](https://docs.rs/rand/latest/rand/fn.random_range.html \"fn rand::random_range\")`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\n[random_ratio](https://docs.rs/rand/latest/rand/fn.random_ratio.html \"fn rand::random_ratio\")`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\n[rng](https://docs.rs/rand/latest/rand/fn.rng.html \"fn rand::rng\")`thread_rng`\n    Access a fast, pre-initialized generator\n\n[thread_rng](https://docs.rs/rand/latest/rand/fn.thread_rng.html \"fn rand::thread_rng\")Deprecated`thread_rng`\n    Access the thread-local generator\n",
+              "markdown_with_citations": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## \u00a7\u27e84\u27e9Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## \u00a7\u27e85\u27e9The Book\nFor the user guide and further documentation, please read The Rust Rand Book\u27e86\u27e9.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules\u00a7\u27e88\u27e9\n\ndistr\u27e89\u27e9\n    Generating random samples from probability distributions\n\nprelude\u27e810\u27e9\n    Convenience re-export of common members\n\nrngs\u27e811\u27e9\n    Random number generators and adapters\n\nseq\u27e812\u27e9\n    Sequence-related functionality\n## Traits\u00a7\u27e813\u27e9\n\nCryptoRng\u27e814\u27e9\n    A marker trait over `RngCore`\u27e815\u27e9 for securely unpredictable RNGs\n\nFill\u27e816\u27e9\n    Types which may be filled with random data\n\nRng\u27e817\u27e9\n    User-level interface for RNGs\n\nRngCore\u27e815\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e818\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e819\u27e9\n    A marker trait over `TryRngCore`\u27e820\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e820\u27e9\n    A potentially fallible variant of `RngCore`\u27e815\u27e9\n## Functions\u00a7\u27e821\u27e9\n\nfill\u27e822\u27e9`thread_rng`\n    Fill any type implementing `Fill`\u27e816\u27e9 with random data\n\nrandom\u27e823\u27e9`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\nrandom_bool\u27e824\u27e9`thread_rng`\n    Return a bool with a probability `p` of being true.\n\nrandom_iter\u27e825\u27e9`thread_rng`\n    Return an iterator over `random()`\u27e823\u27e9 variates\n\nrandom_range\u27e826\u27e9`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\nrandom_ratio\u27e827\u27e9`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\nrng\u27e828\u27e9`thread_rng`\n    Access a fast, pre-initialized generator\n\nthread_rng\u27e829\u27e9Deprecated`thread_rng`\n    Access the thread-local generator\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332: Source\n\u27e84\u27e9 https://docs.rs/rand/latest/rand/#quick-start: \u00a7\n\u27e85\u27e9 https://docs.rs/rand/latest/rand/#the-book: \u00a7\n\u27e86\u27e9 https://rust-random.github.io/book: The Rust Rand Book\n\u27e87\u27e9 https://docs.rs/rand/latest/rand/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/rand/latest/rand/#modules: \u00a7\n\u27e89\u27e9 https://docs.rs/rand/latest/rand/distr/index.html: mod rand::distr - distr\n\u27e810\u27e9 https://docs.rs/rand/latest/rand/prelude/index.html: mod rand::prelude - prelude\n\u27e811\u27e9 https://docs.rs/rand/latest/rand/rngs/index.html: mod rand::rngs - rngs\n\u27e812\u27e9 https://docs.rs/rand/latest/rand/seq/index.html: mod rand::seq - seq\n\u27e813\u27e9 https://docs.rs/rand/latest/rand/#traits: \u00a7\n\u27e814\u27e9 https://docs.rs/rand/latest/rand/trait.CryptoRng.html: trait rand::CryptoRng - CryptoRng\n\u27e815\u27e9 https://docs.rs/rand/latest/rand/trait.RngCore.html: trait rand::RngCore - `RngCore`\n\u27e816\u27e9 https://docs.rs/rand/latest/rand/trait.Fill.html: trait rand::Fill - Fill\n\u27e817\u27e9 https://docs.rs/rand/latest/rand/trait.Rng.html: trait rand::Rng - Rng\n\u27e818\u27e9 https://docs.rs/rand/latest/rand/trait.SeedableRng.html: trait rand::SeedableRng - SeedableRng\n\u27e819\u27e9 https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html: trait rand::TryCryptoRng - TryCryptoRng\n\u27e820\u27e9 https://docs.rs/rand/latest/rand/trait.TryRngCore.html: trait rand::TryRngCore - `TryRngCore`\n\u27e821\u27e9 https://docs.rs/rand/latest/rand/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/rand/latest/rand/fn.fill.html: fn rand::fill - fill\n\u27e823\u27e9 https://docs.rs/rand/latest/rand/fn.random.html: fn rand::random - random\n\u27e824\u27e9 https://docs.rs/rand/latest/rand/fn.random_bool.html: fn rand::random_bool - random_bool\n\u27e825\u27e9 https://docs.rs/rand/latest/rand/fn.random_iter.html: fn rand::random_iter - random_iter\n\u27e826\u27e9 https://docs.rs/rand/latest/rand/fn.random_range.html: fn rand::random_range - random_range\n\u27e827\u27e9 https://docs.rs/rand/latest/rand/fn.random_ratio.html: fn rand::random_ratio - random_ratio\n\u27e828\u27e9 https://docs.rs/rand/latest/rand/fn.rng.html: fn rand::rng - rng\n\u27e829\u27e9 https://docs.rs/rand/latest/rand/fn.thread_rng.html: fn rand::thread_rng - thread_rng\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4850,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114230.5256954"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/rand",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [74 releases](https://lib.rs/crates/rand/versions)\n0.9.1 |  Apr 17, 2025   \n---|---  \n0.9.0 |  Jan 27, 2025   \n0.9.0-beta.1 |  Nov 30, 2024   \n0.9.0-alpha.2 |  Jul 29, 2024   \n0.3.4 |  Mar 31, 2015   \n#**1** in [Algorithms](https://lib.rs/algorithms \"Rust implementations of core algorithms such as hashing, sorting, searching, and more.\")\nDownload history 6185638/week @ 2025-03-10 7603848/week @ 2025-03-17 8054389/week @ 2025-03-24 6800701/week @ 2025-03-31 7428658/week @ 2025-04-07 6909653/week @ 2025-04-14 6545594/week @ 2025-04-21 6460092/week @ 2025-04-28 6668671/week @ 2025-05-05 7002958/week @ 2025-05-12 6947331/week @ 2025-05-19 6052013/week @ 2025-05-26 6848619/week @ 2025-06-02 7126230/week @ 2025-06-09 7914441/week @ 2025-06-16 7245764/week @ 2025-06-23\n**29,485,189** downloads per month Used in [**51,120** crates (19,535 directly)](https://lib.rs/crates/rand/rev)\n**MIT/Apache**\n430KB  7K  SLoC\n# Rand\n[![Test Status](https://img.gs/czjpqfbdkz/full/https://github.com/rust-random/rand/actions/workflows/test.yml/badge.svg?event=push)](https://github.com/rust-random/rand/actions) [![Crate](https://img.shields.io/crates/v/rand.svg)](https://crates.io/crates/rand) [![Book](https://img.shields.io/badge/book-master-yellow.svg)](https://rust-random.github.io/book/) [![API](https://img.shields.io/badge/api-master-yellow.svg)](https://rust-random.github.io/rand/rand) [![API](https://img.gs/czjpqfbdkz/full/https://docs.rs/rand/badge.svg)](https://docs.rs/rand)\nRand is a set of crates supporting (pseudo-)random generators:\n  * Built over a standard RNG trait: [```rand_core`::``RngCore``](https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html)\n  * With fast implementations of both [strong](https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs) and [small](https://rust-random.github.io/book/guide-rngs.html#basic-pseudo-random-number-generators-prngs) generators: [```rand`::``rngs``](https://docs.rs/rand/latest/rand/rngs/index.html), and more RNGs: [``rand_chacha``](https://docs.rs/rand_chacha), [``rand_xoshiro``](https://docs.rs/rand_xoshiro/), [``rand_pcg``](https://docs.rs/rand_pcg/), [rngs repo](https://github.com/rust-random/rngs/)\n  * [```rand`::``rng``](https://docs.rs/rand/latest/rand/fn.rng.html) is an asymptotically-fast, automatically-seeded and reasonably strong generator available on all ``std`` targets\n  * Direct support for seeding generators from the [getrandom](https://lib.rs/crates/getrandom) crate\n\n\nWith broad support for random value generation and random processes:\n  * [``StandardUniform``](https://docs.rs/rand/latest/rand/distr/struct.StandardUniform.html) random value sampling, [``Uniform``](https://docs.rs/rand/latest/rand/distr/struct.Uniform.html)-ranged value sampling and [more](https://docs.rs/rand/latest/rand/distr/index.html)\n  * Samplers for a large number of non-uniform random number distributions via our own [``rand_distr``](https://docs.rs/rand_distr) and via the [``statrs``](https://docs.rs/statrs/0.13.0/statrs/)\n  * Random processes (mostly choose and shuffle) via [```rand`::``seq``](https://docs.rs/rand/latest/rand/seq/index.html) traits\n\n\nAll with:\n  * [Portably reproducible output](https://rust-random.github.io/book/portability.html)\n  * ````#``[``no_std``]```` compatibility (partial)\n  * _Many_ performance optimisations thanks to contributions from the wide user-base\n\n\nRand **is not** :\n  * Small (LoC). Most low-level crates are small, but the higher-level ``rand`` and ``rand_distr`` each contain a lot of functionality.\n  * Simple (implementation). We have a strong focus on correctness, speed and flexibility, but not simplicity. If you prefer a small-and-simple library, there are alternatives including [fastrand](https://lib.rs/crates/fastrand) and [oorandom](https://lib.rs/crates/oorandom).\n  * Primarily a cryptographic library. ``rand`` does provide some generators which aim to support unpredictable value generation under certain constraints; see [SECURITY.md](https://github.com/rust-random/rand/blob/master/SECURITY.md) for details. Users are expected to determine for themselves whether ``rand``'s functionality meets their own security requirements.\n\n\nDocumentation:\n  * [The Rust Rand Book](https://rust-random.github.io/book)\n  * [API reference (master branch)](https://rust-random.github.io/rand)\n  * [API reference (docs.rs)](https://docs.rs/rand)\n\n\n## Versions\nRand is _mature_ (suitable for general usage, with infrequent breaking releases which minimise breakage) but not yet at 1.0. Current ```MAJOR``.``MINOR``` versions are:\n  * Version 0.9 was released in January 2025.\n\n\nSee the [CHANGELOG](https://github.com/rust-random/rand/blob/master/CHANGELOG.md) or [Upgrade Guide](https://rust-random.github.io/book/update.html) for more details.\n## Crate Features\nRand is built with these features enabled by default:\n  * ``std`` enables functionality dependent on the ``std`` lib\n  * ``alloc`` (implied by ``std``) enables functionality requiring an allocator\n  * ``os_rng`` (implied by ``std``) enables ```rngs`::``OsRng``, using the [getrandom](https://lib.rs/crates/getrandom) crate\n  * ``std_rng`` enables inclusion of ``StdRng``, ``ThreadRng``\n  * ``small_rng`` enables inclusion of the ``SmallRng`` PRNG\n\n\nOptionally, the following dependencies can be enabled:\n  * ``log`` enables logging via [log](https://lib.rs/crates/log)\n\n\nAdditionally, these features configure Rand:\n  * ``nightly`` includes some additions requiring nightly Rust\n  * ``simd_support`` (experimental) enables sampling of SIMD values (uniformly random SIMD integers and floats), requiring nightly Rust\n  * ``unbiased`` use unbiased sampling for algorithms supporting this option: Uniform distribution.\n(By default, bias affecting no more than one in 2^48 samples is accepted.)\nNote: enabling this option is expected to affect reproducibility of results.\n\n\nNote that nightly features are not stable and therefore not all library and compiler versions will be compatible. This is especially true of Rand's experimental ``simd_support`` feature.\nRand supports limited functionality in ``no_std`` mode (enabled via ``default`-`features `=` `false```). In this case, ``OsRng`` and ``from_os_rng`` are unavailable (unless ``os_rng`` is enabled), large parts of ``seq`` are unavailable (unless ``alloc`` is enabled), and ``ThreadRng`` is unavailable.\n## Portability and platform support\nMany (but not all) algorithms are intended to have reproducible output. Read more in the book: [Portability](https://rust-random.github.io/book/portability.html).\nThe Rand library supports a variety of CPU architectures. Platform integration is outsourced to [getrandom](https://lib.rs/crates/getrandom).\n### WebAssembly support\nThe [WASI](https://github.com/WebAssembly/WASI/tree/main) and Emscripten targets are directly supported. The ``wasm32-unknown-unknown`` target is not _automatically_ supported. To enable support for this target, refer to the [``getrandom`` documentation for WebAssembly](https://docs.rs/getrandom/latest/getrandom/#webassembly-support). Alternatively, the ``os_rng`` feature may be disabled.\n# License\nRand is distributed under the terms of both the MIT license and the Apache License (Version 2.0).\nSee [LICENSE-APACHE](https://github.com/rust-random/rand/blob/master/LICENSE-APACHE) and [LICENSE-MIT](https://github.com/rust-random/rand/blob/master/LICENSE-MIT), and [COPYRIGHT](https://github.com/rust-random/rand/blob/master/COPYRIGHT) for details.\n#### Dependencies\n~0\u2013510KB \n  * [ optional ](https://lib.rs/crates/rand/features#feature-log \"log is optional feature\") [log](https://lib.rs/crates/log \"0.4.4\")\n  * [std](https://lib.rs/crates/rand/features#feature-std \"default feature\") [std_rng](https://lib.rs/crates/rand/features#feature-std_rng \"default feature\") [rand_chacha](https://lib.rs/crates/rand_chacha \"new\") 0.9\n  * [rand_core](https://lib.rs/crates/rand_core \"new\") 0.9\n  * [ optional ](https://lib.rs/crates/rand/features#feature-serde \"serde is optional feature\") [serde](https://lib.rs/crates/serde \"1.0.103\")[+derive](https://lib.rs/crates/serde/features#feature-derive)\n\n\n  * dev  [bincode](https://lib.rs/crates/bincode \"1.2.1\")\n  * dev  [rand_pcg](https://lib.rs/crates/rand_pcg \"new\") 0.9\n  * dev  [rayon](https://lib.rs/crates/rayon \"1.7\")\n\n\n#### [Other features](https://lib.rs/crates/rand/features)\n  * [alloc](https://lib.rs/crates/rand/features#feature-alloc)\n  * [nightly](https://lib.rs/crates/rand/features#feature-nightly)\n  * [os_rng](https://lib.rs/crates/rand/features#feature-os_rng)\n  * [simd_support](https://lib.rs/crates/rand/features#feature-simd_support)\n  * [small_rng](https://lib.rs/crates/rand/features#feature-small_rng)\n  * [thread_rng](https://lib.rs/crates/rand/features#feature-thread_rng)\n  * [unbiased](https://lib.rs/crates/rand/features#feature-unbiased)\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  74 releases\u27e81\u27e9\n0.9.1 |  Apr 17, 2025   \n---|---  \n0.9.0 |  Jan 27, 2025   \n0.9.0-beta.1 |  Nov 30, 2024   \n0.9.0-alpha.2 |  Jul 29, 2024   \n0.3.4 |  Mar 31, 2015   \n#**1** in Algorithms\u27e82\u27e9\nDownload history 6185638/week @ 2025-03-10 7603848/week @ 2025-03-17 8054389/week @ 2025-03-24 6800701/week @ 2025-03-31 7428658/week @ 2025-04-07 6909653/week @ 2025-04-14 6545594/week @ 2025-04-21 6460092/week @ 2025-04-28 6668671/week @ 2025-05-05 7002958/week @ 2025-05-12 6947331/week @ 2025-05-19 6052013/week @ 2025-05-26 6848619/week @ 2025-06-02 7126230/week @ 2025-06-09 7914441/week @ 2025-06-16 7245764/week @ 2025-06-23\n**29,485,189** downloads per month Used in **51,120** crates (19,535 directly)\u27e83\u27e9\n**MIT/Apache**\n430KB  7K  SLoC\n# Rand\n![Test Status\u27e84\u27e9](https://github.com/rust-random/rand/actions) ![Crate\u27e85\u27e9](https://crates.io/crates/rand) ![Book\u27e86\u27e9](https://rust-random.github.io/book/) ![API\u27e87\u27e9](https://rust-random.github.io/rand/rand) ![API\u27e88\u27e9](https://docs.rs/rand)\nRand is a set of crates supporting (pseudo-)random generators:\n  * Built over a standard RNG trait: ```rand_core`::``RngCore``\u27e89\u27e9\n  * With fast implementations of both strong\u27e810\u27e9 and small\u27e811\u27e9 generators: ```rand`::``rngs``\u27e812\u27e9, and more RNGs: ``rand_chacha``\u27e813\u27e9, ``rand_xoshiro``\u27e814\u27e9, ``rand_pcg``\u27e815\u27e9, rngs repo\u27e816\u27e9\n  * ```rand`::``rng``\u27e817\u27e9 is an asymptotically-fast, automatically-seeded and reasonably strong generator available on all ``std`` targets\n  * Direct support for seeding generators from the getrandom\u27e818\u27e9 crate\n\n\nWith broad support for random value generation and random processes:\n  * ``StandardUniform``\u27e819\u27e9 random value sampling, ``Uniform``\u27e820\u27e9-ranged value sampling and more\u27e821\u27e9\n  * Samplers for a large number of non-uniform random number distributions via our own ``rand_distr``\u27e822\u27e9 and via the ``statrs``\u27e823\u27e9\n  * Random processes (mostly choose and shuffle) via ```rand`::``seq``\u27e824\u27e9 traits\n\n\nAll with:\n  * Portably reproducible output\u27e825\u27e9\n  * ````#``[``no_std``]```` compatibility (partial)\n  * _Many_ performance optimisations thanks to contributions from the wide user-base\n\n\nRand **is not** :\n  * Small (LoC). Most low-level crates are small, but the higher-level ``rand`` and ``rand_distr`` each contain a lot of functionality.\n  * Simple (implementation). We have a strong focus on correctness, speed and flexibility, but not simplicity. If you prefer a small-and-simple library, there are alternatives including fastrand\u27e826\u27e9 and oorandom\u27e827\u27e9.\n  * Primarily a cryptographic library. ``rand`` does provide some generators which aim to support unpredictable value generation under certain constraints; see SECURITY.md\u27e828\u27e9 for details. Users are expected to determine for themselves whether ``rand``'s functionality meets their own security requirements.\n\n\nDocumentation:\n  * The Rust Rand Book\u27e829\u27e9\n  * API reference (master branch)\u27e830\u27e9\n  * API reference (docs.rs)\u27e831\u27e9\n\n\n## Versions\nRand is _mature_ (suitable for general usage, with infrequent breaking releases which minimise breakage) but not yet at 1.0. Current ```MAJOR``.``MINOR``` versions are:\n  * Version 0.9 was released in January 2025.\n\n\nSee the CHANGELOG\u27e832\u27e9 or Upgrade Guide\u27e833\u27e9 for more details.\n## Crate Features\nRand is built with these features enabled by default:\n  * ``std`` enables functionality dependent on the ``std`` lib\n  * ``alloc`` (implied by ``std``) enables functionality requiring an allocator\n  * ``os_rng`` (implied by ``std``) enables ```rngs`::``OsRng``, using the getrandom\u27e818\u27e9 crate\n  * ``std_rng`` enables inclusion of ``StdRng``, ``ThreadRng``\n  * ``small_rng`` enables inclusion of the ``SmallRng`` PRNG\n\n\nOptionally, the following dependencies can be enabled:\n  * ``log`` enables logging via log\u27e834\u27e9\n\n\nAdditionally, these features configure Rand:\n  * ``nightly`` includes some additions requiring nightly Rust\n  * ``simd_support`` (experimental) enables sampling of SIMD values (uniformly random SIMD integers and floats), requiring nightly Rust\n  * ``unbiased`` use unbiased sampling for algorithms supporting this option: Uniform distribution.\n(By default, bias affecting no more than one in 2^48 samples is accepted.)\nNote: enabling this option is expected to affect reproducibility of results.\n\n\nNote that nightly features are not stable and therefore not all library and compiler versions will be compatible. This is especially true of Rand's experimental ``simd_support`` feature.\nRand supports limited functionality in ``no_std`` mode (enabled via ``default`-`features `=` `false```). In this case, ``OsRng`` and ``from_os_rng`` are unavailable (unless ``os_rng`` is enabled), large parts of ``seq`` are unavailable (unless ``alloc`` is enabled), and ``ThreadRng`` is unavailable.\n## Portability and platform support\nMany (but not all) algorithms are intended to have reproducible output. Read more in the book: Portability\u27e825\u27e9.\nThe Rand library supports a variety of CPU architectures. Platform integration is outsourced to getrandom\u27e818\u27e9.\n### WebAssembly support\nThe WASI\u27e835\u27e9 and Emscripten targets are directly supported. The ``wasm32-unknown-unknown`` target is not _automatically_ supported. To enable support for this target, refer to the ``getrandom`` documentation for WebAssembly\u27e836\u27e9. Alternatively, the ``os_rng`` feature may be disabled.\n# License\nRand is distributed under the terms of both the MIT license and the Apache License (Version 2.0).\nSee LICENSE-APACHE\u27e837\u27e9 and LICENSE-MIT\u27e838\u27e9, and COPYRIGHT\u27e839\u27e9 for details.\n#### Dependencies\n~0\u2013510KB \n  *  optional \u27e840\u27e9 log\u27e834\u27e9\n  * std\u27e841\u27e9 std_rng\u27e842\u27e9 rand_chacha\u27e843\u27e9 0.9\n  * rand_core\u27e844\u27e9 0.9\n  *  optional \u27e845\u27e9 serde\u27e846\u27e9+derive\u27e847\u27e9\n\n\n  * dev  bincode\u27e848\u27e9\n  * dev  rand_pcg\u27e849\u27e9 0.9\n  * dev  rayon\u27e850\u27e9\n\n\n#### Other features\u27e851\u27e9\n  * alloc\u27e852\u27e9\n  * nightly\u27e853\u27e9\n  * os_rng\u27e854\u27e9\n  * simd_support\u27e855\u27e9\n  * small_rng\u27e856\u27e9\n  * thread_rng\u27e857\u27e9\n  * unbiased\u27e858\u27e9\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/rand/versions: 74 releases\n\u27e82\u27e9 https://lib.rs/algorithms: Rust implementations of core algorithms such as hashing, sorting, searching, and more. - Algorithms\n\u27e83\u27e9 https://lib.rs/crates/rand/rev: **51,120** crates (19,535 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/rust-random/rand/actions/workflows/test.yml/badge.svg?event=push: ![Test Status\n\u27e85\u27e9 https://img.shields.io/crates/v/rand.svg: ![Crate\n\u27e86\u27e9 https://img.shields.io/badge/book-master-yellow.svg: ![Book\n\u27e87\u27e9 https://img.shields.io/badge/api-master-yellow.svg: ![API\n\u27e88\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/rand/badge.svg: ![API\n\u27e89\u27e9 https://docs.rs/rand_core/latest/rand_core/trait.RngCore.html: ```rand_core`::``RngCore``\n\u27e810\u27e9 https://rust-random.github.io/book/guide-rngs.html#cryptographically-secure-pseudo-random-number-generators-csprngs: strong\n\u27e811\u27e9 https://rust-random.github.io/book/guide-rngs.html#basic-pseudo-random-number-generators-prngs: small\n\u27e812\u27e9 https://docs.rs/rand/latest/rand/rngs/index.html: ```rand`::``rngs``\n\u27e813\u27e9 https://docs.rs/rand_chacha: ``rand_chacha``\n\u27e814\u27e9 https://docs.rs/rand_xoshiro/: ``rand_xoshiro``\n\u27e815\u27e9 https://docs.rs/rand_pcg/: ``rand_pcg``\n\u27e816\u27e9 https://github.com/rust-random/rngs/: rngs repo\n\u27e817\u27e9 https://docs.rs/rand/latest/rand/fn.rng.html: ```rand`::``rng``\n\u27e818\u27e9 https://lib.rs/crates/getrandom: getrandom\n\u27e819\u27e9 https://docs.rs/rand/latest/rand/distr/struct.StandardUniform.html: ``StandardUniform``\n\u27e820\u27e9 https://docs.rs/rand/latest/rand/distr/struct.Uniform.html: ``Uniform``\n\u27e821\u27e9 https://docs.rs/rand/latest/rand/distr/index.html: more\n\u27e822\u27e9 https://docs.rs/rand_distr: ``rand_distr``\n\u27e823\u27e9 https://docs.rs/statrs/0.13.0/statrs/: ``statrs``\n\u27e824\u27e9 https://docs.rs/rand/latest/rand/seq/index.html: ```rand`::``seq``\n\u27e825\u27e9 https://rust-random.github.io/book/portability.html: Portably reproducible output\n\u27e826\u27e9 https://lib.rs/crates/fastrand: fastrand\n\u27e827\u27e9 https://lib.rs/crates/oorandom: oorandom\n\u27e828\u27e9 https://github.com/rust-random/rand/blob/master/SECURITY.md: SECURITY.md\n\u27e829\u27e9 https://rust-random.github.io/book: The Rust Rand Book\n\u27e830\u27e9 https://rust-random.github.io/rand: API reference (master branch)\n\u27e831\u27e9 https://docs.rs/rand: API reference (docs.rs)\n\u27e832\u27e9 https://github.com/rust-random/rand/blob/master/CHANGELOG.md: CHANGELOG\n\u27e833\u27e9 https://rust-random.github.io/book/update.html: Upgrade Guide\n\u27e834\u27e9 https://lib.rs/crates/log: log\n\u27e835\u27e9 https://github.com/WebAssembly/WASI/tree/main: WASI\n\u27e836\u27e9 https://docs.rs/getrandom/latest/getrandom/#webassembly-support: ``getrandom`` documentation for WebAssembly\n\u27e837\u27e9 https://github.com/rust-random/rand/blob/master/LICENSE-APACHE: LICENSE-APACHE\n\u27e838\u27e9 https://github.com/rust-random/rand/blob/master/LICENSE-MIT: LICENSE-MIT\n\u27e839\u27e9 https://github.com/rust-random/rand/blob/master/COPYRIGHT: COPYRIGHT\n\u27e840\u27e9 https://lib.rs/crates/rand/features#feature-log: log is optional feature -  optional \n\u27e841\u27e9 https://lib.rs/crates/rand/features#feature-std: default feature - std\n\u27e842\u27e9 https://lib.rs/crates/rand/features#feature-std_rng: default feature - std_rng\n\u27e843\u27e9 https://lib.rs/crates/rand_chacha: new - rand_chacha\n\u27e844\u27e9 https://lib.rs/crates/rand_core: new - rand_core\n\u27e845\u27e9 https://lib.rs/crates/rand/features#feature-serde: serde is optional feature -  optional \n\u27e846\u27e9 https://lib.rs/crates/serde: 1.0.103 - serde\n\u27e847\u27e9 https://lib.rs/crates/serde/features#feature-derive: +derive\n\u27e848\u27e9 https://lib.rs/crates/bincode: 1.2.1 - bincode\n\u27e849\u27e9 https://lib.rs/crates/rand_pcg: new - rand_pcg\n\u27e850\u27e9 https://lib.rs/crates/rayon: 1.7 - rayon\n\u27e851\u27e9 https://lib.rs/crates/rand/features: Other features\n\u27e852\u27e9 https://lib.rs/crates/rand/features#feature-alloc: alloc\n\u27e853\u27e9 https://lib.rs/crates/rand/features#feature-nightly: nightly\n\u27e854\u27e9 https://lib.rs/crates/rand/features#feature-os_rng: os_rng\n\u27e855\u27e9 https://lib.rs/crates/rand/features#feature-simd_support: simd_support\n\u27e856\u27e9 https://lib.rs/crates/rand/features#feature-small_rng: small_rng\n\u27e857\u27e9 https://lib.rs/crates/rand/features#feature-thread_rng: thread_rng\n\u27e858\u27e9 https://lib.rs/crates/rand/features#feature-unbiased: unbiased\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8937,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "114231.0811087"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ppv-lite86@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ppv_lite86",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "simd",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libppv_lite86-59bfe049a7a32fed.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-40ae42995f4a20b7\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-40ae42995f4a20b7\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-8f3c2bf3a641c112\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libgetrandom-ad0e269a037034ee.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand_core-efbb6a8c1d90e212.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_chacha@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_chacha",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand_chacha-d21ff60f42f3dbb7.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnjs42xh4/rand-0.9.1#rand@0.9.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "os_rng",
+                "small_rng",
+                "std",
+                "std_rng",
+                "thread_rng"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand-506222f027d91447.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-40ae42995f4a20b7\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-40ae42995f4a20b7\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\build\\getrandom-8f3c2bf3a641c112\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#ppv-lite86@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "ppv_lite86",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\ppv-lite86-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "simd",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libppv_lite86-59bfe049a7a32fed.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#getrandom@0.3.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "getrandom",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\getrandom-0.3.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\libgetrandom-ad0e269a037034ee.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.9.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "os_rng",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand_core-efbb6a8c1d90e212.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_chacha@0.9.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_chacha",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_chacha-0.9.0\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand_chacha-d21ff60f42f3dbb7.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpnjs42xh4/rand-0.9.1#rand@0.9.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "os_rng",
+                "small_rng",
+                "std",
+                "std_rng",
+                "thread_rng"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpnjs42xh4\\rand-0.9.1\\target\\debug\\deps\\librand-7f93063f0b31e7e1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 26
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "rand",
+          "version": "0.9.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\n[Settings](https://docs.rs/rand/latest/settings.html)\n[Help](https://docs.rs/rand/latest/help.html)\nSummary[Source](https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332)\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## [\u00a7](https://docs.rs/rand/latest/rand/#quick-start)Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## [\u00a7](https://docs.rs/rand/latest/rand/#the-book)The Book\nFor the user guide and further documentation, please read [The Rust Rand Book](https://rust-random.github.io/book).\n## Re-exports[\u00a7](https://docs.rs/rand/latest/rand/#reexports)\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules[\u00a7](https://docs.rs/rand/latest/rand/#modules)\n\n[distr](https://docs.rs/rand/latest/rand/distr/index.html \"mod rand::distr\")\n    Generating random samples from probability distributions\n\n[prelude](https://docs.rs/rand/latest/rand/prelude/index.html \"mod rand::prelude\")\n    Convenience re-export of common members\n\n[rngs](https://docs.rs/rand/latest/rand/rngs/index.html \"mod rand::rngs\")\n    Random number generators and adapters\n\n[seq](https://docs.rs/rand/latest/rand/seq/index.html \"mod rand::seq\")\n    Sequence-related functionality\n## Traits[\u00a7](https://docs.rs/rand/latest/rand/#traits)\n\n[CryptoRng](https://docs.rs/rand/latest/rand/trait.CryptoRng.html \"trait rand::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\") for securely unpredictable RNGs\n\n[Fill](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\")\n    Types which may be filled with random data\n\n[Rng](https://docs.rs/rand/latest/rand/trait.Rng.html \"trait rand::Rng\")\n    User-level interface for RNGs\n\n[RngCore](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand/latest/rand/trait.SeedableRng.html \"trait rand::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html \"trait rand::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n## Functions[\u00a7](https://docs.rs/rand/latest/rand/#functions)\n\n[fill](https://docs.rs/rand/latest/rand/fn.fill.html \"fn rand::fill\")`thread_rng`\n    Fill any type implementing [`Fill`](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\") with random data\n\n[random](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\")`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\n[random_bool](https://docs.rs/rand/latest/rand/fn.random_bool.html \"fn rand::random_bool\")`thread_rng`\n    Return a bool with a probability `p` of being true.\n\n[random_iter](https://docs.rs/rand/latest/rand/fn.random_iter.html \"fn rand::random_iter\")`thread_rng`\n    Return an iterator over [`random()`](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\") variates\n\n[random_range](https://docs.rs/rand/latest/rand/fn.random_range.html \"fn rand::random_range\")`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\n[random_ratio](https://docs.rs/rand/latest/rand/fn.random_ratio.html \"fn rand::random_ratio\")`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\n[rng](https://docs.rs/rand/latest/rand/fn.rng.html \"fn rand::rng\")`thread_rng`\n    Access a fast, pre-initialized generator\n\n[thread_rng](https://docs.rs/rand/latest/rand/fn.thread_rng.html \"fn rand::thread_rng\")Deprecated`thread_rng`\n    Access the thread-local generator\n",
+            "markdown_with_citations": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## \u00a7\u27e84\u27e9Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## \u00a7\u27e85\u27e9The Book\nFor the user guide and further documentation, please read The Rust Rand Book\u27e86\u27e9.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules\u00a7\u27e88\u27e9\n\ndistr\u27e89\u27e9\n    Generating random samples from probability distributions\n\nprelude\u27e810\u27e9\n    Convenience re-export of common members\n\nrngs\u27e811\u27e9\n    Random number generators and adapters\n\nseq\u27e812\u27e9\n    Sequence-related functionality\n## Traits\u00a7\u27e813\u27e9\n\nCryptoRng\u27e814\u27e9\n    A marker trait over `RngCore`\u27e815\u27e9 for securely unpredictable RNGs\n\nFill\u27e816\u27e9\n    Types which may be filled with random data\n\nRng\u27e817\u27e9\n    User-level interface for RNGs\n\nRngCore\u27e815\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e818\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e819\u27e9\n    A marker trait over `TryRngCore`\u27e820\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e820\u27e9\n    A potentially fallible variant of `RngCore`\u27e815\u27e9\n## Functions\u00a7\u27e821\u27e9\n\nfill\u27e822\u27e9`thread_rng`\n    Fill any type implementing `Fill`\u27e816\u27e9 with random data\n\nrandom\u27e823\u27e9`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\nrandom_bool\u27e824\u27e9`thread_rng`\n    Return a bool with a probability `p` of being true.\n\nrandom_iter\u27e825\u27e9`thread_rng`\n    Return an iterator over `random()`\u27e823\u27e9 variates\n\nrandom_range\u27e826\u27e9`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\nrandom_ratio\u27e827\u27e9`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\nrng\u27e828\u27e9`thread_rng`\n    Access a fast, pre-initialized generator\n\nthread_rng\u27e829\u27e9Deprecated`thread_rng`\n    Access the thread-local generator\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332: Source\n\u27e84\u27e9 https://docs.rs/rand/latest/rand/#quick-start: \u00a7\n\u27e85\u27e9 https://docs.rs/rand/latest/rand/#the-book: \u00a7\n\u27e86\u27e9 https://rust-random.github.io/book: The Rust Rand Book\n\u27e87\u27e9 https://docs.rs/rand/latest/rand/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/rand/latest/rand/#modules: \u00a7\n\u27e89\u27e9 https://docs.rs/rand/latest/rand/distr/index.html: mod rand::distr - distr\n\u27e810\u27e9 https://docs.rs/rand/latest/rand/prelude/index.html: mod rand::prelude - prelude\n\u27e811\u27e9 https://docs.rs/rand/latest/rand/rngs/index.html: mod rand::rngs - rngs\n\u27e812\u27e9 https://docs.rs/rand/latest/rand/seq/index.html: mod rand::seq - seq\n\u27e813\u27e9 https://docs.rs/rand/latest/rand/#traits: \u00a7\n\u27e814\u27e9 https://docs.rs/rand/latest/rand/trait.CryptoRng.html: trait rand::CryptoRng - CryptoRng\n\u27e815\u27e9 https://docs.rs/rand/latest/rand/trait.RngCore.html: trait rand::RngCore - `RngCore`\n\u27e816\u27e9 https://docs.rs/rand/latest/rand/trait.Fill.html: trait rand::Fill - Fill\n\u27e817\u27e9 https://docs.rs/rand/latest/rand/trait.Rng.html: trait rand::Rng - Rng\n\u27e818\u27e9 https://docs.rs/rand/latest/rand/trait.SeedableRng.html: trait rand::SeedableRng - SeedableRng\n\u27e819\u27e9 https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html: trait rand::TryCryptoRng - TryCryptoRng\n\u27e820\u27e9 https://docs.rs/rand/latest/rand/trait.TryRngCore.html: trait rand::TryRngCore - `TryRngCore`\n\u27e821\u27e9 https://docs.rs/rand/latest/rand/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/rand/latest/rand/fn.fill.html: fn rand::fill - fill\n\u27e823\u27e9 https://docs.rs/rand/latest/rand/fn.random.html: fn rand::random - random\n\u27e824\u27e9 https://docs.rs/rand/latest/rand/fn.random_bool.html: fn rand::random_bool - random_bool\n\u27e825\u27e9 https://docs.rs/rand/latest/rand/fn.random_iter.html: fn rand::random_iter - random_iter\n\u27e826\u27e9 https://docs.rs/rand/latest/rand/fn.random_range.html: fn rand::random_range - random_range\n\u27e827\u27e9 https://docs.rs/rand/latest/rand/fn.random_ratio.html: fn rand::random_ratio - random_ratio\n\u27e828\u27e9 https://docs.rs/rand/latest/rand/fn.rng.html: fn rand::rng - rng\n\u27e829\u27e9 https://docs.rs/rand/latest/rand/fn.thread_rng.html: fn rand::thread_rng - thread_rng\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "rand",
+          "version": "0.9.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\n[Settings](https://docs.rs/rand/latest/settings.html)\n[Help](https://docs.rs/rand/latest/help.html)\nSummary[Source](https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332)\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## [\u00a7](https://docs.rs/rand/latest/rand/#quick-start)Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## [\u00a7](https://docs.rs/rand/latest/rand/#the-book)The Book\nFor the user guide and further documentation, please read [The Rust Rand Book](https://rust-random.github.io/book).\n## Re-exports[\u00a7](https://docs.rs/rand/latest/rand/#reexports)\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules[\u00a7](https://docs.rs/rand/latest/rand/#modules)\n\n[distr](https://docs.rs/rand/latest/rand/distr/index.html \"mod rand::distr\")\n    Generating random samples from probability distributions\n\n[prelude](https://docs.rs/rand/latest/rand/prelude/index.html \"mod rand::prelude\")\n    Convenience re-export of common members\n\n[rngs](https://docs.rs/rand/latest/rand/rngs/index.html \"mod rand::rngs\")\n    Random number generators and adapters\n\n[seq](https://docs.rs/rand/latest/rand/seq/index.html \"mod rand::seq\")\n    Sequence-related functionality\n## Traits[\u00a7](https://docs.rs/rand/latest/rand/#traits)\n\n[CryptoRng](https://docs.rs/rand/latest/rand/trait.CryptoRng.html \"trait rand::CryptoRng\")\n    A marker trait over [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\") for securely unpredictable RNGs\n\n[Fill](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\")\n    Types which may be filled with random data\n\n[Rng](https://docs.rs/rand/latest/rand/trait.Rng.html \"trait rand::Rng\")\n    User-level interface for RNGs\n\n[RngCore](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n    Implementation-level interface for RNGs\n\n[SeedableRng](https://docs.rs/rand/latest/rand/trait.SeedableRng.html \"trait rand::SeedableRng\")\n    A random number generator that can be explicitly seeded.\n\n[TryCryptoRng](https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html \"trait rand::TryCryptoRng\")\n    A marker trait over [`TryRngCore`](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\") for securely unpredictable RNGs\n\n[TryRngCore](https://docs.rs/rand/latest/rand/trait.TryRngCore.html \"trait rand::TryRngCore\")\n    A potentially fallible variant of [`RngCore`](https://docs.rs/rand/latest/rand/trait.RngCore.html \"trait rand::RngCore\")\n## Functions[\u00a7](https://docs.rs/rand/latest/rand/#functions)\n\n[fill](https://docs.rs/rand/latest/rand/fn.fill.html \"fn rand::fill\")`thread_rng`\n    Fill any type implementing [`Fill`](https://docs.rs/rand/latest/rand/trait.Fill.html \"trait rand::Fill\") with random data\n\n[random](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\")`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\n[random_bool](https://docs.rs/rand/latest/rand/fn.random_bool.html \"fn rand::random_bool\")`thread_rng`\n    Return a bool with a probability `p` of being true.\n\n[random_iter](https://docs.rs/rand/latest/rand/fn.random_iter.html \"fn rand::random_iter\")`thread_rng`\n    Return an iterator over [`random()`](https://docs.rs/rand/latest/rand/fn.random.html \"fn rand::random\") variates\n\n[random_range](https://docs.rs/rand/latest/rand/fn.random_range.html \"fn rand::random_range\")`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\n[random_ratio](https://docs.rs/rand/latest/rand/fn.random_ratio.html \"fn rand::random_ratio\")`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\n[rng](https://docs.rs/rand/latest/rand/fn.rng.html \"fn rand::rng\")`thread_rng`\n    Access a fast, pre-initialized generator\n\n[thread_rng](https://docs.rs/rand/latest/rand/fn.thread_rng.html \"fn rand::thread_rng\")Deprecated`thread_rng`\n    Access the thread-local generator\n",
+            "markdown_with_citations": "[](https://docs.rs/rand/latest/rand/all.html \"show sidebar\")\n# Crate randCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities for random number generation\nRand provides utilities to generate random numbers, to convert them to useful types and distributions, and some randomness-related algorithms.\n## \u00a7\u27e84\u27e9Quick Start\n```\n// The prelude import enables methods we use below, specifically\n// Rng::random, Rng::sample, SliceRandom::shuffle and IndexedRandom::choose.\nuse rand::prelude::*;\n// Get an RNG:\nlet mut rng = rand::rng();\n// Try printing a random unicode code point (probably a bad idea)!\nprintln!(\"char: '{}'\", rng.random::<char>());\n// Try printing a random alphanumeric value instead!\nprintln!(\"alpha: '{}'\", rng.sample(rand::distr::Alphanumeric) as char);\n// Generate and shuffle a sequence:\nlet mut nums: Vec<i32> = (1..100).collect();\nnums.shuffle(&mut rng);\n// And take a random pick (yes, we didn't need to shuffle first!):\nlet _ = nums.choose(&mut rng);\n```\n\n## \u00a7\u27e85\u27e9The Book\nFor the user guide and further documentation, please read The Rust Rand Book\u27e86\u27e9.\n## Re-exports\u00a7\u27e87\u27e9\n\n`pub use rand_core[](https://docs.rs/rand_core/0.9.3/x86_64-unknown-linux-gnu/rand_core/index.html \"mod rand_core\");`\n\n## Modules\u00a7\u27e88\u27e9\n\ndistr\u27e89\u27e9\n    Generating random samples from probability distributions\n\nprelude\u27e810\u27e9\n    Convenience re-export of common members\n\nrngs\u27e811\u27e9\n    Random number generators and adapters\n\nseq\u27e812\u27e9\n    Sequence-related functionality\n## Traits\u00a7\u27e813\u27e9\n\nCryptoRng\u27e814\u27e9\n    A marker trait over `RngCore`\u27e815\u27e9 for securely unpredictable RNGs\n\nFill\u27e816\u27e9\n    Types which may be filled with random data\n\nRng\u27e817\u27e9\n    User-level interface for RNGs\n\nRngCore\u27e815\u27e9\n    Implementation-level interface for RNGs\n\nSeedableRng\u27e818\u27e9\n    A random number generator that can be explicitly seeded.\n\nTryCryptoRng\u27e819\u27e9\n    A marker trait over `TryRngCore`\u27e820\u27e9 for securely unpredictable RNGs\n\nTryRngCore\u27e820\u27e9\n    A potentially fallible variant of `RngCore`\u27e815\u27e9\n## Functions\u00a7\u27e821\u27e9\n\nfill\u27e822\u27e9`thread_rng`\n    Fill any type implementing `Fill`\u27e816\u27e9 with random data\n\nrandom\u27e823\u27e9`thread_rng`\n    Generate a random value using the thread-local random number generator.\n\nrandom_bool\u27e824\u27e9`thread_rng`\n    Return a bool with a probability `p` of being true.\n\nrandom_iter\u27e825\u27e9`thread_rng`\n    Return an iterator over `random()`\u27e823\u27e9 variates\n\nrandom_range\u27e826\u27e9`thread_rng`\n    Generate a random value in the given range using the thread-local random number generator.\n\nrandom_ratio\u27e827\u27e9`thread_rng`\n    Return a bool with a probability of `numerator/denominator` of being true.\n\nrng\u27e828\u27e9`thread_rng`\n    Access a fast, pre-initialized generator\n\nthread_rng\u27e829\u27e9Deprecated`thread_rng`\n    Access the thread-local generator\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/rand/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/rand/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/rand/latest/src/rand/lib.rs.html#10-332: Source\n\u27e84\u27e9 https://docs.rs/rand/latest/rand/#quick-start: \u00a7\n\u27e85\u27e9 https://docs.rs/rand/latest/rand/#the-book: \u00a7\n\u27e86\u27e9 https://rust-random.github.io/book: The Rust Rand Book\n\u27e87\u27e9 https://docs.rs/rand/latest/rand/#reexports: \u00a7\n\u27e88\u27e9 https://docs.rs/rand/latest/rand/#modules: \u00a7\n\u27e89\u27e9 https://docs.rs/rand/latest/rand/distr/index.html: mod rand::distr - distr\n\u27e810\u27e9 https://docs.rs/rand/latest/rand/prelude/index.html: mod rand::prelude - prelude\n\u27e811\u27e9 https://docs.rs/rand/latest/rand/rngs/index.html: mod rand::rngs - rngs\n\u27e812\u27e9 https://docs.rs/rand/latest/rand/seq/index.html: mod rand::seq - seq\n\u27e813\u27e9 https://docs.rs/rand/latest/rand/#traits: \u00a7\n\u27e814\u27e9 https://docs.rs/rand/latest/rand/trait.CryptoRng.html: trait rand::CryptoRng - CryptoRng\n\u27e815\u27e9 https://docs.rs/rand/latest/rand/trait.RngCore.html: trait rand::RngCore - `RngCore`\n\u27e816\u27e9 https://docs.rs/rand/latest/rand/trait.Fill.html: trait rand::Fill - Fill\n\u27e817\u27e9 https://docs.rs/rand/latest/rand/trait.Rng.html: trait rand::Rng - Rng\n\u27e818\u27e9 https://docs.rs/rand/latest/rand/trait.SeedableRng.html: trait rand::SeedableRng - SeedableRng\n\u27e819\u27e9 https://docs.rs/rand/latest/rand/trait.TryCryptoRng.html: trait rand::TryCryptoRng - TryCryptoRng\n\u27e820\u27e9 https://docs.rs/rand/latest/rand/trait.TryRngCore.html: trait rand::TryRngCore - `TryRngCore`\n\u27e821\u27e9 https://docs.rs/rand/latest/rand/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/rand/latest/rand/fn.fill.html: fn rand::fill - fill\n\u27e823\u27e9 https://docs.rs/rand/latest/rand/fn.random.html: fn rand::random - random\n\u27e824\u27e9 https://docs.rs/rand/latest/rand/fn.random_bool.html: fn rand::random_bool - random_bool\n\u27e825\u27e9 https://docs.rs/rand/latest/rand/fn.random_iter.html: fn rand::random_iter - random_iter\n\u27e826\u27e9 https://docs.rs/rand/latest/rand/fn.random_range.html: fn rand::random_range - random_range\n\u27e827\u27e9 https://docs.rs/rand/latest/rand/fn.random_ratio.html: fn rand::random_ratio - random_ratio\n\u27e828\u27e9 https://docs.rs/rand/latest/rand/fn.rng.html: fn rand::rng - rng\n\u27e829\u27e9 https://docs.rs/rand/latest/rand/fn.thread_rng.html: fn rand::thread_rng - thread_rng\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `rand` crate provides utilities for random number generation, including generating random values, sampling from probability distributions, shuffling sequences, and selecting random elements. It features a user-friendly API with traits like `Rng` and `SeedableRng`, supports cryptographically secure RNGs, and offers pre-initialized thread-local generators for convenience. Additionally, it includes modules for working with distributions, sequences, and RNG adapters.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: Random Number Generation  \n\u2705 **Factual:** The `rand` crate provides the `thread_rng` function, which gives access to a fast, pre-initialized thread-local random number generator suitable for most applications.  \n\u274c **Counterfactual:** The `rand` crate requires users to manually seed the `thread_rng` generator before it can be used for random number generation.  \n\n---\n\n### Pair 2: Probability Distributions  \n\u2705 **Factual:** The `rand::distr` module in the `rand` crate allows users to generate random samples from various probability distributions, such as normal, uniform, and exponential distributions.  \n\u274c **Counterfactual:** The `rand` crate only supports uniform distributions for random number generation and does not include functionality for other probability distributions.  \n\n---\n\n### Pair 3: Shuffling and Sampling  \n\u2705 **Factual:** The `rand::seq::SliceRandom` trait enables users to shuffle collections like vectors and to randomly sample elements from slices.  \n\u274c **Counterfactual:** The `rand` crate does not provide functionality for shuffling sequences or sampling elements from slices, requiring users to implement these features manually.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-1c1c65e8-66075b43-1751260440",
+      "timestamp": "2025-06-30T05:14:00.007975+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

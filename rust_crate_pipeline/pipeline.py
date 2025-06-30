@@ -1,19 +1,19 @@
 # pipeline.py
+import asyncio
+import json
+import logging
 import os
 import time
-import logging
-import json
-import asyncio
-from typing import Any, Union, TYPE_CHECKING
+from typing import TYPE_CHECKING, Any, Union
 
 if TYPE_CHECKING:
-    from typing import Dict, List, Optional
+    from typing import Dict, List
 
-from .config import PipelineConfig, CrateMetadata, EnrichedCrate
-from .network import CrateAPIClient, GitHubBatchClient
 from .ai_processing import LLMEnricher
 from .analysis import DependencyAnalyzer
+from .config import CrateMetadata, EnrichedCrate, PipelineConfig
 from .crate_analysis import CrateAnalyzer
+from .network import CrateAPIClient, GitHubBatchClient
 
 # Import Azure OpenAI enricher
 try:
@@ -25,7 +25,7 @@ except ImportError:
 
 # Import enhanced scraping capabilities
 try:
-    from .scraping.unified_scraper import UnifiedScraper, ScrapingResult
+    from .scraping.unified_scraper import ScrapingResult, UnifiedScraper
     ENHANCED_SCRAPING_AVAILABLE = True
 except ImportError:
     ENHANCED_SCRAPING_AVAILABLE = False
@@ -36,6 +36,7 @@ except ImportError:
 
 class CustomJSONEncoder(json.JSONEncoder):
     """Custom JSON encoder to handle non-serializable objects"""
+
     def default(self, obj):
         if hasattr(obj, 'to_dict'):
             return obj.to_dict()
@@ -48,36 +49,44 @@ class CustomJSONEncoder(json.JSONEncoder):
 class CrateDataPipeline:
     """Orchestrates the entire data collection, enrichment, and analysis pipeline."""
 
-    def __init__(self, config: PipelineConfig, crate_list: "List[str] | None" = None, **kwargs) -> None:
+    def __init__(
+            self,
+            config: PipelineConfig,
+            crate_list: "List[str] | None" = None,
+            **kwargs) -> None:
         self.config = config
         self.api_client = CrateAPIClient(config)
         self.github_client = GitHubBatchClient(config)
-        
+
         # Initialize the appropriate AI enricher based on configuration
         if config.use_azure_openai and AZURE_OPENAI_AVAILABLE and AzureOpenAIEnricher is not None:
             try:
                 self.enricher = AzureOpenAIEnricher(config)
                 logging.info("[OK] Using Azure OpenAI enricher")
             except Exception as e:
-                logging.warning(f"[WARN] Failed to initialize Azure OpenAI enricher: {e}")
+                logging.warning(
+                    f"[WARN] Failed to initialize Azure OpenAI enricher: {e}")
                 logging.info("[INFO] Falling back to local LLM enricher")
                 self.enricher = LLMEnricher(config)
         else:
             if config.use_azure_openai and not AZURE_OPENAI_AVAILABLE:
-                logging.warning("[WARN] Azure OpenAI requested but not available")
+                logging.warning(
+                    "[WARN] Azure OpenAI requested but not available")
             self.enricher = LLMEnricher(config)
             logging.info("[OK] Using local LLM enricher")
-        
+
         # Initialize cargo analyzer
         self.cargo_analyzer = CrateAnalyzer(".")
-        
+
         # Use provided crate_list or load from file
         if crate_list:
             self.crates = crate_list
-            logging.info(f"Using provided crate list: {len(crate_list)} crates")
+            logging.info(
+                f"Using provided crate list: {
+                    len(crate_list)} crates")
         else:
             self.crates = self._get_crate_list()
-        
+
         self.output_dir = self._create_output_dir()
         self.enhanced_scraper: Any = (
             self._initialize_enhanced_scraper()
@@ -96,13 +105,16 @@ class CrateDataPipeline:
             logging.info("[OK] Enhanced scraping with Crawl4AI enabled")
             return scraper
         except Exception as e:
-            logging.warning(f"[ERROR] Failed to initialize enhanced scraping: {e}")
+            logging.warning(
+                f"[ERROR] Failed to initialize enhanced scraping: {e}")
             return None
 
     def _create_output_dir(self) -> str:
         """Creates a timestamped output directory for pipeline results."""
         timestamp = time.strftime("%Y%m%d-%H%M%S")
-        output_dir = os.path.join(self.config.output_path, f"crate_data_{timestamp}")
+        output_dir = os.path.join(
+            self.config.output_path,
+            f"crate_data_{timestamp}")
         os.makedirs(output_dir, exist_ok=True)
         return output_dir
 
@@ -111,7 +123,8 @@ class CrateDataPipeline:
         Loads the list of crates to process from an external file.
         This approach is more modular and easier to maintain than a hardcoded list.
         """
-        crate_list_path = os.path.join(os.path.dirname(__file__), "crate_list.txt")
+        crate_list_path = os.path.join(
+            os.path.dirname(__file__), "crate_list.txt")
         try:
             with open(crate_list_path) as f:
                 crates = [line.strip() for line in f if line.strip()]
@@ -133,7 +146,8 @@ class CrateDataPipeline:
         else:
             return self._get_crate_list()
 
-    async def fetch_metadata_batch(self, crate_names: "List[str]") -> "List[CrateMetadata]":
+    async def fetch_metadata_batch(
+            self, crate_names: "List[str]") -> "List[CrateMetadata]":
         """
         Fetches metadata for a batch of crates using asyncio-based parallel processing.
         """
@@ -180,12 +194,13 @@ class CrateDataPipeline:
         )
         return results
 
-    async def enrich_batch(self, batch: "List[CrateMetadata]") -> "List[EnrichedCrate]":
+    async def enrich_batch(
+            self,
+            batch: "List[CrateMetadata]") -> "List[EnrichedCrate]":
         """Enriches a batch of crates with GitHub stats, enhanced scraping, and AI."""
         # Update GitHub stats
         github_repos = [
-            c.repository for c in batch if c.repository and "github.com" in c.repository
-        ]
+            c.repository for c in batch if c.repository and "github.com" in c.repository]
         if github_repos:
             repo_stats = self.github_client.batch_get_repo_stats(github_repos)
             for crate in batch:
@@ -194,11 +209,13 @@ class CrateDataPipeline:
                     crate.github_stars = stats.get("stargazers_count", 0)
 
         # Asynchronously enhance with scraping and AI
-        enrichment_tasks = [self._enrich_single_crate(crate) for crate in batch]
+        enrichment_tasks = [
+            self._enrich_single_crate(crate) for crate in batch]
         enriched_results = await asyncio.gather(*enrichment_tasks)
         return [result for result in enriched_results if result]
 
-    async def _enrich_single_crate(self, crate: CrateMetadata) -> Union[EnrichedCrate, None]:
+    async def _enrich_single_crate(
+            self, crate: CrateMetadata) -> Union[EnrichedCrate, None]:
         """Helper to enrich a single crate with scraping, AI analysis, and cargo analysis."""
         try:
             # Enhanced scraping if available
@@ -207,7 +224,7 @@ class CrateDataPipeline:
 
             # Now enrich with AI
             enriched = self.enricher.enrich_crate(crate)
-            
+
             # Add cargo analysis if we have a local crate directory
             # Note: This would require downloading/cloning the crate first
             # For now, we'll add a placeholder for cargo analysis
@@ -215,7 +232,7 @@ class CrateDataPipeline:
                 "cargo_analysis_available": False,
                 "note": "Cargo analysis requires local crate source code"
             }
-            
+
             logging.info(f"Enriched {crate.name}")
             return enriched
         except Exception as e:
@@ -269,7 +286,9 @@ class CrateDataPipeline:
             if source == "docs_rs" and result.quality_score > 0.7:
                 if not crate.readme or len(result.content) > len(crate.readme):
                     crate.readme = result.content
-                    logging.info(f"Updated README for {crate.name} from {source}")
+                    logging.info(
+                        f"Updated README for {
+                            crate.name} from {source}")
 
             # Extract additional metadata from structured data
             structured_data = result.structured_data or {}
@@ -286,7 +305,8 @@ class CrateDataPipeline:
             ):
                 crate.code_snippets.extend(structured_data["examples"])
 
-    def analyze_dependencies(self, crates: "List[EnrichedCrate]") -> "Dict[str, Any]":
+    def analyze_dependencies(
+            self, crates: "List[EnrichedCrate]") -> "Dict[str, Any]":
         """Analyze dependencies between crates."""
         return DependencyAnalyzer.analyze_dependencies(crates)
 
@@ -297,7 +317,11 @@ class CrateDataPipeline:
 
         with open(filename, "w") as f:
             for item in data:
-                f.write(json.dumps(item.to_dict(), cls=CustomJSONEncoder) + "\n")
+                f.write(
+                    json.dumps(
+                        item.to_dict(),
+                        cls=CustomJSONEncoder) +
+                    "\n")
 
         logging.info(f"Saved checkpoint to {filename}")
         return filename
@@ -314,7 +338,11 @@ class CrateDataPipeline:
         )
         with open(final_output_path, "w") as f:
             for item in data:
-                f.write(json.dumps(item.to_dict(), cls=CustomJSONEncoder) + "\n")
+                f.write(
+                    json.dumps(
+                        item.to_dict(),
+                        cls=CustomJSONEncoder) +
+                    "\n")
 
         # Save dependency analysis
         dep_file_path = os.path.join(
@@ -354,11 +382,14 @@ class CrateDataPipeline:
             "most_depended_upon": dependency_data.get("most_depended", [])[:10],
         }
 
-        summary_path = os.path.join(self.output_dir, f"summary_report_{timestamp}.json")
+        summary_path = os.path.join(
+            self.output_dir,
+            f"summary_report_{timestamp}.json")
         with open(summary_path, "w") as f:
             json.dump(summary, f, indent=2)
 
-    async def run(self) -> Union["tuple[List[EnrichedCrate], Dict[str, Any]]", None]:
+    async def run(
+            self) -> Union["tuple[List[EnrichedCrate], Dict[str, Any]]", None]:
         """Main pipeline execution flow."""
         start_time = time.time()
         if not self.crates:
@@ -370,7 +401,7 @@ class CrateDataPipeline:
         all_enriched: "List[EnrichedCrate]" = []
         batch_size = self.config.batch_size
         crate_batches = [
-            self.crates[i : i + batch_size]
+            self.crates[i: i + batch_size]
             for i in range(0, len(self.crates), batch_size)
         ]
 
@@ -383,7 +414,9 @@ class CrateDataPipeline:
             # Fetch metadata
             metadata_batch = await self.fetch_metadata_batch(batch_names)
             if not metadata_batch:
-                logging.warning(f"Batch {i+1} yielded no metadata. Skipping.")
+                logging.warning(
+                    f"Batch {
+                        i + 1} yielded no metadata. Skipping.")
                 continue
 
             # Enrich the batch
@@ -403,5 +436,8 @@ class CrateDataPipeline:
         self.save_final_output(all_enriched, dependency_analysis)
 
         duration = time.time() - start_time
-        logging.info(f"[OK] Done. Enriched {len(all_enriched)} crates in {duration:.2f}s")
+        logging.info(
+            f"[OK] Done. Enriched {
+                len(all_enriched)} crates in {
+                duration:.2f}s")
         return all_enriched, dependency_analysis

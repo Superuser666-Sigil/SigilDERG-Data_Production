@@ -1,0 +1,821 @@
+[
+  {
+    "execution_id": "exec-fd43322a-e7af4a03-1751263006",
+    "timestamp": "2025-06-30T05:56:46.221716+00:00",
+    "sacred_chain": {
+      "input_data": "atomic",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'atomic' -> 'atomic'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "atomic",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/atomic",
+            "title": "atomic v0.6.1",
+            "content": {
+              "raw_markdown": "#  atomic v0.6.1\nGeneric Atomic<T> wrapper type \n  * [ #atomic ](https://crates.io/keywords/atomic)\n  * [ #no_std ](https://crates.io/keywords/no_std)\n\n\n  * [ Readme ](https://crates.io/crates/atomic)\n  * [ 19 Versions ](https://crates.io/crates/atomic/versions)\n  * [ Dependencies ](https://crates.io/crates/atomic/dependencies)\n  * [ Dependents ](https://crates.io/crates/atomic/reverse_dependencies)\n\n\n## Metadata\n10 days ago \n2018 edition \n[ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0) OR [ MIT ](https://choosealicense.com/licenses/mit)\n14.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add atomic\nOr add the following line to your Cargo.toml:\natomic = \"0.6.1\"\n## Repository\n[ github.com/Amanieu/atomic-rs ](https://github.com/Amanieu/atomic-rs)\n## Owners\n[ Report crate ](https://crates.io/support?crate=atomic&inquire=crate-violation)\n### Stats Overview\n33,528,796 Downloads all time\n19 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  atomic v0.6.1\nGeneric Atomic<T> wrapper type \n  *  #atomic \u27e81\u27e9\n  *  #no_std \u27e82\u27e9\n\n\n  *  Readme \u27e83\u27e9\n  *  19 Versions \u27e84\u27e9\n  *  Dependencies \u27e85\u27e9\n  *  Dependents \u27e86\u27e9\n\n\n## Metadata\n10 days ago \n2018 edition \n Apache-2.0 \u27e87\u27e9 OR  MIT \u27e88\u27e9\n14.9 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add atomic\nOr add the following line to your Cargo.toml:\natomic = \"0.6.1\"\n## Repository\n github.com/Amanieu/atomic-rs \u27e89\u27e9\n## Owners\n Report crate \u27e810\u27e9\n### Stats Overview\n33,528,796 Downloads all time\n19 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/atomic:  #atomic \n\u27e82\u27e9 https://crates.io/keywords/no_std:  #no_std \n\u27e83\u27e9 https://crates.io/crates/atomic:  Readme \n\u27e84\u27e9 https://crates.io/crates/atomic/versions:  19 Versions \n\u27e85\u27e9 https://crates.io/crates/atomic/dependencies:  Dependencies \n\u27e86\u27e9 https://crates.io/crates/atomic/reverse_dependencies:  Dependents \n\u27e87\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e88\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e89\u27e9 https://github.com/Amanieu/atomic-rs:  github.com/Amanieu/atomic-rs \n\u27e810\u27e9 https://crates.io/support?crate=atomic&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1063,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116795.81817"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/atomic",
+            "title": "Crate atomicCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\n[Settings](https://docs.rs/atomic/latest/settings.html)\n[Help](https://docs.rs/atomic/latest/help.html)\nSummary[Source](https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829)\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the [bytemuck](https://docs.rs/bytemuck) crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as [LLVM atomic orderings](http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations).\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs[\u00a7](https://docs.rs/atomic/latest/atomic/#structs)\n\n[Atomic](https://docs.rs/atomic/latest/atomic/struct.Atomic.html \"struct atomic::Atomic\")\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums[\u00a7](https://docs.rs/atomic/latest/atomic/#enums)\n\n[Ordering](https://docs.rs/atomic/latest/atomic/enum.Ordering.html \"enum atomic::Ordering\")\n    Atomic memory orderings\n## Functions[\u00a7](https://docs.rs/atomic/latest/atomic/#functions)\n\n[fence](https://docs.rs/atomic/latest/atomic/fn.fence.html \"fn atomic::fence\")\n    An atomic fence.\n",
+              "markdown_with_citations": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the bytemuck\u27e84\u27e9 crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as LLVM atomic orderings\u27e85\u27e9.\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs\u00a7\u27e86\u27e9\n\nAtomic\u27e87\u27e9\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums\u00a7\u27e88\u27e9\n\nOrdering\u27e89\u27e9\n    Atomic memory orderings\n## Functions\u00a7\u27e810\u27e9\n\nfence\u27e811\u27e9\n    An atomic fence.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/atomic/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/atomic/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829: Source\n\u27e84\u27e9 https://docs.rs/bytemuck: bytemuck\n\u27e85\u27e9 http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations: LLVM atomic orderings\n\u27e86\u27e9 https://docs.rs/atomic/latest/atomic/#structs: \u00a7\n\u27e87\u27e9 https://docs.rs/atomic/latest/atomic/struct.Atomic.html: struct atomic::Atomic - Atomic\n\u27e88\u27e9 https://docs.rs/atomic/latest/atomic/#enums: \u00a7\n\u27e89\u27e9 https://docs.rs/atomic/latest/atomic/enum.Ordering.html: enum atomic::Ordering - Ordering\n\u27e810\u27e9 https://docs.rs/atomic/latest/atomic/#functions: \u00a7\n\u27e811\u27e9 https://docs.rs/atomic/latest/atomic/fn.fence.html: fn atomic::fence - fence\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 2113,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116796.7623438"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/atomic",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [19 releases](https://lib.rs/crates/atomic/versions)\n0.6.1 |  Jun 20, 2025   \n---|---  \n0.6.0 |  Jul 29, 2023   \n0.5.3 |  May 15, 2023   \n0.5.1 |  Nov 10, 2021   \n0.3.0 |  Mar 30, 2016   \n#**147** in [Encoding](https://lib.rs/encoding \"Encoding and/or decoding data from one data format to another.\")\nDownload history 471767/week @ 2025-03-09 448993/week @ 2025-03-16 425980/week @ 2025-03-23 432503/week @ 2025-03-30 408225/week @ 2025-04-06 348981/week @ 2025-04-13 346156/week @ 2025-04-20 355863/week @ 2025-04-27 371657/week @ 2025-05-04 384962/week @ 2025-05-11 373727/week @ 2025-05-18 334835/week @ 2025-05-25 372241/week @ 2025-06-01 366753/week @ 2025-06-08 380128/week @ 2025-06-15 390910/week @ 2025-06-22\n**1,531,807** downloads per month Used in [**2,209** crates (156 directly)](https://lib.rs/crates/atomic/rev)\n**Apache-2.0/MIT**\n50KB  1K  SLoC\n# Generic ```Atomic`<`T`>```` for Rust\n[![Build Status](https://img.gs/czjpqfbdkz/full/https://travis-ci.org/Amanieu/atomic-rs.svg?branch=master)](https://travis-ci.org/Amanieu/atomic-rs) [![Crates.io](https://img.shields.io/crates/v/atomic.svg)](https://crates.io/crates/atomic)\nA Rust library which provides a generic ```Atomic`<`T`>```` type for all ``T`:` NoUninit`` types, unlike the standard library which only provides a few fixed atomic types (``AtomicBool``, ``AtomicIsize``, ``AtomicUsize``, ``AtomicPtr``). The ``NoUninit`` bound is from the [bytemuck](https://docs.rs/bytemuck) crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with ```Atomic`<`T`>````.\nThis library will use native atomic instructions if possible, and will otherwise fall back to a lock-based mechanism. You can use the ```Atomic`::````<`T`>````::``is_lock_free`(``)``` function to check whether native atomic operations are supported for a given type. Note that a type must have a power-of-2 size and alignment in order to be used by native atomic instructions.\nThis crate uses ````#!``[``no_std``]```` and only depends on libcore.\n[Documentation](https://docs.rs/atomic)\n## Features\nThis crate has the following [Cargo features](https://doc.rust-lang.org/cargo/reference/features.html):\n  * ``fallback``: Fall back to locks when atomic instructions cannot be used. (Enabled by default.)\n  * ``serde``: Enables serialization and serialization of ```Atomic`<`T`>```` with [serde](https://docs.rs/serde/latest/serde/).\n\n\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`atomic ``=` ``\"`0.6`\"``\n``\n```\n\nand this to your crate root:\n```\n``extern` `crate` atomic`;`\n`\n```\n\n## License\nLicensed under either of\n  * Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/amanieu/atomic-rs/blob/c857da75ccc04d7b6aa32f6779d0feb02b20d34f/LICENSE-APACHE) or <http://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license ([LICENSE-MIT](https://github.com/amanieu/atomic-rs/blob/c857da75ccc04d7b6aa32f6779d0feb02b20d34f/LICENSE-MIT) or <http://opensource.org/licenses/MIT>)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~125\u2013285KB \n  * [bytemuck](https://lib.rs/crates/bytemuck \"1.13.1\")\n  * [ optional ](https://lib.rs/crates/atomic/features#feature-serde \"serde is optional feature\") [serde](https://lib.rs/crates/serde \"1.0.219\")\n\n\n  * dev  [serde_json](https://lib.rs/crates/serde_json \"1.0.140\")\n\n\n#### [Other features](https://lib.rs/crates/atomic/features)\n  * [fallback](https://lib.rs/crates/atomic/features#feature-fallback)\n  * [nightly](https://lib.rs/crates/atomic/features#feature-nightly)\n  * [std](https://lib.rs/crates/atomic/features#feature-std)\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  19 releases\u27e81\u27e9\n0.6.1 |  Jun 20, 2025   \n---|---  \n0.6.0 |  Jul 29, 2023   \n0.5.3 |  May 15, 2023   \n0.5.1 |  Nov 10, 2021   \n0.3.0 |  Mar 30, 2016   \n#**147** in Encoding\u27e82\u27e9\nDownload history 471767/week @ 2025-03-09 448993/week @ 2025-03-16 425980/week @ 2025-03-23 432503/week @ 2025-03-30 408225/week @ 2025-04-06 348981/week @ 2025-04-13 346156/week @ 2025-04-20 355863/week @ 2025-04-27 371657/week @ 2025-05-04 384962/week @ 2025-05-11 373727/week @ 2025-05-18 334835/week @ 2025-05-25 372241/week @ 2025-06-01 366753/week @ 2025-06-08 380128/week @ 2025-06-15 390910/week @ 2025-06-22\n**1,531,807** downloads per month Used in **2,209** crates (156 directly)\u27e83\u27e9\n**Apache-2.0/MIT**\n50KB  1K  SLoC\n# Generic ```Atomic`<`T`>```` for Rust\n![Build Status\u27e84\u27e9](https://travis-ci.org/Amanieu/atomic-rs) ![Crates.io\u27e85\u27e9](https://crates.io/crates/atomic)\nA Rust library which provides a generic ```Atomic`<`T`>```` type for all ``T`:` NoUninit`` types, unlike the standard library which only provides a few fixed atomic types (``AtomicBool``, ``AtomicIsize``, ``AtomicUsize``, ``AtomicPtr``). The ``NoUninit`` bound is from the bytemuck\u27e86\u27e9 crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with ```Atomic`<`T`>````.\nThis library will use native atomic instructions if possible, and will otherwise fall back to a lock-based mechanism. You can use the ```Atomic`::````<`T`>````::``is_lock_free`(``)``` function to check whether native atomic operations are supported for a given type. Note that a type must have a power-of-2 size and alignment in order to be used by native atomic instructions.\nThis crate uses ````#!``[``no_std``]```` and only depends on libcore.\nDocumentation\u27e87\u27e9\n## Features\nThis crate has the following Cargo features\u27e88\u27e9:\n  * ``fallback``: Fall back to locks when atomic instructions cannot be used. (Enabled by default.)\n  * ``serde``: Enables serialization and serialization of ```Atomic`<`T`>```` with serde\u27e89\u27e9.\n\n\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`atomic ``=` ``\"`0.6`\"``\n``\n```\n\nand this to your crate root:\n```\n``extern` `crate` atomic`;`\n`\n```\n\n## License\nLicensed under either of\n  * Apache License, Version 2.0, (LICENSE-APACHE\u27e810\u27e9 or <http://www.apache.org/licenses/LICENSE-2.0>)\n  * MIT license (LICENSE-MIT\u27e811\u27e9 or <http://opensource.org/licenses/MIT>)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~125\u2013285KB \n  * bytemuck\u27e812\u27e9\n  *  optional \u27e813\u27e9 serde\u27e814\u27e9\n\n\n  * dev  serde_json\u27e815\u27e9\n\n\n#### Other features\u27e816\u27e9\n  * fallback\u27e817\u27e9\n  * nightly\u27e818\u27e9\n  * std\u27e819\u27e9\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/atomic/versions: 19 releases\n\u27e82\u27e9 https://lib.rs/encoding: Encoding and/or decoding data from one data format to another. - Encoding\n\u27e83\u27e9 https://lib.rs/crates/atomic/rev: **2,209** crates (156 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://travis-ci.org/Amanieu/atomic-rs.svg?branch=master: ![Build Status\n\u27e85\u27e9 https://img.shields.io/crates/v/atomic.svg: ![Crates.io\n\u27e86\u27e9 https://docs.rs/bytemuck: bytemuck\n\u27e87\u27e9 https://docs.rs/atomic: Documentation\n\u27e88\u27e9 https://doc.rust-lang.org/cargo/reference/features.html: Cargo features\n\u27e89\u27e9 https://docs.rs/serde/latest/serde/: serde\n\u27e810\u27e9 https://github.com/amanieu/atomic-rs/blob/c857da75ccc04d7b6aa32f6779d0feb02b20d34f/LICENSE-APACHE: LICENSE-APACHE\n\u27e811\u27e9 https://github.com/amanieu/atomic-rs/blob/c857da75ccc04d7b6aa32f6779d0feb02b20d34f/LICENSE-MIT: LICENSE-MIT\n\u27e812\u27e9 https://lib.rs/crates/bytemuck: 1.13.1 - bytemuck\n\u27e813\u27e9 https://lib.rs/crates/atomic/features#feature-serde: serde is optional feature -  optional \n\u27e814\u27e9 https://lib.rs/crates/serde: 1.0.219 - serde\n\u27e815\u27e9 https://lib.rs/crates/serde_json: 1.0.140 - serde_json\n\u27e816\u27e9 https://lib.rs/crates/atomic/features: Other features\n\u27e817\u27e9 https://lib.rs/crates/atomic/features#feature-fallback: fallback\n\u27e818\u27e9 https://lib.rs/crates/atomic/features#feature-nightly: nightly\n\u27e819\u27e9 https://lib.rs/crates/atomic/features#feature-std: std\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 3895,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "116797.3224258"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.103",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.103\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.103\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libsyn-24459744556c1730.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libsyn-24459744556c1730.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytemuck_derive@1.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck_derive-1.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "bytemuck_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck_derive-1.9.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytemuck@1.23.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck-1.23.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytemuck",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck-1.23.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "bytemuck_derive",
+                "derive"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libbytemuck-b1c7ab86bea7f814.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0cj3kytb/atomic-0.6.1#atomic@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "atomic",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "fallback"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libatomic-fe6de0491bf08f7a.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.103",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.103\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.103\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "parsing",
+                "printing",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libsyn-24459744556c1730.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libsyn-24459744556c1730.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytemuck_derive@1.9.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck_derive-1.9.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "bytemuck_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck_derive-1.9.3\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\bytemuck_derive-47dd19e5a51f9951.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bytemuck@1.23.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck-1.23.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bytemuck",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bytemuck-1.23.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "bytemuck_derive",
+                "derive"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libbytemuck-b1c7ab86bea7f814.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp0cj3kytb/atomic-0.6.1#atomic@0.6.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "atomic",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "fallback"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp0cj3kytb\\atomic-0.6.1\\target\\debug\\deps\\libatomic-b9a5c96c3d1ec8d8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 13
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "atomic",
+          "version": "0.6.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\n[Settings](https://docs.rs/atomic/latest/settings.html)\n[Help](https://docs.rs/atomic/latest/help.html)\nSummary[Source](https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829)\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the [bytemuck](https://docs.rs/bytemuck) crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as [LLVM atomic orderings](http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations).\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs[\u00a7](https://docs.rs/atomic/latest/atomic/#structs)\n\n[Atomic](https://docs.rs/atomic/latest/atomic/struct.Atomic.html \"struct atomic::Atomic\")\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums[\u00a7](https://docs.rs/atomic/latest/atomic/#enums)\n\n[Ordering](https://docs.rs/atomic/latest/atomic/enum.Ordering.html \"enum atomic::Ordering\")\n    Atomic memory orderings\n## Functions[\u00a7](https://docs.rs/atomic/latest/atomic/#functions)\n\n[fence](https://docs.rs/atomic/latest/atomic/fn.fence.html \"fn atomic::fence\")\n    An atomic fence.\n",
+            "markdown_with_citations": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the bytemuck\u27e84\u27e9 crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as LLVM atomic orderings\u27e85\u27e9.\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs\u00a7\u27e86\u27e9\n\nAtomic\u27e87\u27e9\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums\u00a7\u27e88\u27e9\n\nOrdering\u27e89\u27e9\n    Atomic memory orderings\n## Functions\u00a7\u27e810\u27e9\n\nfence\u27e811\u27e9\n    An atomic fence.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/atomic/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/atomic/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829: Source\n\u27e84\u27e9 https://docs.rs/bytemuck: bytemuck\n\u27e85\u27e9 http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations: LLVM atomic orderings\n\u27e86\u27e9 https://docs.rs/atomic/latest/atomic/#structs: \u00a7\n\u27e87\u27e9 https://docs.rs/atomic/latest/atomic/struct.Atomic.html: struct atomic::Atomic - Atomic\n\u27e88\u27e9 https://docs.rs/atomic/latest/atomic/#enums: \u00a7\n\u27e89\u27e9 https://docs.rs/atomic/latest/atomic/enum.Ordering.html: enum atomic::Ordering - Ordering\n\u27e810\u27e9 https://docs.rs/atomic/latest/atomic/#functions: \u00a7\n\u27e811\u27e9 https://docs.rs/atomic/latest/atomic/fn.fence.html: fn atomic::fence - fence\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "atomic",
+          "version": "0.6.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\n[Settings](https://docs.rs/atomic/latest/settings.html)\n[Help](https://docs.rs/atomic/latest/help.html)\nSummary[Source](https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829)\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the [bytemuck](https://docs.rs/bytemuck) crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as [LLVM atomic orderings](http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations).\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs[\u00a7](https://docs.rs/atomic/latest/atomic/#structs)\n\n[Atomic](https://docs.rs/atomic/latest/atomic/struct.Atomic.html \"struct atomic::Atomic\")\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums[\u00a7](https://docs.rs/atomic/latest/atomic/#enums)\n\n[Ordering](https://docs.rs/atomic/latest/atomic/enum.Ordering.html \"enum atomic::Ordering\")\n    Atomic memory orderings\n## Functions[\u00a7](https://docs.rs/atomic/latest/atomic/#functions)\n\n[fence](https://docs.rs/atomic/latest/atomic/fn.fence.html \"fn atomic::fence\")\n    An atomic fence.\n",
+            "markdown_with_citations": "[](https://docs.rs/atomic/latest/atomic/all.html \"show sidebar\")\n# Crate atomicCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric `Atomic<T>` wrapper type\nAtomic types provide primitive shared-memory communication between threads, and are the building blocks of other concurrent types.\nThis library defines a generic atomic wrapper type `Atomic<T>` for all `T: NoUninit` types. Atomic types present operations that, when used correctly, synchronize updates between threads.\nThe `NoUninit` bound is from the bytemuck\u27e84\u27e9 crate, and indicates that a type has no internal padding bytes. You will need to derive or implement this trait for all types used with `Atomic<T>`.\nEach method takes an `Ordering` which represents the strength of the memory barrier for that operation. These orderings are the same as LLVM atomic orderings\u27e85\u27e9.\nAtomic variables are safe to share between threads (they implement `Sync`) but they do not themselves provide the mechanism for sharing. The most common way to share an atomic variable is to put it into an `Arc` (an atomically-reference-counted shared pointer).\nMost atomic types may be stored in static variables, initialized using the `const fn` constructors. Atomic statics are often used for lazy global initialization.\n## Structs\u00a7\u27e86\u27e9\n\nAtomic\u27e87\u27e9\n    A generic atomic wrapper type which allows an object to be safely shared between threads.\n## Enums\u00a7\u27e88\u27e9\n\nOrdering\u27e89\u27e9\n    Atomic memory orderings\n## Functions\u00a7\u27e810\u27e9\n\nfence\u27e811\u27e9\n    An atomic fence.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/atomic/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/atomic/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/atomic/latest/src/atomic/lib.rs.html#8-829: Source\n\u27e84\u27e9 https://docs.rs/bytemuck: bytemuck\n\u27e85\u27e9 http://llvm.org/docs/LangRef.html#memory-model-for-concurrent-operations: LLVM atomic orderings\n\u27e86\u27e9 https://docs.rs/atomic/latest/atomic/#structs: \u00a7\n\u27e87\u27e9 https://docs.rs/atomic/latest/atomic/struct.Atomic.html: struct atomic::Atomic - Atomic\n\u27e88\u27e9 https://docs.rs/atomic/latest/atomic/#enums: \u00a7\n\u27e89\u27e9 https://docs.rs/atomic/latest/atomic/enum.Ordering.html: enum atomic::Ordering - Ordering\n\u27e810\u27e9 https://docs.rs/atomic/latest/atomic/#functions: \u00a7\n\u27e811\u27e9 https://docs.rs/atomic/latest/atomic/fn.fence.html: fn atomic::fence - fence\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `atomic` crate provides a generic `Atomic<T>` wrapper for thread-safe shared-memory communication, supporting all types that implement the `NoUninit` trait from the `bytemuck` crate. It enables atomic operations with customizable memory orderings, compatible with LLVM's atomic model, and supports usage in `Arc` for shared access or static initialization via `const fn`. Additionally, it includes an atomic fence function for memory synchronization.",
+          "feature_summary": null,
+          "use_case": "Utilities",
+          "score": 4.0,
+          "factual_counterfactual": "### Pair 1: Generic Atomic Wrapper Type  \n\u2705 Factual: The `atomic` crate provides a generic `Atomic<T>` wrapper type that can be used with any type implementing the `NoUninit` trait from the `bytemuck` crate, ensuring no internal padding bytes.  \n\u274c Counterfactual: The `atomic` crate allows the use of any type as `Atomic<T>` without requiring it to implement the `NoUninit` trait, making it compatible with all Rust types by default.  \n\n---\n\n### Pair 2: Memory Ordering  \n\u2705 Factual: The `atomic` crate supports memory orderings identical to LLVM atomic orderings, allowing developers to specify the strength of memory barriers for operations using the `Ordering` enum.  \n\u274c Counterfactual: The `atomic` crate does not support configurable memory orderings and always enforces the strongest memory barrier for all operations, regardless of developer intent.  \n\n---\n\n### Pair 3: Sharing Atomic Variables  \n\u2705 Factual: Atomic variables in the `atomic` crate implement `Sync`, making them safe to share between threads, but they typically need to be wrapped in an `Arc` for shared ownership.  \n\u274c Counterfactual: Atomic variables in the `atomic` crate automatically provide shared ownership between threads without requiring an `Arc` or any additional synchronization mechanism.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-fd43322a-e7af4a03-1751263006",
+      "timestamp": "2025-06-30T05:56:46.221716+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

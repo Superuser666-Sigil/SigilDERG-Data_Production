@@ -1,0 +1,737 @@
+[
+  {
+    "execution_id": "exec-ac734627-67fc8140-1751258965",
+    "timestamp": "2025-06-30T04:49:25.552148+00:00",
+    "sacred_chain": {
+      "input_data": "bincode",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'bincode' -> 'bincode'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "bincode",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/bincode",
+            "title": "bincode v2.0.1",
+            "content": {
+              "raw_markdown": "#  bincode v2.0.1\nA binary serialization / deserialization strategy for transforming structs into bytes and vice versa! \n  * [ #binary ](https://crates.io/keywords/binary)\n  * [ #decode ](https://crates.io/keywords/decode)\n  * [ #deserialize ](https://crates.io/keywords/deserialize)\n  * [ #encode ](https://crates.io/keywords/encode)\n  * [ #serialize ](https://crates.io/keywords/serialize)\n\n\n  * [ Readme ](https://crates.io/crates/bincode)\n  * [ 72 Versions ](https://crates.io/crates/bincode/versions)\n  * [ Dependencies ](https://crates.io/crates/bincode/dependencies)\n  * [ Dependents ](https://crates.io/crates/bincode/reverse_dependencies)\n\n\n## Metadata\n4 months ago \nv1.85.0 \n[ MIT ](https://choosealicense.com/licenses/mit)\n68.8 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add bincode\nOr add the following line to your Cargo.toml:\nbincode = \"2.0.1\"\n## Documentation\n[ docs.rs/bincode ](https://docs.rs/bincode)\n## Repository\n[ github.com/bincode-org/bincode ](https://github.com/bincode-org/bincode)\n## Owners\n## Categories\n  * [Encoding](https://crates.io/categories/encoding)\n  * [Network programming](https://crates.io/categories/network-programming)\n\n\n[ Report crate ](https://crates.io/support?crate=bincode&inquire=crate-violation)\n### Stats Overview\n125,687,171 Downloads all time\n72 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  bincode v2.0.1\nA binary serialization / deserialization strategy for transforming structs into bytes and vice versa! \n  *  #binary \u27e81\u27e9\n  *  #decode \u27e82\u27e9\n  *  #deserialize \u27e83\u27e9\n  *  #encode \u27e84\u27e9\n  *  #serialize \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  72 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\n4 months ago \nv1.85.0 \n MIT \u27e810\u27e9\n68.8 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add bincode\nOr add the following line to your Cargo.toml:\nbincode = \"2.0.1\"\n## Documentation\n docs.rs/bincode \u27e811\u27e9\n## Repository\n github.com/bincode-org/bincode \u27e812\u27e9\n## Owners\n## Categories\n  * Encoding\u27e813\u27e9\n  * Network programming\u27e814\u27e9\n\n\n Report crate \u27e815\u27e9\n### Stats Overview\n125,687,171 Downloads all time\n72 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/binary:  #binary \n\u27e82\u27e9 https://crates.io/keywords/decode:  #decode \n\u27e83\u27e9 https://crates.io/keywords/deserialize:  #deserialize \n\u27e84\u27e9 https://crates.io/keywords/encode:  #encode \n\u27e85\u27e9 https://crates.io/keywords/serialize:  #serialize \n\u27e86\u27e9 https://crates.io/crates/bincode:  Readme \n\u27e87\u27e9 https://crates.io/crates/bincode/versions:  72 Versions \n\u27e88\u27e9 https://crates.io/crates/bincode/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/bincode/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e811\u27e9 https://docs.rs/bincode:  docs.rs/bincode \n\u27e812\u27e9 https://github.com/bincode-org/bincode:  github.com/bincode-org/bincode \n\u27e813\u27e9 https://crates.io/categories/encoding: Encoding\n\u27e814\u27e9 https://crates.io/categories/network-programming: Network programming\n\u27e815\u27e9 https://crates.io/support?crate=bincode&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1454,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112755.6331759"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/bincode",
+            "title": "Crate bincodeCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\n[Settings](https://docs.rs/bincode/latest/settings.html)\n[Help](https://docs.rs/bincode/latest/help.html)\nSummary[Source](https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237)\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our [migration guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html)\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#serde)Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See [Features](https://docs.rs/bincode/latest/bincode/#features) for more information.\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#features)Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the [serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\") module| Note: There are several [known issues](https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues) when using serde and bincode  \n## [\u00a7](https://docs.rs/bincode/latest/bincode/#which-functions-to-use)Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with [`fs::File`](https://doc.rust-lang.org/nightly/std/fs/struct.File.html \"struct std::fs::File\") or [`net::TcpStream`](https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html \"struct std::net::tcp::TcpStream\")| [`encode_into_std_write`](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")| [`decode_from_std_read`](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")  \nyou\u2019re working with in-memory buffers| [`encode_to_vec`](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \nYou want to use a custom [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\") and [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\")| [`encode_into_writer`](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")| [`decode_from_reader`](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")  \nYou\u2019re working with pre-allocated buffers or on embedded targets| [`encode_into_slice`](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#example)Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports[\u00a7](https://docs.rs/bincode/latest/bincode/#reexports)\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules[\u00a7](https://docs.rs/bincode/latest/bincode/#modules)\n\n[config](https://docs.rs/bincode/latest/bincode/config/index.html \"mod bincode::config\")\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\n[de](https://docs.rs/bincode/latest/bincode/de/index.html \"mod bincode::de\")\n    Decoder-based structs and traits.\n\n[enc](https://docs.rs/bincode/latest/bincode/enc/index.html \"mod bincode::enc\")\n    Encoder-based structs and traits.\n\n[error](https://docs.rs/bincode/latest/bincode/error/index.html \"mod bincode::error\")\n    Errors that can be encounting by Encoding and Decoding.\n\n[migration_guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html \"mod bincode::migration_guide\")\n    Migrating from bincode 1 to 2\n\n[serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\")`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\n[spec](https://docs.rs/bincode/latest/bincode/spec/index.html \"mod bincode::spec\")\n    Serialization Specification\n## Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#macros)\n\n[impl_borrow_decode](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html \"macro bincode::impl_borrow_decode\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\n[impl_borrow_decode_with_context](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html \"macro bincode::impl_borrow_decode_with_context\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions[\u00a7](https://docs.rs/bincode/latest/bincode/#functions)\n\n[borrow_decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html \"fn bincode::borrow_decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[borrow_decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html \"fn bincode::borrow_decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_reader](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")\n    Attempt to decode a given type `D` from the given [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\").\n\n[decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html \"fn bincode::decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_std_read](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[decode_from_std_read_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html \"fn bincode::decode_from_std_read_with_context\")`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[encode_into_slice](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\n[encode_into_std_write](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information. Returns the amount of bytes written.\n\n[encode_into_writer](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")\n    Encode the given value into a custom [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\").\n\n[encode_to_vec](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information.\n## Derive Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#derives)\n\n[BorrowDecode](https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html \"derive bincode::BorrowDecode\")`derive`\n\n\n[Decode](https://docs.rs/bincode/latest/bincode/derive.Decode.html \"derive bincode::Decode\")`derive`\n\n\n[Encode](https://docs.rs/bincode/latest/bincode/derive.Encode.html \"derive bincode::Encode\")`derive`\n\n",
+              "markdown_with_citations": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our migration guide\u27e84\u27e9\n## \u00a7\u27e85\u27e9Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See Features\u27e86\u27e9 for more information.\n## \u00a7\u27e86\u27e9Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the serde\u27e87\u27e9 module| Note: There are several known issues\u27e88\u27e9 when using serde and bincode  \n## \u00a7\u27e89\u27e9Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with `fs::File`\u27e810\u27e9 or `net::TcpStream`\u27e811\u27e9| `encode_into_std_write`\u27e812\u27e9| `decode_from_std_read`\u27e813\u27e9  \nyou\u2019re working with in-memory buffers| `encode_to_vec`\u27e814\u27e9| `decode_from_slice`\u27e815\u27e9  \nYou want to use a custom Reader\u27e816\u27e9 and Writer\u27e817\u27e9| `encode_into_writer`\u27e818\u27e9| `decode_from_reader`\u27e819\u27e9  \nYou\u2019re working with pre-allocated buffers or on embedded targets| `encode_into_slice`\u27e820\u27e9| `decode_from_slice`\u27e815\u27e9  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## \u00a7\u27e821\u27e9Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports\u00a7\u27e822\u27e9\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules\u00a7\u27e823\u27e9\n\nconfig\u27e824\u27e9\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\nde\u27e825\u27e9\n    Decoder-based structs and traits.\n\nenc\u27e826\u27e9\n    Encoder-based structs and traits.\n\nerror\u27e827\u27e9\n    Errors that can be encounting by Encoding and Decoding.\n\nmigration_guide\u27e84\u27e9\n    Migrating from bincode 1 to 2\n\nserde\u27e87\u27e9`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\nspec\u27e828\u27e9\n    Serialization Specification\n## Macros\u00a7\u27e829\u27e9\n\nimpl_borrow_decode\u27e830\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\nimpl_borrow_decode_with_context\u27e831\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions\u00a7\u27e832\u27e9\n\nborrow_decode_from_slice\u27e833\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\nborrow_decode_from_slice_with_context\u27e834\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_reader\u27e819\u27e9\n    Attempt to decode a given type `D` from the given Reader\u27e816\u27e9.\n\ndecode_from_slice\u27e815\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\ndecode_from_slice_with_context\u27e835\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_std_read\u27e813\u27e9`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\ndecode_from_std_read_with_context\u27e836\u27e9`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\nencode_into_slice\u27e820\u27e9\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\nencode_into_std_write\u27e812\u27e9`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the config\u27e824\u27e9 module for more information. Returns the amount of bytes written.\n\nencode_into_writer\u27e818\u27e9\n    Encode the given value into a custom Writer\u27e817\u27e9.\n\nencode_to_vec\u27e814\u27e9`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the config\u27e824\u27e9 module for more information.\n## Derive Macros\u00a7\u27e837\u27e9\n\nBorrowDecode\u27e838\u27e9`derive`\n\n\nDecode\u27e839\u27e9`derive`\n\n\nEncode\u27e840\u27e9`derive`\n\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bincode/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bincode/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237: Source\n\u27e84\u27e9 https://docs.rs/bincode/latest/bincode/migration_guide/index.html: migration guide\n\u27e85\u27e9 https://docs.rs/bincode/latest/bincode/#serde: \u00a7\n\u27e86\u27e9 https://docs.rs/bincode/latest/bincode/#features: Features\n\u27e87\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html: mod bincode::serde - serde\n\u27e88\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues: known issues\n\u27e89\u27e9 https://docs.rs/bincode/latest/bincode/#which-functions-to-use: \u00a7\n\u27e810\u27e9 https://doc.rust-lang.org/nightly/std/fs/struct.File.html: struct std::fs::File - `fs::File`\n\u27e811\u27e9 https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html: struct std::net::tcp::TcpStream - `net::TcpStream`\n\u27e812\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html: fn bincode::encode_into_std_write - `encode_into_std_write`\n\u27e813\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html: fn bincode::decode_from_std_read - `decode_from_std_read`\n\u27e814\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html: fn bincode::encode_to_vec - `encode_to_vec`\n\u27e815\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html: fn bincode::decode_from_slice - `decode_from_slice`\n\u27e816\u27e9 https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html: trait bincode::de::read::Reader - Reader\n\u27e817\u27e9 https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html: trait bincode::enc::write::Writer - Writer\n\u27e818\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html: fn bincode::encode_into_writer - `encode_into_writer`\n\u27e819\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html: fn bincode::decode_from_reader - `decode_from_reader`\n\u27e820\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html: fn bincode::encode_into_slice - `encode_into_slice`\n\u27e821\u27e9 https://docs.rs/bincode/latest/bincode/#example: \u00a7\n\u27e822\u27e9 https://docs.rs/bincode/latest/bincode/#reexports: \u00a7\n\u27e823\u27e9 https://docs.rs/bincode/latest/bincode/#modules: \u00a7\n\u27e824\u27e9 https://docs.rs/bincode/latest/bincode/config/index.html: mod bincode::config - config\n\u27e825\u27e9 https://docs.rs/bincode/latest/bincode/de/index.html: mod bincode::de - de\n\u27e826\u27e9 https://docs.rs/bincode/latest/bincode/enc/index.html: mod bincode::enc - enc\n\u27e827\u27e9 https://docs.rs/bincode/latest/bincode/error/index.html: mod bincode::error - error\n\u27e828\u27e9 https://docs.rs/bincode/latest/bincode/spec/index.html: mod bincode::spec - spec\n\u27e829\u27e9 https://docs.rs/bincode/latest/bincode/#macros: \u00a7\n\u27e830\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html: macro bincode::impl_borrow_decode - impl_borrow_decode\n\u27e831\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html: macro bincode::impl_borrow_decode_with_context - impl_borrow_decode_with_context\n\u27e832\u27e9 https://docs.rs/bincode/latest/bincode/#functions: \u00a7\n\u27e833\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html: fn bincode::borrow_decode_from_slice - borrow_decode_from_slice\n\u27e834\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html: fn bincode::borrow_decode_from_slice_with_context - borrow_decode_from_slice_with_context\n\u27e835\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html: fn bincode::decode_from_slice_with_context - decode_from_slice_with_context\n\u27e836\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html: fn bincode::decode_from_std_read_with_context - decode_from_std_read_with_context\n\u27e837\u27e9 https://docs.rs/bincode/latest/bincode/#derives: \u00a7\n\u27e838\u27e9 https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html: derive bincode::BorrowDecode - BorrowDecode\n\u27e839\u27e9 https://docs.rs/bincode/latest/bincode/derive.Decode.html: derive bincode::Decode - Decode\n\u27e840\u27e9 https://docs.rs/bincode/latest/bincode/derive.Encode.html: derive bincode::Encode - Encode\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 10225,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112756.2105262"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/bincode",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [63 releases](https://lib.rs/crates/bincode/versions) (13 stable)\n2.0.1 |  Mar 10, 2025   \n---|---  \n2.0.0-rc.3 |  Mar 30, 2023   \n2.0.0-rc.2 |  Oct 4, 2022   \n2.0.0-rc.1 |  Mar 4, 2022   \n0.0.2 |  Nov 24, 2014   \n#**8** in [Encoding](https://lib.rs/encoding \"Encoding and/or decoding data from one data format to another.\")\nDownload history 1504914/week @ 2025-03-07 1495989/week @ 2025-03-14 1514684/week @ 2025-03-21 1491562/week @ 2025-03-28 1548701/week @ 2025-04-04 1527223/week @ 2025-04-11 1478712/week @ 2025-04-18 1452013/week @ 2025-04-25 1428414/week @ 2025-05-02 1538563/week @ 2025-05-09 1582860/week @ 2025-05-16 1354639/week @ 2025-05-23 1495571/week @ 2025-05-30 1498339/week @ 2025-06-06 1633426/week @ 2025-06-13 1672063/week @ 2025-06-20\n**6,559,091** downloads per month Used in [**9,411** crates (3,770 directly)](https://lib.rs/crates/bincode/rev)\n**MIT** license \n270KB  6.5K  SLoC\n# Bincode\n![](https://img.gs/czjpqfbdkz/full/https://raw.githubusercontent.com/bincode-org/bincode/trunk/logo.svg)\n[![CI](https://img.gs/czjpqfbdkz/full/https://github.com/bincode-org/bincode/workflows/CI/badge.svg)](https://github.com/bincode-org/bincode/actions) [![](https://img.shields.io/crates/v/bincode.svg)](https://crates.io/crates/bincode) [![](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n[![Matrix](https://img.shields.io/matrix/bincode:matrix.org?label=Matrix%20Chat)](https://matrix.to/#/#bincode:matrix.org)\nA compact encoder / decoder pair that uses a binary zero-fluff encoding scheme. The size of the encoded object will be the same or smaller than the size that the object takes up in memory in a running Rust program.\nIn addition to exposing two simple functions (one that encodes to ````Vec``<``u8``>````, and one that decodes from ```&``[``u8``]```), binary-encode exposes a Reader/Writer API that makes it work perfectly with other stream-based APIs such as Rust files, network streams, and the [flate2-rs](https://github.com/rust-lang/flate2-rs) compression library.\n## [API Documentation](https://docs.rs/bincode/)\n## Bincode in the Wild\n  * [google/tarpc](https://github.com/google/tarpc): Bincode is used to serialize and deserialize networked RPC messages.\n  * [servo/webrender](https://github.com/servo/webrender): Bincode records WebRender API calls for record/replay-style graphics debugging.\n  * [servo/ipc-channel](https://github.com/servo/ipc-channel): IPC-Channel uses Bincode to send structs between processes using a channel-like API.\n  * [ajeetdsouza/zoxide](https://github.com/ajeetdsouza/zoxide): zoxide uses Bincode to store a database of directories and their access frequencies on disk.\n\n\n## Example\n```\n``use` `bincode`::````{`config`,` Decode`,` Encode```}```;`\n``#``[``derive```(```Encode`,` Decode`,` PartialEq`,` Debug```)```]``\n``struct` ```Entity` ````{`\n  `x``:` `f32`,\n  `y``:` `f32`,\n```}```\n``#``[``derive```(```Encode`,` Decode`,` PartialEq`,` Debug```)```]``\n``struct` ```World````(```Vec``<`Entity`>```)```;`\n``fn` `main`````(````)``````{`\n  `let` config `=` `config`::``standard`(``)``;`\n  `let` world `=` World`(``vec!``[`Entity `{` x`:` `0.``0``,` y`:` `4.``0` `}``,` Entity `{` x`:` `10.``0``,` y`:` `20.``5` `}``]``)``;`\n  `let` encoded`:` ``Vec``<``u8``>`` `=` `bincode`::``encode_to_vec`(``&`world`,` config`)``.``unwrap``(``)``;`\n  ``//` The length of the vector is encoded as a varint u64, which in this case gets collapsed to a single byte`\n  ``//` See the documentation on varint for more info for that.`\n  ``//` The 4 floats are encoded in 4 bytes each.`\n  `assert_eq!``(`encoded`.``len``(``)``,` `1` `+` `4` `*` `4``)``;`\n  `let` `(`decoded`,` len`)``:` `(`World`,` `usize``)` `=` `bincode`::``decode_from_slice`(``&`encoded`[``..``]``,` config`)``.``unwrap``(``)``;`\n  `assert_eq!``(`world`,` decoded`)``;`\n  `assert_eq!``(`len`,` encoded`.``len``(``)``)``;` ``//` read all bytes`\n```}```\n`\n```\n\n## Specification\nBincode's format is specified in [docs/spec.md](https://github.com/bincode-org/bincode/blob/trunk/docs/spec.md).\n## FAQ\n### Is Bincode suitable for storage?\nThe encoding format is stable, provided the same configuration is used. This should ensure that later versions can still read data produced by a previous versions of the library if no major version change has occurred.\nBincode 1 and 2 are completely compatible if the same configuration is used.\nBincode is invariant over byte-order, making an exchange between different architectures possible. It is also rather space efficient, as it stores no metadata like struct field names in the output format and writes long streams of binary data without needing any potentially size-increasing encoding.\nAs a result, Bincode is suitable for storing data. Be aware that it does not implement any sort of data versioning scheme or file headers, as these features are outside the scope of this crate.\n### Is Bincode suitable for untrusted inputs?\nBincode attempts to protect against hostile data. There is a maximum size configuration available (```Configuration`::``with_limit``), but not enabled in the default configuration. Enabling it causes pre-allocation size to be limited to prevent against memory exhaustion attacks.\nDeserializing any incoming data will not cause undefined behavior or memory issues, assuming that the deserialization code for the struct is safe itself.\nBincode can be used for untrusted inputs in the sense that it will not create a security issues in your application, provided the configuration is changed to enable a maximum size limit. Malicious inputs will fail upon deserialization.\n### What is Bincode's MSRV (minimum supported Rust version)?\nBincode 2.0 has an MSRV of 1.85.0. Any changes to the MSRV are considered a breaking change for semver purposes, except when certain features are enabled. Features affecting MSRV are documented in the crate root.\n### Why does bincode not respect ````#``[``repr```(```u8```)```]````?\nBincode will encode enum variants as a ```u32```. If you're worried about storage size, we can recommend enabling ```Configuration`::``with_variable_int_encoding`(``)```. This option is enabled by default with the ``standard`` configuration. In this case enum variants will almost always be encoded as a ```u8```.\nCurrently we have not found a compelling case to respect ````#``[``repr```(```...```)```]````. You're most likely trying to interop with a format that is similar-but-not-quite-bincode. We only support our own protocol ([spec](https://github.com/bincode-org/bincode/blob/trunk/docs/spec.md)).\nIf you really want to use bincode to encode/decode a different protocol, consider implementing ``Encode`` and ``Decode`` yourself. ``bincode-derive`` will output the generated implementation in ``target/generated/bincode/<name>_Encode.rs`` and ``target/generated/bincode/<name>_Decode.rs`` which should get you started.\n#### Dependencies\n~190KB \n  * [derive](https://lib.rs/crates/bincode/features#feature-derive \"default feature\") [bincode_derive](https://lib.rs/crates/bincode_derive \"2.0.1\")\n  * [alloc?](https://lib.rs/crates/bincode/features#feature-alloc \"optional feature\") [serde?](https://lib.rs/crates/bincode/features#feature-serde \"optional feature\") [std?](https://lib.rs/crates/bincode/features#feature-std \"optional feature\") [serde](https://lib.rs/crates/serde \"1.0\")\n  * [unty](https://lib.rs/crates/unty \"0.0.4\")\n\n\n  * dev  [bincode](https://lib.rs/crates/bincode \"renamed bincode_1, 1.3\")\n  * dev  [bumpalo](https://lib.rs/crates/bumpalo \"3.16.0\")[+collections](https://lib.rs/crates/bumpalo/features#feature-collections)\n  * dev  [chrono](https://lib.rs/crates/chrono \"0.4\")[+serde](https://lib.rs/crates/chrono/features#feature-serde)\n  * dev  [criterion](https://lib.rs/crates/criterion \"outdated\") 0.5\n  * dev  [glam](https://lib.rs/crates/glam \"obsolete\") 0.25[+serde](https://lib.rs/crates/glam/features#feature-serde)\n  * dev  [ouroboros](https://lib.rs/crates/ouroboros \"new\") 0.18.3\n  * dev  [rand](https://lib.rs/crates/rand \"outdated\") 0.8\n  * dev  [serde_derive](https://lib.rs/crates/serde_derive \"1.0\")\n  * dev  [serde_json](https://lib.rs/crates/serde_json \"1.0\")\n  * dev  [tempfile](https://lib.rs/crates/tempfile \"3.2\")\n  * dev  [uuid](https://lib.rs/crates/uuid \"1.1\")[+serde](https://lib.rs/crates/uuid/features#feature-serde)\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "markdown_with_citations": "###  63 releases\u27e81\u27e9 (13 stable)\n2.0.1 |  Mar 10, 2025   \n---|---  \n2.0.0-rc.3 |  Mar 30, 2023   \n2.0.0-rc.2 |  Oct 4, 2022   \n2.0.0-rc.1 |  Mar 4, 2022   \n0.0.2 |  Nov 24, 2014   \n#**8** in Encoding\u27e82\u27e9\nDownload history 1504914/week @ 2025-03-07 1495989/week @ 2025-03-14 1514684/week @ 2025-03-21 1491562/week @ 2025-03-28 1548701/week @ 2025-04-04 1527223/week @ 2025-04-11 1478712/week @ 2025-04-18 1452013/week @ 2025-04-25 1428414/week @ 2025-05-02 1538563/week @ 2025-05-09 1582860/week @ 2025-05-16 1354639/week @ 2025-05-23 1495571/week @ 2025-05-30 1498339/week @ 2025-06-06 1633426/week @ 2025-06-13 1672063/week @ 2025-06-20\n**6,559,091** downloads per month Used in **9,411** crates (3,770 directly)\u27e83\u27e9\n**MIT** license \n270KB  6.5K  SLoC\n# Bincode\n![](https://img.gs/czjpqfbdkz/full/https://raw.githubusercontent.com/bincode-org/bincode/trunk/logo.svg)\n![CI\u27e84\u27e9](https://github.com/bincode-org/bincode/actions) ![\u27e85\u27e9](https://crates.io/crates/bincode) ![\u27e86\u27e9](https://opensource.org/licenses/MIT)\n![Matrix\u27e87\u27e9](https://matrix.to/#/#bincode:matrix.org)\nA compact encoder / decoder pair that uses a binary zero-fluff encoding scheme. The size of the encoded object will be the same or smaller than the size that the object takes up in memory in a running Rust program.\nIn addition to exposing two simple functions (one that encodes to ````Vec``<``u8``>````, and one that decodes from ```&``[``u8``]```), binary-encode exposes a Reader/Writer API that makes it work perfectly with other stream-based APIs such as Rust files, network streams, and the flate2-rs\u27e88\u27e9 compression library.\n## API Documentation\u27e89\u27e9\n## Bincode in the Wild\n  * google/tarpc\u27e810\u27e9: Bincode is used to serialize and deserialize networked RPC messages.\n  * servo/webrender\u27e811\u27e9: Bincode records WebRender API calls for record/replay-style graphics debugging.\n  * servo/ipc-channel\u27e812\u27e9: IPC-Channel uses Bincode to send structs between processes using a channel-like API.\n  * ajeetdsouza/zoxide\u27e813\u27e9: zoxide uses Bincode to store a database of directories and their access frequencies on disk.\n\n\n## Example\n```\n``use` `bincode`::````{`config`,` Decode`,` Encode```}```;`\n``#``[``derive```(```Encode`,` Decode`,` PartialEq`,` Debug```)```]``\n``struct` ```Entity` ````{`\n  `x``:` `f32`,\n  `y``:` `f32`,\n```}```\n``#``[``derive```(```Encode`,` Decode`,` PartialEq`,` Debug```)```]``\n``struct` ```World````(```Vec``<`Entity`>```)```;`\n``fn` `main`````(````)``````{`\n  `let` config `=` `config`::``standard`(``)``;`\n  `let` world `=` World`(``vec!``[`Entity `{` x`:` `0.``0``,` y`:` `4.``0` `}``,` Entity `{` x`:` `10.``0``,` y`:` `20.``5` `}``]``)``;`\n  `let` encoded`:` ``Vec``<``u8``>`` `=` `bincode`::``encode_to_vec`(``&`world`,` config`)``.``unwrap``(``)``;`\n  ``//` The length of the vector is encoded as a varint u64, which in this case gets collapsed to a single byte`\n  ``//` See the documentation on varint for more info for that.`\n  ``//` The 4 floats are encoded in 4 bytes each.`\n  `assert_eq!``(`encoded`.``len``(``)``,` `1` `+` `4` `*` `4``)``;`\n  `let` `(`decoded`,` len`)``:` `(`World`,` `usize``)` `=` `bincode`::``decode_from_slice`(``&`encoded`[``..``]``,` config`)``.``unwrap``(``)``;`\n  `assert_eq!``(`world`,` decoded`)``;`\n  `assert_eq!``(`len`,` encoded`.``len``(``)``)``;` ``//` read all bytes`\n```}```\n`\n```\n\n## Specification\nBincode's format is specified in docs/spec.md\u27e814\u27e9.\n## FAQ\n### Is Bincode suitable for storage?\nThe encoding format is stable, provided the same configuration is used. This should ensure that later versions can still read data produced by a previous versions of the library if no major version change has occurred.\nBincode 1 and 2 are completely compatible if the same configuration is used.\nBincode is invariant over byte-order, making an exchange between different architectures possible. It is also rather space efficient, as it stores no metadata like struct field names in the output format and writes long streams of binary data without needing any potentially size-increasing encoding.\nAs a result, Bincode is suitable for storing data. Be aware that it does not implement any sort of data versioning scheme or file headers, as these features are outside the scope of this crate.\n### Is Bincode suitable for untrusted inputs?\nBincode attempts to protect against hostile data. There is a maximum size configuration available (```Configuration`::``with_limit``), but not enabled in the default configuration. Enabling it causes pre-allocation size to be limited to prevent against memory exhaustion attacks.\nDeserializing any incoming data will not cause undefined behavior or memory issues, assuming that the deserialization code for the struct is safe itself.\nBincode can be used for untrusted inputs in the sense that it will not create a security issues in your application, provided the configuration is changed to enable a maximum size limit. Malicious inputs will fail upon deserialization.\n### What is Bincode's MSRV (minimum supported Rust version)?\nBincode 2.0 has an MSRV of 1.85.0. Any changes to the MSRV are considered a breaking change for semver purposes, except when certain features are enabled. Features affecting MSRV are documented in the crate root.\n### Why does bincode not respect ````#``[``repr```(```u8```)```]````?\nBincode will encode enum variants as a ```u32```. If you're worried about storage size, we can recommend enabling ```Configuration`::``with_variable_int_encoding`(``)```. This option is enabled by default with the ``standard`` configuration. In this case enum variants will almost always be encoded as a ```u8```.\nCurrently we have not found a compelling case to respect ````#``[``repr```(```...```)```]````. You're most likely trying to interop with a format that is similar-but-not-quite-bincode. We only support our own protocol (spec\u27e814\u27e9).\nIf you really want to use bincode to encode/decode a different protocol, consider implementing ``Encode`` and ``Decode`` yourself. ``bincode-derive`` will output the generated implementation in ``target/generated/bincode/<name>_Encode.rs`` and ``target/generated/bincode/<name>_Decode.rs`` which should get you started.\n#### Dependencies\n~190KB \n  * derive\u27e815\u27e9 bincode_derive\u27e816\u27e9\n  * alloc?\u27e817\u27e9 serde?\u27e818\u27e9 std?\u27e819\u27e9 serde\u27e820\u27e9\n  * unty\u27e821\u27e9\n\n\n  * dev  bincode\u27e822\u27e9\n  * dev  bumpalo\u27e823\u27e9+collections\u27e824\u27e9\n  * dev  chrono\u27e825\u27e9+serde\u27e826\u27e9\n  * dev  criterion\u27e827\u27e9 0.5\n  * dev  glam\u27e828\u27e9 0.25+serde\u27e829\u27e9\n  * dev  ouroboros\u27e830\u27e9 0.18.3\n  * dev  rand\u27e831\u27e9 0.8\n  * dev  serde_derive\u27e832\u27e9\n  * dev  serde_json\u27e833\u27e9\n  * dev  tempfile\u27e834\u27e9\n  * dev  uuid\u27e835\u27e9+serde\u27e836\u27e9\n\n\n  *[SLoC]: Lines of code, excluding comments\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/bincode/versions: 63 releases\n\u27e82\u27e9 https://lib.rs/encoding: Encoding and/or decoding data from one data format to another. - Encoding\n\u27e83\u27e9 https://lib.rs/crates/bincode/rev: **9,411** crates (3,770 directly)\n\u27e84\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/bincode-org/bincode/workflows/CI/badge.svg: ![CI\n\u27e85\u27e9 https://img.shields.io/crates/v/bincode.svg: ![\n\u27e86\u27e9 https://img.shields.io/badge/license-MIT-blue.svg: ![\n\u27e87\u27e9 https://img.shields.io/matrix/bincode:matrix.org?label=Matrix%20Chat: ![Matrix\n\u27e88\u27e9 https://github.com/rust-lang/flate2-rs: flate2-rs\n\u27e89\u27e9 https://docs.rs/bincode/: API Documentation\n\u27e810\u27e9 https://github.com/google/tarpc: google/tarpc\n\u27e811\u27e9 https://github.com/servo/webrender: servo/webrender\n\u27e812\u27e9 https://github.com/servo/ipc-channel: servo/ipc-channel\n\u27e813\u27e9 https://github.com/ajeetdsouza/zoxide: ajeetdsouza/zoxide\n\u27e814\u27e9 https://github.com/bincode-org/bincode/blob/trunk/docs/spec.md: docs/spec.md\n\u27e815\u27e9 https://lib.rs/crates/bincode/features#feature-derive: default feature - derive\n\u27e816\u27e9 https://lib.rs/crates/bincode_derive: 2.0.1 - bincode_derive\n\u27e817\u27e9 https://lib.rs/crates/bincode/features#feature-alloc: optional feature - alloc?\n\u27e818\u27e9 https://lib.rs/crates/bincode/features#feature-serde: optional feature - serde?\n\u27e819\u27e9 https://lib.rs/crates/bincode/features#feature-std: optional feature - std?\n\u27e820\u27e9 https://lib.rs/crates/serde: 1.0 - serde\n\u27e821\u27e9 https://lib.rs/crates/unty: 0.0.4 - unty\n\u27e822\u27e9 https://lib.rs/crates/bincode: renamed bincode_1, 1.3 - bincode\n\u27e823\u27e9 https://lib.rs/crates/bumpalo: 3.16.0 - bumpalo\n\u27e824\u27e9 https://lib.rs/crates/bumpalo/features#feature-collections: +collections\n\u27e825\u27e9 https://lib.rs/crates/chrono: 0.4 - chrono\n\u27e826\u27e9 https://lib.rs/crates/chrono/features#feature-serde: +serde\n\u27e827\u27e9 https://lib.rs/crates/criterion: outdated - criterion\n\u27e828\u27e9 https://lib.rs/crates/glam: obsolete - glam\n\u27e829\u27e9 https://lib.rs/crates/glam/features#feature-serde: +serde\n\u27e830\u27e9 https://lib.rs/crates/ouroboros: new - ouroboros\n\u27e831\u27e9 https://lib.rs/crates/rand: outdated - rand\n\u27e832\u27e9 https://lib.rs/crates/serde_derive: 1.0 - serde_derive\n\u27e833\u27e9 https://lib.rs/crates/serde_json: 1.0 - serde_json\n\u27e834\u27e9 https://lib.rs/crates/tempfile: 3.2 - tempfile\n\u27e835\u27e9 https://lib.rs/crates/uuid: 1.1 - uuid\n\u27e836\u27e9 https://lib.rs/crates/uuid/features#feature-serde: +serde\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8365,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112756.6092974"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unty@0.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unty-0.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unty",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unty-0.0.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libunty-e87d12f83f209070.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#virtue@0.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\virtue-0.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "virtue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\virtue-0.0.18\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libvirtue-fe972c1878c24a2e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libvirtue-fe972c1878c24a2e.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bincode_derive@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bincode_derive-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "bincode_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bincode_derive-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp9e1yduk1/bincode-2.0.1#bincode@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bincode",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "bincode_derive",
+                "default",
+                "derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libbincode-5c8e281df76d5611.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#virtue@0.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\virtue-0.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "virtue",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\virtue-0.0.18\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libvirtue-fe972c1878c24a2e.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libvirtue-fe972c1878c24a2e.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#bincode_derive@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bincode_derive-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "bincode_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\bincode_derive-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\bincode_derive-62fd63a67fb5a44a.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unty@0.0.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unty-0.0.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unty",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unty-0.0.4\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libunty-e87d12f83f209070.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp9e1yduk1/bincode-2.0.1#bincode@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bincode",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n  --> src\\error.rs:62:9\n   |\n62 |         write!(f, \"{:?}\", self)\n   |         ^^^^^^^^^^^^^^^^^^^^^^^\n   |\n   = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\n   = note: `#[warn(clippy::uninlined_format_args)]` on by default\nhelp: change this to\n   |\n62 -         write!(f, \"{:?}\", self)\n62 +         write!(f, \"{self:?}\")\n   |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(clippy::uninlined_format_args)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 2071,
+                        "byte_start": 2071,
+                        "column_end": 21,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 62,
+                        "line_start": 62,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 21,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 2081,
+                        "byte_start": 2075,
+                        "column_end": 31,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 62,
+                        "line_start": 62,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 25,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 2082,
+                    "byte_start": 2059,
+                    "column_end": 32,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 62,
+                    "line_start": 62,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 9,
+                        "text": "        write!(f, \"{:?}\", self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp9e1yduk1/bincode-2.0.1#bincode@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bincode",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: variables can be used directly in the `format!` string\n   --> src\\error.rs:196:9\n    |\n196 |         write!(f, \"{:?}\", self)\n    |         ^^^^^^^^^^^^^^^^^^^^^^^\n    |\n    = help: for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args\nhelp: change this to\n    |\n196 -         write!(f, \"{:?}\", self)\n196 +         write!(f, \"{self:?}\")\n    |\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "for further information visit https://rust-lang.github.io/rust-clippy/master/index.html#uninlined_format_args",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "change this to",
+                    "rendered": null,
+                    "spans": [
+                      {
+                        "byte_end": 7043,
+                        "byte_start": 7043,
+                        "column_end": 21,
+                        "column_start": 21,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 196,
+                        "line_start": 196,
+                        "suggested_replacement": "self",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 21,
+                            "highlight_start": 21,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      },
+                      {
+                        "byte_end": 7053,
+                        "byte_start": 7047,
+                        "column_end": 31,
+                        "column_start": 25,
+                        "expansion": null,
+                        "file_name": "src\\error.rs",
+                        "is_primary": true,
+                        "label": null,
+                        "line_end": 196,
+                        "line_start": 196,
+                        "suggested_replacement": "",
+                        "suggestion_applicability": "MachineApplicable",
+                        "text": [
+                          {
+                            "highlight_end": 31,
+                            "highlight_start": 25,
+                            "text": "        write!(f, \"{:?}\", self)"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "code": {
+                  "code": "clippy::uninlined_format_args",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "variables can be used directly in the `format!` string",
+                "spans": [
+                  {
+                    "byte_end": 7054,
+                    "byte_start": 7031,
+                    "column_end": 32,
+                    "column_start": 9,
+                    "expansion": null,
+                    "file_name": "src\\error.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 196,
+                    "line_start": 196,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 32,
+                        "highlight_start": 9,
+                        "text": "        write!(f, \"{:?}\", self)"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp9e1yduk1/bincode-2.0.1#bincode@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "bincode",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "bincode_derive",
+                "default",
+                "derive",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp9e1yduk1\\bincode-2.0.1\\target\\debug\\deps\\libbincode-c5f62ccd0bb360b3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 112
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "bincode",
+          "version": "2.0.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\n[Settings](https://docs.rs/bincode/latest/settings.html)\n[Help](https://docs.rs/bincode/latest/help.html)\nSummary[Source](https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237)\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our [migration guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html)\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#serde)Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See [Features](https://docs.rs/bincode/latest/bincode/#features) for more information.\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#features)Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the [serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\") module| Note: There are several [known issues](https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues) when using serde and bincode  \n## [\u00a7](https://docs.rs/bincode/latest/bincode/#which-functions-to-use)Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with [`fs::File`](https://doc.rust-lang.org/nightly/std/fs/struct.File.html \"struct std::fs::File\") or [`net::TcpStream`](https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html \"struct std::net::tcp::TcpStream\")| [`encode_into_std_write`](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")| [`decode_from_std_read`](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")  \nyou\u2019re working with in-memory buffers| [`encode_to_vec`](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \nYou want to use a custom [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\") and [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\")| [`encode_into_writer`](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")| [`decode_from_reader`](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")  \nYou\u2019re working with pre-allocated buffers or on embedded targets| [`encode_into_slice`](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#example)Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports[\u00a7](https://docs.rs/bincode/latest/bincode/#reexports)\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules[\u00a7](https://docs.rs/bincode/latest/bincode/#modules)\n\n[config](https://docs.rs/bincode/latest/bincode/config/index.html \"mod bincode::config\")\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\n[de](https://docs.rs/bincode/latest/bincode/de/index.html \"mod bincode::de\")\n    Decoder-based structs and traits.\n\n[enc](https://docs.rs/bincode/latest/bincode/enc/index.html \"mod bincode::enc\")\n    Encoder-based structs and traits.\n\n[error](https://docs.rs/bincode/latest/bincode/error/index.html \"mod bincode::error\")\n    Errors that can be encounting by Encoding and Decoding.\n\n[migration_guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html \"mod bincode::migration_guide\")\n    Migrating from bincode 1 to 2\n\n[serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\")`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\n[spec](https://docs.rs/bincode/latest/bincode/spec/index.html \"mod bincode::spec\")\n    Serialization Specification\n## Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#macros)\n\n[impl_borrow_decode](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html \"macro bincode::impl_borrow_decode\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\n[impl_borrow_decode_with_context](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html \"macro bincode::impl_borrow_decode_with_context\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions[\u00a7](https://docs.rs/bincode/latest/bincode/#functions)\n\n[borrow_decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html \"fn bincode::borrow_decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[borrow_decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html \"fn bincode::borrow_decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_reader](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")\n    Attempt to decode a given type `D` from the given [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\").\n\n[decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html \"fn bincode::decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_std_read](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[decode_from_std_read_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html \"fn bincode::decode_from_std_read_with_context\")`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[encode_into_slice](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\n[encode_into_std_write](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information. Returns the amount of bytes written.\n\n[encode_into_writer](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")\n    Encode the given value into a custom [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\").\n\n[encode_to_vec](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information.\n## Derive Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#derives)\n\n[BorrowDecode](https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html \"derive bincode::BorrowDecode\")`derive`\n\n\n[Decode](https://docs.rs/bincode/latest/bincode/derive.Decode.html \"derive bincode::Decode\")`derive`\n\n\n[Encode](https://docs.rs/bincode/latest/bincode/derive.Encode.html \"derive bincode::Encode\")`derive`\n\n",
+            "markdown_with_citations": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our migration guide\u27e84\u27e9\n## \u00a7\u27e85\u27e9Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See Features\u27e86\u27e9 for more information.\n## \u00a7\u27e86\u27e9Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the serde\u27e87\u27e9 module| Note: There are several known issues\u27e88\u27e9 when using serde and bincode  \n## \u00a7\u27e89\u27e9Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with `fs::File`\u27e810\u27e9 or `net::TcpStream`\u27e811\u27e9| `encode_into_std_write`\u27e812\u27e9| `decode_from_std_read`\u27e813\u27e9  \nyou\u2019re working with in-memory buffers| `encode_to_vec`\u27e814\u27e9| `decode_from_slice`\u27e815\u27e9  \nYou want to use a custom Reader\u27e816\u27e9 and Writer\u27e817\u27e9| `encode_into_writer`\u27e818\u27e9| `decode_from_reader`\u27e819\u27e9  \nYou\u2019re working with pre-allocated buffers or on embedded targets| `encode_into_slice`\u27e820\u27e9| `decode_from_slice`\u27e815\u27e9  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## \u00a7\u27e821\u27e9Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports\u00a7\u27e822\u27e9\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules\u00a7\u27e823\u27e9\n\nconfig\u27e824\u27e9\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\nde\u27e825\u27e9\n    Decoder-based structs and traits.\n\nenc\u27e826\u27e9\n    Encoder-based structs and traits.\n\nerror\u27e827\u27e9\n    Errors that can be encounting by Encoding and Decoding.\n\nmigration_guide\u27e84\u27e9\n    Migrating from bincode 1 to 2\n\nserde\u27e87\u27e9`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\nspec\u27e828\u27e9\n    Serialization Specification\n## Macros\u00a7\u27e829\u27e9\n\nimpl_borrow_decode\u27e830\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\nimpl_borrow_decode_with_context\u27e831\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions\u00a7\u27e832\u27e9\n\nborrow_decode_from_slice\u27e833\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\nborrow_decode_from_slice_with_context\u27e834\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_reader\u27e819\u27e9\n    Attempt to decode a given type `D` from the given Reader\u27e816\u27e9.\n\ndecode_from_slice\u27e815\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\ndecode_from_slice_with_context\u27e835\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_std_read\u27e813\u27e9`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\ndecode_from_std_read_with_context\u27e836\u27e9`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\nencode_into_slice\u27e820\u27e9\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\nencode_into_std_write\u27e812\u27e9`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the config\u27e824\u27e9 module for more information. Returns the amount of bytes written.\n\nencode_into_writer\u27e818\u27e9\n    Encode the given value into a custom Writer\u27e817\u27e9.\n\nencode_to_vec\u27e814\u27e9`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the config\u27e824\u27e9 module for more information.\n## Derive Macros\u00a7\u27e837\u27e9\n\nBorrowDecode\u27e838\u27e9`derive`\n\n\nDecode\u27e839\u27e9`derive`\n\n\nEncode\u27e840\u27e9`derive`\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bincode/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bincode/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237: Source\n\u27e84\u27e9 https://docs.rs/bincode/latest/bincode/migration_guide/index.html: migration guide\n\u27e85\u27e9 https://docs.rs/bincode/latest/bincode/#serde: \u00a7\n\u27e86\u27e9 https://docs.rs/bincode/latest/bincode/#features: Features\n\u27e87\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html: mod bincode::serde - serde\n\u27e88\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues: known issues\n\u27e89\u27e9 https://docs.rs/bincode/latest/bincode/#which-functions-to-use: \u00a7\n\u27e810\u27e9 https://doc.rust-lang.org/nightly/std/fs/struct.File.html: struct std::fs::File - `fs::File`\n\u27e811\u27e9 https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html: struct std::net::tcp::TcpStream - `net::TcpStream`\n\u27e812\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html: fn bincode::encode_into_std_write - `encode_into_std_write`\n\u27e813\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html: fn bincode::decode_from_std_read - `decode_from_std_read`\n\u27e814\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html: fn bincode::encode_to_vec - `encode_to_vec`\n\u27e815\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html: fn bincode::decode_from_slice - `decode_from_slice`\n\u27e816\u27e9 https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html: trait bincode::de::read::Reader - Reader\n\u27e817\u27e9 https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html: trait bincode::enc::write::Writer - Writer\n\u27e818\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html: fn bincode::encode_into_writer - `encode_into_writer`\n\u27e819\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html: fn bincode::decode_from_reader - `decode_from_reader`\n\u27e820\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html: fn bincode::encode_into_slice - `encode_into_slice`\n\u27e821\u27e9 https://docs.rs/bincode/latest/bincode/#example: \u00a7\n\u27e822\u27e9 https://docs.rs/bincode/latest/bincode/#reexports: \u00a7\n\u27e823\u27e9 https://docs.rs/bincode/latest/bincode/#modules: \u00a7\n\u27e824\u27e9 https://docs.rs/bincode/latest/bincode/config/index.html: mod bincode::config - config\n\u27e825\u27e9 https://docs.rs/bincode/latest/bincode/de/index.html: mod bincode::de - de\n\u27e826\u27e9 https://docs.rs/bincode/latest/bincode/enc/index.html: mod bincode::enc - enc\n\u27e827\u27e9 https://docs.rs/bincode/latest/bincode/error/index.html: mod bincode::error - error\n\u27e828\u27e9 https://docs.rs/bincode/latest/bincode/spec/index.html: mod bincode::spec - spec\n\u27e829\u27e9 https://docs.rs/bincode/latest/bincode/#macros: \u00a7\n\u27e830\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html: macro bincode::impl_borrow_decode - impl_borrow_decode\n\u27e831\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html: macro bincode::impl_borrow_decode_with_context - impl_borrow_decode_with_context\n\u27e832\u27e9 https://docs.rs/bincode/latest/bincode/#functions: \u00a7\n\u27e833\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html: fn bincode::borrow_decode_from_slice - borrow_decode_from_slice\n\u27e834\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html: fn bincode::borrow_decode_from_slice_with_context - borrow_decode_from_slice_with_context\n\u27e835\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html: fn bincode::decode_from_slice_with_context - decode_from_slice_with_context\n\u27e836\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html: fn bincode::decode_from_std_read_with_context - decode_from_std_read_with_context\n\u27e837\u27e9 https://docs.rs/bincode/latest/bincode/#derives: \u00a7\n\u27e838\u27e9 https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html: derive bincode::BorrowDecode - BorrowDecode\n\u27e839\u27e9 https://docs.rs/bincode/latest/bincode/derive.Decode.html: derive bincode::Decode - Decode\n\u27e840\u27e9 https://docs.rs/bincode/latest/bincode/derive.Encode.html: derive bincode::Encode - Encode\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "bincode",
+          "version": "2.0.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\n[Settings](https://docs.rs/bincode/latest/settings.html)\n[Help](https://docs.rs/bincode/latest/help.html)\nSummary[Source](https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237)\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our [migration guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html)\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#serde)Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See [Features](https://docs.rs/bincode/latest/bincode/#features) for more information.\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#features)Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the [serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\") module| Note: There are several [known issues](https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues) when using serde and bincode  \n## [\u00a7](https://docs.rs/bincode/latest/bincode/#which-functions-to-use)Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with [`fs::File`](https://doc.rust-lang.org/nightly/std/fs/struct.File.html \"struct std::fs::File\") or [`net::TcpStream`](https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html \"struct std::net::tcp::TcpStream\")| [`encode_into_std_write`](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")| [`decode_from_std_read`](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")  \nyou\u2019re working with in-memory buffers| [`encode_to_vec`](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \nYou want to use a custom [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\") and [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\")| [`encode_into_writer`](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")| [`decode_from_reader`](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")  \nYou\u2019re working with pre-allocated buffers or on embedded targets| [`encode_into_slice`](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")| [`decode_from_slice`](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## [\u00a7](https://docs.rs/bincode/latest/bincode/#example)Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports[\u00a7](https://docs.rs/bincode/latest/bincode/#reexports)\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules[\u00a7](https://docs.rs/bincode/latest/bincode/#modules)\n\n[config](https://docs.rs/bincode/latest/bincode/config/index.html \"mod bincode::config\")\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\n[de](https://docs.rs/bincode/latest/bincode/de/index.html \"mod bincode::de\")\n    Decoder-based structs and traits.\n\n[enc](https://docs.rs/bincode/latest/bincode/enc/index.html \"mod bincode::enc\")\n    Encoder-based structs and traits.\n\n[error](https://docs.rs/bincode/latest/bincode/error/index.html \"mod bincode::error\")\n    Errors that can be encounting by Encoding and Decoding.\n\n[migration_guide](https://docs.rs/bincode/latest/bincode/migration_guide/index.html \"mod bincode::migration_guide\")\n    Migrating from bincode 1 to 2\n\n[serde](https://docs.rs/bincode/latest/bincode/serde/index.html \"mod bincode::serde\")`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\n[spec](https://docs.rs/bincode/latest/bincode/spec/index.html \"mod bincode::spec\")\n    Serialization Specification\n## Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#macros)\n\n[impl_borrow_decode](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html \"macro bincode::impl_borrow_decode\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\n[impl_borrow_decode_with_context](https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html \"macro bincode::impl_borrow_decode_with_context\")\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions[\u00a7](https://docs.rs/bincode/latest/bincode/#functions)\n\n[borrow_decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html \"fn bincode::borrow_decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[borrow_decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html \"fn bincode::borrow_decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_reader](https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html \"fn bincode::decode_from_reader\")\n    Attempt to decode a given type `D` from the given [Reader](https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html \"trait bincode::de::read::Reader\").\n\n[decode_from_slice](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html \"fn bincode::decode_from_slice\")\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\n[decode_from_slice_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html \"fn bincode::decode_from_slice_with_context\")\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\n[decode_from_std_read](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html \"fn bincode::decode_from_std_read\")`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[decode_from_std_read_with_context](https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html \"fn bincode::decode_from_std_read_with_context\")`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\n[encode_into_slice](https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html \"fn bincode::encode_into_slice\")\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\n[encode_into_std_write](https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html \"fn bincode::encode_into_std_write\")`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information. Returns the amount of bytes written.\n\n[encode_into_writer](https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html \"fn bincode::encode_into_writer\")\n    Encode the given value into a custom [Writer](https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html \"trait bincode::enc::write::Writer\").\n\n[encode_to_vec](https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html \"fn bincode::encode_to_vec\")`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the [config](https://docs.rs/bincode/latest/bincode/config/index.html) module for more information.\n## Derive Macros[\u00a7](https://docs.rs/bincode/latest/bincode/#derives)\n\n[BorrowDecode](https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html \"derive bincode::BorrowDecode\")`derive`\n\n\n[Decode](https://docs.rs/bincode/latest/bincode/derive.Decode.html \"derive bincode::Decode\")`derive`\n\n\n[Encode](https://docs.rs/bincode/latest/bincode/derive.Encode.html \"derive bincode::Encode\")`derive`\n\n",
+            "markdown_with_citations": "[](https://docs.rs/bincode/latest/bincode/all.html \"show sidebar\")\n# Crate bincodeCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nBincode is a crate for encoding and decoding using a tiny binary serialization strategy. Using it, you can easily go from having an object in memory, quickly serialize it to bytes, and then deserialize it back just as fast!\nIf you\u2019re coming from bincode 1, check out our migration guide\u27e84\u27e9\n## \u00a7\u27e85\u27e9Serde\nStarting from bincode 2, serde is now an optional dependency. If you want to use serde, please enable the `serde` feature. See Features\u27e86\u27e9 for more information.\n## \u00a7\u27e86\u27e9Features\nName| Default?| Affects MSRV?| Supported types for Encode/Decode| Enabled methods| Other  \n---|---|---|---|---|---  \nstd| Yes| No| `HashMap` and `HashSet`| `decode_from_std_read` and `encode_into_std_write`|   \nalloc| Yes| No| All common containers in alloc, like `Vec`, `String`, `Box`| `encode_to_vec`|   \natomic| Yes| No| All `Atomic*` integer types, e.g. `AtomicUsize`, and `AtomicBool`| |   \nderive| Yes| No| | | Enables the `BorrowDecode`, `Decode` and `Encode` derive macros  \nserde| No| Yes (MSRV reliant on serde)| `Compat` and `BorrowCompat`, which will work for all types that implement serde\u2019s traits| serde-specific encode/decode functions in the serde\u27e87\u27e9 module| Note: There are several known issues\u27e88\u27e9 when using serde and bincode  \n## \u00a7\u27e89\u27e9Which functions to use\nBincode has a couple of pairs of functions that are used in different situations.\nSituation| Encode| Decode  \n---|---|---  \nYou\u2019re working with `fs::File`\u27e810\u27e9 or `net::TcpStream`\u27e811\u27e9| `encode_into_std_write`\u27e812\u27e9| `decode_from_std_read`\u27e813\u27e9  \nyou\u2019re working with in-memory buffers| `encode_to_vec`\u27e814\u27e9| `decode_from_slice`\u27e815\u27e9  \nYou want to use a custom Reader\u27e816\u27e9 and Writer\u27e817\u27e9| `encode_into_writer`\u27e818\u27e9| `decode_from_reader`\u27e819\u27e9  \nYou\u2019re working with pre-allocated buffers or on embedded targets| `encode_into_slice`\u27e820\u27e9| `decode_from_slice`\u27e815\u27e9  \n**Note:** If you\u2019re using `serde`, use `bincode::serde::...` instead of `bincode::...`\n## \u00a7\u27e821\u27e9Example\n```\nlet mut slice = [0u8; 100];\n// You can encode any type that implements `Encode`.\n// You can automatically implement this trait on custom types with the `derive` feature.\nlet input = (\n  0u8,\n  10u32,\n  10000i128,\n  'a',\n  [0u8, 1u8, 2u8, 3u8]\n);\nlet length = bincode::encode_into_slice(\n  input,\n  &mut slice,\n  bincode::config::standard()\n).unwrap();\nlet slice = &slice[..length];\nprintln!(\"Bytes written: {:?}\", slice);\n// Decoding works the same as encoding.\n// The trait used is `Decode`, and can also be automatically implemented with the `derive` feature.\nlet decoded: (u8, u32, i128, char, [u8; 4]) = bincode::decode_from_slice(slice, bincode::config::standard()).unwrap().0;\nassert_eq!(decoded, input);\n```\n\n## Re-exports\u00a7\u27e822\u27e9\n\n`pub use de::BorrowDecode[](https://docs.rs/bincode/latest/bincode/de/trait.BorrowDecode.html \"trait bincode::de::BorrowDecode\");`\n\n\n`pub use de::Decode[](https://docs.rs/bincode/latest/bincode/de/trait.Decode.html \"trait bincode::de::Decode\");`\n\n\n`pub use enc::Encode[](https://docs.rs/bincode/latest/bincode/enc/trait.Encode.html \"trait bincode::enc::Encode\");`\n\n## Modules\u00a7\u27e823\u27e9\n\nconfig\u27e824\u27e9\n    The config module is used to change the behavior of bincode\u2019s encoding and decoding logic.\n\nde\u27e825\u27e9\n    Decoder-based structs and traits.\n\nenc\u27e826\u27e9\n    Encoder-based structs and traits.\n\nerror\u27e827\u27e9\n    Errors that can be encounting by Encoding and Decoding.\n\nmigration_guide\u27e84\u27e9\n    Migrating from bincode 1 to 2\n\nserde\u27e87\u27e9`serde`\n    Support for serde integration. Enable this with the `serde` feature.\n\nspec\u27e828\u27e9\n    Serialization Specification\n## Macros\u00a7\u27e829\u27e9\n\nimpl_borrow_decode\u27e830\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n\nimpl_borrow_decode_with_context\u27e831\u27e9\n    Helper macro to implement `BorrowDecode` for any type that implements `Decode`.\n## Functions\u00a7\u27e832\u27e9\n\nborrow_decode_from_slice\u27e833\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\nborrow_decode_from_slice_with_context\u27e834\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_reader\u27e819\u27e9\n    Attempt to decode a given type `D` from the given Reader\u27e816\u27e9.\n\ndecode_from_slice\u27e815\u27e9\n    Attempt to decode a given type `D` from the given slice. Returns the decoded output and the amount of bytes read.\n\ndecode_from_slice_with_context\u27e835\u27e9\n    Attempt to decode a given type `D` from the given slice with `Context`. Returns the decoded output and the amount of bytes read.\n\ndecode_from_std_read\u27e813\u27e9`std`\n    Decode type `D` from the given reader with the given `Config`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\ndecode_from_std_read_with_context\u27e836\u27e9`std`\n    Decode type `D` from the given reader with the given `Config` and `Context`. The reader can be any type that implements `std::io::Read`, e.g. `std::fs::File`.\n\nencode_into_slice\u27e820\u27e9\n    Encode the given value into the given slice. Returns the amount of bytes that have been written.\n\nencode_into_std_write\u27e812\u27e9`std`\n    Encode the given value into any type that implements `std::io::Write`, e.g. `std::fs::File`, with the given `Config`. See the config\u27e824\u27e9 module for more information. Returns the amount of bytes written.\n\nencode_into_writer\u27e818\u27e9\n    Encode the given value into a custom Writer\u27e817\u27e9.\n\nencode_to_vec\u27e814\u27e9`alloc`\n    Encode the given value into a `Vec<u8>` with the given `Config`. See the config\u27e824\u27e9 module for more information.\n## Derive Macros\u00a7\u27e837\u27e9\n\nBorrowDecode\u27e838\u27e9`derive`\n\n\nDecode\u27e839\u27e9`derive`\n\n\nEncode\u27e840\u27e9`derive`\n\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/bincode/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/bincode/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/bincode/latest/src/bincode/lib.rs.html#1-237: Source\n\u27e84\u27e9 https://docs.rs/bincode/latest/bincode/migration_guide/index.html: migration guide\n\u27e85\u27e9 https://docs.rs/bincode/latest/bincode/#serde: \u00a7\n\u27e86\u27e9 https://docs.rs/bincode/latest/bincode/#features: Features\n\u27e87\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html: mod bincode::serde - serde\n\u27e88\u27e9 https://docs.rs/bincode/latest/bincode/serde/index.html#known-issues: known issues\n\u27e89\u27e9 https://docs.rs/bincode/latest/bincode/#which-functions-to-use: \u00a7\n\u27e810\u27e9 https://doc.rust-lang.org/nightly/std/fs/struct.File.html: struct std::fs::File - `fs::File`\n\u27e811\u27e9 https://doc.rust-lang.org/nightly/std/net/tcp/struct.TcpStream.html: struct std::net::tcp::TcpStream - `net::TcpStream`\n\u27e812\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_std_write.html: fn bincode::encode_into_std_write - `encode_into_std_write`\n\u27e813\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read.html: fn bincode::decode_from_std_read - `decode_from_std_read`\n\u27e814\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_to_vec.html: fn bincode::encode_to_vec - `encode_to_vec`\n\u27e815\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice.html: fn bincode::decode_from_slice - `decode_from_slice`\n\u27e816\u27e9 https://docs.rs/bincode/latest/bincode/de/read/trait.Reader.html: trait bincode::de::read::Reader - Reader\n\u27e817\u27e9 https://docs.rs/bincode/latest/bincode/enc/write/trait.Writer.html: trait bincode::enc::write::Writer - Writer\n\u27e818\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_writer.html: fn bincode::encode_into_writer - `encode_into_writer`\n\u27e819\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_reader.html: fn bincode::decode_from_reader - `decode_from_reader`\n\u27e820\u27e9 https://docs.rs/bincode/latest/bincode/fn.encode_into_slice.html: fn bincode::encode_into_slice - `encode_into_slice`\n\u27e821\u27e9 https://docs.rs/bincode/latest/bincode/#example: \u00a7\n\u27e822\u27e9 https://docs.rs/bincode/latest/bincode/#reexports: \u00a7\n\u27e823\u27e9 https://docs.rs/bincode/latest/bincode/#modules: \u00a7\n\u27e824\u27e9 https://docs.rs/bincode/latest/bincode/config/index.html: mod bincode::config - config\n\u27e825\u27e9 https://docs.rs/bincode/latest/bincode/de/index.html: mod bincode::de - de\n\u27e826\u27e9 https://docs.rs/bincode/latest/bincode/enc/index.html: mod bincode::enc - enc\n\u27e827\u27e9 https://docs.rs/bincode/latest/bincode/error/index.html: mod bincode::error - error\n\u27e828\u27e9 https://docs.rs/bincode/latest/bincode/spec/index.html: mod bincode::spec - spec\n\u27e829\u27e9 https://docs.rs/bincode/latest/bincode/#macros: \u00a7\n\u27e830\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode.html: macro bincode::impl_borrow_decode - impl_borrow_decode\n\u27e831\u27e9 https://docs.rs/bincode/latest/bincode/macro.impl_borrow_decode_with_context.html: macro bincode::impl_borrow_decode_with_context - impl_borrow_decode_with_context\n\u27e832\u27e9 https://docs.rs/bincode/latest/bincode/#functions: \u00a7\n\u27e833\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice.html: fn bincode::borrow_decode_from_slice - borrow_decode_from_slice\n\u27e834\u27e9 https://docs.rs/bincode/latest/bincode/fn.borrow_decode_from_slice_with_context.html: fn bincode::borrow_decode_from_slice_with_context - borrow_decode_from_slice_with_context\n\u27e835\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_slice_with_context.html: fn bincode::decode_from_slice_with_context - decode_from_slice_with_context\n\u27e836\u27e9 https://docs.rs/bincode/latest/bincode/fn.decode_from_std_read_with_context.html: fn bincode::decode_from_std_read_with_context - decode_from_std_read_with_context\n\u27e837\u27e9 https://docs.rs/bincode/latest/bincode/#derives: \u00a7\n\u27e838\u27e9 https://docs.rs/bincode/latest/bincode/derive.BorrowDecode.html: derive bincode::BorrowDecode - BorrowDecode\n\u27e839\u27e9 https://docs.rs/bincode/latest/bincode/derive.Decode.html: derive bincode::Decode - Decode\n\u27e840\u27e9 https://docs.rs/bincode/latest/bincode/derive.Encode.html: derive bincode::Encode - Encode\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `bincode` crate provides fast and compact binary serialization and deserialization for Rust types, supporting custom configurations and efficient encoding/decoding for in-memory buffers, files, and streams. It features `Encode` and `Decode` traits, which can be derived for custom types, and optional integration with `serde`. Key features include support for standard and alloc types, atomic types, and pre-allocated buffers, with flexibility for embedded systems and custom readers/writers.",
+          "feature_summary": null,
+          "use_case": "Serialization",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: Encoding and Decoding Traits  \n\u2705 **Factual:** Bincode provides `Encode` and `Decode` traits that can be automatically derived for custom types using the `derive` feature, simplifying serialization and deserialization workflows.  \n\u274c **Counterfactual:** Bincode requires manual implementation of `Encode` and `Decode` traits for all custom types, as it does not support automatic derivation.  \n\n---\n\n### Pair 2: Serde Integration  \n\u2705 **Factual:** Starting from version 2.0, Serde is an optional dependency in Bincode, and its functionality can be enabled via the `serde` feature flag for compatibility with Serde-based types.  \n\u274c **Counterfactual:** Bincode v2.0 has removed all support for Serde, making it incompatible with Serde-based types even if the `serde` feature is enabled.  \n\n---\n\n### Pair 3: Performance on Embedded Targets  \n\u2705 **Factual:** Bincode supports efficient serialization and deserialization on embedded targets by using pre-allocated buffers with functions like `encode_into_slice` and `decode_from_slice`.  \n\u274c **Counterfactual:** Bincode is unsuitable for embedded targets because it requires dynamic memory allocation for all encoding and decoding operations.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-ac734627-67fc8140-1751258965",
+      "timestamp": "2025-06-30T04:49:25.552148+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

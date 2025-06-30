@@ -1,0 +1,917 @@
+[
+  {
+    "execution_id": "exec-be3b6f4c-2ff93fe8-1751264279",
+    "timestamp": "2025-06-30T06:17:59.156381+00:00",
+    "sacred_chain": {
+      "input_data": "sha2",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'sha2' -> 'sha2'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "sha2",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/sha2",
+            "title": "sha2 v0.10.9",
+            "content": {
+              "raw_markdown": "#  sha2 v0.10.9\nPure Rust implementation of the SHA-2 hash function family including SHA-224, SHA-256, SHA-384, and SHA-512. \n  * [ #crypto ](https://crates.io/keywords/crypto)\n  * [ #digest ](https://crates.io/keywords/digest)\n  * [ #hash ](https://crates.io/keywords/hash)\n  * [ #sha2 ](https://crates.io/keywords/sha2)\n\n\n  * [ Readme ](https://crates.io/crates/sha2)\n  * [ 45 Versions ](https://crates.io/crates/sha2/versions)\n  * [ Dependencies ](https://crates.io/crates/sha2/dependencies)\n  * [ Dependents ](https://crates.io/crates/sha2/reverse_dependencies)\n\n\n## Metadata\n2 months ago \n2018 edition \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n28.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add sha2\nOr add the following line to your Cargo.toml:\nsha2 = \"0.10.9\"\n## Documentation\n[ docs.rs/sha2 ](https://docs.rs/sha2)\n## Repository\n[ github.com/RustCrypto/hashes ](https://github.com/RustCrypto/hashes)\n## Owners\n## Categories\n  * [No standard library](https://crates.io/categories/no-std)\n  * [Cryptography](https://crates.io/categories/cryptography)\n\n\n[ Report crate ](https://crates.io/support?crate=sha2&inquire=crate-violation)\n### Stats Overview\n313,365,693 Downloads all time\n45 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  sha2 v0.10.9\nPure Rust implementation of the SHA-2 hash function family including SHA-224, SHA-256, SHA-384, and SHA-512. \n  *  #crypto \u27e81\u27e9\n  *  #digest \u27e82\u27e9\n  *  #hash \u27e83\u27e9\n  *  #sha2 \u27e84\u27e9\n\n\n  *  Readme \u27e85\u27e9\n  *  45 Versions \u27e86\u27e9\n  *  Dependencies \u27e87\u27e9\n  *  Dependents \u27e88\u27e9\n\n\n## Metadata\n2 months ago \n2018 edition \n MIT \u27e89\u27e9 OR  Apache-2.0 \u27e810\u27e9\n28.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add sha2\nOr add the following line to your Cargo.toml:\nsha2 = \"0.10.9\"\n## Documentation\n docs.rs/sha2 \u27e811\u27e9\n## Repository\n github.com/RustCrypto/hashes \u27e812\u27e9\n## Owners\n## Categories\n  * No standard library\u27e813\u27e9\n  * Cryptography\u27e814\u27e9\n\n\n Report crate \u27e815\u27e9\n### Stats Overview\n313,365,693 Downloads all time\n45 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/crypto:  #crypto \n\u27e82\u27e9 https://crates.io/keywords/digest:  #digest \n\u27e83\u27e9 https://crates.io/keywords/hash:  #hash \n\u27e84\u27e9 https://crates.io/keywords/sha2:  #sha2 \n\u27e85\u27e9 https://crates.io/crates/sha2:  Readme \n\u27e86\u27e9 https://crates.io/crates/sha2/versions:  45 Versions \n\u27e87\u27e9 https://crates.io/crates/sha2/dependencies:  Dependencies \n\u27e88\u27e9 https://crates.io/crates/sha2/reverse_dependencies:  Dependents \n\u27e89\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e810\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e811\u27e9 https://docs.rs/sha2:  docs.rs/sha2 \n\u27e812\u27e9 https://github.com/RustCrypto/hashes:  github.com/RustCrypto/hashes \n\u27e813\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e814\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e815\u27e9 https://crates.io/support?crate=sha2&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1420,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118068.889871"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/sha2",
+            "title": "Crate sha2Copy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\n[Settings](https://docs.rs/sha2/latest/settings.html)\n[Help](https://docs.rs/sha2/latest/help.html)\nSummary[Source](https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110)\nExpand description\nAn implementation of the [SHA-2](https://en.wikipedia.org/wiki/SHA-2) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: [`Sha224`](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\"), [`Sha256`](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\"), [`Sha512_224`](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\"), [`Sha512_256`](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\"), [`Sha384`](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\"), and [`Sha512`](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\").\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## [\u00a7](https://docs.rs/sha2/latest/sha2/#usage)Usage\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#one-shot-api)One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#incremental-api)Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha2/latest/sha2/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha2/latest/sha2/#structs)\n\n[Sha256VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html \"struct sha2::Sha256VarCore\")\n    Core block-level SHA-256 hasher with variable output size.\n\n[Sha512VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html \"struct sha2::Sha512VarCore\")\n    Core block-level SHA-512 hasher with variable output size.\n## Traits[\u00a7](https://docs.rs/sha2/latest/sha2/#traits)\n\n[Digest](https://docs.rs/sha2/latest/sha2/trait.Digest.html \"trait sha2::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions[\u00a7](https://docs.rs/sha2/latest/sha2/#functions)\n\n[compress256](https://docs.rs/sha2/latest/sha2/fn.compress256.html \"fn sha2::compress256\")\n    Raw SHA-256 compression function.\n\n[compress512](https://docs.rs/sha2/latest/sha2/fn.compress512.html \"fn sha2::compress512\")\n    Raw SHA-512 compression function.\n## Type Aliases[\u00a7](https://docs.rs/sha2/latest/sha2/#types)\n\n[Sha224](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\")\n    SHA-224 hasher.\n\n[Sha256](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\")\n    SHA-256 hasher.\n\n[Sha384](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\")\n    SHA-384 hasher.\n\n[Sha512](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\")\n    SHA-512 hasher.\n\n[Sha512_224](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\")\n    SHA-512/224 hasher.\n\n[Sha512_256](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\")\n    SHA-512/256 hasher.\n",
+              "markdown_with_citations": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-2\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: `Sha224`\u27e85\u27e9, `Sha256`\u27e86\u27e9, `Sha512_224`\u27e87\u27e9, `Sha512_256`\u27e88\u27e9, `Sha384`\u27e89\u27e9, and `Sha512`\u27e810\u27e9.\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## \u00a7\u27e811\u27e9Usage\n### \u00a7\u27e812\u27e9One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### \u00a7\u27e813\u27e9Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see RustCrypto/hashes\u27e814\u27e9 readme.\n## Re-exports\u00a7\u27e815\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e816\u27e9\n\nSha256VarCore\u27e817\u27e9\n    Core block-level SHA-256 hasher with variable output size.\n\nSha512VarCore\u27e818\u27e9\n    Core block-level SHA-512 hasher with variable output size.\n## Traits\u00a7\u27e819\u27e9\n\nDigest\u27e820\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions\u00a7\u27e821\u27e9\n\ncompress256\u27e822\u27e9\n    Raw SHA-256 compression function.\n\ncompress512\u27e823\u27e9\n    Raw SHA-512 compression function.\n## Type Aliases\u00a7\u27e824\u27e9\n\nSha224\u27e85\u27e9\n    SHA-224 hasher.\n\nSha256\u27e86\u27e9\n    SHA-256 hasher.\n\nSha384\u27e89\u27e9\n    SHA-384 hasher.\n\nSha512\u27e810\u27e9\n    SHA-512 hasher.\n\nSha512_224\u27e87\u27e9\n    SHA-512/224 hasher.\n\nSha512_256\u27e88\u27e9\n    SHA-512/256 hasher.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha2/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha2/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-2: SHA-2\n\u27e85\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha224.html: type sha2::Sha224 - `Sha224`\n\u27e86\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha256.html: type sha2::Sha256 - `Sha256`\n\u27e87\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_224.html: type sha2::Sha512_224 - `Sha512_224`\n\u27e88\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_256.html: type sha2::Sha512_256 - `Sha512_256`\n\u27e89\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha384.html: type sha2::Sha384 - `Sha384`\n\u27e810\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512.html: type sha2::Sha512 - `Sha512`\n\u27e811\u27e9 https://docs.rs/sha2/latest/sha2/#usage: \u00a7\n\u27e812\u27e9 https://docs.rs/sha2/latest/sha2/#one-shot-api: \u00a7\n\u27e813\u27e9 https://docs.rs/sha2/latest/sha2/#incremental-api: \u00a7\n\u27e814\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e815\u27e9 https://docs.rs/sha2/latest/sha2/#reexports: \u00a7\n\u27e816\u27e9 https://docs.rs/sha2/latest/sha2/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html: struct sha2::Sha256VarCore - Sha256VarCore\n\u27e818\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html: struct sha2::Sha512VarCore - Sha512VarCore\n\u27e819\u27e9 https://docs.rs/sha2/latest/sha2/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/sha2/latest/sha2/trait.Digest.html: trait sha2::Digest - Digest\n\u27e821\u27e9 https://docs.rs/sha2/latest/sha2/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress256.html: fn sha2::compress256 - compress256\n\u27e823\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress512.html: fn sha2::compress512 - compress512\n\u27e824\u27e9 https://docs.rs/sha2/latest/sha2/#types: \u00a7\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4234,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118069.6624951"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/sha2",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [30 releases](https://lib.rs/crates/sha2/versions)\nUses new Rust 2024\n0.11.0-rc.0 |  May 29, 2025   \n---|---  \n0.11.0-pre.5 |  Mar 5, 2025   \n0.11.0-pre.4 |  Jul 26, 2024   \n0.11.0-pre.3 |  Feb 1, 2024   \n0.1.2 |  ~~May 6, 2016~~  \n#**3** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 3709175/week @ 2025-03-10 4275680/week @ 2025-03-17 4456980/week @ 2025-03-24 3462186/week @ 2025-03-31 3654391/week @ 2025-04-07 3257436/week @ 2025-04-14 3072607/week @ 2025-04-21 3090860/week @ 2025-04-28 3292944/week @ 2025-05-05 3409710/week @ 2025-05-12 3349672/week @ 2025-05-19 2963673/week @ 2025-05-26 3219109/week @ 2025-06-02 3339548/week @ 2025-06-09 3456430/week @ 2025-06-16 3398342/week @ 2025-06-23\n**13,573,146** downloads per month Used in [**24,780** crates (4,539 directly)](https://lib.rs/crates/sha2/rev)\n**MIT/Apache**\n115KB  2.5K  SLoC\n# RustCrypto: SHA-2\n[![crate](https://img.shields.io/crates/v/sha2.svg)](https://crates.io/crates/sha2) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/sha2/badge.svg)](https://docs.rs/sha2/) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.85+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260041-hashes) [![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/hashes/actions/workflows/sha2.yml/badge.svg?branch=master)](https://github.com/RustCrypto/hashes/actions/workflows/sha2.yml?query=branch:master)\nPure Rust implementation of the [SHA-2](https://en.wikipedia.org/wiki/SHA-2) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: ``Sha224``, ``Sha256``, ``Sha512_224``, ``Sha512_256``, ``Sha384``, and ``Sha512``.\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## Examples\n### One-shot API\n```\n``use` `sha2`::````{`Sha256`,` Digest```}```;`\n`use` `hex_literal`::``hex`;`\n`let` hash `=` `Sha256`::``digest`(```b``\"`hello world`\"```)``;`\n`assert_eq!``(`hash`,` `hex!``(```\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``)``;`\n``//` Hex-encode hash using https://docs.rs/base16ct`\n`let` hex_hash `=` `base16ct`::```lower`::``encode_string`(``&`hash`)``;`\n`assert_eq!``(`hex_hash`,` ``\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``;`\n`\n```\n\n### Incremental API\n```\n``use` `sha2`::````{`Sha256`,` Sha512`,` Digest```}```;`\n`use` `hex_literal`::``hex`;`\n`let` `mut` hasher `=` `Sha256`::``new`(``)``;`\nhasher`.``update``(```b``\"`hello `\"```)``;`\nhasher`.``update``(```b``\"`world`\"```)``;`\n`let` hash256 `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash256`,` `hex!``(```\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``)``;`\n`let` `mut` hasher `=` `Sha512`::``new`(``)``;`\nhasher`.``update``(```b``\"`hello world`\"```)``;`\n`let` hash512 `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash512`,` `hex!``(`\n  ``\"`309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f`\"``\n  ``\"`989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f`\"``\n`)``)``;`\n`\n```\n\nAlso, see the [examples section](https://github.com/RustCrypto/hashes#Examples) in the RustCrypto/hashes readme.\n## Backends\nThis crate supports the following backends:\n  * ``soft``: portable implementation with fully unrolled rounds\n  * ``soft-compact``: portable implementation which produces smaller binaries\n  * ``aarch64-sha2``: uses the AArch64 ``sha2`` extension, fallbacks to the ``soft`` backend if the extension is not available\n  * ``loongarch64-asm``: ``asm!``-based implementation for LoongArch64 targets\n  * ``riscv-zknh``: uses the RISC-V ``Zknh`` scalar crypto extension (experimental)\n  * ``riscv-zknh-compact``: same as ``riscv_zknh`` but does not unroll rounds (experimental)\n  * ``wasm32-simd``: uses the WASM ``simd128`` extension\n  * ``x86-shani``: uses the x86 SHA-NI extension, fallbacks to the ``soft`` backend if the extension is not available (SHA-256 only)\n  * ``x86-avx2``: uses the x86 AVX2 extension, fallbacks to the ``soft`` backend if the extension is not available (SHA-512 only)\n\n\nYou can force backend selection using the ``sha2_backend`` configuration flag. It can be enabled using either environment variable (e.g. ```RUSTFLAGS``=````'`--cfg sha2_backend=\"soft\"`'``` ``cargo``` build```), or by modifying your ``.cargo/config.toml`` file. Currently the flag supports the following values: ``soft``, ``soft-compact``, ``riscv-zknh``, and ``riscv-zknh-compact``.\nNote that the RISC-V backends are experimental and require Nightly compiler.\n## License\nThe crate is licensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~710KB  ~18K SLoC\n  * [cfg-if](https://lib.rs/crates/cfg-if \"1\")\n  * [cpufeatures](https://lib.rs/crates/cpufeatures \"0.2\") arm64 x86_64 x86\n  * [digest](https://lib.rs/crates/digest \"new\") 0.11.0-rc.0\n\n\n  * dev  [base16ct](https://lib.rs/crates/base16ct \"0.2\")[+alloc](https://lib.rs/crates/base16ct/features#feature-alloc)\n  * dev  [hex-literal](https://lib.rs/crates/hex-literal \"new\") 1.0\n\n\n#### [Other features](https://lib.rs/crates/sha2/features)\n  * [alloc](https://lib.rs/crates/sha2/features#feature-alloc)\n  * [oid](https://lib.rs/crates/sha2/features#feature-oid)\n  * [zeroize](https://lib.rs/crates/sha2/features#feature-zeroize)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  30 releases\u27e81\u27e9\nUses new Rust 2024\n0.11.0-rc.0 |  May 29, 2025   \n---|---  \n0.11.0-pre.5 |  Mar 5, 2025   \n0.11.0-pre.4 |  Jul 26, 2024   \n0.11.0-pre.3 |  Feb 1, 2024   \n0.1.2 |  ~~May 6, 2016~~  \n#**3** in Cryptography\u27e82\u27e9\nDownload history 3709175/week @ 2025-03-10 4275680/week @ 2025-03-17 4456980/week @ 2025-03-24 3462186/week @ 2025-03-31 3654391/week @ 2025-04-07 3257436/week @ 2025-04-14 3072607/week @ 2025-04-21 3090860/week @ 2025-04-28 3292944/week @ 2025-05-05 3409710/week @ 2025-05-12 3349672/week @ 2025-05-19 2963673/week @ 2025-05-26 3219109/week @ 2025-06-02 3339548/week @ 2025-06-09 3456430/week @ 2025-06-16 3398342/week @ 2025-06-23\n**13,573,146** downloads per month Used in **24,780** crates (4,539 directly)\u27e83\u27e9\n**MIT/Apache**\n115KB  2.5K  SLoC\n# RustCrypto: SHA-2\n![crate\u27e84\u27e9](https://crates.io/crates/sha2) ![Docs\u27e85\u27e9](https://docs.rs/sha2/) ![Apache2/MIT licensed\u27e86\u27e9] ![Rust Version\u27e87\u27e9] ![Project Chat\u27e88\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260041-hashes) ![Build Status\u27e89\u27e9](https://github.com/RustCrypto/hashes/actions/workflows/sha2.yml?query=branch:master)\nPure Rust implementation of the SHA-2\u27e810\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: ``Sha224``, ``Sha256``, ``Sha512_224``, ``Sha512_256``, ``Sha384``, and ``Sha512``.\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## Examples\n### One-shot API\n```\n``use` `sha2`::````{`Sha256`,` Digest```}```;`\n`use` `hex_literal`::``hex`;`\n`let` hash `=` `Sha256`::``digest`(```b``\"`hello world`\"```)``;`\n`assert_eq!``(`hash`,` `hex!``(```\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``)``;`\n``//` Hex-encode hash using https://docs.rs/base16ct`\n`let` hex_hash `=` `base16ct`::```lower`::``encode_string`(``&`hash`)``;`\n`assert_eq!``(`hex_hash`,` ``\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``;`\n`\n```\n\n### Incremental API\n```\n``use` `sha2`::````{`Sha256`,` Sha512`,` Digest```}```;`\n`use` `hex_literal`::``hex`;`\n`let` `mut` hasher `=` `Sha256`::``new`(``)``;`\nhasher`.``update``(```b``\"`hello `\"```)``;`\nhasher`.``update``(```b``\"`world`\"```)``;`\n`let` hash256 `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash256`,` `hex!``(```\"`b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9`\"```)``)``;`\n`let` `mut` hasher `=` `Sha512`::``new`(``)``;`\nhasher`.``update``(```b``\"`hello world`\"```)``;`\n`let` hash512 `=` hasher`.``finalize``(``)``;`\n`assert_eq!``(`hash512`,` `hex!``(`\n  ``\"`309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f`\"``\n  ``\"`989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f`\"``\n`)``)``;`\n`\n```\n\nAlso, see the examples section\u27e811\u27e9 in the RustCrypto/hashes readme.\n## Backends\nThis crate supports the following backends:\n  * ``soft``: portable implementation with fully unrolled rounds\n  * ``soft-compact``: portable implementation which produces smaller binaries\n  * ``aarch64-sha2``: uses the AArch64 ``sha2`` extension, fallbacks to the ``soft`` backend if the extension is not available\n  * ``loongarch64-asm``: ``asm!``-based implementation for LoongArch64 targets\n  * ``riscv-zknh``: uses the RISC-V ``Zknh`` scalar crypto extension (experimental)\n  * ``riscv-zknh-compact``: same as ``riscv_zknh`` but does not unroll rounds (experimental)\n  * ``wasm32-simd``: uses the WASM ``simd128`` extension\n  * ``x86-shani``: uses the x86 SHA-NI extension, fallbacks to the ``soft`` backend if the extension is not available (SHA-256 only)\n  * ``x86-avx2``: uses the x86 AVX2 extension, fallbacks to the ``soft`` backend if the extension is not available (SHA-512 only)\n\n\nYou can force backend selection using the ``sha2_backend`` configuration flag. It can be enabled using either environment variable (e.g. ```RUSTFLAGS``=````'`--cfg sha2_backend=\"soft\"`'``` ``cargo``` build```), or by modifying your ``.cargo/config.toml`` file. Currently the flag supports the following values: ``soft``, ``soft-compact``, ``riscv-zknh``, and ``riscv-zknh-compact``.\nNote that the RISC-V backends are experimental and require Nightly compiler.\n## License\nThe crate is licensed under either of:\n  * Apache License, Version 2.0\u27e812\u27e9\n  * MIT license\u27e813\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~710KB  ~18K SLoC\n  * cfg-if\u27e814\u27e9\n  * cpufeatures\u27e815\u27e9 arm64 x86_64 x86\n  * digest\u27e816\u27e9 0.11.0-rc.0\n\n\n  * dev  base16ct\u27e817\u27e9+alloc\u27e818\u27e9\n  * dev  hex-literal\u27e819\u27e9 1.0\n\n\n#### Other features\u27e820\u27e9\n  * alloc\u27e821\u27e9\n  * oid\u27e822\u27e9\n  * zeroize\u27e823\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/sha2/versions: 30 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/sha2/rev: **24,780** crates (4,539 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/sha2.svg: ![crate\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/sha2/badge.svg: ![Docs\n\u27e86\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e87\u27e9 https://img.shields.io/badge/rustc-1.85+-blue.svg: Rust Version\n\u27e88\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e89\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/hashes/actions/workflows/sha2.yml/badge.svg?branch=master: ![Build Status\n\u27e810\u27e9 https://en.wikipedia.org/wiki/SHA-2: SHA-2\n\u27e811\u27e9 https://github.com/RustCrypto/hashes#Examples: examples section\n\u27e812\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e813\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e814\u27e9 https://lib.rs/crates/cfg-if: 1 - cfg-if\n\u27e815\u27e9 https://lib.rs/crates/cpufeatures: 0.2 - cpufeatures\n\u27e816\u27e9 https://lib.rs/crates/digest: new - digest\n\u27e817\u27e9 https://lib.rs/crates/base16ct: 0.2 - base16ct\n\u27e818\u27e9 https://lib.rs/crates/base16ct/features#feature-alloc: +alloc\n\u27e819\u27e9 https://lib.rs/crates/hex-literal: new - hex-literal\n\u27e820\u27e9 https://lib.rs/crates/sha2/features: Other features\n\u27e821\u27e9 https://lib.rs/crates/sha2/features#feature-alloc: alloc\n\u27e822\u27e9 https://lib.rs/crates/sha2/features#feature-oid: oid\n\u27e823\u27e9 https://lib.rs/crates/sha2/features#feature-zeroize: zeroize\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 6103,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118070.2705986"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libdigest-d1d696da5d7ffba3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj_j4ly1o/sha2-0.11.0-rc.0#sha2@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sha2",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libsha2-24d6cc3ba0cf0436.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#const-oid@0.10.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "const_oid",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\const-oid-0.10.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libconst_oid-496858417a634679.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcfg_if-f755e379589b9030.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "block-api",
+                "block-buffer",
+                "const-oid",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libdigest-d1d696da5d7ffba3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpj_j4ly1o/sha2-0.11.0-rc.0#sha2@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "sha2",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "oid"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpj_j4ly1o\\sha2-0.11.0-rc.0\\target\\debug\\deps\\libsha2-728491312307c718.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 14
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "sha2",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\n[Settings](https://docs.rs/sha2/latest/settings.html)\n[Help](https://docs.rs/sha2/latest/help.html)\nSummary[Source](https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110)\nExpand description\nAn implementation of the [SHA-2](https://en.wikipedia.org/wiki/SHA-2) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: [`Sha224`](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\"), [`Sha256`](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\"), [`Sha512_224`](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\"), [`Sha512_256`](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\"), [`Sha384`](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\"), and [`Sha512`](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\").\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## [\u00a7](https://docs.rs/sha2/latest/sha2/#usage)Usage\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#one-shot-api)One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#incremental-api)Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha2/latest/sha2/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha2/latest/sha2/#structs)\n\n[Sha256VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html \"struct sha2::Sha256VarCore\")\n    Core block-level SHA-256 hasher with variable output size.\n\n[Sha512VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html \"struct sha2::Sha512VarCore\")\n    Core block-level SHA-512 hasher with variable output size.\n## Traits[\u00a7](https://docs.rs/sha2/latest/sha2/#traits)\n\n[Digest](https://docs.rs/sha2/latest/sha2/trait.Digest.html \"trait sha2::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions[\u00a7](https://docs.rs/sha2/latest/sha2/#functions)\n\n[compress256](https://docs.rs/sha2/latest/sha2/fn.compress256.html \"fn sha2::compress256\")\n    Raw SHA-256 compression function.\n\n[compress512](https://docs.rs/sha2/latest/sha2/fn.compress512.html \"fn sha2::compress512\")\n    Raw SHA-512 compression function.\n## Type Aliases[\u00a7](https://docs.rs/sha2/latest/sha2/#types)\n\n[Sha224](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\")\n    SHA-224 hasher.\n\n[Sha256](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\")\n    SHA-256 hasher.\n\n[Sha384](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\")\n    SHA-384 hasher.\n\n[Sha512](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\")\n    SHA-512 hasher.\n\n[Sha512_224](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\")\n    SHA-512/224 hasher.\n\n[Sha512_256](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\")\n    SHA-512/256 hasher.\n",
+            "markdown_with_citations": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-2\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: `Sha224`\u27e85\u27e9, `Sha256`\u27e86\u27e9, `Sha512_224`\u27e87\u27e9, `Sha512_256`\u27e88\u27e9, `Sha384`\u27e89\u27e9, and `Sha512`\u27e810\u27e9.\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## \u00a7\u27e811\u27e9Usage\n### \u00a7\u27e812\u27e9One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### \u00a7\u27e813\u27e9Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see RustCrypto/hashes\u27e814\u27e9 readme.\n## Re-exports\u00a7\u27e815\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e816\u27e9\n\nSha256VarCore\u27e817\u27e9\n    Core block-level SHA-256 hasher with variable output size.\n\nSha512VarCore\u27e818\u27e9\n    Core block-level SHA-512 hasher with variable output size.\n## Traits\u00a7\u27e819\u27e9\n\nDigest\u27e820\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions\u00a7\u27e821\u27e9\n\ncompress256\u27e822\u27e9\n    Raw SHA-256 compression function.\n\ncompress512\u27e823\u27e9\n    Raw SHA-512 compression function.\n## Type Aliases\u00a7\u27e824\u27e9\n\nSha224\u27e85\u27e9\n    SHA-224 hasher.\n\nSha256\u27e86\u27e9\n    SHA-256 hasher.\n\nSha384\u27e89\u27e9\n    SHA-384 hasher.\n\nSha512\u27e810\u27e9\n    SHA-512 hasher.\n\nSha512_224\u27e87\u27e9\n    SHA-512/224 hasher.\n\nSha512_256\u27e88\u27e9\n    SHA-512/256 hasher.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha2/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha2/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-2: SHA-2\n\u27e85\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha224.html: type sha2::Sha224 - `Sha224`\n\u27e86\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha256.html: type sha2::Sha256 - `Sha256`\n\u27e87\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_224.html: type sha2::Sha512_224 - `Sha512_224`\n\u27e88\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_256.html: type sha2::Sha512_256 - `Sha512_256`\n\u27e89\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha384.html: type sha2::Sha384 - `Sha384`\n\u27e810\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512.html: type sha2::Sha512 - `Sha512`\n\u27e811\u27e9 https://docs.rs/sha2/latest/sha2/#usage: \u00a7\n\u27e812\u27e9 https://docs.rs/sha2/latest/sha2/#one-shot-api: \u00a7\n\u27e813\u27e9 https://docs.rs/sha2/latest/sha2/#incremental-api: \u00a7\n\u27e814\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e815\u27e9 https://docs.rs/sha2/latest/sha2/#reexports: \u00a7\n\u27e816\u27e9 https://docs.rs/sha2/latest/sha2/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html: struct sha2::Sha256VarCore - Sha256VarCore\n\u27e818\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html: struct sha2::Sha512VarCore - Sha512VarCore\n\u27e819\u27e9 https://docs.rs/sha2/latest/sha2/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/sha2/latest/sha2/trait.Digest.html: trait sha2::Digest - Digest\n\u27e821\u27e9 https://docs.rs/sha2/latest/sha2/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress256.html: fn sha2::compress256 - compress256\n\u27e823\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress512.html: fn sha2::compress512 - compress512\n\u27e824\u27e9 https://docs.rs/sha2/latest/sha2/#types: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "sha2",
+          "version": "0.11.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\n[Settings](https://docs.rs/sha2/latest/settings.html)\n[Help](https://docs.rs/sha2/latest/help.html)\nSummary[Source](https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110)\nExpand description\nAn implementation of the [SHA-2](https://en.wikipedia.org/wiki/SHA-2) cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: [`Sha224`](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\"), [`Sha256`](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\"), [`Sha512_224`](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\"), [`Sha512_256`](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\"), [`Sha384`](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\"), and [`Sha512`](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\").\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## [\u00a7](https://docs.rs/sha2/latest/sha2/#usage)Usage\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#one-shot-api)One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### [\u00a7](https://docs.rs/sha2/latest/sha2/#incremental-api)Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see [RustCrypto/hashes](https://github.com/RustCrypto/hashes) readme.\n## Re-exports[\u00a7](https://docs.rs/sha2/latest/sha2/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/sha2/latest/sha2/#structs)\n\n[Sha256VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html \"struct sha2::Sha256VarCore\")\n    Core block-level SHA-256 hasher with variable output size.\n\n[Sha512VarCore](https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html \"struct sha2::Sha512VarCore\")\n    Core block-level SHA-512 hasher with variable output size.\n## Traits[\u00a7](https://docs.rs/sha2/latest/sha2/#traits)\n\n[Digest](https://docs.rs/sha2/latest/sha2/trait.Digest.html \"trait sha2::Digest\")\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions[\u00a7](https://docs.rs/sha2/latest/sha2/#functions)\n\n[compress256](https://docs.rs/sha2/latest/sha2/fn.compress256.html \"fn sha2::compress256\")\n    Raw SHA-256 compression function.\n\n[compress512](https://docs.rs/sha2/latest/sha2/fn.compress512.html \"fn sha2::compress512\")\n    Raw SHA-512 compression function.\n## Type Aliases[\u00a7](https://docs.rs/sha2/latest/sha2/#types)\n\n[Sha224](https://docs.rs/sha2/latest/sha2/type.Sha224.html \"type sha2::Sha224\")\n    SHA-224 hasher.\n\n[Sha256](https://docs.rs/sha2/latest/sha2/type.Sha256.html \"type sha2::Sha256\")\n    SHA-256 hasher.\n\n[Sha384](https://docs.rs/sha2/latest/sha2/type.Sha384.html \"type sha2::Sha384\")\n    SHA-384 hasher.\n\n[Sha512](https://docs.rs/sha2/latest/sha2/type.Sha512.html \"type sha2::Sha512\")\n    SHA-512 hasher.\n\n[Sha512_224](https://docs.rs/sha2/latest/sha2/type.Sha512_224.html \"type sha2::Sha512_224\")\n    SHA-512/224 hasher.\n\n[Sha512_256](https://docs.rs/sha2/latest/sha2/type.Sha512_256.html \"type sha2::Sha512_256\")\n    SHA-512/256 hasher.\n",
+            "markdown_with_citations": "[](https://docs.rs/sha2/latest/sha2/all.html \"show sidebar\")\n# Crate sha2Copy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nAn implementation of the SHA-2\u27e84\u27e9 cryptographic hash algorithms.\nThere are 6 standard algorithms specified in the SHA-2 standard: `Sha224`\u27e85\u27e9, `Sha256`\u27e86\u27e9, `Sha512_224`\u27e87\u27e9, `Sha512_256`\u27e88\u27e9, `Sha384`\u27e89\u27e9, and `Sha512`\u27e810\u27e9.\nAlgorithmically, there are only 2 core algorithms: SHA-256 and SHA-512. All other algorithms are just applications of these with different initial hash values, and truncated to different digest bit lengths. The first two algorithms in the list are based on SHA-256, while the last four are based on SHA-512.\n## \u00a7\u27e811\u27e9Usage\n### \u00a7\u27e812\u27e9One-shot API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Digest};\nlet result = Sha256::digest(b\"hello world\");\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n```\n\n### \u00a7\u27e813\u27e9Incremental API\n```\nuse hex_literal::hex;\nuse sha2::{Sha256, Sha512, Digest};\n// create a Sha256 object\nlet mut hasher = Sha256::new();\n// write input message\nhasher.update(b\"hello world\");\n// read hash digest and consume hasher\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9\n\")[..]);\n// same for Sha512\nlet mut hasher = Sha512::new();\nhasher.update(b\"hello world\");\nlet result = hasher.finalize();\nassert_eq!(result[..], hex!(\"\n  309ecc489c12d6eb4cc40f50c902f2b4d0ed77ee511a7c7a9bcd3ca86d4cd86f\n  989dd35bc5ff499670da34255b45b0cfd830e81f605dcf7dc5542e93ae9cd76f\n\")[..]);\n```\n\nAlso see RustCrypto/hashes\u27e814\u27e9 readme.\n## Re-exports\u00a7\u27e815\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e816\u27e9\n\nSha256VarCore\u27e817\u27e9\n    Core block-level SHA-256 hasher with variable output size.\n\nSha512VarCore\u27e818\u27e9\n    Core block-level SHA-512 hasher with variable output size.\n## Traits\u00a7\u27e819\u27e9\n\nDigest\u27e820\u27e9\n    Convenience wrapper trait covering functionality of cryptographic hash functions with fixed output size.\n## Functions\u00a7\u27e821\u27e9\n\ncompress256\u27e822\u27e9\n    Raw SHA-256 compression function.\n\ncompress512\u27e823\u27e9\n    Raw SHA-512 compression function.\n## Type Aliases\u00a7\u27e824\u27e9\n\nSha224\u27e85\u27e9\n    SHA-224 hasher.\n\nSha256\u27e86\u27e9\n    SHA-256 hasher.\n\nSha384\u27e89\u27e9\n    SHA-384 hasher.\n\nSha512\u27e810\u27e9\n    SHA-512 hasher.\n\nSha512_224\u27e87\u27e9\n    SHA-512/224 hasher.\n\nSha512_256\u27e88\u27e9\n    SHA-512/256 hasher.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/sha2/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/sha2/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/sha2/latest/src/sha2/lib.rs.html#1-110: Source\n\u27e84\u27e9 https://en.wikipedia.org/wiki/SHA-2: SHA-2\n\u27e85\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha224.html: type sha2::Sha224 - `Sha224`\n\u27e86\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha256.html: type sha2::Sha256 - `Sha256`\n\u27e87\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_224.html: type sha2::Sha512_224 - `Sha512_224`\n\u27e88\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512_256.html: type sha2::Sha512_256 - `Sha512_256`\n\u27e89\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha384.html: type sha2::Sha384 - `Sha384`\n\u27e810\u27e9 https://docs.rs/sha2/latest/sha2/type.Sha512.html: type sha2::Sha512 - `Sha512`\n\u27e811\u27e9 https://docs.rs/sha2/latest/sha2/#usage: \u00a7\n\u27e812\u27e9 https://docs.rs/sha2/latest/sha2/#one-shot-api: \u00a7\n\u27e813\u27e9 https://docs.rs/sha2/latest/sha2/#incremental-api: \u00a7\n\u27e814\u27e9 https://github.com/RustCrypto/hashes: RustCrypto/hashes\n\u27e815\u27e9 https://docs.rs/sha2/latest/sha2/#reexports: \u00a7\n\u27e816\u27e9 https://docs.rs/sha2/latest/sha2/#structs: \u00a7\n\u27e817\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha256VarCore.html: struct sha2::Sha256VarCore - Sha256VarCore\n\u27e818\u27e9 https://docs.rs/sha2/latest/sha2/struct.Sha512VarCore.html: struct sha2::Sha512VarCore - Sha512VarCore\n\u27e819\u27e9 https://docs.rs/sha2/latest/sha2/#traits: \u00a7\n\u27e820\u27e9 https://docs.rs/sha2/latest/sha2/trait.Digest.html: trait sha2::Digest - Digest\n\u27e821\u27e9 https://docs.rs/sha2/latest/sha2/#functions: \u00a7\n\u27e822\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress256.html: fn sha2::compress256 - compress256\n\u27e823\u27e9 https://docs.rs/sha2/latest/sha2/fn.compress512.html: fn sha2::compress512 - compress512\n\u27e824\u27e9 https://docs.rs/sha2/latest/sha2/#types: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `sha2` crate provides an efficient implementation of the SHA-2 cryptographic hash algorithms, including SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, and SHA-512/256. It supports both one-shot and incremental hashing APIs, along with low-level compression functions for SHA-256 and SHA-512. The crate also offers flexible traits and variable-output-size core hashers for advanced use cases.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 8.5,
+          "factual_counterfactual": "### Pair 1: Core Algorithms and Variants\n\u2705 Factual: The `sha2` crate implements two core algorithms, SHA-256 and SHA-512, with all other algorithms (e.g., Sha224, Sha384) being derived from these using different initial hash values and truncation of output sizes.  \n\u274c Counterfactual: The `sha2` crate implements six entirely independent algorithms, each with its own unique hashing logic, unrelated to SHA-256 or SHA-512.\n\n---\n\n### Pair 2: Incremental API Usage\n\u2705 Factual: The `sha2` crate provides an incremental API that allows users to process input data in chunks using the `update` method, followed by `finalize` to produce the hash digest.  \n\u274c Counterfactual: The `sha2` crate only supports one-shot hashing, where the entire input must be provided at once, without support for incremental updates.\n\n---\n\n### Pair 3: Performance Characteristics\n\u2705 Factual: The `sha2` crate's hashing algorithms are optimized for performance and are widely used in cryptographic applications due to their reliability and speed.  \n\u274c Counterfactual: The `sha2` crate's hashing algorithms are designed primarily for educational purposes and are not suitable for production-grade cryptographic applications.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-be3b6f4c-2ff93fe8-1751264279",
+      "timestamp": "2025-06-30T06:17:59.156381+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

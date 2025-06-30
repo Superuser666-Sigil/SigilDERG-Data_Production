@@ -1,0 +1,779 @@
+[
+  {
+    "execution_id": "exec-f9ccd92b-271d8326-1751264393",
+    "timestamp": "2025-06-30T06:19:53.641996+00:00",
+    "sacred_chain": {
+      "input_data": "hmac",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'hmac' -> 'hmac'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "hmac",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/hmac",
+            "title": "hmac v0.12.1",
+            "content": {
+              "raw_markdown": "#  hmac v0.12.1\nGeneric implementation of Hash-based Message Authentication Code (HMAC) \n  * [ #crypto ](https://crates.io/keywords/crypto)\n  * [ #digest ](https://crates.io/keywords/digest)\n  * [ #hmac ](https://crates.io/keywords/hmac)\n  * [ #mac ](https://crates.io/keywords/mac)\n\n\n  * [ Readme ](https://crates.io/crates/hmac)\n  * [ 31 Versions ](https://crates.io/crates/hmac/versions)\n  * [ Dependencies ](https://crates.io/crates/hmac/dependencies)\n  * [ Dependents ](https://crates.io/crates/hmac/reverse_dependencies)\n\n\n## Metadata\nover 3 years ago \n2018 edition \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n41.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add hmac\nOr add the following line to your Cargo.toml:\nhmac = \"0.12.1\"\n## Documentation\n[ docs.rs/hmac ](https://docs.rs/hmac)\n## Repository\n[ github.com/RustCrypto/MACs ](https://github.com/RustCrypto/MACs)\n## Owners\n## Categories\n  * [No standard library](https://crates.io/categories/no-std)\n  * [Cryptography](https://crates.io/categories/cryptography)\n\n\n[ Report crate ](https://crates.io/support?crate=hmac&inquire=crate-violation)\n### Stats Overview\n216,718,365 Downloads all time\n31 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  hmac v0.12.1\nGeneric implementation of Hash-based Message Authentication Code (HMAC) \n  *  #crypto \u27e81\u27e9\n  *  #digest \u27e82\u27e9\n  *  #hmac \u27e83\u27e9\n  *  #mac \u27e84\u27e9\n\n\n  *  Readme \u27e85\u27e9\n  *  31 Versions \u27e86\u27e9\n  *  Dependencies \u27e87\u27e9\n  *  Dependents \u27e88\u27e9\n\n\n## Metadata\nover 3 years ago \n2018 edition \n MIT \u27e89\u27e9 OR  Apache-2.0 \u27e810\u27e9\n41.7 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add hmac\nOr add the following line to your Cargo.toml:\nhmac = \"0.12.1\"\n## Documentation\n docs.rs/hmac \u27e811\u27e9\n## Repository\n github.com/RustCrypto/MACs \u27e812\u27e9\n## Owners\n## Categories\n  * No standard library\u27e813\u27e9\n  * Cryptography\u27e814\u27e9\n\n\n Report crate \u27e815\u27e9\n### Stats Overview\n216,718,365 Downloads all time\n31 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/crypto:  #crypto \n\u27e82\u27e9 https://crates.io/keywords/digest:  #digest \n\u27e83\u27e9 https://crates.io/keywords/hmac:  #hmac \n\u27e84\u27e9 https://crates.io/keywords/mac:  #mac \n\u27e85\u27e9 https://crates.io/crates/hmac:  Readme \n\u27e86\u27e9 https://crates.io/crates/hmac/versions:  31 Versions \n\u27e87\u27e9 https://crates.io/crates/hmac/dependencies:  Dependencies \n\u27e88\u27e9 https://crates.io/crates/hmac/reverse_dependencies:  Dependents \n\u27e89\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e810\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e811\u27e9 https://docs.rs/hmac:  docs.rs/hmac \n\u27e812\u27e9 https://github.com/RustCrypto/MACs:  github.com/RustCrypto/MACs \n\u27e813\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e814\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e815\u27e9 https://crates.io/support?crate=hmac&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1381,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118183.5264788"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/hmac",
+            "title": "Crate hmacCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\n[Settings](https://docs.rs/hmac/latest/settings.html)\n[Help](https://docs.rs/hmac/latest/help.html)\nSummary[Source](https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131)\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the [`digest`](https://docs.rs/digest) crate traits. You can find compatible crates (e.g. [`sha2`](https://docs.rs/sha2)) in the [`RustCrypto/hashes`](https://github.com/RustCrypto/hashes) repository.\nThis crate provides two HMAC implementation [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") and [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\"). The first one is a buffered wrapper around block-level [`HmacCore`](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\"). Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\") is a bit less efficient memory-wise, but works with all hash functions which implement the [`Digest`](https://docs.rs/digest) trait.\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#examples)Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") is interchangeable with [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\").\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#block-and-input-sizes)Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports[\u00a7](https://docs.rs/hmac/latest/hmac/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/hmac/latest/hmac/#structs)\n\n[HmacCore](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\")\n    Generic core HMAC instance, which operates over blocks.\n\n[SimpleHmac](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\")\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits[\u00a7](https://docs.rs/hmac/latest/hmac/#traits)\n\n[Mac](https://docs.rs/hmac/latest/hmac/trait.Mac.html \"trait hmac::Mac\")\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases[\u00a7](https://docs.rs/hmac/latest/hmac/#types)\n\n[Hmac](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\")\n    Generic HMAC instance.\n",
+              "markdown_with_citations": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the `digest`\u27e84\u27e9 crate traits. You can find compatible crates (e.g. `sha2`\u27e85\u27e9) in the `RustCrypto/hashes`\u27e86\u27e9 repository.\nThis crate provides two HMAC implementation `Hmac`\u27e87\u27e9 and `SimpleHmac`\u27e88\u27e9. The first one is a buffered wrapper around block-level `HmacCore`\u27e89\u27e9. Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, `SimpleHmac`\u27e88\u27e9 is a bit less efficient memory-wise, but works with all hash functions which implement the `Digest`\u27e84\u27e9 trait.\n## \u00a7\u27e810\u27e9Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples `Hmac`\u27e87\u27e9 is interchangeable with `SimpleHmac`\u27e88\u27e9.\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## \u00a7\u27e811\u27e9Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports\u00a7\u27e812\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e813\u27e9\n\nHmacCore\u27e89\u27e9\n    Generic core HMAC instance, which operates over blocks.\n\nSimpleHmac\u27e88\u27e9\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits\u00a7\u27e814\u27e9\n\nMac\u27e815\u27e9\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases\u00a7\u27e816\u27e9\n\nHmac\u27e87\u27e9\n    Generic HMAC instance.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/hmac/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/hmac/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131: Source\n\u27e84\u27e9 https://docs.rs/digest: `digest`\n\u27e85\u27e9 https://docs.rs/sha2: `sha2`\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: `RustCrypto/hashes`\n\u27e87\u27e9 https://docs.rs/hmac/latest/hmac/type.Hmac.html: type hmac::Hmac - `Hmac`\n\u27e88\u27e9 https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html: struct hmac::SimpleHmac - `SimpleHmac`\n\u27e89\u27e9 https://docs.rs/hmac/latest/hmac/struct.HmacCore.html: struct hmac::HmacCore - `HmacCore`\n\u27e810\u27e9 https://docs.rs/hmac/latest/hmac/#examples: \u00a7\n\u27e811\u27e9 https://docs.rs/hmac/latest/hmac/#block-and-input-sizes: \u00a7\n\u27e812\u27e9 https://docs.rs/hmac/latest/hmac/#reexports: \u00a7\n\u27e813\u27e9 https://docs.rs/hmac/latest/hmac/#structs: \u00a7\n\u27e814\u27e9 https://docs.rs/hmac/latest/hmac/#traits: \u00a7\n\u27e815\u27e9 https://docs.rs/hmac/latest/hmac/trait.Mac.html: trait hmac::Mac - Mac\n\u27e816\u27e9 https://docs.rs/hmac/latest/hmac/#types: \u00a7\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 4405,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118184.1479411"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/hmac",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [18 releases](https://lib.rs/crates/hmac/versions)\nUses new Rust 2024\n0.13.0-rc.0 |  May 29, 2025   \n---|---  \n0.13.0-pre.5 |  Mar 7, 2025   \n0.13.0-pre.4 |  Jul 26, 2024   \n0.13.0-pre.3 |  Feb 1, 2024   \n0.0.1 |  ~~Oct 21, 2016~~  \n#**516** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 2346535/week @ 2025-03-09 2741586/week @ 2025-03-16 2969979/week @ 2025-03-23 2403137/week @ 2025-03-30 2563287/week @ 2025-04-06 2273290/week @ 2025-04-13 2241195/week @ 2025-04-20 2110137/week @ 2025-04-27 2151067/week @ 2025-05-04 2234407/week @ 2025-05-11 2239766/week @ 2025-05-18 1934048/week @ 2025-05-25 2162699/week @ 2025-06-01 2174264/week @ 2025-06-08 2252818/week @ 2025-06-15 2356515/week @ 2025-06-22\n**9,061,968** downloads per month Used in [**12,424** crates (1,149 directly)](https://lib.rs/crates/hmac/rev)\n**MIT/Apache**\n45KB  384 lines\n# RustCrypto: HMAC\n[![crate](https://img.shields.io/crates/v/hmac.svg?logo=rust)](https://crates.io/crates/hmac) [![Docs](https://img.gs/czjpqfbdkz/full/https://docs.rs/hmac/badge.svg)](https://docs.rs/hmac/) [![Build Status](https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/MACs/actions/workflows/hmac.yml/badge.svg)](https://github.com/RustCrypto/MACs/actions/workflows/hmac.yml) ![Apache2/MIT licensed](https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg) ![Rust Version](https://img.shields.io/badge/rustc-1.85+-blue.svg) [![Project Chat](https://img.shields.io/badge/zulip-join_chat-blue.svg)](https://rustcrypto.zulipchat.com/#narrow/stream/260044-MACs)\nGeneric implementation of [Hash-based Message Authentication Code (HMAC)](https://en.wikipedia.org/wiki/HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the [``digest``](https://docs.rs/digest) crate traits. You can find compatible crates (e.g. [``sha2``](https://docs.rs/sha2)) in the [``RustCrypto`/`hashes``](https://github.com/RustCrypto/hashes) repository.\nThis crate provides four HMAC implementations: [``Hmac``](https://docs.rs/hmac/latest/hmac/struct.Hmac.html), [``HmacReset``](https://docs.rs/hmac/latest/hmac/struct.HmacReset.html), [``SimpleHmac``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html), and [``SimpleHmacReset``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmacReset.html).\nThe first two types are buffered wrappers around block-level [```block_api`::``HmacCore``](https://docs.rs/hmac/latest/hmac/block_api/struct.HmacCore.html) and [```block_api`::``HmacResetCore``](https://docs.rs/hmac/latest/hmac/block_api/struct.HmacResetCore.html) types respectively. Internally they uses efficient state representation, but work only with hash functions which expose block-level API and consume blocks eagerly (e.g. they will not work with the BLAKE2 family of hash functions).\nOn the other hand, [``SimpleHmac``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html) and [``SimpleHmacReset``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmacReset.html) are a bit less efficient, but work with all hash functions which implement the [``Digest``](https://docs.rs/digest) trait.\n[``Hmac``](https://docs.rs/hmac/latest/hmac/struct.Hmac.html) and [``SimpleHmac``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html) do not support resetting MAC state (i.e. they do not implement the [``Reset``](https://docs.rs/digest/latest/digest/trait.Reset.html) and [``FixedOutputReset``](https://docs.rs/digest/latest/digest/trait.FixedOutputReset.html) traits). Use [``HmacReset``](https://docs.rs/hmac/latest/hmac/struct.HmacReset.html) or [``SimpleHmacReset``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmacReset.html) if you want to reuse MAC state.\n## Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function implemented in the [``sha2``](https://docs.rs/sha2) crate.\nIn the following examples [``Hmac``](https://docs.rs/hmac/latest/hmac/struct.Hmac.html) is interchangeable with [``SimpleHmac``](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html).\nTo get authentication code:\n```\n``use` `sha2`::``Sha256`;`\n`use` `hmac`::````{`Hmac`,` KeyInit`,` Mac```}```;`\n`use` `hex_literal`::``hex`;`\n``//` Create alias for HMAC-SHA256`\n`type` `HmacSha256` `=` `Hmac`<`Sha256`>```;`\n`let` `mut` mac `=` `HmacSha256`::``new_from_slice`(```b``\"`my secret and secure key`\"```)`\n  `.``expect``(```\"`HMAC can take key of any size`\"```)``;`\nmac`.``update``(```b``\"`input message`\"```)``;`\n``//` `result` has type `CtOutput` which is a thin wrapper around array of`\n``//` bytes for providing constant time equality check`\n`let` result `=` mac`.``finalize``(``)``;`\n``//` To get underlying array use `into_bytes`, but be careful, since`\n``//` incorrect use of the code value may permit timing attacks which defeats`\n``//` the security provided by the `CtOutput``\n`let` code_bytes `=` result`.``into_bytes``(``)``;`\n`let` expected `=` `hex!``(```\"`\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n`\"```)``;`\n`assert_eq!``(`code_bytes`[``..``]``,` expected`[``..``]``)``;`\n`\n```\n\nTo verify the message:\n```\n``use` `sha2`::``Sha256`;`\n`use` `hmac`::````{`Hmac`,` KeyInit`,` Mac```}```;`\n`use` `hex_literal`::``hex`;`\n`type` `HmacSha256` `=` `Hmac`<`Sha256`>```;`\n`let` `mut` mac `=` `HmacSha256`::``new_from_slice`(```b``\"`my secret and secure key`\"```)`\n  `.``expect``(```\"`HMAC can take key of any size`\"```)``;`\nmac`.``update``(```b``\"`input message`\"```)``;`\n`let` code_bytes `=` `hex!``(```\"`\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n`\"```)``;`\n``//` `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise`\nmac`.``verify_slice``(``&`code_bytes`[``..``]``)``.``unwrap``(``)``;`\n`\n```\n\n## Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, we must handle cases when this assumption does not hold. This is done by truncating hash output to the hash block size if needed.\n## License\nLicensed under either of:\n  * [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)\n  * [MIT license](http://opensource.org/licenses/MIT)\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~665KB  ~17K SLoC\n  * [digest](https://lib.rs/crates/digest \"new\") 0.11.0-rc.0[+mac](https://lib.rs/crates/digest/features#feature-mac)\n\n\n  * dev  [hex-literal](https://lib.rs/crates/hex-literal \"new\") 1.0\n  * dev  [md-5](https://lib.rs/crates/md-5 \"new\") 0.11.0-rc.0\n  * dev  [sha1](https://lib.rs/crates/sha1 \"new\") 0.11.0-rc.0\n  * dev  [sha2](https://lib.rs/crates/sha2 \"new\") 0.11.0-rc.0\n  * dev  [streebog](https://lib.rs/crates/streebog \"new\") 0.11.0-rc.0\n\n\n#### [Other feature](https://lib.rs/crates/hmac/features)\n  * [zeroize](https://lib.rs/crates/hmac/features#feature-zeroize)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  18 releases\u27e81\u27e9\nUses new Rust 2024\n0.13.0-rc.0 |  May 29, 2025   \n---|---  \n0.13.0-pre.5 |  Mar 7, 2025   \n0.13.0-pre.4 |  Jul 26, 2024   \n0.13.0-pre.3 |  Feb 1, 2024   \n0.0.1 |  ~~Oct 21, 2016~~  \n#**516** in Cryptography\u27e82\u27e9\nDownload history 2346535/week @ 2025-03-09 2741586/week @ 2025-03-16 2969979/week @ 2025-03-23 2403137/week @ 2025-03-30 2563287/week @ 2025-04-06 2273290/week @ 2025-04-13 2241195/week @ 2025-04-20 2110137/week @ 2025-04-27 2151067/week @ 2025-05-04 2234407/week @ 2025-05-11 2239766/week @ 2025-05-18 1934048/week @ 2025-05-25 2162699/week @ 2025-06-01 2174264/week @ 2025-06-08 2252818/week @ 2025-06-15 2356515/week @ 2025-06-22\n**9,061,968** downloads per month Used in **12,424** crates (1,149 directly)\u27e83\u27e9\n**MIT/Apache**\n45KB  384 lines\n# RustCrypto: HMAC\n![crate\u27e84\u27e9](https://crates.io/crates/hmac) ![Docs\u27e85\u27e9](https://docs.rs/hmac/) ![Build Status\u27e86\u27e9](https://github.com/RustCrypto/MACs/actions/workflows/hmac.yml) ![Apache2/MIT licensed\u27e87\u27e9] ![Rust Version\u27e88\u27e9] ![Project Chat\u27e89\u27e9](https://rustcrypto.zulipchat.com/#narrow/stream/260044-MACs)\nGeneric implementation of Hash-based Message Authentication Code (HMAC)\u27e810\u27e9.\nTo use it you will need a cryptographic hash function implementation which implements the ``digest``\u27e811\u27e9 crate traits. You can find compatible crates (e.g. ``sha2``\u27e812\u27e9) in the ``RustCrypto`/`hashes``\u27e813\u27e9 repository.\nThis crate provides four HMAC implementations: ``Hmac``\u27e814\u27e9, ``HmacReset``\u27e815\u27e9, ``SimpleHmac``\u27e816\u27e9, and ``SimpleHmacReset``\u27e817\u27e9.\nThe first two types are buffered wrappers around block-level ```block_api`::``HmacCore``\u27e818\u27e9 and ```block_api`::``HmacResetCore``\u27e819\u27e9 types respectively. Internally they uses efficient state representation, but work only with hash functions which expose block-level API and consume blocks eagerly (e.g. they will not work with the BLAKE2 family of hash functions).\nOn the other hand, ``SimpleHmac``\u27e816\u27e9 and ``SimpleHmacReset``\u27e817\u27e9 are a bit less efficient, but work with all hash functions which implement the ``Digest``\u27e811\u27e9 trait.\n``Hmac``\u27e814\u27e9 and ``SimpleHmac``\u27e816\u27e9 do not support resetting MAC state (i.e. they do not implement the ``Reset``\u27e820\u27e9 and ``FixedOutputReset``\u27e821\u27e9 traits). Use ``HmacReset``\u27e815\u27e9 or ``SimpleHmacReset``\u27e817\u27e9 if you want to reuse MAC state.\n## Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function implemented in the ``sha2``\u27e812\u27e9 crate.\nIn the following examples ``Hmac``\u27e814\u27e9 is interchangeable with ``SimpleHmac``\u27e816\u27e9.\nTo get authentication code:\n```\n``use` `sha2`::``Sha256`;`\n`use` `hmac`::````{`Hmac`,` KeyInit`,` Mac```}```;`\n`use` `hex_literal`::``hex`;`\n``//` Create alias for HMAC-SHA256`\n`type` `HmacSha256` `=` `Hmac`<`Sha256`>```;`\n`let` `mut` mac `=` `HmacSha256`::``new_from_slice`(```b``\"`my secret and secure key`\"```)`\n  `.``expect``(```\"`HMAC can take key of any size`\"```)``;`\nmac`.``update``(```b``\"`input message`\"```)``;`\n``//` `result` has type `CtOutput` which is a thin wrapper around array of`\n``//` bytes for providing constant time equality check`\n`let` result `=` mac`.``finalize``(``)``;`\n``//` To get underlying array use `into_bytes`, but be careful, since`\n``//` incorrect use of the code value may permit timing attacks which defeats`\n``//` the security provided by the `CtOutput``\n`let` code_bytes `=` result`.``into_bytes``(``)``;`\n`let` expected `=` `hex!``(```\"`\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n`\"```)``;`\n`assert_eq!``(`code_bytes`[``..``]``,` expected`[``..``]``)``;`\n`\n```\n\nTo verify the message:\n```\n``use` `sha2`::``Sha256`;`\n`use` `hmac`::````{`Hmac`,` KeyInit`,` Mac```}```;`\n`use` `hex_literal`::``hex`;`\n`type` `HmacSha256` `=` `Hmac`<`Sha256`>```;`\n`let` `mut` mac `=` `HmacSha256`::``new_from_slice`(```b``\"`my secret and secure key`\"```)`\n  `.``expect``(```\"`HMAC can take key of any size`\"```)``;`\nmac`.``update``(```b``\"`input message`\"```)``;`\n`let` code_bytes `=` `hex!``(```\"`\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n`\"```)``;`\n``//` `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise`\nmac`.``verify_slice``(``&`code_bytes`[``..``]``)``.``unwrap``(``)``;`\n`\n```\n\n## Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, we must handle cases when this assumption does not hold. This is done by truncating hash output to the hash block size if needed.\n## License\nLicensed under either of:\n  * Apache License, Version 2.0\u27e822\u27e9\n  * MIT license\u27e823\u27e9\n\n\nat your option.\n### Contribution\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~665KB  ~17K SLoC\n  * digest\u27e824\u27e9 0.11.0-rc.0+mac\u27e825\u27e9\n\n\n  * dev  hex-literal\u27e826\u27e9 1.0\n  * dev  md-5\u27e827\u27e9 0.11.0-rc.0\n  * dev  sha1\u27e828\u27e9 0.11.0-rc.0\n  * dev  sha2\u27e829\u27e9 0.11.0-rc.0\n  * dev  streebog\u27e830\u27e9 0.11.0-rc.0\n\n\n#### Other feature\u27e831\u27e9\n  * zeroize\u27e832\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/hmac/versions: 18 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/hmac/rev: **12,424** crates (1,149 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/hmac.svg?logo=rust: ![crate\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/hmac/badge.svg: ![Docs\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/RustCrypto/MACs/actions/workflows/hmac.yml/badge.svg: ![Build Status\n\u27e87\u27e9 https://img.shields.io/badge/license-Apache2.0/MIT-blue.svg: Apache2/MIT licensed\n\u27e88\u27e9 https://img.shields.io/badge/rustc-1.85+-blue.svg: Rust Version\n\u27e89\u27e9 https://img.shields.io/badge/zulip-join_chat-blue.svg: ![Project Chat\n\u27e810\u27e9 https://en.wikipedia.org/wiki/HMAC: Hash-based Message Authentication Code (HMAC)\n\u27e811\u27e9 https://docs.rs/digest: ``digest``\n\u27e812\u27e9 https://docs.rs/sha2: ``sha2``\n\u27e813\u27e9 https://github.com/RustCrypto/hashes: ``RustCrypto`/`hashes``\n\u27e814\u27e9 https://docs.rs/hmac/latest/hmac/struct.Hmac.html: ``Hmac``\n\u27e815\u27e9 https://docs.rs/hmac/latest/hmac/struct.HmacReset.html: ``HmacReset``\n\u27e816\u27e9 https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html: ``SimpleHmac``\n\u27e817\u27e9 https://docs.rs/hmac/latest/hmac/struct.SimpleHmacReset.html: ``SimpleHmacReset``\n\u27e818\u27e9 https://docs.rs/hmac/latest/hmac/block_api/struct.HmacCore.html: ```block_api`::``HmacCore``\n\u27e819\u27e9 https://docs.rs/hmac/latest/hmac/block_api/struct.HmacResetCore.html: ```block_api`::``HmacResetCore``\n\u27e820\u27e9 https://docs.rs/digest/latest/digest/trait.Reset.html: ``Reset``\n\u27e821\u27e9 https://docs.rs/digest/latest/digest/trait.FixedOutputReset.html: ``FixedOutputReset``\n\u27e822\u27e9 http://www.apache.org/licenses/LICENSE-2.0: Apache License, Version 2.0\n\u27e823\u27e9 http://opensource.org/licenses/MIT: MIT license\n\u27e824\u27e9 https://lib.rs/crates/digest: new - digest\n\u27e825\u27e9 https://lib.rs/crates/digest/features#feature-mac: +mac\n\u27e826\u27e9 https://lib.rs/crates/hex-literal: new - hex-literal\n\u27e827\u27e9 https://lib.rs/crates/md-5: new - md-5\n\u27e828\u27e9 https://lib.rs/crates/sha1: new - sha1\n\u27e829\u27e9 https://lib.rs/crates/sha2: new - sha2\n\u27e830\u27e9 https://lib.rs/crates/streebog: new - streebog\n\u27e831\u27e9 https://lib.rs/crates/hmac/features: Other feature\n\u27e832\u27e9 https://lib.rs/crates/hmac/features#feature-zeroize: zeroize\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7091,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118184.757433"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "block-api",
+                "block-buffer",
+                "default",
+                "mac",
+                "subtle"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libdigest-00f7ee8fd74c8d72.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmps2y_6ft1/hmac-0.13.0-rc.0#hmac@0.13.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hmac",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libhmac-ef105b6bf70d8892.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-75aafb45fe2a7a07\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\build\\typenum-e40791351e9000e0\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#typenum@1.18.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "typenum",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\typenum-1.18.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "const-generics"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libtypenum-76d447ffd7e562e6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#hybrid-array@0.3.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hybrid_array",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\hybrid-array-0.3.1\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libhybrid_array-2ff231d0a84d2dbb.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#block-buffer@0.11.0-rc.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "block_buffer",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\block-buffer-0.11.0-rc.4\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libblock_buffer-be2df1ace94c155d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#crypto-common@0.2.0-rc.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "crypto_common",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crypto-common-0.2.0-rc.3\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libcrypto_common-36355164d657a275.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#digest@0.11.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "digest",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\digest-0.11.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "block-api",
+                "block-buffer",
+                "default",
+                "mac",
+                "subtle"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libdigest-00f7ee8fd74c8d72.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmps2y_6ft1/hmac-0.13.0-rc.0#hmac@0.13.0-rc.0",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "hmac",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\src\\lib.rs",
+                "edition": "2024",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmps2y_6ft1\\hmac-0.13.0-rc.0\\target\\debug\\deps\\libhmac-167b85aadb5f692d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 17
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "hmac",
+          "version": "0.13.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\n[Settings](https://docs.rs/hmac/latest/settings.html)\n[Help](https://docs.rs/hmac/latest/help.html)\nSummary[Source](https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131)\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the [`digest`](https://docs.rs/digest) crate traits. You can find compatible crates (e.g. [`sha2`](https://docs.rs/sha2)) in the [`RustCrypto/hashes`](https://github.com/RustCrypto/hashes) repository.\nThis crate provides two HMAC implementation [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") and [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\"). The first one is a buffered wrapper around block-level [`HmacCore`](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\"). Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\") is a bit less efficient memory-wise, but works with all hash functions which implement the [`Digest`](https://docs.rs/digest) trait.\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#examples)Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") is interchangeable with [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\").\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#block-and-input-sizes)Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports[\u00a7](https://docs.rs/hmac/latest/hmac/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/hmac/latest/hmac/#structs)\n\n[HmacCore](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\")\n    Generic core HMAC instance, which operates over blocks.\n\n[SimpleHmac](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\")\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits[\u00a7](https://docs.rs/hmac/latest/hmac/#traits)\n\n[Mac](https://docs.rs/hmac/latest/hmac/trait.Mac.html \"trait hmac::Mac\")\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases[\u00a7](https://docs.rs/hmac/latest/hmac/#types)\n\n[Hmac](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\")\n    Generic HMAC instance.\n",
+            "markdown_with_citations": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the `digest`\u27e84\u27e9 crate traits. You can find compatible crates (e.g. `sha2`\u27e85\u27e9) in the `RustCrypto/hashes`\u27e86\u27e9 repository.\nThis crate provides two HMAC implementation `Hmac`\u27e87\u27e9 and `SimpleHmac`\u27e88\u27e9. The first one is a buffered wrapper around block-level `HmacCore`\u27e89\u27e9. Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, `SimpleHmac`\u27e88\u27e9 is a bit less efficient memory-wise, but works with all hash functions which implement the `Digest`\u27e84\u27e9 trait.\n## \u00a7\u27e810\u27e9Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples `Hmac`\u27e87\u27e9 is interchangeable with `SimpleHmac`\u27e88\u27e9.\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## \u00a7\u27e811\u27e9Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports\u00a7\u27e812\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e813\u27e9\n\nHmacCore\u27e89\u27e9\n    Generic core HMAC instance, which operates over blocks.\n\nSimpleHmac\u27e88\u27e9\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits\u00a7\u27e814\u27e9\n\nMac\u27e815\u27e9\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases\u00a7\u27e816\u27e9\n\nHmac\u27e87\u27e9\n    Generic HMAC instance.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/hmac/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/hmac/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131: Source\n\u27e84\u27e9 https://docs.rs/digest: `digest`\n\u27e85\u27e9 https://docs.rs/sha2: `sha2`\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: `RustCrypto/hashes`\n\u27e87\u27e9 https://docs.rs/hmac/latest/hmac/type.Hmac.html: type hmac::Hmac - `Hmac`\n\u27e88\u27e9 https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html: struct hmac::SimpleHmac - `SimpleHmac`\n\u27e89\u27e9 https://docs.rs/hmac/latest/hmac/struct.HmacCore.html: struct hmac::HmacCore - `HmacCore`\n\u27e810\u27e9 https://docs.rs/hmac/latest/hmac/#examples: \u00a7\n\u27e811\u27e9 https://docs.rs/hmac/latest/hmac/#block-and-input-sizes: \u00a7\n\u27e812\u27e9 https://docs.rs/hmac/latest/hmac/#reexports: \u00a7\n\u27e813\u27e9 https://docs.rs/hmac/latest/hmac/#structs: \u00a7\n\u27e814\u27e9 https://docs.rs/hmac/latest/hmac/#traits: \u00a7\n\u27e815\u27e9 https://docs.rs/hmac/latest/hmac/trait.Mac.html: trait hmac::Mac - Mac\n\u27e816\u27e9 https://docs.rs/hmac/latest/hmac/#types: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "hmac",
+          "version": "0.13.0-rc.0",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\n[Settings](https://docs.rs/hmac/latest/settings.html)\n[Help](https://docs.rs/hmac/latest/help.html)\nSummary[Source](https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131)\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the [`digest`](https://docs.rs/digest) crate traits. You can find compatible crates (e.g. [`sha2`](https://docs.rs/sha2)) in the [`RustCrypto/hashes`](https://github.com/RustCrypto/hashes) repository.\nThis crate provides two HMAC implementation [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") and [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\"). The first one is a buffered wrapper around block-level [`HmacCore`](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\"). Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\") is a bit less efficient memory-wise, but works with all hash functions which implement the [`Digest`](https://docs.rs/digest) trait.\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#examples)Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples [`Hmac`](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\") is interchangeable with [`SimpleHmac`](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\").\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## [\u00a7](https://docs.rs/hmac/latest/hmac/#block-and-input-sizes)Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports[\u00a7](https://docs.rs/hmac/latest/hmac/#reexports)\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs[\u00a7](https://docs.rs/hmac/latest/hmac/#structs)\n\n[HmacCore](https://docs.rs/hmac/latest/hmac/struct.HmacCore.html \"struct hmac::HmacCore\")\n    Generic core HMAC instance, which operates over blocks.\n\n[SimpleHmac](https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html \"struct hmac::SimpleHmac\")\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits[\u00a7](https://docs.rs/hmac/latest/hmac/#traits)\n\n[Mac](https://docs.rs/hmac/latest/hmac/trait.Mac.html \"trait hmac::Mac\")\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases[\u00a7](https://docs.rs/hmac/latest/hmac/#types)\n\n[Hmac](https://docs.rs/hmac/latest/hmac/type.Hmac.html \"type hmac::Hmac\")\n    Generic HMAC instance.\n",
+            "markdown_with_citations": "[](https://docs.rs/hmac/latest/hmac/all.html \"show sidebar\")\n# Crate hmacCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nGeneric implementation of Hash-based Message Authentication Code (HMAC).\nTo use it you will need a cryptographic hash function implementation which implements the `digest`\u27e84\u27e9 crate traits. You can find compatible crates (e.g. `sha2`\u27e85\u27e9) in the `RustCrypto/hashes`\u27e86\u27e9 repository.\nThis crate provides two HMAC implementation `Hmac`\u27e87\u27e9 and `SimpleHmac`\u27e88\u27e9. The first one is a buffered wrapper around block-level `HmacCore`\u27e89\u27e9. Internally it uses efficient state representation, but works only with hash functions which expose block-level API and consume blocks eagerly (e.g. it will not work with the BLAKE2 family of hash functions). On the other hand, `SimpleHmac`\u27e88\u27e9 is a bit less efficient memory-wise, but works with all hash functions which implement the `Digest`\u27e84\u27e9 trait.\n## \u00a7\u27e810\u27e9Examples\nLet us demonstrate how to use HMAC using the SHA-256 hash function.\nIn the following examples `Hmac`\u27e87\u27e9 is interchangeable with `SimpleHmac`\u27e88\u27e9.\nTo get authentication code:\n```\nuse sha2::Sha256;\nuse hmac::{Hmac, Mac};\nuse hex_literal::hex;\n// Create alias for HMAC-SHA256\ntype HmacSha256 = Hmac<Sha256>;\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\n// `result` has type `CtOutput` which is a thin wrapper around array of\n// bytes for providing constant time equality check\nlet result = mac.finalize();\n// To get underlying array use `into_bytes`, but be careful, since\n// incorrect use of the code value may permit timing attacks which defeats\n// the security provided by the `CtOutput`\nlet code_bytes = result.into_bytes();\nlet expected = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\nassert_eq!(code_bytes[..], expected[..]);\n```\n\nTo verify the message:\n```\nlet mut mac = HmacSha256::new_from_slice(b\"my secret and secure key\")\n  .expect(\"HMAC can take key of any size\");\nmac.update(b\"input message\");\nlet code_bytes = hex!(\"\n  97d2a569059bbcd8ead4444ff99071f4\n  c01d005bcefe0d3567e1be628e5fdcd9\n\");\n// `verify_slice` will return `Ok(())` if code is correct, `Err(MacError)` otherwise\nmac.verify_slice(&code_bytes[..]).unwrap();\n```\n\n## \u00a7\u27e811\u27e9Block and input sizes\nUsually it is assumed that block size is larger than output size. Due to the generic nature of the implementation, this edge case must be handled as well to remove potential panic. This is done by truncating hash output to the hash block size if needed.\n## Re-exports\u00a7\u27e812\u27e9\n\n`pub use digest[](https://docs.rs/digest/0.10.7/x86_64-unknown-linux-gnu/digest/index.html \"mod digest\");`\n\n## Structs\u00a7\u27e813\u27e9\n\nHmacCore\u27e89\u27e9\n    Generic core HMAC instance, which operates over blocks.\n\nSimpleHmac\u27e88\u27e9\n    Simplified HMAC instance able to operate over hash functions which do not expose block-level API and hash functions which process blocks lazily (e.g. BLAKE2).\n## Traits\u00a7\u27e814\u27e9\n\nMac\u27e815\u27e9\n    Convenience wrapper trait covering functionality of Message Authentication algorithms.\n## Type Aliases\u00a7\u27e816\u27e9\n\nHmac\u27e87\u27e9\n    Generic HMAC instance.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/hmac/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/hmac/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/hmac/latest/src/hmac/lib.rs.html#1-131: Source\n\u27e84\u27e9 https://docs.rs/digest: `digest`\n\u27e85\u27e9 https://docs.rs/sha2: `sha2`\n\u27e86\u27e9 https://github.com/RustCrypto/hashes: `RustCrypto/hashes`\n\u27e87\u27e9 https://docs.rs/hmac/latest/hmac/type.Hmac.html: type hmac::Hmac - `Hmac`\n\u27e88\u27e9 https://docs.rs/hmac/latest/hmac/struct.SimpleHmac.html: struct hmac::SimpleHmac - `SimpleHmac`\n\u27e89\u27e9 https://docs.rs/hmac/latest/hmac/struct.HmacCore.html: struct hmac::HmacCore - `HmacCore`\n\u27e810\u27e9 https://docs.rs/hmac/latest/hmac/#examples: \u00a7\n\u27e811\u27e9 https://docs.rs/hmac/latest/hmac/#block-and-input-sizes: \u00a7\n\u27e812\u27e9 https://docs.rs/hmac/latest/hmac/#reexports: \u00a7\n\u27e813\u27e9 https://docs.rs/hmac/latest/hmac/#structs: \u00a7\n\u27e814\u27e9 https://docs.rs/hmac/latest/hmac/#traits: \u00a7\n\u27e815\u27e9 https://docs.rs/hmac/latest/hmac/trait.Mac.html: trait hmac::Mac - Mac\n\u27e816\u27e9 https://docs.rs/hmac/latest/hmac/#types: \u00a7\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `hmac` crate provides a generic implementation of the Hash-based Message Authentication Code (HMAC) algorithm, supporting cryptographic hash functions compatible with the `digest` crate (e.g., `sha2`). It offers two implementations: `Hmac`, a buffered and efficient wrapper for block-level APIs, and `SimpleHmac`, which works with all hash functions, including those with lazy block processing. The crate ensures security with constant-time equality checks and includes utilities for generating and verifying authentication codes.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: HMAC Implementations  \n\u2705 **Factual:** The `hmac` crate provides two implementations: `Hmac`, which is a buffered wrapper around `HmacCore`, and `SimpleHmac`, which works with hash functions that process blocks lazily, such as the BLAKE2 family.  \n\u274c **Counterfactual:** The `hmac` crate only supports the `Hmac` implementation and does not provide compatibility for hash functions that process blocks lazily, such as BLAKE2.  \n\n---\n\n### Pair 2: Cryptographic Hash Function Compatibility  \n\u2705 **Factual:** The `hmac` crate requires a cryptographic hash function implementation that adheres to the `digest` crate traits, and compatible crates like `sha2` can be found in the `RustCrypto/hashes` repository.  \n\u274c **Counterfactual:** The `hmac` crate includes built-in cryptographic hash functions like SHA-256 and does not require external crates such as `sha2` for hash function implementations.  \n\n---\n\n### Pair 3: Key Size Requirements  \n\u2705 **Factual:** The `Hmac` implementation in the `hmac` crate can accept keys of any size, but users must ensure the key is secure and appropriately sized for their use case.  \n\u274c **Counterfactual:** The `Hmac` implementation in the `hmac` crate requires keys to be exactly the same size as the hash function's",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-f9ccd92b-271d8326-1751264393",
+      "timestamp": "2025-06-30T06:19:53.641996+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

@@ -20,7 +20,15 @@ def main() -> None:
         print("   The pipeline will check and prompt for setup if needed.")
         print()
 
-    cmd = ["python", "-m", "rust_crate_pipeline"] + sys.argv[1:]
+    # Use the unified LLM pipeline with intelligent routing
+    cmd = [
+        "python", "run_pipeline_with_llm.py",
+        "--llm-provider", "azure",
+        "--llm-model", "gpt-4o",
+        "--crates-file", "rust_crate_pipeline/crate_list.txt",
+        "--batch-size", "3",
+        "--verbose"
+    ] + sys.argv[1:]
 
     try:
         result = subprocess.run(cmd, env=env, check=True)

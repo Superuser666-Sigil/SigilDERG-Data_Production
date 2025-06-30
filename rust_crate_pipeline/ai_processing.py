@@ -1,13 +1,13 @@
 # ai_processing.py
-import re
-import time
 import logging
 import os
-from typing import TypedDict, Union
-
+import re
+import time
 from collections.abc import Callable
+from typing import Union
 
-from .config import PipelineConfig, CrateMetadata, EnrichedCrate
+from .common_types import Section
+from .config import CrateMetadata, EnrichedCrate, PipelineConfig
 
 # Optional imports with fallbacks
 _ai_dependencies_available = True
@@ -21,51 +21,55 @@ except ImportError as e:
     _ai_dependencies_available = False
 
 
-class Section(TypedDict):
-    heading: str
-    content: str
-    priority: int
+# Import shared types
 
 
 class LLMEnricher:
     def __init__(self, config: PipelineConfig) -> None:
         """Initialize LLMEnricher with automatic provider detection"""
         if not _ai_dependencies_available:
-            raise ImportError("Cannot load model: AI dependencies not available")
+            raise ImportError(
+                "Cannot load model: AI dependencies not available")
 
         self.config = config
         self.tokenizer = tiktoken.get_encoding("cl100k_base")  # type: ignore
-        
+
         # Auto-detect and configure the appropriate LLM provider
         self.model = self._auto_detect_and_load_model()
 
     def _auto_detect_and_load_model(self):
         """Automatically detect and load the appropriate LLM provider"""
-        
+
         # Priority 1: Check if Azure OpenAI is configured and available
-        if (self.config.use_azure_openai and 
-            self.config.azure_openai_endpoint and 
-            self.config.azure_openai_api_key and 
-            self.config.azure_openai_deployment_name):
-            
+        if (self.config.use_azure_openai and
+            self.config.azure_openai_endpoint and
+            self.config.azure_openai_api_key and
+                self.config.azure_openai_deployment_name):
+
             try:
                 # Use the UnifiedLLMProcessor for Azure
-                from .unified_llm_processor import create_llm_processor_from_config
+                from .unified_llm_processor import (
+                    create_llm_processor_from_config,
+                )
                 return create_llm_processor_from_config(self.config)
             except Exception as e:
-                logging.warning(f"Azure OpenAI setup failed, falling back to local: {e}")
-        
+                logging.warning(
+                    f"Azure OpenAI setup failed, falling back to local: {e}")
+
         # Priority 2: Check if local model file exists
         if os.path.exists(self.config.model_path):
             try:
                 return self._load_local_model()
             except Exception as e:
                 logging.warning(f"Local model loading failed: {e}")
-        
+
         # Priority 3: Check for other local providers (Ollama, LM Studio)
         if self._check_ollama_available():
             try:
-                from .unified_llm_processor import LLMConfig, UnifiedLLMProcessor
+                from .unified_llm_processor import (
+                    LLMConfig,
+                    UnifiedLLMProcessor,
+                )
                 llm_config = LLMConfig(
                     provider="ollama",
                     model="llama2",  # Default model
@@ -77,11 +81,14 @@ class LLMEnricher:
                 return UnifiedLLMProcessor(llm_config)
             except Exception as e:
                 logging.warning(f"Ollama setup failed: {e}")
-        
+
         # Priority 4: Check for LM Studio
         if self._check_lmstudio_available():
             try:
-                from .unified_llm_processor import LLMConfig, UnifiedLLMProcessor
+                from .unified_llm_processor import (
+                    LLMConfig,
+                    UnifiedLLMProcessor,
+                )
                 llm_config = LLMConfig(
                     provider="lmstudio",
                     model="local-model",  # Default model
@@ -93,7 +100,7 @@ class LLMEnricher:
                 return UnifiedLLMProcessor(llm_config)
             except Exception as e:
                 logging.warning(f"LM Studio setup failed: {e}")
-        
+
         # If all else fails, raise a clear error
         raise RuntimeError(
             "No LLM provider available. Please configure one of:\n"
@@ -125,18 +132,20 @@ class LLMEnricher:
         """Check if Ollama is available"""
         try:
             import requests
-            response = requests.get("http://localhost:11434/api/tags", timeout=5)
+            response = requests.get(
+                "http://localhost:11434/api/tags", timeout=5)
             return response.status_code == 200
-        except:
+        except BaseException:
             return False
 
     def _check_lmstudio_available(self):
         """Check if LM Studio is available"""
         try:
             import requests
-            response = requests.get("http://localhost:1234/v1/models", timeout=5)
+            response = requests.get(
+                "http://localhost:1234/v1/models", timeout=5)
             return response.status_code == 200
-        except:
+        except BaseException:
             return False
 
     def estimate_tokens(self, text: str) -> int:
@@ -184,7 +193,10 @@ class LLMEnricher:
                 priority = 5  # Default priority
 
                 # Assign priority based on content type
-                if re.search(r"\b(Union[usage, example]|getting started)\b", heading, re.I):
+                if re.search(
+                    r"\b(Union[usage, example]|getting started)\b",
+                    heading,
+                        re.I):
                     priority = 10
                 elif re.search(r"\b(Union[feature, overview]|about)\b", heading, re.I):
                     priority = 9
@@ -203,7 +215,8 @@ class LLMEnricher:
 
                 # Boost priority if code block is found
                 if "```rust" in line or "```no_run" in line:
-                    current_section["priority"] = max(current_section["priority"], 8)
+                    current_section["priority"] = max(
+                        current_section["priority"], 8)
 
         # Add the last section
         if current_section["content"].strip():
@@ -266,7 +279,10 @@ class LLMEnricher:
         elif task == "factual_pairs":
             # For factual pairs, ensure proper formatting
             pairs: list[str] = []
-            facts = re.findall(r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)", output, re.DOTALL)
+            facts = re.findall(
+                r"✅\s*Factual:?\s*(.*?)(?=❌|\Z)",
+                output,
+                re.DOTALL)
             counterfacts = re.findall(
                 r"❌\s*Counterfactual:?\s*(.*?)(?=✅|\Z)", output, re.DOTALL
             )
@@ -282,7 +298,8 @@ class LLMEnricher:
 
         else:
             # General cleaning - more permissive than before
-            lines = [line.strip() for line in output.splitlines() if line.strip()]
+            lines = [line.strip()
+                     for line in output.splitlines() if line.strip()]
             return "\n".join(lines)
 
     def run_llama(
@@ -292,7 +309,8 @@ class LLMEnricher:
         try:
             token_count = self.estimate_tokens(prompt)
             if token_count > self.config.prompt_token_margin:
-                logging.warning(f"Prompt too long ({token_count} tokens). Truncating.")
+                logging.warning(
+                    f"Prompt too long ({token_count} tokens). Truncating.")
                 prompt = self.truncate_content(
                     prompt, self.config.prompt_token_margin - 100
                 )
@@ -359,7 +377,11 @@ class LLMEnricher:
                     prompt = self.simplify_prompt(prompt)
 
             except Exception as e:
-                logging.error(f"Generation error on attempt {attempt + 1}: {str(e)}")
+                logging.error(
+                    f"Generation error on attempt {
+                        attempt +
+                        1}: {
+                        str(e)}")
 
                 # More generous backoff - give the model more time
             time.sleep(2.0 + (attempt * 1.0))  # 2s, 3s, 4s, 5s delays
@@ -404,9 +426,8 @@ class LLMEnricher:
             "Cryptography",
             "Unknown",
         ]
-        return any(
-            category.lower() == result.strip().lower() for category in valid_categories
-        )
+        return any(category.lower() == result.strip().lower()
+                   for category in valid_categories)
 
     def validate_factual_pairs(self, result: str) -> bool:
         """Ensure exactly 5 factual/counterfactual pairs exist"""
@@ -446,7 +467,8 @@ class LLMEnricher:
                 crate, enriched.readme_summary or ""
             )
             enriched.score = self.score_crate(crate)
-            enriched.factual_counterfactual = self.generate_factual_pairs(crate)
+            enriched.factual_counterfactual = self.generate_factual_pairs(
+                crate)
 
             return enriched
         except Exception as e:
@@ -478,7 +500,8 @@ class LLMEnricher:
                         deps_str = ", ".join(deps) if deps else "none"
                         feature_text += f"- {feature_name} (dependencies: {deps_str})\n"
                     else:
-                        feature_text += f"- {str(feature)} (dependencies: none)\n"
+                        feature_text += f"- {
+                            str(feature)} (dependencies: none)\n"
             else:
                 return "Features format not recognized."
 
@@ -497,16 +520,23 @@ class LLMEnricher:
             result = self.run_llama(prompt, temp=0.2, max_tokens=350)
             return result or "Feature summary not available."
         except Exception as e:
-            logging.warning(f"Feature summarization failed for {crate.name}: {str(e)}")
+            logging.warning(
+                f"Feature summarization failed for {
+                    crate.name}: {
+                    str(e)}")
             return "Feature summary not available."
 
-    def classify_use_case(self, crate: CrateMetadata, readme_summary: str) -> str:
+    def classify_use_case(
+            self,
+            crate: CrateMetadata,
+            readme_summary: str) -> str:
         """Classify the use case of a crate with rich context"""
         try:
             # Calculate available tokens for prompt
             available_prompt_tokens = self.config.model_token_limit - 200
 
-            joined = ", ".join(crate.keywords[:10]) if crate.keywords else "None"
+            joined = ", ".join(
+                crate.keywords[:10]) if crate.keywords else "None"
             key_deps = [
                 dep.get("crate_id")
                 for dep in crate.dependencies[:5]
@@ -575,7 +605,7 @@ class LLMEnricher:
             readme_summary = self.truncate_content(
                 getattr(crate, "readme_summary", "") or "", 300
             )
-            
+
             # Handle both dict and list feature formats
             if isinstance(crate.features, dict):
                 features = ", ".join(list(crate.features.keys())[:5])
@@ -620,7 +650,10 @@ class LLMEnricher:
 
             return result or "Factual pairs generation failed."
         except Exception as e:
-            logging.error(f"Exception in factual_pairs for {crate.name}: {str(e)}")
+            logging.error(
+                f"Exception in factual_pairs for {
+                    crate.name}: {
+                    str(e)}")
             return "Factual pairs generation failed."
 
     def score_crate(self, crate: CrateMetadata) -> float:
@@ -644,7 +677,7 @@ class LLMEnricher:
 
         # Process in batches optimized for L4's capabilities
         for i in range(0, len(prompts), batch_size):
-            batch = prompts[i : i + batch_size]
+            batch = prompts[i: i + batch_size]
             batch_results: list[Union[str, None]] = []
 
             for prompt, temp, max_tokens in batch:
@@ -666,11 +699,14 @@ class LLMEnricher:
                     )
 
                     # The type checker incorrectly infers a stream response
-                    choice_text: str = output["choices"][0]["text"]  # type: ignore
+                    # type: ignore
+                    choice_text: str = output["choices"][0]["text"]
                     result = self.clean_output(choice_text)
                     batch_results.append(result)
                 except Exception as e:
-                    logging.error(f"LLM batch processing error: {e}", exc_info=True)
+                    logging.error(
+                        f"LLM batch processing error: {e}",
+                        exc_info=True)
                     batch_results.append(None)
 
             results.extend(batch_results)

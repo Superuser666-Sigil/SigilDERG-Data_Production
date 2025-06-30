@@ -1,0 +1,1577 @@
+[
+  {
+    "execution_id": "exec-352dc8d9-1b5d7aed-1751258792",
+    "timestamp": "2025-06-30T04:46:32.160103+00:00",
+    "sacred_chain": {
+      "input_data": "futures-test",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'futures-test' -> 'futures-test'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "futures-test",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/futures-test",
+            "title": "futures-test v0.3.31",
+            "content": {
+              "raw_markdown": "#  futures-test v0.3.31\nCommon utilities for testing components built off futures-rs. \n  * [ Readme ](https://crates.io/crates/futures-test)\n  * [ 33 Versions ](https://crates.io/crates/futures-test/versions)\n  * [ Dependencies ](https://crates.io/crates/futures-test/dependencies)\n  * [ Dependents ](https://crates.io/crates/futures-test/reverse_dependencies)\n\n\n## Metadata\n9 months ago \nv1.56.0 \n[ MIT ](https://choosealicense.com/licenses/mit) OR [ Apache-2.0 ](https://choosealicense.com/licenses/apache-2.0)\n15.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add futures-test\nOr add the following line to your Cargo.toml:\nfutures-test = \"0.3.31\"\n## Homepage\n[ rust-lang.github.io/futures-rs ](https://rust-lang.github.io/futures-rs)\n## Repository\n[ github.com/rust-lang/futures-rs ](https://github.com/rust-lang/futures-rs)\n## Owners\n[ Report crate ](https://crates.io/support?crate=futures-test&inquire=crate-violation)\n### Stats Overview\n2,777,475 Downloads all time\n33 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  futures-test v0.3.31\nCommon utilities for testing components built off futures-rs. \n  *  Readme \u27e81\u27e9\n  *  33 Versions \u27e82\u27e9\n  *  Dependencies \u27e83\u27e9\n  *  Dependents \u27e84\u27e9\n\n\n## Metadata\n9 months ago \nv1.56.0 \n MIT \u27e85\u27e9 OR  Apache-2.0 \u27e86\u27e9\n15.6 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add futures-test\nOr add the following line to your Cargo.toml:\nfutures-test = \"0.3.31\"\n## Homepage\n rust-lang.github.io/futures-rs \u27e87\u27e9\n## Repository\n github.com/rust-lang/futures-rs \u27e88\u27e9\n## Owners\n Report crate \u27e89\u27e9\n### Stats Overview\n2,777,475 Downloads all time\n33 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/crates/futures-test:  Readme \n\u27e82\u27e9 https://crates.io/crates/futures-test/versions:  33 Versions \n\u27e83\u27e9 https://crates.io/crates/futures-test/dependencies:  Dependencies \n\u27e84\u27e9 https://crates.io/crates/futures-test/reverse_dependencies:  Dependents \n\u27e85\u27e9 https://choosealicense.com/licenses/mit:  MIT \n\u27e86\u27e9 https://choosealicense.com/licenses/apache-2.0:  Apache-2.0 \n\u27e87\u27e9 https://rust-lang.github.io/futures-rs:  rust-lang.github.io/futures-rs \n\u27e88\u27e9 https://github.com/rust-lang/futures-rs:  github.com/rust-lang/futures-rs \n\u27e89\u27e9 https://crates.io/support?crate=futures-test&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1128,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112581.8776915"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/futures-test",
+            "title": "Crate futures_testCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\n[Settings](https://docs.rs/futures-test/latest/settings.html)\n[Help](https://docs.rs/futures-test/latest/help.html)\nSummary[Source](https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81)\nExpand description\nUtilities to make testing [`Future`s](https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html \"trait core::future::future::Future\") easier\n## Modules[\u00a7](https://docs.rs/futures-test/latest/futures_test/#modules)\n\n[future](https://docs.rs/futures-test/latest/futures_test/future/index.html \"mod futures_test::future\")\n    Additional combinators for testing futures.\n\n[io](https://docs.rs/futures-test/latest/futures_test/io/index.html \"mod futures_test::io\")\n    Additional combinators for testing async IO.\n\n[sink](https://docs.rs/futures-test/latest/futures_test/sink/index.html \"mod futures_test::sink\")\n    Additional combinators for testing sinks.\n\n[stream](https://docs.rs/futures-test/latest/futures_test/stream/index.html \"mod futures_test::stream\")\n    Additional combinators for testing streams.\n\n[task](https://docs.rs/futures-test/latest/futures_test/task/index.html \"mod futures_test::task\")\n    Task related testing utilities.\n## Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#macros)\n\n[assert_stream_done](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html \"macro futures_test::assert_stream_done\")\n    Assert that the next poll to the provided stream will return an empty [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") signalling the completion of the stream.\n\n[assert_stream_next](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html \"macro futures_test::assert_stream_next\")\n    Assert that the next poll to the provided stream will return [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") with the provided item.\n\n[assert_stream_pending](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html \"macro futures_test::assert_stream_pending\")\n    Assert that the next poll to the provided stream will return [`Poll::Pending`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending \"variant core::task::poll::Poll::Pending\").\n## Attribute Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#attributes)\n\n[test](https://docs.rs/futures-test/latest/futures_test/attr.test.html \"attr futures_test::test\")\n    Enables an `async` test function. The generated future will be run to completion with [`futures_executor::block_on`](https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html \"fn futures_executor::local_pool::block_on\").\n",
+              "markdown_with_citations": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities to make testing `Future`s\u27e84\u27e9 easier\n## Modules\u00a7\u27e85\u27e9\n\nfuture\u27e86\u27e9\n    Additional combinators for testing futures.\n\nio\u27e87\u27e9\n    Additional combinators for testing async IO.\n\nsink\u27e88\u27e9\n    Additional combinators for testing sinks.\n\nstream\u27e89\u27e9\n    Additional combinators for testing streams.\n\ntask\u27e810\u27e9\n    Task related testing utilities.\n## Macros\u00a7\u27e811\u27e9\n\nassert_stream_done\u27e812\u27e9\n    Assert that the next poll to the provided stream will return an empty `Poll::Ready`\u27e813\u27e9 signalling the completion of the stream.\n\nassert_stream_next\u27e814\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Ready`\u27e813\u27e9 with the provided item.\n\nassert_stream_pending\u27e815\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Pending`\u27e816\u27e9.\n## Attribute Macros\u00a7\u27e817\u27e9\n\ntest\u27e818\u27e9\n    Enables an `async` test function. The generated future will be run to completion with `futures_executor::block_on`\u27e819\u27e9.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/futures-test/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/futures-test/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html: trait core::future::future::Future - `Future`s\n\u27e85\u27e9 https://docs.rs/futures-test/latest/futures_test/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/futures-test/latest/futures_test/future/index.html: mod futures_test::future - future\n\u27e87\u27e9 https://docs.rs/futures-test/latest/futures_test/io/index.html: mod futures_test::io - io\n\u27e88\u27e9 https://docs.rs/futures-test/latest/futures_test/sink/index.html: mod futures_test::sink - sink\n\u27e89\u27e9 https://docs.rs/futures-test/latest/futures_test/stream/index.html: mod futures_test::stream - stream\n\u27e810\u27e9 https://docs.rs/futures-test/latest/futures_test/task/index.html: mod futures_test::task - task\n\u27e811\u27e9 https://docs.rs/futures-test/latest/futures_test/#macros: \u00a7\n\u27e812\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html: macro futures_test::assert_stream_done - assert_stream_done\n\u27e813\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready: variant core::task::poll::Poll::Ready - `Poll::Ready`\n\u27e814\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html: macro futures_test::assert_stream_next - assert_stream_next\n\u27e815\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html: macro futures_test::assert_stream_pending - assert_stream_pending\n\u27e816\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending: variant core::task::poll::Poll::Pending - `Poll::Pending`\n\u27e817\u27e9 https://docs.rs/futures-test/latest/futures_test/#attributes: \u00a7\n\u27e818\u27e9 https://docs.rs/futures-test/latest/futures_test/attr.test.html: attr futures_test::test - test\n\u27e819\u27e9 https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html: fn futures_executor::local_pool::block_on - `futures_executor::block_on`\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 2940,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112582.6987247"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/futures-test",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [31 releases](https://lib.rs/crates/futures-test/versions)\n0.3.31 |  Oct 5, 2024   \n---|---  \n0.3.30 |  Dec 24, 2023   \n0.3.29 |  Oct 26, 2023   \n0.3.28 |  Mar 30, 2023   \n0.0.0 |  Oct 25, 2017   \n#**1157** in [Asynchronous](https://lib.rs/asynchronous \"Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing.\")\nDownload history 24323/week @ 2025-01-28 30940/week @ 2025-02-04 30135/week @ 2025-02-11 22844/week @ 2025-02-18 24252/week @ 2025-02-25 27060/week @ 2025-03-04 41803/week @ 2025-03-11 32498/week @ 2025-03-18 44246/week @ 2025-03-25 40203/week @ 2025-04-01 38872/week @ 2025-04-08 34475/week @ 2025-04-15 27992/week @ 2025-04-22 32605/week @ 2025-04-29 34904/week @ 2025-05-06 27076/week @ 2025-05-13\n**126,333** downloads per month Used in [**142** crates (120 directly)](https://lib.rs/crates/futures-test/rev)\n**MIT/Apache**\n785KB  14K  SLoC\nUtilities to make testing [``Future``s](https://docs.rs/futures-test/0.3.31/futures_core::future::Future) easier\n# futures-test\nCommon utilities for testing components built off futures-rs.\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`futures-test ``=` ``\"`0.3`\"``\n``\n```\n\nThe current ``futures-test`` requires Rust 1.56 or later.\n## License\nLicensed under either of [Apache License, Version 2.0](https://github.com/rust-lang/futures-rs/blob/HEAD/LICENSE-APACHE) or [MIT license](https://github.com/rust-lang/futures-rs/blob/HEAD/LICENSE-MIT) at your option.\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~265\u2013760KB  ~16K SLoC\n  * [futures-core](https://lib.rs/crates/futures-core \"0.3.31\")\n  * [futures-executor](https://lib.rs/crates/futures-executor \"0.3.31\")\n  * [futures-io](https://lib.rs/crates/futures-io \"0.3.31\")\n  * [futures-macro](https://lib.rs/crates/futures-macro \"=0.3.31\")\n  * [futures-sink](https://lib.rs/crates/futures-sink \"0.3.31\")\n  * [futures-task](https://lib.rs/crates/futures-task \"0.3.31\")\n  * [futures-util](https://lib.rs/crates/futures-util \"0.3.31\")\n  * [pin-project](https://lib.rs/crates/pin-project \"1.0.11\")\n\n\n#### [Other feature](https://lib.rs/crates/futures-test/features)\n  * [std](https://lib.rs/crates/futures-test/features#feature-std)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  31 releases\u27e81\u27e9\n0.3.31 |  Oct 5, 2024   \n---|---  \n0.3.30 |  Dec 24, 2023   \n0.3.29 |  Oct 26, 2023   \n0.3.28 |  Mar 30, 2023   \n0.0.0 |  Oct 25, 2017   \n#**1157** in Asynchronous\u27e82\u27e9\nDownload history 24323/week @ 2025-01-28 30940/week @ 2025-02-04 30135/week @ 2025-02-11 22844/week @ 2025-02-18 24252/week @ 2025-02-25 27060/week @ 2025-03-04 41803/week @ 2025-03-11 32498/week @ 2025-03-18 44246/week @ 2025-03-25 40203/week @ 2025-04-01 38872/week @ 2025-04-08 34475/week @ 2025-04-15 27992/week @ 2025-04-22 32605/week @ 2025-04-29 34904/week @ 2025-05-06 27076/week @ 2025-05-13\n**126,333** downloads per month Used in **142** crates (120 directly)\u27e83\u27e9\n**MIT/Apache**\n785KB  14K  SLoC\nUtilities to make testing ``Future``s\u27e84\u27e9 easier\n# futures-test\nCommon utilities for testing components built off futures-rs.\n## Usage\nAdd this to your ``Cargo.toml``:\n```\n```[``dependencies``]`\n`futures-test ``=` ``\"`0.3`\"``\n``\n```\n\nThe current ``futures-test`` requires Rust 1.56 or later.\n## License\nLicensed under either of Apache License, Version 2.0\u27e85\u27e9 or MIT license\u27e86\u27e9 at your option.\nUnless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the Apache-2.0 license, shall be dual licensed as above, without any additional terms or conditions.\n#### Dependencies\n~265\u2013760KB  ~16K SLoC\n  * futures-core\u27e87\u27e9\n  * futures-executor\u27e88\u27e9\n  * futures-io\u27e89\u27e9\n  * futures-macro\u27e810\u27e9\n  * futures-sink\u27e811\u27e9\n  * futures-task\u27e812\u27e9\n  * futures-util\u27e813\u27e9\n  * pin-project\u27e814\u27e9\n\n\n#### Other feature\u27e815\u27e9\n  * std\u27e816\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/futures-test/versions: 31 releases\n\u27e82\u27e9 https://lib.rs/asynchronous: Crates to help you deal with events independently of the main program flow, using techniques like futures, promises, waiting, or eventing. - Asynchronous\n\u27e83\u27e9 https://lib.rs/crates/futures-test/rev: **142** crates (120 directly)\n\u27e84\u27e9 https://docs.rs/futures-test/0.3.31/futures_core::future::Future: ``Future``s\n\u27e85\u27e9 https://github.com/rust-lang/futures-rs/blob/HEAD/LICENSE-APACHE: Apache License, Version 2.0\n\u27e86\u27e9 https://github.com/rust-lang/futures-rs/blob/HEAD/LICENSE-MIT: MIT license\n\u27e87\u27e9 https://lib.rs/crates/futures-core: 0.3.31 - futures-core\n\u27e88\u27e9 https://lib.rs/crates/futures-executor: 0.3.31 - futures-executor\n\u27e89\u27e9 https://lib.rs/crates/futures-io: 0.3.31 - futures-io\n\u27e810\u27e9 https://lib.rs/crates/futures-macro: =0.3.31 - futures-macro\n\u27e811\u27e9 https://lib.rs/crates/futures-sink: 0.3.31 - futures-sink\n\u27e812\u27e9 https://lib.rs/crates/futures-task: 0.3.31 - futures-task\n\u27e813\u27e9 https://lib.rs/crates/futures-util: 0.3.31 - futures-util\n\u27e814\u27e9 https://lib.rs/crates/pin-project: 1.0.11 - pin-project\n\u27e815\u27e9 https://lib.rs/crates/futures-test/features: Other feature\n\u27e816\u27e9 https://lib.rs/crates/futures-test/features#feature-std: std\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 2496,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "112583.2152245"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_utils-9d9a9e5e1b2c045c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_sink-b4bd44e60c5494bf.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-io@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-io-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-io-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_io-76ff1e12022b56d6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_core-c0247814193dd354.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#slab@0.4.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\slab-0.4.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "slab",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\slab-0.4.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libslab-998bee1b978fdba0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_task-ecc531f5e570f7c2.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.7.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "memchr",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.7.5\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libmemchr-cb1427129dde067c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "futures-io",
+                "io",
+                "memchr",
+                "slab",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_util-f8c0ac293cab5be0.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-executor@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-executor-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_executor",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-executor-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_executor-b1c5899efcc1294c.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "visit-mut"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libsyn-6d8a737c69e2c9d6.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libsyn-6d8a737c69e2c9d6.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-macro@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-macro-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "futures_macro",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-macro-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-internal@1.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-internal-1.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "pin_project_internal",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-internal-1.1.10\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project@1.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-1.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-1.1.10\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_project-ef1772d10dea8601.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp3jxirmf9/futures-test-0.3.31#futures-test@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_test",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_test-4088db99a8232f68.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#slab@0.4.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\slab-0.4.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "slab",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\slab-0.4.10\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libslab-998bee1b978fdba0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-utils@0.1.0",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_utils",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-utils-0.1.0\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_utils-9d9a9e5e1b2c045c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-task@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_task",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-task-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_task-ecc531f5e570f7c2.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-io@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-io-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_io",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-io-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_io-76ff1e12022b56d6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-lite@0.2.16",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project_lite",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-lite-0.2.16\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_project_lite-c1a285380b388093.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-core@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-core-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_core-c0247814193dd354.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#memchr@2.7.5",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.7.5\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "memchr",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\memchr-2.7.5\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libmemchr-cb1427129dde067c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-sink@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_sink",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-sink-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_sink-b4bd44e60c5494bf.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-util@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_util",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-util-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "futures-io",
+                "io",
+                "memchr",
+                "slab",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_util-f8c0ac293cab5be0.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-executor@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-executor-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_executor",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-executor-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_executor-b1c5899efcc1294c.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "visit-mut"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libsyn-6d8a737c69e2c9d6.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libsyn-6d8a737c69e2c9d6.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project-internal@1.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-internal-1.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "pin_project_internal",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-internal-1.1.10\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\pin_project_internal-d06fa5380469c3e6.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#futures-macro@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-macro-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "futures_macro",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\futures-macro-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\futures_macro-68b994b5bf27c618.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#pin-project@1.1.10",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-1.1.10\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "pin_project",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\pin-project-1.1.10\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libpin_project-ef1772d10dea8601.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmp3jxirmf9/futures-test-0.3.31#futures-test@0.3.31",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "futures_test",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmp3jxirmf9\\futures-test-0.3.31\\target\\debug\\deps\\libfutures_test-4540ea7ec62014a1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 18
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "futures-test",
+          "version": "0.3.31",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\n[Settings](https://docs.rs/futures-test/latest/settings.html)\n[Help](https://docs.rs/futures-test/latest/help.html)\nSummary[Source](https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81)\nExpand description\nUtilities to make testing [`Future`s](https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html \"trait core::future::future::Future\") easier\n## Modules[\u00a7](https://docs.rs/futures-test/latest/futures_test/#modules)\n\n[future](https://docs.rs/futures-test/latest/futures_test/future/index.html \"mod futures_test::future\")\n    Additional combinators for testing futures.\n\n[io](https://docs.rs/futures-test/latest/futures_test/io/index.html \"mod futures_test::io\")\n    Additional combinators for testing async IO.\n\n[sink](https://docs.rs/futures-test/latest/futures_test/sink/index.html \"mod futures_test::sink\")\n    Additional combinators for testing sinks.\n\n[stream](https://docs.rs/futures-test/latest/futures_test/stream/index.html \"mod futures_test::stream\")\n    Additional combinators for testing streams.\n\n[task](https://docs.rs/futures-test/latest/futures_test/task/index.html \"mod futures_test::task\")\n    Task related testing utilities.\n## Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#macros)\n\n[assert_stream_done](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html \"macro futures_test::assert_stream_done\")\n    Assert that the next poll to the provided stream will return an empty [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") signalling the completion of the stream.\n\n[assert_stream_next](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html \"macro futures_test::assert_stream_next\")\n    Assert that the next poll to the provided stream will return [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") with the provided item.\n\n[assert_stream_pending](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html \"macro futures_test::assert_stream_pending\")\n    Assert that the next poll to the provided stream will return [`Poll::Pending`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending \"variant core::task::poll::Poll::Pending\").\n## Attribute Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#attributes)\n\n[test](https://docs.rs/futures-test/latest/futures_test/attr.test.html \"attr futures_test::test\")\n    Enables an `async` test function. The generated future will be run to completion with [`futures_executor::block_on`](https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html \"fn futures_executor::local_pool::block_on\").\n",
+            "markdown_with_citations": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities to make testing `Future`s\u27e84\u27e9 easier\n## Modules\u00a7\u27e85\u27e9\n\nfuture\u27e86\u27e9\n    Additional combinators for testing futures.\n\nio\u27e87\u27e9\n    Additional combinators for testing async IO.\n\nsink\u27e88\u27e9\n    Additional combinators for testing sinks.\n\nstream\u27e89\u27e9\n    Additional combinators for testing streams.\n\ntask\u27e810\u27e9\n    Task related testing utilities.\n## Macros\u00a7\u27e811\u27e9\n\nassert_stream_done\u27e812\u27e9\n    Assert that the next poll to the provided stream will return an empty `Poll::Ready`\u27e813\u27e9 signalling the completion of the stream.\n\nassert_stream_next\u27e814\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Ready`\u27e813\u27e9 with the provided item.\n\nassert_stream_pending\u27e815\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Pending`\u27e816\u27e9.\n## Attribute Macros\u00a7\u27e817\u27e9\n\ntest\u27e818\u27e9\n    Enables an `async` test function. The generated future will be run to completion with `futures_executor::block_on`\u27e819\u27e9.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/futures-test/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/futures-test/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html: trait core::future::future::Future - `Future`s\n\u27e85\u27e9 https://docs.rs/futures-test/latest/futures_test/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/futures-test/latest/futures_test/future/index.html: mod futures_test::future - future\n\u27e87\u27e9 https://docs.rs/futures-test/latest/futures_test/io/index.html: mod futures_test::io - io\n\u27e88\u27e9 https://docs.rs/futures-test/latest/futures_test/sink/index.html: mod futures_test::sink - sink\n\u27e89\u27e9 https://docs.rs/futures-test/latest/futures_test/stream/index.html: mod futures_test::stream - stream\n\u27e810\u27e9 https://docs.rs/futures-test/latest/futures_test/task/index.html: mod futures_test::task - task\n\u27e811\u27e9 https://docs.rs/futures-test/latest/futures_test/#macros: \u00a7\n\u27e812\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html: macro futures_test::assert_stream_done - assert_stream_done\n\u27e813\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready: variant core::task::poll::Poll::Ready - `Poll::Ready`\n\u27e814\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html: macro futures_test::assert_stream_next - assert_stream_next\n\u27e815\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html: macro futures_test::assert_stream_pending - assert_stream_pending\n\u27e816\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending: variant core::task::poll::Poll::Pending - `Poll::Pending`\n\u27e817\u27e9 https://docs.rs/futures-test/latest/futures_test/#attributes: \u00a7\n\u27e818\u27e9 https://docs.rs/futures-test/latest/futures_test/attr.test.html: attr futures_test::test - test\n\u27e819\u27e9 https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html: fn futures_executor::local_pool::block_on - `futures_executor::block_on`\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "futures-test",
+          "version": "0.3.31",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\n[Settings](https://docs.rs/futures-test/latest/settings.html)\n[Help](https://docs.rs/futures-test/latest/help.html)\nSummary[Source](https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81)\nExpand description\nUtilities to make testing [`Future`s](https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html \"trait core::future::future::Future\") easier\n## Modules[\u00a7](https://docs.rs/futures-test/latest/futures_test/#modules)\n\n[future](https://docs.rs/futures-test/latest/futures_test/future/index.html \"mod futures_test::future\")\n    Additional combinators for testing futures.\n\n[io](https://docs.rs/futures-test/latest/futures_test/io/index.html \"mod futures_test::io\")\n    Additional combinators for testing async IO.\n\n[sink](https://docs.rs/futures-test/latest/futures_test/sink/index.html \"mod futures_test::sink\")\n    Additional combinators for testing sinks.\n\n[stream](https://docs.rs/futures-test/latest/futures_test/stream/index.html \"mod futures_test::stream\")\n    Additional combinators for testing streams.\n\n[task](https://docs.rs/futures-test/latest/futures_test/task/index.html \"mod futures_test::task\")\n    Task related testing utilities.\n## Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#macros)\n\n[assert_stream_done](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html \"macro futures_test::assert_stream_done\")\n    Assert that the next poll to the provided stream will return an empty [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") signalling the completion of the stream.\n\n[assert_stream_next](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html \"macro futures_test::assert_stream_next\")\n    Assert that the next poll to the provided stream will return [`Poll::Ready`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready \"variant core::task::poll::Poll::Ready\") with the provided item.\n\n[assert_stream_pending](https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html \"macro futures_test::assert_stream_pending\")\n    Assert that the next poll to the provided stream will return [`Poll::Pending`](https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending \"variant core::task::poll::Poll::Pending\").\n## Attribute Macros[\u00a7](https://docs.rs/futures-test/latest/futures_test/#attributes)\n\n[test](https://docs.rs/futures-test/latest/futures_test/attr.test.html \"attr futures_test::test\")\n    Enables an `async` test function. The generated future will be run to completion with [`futures_executor::block_on`](https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html \"fn futures_executor::local_pool::block_on\").\n",
+            "markdown_with_citations": "[](https://docs.rs/futures-test/latest/futures_test/all.html \"show sidebar\")\n# Crate futures_testCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\nUtilities to make testing `Future`s\u27e84\u27e9 easier\n## Modules\u00a7\u27e85\u27e9\n\nfuture\u27e86\u27e9\n    Additional combinators for testing futures.\n\nio\u27e87\u27e9\n    Additional combinators for testing async IO.\n\nsink\u27e88\u27e9\n    Additional combinators for testing sinks.\n\nstream\u27e89\u27e9\n    Additional combinators for testing streams.\n\ntask\u27e810\u27e9\n    Task related testing utilities.\n## Macros\u00a7\u27e811\u27e9\n\nassert_stream_done\u27e812\u27e9\n    Assert that the next poll to the provided stream will return an empty `Poll::Ready`\u27e813\u27e9 signalling the completion of the stream.\n\nassert_stream_next\u27e814\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Ready`\u27e813\u27e9 with the provided item.\n\nassert_stream_pending\u27e815\u27e9\n    Assert that the next poll to the provided stream will return `Poll::Pending`\u27e816\u27e9.\n## Attribute Macros\u00a7\u27e817\u27e9\n\ntest\u27e818\u27e9\n    Enables an `async` test function. The generated future will be run to completion with `futures_executor::block_on`\u27e819\u27e9.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/futures-test/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/futures-test/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/futures-test/latest/src/futures_test/lib.rs.html#1-81: Source\n\u27e84\u27e9 https://doc.rust-lang.org/nightly/core/future/future/trait.Future.html: trait core::future::future::Future - `Future`s\n\u27e85\u27e9 https://docs.rs/futures-test/latest/futures_test/#modules: \u00a7\n\u27e86\u27e9 https://docs.rs/futures-test/latest/futures_test/future/index.html: mod futures_test::future - future\n\u27e87\u27e9 https://docs.rs/futures-test/latest/futures_test/io/index.html: mod futures_test::io - io\n\u27e88\u27e9 https://docs.rs/futures-test/latest/futures_test/sink/index.html: mod futures_test::sink - sink\n\u27e89\u27e9 https://docs.rs/futures-test/latest/futures_test/stream/index.html: mod futures_test::stream - stream\n\u27e810\u27e9 https://docs.rs/futures-test/latest/futures_test/task/index.html: mod futures_test::task - task\n\u27e811\u27e9 https://docs.rs/futures-test/latest/futures_test/#macros: \u00a7\n\u27e812\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_done.html: macro futures_test::assert_stream_done - assert_stream_done\n\u27e813\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Ready: variant core::task::poll::Poll::Ready - `Poll::Ready`\n\u27e814\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_next.html: macro futures_test::assert_stream_next - assert_stream_next\n\u27e815\u27e9 https://docs.rs/futures-test/latest/futures_test/macro.assert_stream_pending.html: macro futures_test::assert_stream_pending - assert_stream_pending\n\u27e816\u27e9 https://doc.rust-lang.org/nightly/core/task/poll/enum.Poll.html#variant.Pending: variant core::task::poll::Poll::Pending - `Poll::Pending`\n\u27e817\u27e9 https://docs.rs/futures-test/latest/futures_test/#attributes: \u00a7\n\u27e818\u27e9 https://docs.rs/futures-test/latest/futures_test/attr.test.html: attr futures_test::test - test\n\u27e819\u27e9 https://docs.rs/futures-executor/0.3.31/x86_64-unknown-linux-gnu/futures_executor/local_pool/fn.block_on.html: fn futures_executor::local_pool::block_on - `futures_executor::block_on`\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `futures-test` crate provides utilities for testing asynchronous Rust code, including futures, streams, sinks, and async I/O. It offers combinators for mocking and asserting behavior, along with macros like `assert_stream_done`, `assert_stream_next`, and `assert_stream_pending` to validate stream polling outcomes. Additionally, it includes an attribute macro for writing `async` test functions that run to completion using `futures_executor::block_on`.",
+          "feature_summary": null,
+          "use_case": "DevTools",
+          "score": 6.0,
+          "factual_counterfactual": "### Pair 1: Testing Futures  \n\u2705 Factual: The `futures-test` crate provides utilities such as the `assert_stream_done` macro to verify that a stream has completed by returning `Poll::Ready` with no further items.  \n\u274c Counterfactual: The `futures-test` crate includes a macro to automatically generate mock implementations of `Future` traits for arbitrary types.  \n\n---\n\n### Pair 2: Async IO Testing  \n\u2705 Factual: The `futures-test::io` module offers combinators specifically designed for testing asynchronous IO operations, such as simulating reading and writing behavior.  \n\u274c Counterfactual: The `futures-test::io` module includes built-in support for benchmarking the performance of async IO operations in production environments.  \n\n---\n\n### Pair 3: Task Utilities  \n\u2705 Factual: The `futures-test::task` module provides utilities for simulating task execution, including creating mock `Waker` instances for testing.  \n\u274c Counterfactual: The `futures-test::task` module automatically integrates with the Tokio runtime to test tasks in a real-world execution environment.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-352dc8d9-1b5d7aed-1751258792",
+      "timestamp": "2025-06-30T04:46:32.160103+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]

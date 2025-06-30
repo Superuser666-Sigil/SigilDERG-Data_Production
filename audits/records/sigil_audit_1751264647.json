@@ -1,0 +1,1727 @@
+[
+  {
+    "execution_id": "exec-d6ba3513-c22d8817-1751264631",
+    "timestamp": "2025-06-30T06:23:51.999722+00:00",
+    "sacred_chain": {
+      "input_data": "x25519-dalek",
+      "context_sources": [
+        "crates.io",
+        "github.com",
+        "lib.rs",
+        "docs.rs"
+      ],
+      "reasoning_steps": [
+        "Input canonicalized: 'x25519-dalek' -> 'x25519-dalek'",
+        "Context gathered from 4 validated sources",
+        "Metadata extracted: 4 fields",
+        "Documentation analyzed: quality 7.0",
+        "Sentiment analyzed: positive",
+        "Ecosystem analyzed: utilities",
+        "Quality score synthesized: 7.50",
+        "Trust decision: DEFER - Insufficient data for decision",
+        "IRL confidence: 8.600"
+      ],
+      "suggestion": "ALLOW: Positive community sentiment",
+      "verdict": "DEFER",
+      "audit_info": {
+        "metadata": {
+          "name": "x25519-dalek",
+          "type": "rust_crate",
+          "source": "manual_input",
+          "extraction_method": "irl_engine"
+        },
+        "sentiment": {
+          "quality_score": 7.0,
+          "completeness": 0.8,
+          "examples_present": true,
+          "api_documented": true
+        },
+        "ecosystem": {
+          "overall": "positive",
+          "positive_mentions": 10,
+          "negative_mentions": 2,
+          "neutral_mentions": 5,
+          "total_mentions": 17
+        },
+        "quality_score": 7.5,
+        "verdict_reason": "Insufficient data for decision",
+        "sanitized_documentation": {
+          "crates_io": {
+            "url": "https://crates.io/crates/x25519-dalek",
+            "title": "x25519-dalek v2.0.1",
+            "content": {
+              "raw_markdown": "#  x25519-dalek v2.0.1\nX25519 elliptic curve Diffie-Hellman key exchange in pure-Rust, using curve25519-dalek. \n  * [ #diffie-hellman ](https://crates.io/keywords/diffie-hellman)\n  * [ #key-exchange ](https://crates.io/keywords/key-exchange)\n  * [ #cryptography ](https://crates.io/keywords/cryptography)\n  * [ #x25519 ](https://crates.io/keywords/x25519)\n  * [ #curve25519 ](https://crates.io/keywords/curve25519)\n\n\n  * [ Readme ](https://crates.io/crates/x25519-dalek)\n  * [ 25 Versions ](https://crates.io/crates/x25519-dalek/versions)\n  * [ Dependencies ](https://crates.io/crates/x25519-dalek/dependencies)\n  * [ Dependents ](https://crates.io/crates/x25519-dalek/reverse_dependencies)\n\n\n## Metadata\nover 1 year ago \nv1.60.0 \n[ BSD-3-Clause ](https://choosealicense.com/licenses/bsd-3-clause)\n85.8 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add x25519-dalek\nOr add the following line to your Cargo.toml:\nx25519-dalek = \"2.0.1\"\n## Homepage\n[ github.com/dalek-cryptography/curve25519-dalek ](https://github.com/dalek-cryptography/curve25519-dalek)\n## Documentation\n[ docs.rs/x25519-dalek ](https://docs.rs/x25519-dalek)\n## Repository\n[ github.com/dalek-cryptography/curve25519-dalek/tree/main/x25519-dalek ](https://github.com/dalek-cryptography/curve25519-dalek/tree/main/x25519-dalek)\n## Owners\n## Categories\n  * [Cryptography](https://crates.io/categories/cryptography)\n  * [No standard library](https://crates.io/categories/no-std)\n\n\n[ Report crate ](https://crates.io/support?crate=x25519-dalek&inquire=crate-violation)\n### Stats Overview\n28,546,767 Downloads all time\n25 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "markdown_with_citations": "#  x25519-dalek v2.0.1\nX25519 elliptic curve Diffie-Hellman key exchange in pure-Rust, using curve25519-dalek. \n  *  #diffie-hellman \u27e81\u27e9\n  *  #key-exchange \u27e82\u27e9\n  *  #cryptography \u27e83\u27e9\n  *  #x25519 \u27e84\u27e9\n  *  #curve25519 \u27e85\u27e9\n\n\n  *  Readme \u27e86\u27e9\n  *  25 Versions \u27e87\u27e9\n  *  Dependencies \u27e88\u27e9\n  *  Dependents \u27e89\u27e9\n\n\n## Metadata\nover 1 year ago \nv1.60.0 \n BSD-3-Clause \u27e810\u27e9\n85.8 KiB \n## Install\nRun the following Cargo command in your project directory:\ncargo add x25519-dalek\nOr add the following line to your Cargo.toml:\nx25519-dalek = \"2.0.1\"\n## Homepage\n github.com/dalek-cryptography/curve25519-dalek \u27e811\u27e9\n## Documentation\n docs.rs/x25519-dalek \u27e812\u27e9\n## Repository\n github.com/dalek-cryptography/curve25519-dalek/tree/main/x25519-dalek \u27e813\u27e9\n## Owners\n## Categories\n  * Cryptography\u27e814\u27e9\n  * No standard library\u27e815\u27e9\n\n\n Report crate \u27e816\u27e9\n### Stats Overview\n28,546,767 Downloads all time\n25 Versions published\n#### Downloads over the last 90 days\nDisplay as \nStacked \n  * Stacked \n  * Unstacked \n\n\nLoading\u2026\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://crates.io/keywords/diffie-hellman:  #diffie-hellman \n\u27e82\u27e9 https://crates.io/keywords/key-exchange:  #key-exchange \n\u27e83\u27e9 https://crates.io/keywords/cryptography:  #cryptography \n\u27e84\u27e9 https://crates.io/keywords/x25519:  #x25519 \n\u27e85\u27e9 https://crates.io/keywords/curve25519:  #curve25519 \n\u27e86\u27e9 https://crates.io/crates/x25519-dalek:  Readme \n\u27e87\u27e9 https://crates.io/crates/x25519-dalek/versions:  25 Versions \n\u27e88\u27e9 https://crates.io/crates/x25519-dalek/dependencies:  Dependencies \n\u27e89\u27e9 https://crates.io/crates/x25519-dalek/reverse_dependencies:  Dependents \n\u27e810\u27e9 https://choosealicense.com/licenses/bsd-3-clause:  BSD-3-Clause \n\u27e811\u27e9 https://github.com/dalek-cryptography/curve25519-dalek:  github.com/dalek-cryptography/curve25519-dalek \n\u27e812\u27e9 https://docs.rs/x25519-dalek:  docs.rs/x25519-dalek \n\u27e813\u27e9 https://github.com/dalek-cryptography/curve25519-dalek/tree/main/x25519-dalek:  github.com/dalek-cryptography/curve25519-dalek/tree/main/x25519-dalek \n\u27e814\u27e9 https://crates.io/categories/cryptography: Cryptography\n\u27e815\u27e9 https://crates.io/categories/no-std: No standard library\n\u27e816\u27e9 https://crates.io/support?crate=x25519-dalek&inquire=crate-violation:  Report crate \n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 1734,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118421.7775974"
+          },
+          "docs_rs": {
+            "url": "https://docs.rs/x25519-dalek",
+            "title": "Crate x25519_dalekCopy item path",
+            "content": {
+              "raw_markdown": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\n[Settings](https://docs.rs/x25519-dalek/latest/settings.html)\n[Help](https://docs.rs/x25519-dalek/latest/help.html)\nSummary[Source](https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33)\nExpand description\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci)x25519-dalek [![](https://img.shields.io/crates/v/x25519-dalek.svg)](https://crates.io/crates/x25519-dalek) [![](https://docs.rs/x25519-dalek/badge.svg)](https://docs.rs/x25519-dalek) [![CI](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main)](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek).\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in [RFC7748](https://tools.ietf.org/html/rfc7748), as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples)Examples\n[ ![](https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg) ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation)Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv)MSRV\nCurrent MSRV is 1.60.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation)Documentation\nDocumentation is available [here](https://docs.rs/x25519-dalek).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection)Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from [Fiat Crypto](https://github.com/mit-plv/fiat-crypto)).\nFurther instructions and details regarding backends can be found in the [curve25519-dalek docs](https://github.com/dalek-cryptography/curve25519-dalek#backends).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#note)Note\nThis code matches the [RFC7748](https://tools.ietf.org/html/rfc7748) test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and [zine](https://shop.bubblesort.io/products/secret-messages-zine) copyright \u00a9 Amy Wibowo ([@sailorhg](https://twitter.com/sailorhg))\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also)See also\n  * [crypto_box](https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box): pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs)\n\n[EphemeralSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html \"struct x25519_dalek::EphemeralSecret\")\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\").\n\n[PublicKey](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html \"struct x25519_dalek::PublicKey\")\n    A Diffie-Hellman public key\n\n[ReusableSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html \"struct x25519_dalek::ReusableSecret\")`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\n[SharedSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")\n    The result of a Diffie-Hellman key exchange.\n\n[StaticSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html \"struct x25519_dalek::StaticSecret\")`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")s.\n## Constants[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants)\n\n[X25519_BASEPOINT_BYTES](https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html \"constant x25519_dalek::X25519_BASEPOINT_BYTES\")\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions)\n\n[x25519](https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html \"fn x25519_dalek::x25519\")\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+              "markdown_with_citations": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9x25519-dalek ![\u27e85\u27e9](https://crates.io/crates/x25519-dalek) ![\u27e86\u27e9](https://docs.rs/x25519-dalek) ![CI\u27e87\u27e9](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by curve25519-dalek\u27e88\u27e9.\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in RFC7748\u27e89\u27e9, as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### \u00a7\u27e810\u27e9Examples\n ![\u27e811\u27e9 ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n\u24d8\u27e812\u27e9```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n\u24d8\u27e812\u27e9```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## \u00a7\u27e813\u27e9Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## \u00a7\u27e814\u27e9MSRV\nCurrent MSRV is 1.60.\n## \u00a7\u27e815\u27e9Documentation\nDocumentation is available here\u27e816\u27e9.\n## \u00a7\u27e817\u27e9Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from Fiat Crypto\u27e818\u27e9).\nFurther instructions and details regarding backends can be found in the curve25519-dalek docs\u27e819\u27e9.\n## \u00a7\u27e820\u27e9Note\nThis code matches the RFC7748\u27e89\u27e9 test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and zine\u27e821\u27e9 copyright \u00a9 Amy Wibowo (@sailorhg\u27e822\u27e9)\n## \u00a7\u27e823\u27e9See also\n  * crypto_box\u27e824\u27e9: pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs\u00a7\u27e825\u27e9\n\nEphemeralSecret\u27e826\u27e9\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single `SharedSecret`\u27e827\u27e9.\n\nPublicKey\u27e828\u27e9\n    A Diffie-Hellman public key\n\nReusableSecret\u27e829\u27e9`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\nSharedSecret\u27e827\u27e9\n    The result of a Diffie-Hellman key exchange.\n\nStaticSecret\u27e830\u27e9`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple `SharedSecret`\u27e827\u27e9s.\n## Constants\u00a7\u27e831\u27e9\n\nX25519_BASEPOINT_BYTES\u27e832\u27e9\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions\u00a7\u27e833\u27e9\n\nx25519\u27e834\u27e9\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/x25519-dalek/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/x25519-dalek/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33: Source\n\u27e84\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci: \u00a7\n\u27e85\u27e9 https://img.shields.io/crates/v/x25519-dalek.svg: ![\n\u27e86\u27e9 https://docs.rs/x25519-dalek/badge.svg: ![\n\u27e87\u27e9 https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main: ![CI\n\u27e88\u27e9 https://github.com/dalek-cryptography/curve25519-dalek: curve25519-dalek\n\u27e89\u27e9 https://tools.ietf.org/html/rfc7748: RFC7748\n\u27e810\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples: \u00a7\n\u27e811\u27e9 https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg:  ![\n\u27e812\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/: This example is not tested - \u24d8\n\u27e813\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation: \u00a7\n\u27e814\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv: \u00a7\n\u27e815\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation: \u00a7\n\u27e816\u27e9 https://docs.rs/x25519-dalek: here\n\u27e817\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection: \u00a7\n\u27e818\u27e9 https://github.com/mit-plv/fiat-crypto: Fiat Crypto\n\u27e819\u27e9 https://github.com/dalek-cryptography/curve25519-dalek#backends: curve25519-dalek docs\n\u27e820\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#note: \u00a7\n\u27e821\u27e9 https://shop.bubblesort.io/products/secret-messages-zine: zine\n\u27e822\u27e9 https://twitter.com/sailorhg: @sailorhg\n\u27e823\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also: \u00a7\n\u27e824\u27e9 https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box: crypto_box\n\u27e825\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs: \u00a7\n\u27e826\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html: struct x25519_dalek::EphemeralSecret - EphemeralSecret\n\u27e827\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html: struct x25519_dalek::SharedSecret - `SharedSecret`\n\u27e828\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html: struct x25519_dalek::PublicKey - PublicKey\n\u27e829\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html: struct x25519_dalek::ReusableSecret - ReusableSecret\n\u27e830\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html: struct x25519_dalek::StaticSecret - StaticSecret\n\u27e831\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants: \u00a7\n\u27e832\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html: constant x25519_dalek::X25519_BASEPOINT_BYTES - X25519_BASEPOINT_BYTES\n\u27e833\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html: fn x25519_dalek::x25519 - x25519\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 4.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 7843,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118422.6987406"
+          },
+          "lib_rs": {
+            "url": "https://lib.rs/crates/x25519-dalek",
+            "title": "Untitled",
+            "content": {
+              "raw_markdown": "###  [20 releases](https://lib.rs/crates/x25519-dalek/versions) (7 stable)\n2.0.1 |  Feb 7, 2024   \n---|---  \n2.0.0 |  Aug 12, 2023   \n2.0.0-rc.3 |  Jun 24, 2023   \n2.0.0-rc.2 |  ~~Mar 31, 2023~~  \n0.1.0 |  ~~Oct 24, 2017~~  \n#**286** in [Cryptography](https://lib.rs/cryptography \"Algorithms intended for securing data.\")\nDownload history 233868/week @ 2025-01-28 259573/week @ 2025-02-04 238670/week @ 2025-02-11 246392/week @ 2025-02-18 243407/week @ 2025-02-25 237303/week @ 2025-03-04 239005/week @ 2025-03-11 233321/week @ 2025-03-18 238549/week @ 2025-03-25 236897/week @ 2025-04-01 245276/week @ 2025-04-08 209597/week @ 2025-04-15 247098/week @ 2025-04-22 230971/week @ 2025-04-29 235775/week @ 2025-05-06 201354/week @ 2025-05-13\n**943,495** downloads per month Used in [**1,472** crates (236 directly)](https://lib.rs/crates/x25519-dalek/rev)\n**BSD-3-Clause**\n1MB  **26K** SLoC\n# x25519-dalek [![](https://img.shields.io/crates/v/x25519-dalek.svg)](https://crates.io/crates/x25519-dalek) [![](https://img.gs/czjpqfbdkz/full/https://docs.rs/x25519-dalek/badge.svg)](https://docs.rs/x25519-dalek) [![CI](https://img.gs/czjpqfbdkz/full/https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main)](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek).\nThis crate provides two levels of API: a bare byte-oriented ``x25519`` function which matches the function specified in [RFC7748](https://tools.ietf.org/html/rfc7748), as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n## Examples\n[ ![](https://img.gs/czjpqfbdkz/full/https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg) ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses ```EphemeralSecret`::``random`(``)``` and then ```PublicKey`::``from`(``)``` to produce her secret and public keys:\n```\n`use x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n`\n```\n\nBob does the same:\n```\n`# use x25519_dalek::{EphemeralSecret, PublicKey};\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n`\n```\n\nAlice meows across the room, telling ``alice_public`` to Bob, and Bob loudly meows ``bob_public`` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`let` alice_shared_secret `=` alice_secret`.``diffie_hellman``(``&`bob_public`)``;`\n`\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`let` bob_shared_secret `=` bob_secret`.``diffie_hellman``(``&`alice_public`)``;`\n`\n```\n\nThese secrets are the same:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`#` `let` alice_shared_secret `=` alice_secret`.``diffie_hellman``(``&`bob_public`)``;`\n`#` `let` bob_shared_secret `=` bob_secret`.``diffie_hellman``(``&`alice_public`)``;`\n`assert_eq!``(`alice_shared_secret`.``as_bytes``(``)``,` bob_shared_secret`.``as_bytes``(``)``)``;`\n`\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n# Installation\nTo install, add the following to your project's ``Cargo.toml``:\n```\n```[``dependencies``]`\n`x25519-dalek ``=` ``\"`2`\"``\n``\n```\n\n# MSRV\nCurrent MSRV is 1.60.\n# Documentation\nDocumentation is available [here](https://docs.rs/x25519-dalek).\n# Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the ``fiat`` backend (as it was generated from [Fiat Crypto](https://github.com/mit-plv/fiat-crypto)).\nFurther instructions and details regarding backends can be found in the [curve25519-dalek docs](https://github.com/dalek-cryptography/curve25519-dalek#backends).\n# Note\nThis code matches the [RFC7748](https://tools.ietf.org/html/rfc7748) test vectors. The elliptic curve operations are provided by ``curve25519-dalek``, which makes a best-effort attempt to prevent software side-channels.\n\"Secret Messages\" cover image and [zine](https://shop.bubblesort.io/products/secret-messages-zine) copyright \u00a9 Amy Wibowo (@sailorhg)\n# See also\n  * [crypto_box](https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box): pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses ``x25519-dalek`` for key agreement\n\n\n#### Dependencies\n~0.3\u20131.5MB  ~31K SLoC\n  * [curve25519-dalek](https://lib.rs/crates/curve25519-dalek \"new\") 4.0\n  * [rand_core](https://lib.rs/crates/rand_core \"outdated\") 0.6\n  * [alloc?](https://lib.rs/crates/x25519-dalek/features#feature-alloc \"optional feature\") [serde?](https://lib.rs/crates/x25519-dalek/features#feature-serde \"optional feature\") [serde](https://lib.rs/crates/serde \"1\")[+derive](https://lib.rs/crates/serde/features#feature-derive)\n  * [alloc](https://lib.rs/crates/x25519-dalek/features#feature-alloc \"default feature\") [zeroize](https://lib.rs/crates/x25519-dalek/features#feature-zeroize \"default feature\") [zeroize](https://lib.rs/crates/zeroize \"1\")[+zeroize_derive](https://lib.rs/crates/zeroize/features#feature-zeroize_derive)\n\n\n  * dev  [bincode](https://lib.rs/crates/bincode \"1\")\n  * dev  [criterion](https://lib.rs/crates/criterion \"outdated\") 0.5\n\n\n#### [Other features](https://lib.rs/crates/x25519-dalek/features)\n  * [getrandom](https://lib.rs/crates/x25519-dalek/features#feature-getrandom)\n  * [precomputed-tables](https://lib.rs/crates/x25519-dalek/features#feature-precomputed-tables)\n  * [reusable_secrets](https://lib.rs/crates/x25519-dalek/features#feature-reusable_secrets)\n  * [static_secrets](https://lib.rs/crates/x25519-dalek/features#feature-static_secrets)\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "markdown_with_citations": "###  20 releases\u27e81\u27e9 (7 stable)\n2.0.1 |  Feb 7, 2024   \n---|---  \n2.0.0 |  Aug 12, 2023   \n2.0.0-rc.3 |  Jun 24, 2023   \n2.0.0-rc.2 |  ~~Mar 31, 2023~~  \n0.1.0 |  ~~Oct 24, 2017~~  \n#**286** in Cryptography\u27e82\u27e9\nDownload history 233868/week @ 2025-01-28 259573/week @ 2025-02-04 238670/week @ 2025-02-11 246392/week @ 2025-02-18 243407/week @ 2025-02-25 237303/week @ 2025-03-04 239005/week @ 2025-03-11 233321/week @ 2025-03-18 238549/week @ 2025-03-25 236897/week @ 2025-04-01 245276/week @ 2025-04-08 209597/week @ 2025-04-15 247098/week @ 2025-04-22 230971/week @ 2025-04-29 235775/week @ 2025-05-06 201354/week @ 2025-05-13\n**943,495** downloads per month Used in **1,472** crates (236 directly)\u27e83\u27e9\n**BSD-3-Clause**\n1MB  **26K** SLoC\n# x25519-dalek ![\u27e84\u27e9](https://crates.io/crates/x25519-dalek) ![\u27e85\u27e9](https://docs.rs/x25519-dalek) ![CI\u27e86\u27e9](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by curve25519-dalek\u27e87\u27e9.\nThis crate provides two levels of API: a bare byte-oriented ``x25519`` function which matches the function specified in RFC7748\u27e88\u27e9, as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n## Examples\n ![\u27e89\u27e9 ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses ```EphemeralSecret`::``random`(``)``` and then ```PublicKey`::``from`(``)``` to produce her secret and public keys:\n```\n`use x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n`\n```\n\nBob does the same:\n```\n`# use x25519_dalek::{EphemeralSecret, PublicKey};\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n`\n```\n\nAlice meows across the room, telling ``alice_public`` to Bob, and Bob loudly meows ``bob_public`` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`let` alice_shared_secret `=` alice_secret`.``diffie_hellman``(``&`bob_public`)``;`\n`\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`let` bob_shared_secret `=` bob_secret`.``diffie_hellman``(``&`alice_public`)``;`\n`\n```\n\nThese secrets are the same:\n```\n``#` `use` `rand_core`::``OsRng`;`\n`#` `use` `x25519_dalek`::````{`EphemeralSecret`,` PublicKey```}```;`\n`#` `let` alice_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` alice_public `=` `PublicKey`::``from`(``&`alice_secret`)``;`\n`#` `let` bob_secret `=` `EphemeralSecret`::``random_from_rng`(`OsRng`)``;`\n`#` `let` bob_public `=` `PublicKey`::``from`(``&`bob_secret`)``;`\n`#` `let` alice_shared_secret `=` alice_secret`.``diffie_hellman``(``&`bob_public`)``;`\n`#` `let` bob_shared_secret `=` bob_secret`.``diffie_hellman``(``&`alice_public`)``;`\n`assert_eq!``(`alice_shared_secret`.``as_bytes``(``)``,` bob_shared_secret`.``as_bytes``(``)``)``;`\n`\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n# Installation\nTo install, add the following to your project's ``Cargo.toml``:\n```\n```[``dependencies``]`\n`x25519-dalek ``=` ``\"`2`\"``\n``\n```\n\n# MSRV\nCurrent MSRV is 1.60.\n# Documentation\nDocumentation is available here\u27e810\u27e9.\n# Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the ``fiat`` backend (as it was generated from Fiat Crypto\u27e811\u27e9).\nFurther instructions and details regarding backends can be found in the curve25519-dalek docs\u27e812\u27e9.\n# Note\nThis code matches the RFC7748\u27e88\u27e9 test vectors. The elliptic curve operations are provided by ``curve25519-dalek``, which makes a best-effort attempt to prevent software side-channels.\n\"Secret Messages\" cover image and zine\u27e813\u27e9 copyright \u00a9 Amy Wibowo (@sailorhg)\n# See also\n  * crypto_box\u27e814\u27e9: pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses ``x25519-dalek`` for key agreement\n\n\n#### Dependencies\n~0.3\u20131.5MB  ~31K SLoC\n  * curve25519-dalek\u27e815\u27e9 4.0\n  * rand_core\u27e816\u27e9 0.6\n  * alloc?\u27e817\u27e9 serde?\u27e818\u27e9 serde\u27e819\u27e9+derive\u27e820\u27e9\n  * alloc\u27e817\u27e9 zeroize\u27e821\u27e9 zeroize\u27e822\u27e9+zeroize_derive\u27e823\u27e9\n\n\n  * dev  bincode\u27e824\u27e9\n  * dev  criterion\u27e825\u27e9 0.5\n\n\n#### Other features\u27e826\u27e9\n  * getrandom\u27e827\u27e9\n  * precomputed-tables\u27e828\u27e9\n  * reusable_secrets\u27e829\u27e9\n  * static_secrets\u27e830\u27e9\n\n\n  *[SLoC]: approx. additional lines of code\n",
+              "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://lib.rs/crates/x25519-dalek/versions: 20 releases\n\u27e82\u27e9 https://lib.rs/cryptography: Algorithms intended for securing data. - Cryptography\n\u27e83\u27e9 https://lib.rs/crates/x25519-dalek/rev: **1,472** crates (236 directly)\n\u27e84\u27e9 https://img.shields.io/crates/v/x25519-dalek.svg: ![\n\u27e85\u27e9 https://img.gs/czjpqfbdkz/full/https://docs.rs/x25519-dalek/badge.svg: ![\n\u27e86\u27e9 https://img.gs/czjpqfbdkz/full/https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main: ![CI\n\u27e87\u27e9 https://github.com/dalek-cryptography/curve25519-dalek: curve25519-dalek\n\u27e88\u27e9 https://tools.ietf.org/html/rfc7748: RFC7748\n\u27e89\u27e9 https://img.gs/czjpqfbdkz/full/https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg:  ![\n\u27e810\u27e9 https://docs.rs/x25519-dalek: here\n\u27e811\u27e9 https://github.com/mit-plv/fiat-crypto: Fiat Crypto\n\u27e812\u27e9 https://github.com/dalek-cryptography/curve25519-dalek#backends: curve25519-dalek docs\n\u27e813\u27e9 https://shop.bubblesort.io/products/secret-messages-zine: zine\n\u27e814\u27e9 https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box: crypto_box\n\u27e815\u27e9 https://lib.rs/crates/curve25519-dalek: new - curve25519-dalek\n\u27e816\u27e9 https://lib.rs/crates/rand_core: outdated - rand_core\n\u27e817\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-alloc: optional feature - alloc?\n\u27e818\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-serde: optional feature - serde?\n\u27e819\u27e9 https://lib.rs/crates/serde: 1 - serde\n\u27e820\u27e9 https://lib.rs/crates/serde/features#feature-derive: +derive\n\u27e821\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-zeroize: default feature - zeroize\n\u27e822\u27e9 https://lib.rs/crates/zeroize: 1 - zeroize\n\u27e823\u27e9 https://lib.rs/crates/zeroize/features#feature-zeroize_derive: +zeroize_derive\n\u27e824\u27e9 https://lib.rs/crates/bincode: 1 - bincode\n\u27e825\u27e9 https://lib.rs/crates/criterion: outdated - criterion\n\u27e826\u27e9 https://lib.rs/crates/x25519-dalek/features: Other features\n\u27e827\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-getrandom: getrandom\n\u27e828\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-precomputed-tables: precomputed-tables\n\u27e829\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-reusable_secrets: reusable_secrets\n\u27e830\u27e9 https://lib.rs/crates/x25519-dalek/features#feature-static_secrets: static_secrets\n",
+              "fit_markdown": "",
+              "fit_html": ""
+            },
+            "structured_data": {},
+            "quality_score": 3.0,
+            "extraction_method": "crawl4ai",
+            "error": null,
+            "metadata": {
+              "doc_type": "docs",
+              "content_length": 8325,
+              "has_structured_data": false,
+              "crawl_success": true
+            },
+            "timestamp": "118423.1176603"
+          }
+        },
+        "crate_analysis": {
+          "status": "completed",
+          "check": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.6.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.6.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.6.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librand_core-0d14f4f53d03534d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-91f5c434b8fd4f4c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-91f5c434b8fd4f4c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-4a07a867cb7b6953\\out"
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "semver",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsemver-36540f5eb86da32d.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsemver-36540f5eb86da32d.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc_version@0.4.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc_version-0.4.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_version",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc_version-0.4.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librustc_version-c551a9a8c51a3973.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librustc_version-c551a9a8c51a3973.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-a828386cacf4e326\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-a828386cacf4e326\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "curve25519_dalek_bits=\"64\"",
+                "curve25519_dalek_backend=\"simd\""
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-2d489a9057b46c3a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsyn-a9218d67c1e057ff.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsyn-a9218d67c1e057ff.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize_derive@1.4.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize_derive-1.4.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "zeroize_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize_derive-1.4.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek-derive@0.1.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-derive-0.1.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "curve25519_dalek_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-derive-0.1.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.pdb"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize@1.8.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "zeroize",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "zeroize_derive"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libzeroize-9534e1e07723bfa3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "curve25519_dalek",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcurve25519_dalek-24fa0c9cbb68ab1f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpl6y4i1nl/x25519-dalek-2.0.1#x25519-dalek@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "x25519_dalek",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `bench`\n  --> src\\lib.rs:18:13\n   |\n18 | #![cfg_attr(feature = \"bench\", feature(test))]\n   |             ^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `alloc`, `default`, `getrandom`, `precomputed-tables`, `reusable_secrets`, `serde`, `static_secrets`, and `zeroize`\n   = help: consider adding `bench` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n   = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `alloc`, `default`, `getrandom`, `precomputed-tables`, `reusable_secrets`, `serde`, `static_secrets`, and `zeroize`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `bench` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `bench`",
+                "spans": [
+                  {
+                    "byte_end": 528,
+                    "byte_start": 511,
+                    "column_end": 30,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 18,
+                    "line_start": 18,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 30,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"bench\", feature(test))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpl6y4i1nl/x25519-dalek-2.0.1#x25519-dalek@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "x25519_dalek",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libx25519_dalek-d9931a766478dbc3.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "clippy": [
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-ff1a34852a360a33\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "wrap_proc_macro"
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\proc-macro2-bd004ad9dcfa0b46\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.18",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "unicode_ident",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\unicode-ident-1.0.18\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libunicode_ident-f7db65657b8daa2b.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\build.rs",
+                "edition": "2018",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-91f5c434b8fd4f4c\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-91f5c434b8fd4f4c\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cfg_if",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cfg-if-1.0.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcfg_if-0416b600f5de43de.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#cpufeatures@0.2.17",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "cpufeatures",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\cpufeatures-0.2.17\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcpufeatures-43bbc20eaecde5c1.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#subtle@2.6.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "subtle",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\subtle-2.6.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsubtle-6a8dd217adcca8a8.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rand_core@0.6.4",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.6.4\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rand_core",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rand_core-0.6.4\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librand_core-0d14f4f53d03534d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.95",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "proc_macro2",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\proc-macro2-1.0.95\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libproc_macro2-a3b3807fecd402e3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\semver-4a07a867cb7b6953\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#quote@1.0.40",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "quote",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\quote-1.0.40\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "proc-macro"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libquote-e850c7166d56c5b9.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#semver@1.0.26",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "semver",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\semver-1.0.26\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "default",
+                "std"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsemver-36540f5eb86da32d.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsemver-36540f5eb86da32d.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#syn@2.0.104",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "syn",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\syn-2.0.104\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "clone-impls",
+                "default",
+                "derive",
+                "extra-traits",
+                "full",
+                "parsing",
+                "printing",
+                "proc-macro",
+                "visit"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsyn-a9218d67c1e057ff.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libsyn-a9218d67c1e057ff.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#rustc_version@0.4.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc_version-0.4.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "rustc_version",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\rustc_version-0.4.1\\src\\lib.rs",
+                "edition": "2018",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librustc_version-c551a9a8c51a3973.rlib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\librustc_version-c551a9a8c51a3973.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "custom-build"
+                ],
+                "crate_types": [
+                  "bin"
+                ],
+                "name": "build-script-build",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\build.rs",
+                "edition": "2021",
+                "doc": false,
+                "doctest": false,
+                "test": false
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-a828386cacf4e326\\build-script-build.exe",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-a828386cacf4e326\\build_script_build.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize_derive@1.4.2",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize_derive-1.4.2\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "zeroize_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize_derive-1.4.2\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\zeroize_derive-a568ce873e82e587.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek-derive@0.1.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-derive-0.1.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "proc-macro"
+                ],
+                "crate_types": [
+                  "proc-macro"
+                ],
+                "name": "curve25519_dalek_derive",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-derive-0.1.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 0,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll.lib",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.dll.exp",
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\curve25519_dalek_derive-da7f6b6a9503a104.pdb"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#zeroize@1.8.1",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "zeroize",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\zeroize-1.8.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "zeroize_derive"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libzeroize-9534e1e07723bfa3.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "build-script-executed",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "linked_libs": [],
+              "linked_paths": [],
+              "cfgs": [
+                "curve25519_dalek_bits=\"64\"",
+                "curve25519_dalek_backend=\"simd\""
+              ],
+              "env": [],
+              "out_dir": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\build\\curve25519-dalek-2d489a9057b46c3a\\out"
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "registry+https://github.com/rust-lang/crates.io-index#curve25519-dalek@4.1.3",
+              "manifest_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "curve25519_dalek",
+                "src_path": "C:\\Users\\davet\\.cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\curve25519-dalek-4.1.3\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libcurve25519_dalek-24fa0c9cbb68ab1f.rmeta"
+              ],
+              "executable": null,
+              "fresh": true
+            },
+            {
+              "reason": "compiler-message",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpl6y4i1nl/x25519-dalek-2.0.1#x25519-dalek@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "x25519_dalek",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "message": {
+                "rendered": "warning: unexpected `cfg` condition value: `bench`\n  --> src\\lib.rs:18:13\n   |\n18 | #![cfg_attr(feature = \"bench\", feature(test))]\n   |             ^^^^^^^^^^^^^^^^^\n   |\n   = note: expected values for `feature` are: `alloc`, `default`, `getrandom`, `precomputed-tables`, `reusable_secrets`, `serde`, `static_secrets`, and `zeroize`\n   = help: consider adding `bench` as a feature in `Cargo.toml`\n   = note: see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration\n   = note: `#[warn(unexpected_cfgs)]` on by default\n\n",
+                "$message_type": "diagnostic",
+                "children": [
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "expected values for `feature` are: `alloc`, `default`, `getrandom`, `precomputed-tables`, `reusable_secrets`, `serde`, `static_secrets`, and `zeroize`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "help",
+                    "message": "consider adding `bench` as a feature in `Cargo.toml`",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "see <https://doc.rust-lang.org/nightly/rustc/check-cfg/cargo-specifics.html> for more information about checking conditional configuration",
+                    "rendered": null,
+                    "spans": []
+                  },
+                  {
+                    "children": [],
+                    "code": null,
+                    "level": "note",
+                    "message": "`#[warn(unexpected_cfgs)]` on by default",
+                    "rendered": null,
+                    "spans": []
+                  }
+                ],
+                "code": {
+                  "code": "unexpected_cfgs",
+                  "explanation": null
+                },
+                "level": "warning",
+                "message": "unexpected `cfg` condition value: `bench`",
+                "spans": [
+                  {
+                    "byte_end": 528,
+                    "byte_start": 511,
+                    "column_end": 30,
+                    "column_start": 13,
+                    "expansion": null,
+                    "file_name": "src\\lib.rs",
+                    "is_primary": true,
+                    "label": null,
+                    "line_end": 18,
+                    "line_start": 18,
+                    "suggested_replacement": null,
+                    "suggestion_applicability": null,
+                    "text": [
+                      {
+                        "highlight_end": 30,
+                        "highlight_start": 13,
+                        "text": "#![cfg_attr(feature = \"bench\", feature(test))]"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "reason": "compiler-artifact",
+              "package_id": "path+file:///C:/Users/davet/AppData/Local/Temp/tmpl6y4i1nl/x25519-dalek-2.0.1#x25519-dalek@2.0.1",
+              "manifest_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\Cargo.toml",
+              "target": {
+                "kind": [
+                  "lib"
+                ],
+                "crate_types": [
+                  "lib"
+                ],
+                "name": "x25519_dalek",
+                "src_path": "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\src\\lib.rs",
+                "edition": "2021",
+                "doc": true,
+                "doctest": true,
+                "test": true
+              },
+              "profile": {
+                "opt_level": "0",
+                "debuginfo": 2,
+                "debug_assertions": true,
+                "overflow_checks": true,
+                "test": false
+              },
+              "features": [
+                "alloc",
+                "default",
+                "precomputed-tables",
+                "zeroize"
+              ],
+              "filenames": [
+                "C:\\Users\\davet\\AppData\\Local\\Temp\\tmpl6y4i1nl\\x25519-dalek-2.0.1\\target\\debug\\deps\\libx25519_dalek-56e047c1e594af9f.rmeta"
+              ],
+              "executable": null,
+              "fresh": false
+            },
+            {
+              "reason": "build-finished",
+              "success": true
+            }
+          ],
+          "audit": {
+            "database": {
+              "advisory-count": 787,
+              "last-commit": "7573f55ba337263f61167dbb0ea926cdc7c8eb5d",
+              "last-updated": "2025-06-17T11:04:25+02:00"
+            },
+            "lockfile": {
+              "dependency-count": 83
+            },
+            "settings": {
+              "target_arch": [],
+              "target_os": [],
+              "severity": null,
+              "ignore": [],
+              "informational_warnings": [
+                "unmaintained",
+                "unsound",
+                "notice"
+              ]
+            },
+            "vulnerabilities": {
+              "found": false,
+              "count": 0,
+              "list": []
+            },
+            "warnings": {}
+          },
+          "note": "Crate analysis performed with stable toolchain."
+        },
+        "crate_metadata": {
+          "name": "x25519-dalek",
+          "version": "2.0.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\n[Settings](https://docs.rs/x25519-dalek/latest/settings.html)\n[Help](https://docs.rs/x25519-dalek/latest/help.html)\nSummary[Source](https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33)\nExpand description\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci)x25519-dalek [![](https://img.shields.io/crates/v/x25519-dalek.svg)](https://crates.io/crates/x25519-dalek) [![](https://docs.rs/x25519-dalek/badge.svg)](https://docs.rs/x25519-dalek) [![CI](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main)](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek).\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in [RFC7748](https://tools.ietf.org/html/rfc7748), as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples)Examples\n[ ![](https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg) ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation)Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv)MSRV\nCurrent MSRV is 1.60.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation)Documentation\nDocumentation is available [here](https://docs.rs/x25519-dalek).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection)Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from [Fiat Crypto](https://github.com/mit-plv/fiat-crypto)).\nFurther instructions and details regarding backends can be found in the [curve25519-dalek docs](https://github.com/dalek-cryptography/curve25519-dalek#backends).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#note)Note\nThis code matches the [RFC7748](https://tools.ietf.org/html/rfc7748) test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and [zine](https://shop.bubblesort.io/products/secret-messages-zine) copyright \u00a9 Amy Wibowo ([@sailorhg](https://twitter.com/sailorhg))\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also)See also\n  * [crypto_box](https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box): pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs)\n\n[EphemeralSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html \"struct x25519_dalek::EphemeralSecret\")\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\").\n\n[PublicKey](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html \"struct x25519_dalek::PublicKey\")\n    A Diffie-Hellman public key\n\n[ReusableSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html \"struct x25519_dalek::ReusableSecret\")`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\n[SharedSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")\n    The result of a Diffie-Hellman key exchange.\n\n[StaticSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html \"struct x25519_dalek::StaticSecret\")`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")s.\n## Constants[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants)\n\n[X25519_BASEPOINT_BYTES](https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html \"constant x25519_dalek::X25519_BASEPOINT_BYTES\")\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions)\n\n[x25519](https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html \"fn x25519_dalek::x25519\")\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+            "markdown_with_citations": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9x25519-dalek ![\u27e85\u27e9](https://crates.io/crates/x25519-dalek) ![\u27e86\u27e9](https://docs.rs/x25519-dalek) ![CI\u27e87\u27e9](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by curve25519-dalek\u27e88\u27e9.\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in RFC7748\u27e89\u27e9, as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### \u00a7\u27e810\u27e9Examples\n ![\u27e811\u27e9 ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n\u24d8\u27e812\u27e9```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n\u24d8\u27e812\u27e9```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## \u00a7\u27e813\u27e9Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## \u00a7\u27e814\u27e9MSRV\nCurrent MSRV is 1.60.\n## \u00a7\u27e815\u27e9Documentation\nDocumentation is available here\u27e816\u27e9.\n## \u00a7\u27e817\u27e9Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from Fiat Crypto\u27e818\u27e9).\nFurther instructions and details regarding backends can be found in the curve25519-dalek docs\u27e819\u27e9.\n## \u00a7\u27e820\u27e9Note\nThis code matches the RFC7748\u27e89\u27e9 test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and zine\u27e821\u27e9 copyright \u00a9 Amy Wibowo (@sailorhg\u27e822\u27e9)\n## \u00a7\u27e823\u27e9See also\n  * crypto_box\u27e824\u27e9: pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs\u00a7\u27e825\u27e9\n\nEphemeralSecret\u27e826\u27e9\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single `SharedSecret`\u27e827\u27e9.\n\nPublicKey\u27e828\u27e9\n    A Diffie-Hellman public key\n\nReusableSecret\u27e829\u27e9`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\nSharedSecret\u27e827\u27e9\n    The result of a Diffie-Hellman key exchange.\n\nStaticSecret\u27e830\u27e9`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple `SharedSecret`\u27e827\u27e9s.\n## Constants\u00a7\u27e831\u27e9\n\nX25519_BASEPOINT_BYTES\u27e832\u27e9\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions\u00a7\u27e833\u27e9\n\nx25519\u27e834\u27e9\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/x25519-dalek/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/x25519-dalek/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33: Source\n\u27e84\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci: \u00a7\n\u27e85\u27e9 https://img.shields.io/crates/v/x25519-dalek.svg: ![\n\u27e86\u27e9 https://docs.rs/x25519-dalek/badge.svg: ![\n\u27e87\u27e9 https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main: ![CI\n\u27e88\u27e9 https://github.com/dalek-cryptography/curve25519-dalek: curve25519-dalek\n\u27e89\u27e9 https://tools.ietf.org/html/rfc7748: RFC7748\n\u27e810\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples: \u00a7\n\u27e811\u27e9 https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg:  ![\n\u27e812\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/: This example is not tested - \u24d8\n\u27e813\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation: \u00a7\n\u27e814\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv: \u00a7\n\u27e815\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation: \u00a7\n\u27e816\u27e9 https://docs.rs/x25519-dalek: here\n\u27e817\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection: \u00a7\n\u27e818\u27e9 https://github.com/mit-plv/fiat-crypto: Fiat Crypto\n\u27e819\u27e9 https://github.com/dalek-cryptography/curve25519-dalek#backends: curve25519-dalek docs\n\u27e820\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#note: \u00a7\n\u27e821\u27e9 https://shop.bubblesort.io/products/secret-messages-zine: zine\n\u27e822\u27e9 https://twitter.com/sailorhg: @sailorhg\n\u27e823\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also: \u00a7\n\u27e824\u27e9 https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box: crypto_box\n\u27e825\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs: \u00a7\n\u27e826\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html: struct x25519_dalek::EphemeralSecret - EphemeralSecret\n\u27e827\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html: struct x25519_dalek::SharedSecret - `SharedSecret`\n\u27e828\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html: struct x25519_dalek::PublicKey - PublicKey\n\u27e829\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html: struct x25519_dalek::ReusableSecret - ReusableSecret\n\u27e830\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html: struct x25519_dalek::StaticSecret - StaticSecret\n\u27e831\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants: \u00a7\n\u27e832\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html: constant x25519_dalek::X25519_BASEPOINT_BYTES - X25519_BASEPOINT_BYTES\n\u27e833\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html: fn x25519_dalek::x25519 - x25519\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": []
+        },
+        "enriched_crate": {
+          "name": "x25519-dalek",
+          "version": "2.0.1",
+          "description": "ALLOW: Positive community sentiment",
+          "repository": "",
+          "keywords": [],
+          "categories": [],
+          "readme": {
+            "raw_markdown": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\n[Settings](https://docs.rs/x25519-dalek/latest/settings.html)\n[Help](https://docs.rs/x25519-dalek/latest/help.html)\nSummary[Source](https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33)\nExpand description\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci)x25519-dalek [![](https://img.shields.io/crates/v/x25519-dalek.svg)](https://crates.io/crates/x25519-dalek) [![](https://docs.rs/x25519-dalek/badge.svg)](https://docs.rs/x25519-dalek) [![CI](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main)](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by [curve25519-dalek](https://github.com/dalek-cryptography/curve25519-dalek).\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in [RFC7748](https://tools.ietf.org/html/rfc7748), as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples)Examples\n[ ![](https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg) ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n[\u24d8](https://docs.rs/x25519-dalek/latest/x25519_dalek/ \"This example is not tested\")```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation)Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv)MSRV\nCurrent MSRV is 1.60.\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation)Documentation\nDocumentation is available [here](https://docs.rs/x25519-dalek).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection)Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from [Fiat Crypto](https://github.com/mit-plv/fiat-crypto)).\nFurther instructions and details regarding backends can be found in the [curve25519-dalek docs](https://github.com/dalek-cryptography/curve25519-dalek#backends).\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#note)Note\nThis code matches the [RFC7748](https://tools.ietf.org/html/rfc7748) test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and [zine](https://shop.bubblesort.io/products/secret-messages-zine) copyright \u00a9 Amy Wibowo ([@sailorhg](https://twitter.com/sailorhg))\n## [\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also)See also\n  * [crypto_box](https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box): pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs)\n\n[EphemeralSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html \"struct x25519_dalek::EphemeralSecret\")\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\").\n\n[PublicKey](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html \"struct x25519_dalek::PublicKey\")\n    A Diffie-Hellman public key\n\n[ReusableSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html \"struct x25519_dalek::ReusableSecret\")`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\n[SharedSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")\n    The result of a Diffie-Hellman key exchange.\n\n[StaticSecret](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html \"struct x25519_dalek::StaticSecret\")`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple [`SharedSecret`](https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html \"struct x25519_dalek::SharedSecret\")s.\n## Constants[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants)\n\n[X25519_BASEPOINT_BYTES](https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html \"constant x25519_dalek::X25519_BASEPOINT_BYTES\")\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions[\u00a7](https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions)\n\n[x25519](https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html \"fn x25519_dalek::x25519\")\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+            "markdown_with_citations": "[](https://docs.rs/x25519-dalek/latest/x25519_dalek/all.html \"show sidebar\")\n# Crate x25519_dalekCopy item path\nSettings\u27e81\u27e9\nHelp\u27e82\u27e9\nSummarySource\u27e83\u27e9\nExpand description\n## \u00a7\u27e84\u27e9x25519-dalek ![\u27e85\u27e9](https://crates.io/crates/x25519-dalek) ![\u27e86\u27e9](https://docs.rs/x25519-dalek) ![CI\u27e87\u27e9](https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml)\nA pure-Rust implementation of x25519 elliptic curve Diffie-Hellman key exchange, with curve operations provided by curve25519-dalek\u27e88\u27e9.\nThis crate provides two levels of API: a bare byte-oriented `x25519` function which matches the function specified in RFC7748\u27e89\u27e9, as well as a higher-level Rust API for static and ephemeral Diffie-Hellman.\n### \u00a7\u27e810\u27e9Examples\n ![\u27e811\u27e9 ](https://shop.bubblesort.io)\nAlice and Bob are two adorable kittens who have lost their mittens, and they wish to be able to send secret messages to each other to coordinate finding them, otherwise\u2014if their caretaker cat finds out\u2014they will surely be called naughty kittens and be given no pie!\nBut the two kittens are quite clever. Even though their paws are still too big and the rest of them is 90% fuzziness, these clever kittens have been studying up on modern public key cryptography and have learned a nifty trick called _elliptic curve Diffie-Hellman key exchange_. With the right incantations, the kittens will be able to secretly organise to find their mittens, and then spend the rest of the afternoon nomming some yummy pie!\nFirst, Alice uses `EphemeralSecret::random()` and then `PublicKey::from()` to produce her secret and public keys:\n\u24d8\u27e812\u27e9```\nuse x25519_dalek::{EphemeralSecret, PublicKey};\nlet alice_secret = EphemeralSecret::random();\nlet alice_public = PublicKey::from(&alice_secret);\n```\n\nBob does the same:\n\u24d8\u27e812\u27e9```\nlet bob_secret = EphemeralSecret::random();\nlet bob_public = PublicKey::from(&bob_secret);\n```\n\nAlice meows across the room, telling `alice_public` to Bob, and Bob loudly meows `bob_public` back to Alice. Alice now computes her shared secret with Bob by doing:\n```\nlet alice_shared_secret = alice_secret.diffie_hellman(&bob_public);\n```\n\nSimilarly, Bob computes a shared secret by doing:\n```\nlet bob_shared_secret = bob_secret.diffie_hellman(&alice_public);\n```\n\nThese secrets are the same:\n```\nassert_eq!(alice_shared_secret.as_bytes(), bob_shared_secret.as_bytes());\n```\n\nVoil\u00e0! Alice and Bob can now use their shared secret to encrypt their meows, for example, by using it to generate a key and nonce for an authenticated-encryption cipher.\nThis example used the ephemeral DH API, which ensures that secret keys cannot be reused; Alice and Bob could instead use the static DH API and load a long-term secret key.\n## \u00a7\u27e813\u27e9Installation\nTo install, add the following to your project\u2019s `Cargo.toml`:\n```\n[dependencies]\nx25519-dalek = \"2\"\n```\n\n## \u00a7\u27e814\u27e9MSRV\nCurrent MSRV is 1.60.\n## \u00a7\u27e815\u27e9Documentation\nDocumentation is available here\u27e816\u27e9.\n## \u00a7\u27e817\u27e9Performance and backend selection\nPerformance is a secondary goal behind correctness, safety, and clarity, but we aim to be competitive with other implementations. To this end, we allow users to choose their _backend_ , i.e., the underlying implementation of elliptic curve and scalar arithmetic. Different backends have different use cases. For example, if you demand formally verified code, you want to use the `fiat` backend (as it was generated from Fiat Crypto\u27e818\u27e9).\nFurther instructions and details regarding backends can be found in the curve25519-dalek docs\u27e819\u27e9.\n## \u00a7\u27e820\u27e9Note\nThis code matches the RFC7748\u27e89\u27e9 test vectors. The elliptic curve operations are provided by `curve25519-dalek`, which makes a best-effort attempt to prevent software side-channels.\n\u201cSecret Messages\u201d cover image and zine\u27e821\u27e9 copyright \u00a9 Amy Wibowo (@sailorhg\u27e822\u27e9)\n## \u00a7\u27e823\u27e9See also\n  * crypto_box\u27e824\u27e9: pure Rust public-key authenticated encryption compatible with the NaCl family of encryption libraries (libsodium, TweetNaCl) which uses `x25519-dalek` for key agreement\n\n\n## Structs\u00a7\u27e825\u27e9\n\nEphemeralSecret\u27e826\u27e9\n    A short-lived Diffie-Hellman secret key that can only be used to compute a single `SharedSecret`\u27e827\u27e9.\n\nPublicKey\u27e828\u27e9\n    A Diffie-Hellman public key\n\nReusableSecret\u27e829\u27e9`reusable_secrets`\n    A Diffie-Hellman secret key which may be used more than once, but is purposefully not serialiseable in order to discourage key-reuse. This is implemented to facilitate protocols such as Noise (e.g. Noise IK key usage, etc.) and X3DH which require an \u201cephemeral\u201d key to conduct the Diffie-Hellman operation multiple times throughout the protocol, while the protocol run at a higher level is only conducted once per key.\n\nSharedSecret\u27e827\u27e9\n    The result of a Diffie-Hellman key exchange.\n\nStaticSecret\u27e830\u27e9`static_secrets`\n    A Diffie-Hellman secret key that can be used to compute multiple `SharedSecret`\u27e827\u27e9s.\n## Constants\u00a7\u27e831\u27e9\n\nX25519_BASEPOINT_BYTES\u27e832\u27e9\n    The X25519 basepoint, for use with the bare, byte-oriented x25519 function. This is provided for people who cannot use the typed DH API for some reason.\n## Functions\u00a7\u27e833\u27e9\n\nx25519\u27e834\u27e9\n    The bare, byte-oriented x25519 function, exactly as specified in RFC7748.\n",
+            "references_markdown": "\n\n## References\n\n\u27e81\u27e9 https://docs.rs/x25519-dalek/latest/settings.html: Settings\n\u27e82\u27e9 https://docs.rs/x25519-dalek/latest/help.html: Help\n\u27e83\u27e9 https://docs.rs/x25519-dalek/latest/src/x25519_dalek/lib.rs.html#17-33: Source\n\u27e84\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#x25519-dalek----ci: \u00a7\n\u27e85\u27e9 https://img.shields.io/crates/v/x25519-dalek.svg: ![\n\u27e86\u27e9 https://docs.rs/x25519-dalek/badge.svg: ![\n\u27e87\u27e9 https://github.com/dalek-cryptography/curve25519-dalek/actions/workflows/x25519-dalek.yml/badge.svg?branch=main: ![CI\n\u27e88\u27e9 https://github.com/dalek-cryptography/curve25519-dalek: curve25519-dalek\n\u27e89\u27e9 https://tools.ietf.org/html/rfc7748: RFC7748\n\u27e810\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#examples: \u00a7\n\u27e811\u27e9 https://raw.githubusercontent.com/dalek-cryptography/x25519-dalek/master/res/bubblesort-zines-secret-messages-cover.jpeg:  ![\n\u27e812\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/: This example is not tested - \u24d8\n\u27e813\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#installation: \u00a7\n\u27e814\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#msrv: \u00a7\n\u27e815\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#documentation: \u00a7\n\u27e816\u27e9 https://docs.rs/x25519-dalek: here\n\u27e817\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#performance-and-backend-selection: \u00a7\n\u27e818\u27e9 https://github.com/mit-plv/fiat-crypto: Fiat Crypto\n\u27e819\u27e9 https://github.com/dalek-cryptography/curve25519-dalek#backends: curve25519-dalek docs\n\u27e820\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#note: \u00a7\n\u27e821\u27e9 https://shop.bubblesort.io/products/secret-messages-zine: zine\n\u27e822\u27e9 https://twitter.com/sailorhg: @sailorhg\n\u27e823\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#see-also: \u00a7\n\u27e824\u27e9 https://github.com/RustCrypto/nacl-compat/tree/master/crypto_box: crypto_box\n\u27e825\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#structs: \u00a7\n\u27e826\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.EphemeralSecret.html: struct x25519_dalek::EphemeralSecret - EphemeralSecret\n\u27e827\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.SharedSecret.html: struct x25519_dalek::SharedSecret - `SharedSecret`\n\u27e828\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.PublicKey.html: struct x25519_dalek::PublicKey - PublicKey\n\u27e829\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.ReusableSecret.html: struct x25519_dalek::ReusableSecret - ReusableSecret\n\u27e830\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/struct.StaticSecret.html: struct x25519_dalek::StaticSecret - StaticSecret\n\u27e831\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#constants: \u00a7\n\u27e832\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/constant.X25519_BASEPOINT_BYTES.html: constant x25519_dalek::X25519_BASEPOINT_BYTES - X25519_BASEPOINT_BYTES\n\u27e833\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/#functions: \u00a7\n\u27e834\u27e9 https://docs.rs/x25519-dalek/latest/x25519_dalek/fn.x25519.html: fn x25519_dalek::x25519 - x25519\n",
+            "fit_markdown": "",
+            "fit_html": ""
+          },
+          "downloads": 0,
+          "github_stars": 0,
+          "dependencies": [],
+          "features": {},
+          "code_snippets": [],
+          "readme_sections": {},
+          "librs_downloads": null,
+          "source": "crates.io",
+          "enhanced_scraping": {},
+          "enhanced_features": [],
+          "enhanced_dependencies": [],
+          "readme_summary": "The `x25519-dalek` crate is a pure-Rust implementation of the X25519 elliptic curve Diffie-Hellman (ECDH) key exchange protocol, adhering to RFC7748 standards. It offers both a low-level byte-oriented API and a high-level Rust API for ephemeral and static Diffie-Hellman operations, enabling secure shared secret generation. Built on `curve25519-dalek`, it emphasizes safety, correctness, and flexibility, including support for customizable backends like formally verified `fiat`.",
+          "feature_summary": null,
+          "use_case": "Cryptography",
+          "score": 7.0,
+          "factual_counterfactual": "### Pair 1: API Levels  \n\u2705 Factual: The `x25519-dalek` crate provides two levels of API: a byte-oriented `x25519` function that adheres to RFC7748 and a higher-level Rust API for static and ephemeral Diffie-Hellman key exchange.  \n\u274c Counterfactual: The `x25519-dalek` crate only provides a single API level for ephemeral Diffie-Hellman key exchange, without support for static keys or RFC7748 compliance.  \n\n---\n\n### Pair 2: Backend Selection  \n\u2705 Factual: The crate allows users to select different backends for elliptic curve and scalar arithmetic, such as the `fiat` backend for formally verified code generated by Fiat Crypto.  \n\u274c Counterfactual: The crate enforces the use of a single backend implementation, preventing users from customizing backend selection based on their specific needs.  \n\n---\n\n### Pair 3: Performance Goals  \n\u2705 Factual: While correctness, safety, and clarity are prioritized, the crate aims to be competitive in performance compared to other implementations.  \n\u274c Counterfactual: The crate prioritizes performance above all other considerations, including correctness and safety, to maximize speed for cryptographic operations.",
+          "source_analysis": null,
+          "user_behavior": null,
+          "security": null
+        }
+      },
+      "irl_score": 8.6,
+      "execution_id": "exec-d6ba3513-c22d8817-1751264631",
+      "timestamp": "2025-06-30T06:23:51.999722+00:00",
+      "canon_version": "1.3.0"
+    },
+    "rule_zero_compliant": true
+  }
+]
