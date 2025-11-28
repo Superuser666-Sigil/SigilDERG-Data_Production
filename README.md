@@ -5,6 +5,7 @@ A static analysis pipeline for generating high-quality Rust code datasets for mo
 > 📖 **Ecosystem Architecture**: For a comprehensive overview of how this project integrates with [SigilDERG-Finetuner](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner) and [human-eval-Rust](https://github.com/Superuser666-Sigil/human-eval-Rust), see [ARCHITECTURE.md](ARCHITECTURE.md).
 
 **Version 2.3.0** includes:
+
 - **Checkpoint/Resume System**: Automatic checkpointing allows resuming long-running pipeline executions without losing progress. Preserves temp directories and skips already-processed crates.
 - **Improved Error Injection**: Enhanced error-fixing task generation with fallback to simulated errors when real compilation times out, ensuring more robust task diversity.
 - **Enhanced Logging**: Geiger and License checks now always write logs, even when no issues are found, improving observability and debugging.
@@ -296,6 +297,7 @@ The pipeline generates JSONL files (one JSON object per line) with the following
 ```
 
 Each line contains:
+
 - `prompt`: Instruction prompt describing what the code does
 - `gen`: Generated code (plain text, UTF-8 encoded)
 
@@ -303,7 +305,7 @@ See [docs/DATASET_SCHEMA.md](docs/DATASET_SCHEMA.md) for detailed format specifi
 
 ## Project Structure
 
-```
+```text
 sigil_pipeline/          # Main pipeline package
 ├── main.py             # Pipeline orchestration and CLI entry point
 ├── config.py           # Configuration management
@@ -467,16 +469,19 @@ This installs all three packages with proper version constraints.
 ### Complete Workflow
 
 1. **Generate dataset** (this package):
+
    ```bash
    python -m sigil_pipeline.main --output datasets/phase2_full.jsonl
    ```
 
 2. **Fine-tune model** (sigilderg-finetuner):
+
    ```bash
    sigilderg-train configs/llama8b-phase2.yml  # Uses local:datasets/phase2_full.jsonl
    ```
 
 3. **Evaluate model** (human-eval-rust):
+
    ```bash
    sigilderg-eval samples.jsonl --use-human-eval
    ```
@@ -536,7 +541,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Rust community** for excellent analysis tools (Clippy, Geiger, etc.)
 - **HuggingFace** for the Stack dataset and datasets library
 - **The Stack dataset** contributors for providing high-quality Rust code
-- **Ammar Nasr** for producing and distributing the Stack Rust Clean Dataset (https://huggingface.co/datasets/ammarnasr/the-stack-rust-clean)
+- **Ammar Nasr** for producing and distributing the Stack Rust Clean Dataset (<https://huggingface.co/datasets/ammarnasr/the-stack-rust-clean>)
 
 ---
 

@@ -21,10 +21,7 @@ from .environment import (
     log_environment_summary,
     write_environment_file,
 )
-from .observability import (
-    configure_structured_logging,
-    get_metrics,
-)
+from .observability import configure_structured_logging, get_metrics
 
 logger = logging.getLogger(__name__)
 

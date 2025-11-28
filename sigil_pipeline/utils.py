@@ -620,23 +620,33 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
         # Check for platform-specific dependencies
         content_lower = content.lower()
 
+        def has_dependency(dep: str, text: str) -> bool:
+            """Check if dependency exists in TOML as key or quoted value."""
+            # Check as TOML key (e.g., 'winapi =' or 'winapi=')
+            if f"{dep} =" in text or f"{dep}=" in text:
+                return True
+            # Check as quoted value (e.g., in dependencies list)
+            if f'"{dep}"' in text or f"'{dep}'" in text:
+                return True
+            return False
+
         if current_platform == "windows":
             # On Windows, check for Unix/macOS-specific deps
             for dep in unix_deps + macos_deps:
-                if f'"{dep}"' in content_lower or f"'{dep}'" in content_lower:
+                if has_dependency(dep, content_lower):
                     return "unix"  # Likely Unix/macOS-only
         elif current_platform == "linux":
             # On Linux, check for Windows/macOS-specific deps
             for dep in windows_deps:
-                if f'"{dep}"' in content_lower or f"'{dep}'" in content_lower:
+                if has_dependency(dep, content_lower):
                     return "windows"  # Likely Windows-only
             for dep in macos_deps:
-                if f'"{dep}"' in content_lower or f"'{dep}'" in content_lower:
+                if has_dependency(dep, content_lower):
                     return "macos"  # Likely macOS-only
         elif current_platform == "darwin":  # macOS
             # On macOS, check for Windows-specific deps
             for dep in windows_deps:
-                if f'"{dep}"' in content_lower or f"'{dep}'" in content_lower:
+                if has_dependency(dep, content_lower):
                     return "windows"  # Likely Windows-only
 
         # Check for platform-specific features

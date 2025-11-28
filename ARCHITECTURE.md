@@ -20,7 +20,7 @@ The SigilDERG ecosystem consists of four integrated components:
 3. **human-eval-Rust** (`human-eval-rust`) - Evaluates model performance on standardized Rust programming problems
 4. **SigilDERG-Lambda-Package** (`sigilderg-lambda-package`) - Reproducible end-to-end evaluation package for grant reviewers
 
-```
+```text
 ┌─────────────────────┐
 │  Data Production    │
 │  (sigil-pipeline)   │
@@ -145,10 +145,12 @@ Generates high-quality, instruction-style Rust code datasets from real-world cra
 ```
 
 **Required Fields:**
+
 - `prompt` (string): Instruction/prompt text
 - `gen` (string): Expected code output/completion
 
 **Optional Fields:**
+
 - `split` (string): `"train"` or `"val"` - preserved even when metadata removed
 - `_source_crate` (string): Source crate name (metadata)
 - `_source_file` (string): Source file path (metadata)
@@ -200,6 +202,7 @@ python -m sigil_pipeline.main \
 ```
 
 **Characteristics:**
+
 - Fixed prompt: `"Write a Rust code snippet. Output only the code."`
 - Library-sized modules (can be very large, up to ~1MB per sample)
 - Average gen length: ~12,279 characters
@@ -219,6 +222,7 @@ python -m sigil_pipeline.main \
 ```
 
 **Characteristics:**
+
 - Natural language instructions based on doc comments, function signatures, code patterns
 - Concise snippets (max 200 lines, 8000 chars by default)
 - Diverse, natural language prompts
@@ -284,7 +288,7 @@ pip install sigil-pipeline[observability]
 
 ## 2. Finetuner (sigilderg-finetuner)
 
-### Purpose
+### Finetuner Purpose
 
 Fine-tunes large language models (e.g., Llama-3.1-8B-Instruct) on Rust code datasets using QLoRA (Quantized Low-Rank Adaptation) for efficient training with reduced memory requirements.
 
@@ -408,12 +412,14 @@ bnb_4bit:
 ### Hardware Assumptions
 
 **Recommended Hardware:**
+
 - **GPU**: H100 80GB (tested), or other CUDA-capable GPU with sufficient VRAM
 - **CPU**: 26+ vCPUs for optimal data loading (configurable via `dataloader_num_workers`)
 - **RAM**: 225GB+ for large datasets and multi-GPU setups
 - **Storage**: Fast SSD for dataset storage and checkpointing
 
 **H100 Optimizations:**
+
 - Pre-tokenization for faster training
 - Parallel data loading (`dataloader_num_workers: 48`)
 - TF32 tensor cores
@@ -421,6 +427,7 @@ bnb_4bit:
 - Multi-GPU scaling (2×/4×/8× H100 nodes)
 
 **Memory Requirements:**
+
 - **4-bit QLoRA**: ~16-20GB VRAM for 8B models
 - **8-bit QLoRA**: ~24-30GB VRAM for 8B models
 - **Full fine-tuning**: ~80GB+ VRAM for 8B models
@@ -430,6 +437,7 @@ bnb_4bit:
 **Checkpoint Location:** Specified via `misc.output_dir` in config (default: `out/`)
 
 **Checkpoint Format:**
+
 - LoRA adapter weights (small, ~100MB)
 - Training state (optimizer, scheduler)
 - Model configuration
@@ -437,7 +445,8 @@ bnb_4bit:
 **Checkpoint Frequency:** Controlled via `train.save_every` (default: every 500 steps)
 
 **Checkpoint Structure:**
-```
+
+```text
 out/llama8b-rust-qlora-phase2/
 ├── checkpoint-500/
 │   ├── adapter_config.json
@@ -450,6 +459,7 @@ out/llama8b-rust-qlora-phase2/
 ```
 
 **HuggingFace Upload:**
+
 - Checkpoints can be uploaded to HuggingFace Hub
 - Use `infer_export.py` to merge LoRA weights into base model
 - Use `push_model_card.py` to create model cards
@@ -458,7 +468,7 @@ out/llama8b-rust-qlora-phase2/
 
 ## 3. human-eval-Rust
 
-### Purpose
+### Evaluation Purpose
 
 Evaluates model performance on standardized Rust programming problems using the HumanEval benchmark format. Provides functional correctness testing and pass@k metrics.
 
@@ -486,12 +496,14 @@ The evaluator can work with:
 **Sample Generation:**
 
 The evaluator expects samples in JSONL format with:
+
 - `task_id` (string): Unique identifier for the problem (e.g., "HumanEval/0")
 - `completion` (string): Model-generated Rust code completion
 
 **Problem File:**
 
 The evaluator uses the HumanEval Rust dataset (`data/HumanEval_rust.jsonl`) which contains 164 Rust programming problems. Each problem includes:
+
 - `task_id`: Unique identifier
 - `prompt`: Function signature and docstring
 - `canonical_solution`: Reference implementation
@@ -572,6 +584,7 @@ evaluate_functional_correctness \
 **Results File:** `<input>_results.jsonl`
 
 Each result includes:
+
 - `task_id`: Problem identifier
 - `passed`: Boolean indicating if tests passed
 - `result`: Execution result ("passed", "timed out", or "failed")
@@ -596,6 +609,7 @@ Each result includes:
 - **2GB tmpfs**: Prevents "disk full" errors during build artifact generation
 
 **Performance & Cost:**
+
 - At 24 workers, 10s timeout, and 100 samples per problem (16,400 total samples), a full evaluation run on 1×H100 completes in approximately **3-4 hours**
 - Estimated cost at Lambda Labs H100 pricing: **~$12-16 per full evaluation run**
 
@@ -658,7 +672,7 @@ misc:
 
 ### Step 3: Evaluate Model
 
-**Option A: Lambda Package (Recommended for Reproducible Evaluation)**
+#### Option A: Lambda Package (Recommended for Reproducible Evaluation)
 
 ```bash
 # In SigilDERG-Lambda-Package directory on H100 server
@@ -666,13 +680,14 @@ bash eval_setup.sh
 ```
 
 This orchestrates `human-eval-rust`, `sigil-pipeline`, and `sigilderg-finetuner` inside a pinned environment. The script:
+
 1. Provisions Python 3.12.11 environment via pyenv
 2. Installs all SigilDERG ecosystem components with version guarantees
 3. Generates samples from base and fine-tuned models
 4. Evaluates both models (no-policy and policy-enforced modes)
 5. Produces comparison report and metrics JSON with complete metadata
 
-**Option B: Manual Evaluation (Standalone human-eval-rust)**
+#### Option B: Manual Evaluation (Standalone human-eval-rust)
 
 ```bash
 # Generate samples from checkpoint
@@ -688,7 +703,8 @@ evaluate_functional_correctness rust_samples.jsonl \
     --enforce-policy
 ```
 
-**Output:** 
+**Output:**
+
 - `rust_samples.jsonl_results.jsonl` - Detailed results
 - Metrics printed to stdout: `{"pass@1": 0.42, "pass@10": 0.68, "pass@100": 0.85}`
 
@@ -696,7 +712,7 @@ evaluate_functional_correctness rust_samples.jsonl \
 
 ## Data Flow Summary
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │ 1. Data Production                                          │
 │                                                              │
@@ -755,6 +771,7 @@ evaluate_functional_correctness rust_samples.jsonl \
 ### Version Compatibility
 
 **Current Versions:**
+
 - `sigil-pipeline>=2.3.0`
 - `sigilderg-finetuner>=3.0.0`
 - `human-eval-rust>=2.3.0`
@@ -824,10 +841,10 @@ The `tools/` directory contains utility scripts for dataset manipulation:
 
 ## Project Links
 
-- **Pipeline**: https://github.com/Superuser666-Sigil/SigilDERG-Data_Production
-- **Finetuner**: https://github.com/Superuser666-Sigil/SigilDERG-Finetuner
-- **Evaluation**: https://github.com/Superuser666-Sigil/human-eval-Rust
+- **Pipeline**: <https://github.com/Superuser666-Sigil/SigilDERG-Data_Production>
+- **Finetuner**: <https://github.com/Superuser666-Sigil/SigilDERG-Finetuner>
+- **Evaluation**: <https://github.com/Superuser666-Sigil/human-eval-Rust>
 
 ---
 
-**Copyright (c) 2025 Dave Tofflemire, SigilDERG Project**
+Copyright (c) 2025 Dave Tofflemire, SigilDERG Project

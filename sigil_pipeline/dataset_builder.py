@@ -28,10 +28,7 @@ from .ast_patterns import (
     extract_struct_name,
 )
 from .format_validator import FormatValidator
-from .prompt_templates import (
-    build_combined_prompt,
-    initialize_prompt_rng,
-)
+from .prompt_templates import build_combined_prompt, initialize_prompt_rng
 from .task_generator import (
     determine_task_capabilities,
     generate_error_fixing_task,

@@ -21,6 +21,7 @@ pip install sigil-pipeline[ecosystem]
 ```
 
 This installs:
+
 - `sigil-pipeline>=2.3.0`
 - `sigilderg-finetuner>=3.0.0`
 - `human-eval-rust>=2.3.0`
@@ -73,6 +74,7 @@ python -m sigil_pipeline.main \
 ```
 
 This creates:
+
 - `datasets/phase2_full.jsonl` - Training dataset with `{"prompt": "...", "gen": "..."}` format
 - Train/val split is created automatically (samples include `"split": "train"` or `"split": "val"`)
 
@@ -80,7 +82,7 @@ This creates:
 
 Fine-tune a model using the generated dataset. The finetuner can now load JSONL files directly:
 
-**Option A: Use JSONL directly (recommended)**
+#### Option A: Use JSONL directly (recommended)
 
 Create a config file `configs/llama8b-phase2.yml`:
 
@@ -110,7 +112,7 @@ Then run:
 sigilderg-train configs/llama8b-phase2.yml
 ```
 
-**Option B: Convert to Parquet first**
+#### Option B: Convert to Parquet first
 
 If you prefer to use Parquet format (e.g., for HuggingFace Hub upload):
 
@@ -127,7 +129,7 @@ dataset:
     - parquet:datasets/phase2_training.parquet
 ```
 
-**Option C: Mix HuggingFace and local datasets**
+#### Option C: Mix HuggingFace and local datasets
 
 You can mix HuggingFace datasets with local JSONL/Parquet files:
 
@@ -146,7 +148,7 @@ dataset:
 
 Evaluate the fine-tuned model using the evaluation harness:
 
-**Option A: Use finetuner's built-in evaluation**
+#### Option A: Use finetuner's built-in evaluation
 
 ```bash
 sigilderg-eval samples.jsonl --use-human-eval
@@ -154,7 +156,7 @@ sigilderg-eval samples.jsonl --use-human-eval
 
 This runs both the standard Rust compilation/clippy evaluation and human-eval-rust functional correctness tests.
 
-**Option B: Use human-eval-rust directly**
+#### Option B: Use human-eval-rust directly
 
 First, convert pipeline samples to evaluation format:
 
@@ -226,6 +228,7 @@ sigil-ecosystem \
 ```
 
 Options:
+
 - `--no-generate-dataset` - Skip dataset generation
 - `--no-fine-tune` - Skip fine-tuning
 - `--no-evaluate` - Skip evaluation
@@ -303,6 +306,7 @@ Use the existing conversion tools:
 ### Dataset Loading Errors
 
 Check that:
+
 1. JSONL files have `prompt` and `gen` fields
 2. File paths in config are correct (use `local:` prefix for JSONL, `parquet:` for Parquet)
 3. Files are readable and not corrupted
@@ -315,7 +319,7 @@ Check that:
 
 ## Project Links
 
-- **Pipeline**: https://github.com/Superuser666-Sigil/SigilDERG-Data_Production
-- **Finetuner**: https://github.com/Superuser666-Sigil/SigilDERG-Finetuner
-- **Evaluation**: https://github.com/Superuser666-Sigil/human-eval-Rust
+- **Pipeline**: <https://github.com/Superuser666-Sigil/SigilDERG-Data_Production>
+- **Finetuner**: <https://github.com/Superuser666-Sigil/SigilDERG-Finetuner>
+- **Evaluation**: <https://github.com/Superuser666-Sigil/human-eval-Rust>
 
