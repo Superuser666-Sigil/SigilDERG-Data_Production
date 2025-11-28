@@ -9,7 +9,7 @@
 project = "Sigil Pipeline"
 copyright = "2025, Dave Tofflemire"
 author = "Dave Tofflemire"
-release = "2.0.0"
+release = "2.2.0"
 version = "1.2"
 
 # -- General configuration ---------------------------------------------------

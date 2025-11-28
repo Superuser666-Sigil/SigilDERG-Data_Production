@@ -1,10 +1,10 @@
-# Sigil Pipeline v2.2.0
+# Sigil Pipeline v2.3.0
 
 A static analysis pipeline for generating high-quality Rust code datasets for model fine-tuning. The pipeline analyzes Rust crates using static analysis tools and generates training datasets in JSONL format.
 
 > 📖 **Ecosystem Architecture**: For a comprehensive overview of how this project integrates with [SigilDERG-Finetuner](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner) and [human-eval-Rust](https://github.com/Superuser666-Sigil/human-eval-Rust), see [ARCHITECTURE.md](ARCHITECTURE.md).
 
-**Version 2.2.0** includes:
+**Version 2.3.0** includes:
 - **Checkpoint/Resume System**: Automatic checkpointing allows resuming long-running pipeline executions without losing progress. Preserves temp directories and skips already-processed crates.
 - **Improved Error Injection**: Enhanced error-fixing task generation with fallback to simulated errors when real compilation times out, ensuring more robust task diversity.
 - **Enhanced Logging**: Geiger and License checks now always write logs, even when no issues are found, improving observability and debugging.
@@ -511,7 +511,7 @@ The project includes Docker support for containerized execution:
 
 ```bash
 # Build image
-docker build -t sigil-pipeline:2.2.0 .
+docker build -t sigil-pipeline:2.3.0 .
 
 # Run pipeline
 docker-compose up

@@ -1,6 +1,13 @@
 Changelog
 =========
 
+Version 2.2.0
+-------------
+
+* **Ecosystem Integration**: Full integration with SigilDERG-Finetuner, human-eval-Rust, and lambda-package
+* **Architecture Documentation**: Comprehensive ADR index and system architecture documentation
+* **Version Synchronization**: All ecosystem components synchronized to compatible versions
+
 Version 2.0.0
 -------------
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sigil-pipeline"
-version = "2.2.0"
+version = "2.3.0"
 description = "Static analysis pipeline for generating high-quality Rust code datasets for model fine-tuning. Phase 2 dataset generation with Phase 1 format alignment."
 readme = "README.md"
 license = "MIT"
@@ -100,18 +100,18 @@ datasets = [
 
 finetuning = [
     # SigilDERG ecosystem integration
-    "sigilderg-finetuner>=2.8.0",
+    "sigilderg-finetuner>=3.0.0",
 ]
 
 evaluation = [
     # SigilDERG ecosystem integration
-    "human-eval-rust>=2.1.0",
+    "human-eval-rust>=2.3.0",
 ]
 
 ecosystem = [
     # Full SigilDERG ecosystem integration
-    "sigilderg-finetuner>=2.8.0",
-    "human-eval-rust>=2.1.0",
+    "sigilderg-finetuner>=3.0.0",
+    "human-eval-rust>=2.3.0",
 ]
 
 ai = [

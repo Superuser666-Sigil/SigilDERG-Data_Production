@@ -21,9 +21,9 @@ pip install sigil-pipeline[ecosystem]
 ```
 
 This installs:
-- `sigil-pipeline>=2.2.0`
-- `sigilderg-finetuner>=2.8.0`
-- `human-eval-rust>=2.1.0`
+- `sigil-pipeline>=2.3.0`
+- `sigilderg-finetuner>=3.0.0`
+- `human-eval-rust>=2.3.0`
 
 ### Install Individual Packages
 

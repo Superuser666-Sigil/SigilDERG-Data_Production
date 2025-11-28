@@ -1,6 +1,6 @@
 # SigilDERG Ecosystem Architecture
 
-**Version:** 2.0.0  
+**Version:** 2.2.0  
 **Last Updated:** 2025-11-28
 
 This document provides a comprehensive overview of how the SigilDERG projects work together to
@@ -755,9 +755,9 @@ evaluate_functional_correctness rust_samples.jsonl \
 ### Version Compatibility
 
 **Current Versions:**
-- `sigil-pipeline>=2.2.0`
-- `sigilderg-finetuner>=2.9.0`
-- `human-eval-rust>=2.1.0`
+- `sigil-pipeline>=2.3.0`
+- `sigilderg-finetuner>=3.0.0`
+- `human-eval-rust>=2.3.0`
 - `sigilderg-lambda-package>=2.0.0`
 
 **Installation:**

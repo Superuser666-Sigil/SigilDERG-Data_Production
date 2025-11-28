@@ -6,7 +6,7 @@ Each chunk is approximately 10-12MB in size, and no JSON object is split
 across files (each line is a complete JSON object).
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.0.0
+Version: 2.2.0
 """
 
 import argparse
