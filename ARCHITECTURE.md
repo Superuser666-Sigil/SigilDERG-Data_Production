@@ -3,15 +3,22 @@
 **Version:** 2.0.0  
 **Last Updated:** 2025-11-28
 
-This document provides a comprehensive overview of how the three SigilDERG projects work together to create a complete pipeline for training and evaluating Rust code generation models.
+This document provides a comprehensive overview of how the SigilDERG projects work together to
+create a complete pipeline for training and evaluating Rust code generation models.
+
+It also serves as the **top-level System Architecture + ADR index** for the ecosystem so that
+reviewers and collaborators have **one place** to answer the question:
+
+> *“Why was this design decision made, and where is it documented?”*
 
 ## Overview
 
-The SigilDERG ecosystem consists of three integrated components:
+The SigilDERG ecosystem consists of four integrated components:
 
 1. **SigilDERG-Data_Production** (`sigil-pipeline`) - Generates high-quality Rust code datasets
 2. **SigilDERG-Finetuner** (`sigilderg-finetuner`) - Fine-tunes language models on Rust code using QLoRA
 3. **human-eval-Rust** (`human-eval-rust`) - Evaluates model performance on standardized Rust programming problems
+4. **SigilDERG-Lambda-Package** (`sigilderg-lambda-package`) - Reproducible end-to-end evaluation package for grant reviewers
 
 ```
 ┌─────────────────────┐
@@ -36,7 +43,7 @@ The SigilDERG ecosystem consists of three integrated components:
 └──────────┬──────────┘
            │
            │ Checkpoints
-           │ (HuggingFace)
+           │ (HuggingFace / local)
            ▼
 ┌─────────────────────┐
 │  human-eval-Rust    │
@@ -44,7 +51,59 @@ The SigilDERG ecosystem consists of three integrated components:
 │  Evaluates model    │
 │  performance on     │
 │  HumanEval problems │
-└─────────────────────┘
+└──────────┬──────────┘
+           │
+           │ Reproducible
+           │ evaluation run
+           ▼
+┌─────────────────────────────┐
+│  SigilDERG-Lambda-Package  │
+│  (sigilderg-lambda-package)│
+│                             │
+│  One-command provisioning   │
+│  + evaluation runner for    │
+│  the full ecosystem         │
+└─────────────────────────────┘
+
+---
+
+## Executive Summary
+
+**What SigilDERG is:** A governed Rust LLM pipeline that generates high-quality training datasets from real-world Rust crates, fine-tunes language models using QLoRA, and evaluates them on standardized benchmarks.
+
+**What Phase-1 vs Phase-2 do:**
+- **Phase-1**: Library-sized modules with fixed prompts (compatible with original training runs)
+- **Phase-2**: Instruction-style prompts with natural language, semantic chunking, and task diversity (recommended for new training)
+
+**What this package proves:** Measurable improvement in Rust code generation quality (base model vs Rust-QLoRA fine-tuned model) on HumanEval-Rust benchmark under sandboxed, reproducible conditions.
+
+**How to reproduce in one command:** Use `SigilDERG-Lambda-Package` and run `eval_setup.sh` on an H100 instance. This provisions a pinned environment and runs the complete evaluation pipeline.
+
+---
+
+## Top-Level ADR Index (Cross-Repo)
+
+This section points to the **primary ADRs in each repository** that explain the major
+architectural decisions across the system.
+
+| Area / Question | Primary ADRs | Repository |
+|-----------------|--------------|------------|
+| **Data filtering, dataset schema, and quality gates** – "Why are we filtering crates and samples this way?" | [ADR-001: Streaming Architecture](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-001-streaming-architecture.md), [ADR-002: Category-Based Clippy Filtering](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-002-category-based-clippy-filtering.md), [ADR-003: Tree-Sitter for Semantic Chunking](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-003-tree-sitter-semantic-chunking.md) | **Data_Production** (`sigil-pipeline`) |
+| **Prompt randomization and runtime-agnostic async phrasing** – "How are prompts randomized without biasing toward Tokio/async-std?" | [ADR-006: AST-Aware Prompt Generation & Seeded Randomization](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-006-ast-aware-prompt-generation.md) | **Data_Production** (`sigil-pipeline`) |
+| **Observability, rate limiting, and production hardening** – “How do we monitor and safely scale the data pipeline?” | [ADR-004: Observability Infrastructure](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-004-observability-infrastructure.md), [ADR-005: Rate Limiting Strategy](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-005-rate-limiting-strategy.md), [ADR-007: Observability Wiring](https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/blob/main/docs/adr/ADR-007-observability-wiring.md) | **Data_Production** (`sigil-pipeline`) |
+| **QLoRA configuration, training schedule, and hardware assumptions** – “Why this LoRA rank / schedule / H100 tuning?” | [ADR-001: QLoRA Architecture for Rust LLM Fine-tuning](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner/blob/main/docs/adr/ADR-001-qlora-architecture.md), [ADR-002: Two-Phase Training Strategy](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner/blob/main/docs/adr/ADR-002-two-phase-training.md), [ADR-004: H100 GPU Optimizations](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner/blob/main/docs/adr/ADR-004-h100-optimizations.md) | **Finetuner** (`sigilderg-finetuner`) |
+| **Dataset pipeline integration** – “How does the finetuner actually consume the pipeline’s JSONL format?” | [ADR-003: Dataset Pipeline Integration](https://github.com/Superuser666-Sigil/SigilDERG-Finetuner/blob/main/docs/adr/ADR-003-dataset-pipeline.md) | **Finetuner** (`sigilderg-finetuner`) |
+| **Sandbox policy and execution safety** – “Why Firejail, why these limits, and how do we prevent code escapes?” | [ADR-001: Firejail-First Sandboxing Architecture](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-001-firejail-first-sandboxing.md), [ADR-002: Pattern-Based Security Filtering](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-002-pattern-based-security.md), [ADR-003: Thread-Safe Timeout Implementation](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-003-thread-safe-timeout.md) | **human-eval-Rust** (`human-eval-rust`) |
+| **Result schema, determinism, and Unicode hardening** – “Why this metrics schema, deterministic compilation flags, and Unicode protections?” | [ADR-004: Enhanced Result Schema](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-004-enhanced-result-schema.md), [ADR-005: Deterministic Compilation for Reproducibility](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-005-deterministic-compilation.md), [ADR-006: Unicode Homoglyph Attack Prevention](https://github.com/Superuser666-Sigil/human-eval-Rust/blob/main/docs/adr/ADR-006-unicode-homoglyph-protection.md) | **human-eval-Rust** (`human-eval-rust`) |
+| **Environment, reproducibility, and orchestration** – “Why this Ubuntu/H100 target, pyenv/venv layout, and version pinning?” | [ADR-002: Ecosystem Orchestration](https://github.com/Superuser666-Sigil/SigilDERG-Lambda-Package/blob/main/docs/adr/ADR-002-ecosystem-orchestration.md), [ADR-003: Reproducibility Guarantees](https://github.com/Superuser666-Sigil/SigilDERG-Lambda-Package/blob/main/docs/adr/ADR-003-reproducibility-guarantees.md) | **Lambda-Package** (`sigilderg-lambda-package`) |
+| **Lambda sandbox and security posture** – “Why Firejail-first in the Lambda one-command runner?” | [ADR-001: Firejail-First Sandboxing](https://github.com/Superuser666-Sigil/SigilDERG-Lambda-Package/blob/main/docs/adr/ADR-001-firejail-first-sandboxing.md) | **Lambda-Package** (`sigilderg-lambda-package`) |
+
+For a full list of ADRs in each repository, see:
+
+- Data Production ADRs: https://github.com/Superuser666-Sigil/SigilDERG-Data_Production/tree/main/docs/adr
+- Finetuner ADRs: https://github.com/Superuser666-Sigil/SigilDERG-Finetuner/tree/main/docs/adr
+- human-eval-Rust ADRs: https://github.com/Superuser666-Sigil/human-eval-Rust/tree/main/docs/adr
+- Lambda Package ADRs: https://github.com/Superuser666-Sigil/SigilDERG-Lambda-Package/tree/main/docs/adr
 ```
 
 ---
@@ -403,6 +462,8 @@ out/llama8b-rust-qlora-phase2/
 
 Evaluates model performance on standardized Rust programming problems using the HumanEval benchmark format. Provides functional correctness testing and pass@k metrics.
 
+**Note:** For standalone evaluation on generic machines, use `human-eval-rust` directly. For the full, pinned Lambda H100 environment that orchestrates the entire ecosystem, see `SigilDERG-Lambda-Package` and `eval_setup.sh`.
+
 ### How It Evaluates Checkpoints
 
 The evaluator can work with:
@@ -597,21 +658,21 @@ misc:
 
 ### Step 3: Evaluate Model
 
-**Option A: Using eval_setup.sh (Recommended)**
+**Option A: Lambda Package (Recommended for Reproducible Evaluation)**
 
 ```bash
-# In human-eval-Rust directory on H100 server
+# In SigilDERG-Lambda-Package directory on H100 server
 bash eval_setup.sh
 ```
 
-This script:
-1. Sets up Python 3.12 environment
-2. Installs all SigilDERG components
+This orchestrates `human-eval-rust`, `sigil-pipeline`, and `sigilderg-finetuner` inside a pinned environment. The script:
+1. Provisions Python 3.12.11 environment via pyenv
+2. Installs all SigilDERG ecosystem components with version guarantees
 3. Generates samples from base and fine-tuned models
-4. Evaluates both models
-5. Produces comparison report and metrics JSON
+4. Evaluates both models (no-policy and policy-enforced modes)
+5. Produces comparison report and metrics JSON with complete metadata
 
-**Option B: Manual Evaluation**
+**Option B: Manual Evaluation (Standalone human-eval-rust)**
 
 ```bash
 # Generate samples from checkpoint
@@ -695,8 +756,9 @@ evaluate_functional_correctness rust_samples.jsonl \
 
 **Current Versions:**
 - `sigil-pipeline>=2.1.0`
-- `sigilderg-finetuner>=2.8.0`
-- `human-eval-rust>=2.0.0`
+- `sigilderg-finetuner>=2.9.0`
+- `human-eval-rust>=2.1.0`
+- `sigilderg-lambda-package>=2.0.0`
 
 **Installation:**
 
@@ -704,7 +766,9 @@ evaluate_functional_correctness rust_samples.jsonl \
 pip install sigil-pipeline[ecosystem]
 ```
 
-This installs all three packages with compatible versions.
+This installs the three core Python packages with compatible versions; the Lambda Package
+(`SigilDERG-Lambda-Package`) is distributed as a separate repository with its own
+one-command entrypoint.
 
 ---
 
