@@ -1,0 +1,90 @@
+# Sigil Pipeline Docker Compose Configuration
+#
+# Docker Compose configuration for running the Sigil Pipeline in a containerized
+# environment with volume mounts, networking, and optional monitoring.
+#
+# Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
+# Version: 2.0.0
+#
+# Usage:
+#   docker-compose up -d              # Start in background
+#   docker-compose up                 # Start in foreground
+#   docker-compose up --profile monitoring  # Start with log viewer
+#   docker-compose down               # Stop and remove containers
+#   docker-compose logs -f             # Follow logs
+#
+# Services:
+#   - sigil-pipeline: Main pipeline service
+#   - log-viewer: Optional Dozzle log viewer (use --profile monitoring)
+
+version: '3.8'
+
+services:
+  sigil-pipeline:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: sigil-pipeline:2.0.0
+    container_name: sigil-pipeline-v2.0.0
+    restart: unless-stopped
+    volumes:
+      - ./output:/app/output:rw
+      - ./logs:/app/logs:rw
+      - ./cache:/app/cache:rw
+      - ./models:/app/models:rw
+      - ./data:/app/data:rw
+    environment:
+      - GITHUB_TOKEN=${GITHUB_TOKEN:-}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - OUTPUT_DIR=/app/output
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+    networks:
+      - rust-pipeline-network
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sigil_pipeline; from sigil_pipeline.config import PipelineConfig; from sigil_pipeline.utils import check_cargo_available; config = PipelineConfig(); cargo_ok = check_cargo_available(); print(f'Package OK, Cargo: {\"available\" if cargo_ok else \"not available\"}')"]
+      interval: 60s
+      timeout: 15s
+      retries: 3
+      start_period: 120s
+    command: 
+      - python
+      - -m
+      - sigil_pipeline.main
+      - --limit=1000
+      - --output=/app/output/sigil_phase2_dataset.jsonl
+      - --log-level=INFO
+    # Resource allocation
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 8G
+        reservations:
+          cpus: '2.0'
+          memory: 4G
+
+  # Optional: Add a monitoring/log viewing service
+  log-viewer:
+    image: amir20/dozzle:latest
+    container_name: rust-pipeline-logs
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    ports:
+      - "8081:8080"  # Changed to avoid conflict with main app
+    environment:
+      DOZZLE_FILTER: "name=sigil-pipeline"
+    networks:
+      - rust-pipeline-network
+    profiles:
+      - monitoring
+
+networks:
+  rust-pipeline-network:
+    driver: bridge
+
+volumes:
+  rust-pipeline-output:
+    driver: local
+  rust-pipeline-cache:
+    driver: local

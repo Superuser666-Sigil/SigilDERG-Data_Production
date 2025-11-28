@@ -1,0 +1,20 @@
+{
+  "include": [
+    "sigil_pipeline",
+    "tests",
+    "scripts",
+    "tools"
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    ".mypy_cache",
+    ".dmypy.json"
+  ],
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": false,
+  "pythonVersion": "3.12",
+  "typeCheckingMode": "basic",
+  "useLibraryCodeForTypes": true,
+  "stubPath": "./typings"
+} 
