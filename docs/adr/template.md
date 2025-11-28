@@ -40,3 +40,4 @@ Description of the alternative and why it was rejected.
 
 - Links to related ADRs, documents, or issues
 
+

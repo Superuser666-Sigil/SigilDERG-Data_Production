@@ -81,3 +81,4 @@ Use Clippy's severity levels (allow, warn, deny, forbid).
 - `sigil_pipeline/analyzer.py::categorize_clippy_warning()`
 - `docs/CLIPPY_CATEGORY_FILTERING.md`
 
+
