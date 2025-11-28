@@ -4,7 +4,7 @@ Main pipeline orchestration module.
 Coordinates the entire pipeline: crawl → analyze → filter → build → export.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.0.0
+Version: 2.1.0
 """
 
 import asyncio
@@ -15,6 +15,16 @@ from pathlib import Path
 from typing import Any, Iterator
 
 from . import analyzer, config, crawler, dataset_builder, exporter, filter, utils
+from .environment import (
+    EnvironmentFingerprint,
+    capture_environment,
+    log_environment_summary,
+    write_environment_file,
+)
+from .observability import (
+    configure_structured_logging,
+    get_metrics,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -185,11 +195,29 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     Args:
         cfg: Pipeline configuration
     """
-    # Set up logging
-    utils.setup_logging(cfg.log_level)
+    # Set up logging - prefer structured logging if enabled
+    if cfg.enable_structured_logging:
+        log_file_path = Path(cfg.log_file) if cfg.log_file else None
+        configure_structured_logging(
+            log_level=cfg.log_level,
+            json_output=cfg.json_logs,
+            log_file=log_file_path,
+        )
+    else:
+        utils.setup_logging(cfg.log_level)
 
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
+
+    # Capture and log environment fingerprint for reproducibility
+    env_fingerprint: EnvironmentFingerprint | None = None
+    if cfg.capture_environment:
+        env_fingerprint = capture_environment()
+        log_environment_summary(env_fingerprint)
+
+    # Initialize metrics collector
+    metrics_collector = get_metrics()
+    metrics_collector.reset()  # Start fresh for this run
 
     # Load crate list
     if cfg.crates:
@@ -236,7 +264,14 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     # Initialize metrics tracking (Priority 5.1)
     processed_count = 0
     skipped_count = 0
-    reason_counts = Counter()
+    reason_counts: Counter[str] = Counter()
+
+    # Set up metrics collector gauges
+    metrics_collector.gauge(
+        "pipeline_crates_total",
+        float(len(crates)),
+        help_text="Total number of crates to process",
+    )
 
     # Track processed crates for checkpointing
     processed_crates: dict[str, dict[str, Any]] = {}
@@ -298,6 +333,11 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                         logger.error(f"Task failed with exception: {result}")
                         skipped_count += 1
                         reason_counts["processing_error"] += 1
+                        metrics_collector.increment(
+                            "crates_rejected_total",
+                            labels={"reason": "processing_error"},
+                            help_text="Total crates rejected by reason",
+                        )
                         # Mark as processed (rejected due to error)
                         if checkpoint_manager:
                             checkpoint_manager.mark_processed(
@@ -315,28 +355,44 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                         # Normalize reason for metrics (Priority 5.1)
                         if "edition" in reason:
                             reason_counts["edition"] += 1
+                            normalized_reason = "edition"
                         elif "clippy" in reason:
                             reason_counts["clippy"] += 1
+                            normalized_reason = "clippy"
                         elif (
                             "documentation" in reason
                             or "docs" in reason
                             or "no documentation" in reason
                         ):
                             reason_counts["docs"] += 1
+                            normalized_reason = "docs"
                         elif "license" in reason:
                             reason_counts["license"] += 1
+                            normalized_reason = "license"
                         elif "unsafe" in reason:
                             reason_counts["unsafe"] += 1
+                            normalized_reason = "unsafe"
                         elif "outdated" in reason:
                             reason_counts["outdated"] += 1
+                            normalized_reason = "outdated"
                         elif "deny" in reason or "advisory" in reason:
                             reason_counts["deny"] += 1
+                            normalized_reason = "deny"
                         elif "platform" in reason:
                             reason_counts["platform"] += 1
+                            normalized_reason = "platform"
                         elif "fetch_failed" in reason:
                             reason_counts["fetch_failed"] += 1
+                            normalized_reason = "fetch_failed"
                         else:
                             reason_counts["other"] += 1
+                            normalized_reason = "other"
+
+                        metrics_collector.increment(
+                            "crates_rejected_total",
+                            labels={"reason": normalized_reason},
+                            help_text="Total crates rejected by reason",
+                        )
                         # Mark as processed (rejected)
                         if checkpoint_manager:
                             checkpoint_manager.mark_processed(
@@ -352,6 +408,16 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                         file_list, _ = result
                         processed_count += 1
                         crate_file_generator_parts.append(file_list)
+                        metrics_collector.increment(
+                            "crates_accepted_total",
+                            help_text="Total crates accepted",
+                        )
+                        if file_list:
+                            metrics_collector.histogram(
+                                "crate_file_count",
+                                float(len(file_list)),
+                                help_text="Number of files per accepted crate",
+                            )
                         # Mark as processed (accepted)
                         if checkpoint_manager:
                             checkpoint_manager.mark_processed(
@@ -571,6 +637,23 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 "samples_generated": sample_count,
             }
 
+            # Record final gauge values
+            metrics_collector.gauge(
+                "pipeline_samples_total",
+                float(sample_count),
+                help_text="Total samples generated",
+            )
+            metrics_collector.gauge(
+                "pipeline_crates_accepted",
+                float(processed_count),
+                help_text="Total crates accepted",
+            )
+            metrics_collector.gauge(
+                "pipeline_crates_skipped",
+                float(skipped_count),
+                help_text="Total crates skipped",
+            )
+
             # Write metrics with granular filter breakdown (Priority 5.1)
             metrics.update(
                 {
@@ -586,8 +669,28 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 }
             )
 
+            # Include environment fingerprint if captured
+            if env_fingerprint:
+                metrics["environment"] = env_fingerprint.to_dict()
+                # Also write standalone environment file
+                env_path = output_dir / "environment.json"
+                write_environment_file(env_fingerprint, env_path)
+                logger.info(f"Environment fingerprint: {env_path}")
+
             metrics_path = output_dir / "metrics.json"
             exporter.write_metrics(metrics, str(metrics_path))
+
+            # Export Prometheus format if enabled
+            if cfg.enable_prometheus_output:
+                prom_path = (
+                    Path(cfg.prometheus_output_path)
+                    if cfg.prometheus_output_path
+                    else output_dir / "metrics.prom"
+                )
+                prom_path.parent.mkdir(parents=True, exist_ok=True)
+                with open(prom_path, "w", encoding="utf-8") as f:
+                    f.write(metrics_collector.export_prometheus())
+                logger.info(f"Prometheus metrics: {prom_path}")
 
             logger.info("Pipeline completed successfully")
             logger.info(f"Output: {cfg.output_path}")

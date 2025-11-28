@@ -4,8 +4,11 @@ Dataset builder module for creating prompt-gen pairs from code.
 Converts filtered code files into training examples with prompts and code.
 Matches Phase 1 format exactly for consistent tokenization and training.
 
+Uses tree-sitter-rust for robust AST-based parsing of function signatures,
+struct fields, and code patterns (replacing fragile regex-based extraction).
+
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.0.0
+Version: 2.1.0
 """
 
 import json
@@ -13,12 +16,22 @@ import logging
 import re
 import textwrap
 from collections import defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable, Iterator
 
 from .analyzer import CrateAnalysisReport
+from .ast_patterns import (
+    detect_code_patterns_ast,
+    extract_function_signature,
+    extract_struct_fields,
+    extract_struct_name,
+)
 from .format_validator import FormatValidator
+from .prompt_templates import (
+    build_combined_prompt,
+    initialize_prompt_rng,
+)
 from .task_generator import (
     determine_task_capabilities,
     generate_error_fixing_task,
@@ -72,42 +85,16 @@ def detect_code_patterns(code: str) -> dict[str, Any]:
     """
     Detect patterns in code to help generate better prompts.
 
+    Uses tree-sitter AST for accurate pattern detection that handles
+    nested generics, macros, and comments correctly.
+
     Args:
         code: Code content
 
     Returns:
         Dictionary of detected patterns
     """
-    patterns = {
-        "has_main": "fn main" in code,
-        "has_async": "async fn" in code or "tokio::" in code or "async-std" in code,
-        "has_error_handling": "anyhow" in code
-        or "Result<" in code
-        or ".unwrap()" in code
-        or ".expect(" in code,
-        "has_serde": "serde" in code.lower()
-        or "Serialize" in code
-        or "Deserialize" in code,
-        "has_iterators": ".iter()" in code
-        or ".map(" in code
-        or ".filter(" in code
-        or ".collect()" in code,
-        "has_collections": "Vec<" in code
-        or "HashMap<" in code
-        or "HashSet<" in code
-        or "BTreeMap<" in code,
-        "has_strings": "String::" in code or "&str" in code or ".to_string()" in code,
-        "has_io": "std::io" in code or "File::" in code or "read_line" in code,
-        "has_networking": "http" in code.lower()
-        or "reqwest" in code.lower()
-        or "hyper" in code.lower(),
-        "has_concurrency": "thread::" in code
-        or "Arc<" in code
-        or "Mutex<" in code
-        or "RwLock<" in code,
-        "function_names": re.findall(r"fn\s+(\w+)", code),
-    }
-    return patterns
+    return detect_code_patterns_ast(code)
 
 
 def generate_prompt_for_code(
@@ -139,17 +126,23 @@ def create_prompt_from_code(
     code: str,
     crate_name: str | None = None,
     file_path: str | None = None,
+    enable_randomization: bool = True,
 ) -> str:
     """
     Generate an instruct-style prompt from code for Phase-2 dataset.
 
     Creates human-readable instructions based on doc comments, code patterns,
-    and function signatures. Does NOT include "Output only the code" suffix.
+    and function signatures. Uses tree-sitter AST for robust parsing.
+    Combines multiple detected patterns for richer prompts.
+    Uses seeded RNG for reproducible template randomization.
+
+    Does NOT include "Output only the code" suffix.
 
     Args:
         code: Code snippet content
         crate_name: Name of the crate (optional)
         file_path: Path to the file (optional)
+        enable_randomization: Enable template randomization for diversity
 
     Returns:
         Natural language instruction prompt
@@ -157,112 +150,51 @@ def create_prompt_from_code(
     # Extract doc comment
     doc_desc = extract_description_from_docs(code)
 
-    # Detect patterns
+    # Detect patterns using AST
     patterns = detect_code_patterns(code)
 
-    # Extract function signature if available
-    fn_signature_match = re.search(
-        r"(?:pub\s+)?(?:async\s+)?fn\s+(\w+)\s*\(([^)]*)\)\s*(?:->\s*([^{]+))?",
-        code,
-        re.MULTILINE,
-    )
+    # Extract function signature using AST (handles generics, lifetimes, etc.)
+    fn_sig = extract_function_signature(code)
 
-    # Generate prompt based on detected patterns
+    # Clean up doc description
+    cleaned_doc_desc = None
     if doc_desc:
-        # Use doc comment as basis for prompt
-        # Clean up and convert to instruction format
         desc = doc_desc.strip()
-        # Remove common doc comment prefixes
         desc = re.sub(r"^(///|//!)\s*", "", desc, flags=re.MULTILINE)
         desc = re.sub(r"\s+", " ", desc)
+        cleaned_doc_desc = desc
 
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            params = fn_signature_match.group(2)
-            return_type = fn_signature_match.group(3)
+    # Prepare function signature components
+    fn_name = fn_sig.name if fn_sig else None
+    params_str = _format_params(fn_sig.params) if fn_sig else None
+    return_type = fn_sig.return_type if fn_sig else None
 
-            if return_type:
-                return_type = return_type.strip()
-                return f"Write a Rust function {fn_name}({params}) -> {return_type}. {desc}"
-            return f"Write a Rust function {fn_name}({params}). {desc}"
-        return f"Write Rust code that: {desc}"
+    # Extract struct info if present
+    struct_name = extract_struct_name(code)
+    struct_fields = None
+    if struct_name:
+        fields = extract_struct_fields(code)
+        if fields:
+            struct_fields = ", ".join(f"{f.name}: {f.field_type}" for f in fields[:5])
 
-    # Pattern-based prompts
-    if patterns.get("has_async"):
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            return f"Using Tokio, write an async function {fn_name} that handles asynchronous operations."
-        return (
-            "Using Tokio, write an async function that handles asynchronous operations."
-        )
+    # Use combined prompt builder for rich, multi-pattern prompts
+    return build_combined_prompt(
+        fn_name=fn_name,
+        params_str=params_str,
+        return_type=return_type,
+        patterns=patterns,
+        doc_desc=cleaned_doc_desc,
+        struct_name=struct_name,
+        struct_fields=struct_fields,
+        enable_randomization=enable_randomization,
+    )
 
-    if patterns.get("has_serde"):
-        struct_match = re.search(r"struct\s+(\w+)", code)
-        if struct_match:
-            struct_name = struct_match.group(1)
-            # Try to extract fields
-            fields_match = re.search(r"struct\s+\w+\s*\{([^}]+)\}", code, re.DOTALL)
-            if fields_match:
-                fields = fields_match.group(1)
-                # Extract field names and types
-                field_parts = []
-                for field_line in fields.split("\n"):
-                    field_line = field_line.strip()
-                    if field_line and not field_line.startswith("//"):
-                        # Match "field_name: Type" or "pub field_name: Type"
-                        field_match = re.search(
-                            r"(?:pub\s+)?(\w+)\s*:\s*([^,]+)", field_line
-                        )
-                        if field_match:
-                            field_name = field_match.group(1)
-                            field_type = field_match.group(2).strip()
-                            field_parts.append(f"{field_name}: {field_type}")
 
-                if field_parts:
-                    fields_str = ", ".join(field_parts)
-                    return f"Implement a struct {struct_name} with {fields_str}, derive Serialize and Deserialize with Serde."
-
-            return f"Implement a struct {struct_name} with Serialize and Deserialize derives using Serde."
-        return "Implement a Rust struct with Serialize and Deserialize derives using Serde."
-
-    if patterns.get("has_error_handling"):
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            return f"Write a Rust function {fn_name} that handles errors using Result types."
-        return "Write a Rust function that handles errors using Result types."
-
-    if patterns.get("has_iterators"):
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            return f"Write a Rust function {fn_name} that processes a vector using iterators."
-        return "Write a Rust function that processes a vector using iterators."
-
-    if patterns.get("has_io"):
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            return f"Write a Rust function {fn_name} that performs file I/O operations."
-        return "Write a Rust function that performs file I/O operations."
-
-    if patterns.get("has_networking"):
-        if fn_signature_match:
-            fn_name = fn_signature_match.group(1)
-            return f"Write a Rust function {fn_name} that makes HTTP requests."
-        return "Write a Rust function that makes HTTP requests."
-
-    # Fallback: Extract function signature and create instruction
-    if fn_signature_match:
-        fn_name = fn_signature_match.group(1)
-        params = fn_signature_match.group(2)
-        return_type = fn_signature_match.group(3)
-
-        if return_type:
-            return_type = return_type.strip()
-            return f"Write a Rust function {fn_name}({params}) -> {return_type}."
-        else:
-            return f"Write a Rust function {fn_name}({params})."
-
-    # Final fallback
-    return "Write a Rust code snippet."
+def _format_params(params: list[tuple[str, str]]) -> str:
+    """Format function parameters for prompt display."""
+    if not params:
+        return ""
+    return ", ".join(f"{name}: {ptype}" for name, ptype in params)
 
 
 def format_code_for_gen(code: str, phase1_spec: dict[str, Any] | None = None) -> str:
@@ -310,6 +242,8 @@ def build_dataset_entries(
     error_injection_timeout: int = 120,
     max_sft_lines: int | None = None,
     max_sft_chars: int | None = None,
+    prompt_seed: int | None = None,
+    enable_prompt_randomization: bool = True,
 ) -> Iterator[dict]:
     """
     Convert an iterable of code files into dataset samples (prompt-gen pairs).
@@ -326,10 +260,16 @@ def build_dataset_entries(
         enable_error_injection: Enable error-fixing tasks (for Phase-2)
         error_injection_method: Error injection method ('real_compile', 'simulate', 'both')
         error_injection_timeout: Timeout (seconds) for cargo-based error injection
+        prompt_seed: RNG seed for prompt template randomization (for reproducibility)
+        enable_prompt_randomization: Enable template randomization for prompt diversity
 
     Yields:
         Dicts with 'prompt' and 'gen' keys matching Phase 1 format
     """
+    # Initialize prompt RNG with seed for reproducibility
+    actual_seed = initialize_prompt_rng(prompt_seed)
+    logger.info(f"Initialized prompt RNG with seed: {actual_seed}")
+
     # Load format validator if needed
     validator = None
     phase1_spec = None
@@ -374,7 +314,10 @@ def build_dataset_entries(
             def build_sample(task_name: str) -> dict[str, Any] | None:
                 if task_name == "code_generation":
                     prompt_local = create_prompt_from_code(
-                        formatted_code, crate_name, file_path
+                        formatted_code,
+                        crate_name,
+                        file_path,
+                        enable_randomization=enable_prompt_randomization,
                     )
                     return {
                         "prompt": prompt_local,
@@ -423,7 +366,10 @@ def build_dataset_entries(
 
             sample = sample_dict or {
                 "prompt": create_prompt_from_code(
-                    formatted_code, crate_name, file_path
+                    formatted_code,
+                    crate_name,
+                    file_path,
+                    enable_randomization=enable_prompt_randomization,
                 ),
                 "gen": formatted_code,
                 "_task_type": "code_generation",
@@ -432,6 +378,7 @@ def build_dataset_entries(
             sample["_source_crate"] = crate_name
             sample["_source_file"] = file_path
             sample["_source"] = "phase2"
+            sample["_prompt_seed"] = actual_seed
 
             if sample["_task_type"]:
                 task_counts[sample["_task_type"]] += 1
@@ -439,7 +386,7 @@ def build_dataset_entries(
                 task_counts["code_generation"] += 1
 
         else:
-            # Phase 1 compatible mode
+            # Phase 1 compatible mode (no randomization - fixed prompt format)
             prompt = generate_prompt_for_code(
                 formatted_code, crate_name, None, file_path
             )
@@ -449,6 +396,7 @@ def build_dataset_entries(
                 "_source_crate": crate_name,
                 "_source_file": file_path,
                 "_source": "phase1_compat",  # Mark as Phase-1 compatible source
+                "_prompt_seed": actual_seed,  # Store seed for reproducibility tracking
             }
 
         # Validate format if requested
@@ -491,7 +439,7 @@ def _log_task_mix_report(task_counts: dict[str, int], total_samples: int) -> Non
     }
     output_dir = Path("logs")
     output_dir.mkdir(parents=True, exist_ok=True)
-    timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    timestamp = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     report_path = output_dir / f"task_mix_{timestamp}.json"
 
     with report_path.open("w", encoding="utf-8") as handle:

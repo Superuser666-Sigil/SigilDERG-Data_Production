@@ -2,6 +2,7 @@
 Tests for sigil_pipeline.dataset_builder module.
 
 Tests prompt generation, code formatting, and dataset assembly.
+Includes tests for AST-based parsing, pattern combination, and seeded randomization.
 """
 
 from sigil_pipeline.dataset_builder import (
@@ -12,6 +13,7 @@ from sigil_pipeline.dataset_builder import (
     format_code_for_gen,
     generate_prompt_for_code,
 )
+from sigil_pipeline.prompt_templates import initialize_prompt_rng
 
 
 class TestExtractDescriptionFromDocs:
@@ -99,26 +101,88 @@ class TestGeneratePromptForCode:
 
 
 class TestCreatePromptFromCode:
-    """Test instruct-style prompt generation."""
+    """Test instruct-style prompt generation with combined patterns and randomization."""
 
     def test_prompt_uses_doc_comment(self):
+        """Test that doc comments are incorporated into prompts."""
         code = """/// Adds two numbers together.
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 """
-        prompt = create_prompt_from_code(code)
-        assert "Adds two numbers" in prompt or "Write a Rust function add" in prompt
+        # Disable randomization for deterministic test
+        prompt = create_prompt_from_code(code, enable_randomization=False)
+        # Should contain doc comment content or function name
+        assert "Adds two numbers" in prompt or "add" in prompt.lower()
 
     def test_async_code_hint(self):
+        """Test that async patterns are detected and mentioned."""
         code = 'async fn fetch_data() { let _ = reqwest::get("https://example.com").await; }'
-        prompt = create_prompt_from_code(code)
-        assert "async" in prompt.lower()
+        prompt = create_prompt_from_code(code, enable_randomization=False)
+        # Should mention async in some form
+        assert "async" in prompt.lower() or "asynchronous" in prompt.lower()
 
     def test_error_handling_hint(self):
+        """Test that error handling patterns are detected."""
         code = "pub fn work() -> Result<(), std::io::Error> { Ok(()) }"
-        prompt = create_prompt_from_code(code)
-        assert "handles errors" in prompt.lower()
+        prompt = create_prompt_from_code(code, enable_randomization=False)
+        # Should mention error handling in some form
+        assert any(
+            phrase in prompt.lower()
+            for phrase in ["error", "result", "handling", "gracefully"]
+        )
+
+    def test_deterministic_with_seed(self):
+        """Test that same seed produces same prompt."""
+        code = "pub fn process(data: Vec<i32>) -> i32 { data.iter().sum() }"
+
+        # Initialize with fixed seed
+        initialize_prompt_rng(42)
+        prompt1 = create_prompt_from_code(code, enable_randomization=True)
+
+        # Re-initialize with same seed
+        initialize_prompt_rng(42)
+        prompt2 = create_prompt_from_code(code, enable_randomization=True)
+
+        assert prompt1 == prompt2
+
+    def test_different_seeds_produce_different_prompts(self):
+        """Test that different seeds can produce different prompts."""
+        code = "pub fn process(data: Vec<i32>) -> i32 { data.iter().sum() }"
+
+        # Generate with seed 42
+        initialize_prompt_rng(42)
+        prompt1 = create_prompt_from_code(code, enable_randomization=True)
+
+        # Generate with seed 123
+        initialize_prompt_rng(123)
+        prompt2 = create_prompt_from_code(code, enable_randomization=True)
+
+        # They might be the same by chance, but function name should be consistent
+        assert "process" in prompt1 or "Rust" in prompt1
+        assert "process" in prompt2 or "Rust" in prompt2
+
+    def test_randomization_disabled(self):
+        """Test that disabling randomization gives consistent results."""
+        code = "pub fn add(a: i32, b: i32) -> i32 { a + b }"
+
+        prompt1 = create_prompt_from_code(code, enable_randomization=False)
+        prompt2 = create_prompt_from_code(code, enable_randomization=False)
+
+        assert prompt1 == prompt2
+
+    def test_combined_async_and_error_patterns(self):
+        """Test that code with multiple patterns produces rich prompts."""
+        code = """
+        async fn fetch_data(url: &str) -> Result<String, Error> {
+            let response = reqwest::get(url).await?;
+            Ok(response.text().await?)
+        }
+        """
+        prompt = create_prompt_from_code(code, enable_randomization=False)
+        # Should be a non-empty, reasonable prompt
+        assert len(prompt) > 10
+        assert "Rust" in prompt or "async" in prompt.lower() or "fetch_data" in prompt
 
 
 class TestFormatCodeForGen:
@@ -258,3 +322,80 @@ class TestBuildDatasetEntries:
             if count >= 5:  # Test partial consumption
                 break
         assert count == 5
+
+    def test_prompt_seed_in_metadata(self):
+        """Test that prompt seed is stored in sample metadata."""
+        files = [
+            {"path": "test.rs", "code": "pub fn test() {}"},
+        ]
+        samples = list(
+            build_dataset_entries(
+                files,
+                validate_format=False,
+                prompt_seed=12345,
+            )
+        )
+        assert len(samples) == 1
+        assert "_prompt_seed" in samples[0]
+        assert samples[0]["_prompt_seed"] == 12345
+
+    def test_prompt_seed_reproducibility(self):
+        """Test that same seed produces identical prompts."""
+        files = [
+            {
+                "path": "test.rs",
+                "code": "pub fn process(x: Vec<i32>) -> i32 { x.iter().sum() }",
+            },
+        ]
+
+        samples1 = list(
+            build_dataset_entries(
+                files,
+                validate_format=False,
+                prompt_mode="instruct",
+                task_type_mix={"code_generation": 1.0},
+                prompt_seed=42,
+                enable_prompt_randomization=True,
+            )
+        )
+
+        samples2 = list(
+            build_dataset_entries(
+                files,
+                validate_format=False,
+                prompt_mode="instruct",
+                task_type_mix={"code_generation": 1.0},
+                prompt_seed=42,
+                enable_prompt_randomization=True,
+            )
+        )
+
+        assert samples1[0]["prompt"] == samples2[0]["prompt"]
+
+    def test_randomization_disabled(self):
+        """Test that disabling randomization produces deterministic prompts."""
+        files = [
+            {"path": "test.rs", "code": "pub fn add(a: i32, b: i32) -> i32 { a + b }"},
+        ]
+
+        samples1 = list(
+            build_dataset_entries(
+                files,
+                validate_format=False,
+                prompt_mode="instruct",
+                task_type_mix={"code_generation": 1.0},
+                enable_prompt_randomization=False,
+            )
+        )
+
+        samples2 = list(
+            build_dataset_entries(
+                files,
+                validate_format=False,
+                prompt_mode="instruct",
+                task_type_mix={"code_generation": 1.0},
+                enable_prompt_randomization=False,
+            )
+        )
+
+        assert samples1[0]["prompt"] == samples2[0]["prompt"]

@@ -2,9 +2,10 @@
 Analyzer module for running static analysis tools on Rust crates.
 
 Provides functions to run Clippy, Geiger, outdated, and documentation checks.
+Includes optional caching of analysis results to avoid re-running expensive tools.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.0.0
+Version: 2.1.0
 """
 
 import json
@@ -12,10 +13,12 @@ import logging
 import re
 import subprocess
 import threading
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+
+from .analysis_cache import AnalysisCache, get_cache
 
 # Import OS-agnostic cargo utilities from sigil_pipeline.utils
 from .utils import (
@@ -940,10 +943,13 @@ def _severity_rank(severity: str) -> int:
 
 
 async def analyze_crate(
-    crate_dir: Path, config: Any | None = None, env: dict[str, str] | None = None
+    crate_dir: Path,
+    config: Any | None = None,
+    env: dict[str, str] | None = None,
+    use_cache: bool | None = None,
 ) -> CrateAnalysisReport:
     """
-    Run all static analysis tools on a crate with early exit optimization.
+    Run all static analysis tools on a crate with early exit optimization and caching.
 
     Early exit strategy:
     1. Check edition first (fast, synchronous)
@@ -951,10 +957,16 @@ async def analyze_crate(
     3. If clippy fails quality threshold, skip remaining analysis
     4. Run remaining tools in parallel only if crate passes early checks
 
+    Caching:
+    - If enabled, computes a content hash of the crate
+    - Returns cached results if available and valid
+    - Caches new results after successful analysis
+
     Args:
         crate_dir: Path to crate directory
-        config: Optional pipeline config (for license checking)
+        config: Optional pipeline config (for license checking and cache settings)
         env: Optional environment variables for cargo commands
+        use_cache: Override cache setting (uses config.enable_analysis_cache if None)
 
     Returns:
         CrateAnalysisReport with all analysis results
@@ -966,6 +978,31 @@ async def analyze_crate(
     crate_name = crate_dir.name.split("-")[0]  # Extract name from dir
 
     logger.info(f"Analyzing {crate_name}...")
+
+    # Determine if caching is enabled
+    cache_enabled = use_cache
+    if cache_enabled is None and config:
+        cache_enabled = getattr(config, "enable_analysis_cache", True)
+    if cache_enabled is None:
+        cache_enabled = True  # Default to enabled
+
+    # Get cache instance if enabled
+    cache: AnalysisCache | None = None
+    crate_hash: str | None = None
+    if cache_enabled:
+        cache_dir = (
+            getattr(config, "analysis_cache_dir", ".cache/analysis")
+            if config
+            else ".cache/analysis"
+        )
+        cache = get_cache(cache_dir)
+        crate_hash = cache.compute_crate_hash(crate_dir)
+
+        # Try to get cached full report
+        cached_report = cache.get(crate_hash, "full_report")
+        if cached_report:
+            logger.debug(f"Cache hit for {crate_name}, using cached analysis")
+            return _deserialize_report(cached_report, crate_dir)
 
     # STEP 1: Get edition first (synchronous, fast) - early exit if wrong edition
     edition = get_crate_edition(crate_dir)
@@ -1059,7 +1096,7 @@ async def analyze_crate(
             if not isinstance(dr, BaseException):
                 deny_result = dr  # type: ignore[assignment]
 
-    return CrateAnalysisReport(
+    report = CrateAnalysisReport(
         crate_name=crate_name,
         crate_dir=crate_dir,
         clippy=clippy_result,
@@ -1069,4 +1106,54 @@ async def analyze_crate(
         license=license_result,
         deny=deny_result,
         edition=edition,
+    )
+
+    # Cache the result if caching is enabled
+    if cache and crate_hash:
+        try:
+            serialized = _serialize_report(report)
+            cache.put(crate_hash, "full_report", serialized)
+            logger.debug(f"Cached analysis result for {crate_name}")
+        except Exception as e:
+            logger.debug(f"Failed to cache result for {crate_name}: {e}")
+
+    return report
+
+
+def _serialize_report(report: CrateAnalysisReport) -> dict[str, Any]:
+    """Serialize a CrateAnalysisReport to a dict for caching."""
+    return {
+        "crate_name": report.crate_name,
+        "crate_dir": str(report.crate_dir),
+        "clippy": asdict(report.clippy) if report.clippy else None,
+        "geiger": asdict(report.geiger) if report.geiger else None,
+        "outdated": asdict(report.outdated) if report.outdated else None,
+        "docs": asdict(report.docs) if report.docs else None,
+        "license": asdict(report.license) if report.license else None,
+        "deny": asdict(report.deny) if report.deny else None,
+        "edition": report.edition,
+        "rejection_log_path": report.rejection_log_path,
+    }
+
+
+def _deserialize_report(data: dict[str, Any], crate_dir: Path) -> CrateAnalysisReport:
+    """Deserialize a cached dict back to a CrateAnalysisReport."""
+    clippy = ClippyResult(**data["clippy"]) if data.get("clippy") else ClippyResult()
+    geiger = GeigerResult(**data["geiger"]) if data.get("geiger") else None
+    outdated = OutdatedResult(**data["outdated"]) if data.get("outdated") else None
+    docs = DocStats(**data["docs"]) if data.get("docs") else None
+    license_result = LicenseResult(**data["license"]) if data.get("license") else None
+    deny = DenyResult(**data["deny"]) if data.get("deny") else None
+
+    return CrateAnalysisReport(
+        crate_name=data["crate_name"],
+        crate_dir=crate_dir,
+        clippy=clippy,
+        geiger=geiger,
+        outdated=outdated,
+        docs=docs,
+        license=license_result,
+        deny=deny,
+        edition=data.get("edition"),
+        rejection_log_path=data.get("rejection_log_path"),
     )

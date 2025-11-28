@@ -41,6 +41,8 @@ These fields are **removed** when `remove_metadata=True` (default for final data
 - **`_source_file`** (string, optional): Path to the source file within the crate
 - **`_task_type`** (string, optional): Task type for Phase-2 samples (see Task Type Enum below)
 - **`_source`** (string, optional): Source identifier for merged datasets (e.g., "phase1_upscaled")
+- **`_prompt_seed`** (integer, optional): RNG seed used for prompt template randomization (for reproducibility)
+- **`_async_runtime`** (string, optional): Detected async runtime from code imports (tokio, async-std, smol, embassy, futures). Used for metadata/analysis only; prompts use runtime-agnostic phrasing to avoid model bias.
 
 #### Task Type Enum
 
@@ -81,9 +83,10 @@ The `_task_type` field is an enum with the following values:
 **Prompt Format:**
 - Natural language instructions based on:
   - Doc comments
-  - Function signatures
-  - Code patterns (async, serde, error handling, iterators)
+  - Function signatures (extracted via tree-sitter AST, handles nested generics)
+  - Code patterns detected via AST analysis (async, serde, error handling, iterators)
   - Task type (code generation, transformations, error fixing, explanations)
+  - Template randomization with seeded RNG for reproducible prompt diversity
 
 **Example (Code Generation):**
 ```json
@@ -183,6 +186,7 @@ When `--create-train-val-split` is enabled:
 | `_source_file` | string | ❌ No | Source file path |
 | `_task_type` | string | ❌ No | Task type enum (Phase-2 only, see Task Type Enum) |
 | `_source` | string | ❌ No | Dataset source identifier |
+| `_prompt_seed` | integer | ❌ No | RNG seed for prompt template randomization (for reproducibility) |
 
 ## Validation
 
@@ -276,14 +280,67 @@ When converting to Parquet for HuggingFace upload, two variants are recommended:
 
 **Note:** Consider dropping the `_` prefix on metadata fields in the analysis variant for better ergonomics in Polars/Arrow (e.g., `task_type` instead of `_task_type`), but this is optional.
 
+## Accompanying Output Files
+
+In addition to the dataset JSONL, the pipeline generates these files for governance and reproducibility:
+
+### metrics.json
+
+Contains run statistics and configuration:
+
+```json
+{
+  "total_samples": 12345,
+  "crates_processed": 100,
+  "crates_skipped": 25,
+  "filter_breakdown": {
+    "edition": 5,
+    "clippy": 10,
+    "license": 3,
+    "unsafe": 7
+  },
+  "environment": { ... },
+  "config": { ... }
+}
+```
+
+### environment.json
+
+Environment fingerprint for reproducibility audits:
+
+```json
+{
+  "timestamp": "2025-01-15T10:30:00Z",
+  "toolchain": {
+    "rustc_version": "rustc 1.75.0 (82e1608df 2023-12-21)",
+    "cargo_version": "cargo 1.75.0 (1d8b05cdd 2023-11-20)",
+    "clippy_version": "clippy 0.1.75 (82e1608 2023-12-21)"
+  },
+  "platform": {
+    "os": "Linux",
+    "architecture": "x86_64",
+    "python_version": "3.12.0"
+  },
+  "dependencies": {
+    "tree_sitter": "0.20.4",
+    "tree_sitter_rust": "0.20.4"
+  }
+}
+```
+
+### metrics.prom (optional)
+
+Prometheus-format metrics for monitoring dashboards. Enabled via `enable_prometheus_output: true`.
+
 ## Schema Evolution
 
-**Schema Version: 2.1**
+**Schema Version: 2.2**
 
 Version history:
 - **v1.0** (Phase-1): Fixed prompt format, library-sized modules
 - **v2.0** (Phase-2): Instruct-style prompts, task diversity, semantic chunking
-- **v2.1** (Current): Added `_task_type`, `_source` metadata fields, and explicit `split` field
+- **v2.1**: Added `_task_type`, `_source` metadata fields, and explicit `split` field
+- **v2.2** (Current): Added `_async_runtime` metadata, environment fingerprinting, Prometheus metrics
 
-**Note:** When shipping datasets to HuggingFace, include `schema_version: "2.1"` in the dataset card or README.md, referencing this documentation.
+**Note:** When shipping datasets to HuggingFace, include `schema_version: "2.2"` in the dataset card or README.md, referencing this documentation.
 

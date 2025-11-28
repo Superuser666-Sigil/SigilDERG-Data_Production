@@ -35,6 +35,8 @@ What becomes easier or more difficult as a result of this decision?
 | [ADR-003](ADR-003-tree-sitter-semantic-chunking.md) | Tree-Sitter for Semantic Chunking | Accepted |
 | [ADR-004](ADR-004-observability-infrastructure.md) | Observability Infrastructure | Accepted |
 | [ADR-005](ADR-005-rate-limiting-strategy.md) | Rate Limiting Strategy | Accepted |
+| [ADR-006](ADR-006-ast-aware-prompt-generation.md) | AST-Aware Prompt Generation | Accepted |
+| [ADR-007](ADR-007-observability-wiring.md) | Observability Infrastructure Integration | Accepted |
 
 ## Creating a New ADR
 

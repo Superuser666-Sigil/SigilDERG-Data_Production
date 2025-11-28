@@ -4,7 +4,7 @@ Configuration module for the Sigil Pipeline.
 Defines PipelineConfig dataclass with all configurable settings.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.0.0
+Version: 2.1.0
 """
 
 from dataclasses import dataclass, field
@@ -203,6 +203,40 @@ class PipelineConfig:
     error_injection_timeout: int = 120
     """Timeout (seconds) for cargo-based real error injection attempts."""
 
+    # Prompt generation configuration
+    prompt_seed: int | None = None
+    """RNG seed for prompt template randomization. If None, uses system random.
+    Stored in dataset metadata for reproducibility."""
+
+    enable_prompt_randomization: bool = True
+    """Enable template randomization for prompt diversity. Default: True."""
+
+    # Analysis result caching
+    enable_analysis_cache: bool = True
+    """Cache cargo tool results to avoid re-running on unchanged crates. Default: True."""
+
+    analysis_cache_dir: str = ".cache/analysis"
+    """Directory for analysis cache files. Default: .cache/analysis."""
+
+    # Observability configuration
+    enable_structured_logging: bool = True
+    """Use structlog for structured JSON logging when available. Default: True."""
+
+    log_file: str | None = None
+    """Path to log file. If None, logs only to console."""
+
+    json_logs: bool = False
+    """Output logs as JSON (for production/log aggregation). Default: False."""
+
+    enable_prometheus_output: bool = False
+    """Export metrics in Prometheus text format alongside JSON. Default: False."""
+
+    prometheus_output_path: str | None = None
+    """Path to Prometheus metrics file. If None, uses output_dir/metrics.prom."""
+
+    capture_environment: bool = True
+    """Capture and log environment fingerprint at startup. Default: True."""
+
     @classmethod
     def from_dict(cls, data: dict) -> "PipelineConfig":
         """Create config from dictionary."""
@@ -281,4 +315,14 @@ class PipelineConfig:
             "auto_upsample_phase2": self.auto_upsample_phase2,
             "create_train_val_split": self.create_train_val_split,
             "val_ratio": self.val_ratio,
+            "prompt_seed": self.prompt_seed,
+            "enable_prompt_randomization": self.enable_prompt_randomization,
+            "enable_analysis_cache": self.enable_analysis_cache,
+            "analysis_cache_dir": self.analysis_cache_dir,
+            "enable_structured_logging": self.enable_structured_logging,
+            "log_file": self.log_file,
+            "json_logs": self.json_logs,
+            "enable_prometheus_output": self.enable_prometheus_output,
+            "prometheus_output_path": self.prometheus_output_path,
+            "capture_environment": self.capture_environment,
         }

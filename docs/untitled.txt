@@ -1,0 +1,99 @@
+8.1. Wire in observability for real
+
+Right now:
+
+main.py → utils.setup_logging(cfg.log_level)
+
+Metrics → plain dict → exporter.write_metrics.
+
+You could:
+
+Replace utils.setup_logging usage with observability.configure_logging (while keeping a fallback).
+
+Instantiate a process-wide MetricsCollector and use it to track:
+
+crates processed/skipped.
+
+per-rejection reason counts.
+
+clippy/unsafe/outdated distributions.
+
+time per crate / phase.
+
+Then:
+
+Export both:
+
+JSON metrics file (for offline inspection).
+
+Prometheus text file if cfg.metrics_prometheus_output is set.
+
+That would make the README claims 100% true and give you better dashboards later.
+
+8.2. Split PipelineConfig into logical groups
+
+PipelineConfig is big. Still readable, but:
+
+For maintainability, you could break it into smaller dataclasses:
+
+CorpusConfig, QualityConfig, OutputConfig, ObservabilityConfig, etc.
+
+Or at least group fields more rigidly with small helper @property bundles.
+
+Not urgent, but as you add features this will be the first thing that feels “crowded.”
+
+8.3. Make Tokio bias explicit / configurable
+
+dataset_builder has cases like:
+
+if patterns.get("has_async"):
+    return "Using Tokio, write an async function ..."
+
+
+If the training target is “Rust in general”, this may unintentionally bias the model to assume Tokio = async. If that’s intentional (because the ecosystem is overwhelmingly Tokio), cool—just:
+
+Maybe gate it behind a config flag (prefer_tokio_in_prompts: bool = True).
+
+Or support multiple runtimes in the future (Tokio, async-std, etc) based on detected imports.
+
+8.4. Stronger environment fingerprinting
+
+You’ve done a good job with:
+
+Safe tar extraction.
+
+Graceful handling of missing cargo, clippy failures, timeouts, etc.
+
+For reproducibility / governance, I’d add:
+
+Log Rust toolchain version (rustc --version, cargo --version) once at startup.
+
+Log OS + architecture (you already pull platform in a couple places).
+
+Include a short environment block in the metrics JSON (or a separate env.json):
+
+Rust versions.
+
+Cargo subcommands found/not found.
+
+Whether tree-sitter is available.
+
+That way if Lambda or anyone else reruns the pipeline later, you can show “same inputs, same toolchain.”
+
+8.5. Actually use MetricsCollector / OTEL in a small way
+
+Even if you don’t go full distributed tracing:
+
+Wrap crate processing in telemetry.span() calls:
+
+span("process_crate", attributes={"crate": crate_name}).
+
+Use MetricsCollector for:
+
+crates_processed_total.
+
+crate_processing_time_seconds histogram.
+
+Emit Prometheus format to a .prom file next to metrics JSON.
+
+It’s cheap to do and fits your “governance + observability” story nicely.

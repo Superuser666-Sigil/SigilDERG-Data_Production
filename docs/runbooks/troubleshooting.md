@@ -205,8 +205,127 @@ pip list | grep -E "(sigil|hypothesis|structlog)"
 pip install -e ".[all]"
 
 # Or specific extras
-pip install -e ".[datasets,parsing,dev]"
+pip install -e ".[datasets,dev]"
 ```
+
+### Issue: Stale Analysis Cache
+
+**Symptoms:**
+- Analysis results don't reflect recent code changes
+- Unexpected cached results from previous runs
+
+**Diagnosis:**
+
+```bash
+# Check cache directory
+ls -la .cache/analysis/
+```
+
+**Resolution:**
+
+1. Clear the analysis cache:
+   ```bash
+   rm -rf .cache/analysis/
+   ```
+
+2. Or disable caching in config:
+   ```python
+   enable_analysis_cache = False
+   ```
+
+### Issue: Reproducibility Audit Failure
+
+**Symptoms:**
+- Cannot reproduce previous results
+- Toolchain version mismatch suspected
+
+**Diagnosis:**
+
+```bash
+# Check environment fingerprint from previous run
+cat output/environment.json | python -m json.tool
+
+# Compare with current environment
+python -c "
+from sigil_pipeline.environment import capture_environment
+import json
+fp = capture_environment()
+print(json.dumps(fp.to_dict(), indent=2))
+"
+```
+
+**Resolution:**
+
+1. Compare `environment.json` from original run with current:
+   - `rustc_version` should match exactly
+   - `cargo_version` should match
+   - Key dependencies (tree-sitter, etc.) should match
+
+2. If toolchain differs:
+   ```bash
+   rustup install 1.XX.0
+   rustup default 1.XX.0
+   ```
+
+3. Ensure prompt seed is set explicitly in config:
+   ```python
+   prompt_seed = 12345  # Use seed from original run
+   ```
+
+### Issue: Prometheus Metrics Not Exported
+
+**Symptoms:**
+- `metrics.prom` file not created
+- Grafana/monitoring can't scrape metrics
+
+**Diagnosis:**
+
+```bash
+# Check config
+grep "prometheus" config.json
+
+# Check output directory
+ls -la output/*.prom
+```
+
+**Resolution:**
+
+1. Enable Prometheus output in config:
+   ```python
+   enable_prometheus_output = True
+   prometheus_output_path = "output/metrics.prom"
+   ```
+
+2. Verify output path is writable:
+   ```bash
+   touch output/metrics.prom
+   ```
+
+### Issue: Structured Logging Not Working
+
+**Symptoms:**
+- Logs are plain text, not JSON
+- structlog features not available
+
+**Diagnosis:**
+
+```bash
+# Check if structlog is installed
+pip show structlog
+```
+
+**Resolution:**
+
+1. Install observability dependencies:
+   ```bash
+   pip install -e ".[observability]"
+   ```
+
+2. Enable structured logging in config:
+   ```python
+   enable_structured_logging = True
+   json_logs = True  # For production JSON output
+   ```
 
 ## Log Analysis
 

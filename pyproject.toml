@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sigil-pipeline"
-version = "2.0.0"
+version = "2.1.0"
 description = "Static analysis pipeline for generating high-quality Rust code datasets for model fine-tuning. Phase 2 dataset generation with Phase 1 format alignment."
 readme = "README.md"
 license = "MIT"
@@ -77,6 +77,10 @@ dependencies = [
     "pyyaml>=6.0.0,<7.0.0",
     "jsonschema>=4.20.0,<5.0.0",
     "toml>=0.10.0,<1.0.0",
+    
+    # Rust code parsing (required for AST-based prompt generation)
+    "tree-sitter>=0.20.0,<1.0.0",
+    "tree-sitter-rust>=0.20.0,<1.0.0",
 ]
 
 [project.optional-dependencies]
@@ -92,12 +96,6 @@ datasets = [
     # HuggingFace datasets for Stack dataset integration
     "datasets>=2.14.0,<3.0.0",
     "huggingface-hub>=0.19.0,<1.0.0",  # For downloading Phase 1 checkpoint files
-]
-
-parsing = [
-    # Rust code parsing for semantic chunking (Phase-2)
-    "tree-sitter-rust>=0.20.0,<1.0.0",  # Rust parser for semantic chunking
-    "tree-sitter>=0.20.0,<1.0.0",  # Core tree-sitter library
 ]
 
 finetuning = [

@@ -28,7 +28,18 @@ rustup show
 # Check cargo subcommands
 cargo clippy --version
 cargo geiger --version
+
+# Full environment fingerprint (recommended before large runs)
+python -c "
+from sigil_pipeline.environment import capture_environment, log_environment_summary
+fp = capture_environment()
+log_environment_summary(fp)
+"
 ```
+
+**Note:** The pipeline automatically captures an environment fingerprint at startup
+and writes it to `output/environment.json`. This is critical for reproducibility
+audits - keep this file alongside your dataset.
 
 ### 2. Prepare Input Data
 
@@ -185,9 +196,33 @@ python -m sigil_pipeline.main \
 
 ## Post-Execution
 
-1. Archive logs: `tar -czvf logs_$(date +%Y%m%d).tar.gz logs/`
-2. Upload dataset if applicable
-3. Clean temp files: `rm -rf /tmp/sigil_*`
-4. Document any issues encountered
+1. **Verify reproducibility artifacts exist:**
+   ```bash
+   ls -la output/environment.json output/metrics.json output/dataset.jsonl
+   ```
+
+2. **Archive all artifacts together:**
+   ```bash
+   tar -czvf run_$(date +%Y%m%d).tar.gz \
+       output/dataset.jsonl \
+       output/metrics.json \
+       output/environment.json \
+       output/metrics.prom  # If Prometheus enabled
+   ```
+
+3. Upload dataset if applicable
+
+4. Clean temp files: `rm -rf /tmp/sigil_*`
+
+5. Document any issues encountered
+
+### Reproducibility Checklist
+
+For auditable runs, verify:
+
+- [ ] `environment.json` contains rustc/cargo versions
+- [ ] `metrics.json` contains `prompt_seed` value
+- [ ] All environment fingerprint fields are populated
+- [ ] Config settings are stored in metrics.json
 
 
