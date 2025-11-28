@@ -47,11 +47,10 @@ jobs:
         if: matrix.os == 'ubuntu-latest'
         uses: codecov/codecov-action@v5
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          files: ./coverage.xml
-          flags: unittests
-          name: codecov-${{ matrix.os }}
-          fail_ci_if_error: false
+            files: ./coverage.xml
+            flags: unittests
+            name: codecov-${{ matrix.os }}
+            fail_ci_if_error: false
 
   lint:
     name: Lint & Type Check

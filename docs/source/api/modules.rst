@@ -3,18 +3,11 @@ API Reference
 
 This section provides detailed API documentation for all modules in the Sigil Pipeline.
 
-.. toctree::
-   :maxdepth: 2
-
-   sigil_pipeline
-
 sigil_pipeline
 --------------
 
 .. automodule:: sigil_pipeline
-   :members:
-   :undoc-members:
-   :show-inheritance:
+   :no-members:
 
 sigil_pipeline.config
 ---------------------

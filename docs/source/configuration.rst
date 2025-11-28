@@ -15,6 +15,7 @@ PipelineConfig Reference
 .. autoclass:: sigil_pipeline.config.PipelineConfig
    :members:
    :undoc-members:
+   :noindex:
 
 Crate Selection
 ~~~~~~~~~~~~~~~

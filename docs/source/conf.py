@@ -37,6 +37,17 @@ html_static_path = ["_static"]
 
 # -- Extension configuration -------------------------------------------------
 
+# Suppress duplicate object description warnings (class attributes documented
+# both in the main module __init__ and in the submodule where they're defined)
+# Also suppress MyST cross-reference warnings for relative links in included
+# markdown files (these links work on GitHub but not in Sphinx context)
+suppress_warnings = [
+    "myst.xref_missing",
+]
+
+# Autosummary settings - disable auto-generation to prevent duplicates
+autosummary_generate = False
+
 # Napoleon settings (for Google/NumPy style docstrings)
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
@@ -55,15 +66,15 @@ napoleon_type_aliases = None
 autodoc_default_options = {
     "members": True,
     "member-order": "bysource",
-    "special-members": "__init__",
     "undoc-members": True,
     "exclude-members": "__weakref__",
+    "ignore-module-all": True,  # Don't fail if __all__ is missing
 }
 autodoc_typehints = "description"
 autodoc_typehints_format = "short"
 
-# Autosummary settings
-autosummary_generate = True
+# Autosummary settings - disable auto-generation to prevent duplicates
+autosummary_generate = False
 
 # Intersphinx mapping
 intersphinx_mapping = {
