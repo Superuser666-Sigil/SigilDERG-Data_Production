@@ -4,7 +4,7 @@
 # high-quality Rust code datasets for model fine-tuning.
 #
 # Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-# Version: 2.0.0
+# Version: 2.2.0
 #
 # Features:
 # - Python 3.12 base image
@@ -13,7 +13,7 @@
 # - Pre-configured environment for pipeline execution
 #
 # Build:
-#   docker build -t sigil-pipeline:2.0.0 .
+#   docker build -t sigil-pipeline:2.2.0 .
 #
 # Run:
 #   docker run -v $(pwd)/output:/app/output sigil-pipeline:1.1.0 --help

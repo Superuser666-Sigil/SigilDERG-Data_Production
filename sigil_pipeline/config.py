@@ -4,7 +4,7 @@ Configuration module for the Sigil Pipeline.
 Defines PipelineConfig dataclass with all configurable settings.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 from dataclasses import dataclass, field

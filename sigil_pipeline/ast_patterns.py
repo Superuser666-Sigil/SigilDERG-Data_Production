@@ -6,7 +6,7 @@ and code patterns. This replaces fragile regex-based extraction that fails on
 nested generics, macros, and comments.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import logging

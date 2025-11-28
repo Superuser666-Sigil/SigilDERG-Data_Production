@@ -755,7 +755,7 @@ evaluate_functional_correctness rust_samples.jsonl \
 ### Version Compatibility
 
 **Current Versions:**
-- `sigil-pipeline>=2.1.0`
+- `sigil-pipeline>=2.2.0`
 - `sigilderg-finetuner>=2.9.0`
 - `human-eval-rust>=2.1.0`
 - `sigilderg-lambda-package>=2.0.0`

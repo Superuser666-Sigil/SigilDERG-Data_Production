@@ -24,8 +24,8 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    image: sigil-pipeline:2.0.0
-    container_name: sigil-pipeline-v2.0.0
+    image: sigil-pipeline:2.2.0
+    container_name: sigil-pipeline-v2.2.0
     restart: unless-stopped
     volumes:
       - ./output:/app/output:rw

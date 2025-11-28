@@ -8,7 +8,7 @@ Uses tree-sitter-rust for robust AST-based parsing of function signatures,
 struct fields, and code patterns (replacing fragile regex-based extraction).
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import json

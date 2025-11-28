@@ -8,7 +8,7 @@ Supports runtime-agnostic async prompts to avoid biasing models toward any
 specific async runtime (Tokio, async-std, smol, Embassy, etc.).
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import logging

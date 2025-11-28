@@ -5,7 +5,7 @@ Provides functions to run Clippy, Geiger, outdated, and documentation checks.
 Includes optional caching of analysis results to avoid re-running expensive tools.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import json

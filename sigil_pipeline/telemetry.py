@@ -5,7 +5,7 @@ Provides span-based tracing for observability across the pipeline.
 Gracefully degrades when OpenTelemetry is not installed.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import functools
@@ -69,7 +69,7 @@ def configure_telemetry(
     resource = Resource.create(
         {
             "service.name": service_name,
-            "service.version": "2.1.0",
+            "service.version": "2.2.0",
         }
     )
 

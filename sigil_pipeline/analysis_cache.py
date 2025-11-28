@@ -8,7 +8,7 @@ Uses content-based hashing of Cargo.toml, Cargo.lock, and source files
 to detect when a crate has changed and needs re-analysis.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import hashlib

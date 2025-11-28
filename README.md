@@ -511,16 +511,16 @@ The project includes Docker support for containerized execution:
 
 ```bash
 # Build image
-docker build -t sigil-pipeline:2.0.0 .
+docker build -t sigil-pipeline:2.2.0 .
 
 # Run pipeline
 docker-compose up
 
 # Interactive shell
-docker run -it sigil-pipeline:2.0.0 bash
+docker run -it sigil-pipeline:2.2.0 bash
 
 # Run with custom arguments
-docker run -v $(pwd)/output:/app/output sigil-pipeline:2.0.0 \
+docker run -v $(pwd)/output:/app/output sigil-pipeline:2.2.0 \
     --crate-list /app/data/crate_list.txt \
     --output /app/output/dataset.jsonl
 ```

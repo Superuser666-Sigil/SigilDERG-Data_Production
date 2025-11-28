@@ -4,7 +4,7 @@ Filter module for applying quality heuristics and filtering code files.
 Implements filtering logic for crates and code files based on quality criteria.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.1.0
+Version: 2.2.0
 """
 
 import logging
