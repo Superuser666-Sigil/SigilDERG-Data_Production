@@ -13,8 +13,6 @@ Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
 import json
 from pathlib import Path
 
-import pytest
-
 from sigil_pipeline.environment import (
     CargoToolAvailability,
     DependencyVersions,
@@ -24,7 +22,6 @@ from sigil_pipeline.environment import (
     capture_dependency_versions,
     capture_environment,
     capture_platform_info,
-    capture_toolchain_info,
     log_environment_summary,
     write_environment_file,
 )

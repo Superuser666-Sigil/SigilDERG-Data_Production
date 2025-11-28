@@ -11,17 +11,13 @@ Covers:
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
 """
 
-import pytest
-
 from sigil_pipeline.prompt_templates import (
-    ASYNC_RUNTIME_PATTERNS,
     RUNTIME_PHRASES,
     build_async_prompt,
     build_combined_prompt,
     build_error_handling_prompt,
     build_serde_prompt,
     detect_async_runtime,
-    get_prompt_rng,
     get_runtime_phrase,
     initialize_prompt_rng,
     select_random,

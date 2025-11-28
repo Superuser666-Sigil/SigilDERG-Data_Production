@@ -5,11 +5,7 @@ Tests AST-based extraction of function signatures, struct fields, and code patte
 Includes edge cases for nested generics, lifetimes, and complex Rust syntax.
 """
 
-import pytest
-
 from sigil_pipeline.ast_patterns import (
-    FunctionSignature,
-    StructField,
     detect_code_patterns_ast,
     extract_all_function_signatures,
     extract_function_signature,
@@ -394,12 +390,12 @@ class TestCodePatternDetection:
         """Test detection of multiple patterns in one code sample."""
         code = """
         use std::sync::Arc;
-        
+
         #[derive(Serialize, Deserialize)]
         struct Config {
             value: i32,
         }
-        
+
         async fn process(config: Config) -> Result<Arc<Config>, Error> {
             let shared = Arc::new(config);
             Ok(shared)
@@ -494,7 +490,7 @@ class TestEdgeCases:
                 fn $name() {}
             };
         }
-        
+
         fn real_function() {}
         """
         patterns = detect_code_patterns_ast(code)
@@ -522,8 +518,7 @@ class TestEdgeCases:
         """
         # Tree-sitter should handle this, but Rust identifiers are ASCII-only
         # This test verifies graceful handling
-        sig = extract_function_signature(code)
-        # May or may not parse depending on tree-sitter version
+        _ = extract_function_signature(code)  # May or may not parse
 
     def test_empty_code(self):
         """Test handling of empty code."""

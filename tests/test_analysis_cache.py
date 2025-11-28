@@ -4,10 +4,6 @@ Tests for sigil_pipeline.analysis_cache module.
 Tests caching of analysis results, content hashing, and cache invalidation.
 """
 
-import json
-import tempfile
-from pathlib import Path
-
 import pytest
 
 from sigil_pipeline.analysis_cache import AnalysisCache, get_cache, set_cache

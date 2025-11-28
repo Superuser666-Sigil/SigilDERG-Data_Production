@@ -364,10 +364,8 @@ class TestIsPlatformSpecificCrate:
         cargo_toml.write_text('[dependencies]\ncore-foundation = "0.9"\n')
 
         platform_detected = is_platform_specific_crate(crate_dir)
-        # Result depends on current platform
-        assert (
-            platform_detected in ["macos", "windows", None] or platform_detected is None
-        )
+        # Result depends on current platform - can be macos, unix, windows, or None
+        assert platform_detected in ["macos", "unix", "windows", None]
 
     def test_no_platform_specific_dependencies(self, tmp_path):
         """Test crate with no platform-specific dependencies."""
