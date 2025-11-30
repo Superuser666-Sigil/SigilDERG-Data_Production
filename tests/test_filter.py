@@ -17,9 +17,11 @@ from sigil_pipeline.config import PipelineConfig
 from sigil_pipeline.filter import (
     filter_code_files,
     has_doc_comments,
+    is_api_properly_used,
     is_crate_acceptable,
     looks_like_test,
     meets_size_sanity_criteria,
+    static_analysis_rust_code,
 )
 
 
@@ -409,3 +411,197 @@ class TestFilterCodeFiles:
         """Test filtering empty file list."""
         filtered = list(filter_code_files([], sample_config))
         assert len(filtered) == 0
+
+
+class TestIsApiProperlyUsed:
+    """Test is_api_properly_used function."""
+
+    def test_api_used_in_code(self):
+        """Test API used directly in code."""
+        code = """
+        fn main() {
+            let file = File::open("test.txt");
+        }
+        """
+        assert is_api_properly_used(code, "File") is True
+
+    def test_api_not_used(self):
+        """Test API not present in code."""
+        code = """
+        fn main() {
+            println!("hello");
+        }
+        """
+        assert is_api_properly_used(code, "File") is False
+
+    def test_api_only_in_comment(self):
+        """Test API only mentioned in comment."""
+        code = """
+        // Uses File for reading
+        fn main() {
+            println!("hello");
+        }
+        """
+        assert is_api_properly_used(code, "File") is False
+
+    def test_api_only_in_block_comment(self):
+        """Test API only mentioned in block comment."""
+        code = """
+        /* Uses File for reading */
+        fn main() {
+            println!("hello");
+        }
+        """
+        assert is_api_properly_used(code, "File") is False
+
+    def test_api_in_both_comment_and_code(self):
+        """Test API in both comment and code."""
+        code = """
+        // File handling function
+        fn main() {
+            let file = File::open("test.txt");
+        }
+        """
+        assert is_api_properly_used(code, "File") is True
+
+    def test_api_partial_match_prevented(self):
+        """Test that partial matches are prevented."""
+        code = """
+        fn main() {
+            let filename = "test.txt";
+        }
+        """
+        # "File" should not match "filename"
+        assert is_api_properly_used(code, "File") is False
+
+    def test_api_with_special_chars(self):
+        """Test API name with special regex characters."""
+        code = """
+        fn main() {
+            let v = vec![1, 2, 3];
+        }
+        """
+        assert is_api_properly_used(code, "vec!") is True
+
+
+class TestStaticAnalysisRustCode:
+    """Test static_analysis_rust_code function."""
+
+    def test_valid_simple_function(self):
+        """Test valid simple function passes."""
+        code = 'fn main() { println!("hello"); }'
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is True
+        assert message == "Static analysis passed"
+
+    def test_missing_function_definition(self):
+        """Test code without function definition fails."""
+        code = "let x = 5;"
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is False
+        assert "function" in message.lower()
+
+    def test_missing_opening_brace(self):
+        """Test code without opening brace fails."""
+        code = "fn main()"
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is False
+        assert "brace" in message.lower()
+
+    def test_unclosed_double_quotes(self):
+        """Test unclosed double quotes detected."""
+        code = 'fn main() { let s = "unclosed; }'
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is False
+        assert "quote" in message.lower()
+
+    def test_mismatched_parentheses(self):
+        """Test mismatched parentheses detected."""
+        code = "fn main() { let x = (1 + 2; }"
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is False
+        assert "parenthes" in message.lower()
+
+    def test_mismatched_braces(self):
+        """Test mismatched braces detected."""
+        code = "fn main() { if true { } }"  # Valid
+        is_valid, _ = static_analysis_rust_code(code)
+        assert is_valid is True
+
+        code_bad = "fn main() { if true { }"  # Missing brace
+        is_valid, message = static_analysis_rust_code(code_bad)
+        assert is_valid is False
+        assert "brace" in message.lower()
+
+    def test_mismatched_brackets(self):
+        """Test mismatched brackets detected."""
+        code = "fn main() { let v = [1, 2, 3; }"
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is False
+        assert "bracket" in message.lower()
+
+    def test_api_usage_check_passes(self):
+        """Test API usage check passes when API is used."""
+        code = """
+        fn main() {
+            let file = File::open("test.txt");
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code, api_name="File")
+        assert is_valid is True
+
+    def test_api_usage_check_fails(self):
+        """Test API usage check fails when API not used."""
+        code = """
+        fn main() {
+            println!("hello");
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code, api_name="File")
+        assert is_valid is False
+        assert "File" in message
+
+    def test_api_in_comment_only_fails(self):
+        """Test API only in comment fails validation."""
+        code = """
+        // Uses File for reading
+        fn main() {
+            println!("hello");
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code, api_name="File")
+        assert is_valid is False
+        assert "File" in message
+
+    def test_lifetime_annotations_handled(self):
+        """Test that lifetime annotations don't cause false positives."""
+        code = """
+        fn process<'a>(data: &'a str) -> &'a str {
+            data
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is True
+
+    def test_complex_valid_code(self):
+        """Test complex but valid code passes."""
+        code = """
+        fn process(items: &[i32]) -> Vec<i32> {
+            let result: Vec<i32> = items.iter().cloned().collect();
+            result
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is True
+        assert is_valid is True
+
+    def test_char_literals_handled(self):
+        """Test character literals don't break quote counting."""
+        code = """
+        fn main() {
+            let c = 'a';
+            let d = 'b';
+        }
+        """
+        is_valid, message = static_analysis_rust_code(code)
+        assert is_valid is True

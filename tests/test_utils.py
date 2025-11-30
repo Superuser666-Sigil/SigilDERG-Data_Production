@@ -17,9 +17,12 @@ from sigil_pipeline.utils import (
     build_cargo_subcommand_command,
     check_cargo_available,
     check_license_compliance,
+    find_best_toolchain,
     get_cargo_command,
     get_crate_edition,
+    get_installed_toolchains,
     is_platform_specific_crate,
+    parse_crate_info,
     read_json,
     run_command,
     setup_logging,
@@ -384,3 +387,169 @@ class TestIsPlatformSpecificCrate:
 
         platform_detected = is_platform_specific_crate(crate_dir)
         assert platform_detected is None
+
+
+class TestGetInstalledToolchains:
+    """Test get_installed_toolchains function."""
+
+    @patch("subprocess.run")
+    def test_successful_toolchain_list(self, mock_run):
+        """Test successful retrieval of toolchain list."""
+        mock_run.return_value.returncode = 0
+        mock_run.return_value.stdout = (
+            "stable-x86_64-pc-windows-msvc (default)\n"
+            "1.76.0-x86_64-pc-windows-msvc\n"
+            "nightly-2024-01-15-x86_64-pc-windows-msvc\n"
+        )
+
+        toolchains = get_installed_toolchains()
+
+        assert "stable-x86_64-pc-windows-msvc" in toolchains
+        assert "1.76.0-x86_64-pc-windows-msvc" in toolchains
+        assert "nightly-2024-01-15-x86_64-pc-windows-msvc" in toolchains
+
+    @patch("subprocess.run")
+    def test_rustup_not_found(self, mock_run):
+        """Test when rustup command fails."""
+        mock_run.side_effect = FileNotFoundError("rustup not found")
+
+        toolchains = get_installed_toolchains()
+        assert toolchains == ["stable"]
+
+    @patch("subprocess.run")
+    def test_rustup_returns_error(self, mock_run):
+        """Test when rustup returns an error."""
+        mock_run.return_value.returncode = 1
+        mock_run.return_value.stderr = "error"
+
+        toolchains = get_installed_toolchains()
+        assert toolchains == ["stable"]
+
+    @patch("subprocess.run")
+    def test_timeout_handling(self, mock_run):
+        """Test timeout handling."""
+        mock_run.side_effect = subprocess.TimeoutExpired(cmd="rustup", timeout=10)
+
+        toolchains = get_installed_toolchains()
+        assert toolchains == ["stable"]
+
+    @patch("subprocess.run")
+    def test_empty_output(self, mock_run):
+        """Test empty output from rustup."""
+        mock_run.return_value.returncode = 0
+        mock_run.return_value.stdout = ""
+
+        toolchains = get_installed_toolchains()
+        assert toolchains == ["stable"]
+
+
+class TestFindBestToolchain:
+    """Test find_best_toolchain function."""
+
+    def test_exact_match(self):
+        """Test exact toolchain match."""
+        installed = ["stable", "1.76.0-x86_64-pc-windows-msvc", "nightly"]
+        result = find_best_toolchain("1.76.0-x86_64-pc-windows-msvc", installed)
+        assert result == "1.76.0-x86_64-pc-windows-msvc"
+
+    def test_stable_prefix_match(self):
+        """Test stable prefix matching."""
+        installed = ["stable-x86_64-pc-windows-msvc", "1.76.0"]
+        result = find_best_toolchain("stable", installed)
+        assert result == "stable-x86_64-pc-windows-msvc"
+
+    def test_nightly_prefix_match(self):
+        """Test nightly prefix matching."""
+        installed = ["stable", "nightly-2024-01-15-x86_64-pc-windows-msvc"]
+        result = find_best_toolchain("nightly", installed)
+        assert result == "nightly-2024-01-15-x86_64-pc-windows-msvc"
+
+    def test_semantic_version_exact_match(self):
+        """Test semantic version exact match."""
+        installed = [
+            "stable",
+            "1.76.0-x86_64-pc-windows-msvc",
+            "1.75.0-x86_64-pc-windows-msvc",
+        ]
+        result = find_best_toolchain("1.76.0", installed)
+        assert result == "1.76.0-x86_64-pc-windows-msvc"
+
+    def test_semantic_version_closest_match(self):
+        """Test finding closest semantic version."""
+        installed = [
+            "stable",
+            "1.75.0-x86_64-pc-windows-msvc",
+            "1.74.0-x86_64-pc-windows-msvc",
+        ]
+        result = find_best_toolchain("1.76.0", installed)
+        # Should find 1.75.0 as closest
+        assert "1.75.0" in result
+
+    def test_fallback_to_stable(self):
+        """Test fallback to stable when no match."""
+        installed = ["stable-x86_64-pc-windows-msvc", "1.74.0"]
+        result = find_best_toolchain("unknown-version", installed)
+        assert "stable" in result
+
+    def test_empty_installed_list(self):
+        """Test with empty installed list."""
+        result = find_best_toolchain("1.76.0", [])
+        assert result == "stable"
+
+    def test_major_version_difference_weighted(self):
+        """Test that major version differences are weighted higher."""
+        installed = ["1.50.0-x86_64-pc-windows-msvc", "2.0.0-x86_64-pc-windows-msvc"]
+        result = find_best_toolchain("1.76.0", installed)
+        # Should prefer 1.50.0 over 2.0.0 despite minor version diff
+        assert "1.50.0" in result
+
+
+class TestParseCrateInfo:
+    """Test parse_crate_info function."""
+
+    def test_string_crate_with_version(self):
+        """Test parsing crate string with version."""
+        item = {"crate": "serde", "to_version": "1.0"}
+        result = parse_crate_info(item)
+        assert result == {"serde": "1.0"}
+
+    def test_string_crate_without_version(self):
+        """Test parsing crate string without version defaults to *."""
+        item = {"crate": "serde"}
+        result = parse_crate_info(item)
+        assert result == {"serde": "*"}
+
+    def test_dict_with_string_values(self):
+        """Test parsing dict with string version values."""
+        item = {"crate": {"serde": "1.0", "tokio": "1.35"}}
+        result = parse_crate_info(item)
+        assert result == {"serde": "1.0", "tokio": "1.35"}
+
+    def test_dict_with_nested_version(self):
+        """Test parsing dict with nested version dicts."""
+        item = {"crate": {"serde": {"version": "1.0"}, "tokio": {"version": "1.35"}}}
+        result = parse_crate_info(item)
+        assert result == {"serde": "1.0", "tokio": "1.35"}
+
+    def test_mixed_dict_formats(self):
+        """Test parsing dict with mixed formats."""
+        item = {"crate": {"serde": "1.0", "tokio": {"version": "1.35"}}}
+        result = parse_crate_info(item)
+        assert result == {"serde": "1.0", "tokio": "1.35"}
+
+    def test_missing_crate_key(self):
+        """Test parsing item without crate key."""
+        item = {"other": "data"}
+        result = parse_crate_info(item)
+        assert result == {}
+
+    def test_empty_item(self):
+        """Test parsing empty item."""
+        result = parse_crate_info({})
+        assert result == {}
+
+    def test_nested_dict_without_version_key(self):
+        """Test nested dict without version key is skipped."""
+        item = {"crate": {"serde": {"features": ["derive"]}}}
+        result = parse_crate_info(item)
+        assert result == {}  # No version key, so skipped

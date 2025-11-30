@@ -192,11 +192,55 @@ async def test_run_clippy_returns_results(sample_crate_dir):
 
 ### Test Coverage
 
-We aim for **90%+ test coverage**. Check coverage with:
+We aim for **90%+ test coverage**. Current coverage: **75%** (as of v2.2.0). Check coverage with:
 
 ```bash
 pytest tests/ --cov=sigil_pipeline --cov-report=html
 # Open htmlcov/index.html in browser
+```
+
+### Test Module Coverage
+
+The test suite comprehensively covers all major modules:
+
+| Module | Test File | Description | Coverage |
+|--------|-----------|-------------|----------|
+| `api_tracker.py` | `test_api_tracker.py` | API evolution tracking | 79% |
+| `usage_analyzer.py` | `test_usage_analyzer.py` | Static usage analysis | 89% |
+| `telemetry.py` | `test_telemetry.py` | OpenTelemetry tracing | 77% |
+| `dataset_splitter.py` | `test_dataset_splitter.py` | Train/val splitting | 98% |
+| `cli/ecosystem.py` | `test_cli_ecosystem.py` | CLI orchestrator | 93% |
+| `converters.py` | `test_converters.py` | Format conversion | 63% |
+| `ast_patterns.py` | `test_ast_patterns.py` | AST extraction | 78% |
+| `utils.py` | `test_utils.py` | Utility functions | 82% |
+| `filter.py` | `test_filter.py` | Quality filtering | 89% |
+| `task_generator.py` | `test_task_generator.py` | Task generation | 80% |
+| `analyzer.py` | `test_analyzer.py` | Crate analysis | 81% |
+| `config.py` | `test_config.py` | Configuration | 99% |
+| `environment.py` | `test_environment.py` | Environment detection | 91% |
+| `format_validator.py` | `test_format_validator.py` | Format validation | 83% |
+| `prompt_templates.py` | `test_prompt_templates.py` | Prompt generation | 92% |
+
+#### Running Specific Test Categories
+
+```bash
+# API and tracking tests
+pytest tests/test_api_tracker.py tests/test_usage_analyzer.py -v
+
+# AST and pattern tests
+pytest tests/test_ast_patterns.py tests/test_filter.py -v
+
+# Task generation tests
+pytest tests/test_task_generator.py -v
+
+# Telemetry and observability tests
+pytest tests/test_telemetry.py -v
+
+# Integration tests
+pytest tests/test_ecosystem_integration.py -v
+
+# Property-based tests
+pytest tests/test_properties.py -v --hypothesis-show-statistics
 ```
 
 ---

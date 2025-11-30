@@ -424,23 +424,27 @@ def ensure_crate_dependencies_available(
                 dependencies_dict: dict[str, str] = {}
                 in_dependencies_section = False
 
-                for line in content.split('\n'):
+                for line in content.split("\n"):
                     line_stripped = line.strip()
-                    if line_stripped in ['[dependencies]', '[dev-dependencies]', '[build-dependencies]']:
+                    if line_stripped in [
+                        "[dependencies]",
+                        "[dev-dependencies]",
+                        "[build-dependencies]",
+                    ]:
                         in_dependencies_section = True
                         continue
-                    elif line_stripped.startswith('[') and line_stripped.endswith(']'):
+                    elif line_stripped.startswith("[") and line_stripped.endswith("]"):
                         in_dependencies_section = False
                         continue
 
-                    if not line_stripped or line_stripped.startswith('#'):
+                    if not line_stripped or line_stripped.startswith("#"):
                         continue
 
-                    if in_dependencies_section and '=' in line_stripped:
-                        parts = line_stripped.split('=', 1)
+                    if in_dependencies_section and "=" in line_stripped:
+                        parts = line_stripped.split("=", 1)
                         if len(parts) == 2:
-                            crate_name = parts[0].strip().strip('"\'')
-                            version_info = parts[1].strip().strip(',"\'')
+                            crate_name = parts[0].strip().strip("\"'")
+                            version_info = parts[1].strip().strip(",\"'")
                             dependencies_dict[crate_name] = version_info
 
                 dependencies = dependencies_dict
@@ -468,10 +472,10 @@ def ensure_crate_dependencies_available(
             # Read existing Cargo.toml and append dependencies
             cargo_toml = temp_path / "Cargo.toml"
             try:
-                with open(cargo_toml, 'r', encoding='utf-8') as f:
+                with open(cargo_toml, "r", encoding="utf-8") as f:
                     cargo_content = f.read()
 
-                with open(cargo_toml, 'w', encoding='utf-8') as f:
+                with open(cargo_toml, "w", encoding="utf-8") as f:
                     f.write(cargo_content)
                     f.write("\n[dependencies]\n")
                     for crate_name, crate_version in dependencies.items():
@@ -485,7 +489,9 @@ def ensure_crate_dependencies_available(
             if rust_version and rust_version != "stable":
                 installed = get_installed_toolchains()
                 best_toolchain = find_best_toolchain(rust_version, installed)
-                fetch_cmd = ["rustup", "run", best_toolchain] + build_cargo_command("fetch", "--quiet")
+                fetch_cmd = ["rustup", "run", best_toolchain] + build_cargo_command(
+                    "fetch", "--quiet"
+                )
             else:
                 fetch_cmd = build_cargo_command("fetch", "--quiet")
 

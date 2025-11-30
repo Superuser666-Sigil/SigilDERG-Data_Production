@@ -252,20 +252,22 @@ def is_api_properly_used(code: str, api_name: str) -> bool:
     escaped_api = re.escape(api_name)
 
     # Find all comments in the code
-    comments = re.findall(r'//.*$|/\*[\s\S]*?\*/', code, re.MULTILINE)
+    comments = re.findall(r"//.*$|/\*[\s\S]*?\*/", code, re.MULTILINE)
 
     # Remove comments from code for checking actual usage
     code_without_comments = code
     for comment in comments:
-        code_without_comments = code_without_comments.replace(comment, '')
+        code_without_comments = code_without_comments.replace(comment, "")
 
     # Check if API is mentioned outside of comments
     # Use word boundaries to avoid partial matches
-    api_pattern = r'(?<![a-zA-Z0-9_])' + escaped_api + r'(?![a-zA-Z0-9_])'
+    api_pattern = r"(?<![a-zA-Z0-9_])" + escaped_api + r"(?![a-zA-Z0-9_])"
     return bool(re.search(api_pattern, code_without_comments))
 
 
-def static_analysis_rust_code(code: str, api_name: str | None = None) -> tuple[bool, str]:
+def static_analysis_rust_code(
+    code: str, api_name: str | None = None
+) -> tuple[bool, str]:
     """
     Perform fast static analysis on Rust code without compilation.
 
@@ -306,9 +308,9 @@ def static_analysis_rust_code(code: str, api_name: str | None = None) -> tuple[b
 
     # Basic syntax checks - ensure code has basic Rust structure
     syntax_checks = [
-        (r'\bfn\b', "Missing function definition"),
-        (r'[{]', "Missing opening braces"),
-        (r'[}]', "Missing closing braces"),
+        (r"\bfn\b", "Missing function definition"),
+        (r"[{]", "Missing opening braces"),
+        (r"[}]", "Missing closing braces"),
     ]
 
     for pattern, error in syntax_checks:
@@ -322,9 +324,9 @@ def static_analysis_rust_code(code: str, api_name: str | None = None) -> tuple[b
     # Check for obvious syntax errors - unclosed quotes, brackets, etc.
     quotes = code_without_lifetimes.count('"') % 2
     single_quotes = code_without_lifetimes.count("'") % 2
-    parentheses = code.count('(') - code.count(')')
-    braces = code.count('{') - code.count('}')
-    brackets = code.count('[') - code.count(']')
+    parentheses = code.count("(") - code.count(")")
+    braces = code.count("{") - code.count("}")
+    brackets = code.count("[") - code.count("]")
 
     if quotes != 0:
         return False, "Unclosed double quotes"

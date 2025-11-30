@@ -438,11 +438,23 @@ python tools/rebalance_task_mix.py \
 ## Testing
 
 ```bash
-# Run all tests
+# Run all tests (672 tests)
 pytest tests/
 
-# Run format validation tests
-pytest tests/test_format_alignment.py -v
+# Run with coverage report
+pytest tests/ --cov=sigil_pipeline --cov-report=term-missing
+
+# Run specific test modules
+pytest tests/test_api_tracker.py -v          # API evolution tracking
+pytest tests/test_ast_patterns.py -v         # AST-based extraction
+pytest tests/test_task_generator.py -v       # Task type generation
+pytest tests/test_telemetry.py -v            # OpenTelemetry tracing
+pytest tests/test_converters.py -v           # Format conversion
+pytest tests/test_dataset_splitter.py -v     # Train/val splitting
+
+# Run tests by keyword
+pytest tests/ -k "api" -v                    # API-related tests
+pytest tests/ -k "ast" -v                    # AST parsing tests
 
 # Run property-based tests
 pytest tests/test_properties.py -v --hypothesis-show-statistics
@@ -450,6 +462,19 @@ pytest tests/test_properties.py -v --hypothesis-show-statistics
 # Run local CI checks
 python test_ci_local.py
 ```
+
+### Test Coverage Summary
+
+| Category | Modules | Coverage |
+|----------|---------|----------|
+| Core Pipeline | analyzer, filter, config | 81-99% |
+| AST Processing | ast_patterns, task_generator | 78-80% |
+| API Tracking | api_tracker, usage_analyzer | 79-89% |
+| Data Processing | dataset_splitter, converters | 63-98% |
+| Infrastructure | telemetry, utils, environment | 77-91% |
+| CLI | ecosystem, main | 42-93% |
+
+**Overall Coverage: 75%** (4845 statements, 672 tests passing)
 
 ## SigilDERG Ecosystem Integration
 

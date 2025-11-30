@@ -98,10 +98,10 @@ class RustASTParser:
             List of extracted API entities
         """
         try:
-            with open(file_path, 'r', encoding='utf-8', errors='replace') as f:
+            with open(file_path, "r", encoding="utf-8", errors="replace") as f:
                 content = f.read()
 
-            tree = self.parser.parse(content.encode('utf-8'))
+            tree = self.parser.parse(content.encode("utf-8"))
             root_node = tree.root_node
 
             entities: list[APIEntity] = []
@@ -150,7 +150,7 @@ class RustASTParser:
             if not name_node:
                 return None
 
-            name = content[name_node.start_byte:name_node.end_byte]
+            name = content[name_node.start_byte : name_node.end_byte]
 
             # Check visibility
             is_pub = False
@@ -175,14 +175,18 @@ class RustASTParser:
             documentation, examples = self._parse_docs(node, content)
 
             # Extract source code
-            source_code = content[node.start_byte:node.end_byte]
+            source_code = content[node.start_byte : node.end_byte]
 
             # Determine entity type
             param_list = node.child_by_field_name("parameters")
             entity_type = "function"
             if param_list:
-                params_text = content[param_list.start_byte:param_list.end_byte]
-                if "self" in params_text or "&self" in params_text or "&mut self" in params_text:
+                params_text = content[param_list.start_byte : param_list.end_byte]
+                if (
+                    "self" in params_text
+                    or "&self" in params_text
+                    or "&mut self" in params_text
+                ):
                     entity_type = "method"
 
             return APIEntity(
@@ -193,7 +197,7 @@ class RustASTParser:
                 documentation=documentation,
                 examples=examples,
                 source_code=source_code,
-                attributes=attributes
+                attributes=attributes,
             )
         except Exception as e:
             logger.debug(f"Failed to parse function: {e}")
@@ -208,7 +212,7 @@ class RustASTParser:
             if not name_node:
                 return None
 
-            name = content[name_node.start_byte:name_node.end_byte]
+            name = content[name_node.start_byte : name_node.end_byte]
 
             # Check visibility
             is_pub = False
@@ -230,7 +234,7 @@ class RustASTParser:
             documentation, examples = self._parse_docs(node, content)
 
             # Extract source code
-            source_code = content[node.start_byte:node.end_byte]
+            source_code = content[node.start_byte : node.end_byte]
 
             return APIEntity(
                 name=name,
@@ -240,7 +244,7 @@ class RustASTParser:
                 documentation=documentation,
                 examples=examples,
                 source_code=source_code,
-                attributes=attributes
+                attributes=attributes,
             )
         except Exception as e:
             logger.debug(f"Failed to parse struct: {e}")
@@ -255,7 +259,7 @@ class RustASTParser:
             if not name_node:
                 return None
 
-            name = content[name_node.start_byte:name_node.end_byte]
+            name = content[name_node.start_byte : name_node.end_byte]
 
             # Check visibility
             is_pub = False
@@ -277,7 +281,7 @@ class RustASTParser:
             documentation, examples = self._parse_docs(node, content)
 
             # Extract source code
-            source_code = content[node.start_byte:node.end_byte]
+            source_code = content[node.start_byte : node.end_byte]
 
             return APIEntity(
                 name=name,
@@ -287,7 +291,7 @@ class RustASTParser:
                 documentation=documentation,
                 examples=examples,
                 source_code=source_code,
-                attributes=attributes
+                attributes=attributes,
             )
         except Exception as e:
             logger.debug(f"Failed to parse enum: {e}")
@@ -302,7 +306,7 @@ class RustASTParser:
             if not name_node:
                 return None
 
-            name = content[name_node.start_byte:name_node.end_byte]
+            name = content[name_node.start_byte : name_node.end_byte]
 
             # Check visibility
             is_pub = False
@@ -324,7 +328,7 @@ class RustASTParser:
             documentation, examples = self._parse_docs(node, content)
 
             # Extract source code
-            source_code = content[node.start_byte:node.end_byte]
+            source_code = content[node.start_byte : node.end_byte]
 
             return APIEntity(
                 name=name,
@@ -334,7 +338,7 @@ class RustASTParser:
                 documentation=documentation,
                 examples=examples,
                 source_code=source_code,
-                attributes=attributes
+                attributes=attributes,
             )
         except Exception as e:
             logger.debug(f"Failed to parse trait: {e}")
@@ -349,7 +353,7 @@ class RustASTParser:
             if not name_node:
                 return None
 
-            name = content[name_node.start_byte:name_node.end_byte]
+            name = content[name_node.start_byte : name_node.end_byte]
 
             # Extract signature
             signature = f"macro_rules! {name}"
@@ -361,7 +365,7 @@ class RustASTParser:
             documentation, examples = self._parse_docs(node, content)
 
             # Extract source code
-            source_code = content[node.start_byte:node.end_byte]
+            source_code = content[node.start_byte : node.end_byte]
 
             return APIEntity(
                 name=name,
@@ -371,7 +375,7 @@ class RustASTParser:
                 documentation=documentation,
                 examples=examples,
                 source_code=source_code,
-                attributes=attributes
+                attributes=attributes,
             )
         except Exception as e:
             logger.debug(f"Failed to parse macro: {e}")
@@ -385,37 +389,37 @@ class RustASTParser:
         prev_sibling = node.prev_sibling
         while prev_sibling:
             if prev_sibling.type == "attribute_item":
-                attr_text = content[prev_sibling.start_byte:prev_sibling.end_byte]
+                attr_text = content[prev_sibling.start_byte : prev_sibling.end_byte]
 
                 # Parse #[stable(feature = "...", since = "...")]
                 stable_match = re.search(
                     r'#\[\s*stable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*since\s*=\s*"([^"]+)"\s*\)\s*\]',
                     attr_text,
-                    re.DOTALL
+                    re.DOTALL,
                 )
                 if stable_match:
                     feature, version = stable_match.groups()
-                    attributes['stable'] = {'feature': feature, 'version': version}
+                    attributes["stable"] = {"feature": feature, "version": version}
 
                 # Parse #[deprecated(since = "...", note = "...")]
                 deprecated_pattern = re.compile(
-                    r'#\[\s*deprecated\s*\(\s*'
+                    r"#\[\s*deprecated\s*\(\s*"
                     r'(?:[\s\n]*since\s*=\s*"([^"]+)"\s*,?)?'
                     r'(?:[\s\n]*note\s*=\s*"((?:[^"]|\\")*)"\s*,?)?'
                     r'(?:[\s\n]*suggestion\s*=\s*"([^"]+)"\s*,?)?'
-                    r'[\s\n]*\)\s*\]',
-                    re.DOTALL
+                    r"[\s\n]*\)\s*\]",
+                    re.DOTALL,
                 )
                 deprecated_match = deprecated_pattern.search(attr_text)
                 if deprecated_match:
                     since = deprecated_match.group(1)
                     note = deprecated_match.group(2)
                     if note:
-                        note = note.replace(r'\"', '"')
-                    if not re.search(r'allow\s*\(\s*deprecated\s*\)', attr_text):
-                        attributes['deprecated'] = {
-                            'since': since.strip() if since else None,
-                            'note': note.strip() if note else None
+                        note = note.replace(r"\"", '"')
+                    if not re.search(r"allow\s*\(\s*deprecated\s*\)", attr_text):
+                        attributes["deprecated"] = {
+                            "since": since.strip() if since else None,
+                            "note": note.strip() if note else None,
                         }
 
                 # Parse #[unstable(feature = "...", issue = "...")]
@@ -423,13 +427,21 @@ class RustASTParser:
                     r'#\[\s*unstable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*issue\s*=\s*"([^"]+)"'
                     r'\s*(?:,\s*reason\s*=\s*"([^"]+)")?\s*\)\s*\]',
                     attr_text,
-                    re.DOTALL
+                    re.DOTALL,
                 )
                 if unstable_match:
                     feature = unstable_match.group(1)
                     issue = unstable_match.group(2)
-                    reason = unstable_match.group(3) if len(unstable_match.groups()) > 2 else None
-                    attributes['unstable'] = {'feature': feature, 'issue': issue, 'reason': reason}
+                    reason = (
+                        unstable_match.group(3)
+                        if len(unstable_match.groups()) > 2
+                        else None
+                    )
+                    attributes["unstable"] = {
+                        "feature": feature,
+                        "issue": issue,
+                        "reason": reason,
+                    }
 
             prev_sibling = prev_sibling.prev_sibling
 
@@ -452,13 +464,13 @@ class RustASTParser:
         prev_sibling = node.prev_sibling
         while prev_sibling:
             if prev_sibling.type == "line_comment":
-                line = content[prev_sibling.start_byte:prev_sibling.end_byte].strip()
+                line = content[prev_sibling.start_byte : prev_sibling.end_byte].strip()
 
                 if line.startswith("///"):
                     doc_line = line[3:].strip()
 
                     # Detect Examples section
-                    if re.match(r'^#+\s*examples?', doc_line, re.IGNORECASE):
+                    if re.match(r"^#+\s*examples?", doc_line, re.IGNORECASE):
                         in_examples_section = True
                         prev_sibling = prev_sibling.prev_sibling
                         continue
@@ -467,7 +479,7 @@ class RustASTParser:
 
                     # Handle code blocks
                     if doc_line.startswith("```"):
-                        lang_match = re.match(r'^```(\S*)', doc_line)
+                        lang_match = re.match(r"^```(\S*)", doc_line)
                         code_lang = lang_match.group(1) if lang_match else ""
 
                         if in_code_block:
@@ -533,7 +545,7 @@ class ModulePathExtractor:
             return ""
 
         joined_examples = "\n".join(examples)
-        use_matches = re.finditer(r'use\s+([^;]+);', joined_examples)
+        use_matches = re.finditer(r"use\s+([^;]+);", joined_examples)
 
         for match in use_matches:
             module_path = match.group(1).strip()
@@ -553,7 +565,9 @@ class ModulePathExtractor:
             rel_path = file_path.relative_to(self.repo_path)
             parts = list(rel_path.parts)
 
-            lib_indices = [i for i, part in enumerate(parts) if part in ["std", "core", "alloc"]]
+            lib_indices = [
+                i for i, part in enumerate(parts) if part in ["std", "core", "alloc"]
+            ]
             if not lib_indices:
                 return ""
 
@@ -562,11 +576,11 @@ class ModulePathExtractor:
 
             try:
                 src_idx = parts.index("src", lib_idx)
-                module_parts = [lib_type] + list(parts[src_idx + 1:])
+                module_parts = [lib_type] + list(parts[src_idx + 1 :])
 
-                if module_parts[-1].endswith('.rs'):
+                if module_parts[-1].endswith(".rs"):
                     module_parts[-1] = module_parts[-1][:-3]
-                if module_parts[-1] == 'mod':
+                if module_parts[-1] == "mod":
                     module_parts.pop()
 
                 return "::".join(module_parts)
@@ -604,7 +618,7 @@ class APIChangeDetector:
         std_paths = [
             self.repo_path / "library" / "std",
             self.repo_path / "library" / "core",
-            self.repo_path / "library" / "alloc"
+            self.repo_path / "library" / "alloc",
         ]
 
         for std_path in std_paths:
@@ -623,7 +637,9 @@ class APIChangeDetector:
                     entity.version = version
 
                     # Create key
-                    key = f"{module_path}::{entity.name}" if module_path else entity.name
+                    key = (
+                        f"{module_path}::{entity.name}" if module_path else entity.name
+                    )
                     apis[key] = entity
 
         return apis
@@ -646,68 +662,84 @@ class APIChangeDetector:
 
         # 1. Detect stabilized APIs
         for key, new_api in new_apis.items():
-            if 'stable' in new_api.attributes:
-                stable_info = new_api.attributes['stable']
-                stable_version = stable_info.get('version', '')
+            if "stable" in new_api.attributes:
+                stable_info = new_api.attributes["stable"]
+                stable_version = stable_info.get("version", "")
 
                 if self._is_version_in_range(stable_version, from_version, to_version):
                     if key not in old_apis:
-                        changes.append(APIChange(
-                            api=new_api,
-                            change_type="stabilized",
-                            from_version=from_version,
-                            to_version=to_version,
-                            details=f"New API stabilized in version {stable_version}"
-                        ))
-                    elif 'stable' not in old_apis[key].attributes and 'unstable' in old_apis[key].attributes:
-                        changes.append(APIChange(
-                            api=new_api,
-                            change_type="stabilized",
-                            from_version=from_version,
-                            to_version=to_version,
-                            details=f"API stabilized in version {stable_version}, previously unstable"
-                        ))
+                        changes.append(
+                            APIChange(
+                                api=new_api,
+                                change_type="stabilized",
+                                from_version=from_version,
+                                to_version=to_version,
+                                details=f"New API stabilized in version {stable_version}",
+                            )
+                        )
+                    elif (
+                        "stable" not in old_apis[key].attributes
+                        and "unstable" in old_apis[key].attributes
+                    ):
+                        changes.append(
+                            APIChange(
+                                api=new_api,
+                                change_type="stabilized",
+                                from_version=from_version,
+                                to_version=to_version,
+                                details=f"API stabilized in version {stable_version}, previously unstable",
+                            )
+                        )
 
         # 2. Detect deprecated APIs
         for key, new_api in new_apis.items():
-            if 'deprecated' in new_api.attributes:
+            if "deprecated" in new_api.attributes:
                 if key not in old_apis:
-                    deprecated_info = new_api.attributes['deprecated']
-                    deprecated_version = deprecated_info.get('since', '')
+                    deprecated_info = new_api.attributes["deprecated"]
+                    deprecated_version = deprecated_info.get("since", "")
 
                     if deprecated_version and self._is_version_in_range(
                         deprecated_version, from_version, to_version
                     ):
-                        changes.append(APIChange(
-                            api=new_api,
-                            change_type="deprecated",
-                            from_version=from_version,
-                            to_version=to_version,
-                            details=f"New API immediately deprecated in version {deprecated_version}: "
-                                    f"{deprecated_info.get('note', 'No reason provided')}"
-                        ))
+                        changes.append(
+                            APIChange(
+                                api=new_api,
+                                change_type="deprecated",
+                                from_version=from_version,
+                                to_version=to_version,
+                                details=f"New API immediately deprecated in version {deprecated_version}: "
+                                f"{deprecated_info.get('note', 'No reason provided')}",
+                            )
+                        )
                 else:
-                    if 'deprecated' not in old_apis[key].attributes:
-                        deprecated_info = new_api.attributes['deprecated']
-                        deprecated_version = deprecated_info.get('since', '')
+                    if "deprecated" not in old_apis[key].attributes:
+                        deprecated_info = new_api.attributes["deprecated"]
+                        deprecated_version = deprecated_info.get("since", "")
 
                         if deprecated_version:
-                            if (deprecated_version == to_version or
-                                deprecated_version == from_version or
-                                self._is_version_in_range(deprecated_version, from_version, to_version)):
-                                changes.append(APIChange(
-                                    api=new_api,
-                                    change_type="deprecated",
-                                    from_version=from_version,
-                                    to_version=to_version,
-                                    details=f"API deprecated in version {deprecated_version}: "
-                                            f"{deprecated_info.get('note', 'No reason provided')}"
-                                ))
+                            if (
+                                deprecated_version == to_version
+                                or deprecated_version == from_version
+                                or self._is_version_in_range(
+                                    deprecated_version, from_version, to_version
+                                )
+                            ):
+                                changes.append(
+                                    APIChange(
+                                        api=new_api,
+                                        change_type="deprecated",
+                                        from_version=from_version,
+                                        to_version=to_version,
+                                        details=f"API deprecated in version {deprecated_version}: "
+                                        f"{deprecated_info.get('note', 'No reason provided')}",
+                                    )
+                                )
 
         # 3. Detect signature changes
         for key in set(old_apis.keys()) & set(new_apis.keys()):
             if any(
-                c.api.name == new_apis[key].name and c.api.module == new_apis[key].module
+                c.api.name == new_apis[key].name
+                and c.api.module == new_apis[key].module
                 for c in changes
             ):
                 continue
@@ -719,34 +751,41 @@ class APIChangeDetector:
             new_normalized = self._normalize_signature(new_api.signature)
 
             if old_normalized != new_normalized:
-                changes.append(APIChange(
-                    api=new_api,
-                    change_type="signature",
-                    from_version=from_version,
-                    to_version=to_version,
-                    details=f"Signature changed from `{old_api.signature}` to `{new_api.signature}`",
-                    old_source_code=old_api.source_code
-                ))
+                changes.append(
+                    APIChange(
+                        api=new_api,
+                        change_type="signature",
+                        from_version=from_version,
+                        to_version=to_version,
+                        details=f"Signature changed from `{old_api.signature}` to `{new_api.signature}`",
+                        old_source_code=old_api.source_code,
+                    )
+                )
             # 4. Detect implicit changes
             elif self._detect_implicit_change(old_api, new_api):
-                changes.append(APIChange(
-                    api=new_api,
-                    change_type="implicit",
-                    from_version=from_version,
-                    to_version=to_version,
-                    details="API behavior may have changed (implementation or documentation has "
-                            "significant changes)",
-                    old_source_code=old_api.source_code
-                ))
+                changes.append(
+                    APIChange(
+                        api=new_api,
+                        change_type="implicit",
+                        from_version=from_version,
+                        to_version=to_version,
+                        details="API behavior may have changed (implementation or documentation has "
+                        "significant changes)",
+                        old_source_code=old_api.source_code,
+                    )
+                )
 
         return changes
 
-    def _is_version_in_range(self, version: str, from_version: str, to_version: str) -> bool:
+    def _is_version_in_range(
+        self, version: str, from_version: str, to_version: str
+    ) -> bool:
         """Check if version is in range."""
         try:
+
             def parse_version(v: str) -> tuple[int, ...]:
                 """Parse version string into tuple of integers."""
-                parts = v.split('.')
+                parts = v.split(".")
                 return tuple(int(p) for p in parts if p.isdigit())
 
             ver = parse_version(version)
@@ -758,9 +797,9 @@ class APIChangeDetector:
 
     def _normalize_signature(self, signature: str) -> str:
         """Normalize signature for comparison."""
-        signature = re.sub(r'//.*$', '', signature, flags=re.MULTILINE)
-        signature = re.sub(r'\s+', ' ', signature)
-        signature = re.sub(r'\s*([(),:])\s*', r'\1', signature)
+        signature = re.sub(r"//.*$", "", signature, flags=re.MULTILINE)
+        signature = re.sub(r"\s+", " ", signature)
+        signature = re.sub(r"\s*([(),:])\s*", r"\1", signature)
         return signature.strip()
 
     def _detect_implicit_change(self, old_api: APIEntity, new_api: APIEntity) -> bool:
@@ -780,8 +819,13 @@ class APIChangeDetector:
         # Check documentation for behavior change keywords
         if old_api.documentation != new_api.documentation:
             behavior_phrases = [
-                'breaking change', 'behavior change', 'now returns',
-                'now behaves', 'changed behavior', 'panic', 'differently'
+                "breaking change",
+                "behavior change",
+                "now returns",
+                "now behaves",
+                "changed behavior",
+                "panic",
+                "differently",
             ]
 
             old_doc = old_api.documentation.lower()
@@ -795,24 +839,24 @@ class APIChangeDetector:
 
     def _normalize_code(self, code: str) -> str:
         """Normalize code for comparison."""
-        code = re.sub(r'//.*$', '', code, flags=re.MULTILINE)
-        code = re.sub(r'\s+', ' ', code)
+        code = re.sub(r"//.*$", "", code, flags=re.MULTILINE)
+        code = re.sub(r"\s+", " ", code)
         return code.strip()
 
     def _extract_function_body(self, code: str) -> str:
         """Extract function body."""
-        open_brace = code.find('{')
+        open_brace = code.find("{")
         if open_brace == -1:
             return code
 
         count = 1
         for i in range(open_brace + 1, len(code)):
-            if code[i] == '{':
+            if code[i] == "{":
                 count += 1
-            elif code[i] == '}':
+            elif code[i] == "}":
                 count -= 1
                 if count == 0:
-                    return code[open_brace:i+1]
+                    return code[open_brace : i + 1]
 
         return code[open_brace:]
 

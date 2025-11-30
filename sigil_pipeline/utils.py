@@ -640,7 +640,7 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
 
             # Handle both string and list inputs
             if isinstance(content, str):
-                lines = content.split('\n')
+                lines = content.split("\n")
             else:
                 lines = content
 
@@ -648,23 +648,27 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
                 line_stripped = line.strip()
 
                 # Check for dependencies section headers (handles multiple dependency section types)
-                if line_stripped == '[dependencies]' or line_stripped == '[dev-dependencies]' or line_stripped == '[build-dependencies]':
+                if (
+                    line_stripped == "[dependencies]"
+                    or line_stripped == "[dev-dependencies]"
+                    or line_stripped == "[build-dependencies]"
+                ):
                     in_dependencies_section = True
                     continue
-                elif line_stripped.startswith('[') and line_stripped.endswith(']'):
+                elif line_stripped.startswith("[") and line_stripped.endswith("]"):
                     in_dependencies_section = False
                     continue
 
                 # Skip empty lines and comments
-                if not line_stripped or line_stripped.startswith('#'):
+                if not line_stripped or line_stripped.startswith("#"):
                     continue
 
                 # Extract dependency information if we're in a dependencies section
-                if in_dependencies_section and '=' in line_stripped:
-                    parts = line_stripped.split('=', 1)
+                if in_dependencies_section and "=" in line_stripped:
+                    parts = line_stripped.split("=", 1)
                     if len(parts) == 2:
-                        crate_name = parts[0].strip().strip('"\'')
-                        version_info = parts[1].strip().strip(',"\'')
+                        crate_name = parts[0].strip().strip("\"'")
+                        version_info = parts[1].strip().strip(",\"'")
 
                         dependencies[crate_name] = version_info
 
@@ -738,10 +742,7 @@ def get_installed_toolchains() -> list[str]:
 
     try:
         result = subprocess.run(
-            ["rustup", "toolchain", "list"],
-            capture_output=True,
-            text=True,
-            timeout=10
+            ["rustup", "toolchain", "list"], capture_output=True, text=True, timeout=10
         )
 
         if result.returncode != 0:
@@ -749,9 +750,9 @@ def get_installed_toolchains() -> list[str]:
             return ["stable"]
 
         toolchains = []
-        for line in result.stdout.strip().split('\n'):
+        for line in result.stdout.strip().split("\n"):
             # Extract toolchain name (format: "1.76.0-x86_64-pc-windows-msvc (default)")
-            match = re.search(r'^([^\s]+)', line)
+            match = re.search(r"^([^\s]+)", line)
             if match:
                 toolchains.append(match.group(1))
 
@@ -807,14 +808,14 @@ def find_best_toolchain(requested_version: str, installed_toolchains: list[str])
                 return toolchain
 
     # Semantic version matching
-    if re.match(r'^\d+\.\d+\.\d+$', requested_version):
-        requested_parts = [int(x) for x in requested_version.split('.')]
+    if re.match(r"^\d+\.\d+\.\d+$", requested_version):
+        requested_parts = [int(x) for x in requested_version.split(".")]
         best_match = None
-        min_diff = float('inf')
+        min_diff = float("inf")
 
         for toolchain in installed_toolchains:
             # Extract version from toolchain string (e.g., "1.76.0-x86_64-pc-windows-msvc")
-            version_match = re.match(r'^(\d+)\.(\d+)\.(\d+)', toolchain)
+            version_match = re.match(r"^(\d+)\.(\d+)\.(\d+)", toolchain)
             if not version_match:
                 continue
 

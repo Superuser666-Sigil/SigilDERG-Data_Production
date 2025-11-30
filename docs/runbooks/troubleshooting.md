@@ -6,6 +6,26 @@ This runbook covers diagnosing and resolving common issues with the Sigil Pipeli
 
 ## Quick Diagnostics
 
+### 0. Run Test Suite First
+
+Before investigating complex issues, verify the pipeline components work correctly:
+
+```bash
+# Quick smoke test (fast)
+pytest tests/test_config.py tests/test_filter.py -v --tb=short
+
+# Full test suite with coverage
+pytest --cov=sigil_pipeline --cov-report=term-missing
+
+# Test specific components
+pytest tests/test_ast_patterns.py -v      # AST extraction issues
+pytest tests/test_utils.py -v             # Toolchain/crate utilities
+pytest tests/test_api_tracker.py -v       # API evolution tracking
+pytest tests/test_cli_ecosystem.py -v     # CLI orchestration
+```
+
+**Note:** The test suite has 672 tests covering 75% of the codebase. If tests pass but the pipeline still fails, the issue is likely environmental (network, permissions, disk space) rather than a code bug.
+
 ### 1. Check System Status
 
 ```bash

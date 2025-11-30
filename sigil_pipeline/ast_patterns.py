@@ -133,26 +133,28 @@ def check_function_in_code(code: str, signature: str) -> bool:
     signature = signature.strip()
 
     # Extract function name from signature
-    fn_name_match = re.search(r'fn\s+([a-zA-Z0-9_]+)', signature)
+    fn_name_match = re.search(r"fn\s+([a-zA-Z0-9_]+)", signature)
     if not fn_name_match:
         return False
 
     fn_name = fn_name_match.group(1)
 
     # Basic check: function name and opening brace
-    basic_pattern = r'fn\s+' + re.escape(fn_name) + r'\s*\([^{]*{'
+    basic_pattern = r"fn\s+" + re.escape(fn_name) + r"\s*\([^{]*{"
     if re.search(basic_pattern, code):
         return True
 
     # Strict check: function name and exact parameters
-    params_match = re.search(r'fn\s+[a-zA-Z0-9_]+\s*\(([^)]*)\)', signature)
+    params_match = re.search(r"fn\s+[a-zA-Z0-9_]+\s*\(([^)]*)\)", signature)
     if not params_match:
         return False
 
     params = params_match.group(1).strip()
 
     # Match function name and parameters exactly
-    strict_pattern = r'fn\s+' + re.escape(fn_name) + r'\s*\(\s*' + re.escape(params) + r'\s*\)'
+    strict_pattern = (
+        r"fn\s+" + re.escape(fn_name) + r"\s*\(\s*" + re.escape(params) + r"\s*\)"
+    )
     return bool(re.search(strict_pattern, code))
 
 
@@ -698,7 +700,7 @@ def extract_all_api_entities(code: str) -> list[APIEntity]:
         List of extracted API entities
     """
     parser = _get_parser()
-    tree = parser.parse(code.encode('utf-8'))
+    tree = parser.parse(code.encode("utf-8"))
     root_node = tree.root_node
 
     entities: list[APIEntity] = []
@@ -744,7 +746,7 @@ def _parse_function_entity(node: Any, code: str, module_path: str) -> APIEntity 
         if not name_node:
             return None
 
-        name = code[name_node.start_byte:name_node.end_byte]
+        name = code[name_node.start_byte : name_node.end_byte]
 
         # Check visibility
         is_pub = any(child.type == "visibility_modifier" for child in node.children)
@@ -752,7 +754,7 @@ def _parse_function_entity(node: Any, code: str, module_path: str) -> APIEntity 
         # Extract signature
         body_node = node.child_by_field_name("body")
         signature_end = body_node.start_byte if body_node else node.end_byte
-        signature = code[node.start_byte:signature_end].strip()
+        signature = code[node.start_byte : signature_end].strip()
 
         # Extract attributes
         attributes = _parse_rust_attributes(node, code)
@@ -761,14 +763,18 @@ def _parse_function_entity(node: Any, code: str, module_path: str) -> APIEntity 
         documentation, examples = _parse_comprehensive_docs(node, code)
 
         # Extract source code
-        source_code = code[node.start_byte:node.end_byte]
+        source_code = code[node.start_byte : node.end_byte]
 
         # Determine entity type
         param_list = node.child_by_field_name("parameters")
         entity_type = "function"
         if param_list:
-            params_text = code[param_list.start_byte:param_list.end_byte]
-            if "self" in params_text or "&self" in params_text or "&mut self" in params_text:
+            params_text = code[param_list.start_byte : param_list.end_byte]
+            if (
+                "self" in params_text
+                or "&self" in params_text
+                or "&mut self" in params_text
+            ):
                 entity_type = "method"
 
         return APIEntity(
@@ -780,7 +786,7 @@ def _parse_function_entity(node: Any, code: str, module_path: str) -> APIEntity 
             examples=examples,
             source_code=source_code,
             attributes=attributes,
-            is_pub=is_pub
+            is_pub=is_pub,
         )
     except Exception as e:
         logger.debug(f"Failed to parse function entity: {e}")
@@ -794,13 +800,13 @@ def _parse_struct_entity(node: Any, code: str, module_path: str) -> APIEntity | 
         if not name_node:
             return None
 
-        name = code[name_node.start_byte:name_node.end_byte]
+        name = code[name_node.start_byte : name_node.end_byte]
         is_pub = any(child.type == "visibility_modifier" for child in node.children)
 
         signature = f"struct {name}"
         attributes = _parse_rust_attributes(node, code)
         documentation, examples = _parse_comprehensive_docs(node, code)
-        source_code = code[node.start_byte:node.end_byte]
+        source_code = code[node.start_byte : node.end_byte]
 
         return APIEntity(
             name=name,
@@ -811,7 +817,7 @@ def _parse_struct_entity(node: Any, code: str, module_path: str) -> APIEntity | 
             examples=examples,
             source_code=source_code,
             attributes=attributes,
-            is_pub=is_pub
+            is_pub=is_pub,
         )
     except Exception as e:
         logger.debug(f"Failed to parse struct entity: {e}")
@@ -825,13 +831,13 @@ def _parse_enum_entity(node: Any, code: str, module_path: str) -> APIEntity | No
         if not name_node:
             return None
 
-        name = code[name_node.start_byte:name_node.end_byte]
+        name = code[name_node.start_byte : name_node.end_byte]
         is_pub = any(child.type == "visibility_modifier" for child in node.children)
 
         signature = f"enum {name}"
         attributes = _parse_rust_attributes(node, code)
         documentation, examples = _parse_comprehensive_docs(node, code)
-        source_code = code[node.start_byte:node.end_byte]
+        source_code = code[node.start_byte : node.end_byte]
 
         return APIEntity(
             name=name,
@@ -842,7 +848,7 @@ def _parse_enum_entity(node: Any, code: str, module_path: str) -> APIEntity | No
             examples=examples,
             source_code=source_code,
             attributes=attributes,
-            is_pub=is_pub
+            is_pub=is_pub,
         )
     except Exception as e:
         logger.debug(f"Failed to parse enum entity: {e}")
@@ -856,13 +862,13 @@ def _parse_trait_entity(node: Any, code: str, module_path: str) -> APIEntity | N
         if not name_node:
             return None
 
-        name = code[name_node.start_byte:name_node.end_byte]
+        name = code[name_node.start_byte : name_node.end_byte]
         is_pub = any(child.type == "visibility_modifier" for child in node.children)
 
         signature = f"trait {name}"
         attributes = _parse_rust_attributes(node, code)
         documentation, examples = _parse_comprehensive_docs(node, code)
-        source_code = code[node.start_byte:node.end_byte]
+        source_code = code[node.start_byte : node.end_byte]
 
         return APIEntity(
             name=name,
@@ -873,7 +879,7 @@ def _parse_trait_entity(node: Any, code: str, module_path: str) -> APIEntity | N
             examples=examples,
             source_code=source_code,
             attributes=attributes,
-            is_pub=is_pub
+            is_pub=is_pub,
         )
     except Exception as e:
         logger.debug(f"Failed to parse trait entity: {e}")
@@ -887,12 +893,12 @@ def _parse_macro_entity(node: Any, code: str, module_path: str) -> APIEntity | N
         if not name_node:
             return None
 
-        name = code[name_node.start_byte:name_node.end_byte]
+        name = code[name_node.start_byte : name_node.end_byte]
 
         signature = f"macro_rules! {name}"
         attributes = _parse_rust_attributes(node, code)
         documentation, examples = _parse_comprehensive_docs(node, code)
-        source_code = code[node.start_byte:node.end_byte]
+        source_code = code[node.start_byte : node.end_byte]
 
         return APIEntity(
             name=name,
@@ -903,7 +909,7 @@ def _parse_macro_entity(node: Any, code: str, module_path: str) -> APIEntity | N
             examples=examples,
             source_code=source_code,
             attributes=attributes,
-            is_pub=True  # Macros are typically public
+            is_pub=True,  # Macros are typically public
         )
     except Exception as e:
         logger.debug(f"Failed to parse macro entity: {e}")
@@ -919,37 +925,37 @@ def _parse_rust_attributes(node: Any, code: str) -> dict[str, Any]:
     prev_sibling = node.prev_sibling
     while prev_sibling:
         if prev_sibling.type == "attribute_item":
-            attr_text = code[prev_sibling.start_byte:prev_sibling.end_byte]
+            attr_text = code[prev_sibling.start_byte : prev_sibling.end_byte]
 
             # Parse #[stable(feature = "...", since = "...")]
             stable_match = re.search(
                 r'#\[\s*stable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*since\s*=\s*"([^"]+)"\s*\)\s*\]',
                 attr_text,
-                re.DOTALL
+                re.DOTALL,
             )
             if stable_match:
                 feature, version = stable_match.groups()
-                attributes['stable'] = {'feature': feature, 'version': version}
+                attributes["stable"] = {"feature": feature, "version": version}
 
             # Parse #[deprecated(since = "...", note = "...")]
             deprecated_pattern = re.compile(
-                r'#\[\s*deprecated\s*\(\s*'
+                r"#\[\s*deprecated\s*\(\s*"
                 r'(?:[\s\n]*since\s*=\s*"([^"]+)"\s*,?)?'
                 r'(?:[\s\n]*note\s*=\s*"((?:[^"]|\\")*)"\s*,?)?'
                 r'(?:[\s\n]*suggestion\s*=\s*"([^"]+)"\s*,?)?'
-                r'[\s\n]*\)\s*\]',
-                re.DOTALL
+                r"[\s\n]*\)\s*\]",
+                re.DOTALL,
             )
             deprecated_match = deprecated_pattern.search(attr_text)
             if deprecated_match:
                 since = deprecated_match.group(1)
                 note = deprecated_match.group(2)
                 if note:
-                    note = note.replace(r'\"', '"')
-                if not re.search(r'allow\s*\(\s*deprecated\s*\)', attr_text):
-                    attributes['deprecated'] = {
-                        'since': since.strip() if since else None,
-                        'note': note.strip() if note else None
+                    note = note.replace(r"\"", '"')
+                if not re.search(r"allow\s*\(\s*deprecated\s*\)", attr_text):
+                    attributes["deprecated"] = {
+                        "since": since.strip() if since else None,
+                        "note": note.strip() if note else None,
                     }
 
             # Parse #[unstable(feature = "...", issue = "...")]
@@ -957,13 +963,21 @@ def _parse_rust_attributes(node: Any, code: str) -> dict[str, Any]:
                 r'#\[\s*unstable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*issue\s*=\s*"([^"]+)"\s*'
                 r'(?:,\s*reason\s*=\s*"([^"]+)")?\s*\)\s*\]',
                 attr_text,
-                re.DOTALL
+                re.DOTALL,
             )
             if unstable_match:
                 feature = unstable_match.group(1)
                 issue = unstable_match.group(2)
-                reason = unstable_match.group(3) if len(unstable_match.groups()) > 2 else None
-                attributes['unstable'] = {'feature': feature, 'issue': issue, 'reason': reason}
+                reason = (
+                    unstable_match.group(3)
+                    if len(unstable_match.groups()) > 2
+                    else None
+                )
+                attributes["unstable"] = {
+                    "feature": feature,
+                    "issue": issue,
+                    "reason": reason,
+                }
 
         prev_sibling = prev_sibling.prev_sibling
 
@@ -989,13 +1003,13 @@ def _parse_comprehensive_docs(node: Any, code: str) -> tuple[str, list[str]]:
     prev_sibling = node.prev_sibling
     while prev_sibling:
         if prev_sibling.type == "line_comment":
-            line = code[prev_sibling.start_byte:prev_sibling.end_byte].strip()
+            line = code[prev_sibling.start_byte : prev_sibling.end_byte].strip()
 
             if line.startswith("///"):
                 doc_line = line[3:].strip()
 
                 # Detect Examples section
-                if re.match(r'^#+\s*examples?', doc_line, re.IGNORECASE):
+                if re.match(r"^#+\s*examples?", doc_line, re.IGNORECASE):
                     in_examples_section = True
                     prev_sibling = prev_sibling.prev_sibling
                     continue
@@ -1004,7 +1018,7 @@ def _parse_comprehensive_docs(node: Any, code: str) -> tuple[str, list[str]]:
 
                 # Handle code blocks
                 if doc_line.startswith("```"):
-                    lang_match = re.match(r'^```(\S*)', doc_line)
+                    lang_match = re.match(r"^```(\S*)", doc_line)
                     code_lang = lang_match.group(1) if lang_match else ""
 
                     if in_code_block:

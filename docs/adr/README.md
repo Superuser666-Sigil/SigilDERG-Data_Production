@@ -39,6 +39,7 @@ What becomes easier or more difficult as a result of this decision?
 | [ADR-007](ADR-007-observability-wiring.md) | Observability Infrastructure Integration | Accepted |
 | [ADR-008](ADR-008-fast-pre-filtering.md) | Fast Pre-Filtering Before Expensive Analysis | Accepted |
 | [ADR-009](ADR-009-api-evolution-tracking.md) | API Evolution Tracking | Accepted |
+| [ADR-010](ADR-010-comprehensive-test-coverage.md) | Comprehensive Test Coverage Strategy | Accepted |
 
 ## Creating a New ADR
 

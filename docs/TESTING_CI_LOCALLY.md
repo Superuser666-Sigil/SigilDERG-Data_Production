@@ -152,3 +152,65 @@ After running the test script, fix any issues found:
 - Test failures: Fix failing tests
 
 Run `python test_ci_local.py` again after fixing these issues.
+
+---
+
+## Test File Reference
+
+### New Test Files (v2.2.0)
+
+The following test files were added to improve coverage from 52% to 75%:
+
+| Test File | Lines | Description |
+|-----------|-------|-------------|
+| `test_api_tracker.py` | ~550 | Tests for API evolution tracking, change detection |
+| `test_usage_analyzer.py` | ~300 | Tests for static API usage analysis |
+| `test_telemetry.py` | ~280 | Tests for OpenTelemetry tracing integration |
+| `test_dataset_splitter.py` | ~490 | Tests for train/val splitting by source |
+| `test_cli_ecosystem.py` | ~370 | Tests for CLI pipeline orchestrator |
+| `test_converters.py` | ~280 | Tests for format conversion utilities |
+
+### Expanded Test Files (v2.2.0)
+
+| Test File | New Tests | Description |
+|-----------|-----------|-------------|
+| `test_ast_patterns.py` | ~40 | Added tests for `APIEntity`, `extract_all_api_entities`, `check_function_in_code` |
+| `test_utils.py` | ~22 | Added tests for `get_installed_toolchains`, `find_best_toolchain`, `parse_crate_info` |
+| `test_filter.py` | ~30 | Added tests for `is_api_properly_used`, `static_analysis_rust_code` |
+| `test_task_generator.py` | ~28 | Added tests for explanation tasks, task type selection |
+
+### Running Specific Test Categories
+
+```bash
+# Run only the new test files
+pytest tests/test_api_tracker.py tests/test_usage_analyzer.py tests/test_telemetry.py \
+       tests/test_dataset_splitter.py tests/test_cli_ecosystem.py tests/test_converters.py -v
+
+# Run API-related tests
+pytest tests/test_api_tracker.py tests/test_usage_analyzer.py -v
+
+# Run AST and pattern tests
+pytest tests/test_ast_patterns.py tests/test_filter.py -v
+
+# Run task generation tests
+pytest tests/test_task_generator.py -v
+
+# Run with verbose coverage for specific module
+pytest tests/test_telemetry.py --cov=sigil_pipeline.telemetry --cov-report=term-missing -v
+```
+
+### Test Fixtures
+
+Common fixtures are defined in `tests/conftest.py`:
+
+- `sample_crate_dir` - Creates a temporary crate directory with Cargo.toml
+- `sample_rust_code` - Provides sample Rust code for AST testing
+- `sample_config` - Returns a PipelineConfig with test defaults
+
+Example usage:
+```python
+def test_my_function(sample_crate_dir, sample_config):
+    """Test using shared fixtures."""
+    result = analyze_crate(sample_crate_dir, sample_config)
+    assert result is not None
+```

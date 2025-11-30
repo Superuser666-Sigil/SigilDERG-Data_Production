@@ -60,10 +60,12 @@ class APIUsageAnalyzer:
         Returns:
             UsageAnalysis with confidence score and usage details
         """
-        lines = code.split('\n')
+        lines = code.split("\n")
 
         # Step 1: Analyze imports
-        import_confidence, import_stmt = self._analyze_imports(lines, api_name, module_path)
+        import_confidence, import_stmt = self._analyze_imports(
+            lines, api_name, module_path
+        )
 
         # Step 2: Analyze actual usage
         usage_confidence, usage_type, locations = self._analyze_usage_patterns(
@@ -76,7 +78,9 @@ class APIUsageAnalyzer:
         elif import_confidence == 1.0:
             final_confidence = 0.5  # Imported but not clearly used
         elif import_confidence == 0.7:
-            final_confidence = usage_confidence * 0.8  # Module imported, qualified usage
+            final_confidence = (
+                usage_confidence * 0.8
+            )  # Module imported, qualified usage
         else:
             final_confidence = max(import_confidence, usage_confidence * 0.3)
 
@@ -86,7 +90,7 @@ class APIUsageAnalyzer:
             confidence=final_confidence,
             usage_type=usage_type or "unknown",
             import_statement=import_stmt,
-            usage_locations=locations or []
+            usage_locations=locations or [],
         )
 
     def _analyze_imports(
@@ -104,7 +108,7 @@ class APIUsageAnalyzer:
             line_stripped = line.strip()
 
             if line_stripped.startswith("use ") and ";" in line_stripped:
-                import_path = line_stripped[4:line_stripped.find(";")].strip()
+                import_path = line_stripped[4 : line_stripped.find(";")].strip()
                 imports.append(import_path)
 
                 # Direct import: use std::fs::File;
@@ -112,10 +116,14 @@ class APIUsageAnalyzer:
                     return 1.0, import_path
 
                 # Import with braces: use std::fs::{File, write};
-                if module_path in import_path and "{" in import_path and "}" in import_path:
+                if (
+                    module_path in import_path
+                    and "{" in import_path
+                    and "}" in import_path
+                ):
                     brace_start = import_path.find("{")
                     brace_end = import_path.find("}")
-                    brace_content = import_path[brace_start + 1:brace_end]
+                    brace_content = import_path[brace_start + 1 : brace_end]
                     items = [item.strip() for item in brace_content.split(",")]
                     if api_name in items:
                         return 1.0, import_path
@@ -203,4 +211,4 @@ class APIUsageAnalyzer:
         """Extract crate name from module path."""
         if not module_path:
             return None
-        return module_path.split('::')[0]
+        return module_path.split("::")[0]
