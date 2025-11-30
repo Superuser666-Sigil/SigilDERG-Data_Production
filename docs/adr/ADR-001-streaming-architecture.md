@@ -81,3 +81,6 @@ Write intermediate results to SQLite and query for export.
 - Priority 2.1 in the refactoring plan
 
 
+
+
+

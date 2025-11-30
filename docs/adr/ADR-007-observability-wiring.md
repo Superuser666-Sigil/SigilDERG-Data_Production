@@ -112,3 +112,6 @@ capture_environment: bool = True
 - [ADR-004](ADR-004-observability-infrastructure.md): Defines the observability infrastructure
 - [ADR-006](ADR-006-ast-aware-prompt-generation.md): AST-based extraction (uses same patterns)
 
+
+
+

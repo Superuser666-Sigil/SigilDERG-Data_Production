@@ -268,3 +268,6 @@ class TestCacheEdgeCases:
         hash2 = cache.compute_crate_hash(temp_crate_dir)
 
         assert hash1 != hash2
+
+
+

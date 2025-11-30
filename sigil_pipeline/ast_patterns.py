@@ -62,6 +62,38 @@ class StructField:
     """Whether the field is public."""
 
 
+@dataclass
+class APIEntity:
+    """Represents a complete Rust API entity."""
+
+    name: str
+    """Entity name."""
+
+    entity_type: str
+    """Type: function, struct, enum, trait, method, associated_function, macro."""
+
+    signature: str
+    """Full signature."""
+
+    module_path: str = ""
+    """Module path if available."""
+
+    documentation: str = ""
+    """Documentation comments."""
+
+    examples: list[str] = field(default_factory=list)
+    """Example code blocks."""
+
+    source_code: str = ""
+    """Full source code."""
+
+    attributes: dict[str, Any] = field(default_factory=dict)
+    """Rust attributes like #[stable], #[deprecated]."""
+
+    is_pub: bool = False
+    """Whether the entity is public."""
+
+
 def _get_parser() -> Parser:
     """Create and configure a tree-sitter parser for Rust."""
     # tree-sitter 0.22+ API: wrap PyCapsule with Language, then pass to Parser
@@ -645,3 +677,360 @@ def get_detected_pattern_descriptions(patterns: dict[str, Any]) -> list[str]:
         descriptions.append("closures")
 
     return descriptions
+
+
+# =============================================================================
+# Comprehensive API Entity Extraction
+# =============================================================================
+
+
+def extract_all_api_entities(code: str) -> list[APIEntity]:
+    """
+    Extract all public API entities from Rust code.
+
+    Extracts functions, structs, enums, traits, and macros with full
+    documentation, examples, and attributes.
+
+    Args:
+        code: Rust source code
+
+    Returns:
+        List of extracted API entities
+    """
+    parser = _get_parser()
+    tree = parser.parse(code.encode('utf-8'))
+    root_node = tree.root_node
+
+    entities: list[APIEntity] = []
+    _extract_entities_recursive(root_node, code, "", entities)
+
+    return entities
+
+
+def _extract_entities_recursive(
+    node: Any, code: str, module_path: str, entities: list[APIEntity]
+) -> None:
+    """Recursively extract API entities from AST."""
+    if node.type == "function_item":
+        entity = _parse_function_entity(node, code, module_path)
+        if entity and entity.is_pub:
+            entities.append(entity)
+    elif node.type == "struct_item":
+        entity = _parse_struct_entity(node, code, module_path)
+        if entity and entity.is_pub:
+            entities.append(entity)
+    elif node.type == "enum_item":
+        entity = _parse_enum_entity(node, code, module_path)
+        if entity and entity.is_pub:
+            entities.append(entity)
+    elif node.type == "trait_item":
+        entity = _parse_trait_entity(node, code, module_path)
+        if entity and entity.is_pub:
+            entities.append(entity)
+    elif node.type == "macro_definition":
+        entity = _parse_macro_entity(node, code, module_path)
+        if entity:
+            entities.append(entity)
+
+    # Recursively process children
+    for child in node.children:
+        _extract_entities_recursive(child, code, module_path, entities)
+
+
+def _parse_function_entity(node: Any, code: str, module_path: str) -> APIEntity | None:
+    """Parse a function into an APIEntity."""
+    try:
+        name_node = node.child_by_field_name("name")
+        if not name_node:
+            return None
+
+        name = code[name_node.start_byte:name_node.end_byte]
+
+        # Check visibility
+        is_pub = any(child.type == "visibility_modifier" for child in node.children)
+
+        # Extract signature
+        body_node = node.child_by_field_name("body")
+        signature_end = body_node.start_byte if body_node else node.end_byte
+        signature = code[node.start_byte:signature_end].strip()
+
+        # Extract attributes
+        attributes = _parse_rust_attributes(node, code)
+
+        # Extract documentation
+        documentation, examples = _parse_comprehensive_docs(node, code)
+
+        # Extract source code
+        source_code = code[node.start_byte:node.end_byte]
+
+        # Determine entity type
+        param_list = node.child_by_field_name("parameters")
+        entity_type = "function"
+        if param_list:
+            params_text = code[param_list.start_byte:param_list.end_byte]
+            if "self" in params_text or "&self" in params_text or "&mut self" in params_text:
+                entity_type = "method"
+
+        return APIEntity(
+            name=name,
+            entity_type=entity_type,
+            signature=signature,
+            module_path=module_path,
+            documentation=documentation,
+            examples=examples,
+            source_code=source_code,
+            attributes=attributes,
+            is_pub=is_pub
+        )
+    except Exception as e:
+        logger.debug(f"Failed to parse function entity: {e}")
+        return None
+
+
+def _parse_struct_entity(node: Any, code: str, module_path: str) -> APIEntity | None:
+    """Parse a struct into an APIEntity."""
+    try:
+        name_node = node.child_by_field_name("name")
+        if not name_node:
+            return None
+
+        name = code[name_node.start_byte:name_node.end_byte]
+        is_pub = any(child.type == "visibility_modifier" for child in node.children)
+
+        signature = f"struct {name}"
+        attributes = _parse_rust_attributes(node, code)
+        documentation, examples = _parse_comprehensive_docs(node, code)
+        source_code = code[node.start_byte:node.end_byte]
+
+        return APIEntity(
+            name=name,
+            entity_type="struct",
+            signature=signature,
+            module_path=module_path,
+            documentation=documentation,
+            examples=examples,
+            source_code=source_code,
+            attributes=attributes,
+            is_pub=is_pub
+        )
+    except Exception as e:
+        logger.debug(f"Failed to parse struct entity: {e}")
+        return None
+
+
+def _parse_enum_entity(node: Any, code: str, module_path: str) -> APIEntity | None:
+    """Parse an enum into an APIEntity."""
+    try:
+        name_node = node.child_by_field_name("name")
+        if not name_node:
+            return None
+
+        name = code[name_node.start_byte:name_node.end_byte]
+        is_pub = any(child.type == "visibility_modifier" for child in node.children)
+
+        signature = f"enum {name}"
+        attributes = _parse_rust_attributes(node, code)
+        documentation, examples = _parse_comprehensive_docs(node, code)
+        source_code = code[node.start_byte:node.end_byte]
+
+        return APIEntity(
+            name=name,
+            entity_type="enum",
+            signature=signature,
+            module_path=module_path,
+            documentation=documentation,
+            examples=examples,
+            source_code=source_code,
+            attributes=attributes,
+            is_pub=is_pub
+        )
+    except Exception as e:
+        logger.debug(f"Failed to parse enum entity: {e}")
+        return None
+
+
+def _parse_trait_entity(node: Any, code: str, module_path: str) -> APIEntity | None:
+    """Parse a trait into an APIEntity."""
+    try:
+        name_node = node.child_by_field_name("name")
+        if not name_node:
+            return None
+
+        name = code[name_node.start_byte:name_node.end_byte]
+        is_pub = any(child.type == "visibility_modifier" for child in node.children)
+
+        signature = f"trait {name}"
+        attributes = _parse_rust_attributes(node, code)
+        documentation, examples = _parse_comprehensive_docs(node, code)
+        source_code = code[node.start_byte:node.end_byte]
+
+        return APIEntity(
+            name=name,
+            entity_type="trait",
+            signature=signature,
+            module_path=module_path,
+            documentation=documentation,
+            examples=examples,
+            source_code=source_code,
+            attributes=attributes,
+            is_pub=is_pub
+        )
+    except Exception as e:
+        logger.debug(f"Failed to parse trait entity: {e}")
+        return None
+
+
+def _parse_macro_entity(node: Any, code: str, module_path: str) -> APIEntity | None:
+    """Parse a macro into an APIEntity."""
+    try:
+        name_node = node.child_by_field_name("name")
+        if not name_node:
+            return None
+
+        name = code[name_node.start_byte:name_node.end_byte]
+
+        signature = f"macro_rules! {name}"
+        attributes = _parse_rust_attributes(node, code)
+        documentation, examples = _parse_comprehensive_docs(node, code)
+        source_code = code[node.start_byte:node.end_byte]
+
+        return APIEntity(
+            name=name,
+            entity_type="macro",
+            signature=signature,
+            module_path=module_path,
+            documentation=documentation,
+            examples=examples,
+            source_code=source_code,
+            attributes=attributes,
+            is_pub=True  # Macros are typically public
+        )
+    except Exception as e:
+        logger.debug(f"Failed to parse macro entity: {e}")
+        return None
+
+
+def _parse_rust_attributes(node: Any, code: str) -> dict[str, Any]:
+    """Parse Rust attributes like #[stable], #[deprecated]."""
+    import re
+
+    attributes: dict[str, Any] = {}
+
+    prev_sibling = node.prev_sibling
+    while prev_sibling:
+        if prev_sibling.type == "attribute_item":
+            attr_text = code[prev_sibling.start_byte:prev_sibling.end_byte]
+
+            # Parse #[stable(feature = "...", since = "...")]
+            stable_match = re.search(
+                r'#\[\s*stable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*since\s*=\s*"([^"]+)"\s*\)\s*\]',
+                attr_text,
+                re.DOTALL
+            )
+            if stable_match:
+                feature, version = stable_match.groups()
+                attributes['stable'] = {'feature': feature, 'version': version}
+
+            # Parse #[deprecated(since = "...", note = "...")]
+            deprecated_pattern = re.compile(
+                r'#\[\s*deprecated\s*\(\s*'
+                r'(?:[\s\n]*since\s*=\s*"([^"]+)"\s*,?)?'
+                r'(?:[\s\n]*note\s*=\s*"((?:[^"]|\\")*)"\s*,?)?'
+                r'(?:[\s\n]*suggestion\s*=\s*"([^"]+)"\s*,?)?'
+                r'[\s\n]*\)\s*\]',
+                re.DOTALL
+            )
+            deprecated_match = deprecated_pattern.search(attr_text)
+            if deprecated_match:
+                since = deprecated_match.group(1)
+                note = deprecated_match.group(2)
+                if note:
+                    note = note.replace(r'\"', '"')
+                if not re.search(r'allow\s*\(\s*deprecated\s*\)', attr_text):
+                    attributes['deprecated'] = {
+                        'since': since.strip() if since else None,
+                        'note': note.strip() if note else None
+                    }
+
+            # Parse #[unstable(feature = "...", issue = "...")]
+            unstable_match = re.search(
+                r'#\[\s*unstable\s*\(\s*feature\s*=\s*"([^"]+)"\s*,\s*issue\s*=\s*"([^"]+)"\s*'
+                r'(?:,\s*reason\s*=\s*"([^"]+)")?\s*\)\s*\]',
+                attr_text,
+                re.DOTALL
+            )
+            if unstable_match:
+                feature = unstable_match.group(1)
+                issue = unstable_match.group(2)
+                reason = unstable_match.group(3) if len(unstable_match.groups()) > 2 else None
+                attributes['unstable'] = {'feature': feature, 'issue': issue, 'reason': reason}
+
+        prev_sibling = prev_sibling.prev_sibling
+
+    return attributes
+
+
+def _parse_comprehensive_docs(node: Any, code: str) -> tuple[str, list[str]]:
+    """
+    Parse documentation comments with improved example extraction.
+
+    Returns:
+        Tuple of (documentation_text, list_of_example_code_blocks)
+    """
+    import re
+
+    documentation: list[str] = []
+    examples: list[str] = []
+    current_code_block: list[str] = []
+    in_code_block = False
+    code_lang = ""
+    in_examples_section = False
+
+    prev_sibling = node.prev_sibling
+    while prev_sibling:
+        if prev_sibling.type == "line_comment":
+            line = code[prev_sibling.start_byte:prev_sibling.end_byte].strip()
+
+            if line.startswith("///"):
+                doc_line = line[3:].strip()
+
+                # Detect Examples section
+                if re.match(r'^#+\s*examples?', doc_line, re.IGNORECASE):
+                    in_examples_section = True
+                    prev_sibling = prev_sibling.prev_sibling
+                    continue
+                elif in_examples_section and doc_line.startswith("#"):
+                    in_examples_section = False
+
+                # Handle code blocks
+                if doc_line.startswith("```"):
+                    lang_match = re.match(r'^```(\S*)', doc_line)
+                    code_lang = lang_match.group(1) if lang_match else ""
+
+                    if in_code_block:
+                        in_code_block = False
+                        if current_code_block:
+                            current_code_block.append("```")
+                            full_code = "\n".join(current_code_block)
+                            if in_examples_section:
+                                examples.append(full_code)
+                            else:
+                                documentation.append(full_code)
+                            current_code_block = []
+                    else:
+                        in_code_block = True
+                        current_code_block.append(f"```{code_lang}")
+                elif in_code_block:
+                    current_code_block.append(doc_line)
+                else:
+                    if not in_examples_section:
+                        documentation.append(doc_line)
+
+        prev_sibling = prev_sibling.prev_sibling
+
+    # Handle unclosed code block
+    if in_code_block and current_code_block:
+        current_code_block.append("```")
+        examples.append("\n".join(current_code_block))
+
+    return "\n".join(documentation), examples

@@ -38,6 +38,7 @@ What becomes easier or more difficult as a result of this decision?
 | [ADR-006](ADR-006-ast-aware-prompt-generation.md) | AST-Aware Prompt Generation | Accepted |
 | [ADR-007](ADR-007-observability-wiring.md) | Observability Infrastructure Integration | Accepted |
 | [ADR-008](ADR-008-fast-pre-filtering.md) | Fast Pre-Filtering Before Expensive Analysis | Accepted |
+| [ADR-009](ADR-009-api-evolution-tracking.md) | API Evolution Tracking | Accepted |
 
 ## Creating a New ADR
 

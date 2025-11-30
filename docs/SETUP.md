@@ -101,6 +101,37 @@ cargo license --version
 cargo deny --version
 ```
 
+### API Evolution Tracking (Optional)
+
+To enable API evolution tracking across Rust versions:
+
+1. Clone the Rust repository:
+
+   ```bash
+   git clone https://github.com/rust-lang/rust.git rust-repo
+   cd rust-repo
+   ```
+
+1. Install additional dependency:
+
+   ```bash
+   pip install gitpython
+   ```
+
+1. The API tracker will automatically checkout versions as needed.
+
+Usage:
+
+```python
+from sigil_pipeline.api_tracker import APIChangeDetector
+from pathlib import Path
+
+detector = APIChangeDetector(Path("./rust-repo"))
+changes = detector.detect_changes("1.76.0", "1.77.0")
+```
+
+See [API Evolution Tracking](API_EVOLUTION_TRACKING.md) for detailed documentation.
+
 ## Python Environment Setup
 
 ### Virtual Environment

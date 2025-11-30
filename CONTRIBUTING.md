@@ -17,7 +17,7 @@ Thank you for your interest in contributing to Sigil Pipeline! This document pro
 
 ## Code of Conduct
 
-This project adheres to a code of conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to the maintainers.
+This project adheres to a code of conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to the maintainer.
 
 ---
 
