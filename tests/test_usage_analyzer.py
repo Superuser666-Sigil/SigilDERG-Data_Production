@@ -5,8 +5,6 @@ Tests static API usage analysis including import detection,
 usage pattern recognition, and confidence scoring.
 """
 
-import pytest
-
 from sigil_pipeline.usage_analyzer import APIUsageAnalyzer, UsageAnalysis
 
 

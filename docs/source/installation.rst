@@ -32,9 +32,6 @@ With Optional Dependencies
    # For HuggingFace dataset integration
    pip install sigil-pipeline[datasets]
 
-   # For semantic chunking (tree-sitter)
-   pip install sigil-pipeline[parsing]
-
    # For full ecosystem integration
    pip install sigil-pipeline[ecosystem]
 
@@ -55,7 +52,7 @@ Development Installation
    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
    # Install in development mode
-   pip install -e ".[dev,datasets,parsing]"
+   pip install -e ".[dev,datasets]"
 
    # Install pre-commit hooks
    pre-commit install

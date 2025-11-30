@@ -5,13 +5,6 @@ Tests task type generation including transformation tasks,
 error fixing tasks, and explanation tasks.
 """
 
-import re
-import tempfile
-from pathlib import Path
-from unittest.mock import MagicMock, patch
-
-import pytest
-
 from sigil_pipeline.task_generator import (
     _inject_borrow_error,
     _inject_move_error,
@@ -307,8 +300,6 @@ class TestErrorInjectionRandom:
 
     def test_injection_determinism_with_seed(self):
         """Test that setting random seed gives consistent results."""
-        import random
-
         code = """fn process() {
     let x: i32 = 42;
     let y = x;

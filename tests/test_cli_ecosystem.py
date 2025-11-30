@@ -4,7 +4,6 @@ Tests for sigil_pipeline.cli.ecosystem module.
 Tests the CLI orchestrator for the SigilDERG ecosystem pipeline.
 """
 
-import subprocess
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 

@@ -633,8 +633,6 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
             Returns:
                 Dictionary mapping dependency names to version strings
             """
-            import re
-
             dependencies: dict[str, str] = {}
             in_dependencies_section = False
 

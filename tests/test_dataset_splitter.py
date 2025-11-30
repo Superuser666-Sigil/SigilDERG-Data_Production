@@ -7,8 +7,6 @@ Tests dataset splitting by source (crate/file) for train/val splits.
 import json
 from pathlib import Path
 
-import pytest
-
 from sigil_pipeline.dataset_splitter import (
     _remove_metadata,
     split_by_source,

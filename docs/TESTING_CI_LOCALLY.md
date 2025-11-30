@@ -89,18 +89,23 @@ Run each CI step manually:
 
 ```bash
 # 1. Lint checks
-black --check sigil_pipeline tests
-isort --check-only sigil_pipeline tests
-flake8 sigil_pipeline tests
+black --check sigil_pipeline tests benches tools scripts
+isort --check-only sigil_pipeline tests benches tools scripts
+flake8 sigil_pipeline tests benches tools scripts
 pyright sigil_pipeline
 
 # 2. Tests
 pytest tests/ -v --cov=sigil_pipeline --cov-report=xml
 
 # 3. Security
-safety check --json
-bandit -r sigil_pipeline -f json -o bandit-report.json
+pip freeze > requirements.freeze.txt
+safety check --full-report -r requirements.freeze.txt
+bandit -r sigil_pipeline tools scripts benches -f json -o bandit-report.json
 ```
+
+> **Note:** The `safety check` command scans a frozen requirements file for known 
+> vulnerabilities. In `test_ci_local.py`, this is treated as advisory (soft-fail) 
+> to avoid blocking local development on transient vulnerability database issues.
 
 ---
 

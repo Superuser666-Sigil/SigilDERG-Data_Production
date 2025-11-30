@@ -51,7 +51,7 @@ jobs:
 
       - name: Run Bandit security scan
         run: |
-          bandit -r sigil_pipeline tools scripts \
+          bandit -r sigil_pipeline tools scripts benches \
             --severity-level medium \
             --confidence-level medium \
             -f json -o bandit-report.json || true
@@ -59,7 +59,7 @@ jobs:
       - name: Display Bandit findings
         if: always()
         run: |
-          bandit -r sigil_pipeline tools scripts \
+          bandit -r sigil_pipeline tools scripts benches \
             --severity-level medium \
             --confidence-level medium \
             -f txt || true

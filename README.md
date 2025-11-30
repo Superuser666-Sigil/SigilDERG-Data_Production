@@ -108,7 +108,7 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 
 # Install dependencies
-pip install -e ".[datasets,parsing]"  # Add 'parsing' for Phase-2 semantic chunking
+pip install -e ".[datasets]"  # tree-sitter for AST parsing is now included in core deps
 
 # Install Rust analysis tools
 cargo install cargo-geiger cargo-outdated cargo-license cargo-deny

@@ -5,11 +5,8 @@ Tests API evolution tracking including AST parsing, entity extraction,
 change detection, and version comparison.
 """
 
-import tempfile
 from pathlib import Path
-from unittest.mock import MagicMock, patch
-
-import pytest
+from unittest.mock import patch
 
 from sigil_pipeline.api_tracker import (
     APIChange,

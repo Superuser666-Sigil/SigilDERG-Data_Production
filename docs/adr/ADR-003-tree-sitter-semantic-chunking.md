@@ -55,7 +55,7 @@ Chunking rules:
 
 ### Neutral
 
-- tree-sitter is optional (installed via `pip install sigil-pipeline[parsing]`)
+- tree-sitter is now a core dependency (previously optional via `[parsing]` extra, see ADR-006)
 - Chunk types are tracked for metrics/debugging
 
 ## Alternatives Considered

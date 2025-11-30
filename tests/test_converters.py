@@ -6,7 +6,6 @@ Tests format conversion utilities between pipeline format and other formats.
 
 import json
 from pathlib import Path
-from unittest.mock import MagicMock, patch
 
 import pytest
 

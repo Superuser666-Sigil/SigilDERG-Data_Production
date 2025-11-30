@@ -415,8 +415,6 @@ def ensure_crate_dependencies_available(
         cargo_toml = crate_dir / "Cargo.toml"
         if cargo_toml.exists():
             try:
-                from .utils import is_platform_specific_crate
-
                 # Use a simpler approach - read Cargo.toml and parse dependencies
                 content = cargo_toml.read_text(encoding="utf-8")
 

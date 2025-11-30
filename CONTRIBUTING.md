@@ -58,7 +58,7 @@ python -m venv .venv
 source .venv/bin/activate
 
 # Install in development mode with all dependencies
-pip install -e ".[dev,test,datasets,parsing]"
+pip install -e ".[dev,test,datasets]"
 
 # Install pre-commit hooks (recommended)
 pre-commit install
