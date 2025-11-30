@@ -5,7 +5,7 @@ This project uses pyproject.toml for configuration.
 This file exists only for tools that still require setup.py.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 from setuptools import setup

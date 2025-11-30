@@ -5,7 +5,7 @@ Provides span-based tracing for observability across the pipeline.
 Gracefully degrades when OpenTelemetry is not installed.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import functools

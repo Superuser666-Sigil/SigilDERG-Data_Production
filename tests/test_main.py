@@ -5,7 +5,7 @@ Tests end-to-end pipeline execution with a mock crate to validate
 the streaming architecture and basic functionality.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import json

@@ -5,7 +5,7 @@ Handles streaming JSONL output and merging multiple dataset files.
 Supports Phase 1/Phase 2 merging with shuffle and weighting options.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import json

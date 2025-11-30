@@ -221,10 +221,10 @@ print(f'Test ratio: {test_lines/len(lines):.1%}')
 
 **Root Cause:**
 - Rust idiomatically includes unit tests inline with `#[cfg(test)]` modules
-- As of v2.4.0, the pipeline uses a 50% threshold - files are only filtered if more than half the code is tests
+- As of v2.5.0, the pipeline uses a 50% threshold - files are only filtered if more than half the code is tests
 
 **Resolution:**
-1. **Verify pipeline version is 2.4.0+** (includes ADR-012 fix):
+1. **Verify pipeline version is 2.5.0+** (includes ADR-012 fix):
    ```bash
    python -c "import sigil_pipeline; print(sigil_pipeline.__version__)"
    ```
@@ -456,11 +456,11 @@ cat crates/<crate_name>/Cargo.toml | grep -A2 "\[lib\]"
 **Root Cause:**
 - The crate uses a non-standard source layout specified in `Cargo.toml`
 - Source code is not in `src/` but in a custom directory (e.g., `binding_rust/`)
-- As of v2.4.0, the pipeline correctly parses `Cargo.toml` to find these paths
+- As of v2.5.0, the pipeline correctly parses `Cargo.toml` to find these paths
 
 **Resolution:**
 
-1. **Verify pipeline version is 2.4.0+**:
+1. **Verify pipeline version is 2.5.0+**:
    ```bash
    python -c "import sigil_pipeline; print(sigil_pipeline.__version__)"
    ```

@@ -10,7 +10,7 @@ Usage:
     python scripts/create_release.py 1.3.0 --dry-run
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 from __future__ import annotations

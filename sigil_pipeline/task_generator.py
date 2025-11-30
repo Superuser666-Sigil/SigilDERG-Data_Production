@@ -4,7 +4,7 @@ Task type generation module for Phase-2 dataset.
 Generates diverse task types: code generation, transformations, error-fixing, and explanations.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import logging

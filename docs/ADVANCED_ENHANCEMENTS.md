@@ -44,7 +44,7 @@ Tracks API changes across Rust versions including stabilization, deprecation,
 signature changes, and implicit behavioral changes.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 from typing import Any
 
@@ -1285,7 +1285,7 @@ Analyzes Rust code to detect API usage patterns without requiring LLM calls.
 Uses static analysis, pattern matching, and AST traversal.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import logging

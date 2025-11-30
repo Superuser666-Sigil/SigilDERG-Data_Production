@@ -4,7 +4,7 @@ Main pipeline orchestration module.
 Coordinates the entire pipeline: crawl → analyze → filter → build → export.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import asyncio

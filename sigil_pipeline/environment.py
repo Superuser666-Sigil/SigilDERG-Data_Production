@@ -5,7 +5,7 @@ Captures Rust toolchain versions, platform info, and tool availability
 to ensure "same inputs, same toolchain" can be verified across runs.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import logging

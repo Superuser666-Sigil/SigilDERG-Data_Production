@@ -5,7 +5,7 @@ Tracks API changes across Rust versions including stabilization, deprecation,
 signature changes, and implicit behavioral changes.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.4.0
+Version: 2.5.0
 """
 
 import logging

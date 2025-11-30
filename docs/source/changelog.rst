@@ -1,6 +1,18 @@
 Changelog
 =========
 
+Version 2.5.0
+-------------
+
+* **Dataset Hardening Mode**: New ``--dataset-hardening`` flag for strict Rust 2024 quality enforcement
+* **Strict Clippy Analysis**: Pedantic and nursery lint groups with denial of unwrap/expect/panic anti-patterns
+* **Rustfmt Validation**: Edition 2024 style validation with ``cargo fmt --check``
+* **Unsafe Detection**: Tree-sitter based detection and filtering of unsafe blocks
+* **Toolchain Validation**: Requires rustc >= 1.85 for Edition 2024 support with clear setup instructions
+* **Hardening Metadata**: Output samples include quality tier metadata (clippy_strict_passed, rustfmt_passed, etc.)
+* **Override Flags**: ``--no-hardening-strict-clippy``, ``--no-hardening-rustfmt``, ``--no-hardening-reject-unsafe``
+* **Documentation**: ADR-013 for dataset hardening mode, RUST_2024_TOOLCHAIN_SETUP.md runbook
+
 Version 2.4.0
 -------------
 
