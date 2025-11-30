@@ -268,3 +268,104 @@ class TestCacheEdgeCases:
         hash2 = cache.compute_crate_hash(temp_crate_dir)
 
         assert hash1 != hash2
+
+
+class TestGetSourceDirs:
+    """Tests for AnalysisCache._get_source_dirs() method."""
+
+    def test_standard_layout(self, cache, tmp_path):
+        """Standard src/ layout should return [src]."""
+        crate_dir = tmp_path / "crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "src" / "lib.rs").write_text("// lib")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "test"\nversion = "1.0.0"\n'
+        )
+
+        paths = cache._get_source_dirs(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_custom_lib_path(self, cache, tmp_path):
+        """Custom lib.path should be discovered."""
+        crate_dir = tmp_path / "crate"
+        crate_dir.mkdir()
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// custom lib")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "custom"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+
+        paths = cache._get_source_dirs(crate_dir)
+        assert crate_dir / "binding_rust" in paths
+
+    def test_missing_cargo_toml(self, cache, tmp_path):
+        """Missing Cargo.toml should return src/ if it exists."""
+        crate_dir = tmp_path / "crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+
+        paths = cache._get_source_dirs(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_invalid_toml(self, cache, tmp_path):
+        """Invalid Cargo.toml should fall back to src/."""
+        crate_dir = tmp_path / "crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "Cargo.toml").write_text("not valid { toml [[")
+
+        paths = cache._get_source_dirs(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+
+class TestCacheWithCustomSourcePaths:
+    """Tests for compute_crate_hash with non-standard source paths."""
+
+    def test_hash_includes_custom_lib_path(self, cache, tmp_path):
+        """Hash should include files from custom lib.path."""
+        crate_dir = tmp_path / "custom_crate"
+        crate_dir.mkdir()
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// v1")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "custom"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+
+        hash1 = cache.compute_crate_hash(crate_dir)
+
+        # Modify the custom lib file
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// v2 - modified")
+
+        hash2 = cache.compute_crate_hash(crate_dir)
+
+        assert hash1 != hash2
+
+    def test_hash_includes_both_src_and_custom(self, cache, tmp_path):
+        """Hash should include files from both src/ and custom paths."""
+        crate_dir = tmp_path / "hybrid_crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "src" / "main.rs").write_text("fn main() {}")
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// lib v1")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "hybrid"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+
+        hash1 = cache.compute_crate_hash(crate_dir)
+
+        # Modify file in custom path
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// lib v2")
+        hash2 = cache.compute_crate_hash(crate_dir)
+
+        # Modify file in standard path
+        (crate_dir / "src" / "main.rs").write_text("fn main() { println!(\"hi\"); }")
+        hash3 = cache.compute_crate_hash(crate_dir)
+
+        assert hash1 != hash2
+        assert hash2 != hash3
+

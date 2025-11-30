@@ -287,15 +287,80 @@ class TestLooksLikeTest:
         assert looks_like_test("file_test.rs", "") is True
         assert looks_like_test("file_tests.rs", "") is True
 
-    def test_cfg_test_attribute(self):
-        """Test files with #[cfg(test)] attribute."""
-        code = "#[cfg(test)]\nmod tests {}"
+    def test_cfg_test_attribute_mostly_tests(self):
+        """Test files with #[cfg(test)] that are mostly test code are filtered."""
+        # Create a file that's >50% test code
+        code = """pub fn small() {}
+
+#[cfg(test)]
+mod tests {
+    fn test_one() {}
+    fn test_two() {}
+    fn test_three() {}
+    fn test_four() {}
+    fn test_five() {}
+}
+"""
         assert looks_like_test("lib.rs", code) is True
 
-    def test_fn_test_pattern(self):
-        """Test files with fn test pattern."""
-        code = "fn test_something() {}"
+    def test_cfg_test_attribute_mostly_library(self):
+        """Test files with inline tests but mostly library code pass through.
+
+        Rust idiomatically includes unit tests inline with library code.
+        Files that are mostly production code should NOT be filtered.
+        """
+        # Create a file that's <50% test code (like scopeguard)
+        code = """//! Module documentation
+//!
+//! This is a library module with lots of production code.
+
+/// Public function documentation
+pub fn production_function_one() {
+    // Implementation
+}
+
+/// Another public function
+pub fn production_function_two() {
+    // More implementation
+}
+
+/// Yet another function
+pub fn production_function_three() {
+    // Even more implementation
+}
+
+#[cfg(test)]
+mod tests {
+    fn test_one() {}
+}
+"""
+        assert looks_like_test("lib.rs", code) is False
+
+    def test_fn_test_pattern_mostly_tests(self):
+        """Test files that are mostly test functions are filtered."""
+        code = """fn test_something() {}
+fn test_another() {}
+fn test_third() {}
+fn test_fourth() {}
+"""
         assert looks_like_test("lib.rs", code) is True
+
+    def test_fn_test_pattern_in_library_code(self):
+        """Test library files with a few test mentions pass through."""
+        code = """/// This function does something
+pub fn main_function() {
+    // lots of code here
+}
+
+/// Another production function
+pub fn helper() {
+    // more code
+}
+
+// Note: we should test this later
+// fn test_example would go in tests/
+"""
+        assert looks_like_test("lib.rs", code) is False
 
     def test_normal_file(self):
         """Test normal file (not a test)."""

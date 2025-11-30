@@ -4,7 +4,7 @@
 # environment with volume mounts, networking, and optional monitoring.
 #
 # Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-# Version: 2.2.0
+# Version: 2.4.0
 #
 # Usage:
 #   docker-compose up -d              # Start in background
@@ -21,7 +21,7 @@ version: '3.8'
 
 services:
   sigil-pipeline:
-    build: 
+    build:
       context: .
       dockerfile: Dockerfile
     image: sigil-pipeline:2.2.0
@@ -42,12 +42,12 @@ services:
     networks:
       - rust-pipeline-network
     healthcheck:
-      test: ["CMD", "python", "-c", "import sigil_pipeline; from sigil_pipeline.config import PipelineConfig; from sigil_pipeline.utils import check_cargo_available; config = PipelineConfig(); cargo_ok = check_cargo_available(); print(f'Package OK, Cargo: {\"available\" if cargo_ok else \"not available\"}')"]
+      test: [ "CMD", "python", "-c", "import sigil_pipeline; from sigil_pipeline.config import PipelineConfig; from sigil_pipeline.utils import check_cargo_available; config = PipelineConfig(); cargo_ok = check_cargo_available(); print(f'Package OK, Cargo: {\"available\" if cargo_ok else \"not available\"}')" ]
       interval: 60s
       timeout: 15s
       retries: 3
       start_period: 120s
-    command: 
+    command:
       - python
       - -m
       - sigil_pipeline.main
@@ -71,7 +71,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
     ports:
-      - "8081:8080"  # Changed to avoid conflict with main app
+      - "8081:8080" # Changed to avoid conflict with main app
     environment:
       DOZZLE_FILTER: "name=sigil-pipeline"
     networks:

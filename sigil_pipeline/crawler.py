@@ -5,7 +5,7 @@ Handles downloading crates from crates.io and iterating through
 the Stack Rust dataset (local or HuggingFace).
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import asyncio

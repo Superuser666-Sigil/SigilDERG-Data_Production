@@ -40,6 +40,8 @@ What becomes easier or more difficult as a result of this decision?
 | [ADR-008](ADR-008-fast-pre-filtering.md) | Fast Pre-Filtering Before Expensive Analysis | Accepted |
 | [ADR-009](ADR-009-api-evolution-tracking.md) | API Evolution Tracking | Accepted |
 | [ADR-010](ADR-010-comprehensive-test-coverage.md) | Comprehensive Test Coverage Strategy | Accepted |
+| [ADR-011](ADR-011-non-standard-cargo-source-paths.md) | Non-Standard Cargo Source Path Detection | Accepted |
+| [ADR-012](ADR-012-inline-test-detection-threshold.md) | Inline Test Detection Threshold | Accepted |
 
 ## Creating a New ADR
 

@@ -4,7 +4,7 @@ Unified CLI orchestrator for the SigilDERG ecosystem.
 Orchestrates the full pipeline: dataset generation → fine-tuning → evaluation.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import argparse

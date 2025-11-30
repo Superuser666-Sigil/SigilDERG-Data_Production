@@ -17,6 +17,7 @@ from sigil_pipeline.analyzer import (
     OutdatedResult,
     _severity_rank,
     analyze_crate,
+    get_crate_source_paths,
     run_clippy,
     run_deny_check,
     run_doc_check,
@@ -398,3 +399,183 @@ async def test_analyze_crate_collects_results(sample_crate_dir):
     assert isinstance(report, CrateAnalysisReport)
     assert report.license.crate_license == "MIT"
     assert report.docs.has_docs is True
+
+
+class TestGetCrateSourcePaths:
+    """Tests for get_crate_source_paths() which discovers source directories from Cargo.toml."""
+
+    def test_standard_src_layout(self, tmp_path):
+        """Crate with standard src/ directory should return ['src']."""
+        crate_dir = tmp_path / "standard_crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "standard"\nversion = "1.0.0"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_custom_lib_path(self, tmp_path):
+        """Crate with custom lib.path should return that directory."""
+        crate_dir = tmp_path / "custom_lib"
+        crate_dir.mkdir()
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// library code")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "custom"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert crate_dir / "binding_rust" in paths
+
+    def test_custom_lib_and_standard_src(self, tmp_path):
+        """Crate with both custom lib.path and src/ should return both."""
+        crate_dir = tmp_path / "hybrid_crate"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "src" / "main.rs").write_text("fn main() {}")
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "binding_rust" / "lib.rs").write_text("// library")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "hybrid"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert crate_dir / "src" in paths
+        assert crate_dir / "binding_rust" in paths
+
+    def test_multiple_binaries(self, tmp_path):
+        """Crate with multiple [[bin]] entries should return all directories."""
+        crate_dir = tmp_path / "multi_bin"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "src" / "lib.rs").write_text("// lib")
+        (crate_dir / "bins").mkdir()
+        (crate_dir / "bins" / "cli.rs").write_text("fn main() {}")
+        (crate_dir / "bins" / "server.rs").write_text("fn main() {}")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "multi"\nversion = "1.0.0"\n\n'
+            '[[bin]]\nname = "cli"\npath = "bins/cli.rs"\n\n'
+            '[[bin]]\nname = "server"\npath = "bins/server.rs"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert crate_dir / "src" in paths
+        assert crate_dir / "bins" in paths
+
+    def test_missing_cargo_toml(self, tmp_path):
+        """Directory without Cargo.toml should return src/ if it exists."""
+        crate_dir = tmp_path / "no_cargo"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+
+        paths = get_crate_source_paths(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_no_src_no_cargo_toml(self, tmp_path):
+        """Directory without Cargo.toml or src/ should return empty list."""
+        crate_dir = tmp_path / "empty"
+        crate_dir.mkdir()
+
+        paths = get_crate_source_paths(crate_dir)
+        assert paths == []
+
+    def test_workspace_member_skipped(self, tmp_path):
+        """Workspace root (without [package]) should fall back to src/."""
+        crate_dir = tmp_path / "workspace"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "Cargo.toml").write_text(
+            '[workspace]\nmembers = ["crate_a", "crate_b"]\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_invalid_cargo_toml(self, tmp_path):
+        """Invalid TOML should fall back to src/ if it exists."""
+        crate_dir = tmp_path / "invalid_toml"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "Cargo.toml").write_text("this is not valid { toml ][")
+
+        paths = get_crate_source_paths(crate_dir)
+        assert paths == [crate_dir / "src"]
+
+    def test_nested_source_path(self, tmp_path):
+        """Source path with nested directories should be resolved correctly."""
+        crate_dir = tmp_path / "nested"
+        crate_dir.mkdir()
+        (crate_dir / "src" / "rust" / "bindings").mkdir(parents=True)
+        (crate_dir / "src" / "rust" / "bindings" / "lib.rs").write_text("// nested lib")
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "nested"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "src/rust/bindings/lib.rs"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        assert crate_dir / "src/rust/bindings" in paths
+
+    def test_deduplicates_paths(self, tmp_path):
+        """Same directory referenced multiple times should only appear once."""
+        crate_dir = tmp_path / "dedup"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "dedup"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "src/lib.rs"\n\n'
+            '[[bin]]\nname = "main"\npath = "src/main.rs"\n'
+        )
+
+        paths = get_crate_source_paths(crate_dir)
+        # src/ should only appear once, not duplicated
+        src_count = sum(1 for p in paths if p == crate_dir / "src")
+        assert src_count == 1
+
+
+class TestRunDocCheckWithMultipleSources:
+    """Tests for run_doc_check() with non-standard source paths."""
+
+    def test_doc_check_custom_lib_path(self, tmp_path):
+        """run_doc_check should find docs in custom lib path."""
+        crate_dir = tmp_path / "custom_docs"
+        crate_dir.mkdir()
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "custom"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+        (crate_dir / "binding_rust" / "lib.rs").write_text(
+            "//! Module docs\n\n/// Function docs\npub fn foo() {}\n"
+        )
+
+        result = run_doc_check(crate_dir)
+        assert result.total_files == 1
+        assert result.has_docs is True
+        assert result.total_doc_comments >= 2
+
+    def test_doc_check_multiple_sources(self, tmp_path):
+        """run_doc_check should aggregate docs from all source directories."""
+        crate_dir = tmp_path / "multi_source"
+        crate_dir.mkdir()
+        (crate_dir / "src").mkdir()
+        (crate_dir / "binding_rust").mkdir()
+        (crate_dir / "Cargo.toml").write_text(
+            '[package]\nname = "multi"\nversion = "1.0.0"\n\n'
+            '[lib]\npath = "binding_rust/lib.rs"\n'
+        )
+        (crate_dir / "src" / "main.rs").write_text(
+            "/// Main function\nfn main() {}\n"
+        )
+        (crate_dir / "binding_rust" / "lib.rs").write_text(
+            "//! Library docs\n\n/// Helper\npub fn helper() {}\n"
+        )
+
+        result = run_doc_check(crate_dir)
+        assert result.total_files == 2
+        assert result.files_with_docs == 2
+        assert result.has_docs is True
+

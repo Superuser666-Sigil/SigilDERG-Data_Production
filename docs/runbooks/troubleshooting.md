@@ -195,6 +195,54 @@ rustup install 1.76.0
 - Review rejection logs for specific validation failures
 - Pre-filters can be disabled if causing false positives
 
+### Issue: Files Filtered as "Test Files" Despite Being Library Code
+
+**Symptoms:**
+- Crate shows "0/N files passed filters"
+- Files contain inline unit tests with `#[cfg(test)]`
+- Production code is being filtered out
+
+**Diagnosis:**
+
+```bash
+# Run with debug logging to see filter decisions
+python -m sigil_pipeline.main --crates <crate_name> --log-level DEBUG
+
+# Check the test ratio (should be <50% for library files)
+python -c "
+content = open('path/to/lib.rs').read()
+lines = content.split('\n')
+test_lines = sum(1 for i, line in enumerate(lines) 
+                 if '#[cfg(test)]' in line or i > lines.index('#[cfg(test)]') 
+                 if '#[cfg(test)]' in content else 0)
+print(f'Test ratio: {test_lines/len(lines):.1%}')
+"
+```
+
+**Root Cause:**
+- Rust idiomatically includes unit tests inline with `#[cfg(test)]` modules
+- As of v2.4.0, the pipeline uses a 50% threshold - files are only filtered if more than half the code is tests
+
+**Resolution:**
+1. **Verify pipeline version is 2.4.0+** (includes ADR-012 fix):
+   ```bash
+   python -c "import sigil_pipeline; print(sigil_pipeline.__version__)"
+   ```
+
+2. **If on older version**, update:
+   ```bash
+   pip install -e .
+   ```
+
+3. **Check debug logs** for test ratio:
+   ```bash
+   grep "test code" logs/pipeline_*.log
+   # Shows: "Filtering file.rs: 60.0% test code (120/200 lines)"
+   ```
+
+**Related:**
+- [ADR-012: Inline Test Detection Threshold](../adr/ADR-012-inline-test-detection-threshold.md)
+
 ### Issue: Checkpoint Corruption
 
 **Symptoms:**
@@ -386,6 +434,60 @@ pip show structlog
    enable_structured_logging = True
    json_logs = True  # For production JSON output
    ```
+
+### Issue: Crate Rejected "No Documentation" Despite Having Docs
+
+**Symptoms:**
+- Legitimate crate rejected with "no documentation found"
+- Crate has documented public API on docs.rs
+- Examples: tree-sitter, similar binding crates
+
+**Diagnosis:**
+
+```bash
+# Check the crate's Cargo.toml for custom source paths
+cat crates/<crate_name>/Cargo.toml | grep -A2 "\[lib\]"
+
+# Look for non-standard paths like:
+# [lib]
+# path = "binding_rust/lib.rs"
+```
+
+**Root Cause:**
+- The crate uses a non-standard source layout specified in `Cargo.toml`
+- Source code is not in `src/` but in a custom directory (e.g., `binding_rust/`)
+- As of v2.4.0, the pipeline correctly parses `Cargo.toml` to find these paths
+
+**Resolution:**
+
+1. **Verify pipeline version is 2.4.0+**:
+   ```bash
+   python -c "import sigil_pipeline; print(sigil_pipeline.__version__)"
+   ```
+
+2. **If on older version**, update the pipeline:
+   ```bash
+   pip install -e .
+   ```
+
+3. **Check debug logs** for source path discovery:
+   ```bash
+   grep "Found .* .rs files in" logs/pipeline_*.log
+   # Should show: "Found X .rs files in ['src', 'binding_rust', ...]"
+   ```
+
+4. **Manual verification**:
+   ```python
+   from pathlib import Path
+   from sigil_pipeline.analyzer import get_crate_source_paths
+   
+   crate_dir = Path("crates/tree-sitter")
+   paths = get_crate_source_paths(crate_dir)
+   print(f"Source directories: {paths}")
+   ```
+
+**Related:**
+- [ADR-011: Non-Standard Cargo Source Path Detection](../adr/ADR-011-non-standard-cargo-source-paths.md)
 
 ## Log Analysis
 

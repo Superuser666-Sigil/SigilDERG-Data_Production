@@ -4,7 +4,7 @@ Main pipeline orchestration module.
 Coordinates the entire pipeline: crawl → analyze → filter → build → export.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import asyncio
@@ -15,6 +15,7 @@ from pathlib import Path
 from typing import Any, Iterator
 
 from . import analyzer, config, crawler, dataset_builder, exporter, filter, utils
+from .analyzer import get_crate_source_paths
 from .environment import (
     EnvironmentFingerprint,
     capture_environment,
@@ -109,27 +110,39 @@ async def process_crate(
             )
             return None, rejection_reason
 
-        # Collect code files
+        # Collect code files from actual source directories
         code_files = []
-        src_dir = crate_dir / "src"
-        if src_dir.exists():
-            rs_files = list(src_dir.rglob("*.rs"))
-            logger.debug(f"{crate_name}: Found {len(rs_files)} .rs files in src/")
-            for rs_file in rs_files:
-                try:
-                    content = rs_file.read_text(encoding="utf-8", errors="ignore")
-                    code_files.append(
-                        {
-                            "path": str(rs_file.relative_to(crate_dir)),
-                            "code": content,
-                            "crate_name": crate_name,
-                        }
-                    )
-                except Exception as e:
-                    logger.debug(f"Failed to read {rs_file}: {e}")
+        source_dirs = get_crate_source_paths(crate_dir)
+        seen_files: set[Path] = set()
+        total_rs_files = 0
+
+        for src_dir in source_dirs:
+            if src_dir.exists():
+                rs_files = list(src_dir.rglob("*.rs"))
+                for rs_file in rs_files:
+                    if rs_file in seen_files:
+                        continue
+                    seen_files.add(rs_file)
+                    total_rs_files += 1
+                    try:
+                        content = rs_file.read_text(encoding="utf-8", errors="ignore")
+                        code_files.append(
+                            {
+                                "path": str(rs_file.relative_to(crate_dir)),
+                                "code": content,
+                                "crate_name": crate_name,
+                            }
+                        )
+                    except Exception as e:
+                        logger.debug(f"Failed to read {rs_file}: {e}")
+
+        if source_dirs:
+            logger.debug(
+                f"{crate_name}: Found {total_rs_files} .rs files in {[str(d.relative_to(crate_dir)) for d in source_dirs]}"
+            )
         else:
             logger.warning(
-                f"{crate_name}: src/ directory does not exist in {crate_dir}"
+                f"{crate_name}: No source directories found in {crate_dir}"
             )
 
         # Filter code files (now returns generator)

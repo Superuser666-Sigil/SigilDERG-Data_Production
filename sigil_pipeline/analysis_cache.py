@@ -8,12 +8,13 @@ Uses content-based hashing of Cargo.toml, Cargo.lock, and source files
 to detect when a crate has changed and needs re-analysis.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import hashlib
 import json
 import logging
+import tomllib
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, TypeVar
@@ -68,7 +69,10 @@ class AnalysisCache:
         Includes:
         - Cargo.toml
         - Cargo.lock (if exists)
-        - All .rs files in src/
+        - All .rs files in actual source directories (parsed from Cargo.toml)
+
+        Handles non-standard layouts where source files are not in src/
+        (e.g., tree-sitter uses binding_rust/lib.rs).
 
         Args:
             crate_dir: Path to the crate directory.
@@ -88,22 +92,81 @@ class AnalysisCache:
         if cargo_lock.exists():
             hasher.update(cargo_lock.read_bytes())
 
-        # Hash all .rs files in src/
-        src_dir = crate_dir / "src"
-        if src_dir.exists():
-            # Sort files for deterministic ordering
-            rs_files = sorted(src_dir.rglob("*.rs"))
-            for rs_file in rs_files:
-                try:
-                    # Include relative path in hash for structural changes
-                    rel_path = rs_file.relative_to(crate_dir)
-                    hasher.update(str(rel_path).encode("utf-8"))
-                    hasher.update(rs_file.read_bytes())
-                except Exception as e:
-                    logger.debug(f"Error hashing {rs_file}: {e}")
-                    continue
+        # Get actual source directories from Cargo.toml
+        source_dirs = self._get_source_dirs(crate_dir)
+
+        # Hash all .rs files in source directories
+        seen_files: set[Path] = set()
+        all_rs_files: list[Path] = []
+
+        for src_dir in source_dirs:
+            if src_dir.exists():
+                for rs_file in src_dir.rglob("*.rs"):
+                    if rs_file not in seen_files:
+                        seen_files.add(rs_file)
+                        all_rs_files.append(rs_file)
+
+        # Sort files for deterministic ordering
+        for rs_file in sorted(all_rs_files):
+            try:
+                # Include relative path in hash for structural changes
+                rel_path = rs_file.relative_to(crate_dir)
+                hasher.update(str(rel_path).encode("utf-8"))
+                hasher.update(rs_file.read_bytes())
+            except Exception as e:
+                logger.debug(f"Error hashing {rs_file}: {e}")
+                continue
 
         return hasher.hexdigest()
+
+    def _get_source_dirs(self, crate_dir: Path) -> list[Path]:
+        """
+        Get source directories for a crate by parsing Cargo.toml.
+
+        Args:
+            crate_dir: Path to the crate directory.
+
+        Returns:
+            List of directories containing .rs source files.
+        """
+        cargo_toml = crate_dir / "Cargo.toml"
+        source_dirs: set[Path] = set()
+        default_src = crate_dir / "src"
+
+        if not cargo_toml.exists():
+            return [default_src] if default_src.exists() else []
+
+        try:
+            content = cargo_toml.read_text(encoding="utf-8")
+            manifest = tomllib.loads(content)
+
+            # Check [lib] section for custom path
+            if "lib" in manifest:
+                lib_path = manifest["lib"].get("path")
+                if lib_path:
+                    lib_file = crate_dir / lib_path
+                    if lib_file.exists():
+                        source_dirs.add(lib_file.parent)
+
+            # Check [[bin]] sections for custom paths
+            for bin_target in manifest.get("bin", []):
+                bin_path = bin_target.get("path")
+                if bin_path:
+                    bin_file = crate_dir / bin_path
+                    if bin_file.exists():
+                        source_dirs.add(bin_file.parent)
+
+        except (tomllib.TOMLDecodeError, OSError, KeyError) as e:
+            logger.debug(f"Failed to parse Cargo.toml for source paths: {e}")
+
+        # Always include src/ if it exists
+        if default_src.exists():
+            source_dirs.add(default_src)
+
+        if not source_dirs:
+            return [default_src] if default_src.exists() else []
+
+        return list(source_dirs)
 
     def _get_cache_path(self, crate_hash: str, tool_name: str) -> Path:
         """Get the cache file path for a hash + tool combination."""

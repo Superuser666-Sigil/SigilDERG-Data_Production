@@ -1,6 +1,15 @@
 Changelog
 =========
 
+Version 2.4.0
+-------------
+
+* **CI/CD Improvements**: Stabilized GitHub Actions workflows with simplified Rust toolchain setup via rustup
+* **Local CI Script**: Enhanced test_ci_local.py with timeouts, frozen requirements safety scan, and soft-fail for security checks
+* **Linting Coverage**: Expanded lint and security scanning to include scripts, benches, and tools directories
+* **Core Dependencies**: Tree-sitter is now a core dependency (no longer optional [parsing] extra)
+* **Documentation Updates**: Improved installation docs, ADR updates, and testing guides
+
 Version 2.2.0
 -------------
 

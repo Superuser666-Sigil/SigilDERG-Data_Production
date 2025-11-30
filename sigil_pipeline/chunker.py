@@ -5,7 +5,7 @@ Splits Rust files into semantic units (functions, impl blocks, modules) for Phas
 Uses tree-sitter-rust for accurate parsing.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import logging

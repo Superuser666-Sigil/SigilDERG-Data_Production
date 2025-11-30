@@ -5,7 +5,7 @@ Utility script to split a dataset into train/val sets by source.
 Keeps whole crates/files together to ensure validation tests true generalization.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import argparse

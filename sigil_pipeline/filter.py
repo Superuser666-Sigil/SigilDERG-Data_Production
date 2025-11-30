@@ -4,7 +4,7 @@ Filter module for applying quality heuristics and filtering code files.
 Implements filtering logic for crates and code files based on quality criteria.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import logging
@@ -138,6 +138,12 @@ def looks_like_test(file_path: str, content: str) -> bool:
     """
     Determine if a file appears to be a test file.
 
+    Path-based checks: Files in /tests/, /benches/, etc. are always filtered.
+    Content-based checks: Only filter if tests make up >50% of the file.
+
+    This allows Rust's idiomatic pattern of inline unit tests (#[cfg(test)])
+    in library files while still filtering dedicated test files.
+
     Args:
         file_path: Path to the file
         content: File content
@@ -147,7 +153,7 @@ def looks_like_test(file_path: str, content: str) -> bool:
     """
     path_lower = file_path.lower()
 
-    # Check path patterns
+    # Check path patterns - these are definitely test/bench files
     if (
         "/tests/" in path_lower
         or "/benches/" in path_lower
@@ -157,9 +163,40 @@ def looks_like_test(file_path: str, content: str) -> bool:
     ):
         return True
 
-    # Check content patterns
+    # Content-based check: only filter if file is PRIMARILY tests
+    # Rust idiomatically includes inline tests with #[cfg(test)] in library files
+    # We want to keep library code that has some tests, but filter files that are mostly tests
     if "#[cfg(test)]" in content or "fn test" in content:
-        return True
+        lines = content.split("\n")
+        total_lines = len(lines)
+        if total_lines == 0:
+            return False
+
+        # Count lines that appear to be test-related
+        test_lines = 0
+        in_test_module = False
+        for line in lines:
+            stripped = line.strip()
+            # Track if we're inside a #[cfg(test)] module
+            if "#[cfg(test)]" in line:
+                in_test_module = True
+            # End of module (simplistic heuristic: closing brace at start of line)
+            if in_test_module and stripped == "}":
+                # Could be end of test module, but we'll keep counting conservatively
+                pass
+            if in_test_module:
+                test_lines += 1
+            # Also count explicit test function definitions outside modules
+            elif stripped.startswith("fn test") or stripped.startswith("#[test]"):
+                test_lines += 1
+
+        # Only filter if more than 50% of the file is test code
+        test_ratio = test_lines / total_lines
+        if test_ratio > 0.5:
+            logger.debug(
+                f"Filtering {file_path}: {test_ratio:.1%} test code ({test_lines}/{total_lines} lines)"
+            )
+            return True
 
     return False
 

@@ -5,7 +5,7 @@ Provides functions to run Clippy, Geiger, outdated, and documentation checks.
 Includes optional caching of analysis results to avoid re-running expensive tools.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import json
@@ -13,6 +13,7 @@ import logging
 import re
 import subprocess
 import threading
+import tomllib
 from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
@@ -29,6 +30,72 @@ from .utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def get_crate_source_paths(crate_dir: Path) -> list[Path]:
+    """
+    Get the source directories for a Rust crate by parsing Cargo.toml.
+
+    Handles non-standard layouts where source files are not in src/
+    (e.g., tree-sitter uses binding_rust/lib.rs).
+
+    Args:
+        crate_dir: Path to the crate directory.
+
+    Returns:
+        List of directories containing .rs source files.
+        Falls back to [crate_dir / "src"] if parsing fails or no paths found.
+    """
+    cargo_toml = crate_dir / "Cargo.toml"
+    source_dirs: set[Path] = set()
+
+    # Default fallback
+    default_src = crate_dir / "src"
+
+    if not cargo_toml.exists():
+        return [default_src] if default_src.exists() else []
+
+    try:
+        content = cargo_toml.read_text(encoding="utf-8")
+        manifest = tomllib.loads(content)
+
+        # Check [lib] section for custom path
+        if "lib" in manifest:
+            lib_path = manifest["lib"].get("path")
+            if lib_path:
+                lib_file = crate_dir / lib_path
+                if lib_file.exists():
+                    source_dirs.add(lib_file.parent)
+
+        # Check [[bin]] sections for custom paths
+        for bin_target in manifest.get("bin", []):
+            bin_path = bin_target.get("path")
+            if bin_path:
+                bin_file = crate_dir / bin_path
+                if bin_file.exists():
+                    source_dirs.add(bin_file.parent)
+
+        # Check [[example]], [[test]], [[bench]] sections
+        for section in ("example", "test", "bench"):
+            for target in manifest.get(section, []):
+                target_path = target.get("path")
+                if target_path:
+                    target_file = crate_dir / target_path
+                    if target_file.exists():
+                        source_dirs.add(target_file.parent)
+
+    except (tomllib.TOMLDecodeError, OSError, KeyError) as e:
+        logger.debug(f"Failed to parse Cargo.toml for source paths: {e}")
+
+    # Always include src/ if it exists (standard layout)
+    if default_src.exists():
+        source_dirs.add(default_src)
+
+    # If no source dirs found, fall back to default
+    if not source_dirs:
+        return [default_src] if default_src.exists() else []
+
+    return list(source_dirs)
 
 
 def categorize_clippy_warning(code: str) -> str:
@@ -643,33 +710,43 @@ def run_doc_check(crate_dir: Path) -> DocStats:
     """
     Check documentation coverage in a crate.
 
+    Handles non-standard source layouts by parsing Cargo.toml to find
+    actual source directories (e.g., tree-sitter uses binding_rust/).
+
     Args:
         crate_dir: Path to crate directory
 
     Returns:
         DocStats with documentation metrics
     """
-    src_dir = crate_dir / "src"
-    if not src_dir.exists():
+    source_dirs = get_crate_source_paths(crate_dir)
+    if not source_dirs:
         return DocStats()
 
     total_files = 0
     files_with_docs = 0
     total_doc_comments = 0
+    seen_files: set[Path] = set()
 
-    # Count .rs files and doc comments
-    for rs_file in src_dir.rglob("*.rs"):
-        total_files += 1
-        try:
-            content = rs_file.read_text(encoding="utf-8", errors="ignore")
-            # Count doc comments (/// and //!)
-            doc_count = content.count("///") + content.count("//!")
-            if doc_count > 0:
-                files_with_docs += 1
-                total_doc_comments += doc_count
-        except Exception as e:
-            logger.debug(f"Failed to read {rs_file}: {e}")
-            continue
+    # Count .rs files and doc comments across all source directories
+    for src_dir in source_dirs:
+        for rs_file in src_dir.rglob("*.rs"):
+            # Avoid counting files twice if directories overlap
+            if rs_file in seen_files:
+                continue
+            seen_files.add(rs_file)
+
+            total_files += 1
+            try:
+                content = rs_file.read_text(encoding="utf-8", errors="ignore")
+                # Count doc comments (/// and //!)
+                doc_count = content.count("///") + content.count("//!")
+                if doc_count > 0:
+                    files_with_docs += 1
+                    total_doc_comments += doc_count
+            except Exception as e:
+                logger.debug(f"Failed to read {rs_file}: {e}")
+                continue
 
     doc_coverage = files_with_docs / total_files if total_files > 0 else 0.0
 

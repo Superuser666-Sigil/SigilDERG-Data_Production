@@ -7,7 +7,7 @@ Tests format conversions and integration points between:
 - human-eval-rust
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.2.0
+Version: 2.4.0
 """
 
 import json
