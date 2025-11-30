@@ -30,6 +30,29 @@ rustc --version
 cargo --version
 ```
 
+### Multi-Version Toolchain Support
+
+The pipeline can work with multiple Rust toolchain versions. To enable this:
+
+```bash
+# Install multiple toolchain versions
+rustup install 1.76.0
+rustup install 1.75.0
+rustup install stable
+
+# List installed toolchains
+rustup toolchain list
+
+# The pipeline will automatically select the best matching toolchain
+# for each crate based on its requirements
+```
+
+The pipeline includes functions to:
+- Discover installed toolchains: `get_installed_toolchains()`
+- Select best matching version: `find_best_toolchain(requested, installed)`
+
+These functions automatically handle version matching and fallback to stable if needed.
+
 ### C Compiler Requirements
 
 Some cargo subcommands (like `cargo-audit`) require a C compiler:

@@ -74,6 +74,56 @@ def _extract_node_text(code: str, node: Any) -> str:
     return code[node.start_byte : node.end_byte]
 
 
+def check_function_in_code(code: str, signature: str) -> bool:
+    """
+    Fast regex-based check if a function signature exists in code.
+
+    This is a lightweight pre-check before expensive AST parsing.
+    For authoritative signature extraction, use extract_function_signature()
+    which handles complex generics, lifetimes, and where clauses.
+
+    Args:
+        code: Rust source code to search
+        signature: Function signature to find (e.g., "fn test(x: i32) -> bool")
+
+    Returns:
+        True if signature appears to be present in code, False otherwise
+
+    Examples:
+        >>> code = "fn test(x: i32) -> bool { true }"
+        >>> check_function_in_code(code, "fn test(x: i32) -> bool")
+        True
+        >>> check_function_in_code(code, "fn other()")
+        False
+    """
+    import re
+
+    signature = signature.strip()
+
+    # Extract function name from signature
+    fn_name_match = re.search(r'fn\s+([a-zA-Z0-9_]+)', signature)
+    if not fn_name_match:
+        return False
+
+    fn_name = fn_name_match.group(1)
+
+    # Basic check: function name and opening brace
+    basic_pattern = r'fn\s+' + re.escape(fn_name) + r'\s*\([^{]*{'
+    if re.search(basic_pattern, code):
+        return True
+
+    # Strict check: function name and exact parameters
+    params_match = re.search(r'fn\s+[a-zA-Z0-9_]+\s*\(([^)]*)\)', signature)
+    if not params_match:
+        return False
+
+    params = params_match.group(1).strip()
+
+    # Match function name and parameters exactly
+    strict_pattern = r'fn\s+' + re.escape(fn_name) + r'\s*\(\s*' + re.escape(params) + r'\s*\)'
+    return bool(re.search(strict_pattern, code))
+
+
 def extract_function_signature(code: str) -> FunctionSignature | None:
     """
     Extract function signature from Rust code using tree-sitter AST.

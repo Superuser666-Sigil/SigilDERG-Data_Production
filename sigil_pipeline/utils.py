@@ -620,15 +620,69 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
         # Check for platform-specific dependencies
         content_lower = content.lower()
 
-        def has_dependency(dep: str, text: str) -> bool:
-            """Check if dependency exists in TOML as key or quoted value."""
-            # Check as TOML key (e.g., 'winapi =' or 'winapi=')
-            if f"{dep} =" in text or f"{dep}=" in text:
-                return True
-            # Check as quoted value (e.g., in dependencies list)
-            if f'"{dep}"' in text or f"'{dep}'" in text:
-                return True
-            return False
+        def parse_cargo_toml_dependencies(content: str | list[str]) -> dict[str, str]:
+            """
+            Parse Cargo.toml to extract dependencies with proper section handling.
+
+            Handles [dependencies], [dev-dependencies], [build-dependencies] sections
+            and properly skips comments and other TOML structures.
+
+            Args:
+                content: Cargo.toml file content as string or list of lines
+
+            Returns:
+                Dictionary mapping dependency names to version strings
+            """
+            import re
+
+            dependencies: dict[str, str] = {}
+            in_dependencies_section = False
+
+            # Handle both string and list inputs
+            if isinstance(content, str):
+                lines = content.split('\n')
+            else:
+                lines = content
+
+            for line in lines:
+                line_stripped = line.strip()
+
+                # Check for dependencies section headers (handles multiple dependency section types)
+                if line_stripped == '[dependencies]' or line_stripped == '[dev-dependencies]' or line_stripped == '[build-dependencies]':
+                    in_dependencies_section = True
+                    continue
+                elif line_stripped.startswith('[') and line_stripped.endswith(']'):
+                    in_dependencies_section = False
+                    continue
+
+                # Skip empty lines and comments
+                if not line_stripped or line_stripped.startswith('#'):
+                    continue
+
+                # Extract dependency information if we're in a dependencies section
+                if in_dependencies_section and '=' in line_stripped:
+                    parts = line_stripped.split('=', 1)
+                    if len(parts) == 2:
+                        crate_name = parts[0].strip().strip('"\'')
+                        version_info = parts[1].strip().strip(',"\'')
+
+                        dependencies[crate_name] = version_info
+
+            return dependencies
+
+        def has_dependency(dep: str, content: str) -> bool:
+            """
+            Check if dependency exists in Cargo.toml using enhanced parsing.
+
+            Args:
+                dep: Dependency name to check
+                content: Cargo.toml file content
+
+            Returns:
+                True if dependency is found, False otherwise
+            """
+            dependencies = parse_cargo_toml_dependencies(content)
+            return dep in dependencies
 
         if current_platform == "windows":
             # On Windows, check for Unix/macOS-specific deps
@@ -660,3 +714,179 @@ def is_platform_specific_crate(crate_dir: Path) -> str | None:
     except Exception as e:
         logger.debug(f"Failed to check platform-specific dependencies: {e}")
         return None
+
+
+def get_installed_toolchains() -> list[str]:
+    """
+    Get list of installed Rust toolchains on the system.
+
+    Queries rustup to discover all installed toolchain versions.
+    Useful for selecting appropriate toolchains for crate analysis
+    when specific Rust versions are required.
+
+    Returns:
+        List of installed toolchain identifiers (e.g., ["stable", "1.76.0-x86_64-pc-windows-msvc", ...])
+        Falls back to ["stable"] if rustup is unavailable or query fails.
+
+    Examples:
+        >>> toolchains = get_installed_toolchains()
+        >>> print(toolchains)
+        ['stable', '1.76.0-x86_64-pc-windows-msvc', 'nightly-2024-01-15']
+    """
+    import re
+    import subprocess
+
+    try:
+        result = subprocess.run(
+            ["rustup", "toolchain", "list"],
+            capture_output=True,
+            text=True,
+            timeout=10
+        )
+
+        if result.returncode != 0:
+            logger.warning(f"Failed to get toolchain list: {result.stderr}")
+            return ["stable"]
+
+        toolchains = []
+        for line in result.stdout.strip().split('\n'):
+            # Extract toolchain name (format: "1.76.0-x86_64-pc-windows-msvc (default)")
+            match = re.search(r'^([^\s]+)', line)
+            if match:
+                toolchains.append(match.group(1))
+
+        if not toolchains:
+            logger.warning("No toolchains found, defaulting to stable")
+            return ["stable"]
+
+        return toolchains
+    except subprocess.TimeoutExpired:
+        logger.warning("rustup toolchain list timed out")
+        return ["stable"]
+    except Exception as e:
+        logger.warning(f"Error getting toolchains: {e}")
+        return ["stable"]
+
+
+def find_best_toolchain(requested_version: str, installed_toolchains: list[str]) -> str:
+    """
+    Find the best matching Rust toolchain for a requested version.
+
+    Implements intelligent version matching with fallback logic:
+    1. Exact match if requested version is installed
+    2. Prefix matching for "stable", "nightly", "beta"
+    3. Semantic version matching for specific versions (e.g., "1.76.0")
+    4. Fallback to stable if no match found
+
+    Args:
+        requested_version: Version string to match (e.g., "1.76.0", "stable", "nightly")
+        installed_toolchains: List of installed toolchain identifiers from get_installed_toolchains()
+
+    Returns:
+        Best matching toolchain identifier, or "stable" as fallback
+
+    Examples:
+        >>> installed = ["stable", "1.76.0-x86_64-pc-windows-msvc", "1.75.0-x86_64-pc-windows-msvc"]
+        >>> find_best_toolchain("1.76.0", installed)
+        '1.76.0-x86_64-pc-windows-msvc'
+        >>> find_best_toolchain("1.77.0", installed)  # Not installed, finds closest
+        '1.76.0-x86_64-pc-windows-msvc'
+        >>> find_best_toolchain("stable", installed)
+        'stable'
+    """
+    import re
+
+    # Exact match
+    if requested_version in installed_toolchains:
+        return requested_version
+
+    # Prefix matching for channel names
+    if requested_version in ["stable", "nightly", "beta"]:
+        for toolchain in installed_toolchains:
+            if toolchain.startswith(requested_version):
+                return toolchain
+
+    # Semantic version matching
+    if re.match(r'^\d+\.\d+\.\d+$', requested_version):
+        requested_parts = [int(x) for x in requested_version.split('.')]
+        best_match = None
+        min_diff = float('inf')
+
+        for toolchain in installed_toolchains:
+            # Extract version from toolchain string (e.g., "1.76.0-x86_64-pc-windows-msvc")
+            version_match = re.match(r'^(\d+)\.(\d+)\.(\d+)', toolchain)
+            if not version_match:
+                continue
+
+            toolchain_parts = [int(x) for x in version_match.groups()]
+
+            # Calculate version difference (weighted: major > minor > patch)
+            major_diff = abs(toolchain_parts[0] - requested_parts[0]) * 10000
+            minor_diff = abs(toolchain_parts[1] - requested_parts[1]) * 100
+            patch_diff = abs(toolchain_parts[2] - requested_parts[2])
+            total_diff = major_diff + minor_diff + patch_diff
+
+            if total_diff < min_diff:
+                min_diff = total_diff
+                best_match = toolchain
+
+        if best_match:
+            return best_match
+
+    # Fallback to stable
+    for toolchain in installed_toolchains:
+        if toolchain.startswith("stable"):
+            return toolchain
+
+    # Last resort: return first available or "stable"
+    return installed_toolchains[0] if installed_toolchains else "stable"
+
+
+def parse_crate_info(item: dict[str, Any]) -> dict[str, str]:
+    """
+    Parse crate dependency information from various data structure formats.
+
+    Handles multiple input formats:
+    - String: "serde" -> {"serde": "*"}
+    - Dict with string values: {"serde": "1.0"} -> {"serde": "1.0"}
+    - Dict with nested dicts: {"serde": {"version": "1.0"}} -> {"serde": "1.0"}
+
+    Args:
+        item: Dictionary containing crate information in various formats
+
+    Returns:
+        Dictionary mapping crate names to version strings
+
+    Examples:
+        >>> parse_crate_info({"crate": "serde", "to_version": "1.0"})
+        {'serde': '1.0'}
+        >>> parse_crate_info({"crate": {"serde": "1.0", "tokio": "1.35"}})
+        {'serde': '1.0', 'tokio': '1.35'}
+        >>> parse_crate_info({"crate": {"serde": {"version": "1.0"}}})
+        {'serde': '1.0'}
+    """
+    crate_info: dict[str, str] = {}
+
+    if "crate" not in item:
+        return crate_info
+
+    crate_data = item["crate"]
+
+    # Format 1: String (crate name only)
+    if isinstance(crate_data, str):
+        crate_name = crate_data
+        # Get version from to_version or default to "*"
+        crate_version = item.get("to_version", "*")
+        crate_info[crate_name] = crate_version
+
+    # Format 2: Dictionary of crates
+    elif isinstance(crate_data, dict):
+        for crate_name, crate_value in crate_data.items():
+            if isinstance(crate_value, str):
+                # Direct version string
+                crate_info[crate_name] = crate_value
+            elif isinstance(crate_value, dict) and "version" in crate_value:
+                # Nested dict with version key
+                crate_info[crate_name] = crate_value["version"]
+
+    return crate_info

@@ -370,6 +370,142 @@ def fetch_crate(
         return None
 
 
+def ensure_crate_dependencies_available(
+    crate_dir: Path,
+    dependencies: dict[str, str] | None = None,
+    rust_version: str = "stable",
+    timeout: int = 120,
+) -> bool:
+    """
+    Ensure crate dependencies are downloaded and available.
+
+    Creates a temporary Cargo project, adds specified dependencies,
+    and runs `cargo fetch` to download them. This ensures dependencies
+    are available in the cargo registry before running analysis tools.
+
+    Uses the pipeline's OS-agnostic cargo command builders and integrates
+    with the existing toolchain management system.
+
+    Args:
+        crate_dir: Path to extracted crate directory
+        dependencies: Optional dict of {crate_name: version} to ensure.
+                     If None, reads from crate_dir/Cargo.toml
+        rust_version: Rust toolchain version to use (default: "stable")
+        timeout: Command timeout in seconds (default: 120)
+
+    Returns:
+        True if dependencies were successfully fetched, False otherwise
+
+    Examples:
+        >>> deps = {"serde": "1.0", "tokio": "1.35"}
+        >>> ensure_crate_dependencies_available(crate_dir, deps)
+        True
+    """
+    import subprocess
+
+    from .utils import (
+        build_cargo_command,
+        find_best_toolchain,
+        get_installed_toolchains,
+        run_command,
+    )
+
+    # If no dependencies provided, try to extract from Cargo.toml
+    if dependencies is None:
+        cargo_toml = crate_dir / "Cargo.toml"
+        if cargo_toml.exists():
+            try:
+                from .utils import is_platform_specific_crate
+
+                # Use a simpler approach - read Cargo.toml and parse dependencies
+                content = cargo_toml.read_text(encoding="utf-8")
+
+                # Simple dependency extraction
+                dependencies_dict: dict[str, str] = {}
+                in_dependencies_section = False
+
+                for line in content.split('\n'):
+                    line_stripped = line.strip()
+                    if line_stripped in ['[dependencies]', '[dev-dependencies]', '[build-dependencies]']:
+                        in_dependencies_section = True
+                        continue
+                    elif line_stripped.startswith('[') and line_stripped.endswith(']'):
+                        in_dependencies_section = False
+                        continue
+
+                    if not line_stripped or line_stripped.startswith('#'):
+                        continue
+
+                    if in_dependencies_section and '=' in line_stripped:
+                        parts = line_stripped.split('=', 1)
+                        if len(parts) == 2:
+                            crate_name = parts[0].strip().strip('"\'')
+                            version_info = parts[1].strip().strip(',"\'')
+                            dependencies_dict[crate_name] = version_info
+
+                dependencies = dependencies_dict
+            except Exception as e:
+                logger.debug(f"Failed to parse dependencies from Cargo.toml: {e}")
+                return True  # Assume OK if we can't parse
+
+    if not dependencies:
+        return True  # No dependencies to fetch
+
+    logger.debug(f"Ensuring dependencies available: {dependencies}")
+
+    with tempfile.TemporaryDirectory(prefix="sigil_deps_") as temp_dir:
+        try:
+            temp_path = Path(temp_dir)
+
+            # Initialize Cargo project using OS-agnostic command builder
+            init_cmd = build_cargo_command("init", "--lib")
+            init_result = run_command(init_cmd, cwd=temp_path, timeout=30)
+
+            if init_result.returncode != 0:
+                logger.warning(f"Failed to init Cargo project: {init_result.stderr}")
+                return False
+
+            # Read existing Cargo.toml and append dependencies
+            cargo_toml = temp_path / "Cargo.toml"
+            try:
+                with open(cargo_toml, 'r', encoding='utf-8') as f:
+                    cargo_content = f.read()
+
+                with open(cargo_toml, 'w', encoding='utf-8') as f:
+                    f.write(cargo_content)
+                    f.write("\n[dependencies]\n")
+                    for crate_name, crate_version in dependencies.items():
+                        f.write(f'{crate_name} = "{crate_version}"\n')
+            except Exception as e:
+                logger.warning(f"Failed to write dependencies to Cargo.toml: {e}")
+                return False
+
+            # Fetch dependencies (downloads but doesn't compile)
+            # Use rustup run if specific version requested, otherwise use default
+            if rust_version and rust_version != "stable":
+                installed = get_installed_toolchains()
+                best_toolchain = find_best_toolchain(rust_version, installed)
+                fetch_cmd = ["rustup", "run", best_toolchain] + build_cargo_command("fetch", "--quiet")
+            else:
+                fetch_cmd = build_cargo_command("fetch", "--quiet")
+
+            fetch_result = run_command(fetch_cmd, cwd=temp_path, timeout=timeout)
+
+            if fetch_result.returncode != 0:
+                logger.warning(f"Failed to fetch dependencies: {fetch_result.stderr}")
+                return False
+
+            logger.debug("Crate dependencies downloaded successfully")
+            return True
+
+        except subprocess.TimeoutExpired:
+            logger.warning(f"Dependency fetch timed out after {timeout}s")
+            return False
+        except Exception as e:
+            logger.warning(f"Error ensuring dependencies: {e}")
+            return False
+
+
 def iter_stack_files_hf(dataset_name: str, split: str | None = None) -> Iterator[dict]:
     """
     Iterate through code files from HuggingFace Stack Rust dataset.

@@ -52,7 +52,25 @@ cat data/crate_list.txt  # Verify crates to process
 wc -l data/crate_list.txt  # Count crates
 ```
 
-### 3. Check Disk Space
+### 3. Verify Toolchain Availability
+
+```bash
+# Check installed toolchains
+rustup toolchain list
+
+# Verify pipeline can discover toolchains
+python -c "
+from sigil_pipeline.utils import get_installed_toolchains, find_best_toolchain
+installed = get_installed_toolchains()
+print(f'Installed: {installed}')
+best = find_best_toolchain('1.76.0', installed)
+print(f'Best match for 1.76.0: {best}')
+"
+```
+
+**Note:** The pipeline automatically selects appropriate toolchains. Multiple versions can be installed for crates requiring specific Rust versions.
+
+### 4. Check Disk Space
 
 ```bash
 # Check available space

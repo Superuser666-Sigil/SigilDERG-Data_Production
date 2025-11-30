@@ -135,6 +135,46 @@ cat logs/analysis_*/serde_clippy.log
 
 3. Some crates are platform-specific - skip them
 
+### Issue: Toolchain Selection Issues
+
+**Symptoms:**
+- Pipeline fails with "toolchain not found" errors.
+
+**Diagnosis:**
+
+```bash
+# Check installed toolchains
+rustup toolchain list
+
+# Verify requested version exists
+rustup toolchain list | grep "1.76.0"
+```
+
+**Resolution:**
+
+```bash
+# Install missing toolchain
+rustup install 1.76.0
+
+# Or use stable as fallback
+# The pipeline automatically falls back to stable if requested version not found
+```
+
+### Issue: Pre-Filter Rejections
+
+**Symptoms:**
+- Code rejected with "Static analysis failed" before Clippy runs.
+
+**Diagnosis:**
+- Check for syntax errors: mismatched brackets, unclosed quotes
+- Verify function signatures match expected format
+- Check if required APIs are used (not just in comments)
+
+**Resolution:**
+- Pre-filters catch obvious errors early
+- Review rejection logs for specific validation failures
+- Pre-filters can be disabled if causing false positives
+
 ### Issue: Checkpoint Corruption
 
 **Symptoms:**

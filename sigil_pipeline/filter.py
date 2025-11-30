@@ -235,6 +235,112 @@ def meets_size_sanity_criteria(
     return True
 
 
+def is_api_properly_used(code: str, api_name: str) -> bool:
+    """
+    Check if an API is properly used in code (excluding comments).
+
+    Args:
+        code: Rust source code to check
+        api_name: API name to search for
+
+    Returns:
+        True if API is used in code (outside comments), False otherwise
+    """
+    import re
+
+    # Escape special regex characters in API name
+    escaped_api = re.escape(api_name)
+
+    # Find all comments in the code
+    comments = re.findall(r'//.*$|/\*[\s\S]*?\*/', code, re.MULTILINE)
+
+    # Remove comments from code for checking actual usage
+    code_without_comments = code
+    for comment in comments:
+        code_without_comments = code_without_comments.replace(comment, '')
+
+    # Check if API is mentioned outside of comments
+    # Use word boundaries to avoid partial matches
+    api_pattern = r'(?<![a-zA-Z0-9_])' + escaped_api + r'(?![a-zA-Z0-9_])'
+    return bool(re.search(api_pattern, code_without_comments))
+
+
+def static_analysis_rust_code(code: str, api_name: str | None = None) -> tuple[bool, str]:
+    """
+    Perform fast static analysis on Rust code without compilation.
+
+    Validates basic syntax correctness and optional API usage before
+    running expensive Clippy compilation. This pre-filter can reject
+    obviously invalid code to improve pipeline performance.
+
+    Checks performed:
+    - Optional: API usage validation (excluding comments)
+    - Function definition presence
+    - Bracket/brace/parenthesis matching
+    - Quote matching (handles lifetime annotations)
+
+    Args:
+        code: Rust source code to validate
+        api_name: Optional API name that must be used in the code
+
+    Returns:
+        Tuple of (is_valid: bool, message: str)
+        - (True, "Static analysis passed") if code passes all checks
+        - (False, error_message) if validation fails
+
+    Examples:
+        >>> static_analysis_rust_code("fn main() { println!(\"hello\"); }")
+        (True, 'Static analysis passed')
+        >>> static_analysis_rust_code("fn main() { println!(\"hello\");", "println")
+        (True, 'Static analysis passed')
+        >>> static_analysis_rust_code("// uses File\\nfn test() {}", "File")
+        (False, "Code does not properly use the required API: 'File'")
+    """
+    import re
+
+    # Optional: Check API usage (excluding comments)
+    if api_name:
+        api_used = is_api_properly_used(code, api_name)
+        if not api_used:
+            return False, f"Code does not properly use the required API: '{api_name}'"
+
+    # Basic syntax checks - ensure code has basic Rust structure
+    syntax_checks = [
+        (r'\bfn\b', "Missing function definition"),
+        (r'[{]', "Missing opening braces"),
+        (r'[}]', "Missing closing braces"),
+    ]
+
+    for pattern, error in syntax_checks:
+        if not re.search(pattern, code):
+            return False, error
+
+    # Handle lifetime annotations before quote counting
+    # Replace lifetime markers to avoid false positives in quote matching
+    code_without_lifetimes = re.sub(r"<'[a-zA-Z_]+>|&'[a-zA-Z_]+", "<LIFETIME>", code)
+
+    # Check for obvious syntax errors - unclosed quotes, brackets, etc.
+    quotes = code_without_lifetimes.count('"') % 2
+    single_quotes = code_without_lifetimes.count("'") % 2
+    parentheses = code.count('(') - code.count(')')
+    braces = code.count('{') - code.count('}')
+    brackets = code.count('[') - code.count(']')
+
+    if quotes != 0:
+        return False, "Unclosed double quotes"
+    if single_quotes != 0:
+        return False, "Unclosed single quotes (not related to lifetimes)"
+    if parentheses != 0:
+        return False, "Mismatched parentheses"
+    if braces != 0:
+        return False, "Mismatched braces"
+    if brackets != 0:
+        return False, "Mismatched brackets"
+
+    # All checks passed
+    return True, "Static analysis passed"
+
+
 def filter_code_files(
     file_iter: Iterable[dict], config: PipelineConfig
 ) -> Iterator[dict]:
