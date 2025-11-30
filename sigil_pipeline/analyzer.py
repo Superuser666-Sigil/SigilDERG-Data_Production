@@ -298,6 +298,42 @@ class DenyResult:
 
 
 @dataclass
+class RustfmtResult:
+    """Results from running cargo fmt --check."""
+
+    passed: bool = False
+    """Whether all files are properly formatted."""
+    unformatted_files: list[str] = field(default_factory=list)
+    """List of files that need formatting."""
+    style_edition: str | None = None
+    """Style edition used for formatting check."""
+    success: bool = True
+    """Whether cargo fmt ran successfully."""
+    log_path: str | None = None
+    """Path to detailed log file."""
+
+
+@dataclass
+class StrictClippyResult:
+    """Results from strict Clippy analysis (pedantic/nursery)."""
+
+    passed: bool = False
+    """Whether all strict Clippy checks passed."""
+    pedantic_warnings: int = 0
+    """Count of pedantic lint warnings."""
+    nursery_warnings: int = 0
+    """Count of nursery lint warnings."""
+    denied_antipatterns: int = 0
+    """Count of denied anti-patterns (unwrap, expect, panic)."""
+    warning_details: list[dict] = field(default_factory=list)
+    """Details of each warning for debugging."""
+    success: bool = True
+    """Whether strict Clippy ran successfully."""
+    log_path: str | None = None
+    """Path to detailed log file."""
+
+
+@dataclass
 class CrateAnalysisReport:
     """Complete analysis report for a crate."""
 
@@ -311,6 +347,9 @@ class CrateAnalysisReport:
     deny: DenyResult | None = None
     edition: str | None = None
     rejection_log_path: str | None = None
+    # Hardening mode results
+    rustfmt: RustfmtResult | None = None
+    strict_clippy: StrictClippyResult | None = None
 
 
 _ANALYSIS_LOG_DIR: Path | None = None
@@ -506,6 +545,271 @@ async def run_clippy(
     except Exception as e:
         logger.error(f"Failed to run clippy on {crate_dir}: {e}")
         return ClippyResult(success=False)
+
+
+async def run_clippy_strict(
+    crate_dir: Path,
+    timeout: int = 600,
+    env: dict[str, str] | None = None,
+    crate_name: str | None = None,
+    deny_antipatterns: bool = True,
+) -> StrictClippyResult:
+    """
+    Run cargo clippy with strict settings for dataset hardening.
+
+    Enables pedantic and nursery lint groups, and optionally denies
+    common anti-patterns (unwrap, expect, panic).
+
+    Args:
+        crate_dir: Path to crate directory
+        timeout: Command timeout in seconds (default: 600, longer than regular Clippy)
+        env: Environment variables for cargo
+        crate_name: Crate name for logging
+        deny_antipatterns: Whether to deny unwrap/expect/panic (default: True)
+
+    Returns:
+        StrictClippyResult with detailed analysis
+    """
+    if not check_cargo_available():
+        logger.error("cargo is not available")
+        return StrictClippyResult(success=False)
+
+    # Build strict Clippy command with pedantic and nursery
+    cmd_args = [
+        "clippy",
+        "--message-format=json",
+        "--quiet",
+        "--",
+        "-W",
+        "clippy::all",
+        "-W",
+        "clippy::pedantic",
+        "-W",
+        "clippy::nursery",
+    ]
+
+    # Add deny flags for anti-patterns
+    if deny_antipatterns:
+        cmd_args.extend([
+            "-D",
+            "clippy::unwrap_used",
+            "-D",
+            "clippy::expect_used",
+            "-D",
+            "clippy::panic",
+        ])
+
+    cmd = build_cargo_command(*cmd_args)
+
+    try:
+        result = await run_command_async(
+            cmd,
+            cwd=crate_dir,
+            timeout=timeout,
+            env=env,
+        )
+
+        # Decode bytes to string if needed
+        if isinstance(result.stdout, bytes):
+            result.stdout = result.stdout.decode("utf-8", errors="replace")
+        if isinstance(result.stderr, bytes):
+            result.stderr = result.stderr.decode("utf-8", errors="replace")
+
+        pedantic_warnings = 0
+        nursery_warnings = 0
+        denied_antipatterns = 0
+        warning_details: list[dict] = []
+        errors = []
+
+        # Parse JSON output
+        for line in result.stdout.splitlines():
+            if not line.strip():
+                continue
+            try:
+                msg = json.loads(line)
+                if msg.get("reason") == "compiler-message":
+                    message_data = msg.get("message", {})
+                    level = message_data.get("level", "")
+                    code_obj = message_data.get("code", {})
+                    code_str = code_obj.get("code", "") if code_obj else ""
+
+                    if level in ("warning", "error"):
+                        detail = {
+                            "level": level,
+                            "code": code_str,
+                            "message": message_data.get("message", ""),
+                        }
+                        warning_details.append(detail)
+
+                        # Categorize by lint source
+                        if "clippy::pedantic" in code_str or any(
+                            p in code_str
+                            for p in [
+                                "doc_markdown",
+                                "too_many_lines",
+                                "cognitive_complexity",
+                                "similar_names",
+                            ]
+                        ):
+                            pedantic_warnings += 1
+                        elif "clippy::nursery" in code_str:
+                            nursery_warnings += 1
+
+                        # Track denied anti-patterns
+                        if code_str in (
+                            "clippy::unwrap_used",
+                            "clippy::expect_used",
+                            "clippy::panic",
+                        ):
+                            denied_antipatterns += 1
+
+                    if level == "error":
+                        errors.append(msg)
+
+            except json.JSONDecodeError:
+                continue
+
+        # Write log
+        log_path = None
+        if crate_name:
+            log_content = result.stdout or result.stderr or ""
+            log_path = str(
+                _write_analysis_log(
+                    crate_name, "clippy_strict.log", log_content.strip()
+                )
+            )
+
+        # Strict check passes only if no errors and no denied antipatterns
+        passed = len(errors) == 0 and denied_antipatterns == 0
+
+        return StrictClippyResult(
+            passed=passed,
+            pedantic_warnings=pedantic_warnings,
+            nursery_warnings=nursery_warnings,
+            denied_antipatterns=denied_antipatterns,
+            warning_details=warning_details,
+            success=True,
+            log_path=log_path,
+        )
+
+    except subprocess.TimeoutExpired:
+        logger.warning(f"Strict Clippy timed out for {crate_dir}")
+        return StrictClippyResult(success=False)
+    except Exception as e:
+        logger.error(f"Failed to run strict clippy on {crate_dir}: {e}")
+        return StrictClippyResult(success=False)
+
+
+async def run_rustfmt_check(
+    crate_dir: Path,
+    timeout: int = 120,
+    env: dict[str, str] | None = None,
+    crate_name: str | None = None,
+    style_edition: str = "2024",
+) -> RustfmtResult:
+    """
+    Run cargo fmt --check to verify code formatting.
+
+    Optionally validates against a specific style edition (e.g., 2024).
+
+    Args:
+        crate_dir: Path to crate directory
+        timeout: Command timeout in seconds
+        env: Environment variables for cargo
+        crate_name: Crate name for logging
+        style_edition: Target style edition (default: "2024")
+
+    Returns:
+        RustfmtResult with formatting check results
+    """
+    if not check_cargo_available():
+        logger.error("cargo is not available")
+        return RustfmtResult(success=False)
+
+    # Create temporary rustfmt.toml with style_edition if not present
+    rustfmt_toml = crate_dir / ".rustfmt.toml"
+    rustfmt_toml_existed = rustfmt_toml.exists()
+    temp_rustfmt_created = False
+
+    try:
+        # Check if .rustfmt.toml already has style_edition
+        if rustfmt_toml_existed:
+            content = rustfmt_toml.read_text(encoding="utf-8")
+            if "style_edition" not in content:
+                # Append style_edition to existing config
+                with open(rustfmt_toml, "a", encoding="utf-8") as f:
+                    f.write(f'\nstyle_edition = "{style_edition}"\n')
+                temp_rustfmt_created = True
+        else:
+            # Create new config with style_edition
+            rustfmt_toml.write_text(
+                f'style_edition = "{style_edition}"\n', encoding="utf-8"
+            )
+            temp_rustfmt_created = True
+
+        cmd = build_cargo_command("fmt", "--check")
+
+        result = await run_command_async(
+            cmd,
+            cwd=crate_dir,
+            timeout=timeout,
+            env=env,
+        )
+
+        # Decode output
+        if isinstance(result.stdout, bytes):
+            result.stdout = result.stdout.decode("utf-8", errors="replace")
+        if isinstance(result.stderr, bytes):
+            result.stderr = result.stderr.decode("utf-8", errors="replace")
+
+        # Parse unformatted files from output
+        unformatted_files: list[str] = []
+        output = result.stdout + result.stderr
+        for line in output.splitlines():
+            # cargo fmt --check outputs "Diff in <file>" lines
+            if line.startswith("Diff in "):
+                file_path = line.replace("Diff in ", "").strip()
+                unformatted_files.append(file_path)
+
+        # Write log
+        log_path = None
+        if crate_name and (unformatted_files or result.returncode != 0):
+            log_path = str(
+                _write_analysis_log(crate_name, "rustfmt.log", output.strip())
+            )
+
+        passed = result.returncode == 0
+
+        return RustfmtResult(
+            passed=passed,
+            unformatted_files=unformatted_files,
+            style_edition=style_edition,
+            success=True,
+            log_path=log_path,
+        )
+
+    except subprocess.TimeoutExpired:
+        logger.warning(f"rustfmt timed out for {crate_dir}")
+        return RustfmtResult(success=False)
+    except Exception as e:
+        logger.error(f"Failed to run rustfmt on {crate_dir}: {e}")
+        return RustfmtResult(success=False)
+    finally:
+        # Clean up temporary rustfmt.toml modifications
+        if temp_rustfmt_created:
+            try:
+                if rustfmt_toml_existed:
+                    # Restore original file by removing our addition
+                    content = rustfmt_toml.read_text(encoding="utf-8")
+                    content = content.replace(
+                        f'\nstyle_edition = "{style_edition}"\n', ""
+                    )
+                    rustfmt_toml.write_text(content, encoding="utf-8")
+                else:
+                    # Remove file we created
+                    rustfmt_toml.unlink()
+            except Exception:
+                pass  # Best effort cleanup
 
 
 async def run_geiger(
@@ -1173,6 +1477,56 @@ async def analyze_crate(
             if not isinstance(dr, BaseException):
                 deny_result = dr  # type: ignore[assignment]
 
+    # STEP 4: Run hardening checks if enabled
+    strict_clippy_result: StrictClippyResult | None = None
+    rustfmt_result: RustfmtResult | None = None
+
+    if config and getattr(config, "dataset_hardening", False):
+        hardening_tasks = []
+
+        # Add strict clippy if enabled
+        if getattr(config, "hardening_strict_clippy", True):
+            deny_antipatterns = getattr(config, "hardening_deny_antipatterns", True)
+            hardening_tasks.append(
+                run_clippy_strict(
+                    crate_dir,
+                    env=env,
+                    crate_name=crate_name,
+                    deny_antipatterns=deny_antipatterns,
+                )
+            )
+        else:
+            hardening_tasks.append(asyncio.coroutine(lambda: None)())  # Placeholder
+
+        # Add rustfmt check if enabled
+        if getattr(config, "hardening_require_rustfmt", True):
+            style_edition = "2024"  # Always use 2024 for hardening
+            hardening_tasks.append(
+                run_rustfmt_check(
+                    crate_dir,
+                    env=env,
+                    crate_name=crate_name,
+                    style_edition=style_edition,
+                )
+            )
+        else:
+            hardening_tasks.append(asyncio.coroutine(lambda: None)())  # Placeholder
+
+        hardening_results = await asyncio.gather(
+            *hardening_tasks, return_exceptions=True
+        )
+
+        # Extract hardening results
+        if getattr(config, "hardening_strict_clippy", True):
+            hr = hardening_results[0]
+            if not isinstance(hr, BaseException) and hr is not None:
+                strict_clippy_result = hr
+
+        if getattr(config, "hardening_require_rustfmt", True):
+            hr = hardening_results[1]
+            if not isinstance(hr, BaseException) and hr is not None:
+                rustfmt_result = hr
+
     report = CrateAnalysisReport(
         crate_name=crate_name,
         crate_dir=crate_dir,
@@ -1183,6 +1537,8 @@ async def analyze_crate(
         license=license_result,
         deny=deny_result,
         edition=edition,
+        rustfmt=rustfmt_result,
+        strict_clippy=strict_clippy_result,
     )
 
     # Cache the result if caching is enabled
@@ -1210,6 +1566,8 @@ def _serialize_report(report: CrateAnalysisReport) -> dict[str, Any]:
         "deny": asdict(report.deny) if report.deny else None,
         "edition": report.edition,
         "rejection_log_path": report.rejection_log_path,
+        "rustfmt": asdict(report.rustfmt) if report.rustfmt else None,
+        "strict_clippy": asdict(report.strict_clippy) if report.strict_clippy else None,
     }
 
 
@@ -1221,6 +1579,12 @@ def _deserialize_report(data: dict[str, Any], crate_dir: Path) -> CrateAnalysisR
     docs = DocStats(**data["docs"]) if data.get("docs") else None
     license_result = LicenseResult(**data["license"]) if data.get("license") else None
     deny = DenyResult(**data["deny"]) if data.get("deny") else None
+    rustfmt = RustfmtResult(**data["rustfmt"]) if data.get("rustfmt") else None
+    strict_clippy = (
+        StrictClippyResult(**data["strict_clippy"])
+        if data.get("strict_clippy")
+        else None
+    )
 
     return CrateAnalysisReport(
         crate_name=data["crate_name"],
@@ -1233,4 +1597,6 @@ def _deserialize_report(data: dict[str, Any], crate_dir: Path) -> CrateAnalysisR
         deny=deny,
         edition=data.get("edition"),
         rejection_log_path=data.get("rejection_log_path"),
+        rustfmt=rustfmt,
+        strict_clippy=strict_clippy,
     )

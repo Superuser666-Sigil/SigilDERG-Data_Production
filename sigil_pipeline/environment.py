@@ -361,3 +361,185 @@ def write_environment_file(fingerprint: EnvironmentFingerprint, path: Path) -> N
     with open(path, "w", encoding="utf-8") as f:
         json.dump(fingerprint.to_dict(), f, indent=2)
     logger.debug(f"Environment fingerprint written to {path}")
+
+
+@dataclass
+class HardeningToolchainResult:
+    """Result of hardening toolchain validation."""
+
+    supported: bool = False
+    """Whether the toolchain supports all hardening features."""
+
+    rustc_version: str | None = None
+    """Detected rustc version string."""
+
+    rustc_minor: int | None = None
+    """Parsed rustc minor version (e.g., 85 for 1.85.0)."""
+
+    rustfmt_supports_2024_style: bool = False
+    """Whether rustfmt supports style_edition = '2024'."""
+
+    is_nightly: bool = False
+    """Whether using nightly toolchain (better for nursery lints)."""
+
+    error_message: str | None = None
+    """Human-readable error message if not supported."""
+
+    warnings: list[str] = field(default_factory=list)
+    """Non-fatal warnings about the toolchain."""
+
+
+def _parse_rustc_version(version_str: str | None) -> tuple[int | None, bool]:
+    """
+    Parse rustc version string to extract minor version and nightly status.
+
+    Args:
+        version_str: Output from `rustc --version` (e.g., "rustc 1.85.0 (abcdef 2025-01-01)")
+
+    Returns:
+        Tuple of (minor_version, is_nightly)
+    """
+    import re
+
+    if not version_str:
+        return None, False
+
+    # Match patterns like "rustc 1.85.0" or "rustc 1.93.0-nightly"
+    match = re.search(r"rustc\s+(\d+)\.(\d+)\.(\d+)(?:-(\w+))?", version_str)
+    if not match:
+        return None, False
+
+    minor = int(match.group(2))
+    channel = match.group(4) if match.group(4) else "stable"
+    is_nightly = channel == "nightly"
+
+    return minor, is_nightly
+
+
+def check_hardening_toolchain(min_edition: str = "2024") -> HardeningToolchainResult:
+    """
+    Validate that the Rust toolchain supports dataset hardening features.
+
+    Checks:
+    1. rustc version >= 1.85 (required for edition 2024)
+    2. rustfmt supports style_edition = "2024"
+    3. Clippy is available
+
+    Args:
+        min_edition: Minimum required edition (default: "2024")
+
+    Returns:
+        HardeningToolchainResult with validation results
+    """
+    result = HardeningToolchainResult()
+
+    # Minimum rustc version for edition 2024
+    MIN_RUSTC_MINOR_FOR_2024 = 85
+
+    # Get rustc version
+    result.rustc_version = _run_version_command(["rustc", "--version"])
+    if not result.rustc_version:
+        result.error_message = (
+            "rustc not found. Please install Rust toolchain.\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md"
+        )
+        return result
+
+    # Parse version
+    result.rustc_minor, result.is_nightly = _parse_rustc_version(result.rustc_version)
+    if result.rustc_minor is None:
+        result.error_message = (
+            f"Could not parse rustc version from: {result.rustc_version}\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md"
+        )
+        return result
+
+    # Check minimum version for edition 2024
+    if min_edition == "2024" and result.rustc_minor < MIN_RUSTC_MINOR_FOR_2024:
+        result.error_message = (
+            f"Dataset hardening requires rustc >= 1.{MIN_RUSTC_MINOR_FOR_2024} for "
+            f"edition 2024 support.\n"
+            f"Current version: {result.rustc_version}\n\n"
+            "To install the required toolchain:\n"
+            "  rustup update stable\n"
+            "  # Or for nightly (recommended for full Clippy nursery support):\n"
+            "  rustup install nightly\n"
+            "  rustup default nightly\n\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md\n"
+            "Rust Edition Guide: https://doc.rust-lang.org/edition-guide/rust-2024/"
+        )
+        return result
+
+    # Check rustfmt availability and style_edition 2024 support
+    rustfmt_version = _run_version_command(["rustfmt", "--version"])
+    if not rustfmt_version:
+        result.error_message = (
+            "rustfmt not found. Please install rustfmt:\n"
+            "  rustup component add rustfmt\n\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md"
+        )
+        return result
+
+    # rustfmt with style_edition 2024 requires rustfmt 1.8+ (ships with rustc 1.85+)
+    # If we passed the rustc version check, rustfmt should support it
+    result.rustfmt_supports_2024_style = result.rustc_minor >= MIN_RUSTC_MINOR_FOR_2024
+
+    # Check Clippy availability
+    clippy_available = _check_cargo_tool("clippy")
+    if not clippy_available:
+        result.error_message = (
+            "cargo-clippy not found. Please install Clippy:\n"
+            "  rustup component add clippy\n\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md"
+        )
+        return result
+
+    # Add warnings for non-nightly toolchains
+    if not result.is_nightly:
+        result.warnings.append(
+            "Using stable toolchain. Some Clippy nursery lints may not be available. "
+            "For best results, consider using nightly: rustup default nightly"
+        )
+
+    # All checks passed
+    result.supported = True
+    return result
+
+
+def validate_hardening_toolchain_or_exit(min_edition: str = "2024") -> None:
+    """
+    Validate hardening toolchain and exit with clear error if not supported.
+
+    This function should be called at pipeline startup when --dataset-hardening
+    is enabled. It will log errors and raise SystemExit if the toolchain is
+    insufficient.
+
+    Args:
+        min_edition: Minimum required edition (default: "2024")
+
+    Raises:
+        SystemExit: If toolchain does not support hardening features
+    """
+    result = check_hardening_toolchain(min_edition)
+
+    if not result.supported:
+        logger.error("=" * 70)
+        logger.error("DATASET HARDENING TOOLCHAIN VALIDATION FAILED")
+        logger.error("=" * 70)
+        logger.error("")
+        if result.error_message:
+            for line in result.error_message.split("\n"):
+                logger.error(line)
+        logger.error("")
+        logger.error("=" * 70)
+        raise SystemExit(1)
+
+    # Log success and any warnings
+    logger.info(f"Hardening toolchain validated: {result.rustc_version}")
+    if result.is_nightly:
+        logger.info("Using nightly toolchain (full Clippy nursery support)")
+    else:
+        logger.info("Using stable toolchain")
+
+    for warning in result.warnings:
+        logger.warning(warning)

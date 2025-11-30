@@ -237,6 +237,33 @@ class PipelineConfig:
     capture_environment: bool = True
     """Capture and log environment fingerprint at startup. Default: True."""
 
+    # Dataset Hardening Mode (Rust 2024 Benchmark Quality)
+    # See ADR-013 and docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md for details
+    dataset_hardening: bool = False
+    """Enable strict Rust 2024 dataset hardening mode. When enabled, applies additional
+    quality gates: strict Clippy (pedantic/nursery), rustfmt validation, unsafe block
+    rejection. Requires rustc 1.85+ for full edition 2024 support. Default: False."""
+
+    hardening_min_edition: str = "2024"
+    """Minimum Rust edition required for hardened samples. Default: '2024'.
+    Crates with older editions will be filtered out in hardening mode."""
+
+    hardening_strict_clippy: bool = True
+    """Enable strict Clippy linting with pedantic and nursery lint groups.
+    This is slower than default Clippy but catches more issues. Default: True."""
+
+    hardening_deny_antipatterns: bool = True
+    """Deny common anti-patterns: unwrap_used, expect_used, panic.
+    Code containing these patterns will be rejected in hardening mode. Default: True."""
+
+    hardening_require_rustfmt: bool = True
+    """Require code to pass `cargo fmt --check` with style_edition 2024.
+    Unformatted code will be rejected in hardening mode. Default: True."""
+
+    hardening_reject_unsafe: bool = True
+    """Reject code containing `unsafe` blocks (not just crate-level Geiger metrics).
+    Uses tree-sitter to detect unsafe blocks at the sample level. Default: True."""
+
     @classmethod
     def from_dict(cls, data: dict) -> "PipelineConfig":
         """Create config from dictionary."""
@@ -325,4 +352,10 @@ class PipelineConfig:
             "enable_prometheus_output": self.enable_prometheus_output,
             "prometheus_output_path": self.prometheus_output_path,
             "capture_environment": self.capture_environment,
+            "dataset_hardening": self.dataset_hardening,
+            "hardening_min_edition": self.hardening_min_edition,
+            "hardening_strict_clippy": self.hardening_strict_clippy,
+            "hardening_deny_antipatterns": self.hardening_deny_antipatterns,
+            "hardening_require_rustfmt": self.hardening_require_rustfmt,
+            "hardening_reject_unsafe": self.hardening_reject_unsafe,
         }

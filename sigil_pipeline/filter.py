@@ -131,6 +131,33 @@ def is_crate_acceptable(
                 reason = f"deny severity {report.deny.highest_severity} exceeds {config.max_deny_severity}"
                 return _reject(report, reason)
 
+    # Dataset hardening checks
+    if config.dataset_hardening:
+        # Check minimum edition for hardening
+        hardening_min_edition = config.hardening_min_edition
+        if report.edition:
+            try:
+                if int(report.edition) < int(hardening_min_edition):
+                    reason = f"hardening: edition {report.edition} < {hardening_min_edition}"
+                    return _reject(report, reason)
+            except ValueError:
+                pass  # Can't parse edition, skip check
+
+        # Check strict clippy results
+        if config.hardening_strict_clippy and report.strict_clippy:
+            if not report.strict_clippy.passed:
+                reason = f"hardening: strict clippy failed (denied: {report.strict_clippy.denied_antipatterns}, pedantic: {report.strict_clippy.pedantic_warnings}, nursery: {report.strict_clippy.nursery_warnings})"
+                detail = report.strict_clippy.log_path
+                return _reject(report, reason, detail)
+
+        # Check rustfmt results
+        if config.hardening_require_rustfmt and report.rustfmt:
+            if not report.rustfmt.passed:
+                unformatted_count = len(report.rustfmt.unformatted_files)
+                reason = f"hardening: rustfmt check failed ({unformatted_count} unformatted files)"
+                detail = report.rustfmt.log_path
+                return _reject(report, reason, detail)
+
     return True, None
 
 
@@ -212,6 +239,73 @@ def has_doc_comments(content: str) -> bool:
         True if content has doc comments, False otherwise
     """
     return "///" in content or "//!" in content
+
+
+def detect_unsafe_blocks(content: str) -> int:
+    """
+    Detect the number of `unsafe` blocks in Rust code using tree-sitter.
+
+    This provides sample-level unsafe detection (distinct from cargo-geiger's
+    crate-level metrics). Used by dataset hardening mode to reject code
+    containing unsafe blocks.
+
+    Args:
+        content: Rust source code content
+
+    Returns:
+        Count of unsafe blocks found (0 if none or parsing fails)
+    """
+    try:
+        import tree_sitter_rust as ts_rust
+        from tree_sitter import Language, Parser
+    except ImportError:
+        # Fall back to simple string search if tree-sitter not available
+        logger.debug("tree-sitter not available, using string-based unsafe detection")
+        return content.count("unsafe {") + content.count("unsafe{")
+
+    try:
+        # Initialize parser
+        rust_language = Language(ts_rust.language())
+        parser = Parser(rust_language)
+
+        # Parse the content
+        tree = parser.parse(content.encode("utf-8"))
+        root = tree.root_node
+
+        # Count unsafe blocks using tree-sitter query
+        unsafe_count = 0
+
+        def count_unsafe(node):
+            """Recursively count unsafe blocks."""
+            nonlocal unsafe_count
+            # unsafe_block is the tree-sitter node type for `unsafe { ... }`
+            if node.type == "unsafe_block":
+                unsafe_count += 1
+            for child in node.children:
+                count_unsafe(child)
+
+        count_unsafe(root)
+        return unsafe_count
+
+    except Exception as e:
+        logger.debug(f"tree-sitter parsing failed, falling back to string search: {e}")
+        # Fall back to simple string search
+        return content.count("unsafe {") + content.count("unsafe{")
+
+
+def has_unsafe_blocks(content: str) -> bool:
+    """
+    Check if content contains any `unsafe` blocks.
+
+    Convenience wrapper around detect_unsafe_blocks().
+
+    Args:
+        content: Rust source code content
+
+    Returns:
+        True if content has unsafe blocks, False otherwise
+    """
+    return detect_unsafe_blocks(content) > 0
 
 
 def meets_size_sanity_criteria(
@@ -389,6 +483,8 @@ def filter_code_files(
     Applies test/bench exclusion and size/sanity filters per refactoring plan.
     Refactored to accept Iterable and yield (Priority 2.1 - Streaming Architecture).
 
+    When dataset hardening is enabled, also filters files containing unsafe blocks.
+
     Args:
         file_iter: Iterable of file dicts with 'path' and 'code' keys
         config: Pipeline configuration
@@ -407,5 +503,14 @@ def filter_code_files(
         # Apply size/sanity filters
         if not meets_size_sanity_criteria(path, code, config):
             continue
+
+        # Hardening: reject files with unsafe blocks
+        if config.dataset_hardening and config.hardening_reject_unsafe:
+            unsafe_count = detect_unsafe_blocks(code)
+            if unsafe_count > 0:
+                logger.debug(
+                    f"Hardening: skipping {path} ({unsafe_count} unsafe blocks)"
+                )
+                continue
 
         yield file_info

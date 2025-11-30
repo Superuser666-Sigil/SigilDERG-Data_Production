@@ -396,6 +396,11 @@ def build_dataset_entries(
                 "_prompt_seed": actual_seed,  # Store seed for reproducibility tracking
             }
 
+        # Copy hardening metadata from file_info to sample (if present)
+        for key in file_info:
+            if key.startswith("_hardening") or key.startswith("_clippy") or key.startswith("_rustfmt"):
+                sample[key] = file_info[key]
+
         # Validate format if requested
         if validator:
             is_valid, errors = validator.validate_sample(

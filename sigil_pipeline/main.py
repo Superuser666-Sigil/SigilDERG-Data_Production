@@ -20,6 +20,7 @@ from .environment import (
     EnvironmentFingerprint,
     capture_environment,
     log_environment_summary,
+    validate_hardening_toolchain_or_exit,
     write_environment_file,
 )
 from .observability import configure_structured_logging, get_metrics
@@ -116,6 +117,16 @@ async def process_crate(
         seen_files: set[Path] = set()
         total_rs_files = 0
 
+        # Build hardening metadata from analysis report (if hardening enabled)
+        hardening_meta: dict = {}
+        if config.dataset_hardening:
+            hardening_meta["_hardening_enabled"] = True
+            hardening_meta["_hardening_edition"] = report.edition or "unknown"
+            if report.strict_clippy:
+                hardening_meta["_clippy_strict_passed"] = report.strict_clippy.passed
+            if report.rustfmt:
+                hardening_meta["_rustfmt_passed"] = report.rustfmt.passed
+
         for src_dir in source_dirs:
             if src_dir.exists():
                 rs_files = list(src_dir.rglob("*.rs"))
@@ -126,13 +137,15 @@ async def process_crate(
                     total_rs_files += 1
                     try:
                         content = rs_file.read_text(encoding="utf-8", errors="ignore")
-                        code_files.append(
-                            {
-                                "path": str(rs_file.relative_to(crate_dir)),
-                                "code": content,
-                                "crate_name": crate_name,
-                            }
-                        )
+                        file_dict = {
+                            "path": str(rs_file.relative_to(crate_dir)),
+                            "code": content,
+                            "crate_name": crate_name,
+                        }
+                        # Add hardening metadata if enabled
+                        if hardening_meta:
+                            file_dict.update(hardening_meta)
+                        code_files.append(file_dict)
                     except Exception as e:
                         logger.debug(f"Failed to read {rs_file}: {e}")
 
@@ -164,15 +177,18 @@ async def process_crate(
                         max_chars=config.max_sft_chars,
                     )
                     for chunk in chunks:
-                        chunked_files.append(
-                            {
-                                "path": file_dict["path"],
-                                "code": chunk["code"],
-                                "chunk_type": chunk["type"],
-                                "crate_name": file_dict["crate_name"],
-                                "crate_dir": str(crate_dir),  # For error injection
-                            }
-                        )
+                        chunk_dict = {
+                            "path": file_dict["path"],
+                            "code": chunk["code"],
+                            "chunk_type": chunk["type"],
+                            "crate_name": file_dict["crate_name"],
+                            "crate_dir": str(crate_dir),  # For error injection
+                        }
+                        # Preserve hardening metadata in chunks
+                        for key in file_dict:
+                            if key.startswith("_hardening") or key.startswith("_clippy") or key.startswith("_rustfmt"):
+                                chunk_dict[key] = file_dict[key]
+                        chunked_files.append(chunk_dict)
                 except Exception as e:
                     logger.debug(f"Failed to chunk {file_dict['path']}: {e}")
                     # Fallback: use original file if chunking fails
@@ -218,6 +234,17 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
 
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
+
+    # Validate hardening toolchain if hardening mode is enabled
+    if cfg.dataset_hardening:
+        logger.info("Dataset hardening mode enabled - validating toolchain...")
+        validate_hardening_toolchain_or_exit(cfg.hardening_min_edition)
+        logger.info(
+            f"Hardening settings: strict_clippy={cfg.hardening_strict_clippy}, "
+            f"deny_antipatterns={cfg.hardening_deny_antipatterns}, "
+            f"require_rustfmt={cfg.hardening_require_rustfmt}, "
+            f"reject_unsafe={cfg.hardening_reject_unsafe}"
+        )
 
     # Capture and log environment fingerprint for reproducibility
     env_fingerprint: EnvironmentFingerprint | None = None
@@ -867,6 +894,45 @@ def main():
         help="Timeout in seconds for cargo-based error injection (default: 120)",
     )
 
+    # Dataset Hardening Mode (Rust 2024 Benchmark Quality)
+    parser.add_argument(
+        "--dataset-hardening",
+        action="store_true",
+        help="Enable strict Rust 2024 dataset hardening mode. Applies additional quality "
+        "gates: strict Clippy (pedantic/nursery), rustfmt validation, unsafe block "
+        "rejection. Requires rustc 1.85+ for full edition 2024 support. "
+        "See docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md for setup instructions.",
+    )
+    parser.add_argument(
+        "--no-hardening-strict-clippy",
+        dest="hardening_strict_clippy",
+        action="store_false",
+        help="Disable strict Clippy (pedantic/nursery) in hardening mode for faster runs",
+    )
+    parser.add_argument(
+        "--no-hardening-rustfmt",
+        dest="hardening_require_rustfmt",
+        action="store_false",
+        help="Disable rustfmt validation in hardening mode",
+    )
+    parser.add_argument(
+        "--no-hardening-reject-unsafe",
+        dest="hardening_reject_unsafe",
+        action="store_false",
+        help="Allow unsafe blocks in hardening mode (not recommended)",
+    )
+    parser.add_argument(
+        "--no-hardening-deny-antipatterns",
+        dest="hardening_deny_antipatterns",
+        action="store_false",
+        help="Allow unwrap/expect/panic in hardening mode (not recommended)",
+    )
+    parser.add_argument(
+        "--hardening-min-edition",
+        default="2024",
+        help="Minimum Rust edition for hardening mode (default: 2024)",
+    )
+
     args = parser.parse_args()
 
     # Load config
@@ -940,6 +1006,20 @@ def main():
         cfg.enable_checkpointing = args.enable_checkpointing
     if hasattr(args, "checkpoint_interval"):
         cfg.checkpoint_interval = args.checkpoint_interval
+
+    # Dataset hardening overrides
+    if getattr(args, "dataset_hardening", False):
+        cfg.dataset_hardening = True
+    if hasattr(args, "hardening_strict_clippy"):
+        cfg.hardening_strict_clippy = args.hardening_strict_clippy
+    if hasattr(args, "hardening_require_rustfmt"):
+        cfg.hardening_require_rustfmt = args.hardening_require_rustfmt
+    if hasattr(args, "hardening_reject_unsafe"):
+        cfg.hardening_reject_unsafe = args.hardening_reject_unsafe
+    if hasattr(args, "hardening_deny_antipatterns"):
+        cfg.hardening_deny_antipatterns = args.hardening_deny_antipatterns
+    if getattr(args, "hardening_min_edition", None):
+        cfg.hardening_min_edition = args.hardening_min_edition
 
     # Run pipeline
     asyncio.run(run_pipeline(cfg))

@@ -360,6 +360,7 @@ async def test_analyze_crate_collects_results(sample_crate_dir):
         allowed_licenses=["MIT"],
         enable_deny_scan=True,
         require_docs=False,
+        enable_analysis_cache=False,  # Disable cache to ensure all functions are called
     )
     with (
         patch("sigil_pipeline.utils.get_crate_edition", return_value="2021"),
