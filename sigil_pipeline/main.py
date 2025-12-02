@@ -67,7 +67,11 @@ async def process_crate(
     cargo_env: dict | None = None,
 ) -> tuple[list[dict] | None, str | None]:
     """
-    Process a single crate: fetch, analyze, filter, and collect code files.
+    Process a single crate: fetch, analyze, and collect raw code files.
+
+    NOTE:
+      - Filtering and chunking are handled later in the streaming stage.
+      - This function only returns raw file dicts + metadata.
 
     Args:
         crate_name: Name of the crate to process
@@ -111,14 +115,14 @@ async def process_crate(
             )
             return None, rejection_reason
 
-        # Collect code files from actual source directories
-        code_files = []
+        # Collect raw code files from actual source directories
+        code_files: list[dict] = []
         source_dirs = get_crate_source_paths(crate_dir)
         seen_files: set[Path] = set()
         total_rs_files = 0
 
         # Build hardening metadata from analysis report (if hardening enabled)
-        hardening_meta: dict = {}
+        hardening_meta: dict[str, Any] = {}
         if config.dataset_hardening:
             hardening_meta["_hardening_enabled"] = True
             hardening_meta["_hardening_edition"] = report.edition or "unknown"
@@ -128,82 +132,45 @@ async def process_crate(
                 hardening_meta["_rustfmt_passed"] = report.rustfmt.passed
 
         for src_dir in source_dirs:
-            if src_dir.exists():
-                rs_files = list(src_dir.rglob("*.rs"))
-                for rs_file in rs_files:
-                    if rs_file in seen_files:
-                        continue
-                    seen_files.add(rs_file)
-                    total_rs_files += 1
-                    try:
-                        content = rs_file.read_text(encoding="utf-8", errors="ignore")
-                        file_dict = {
-                            "path": str(rs_file.relative_to(crate_dir)),
-                            "code": content,
-                            "crate_name": crate_name,
-                        }
-                        # Add hardening metadata if enabled
-                        if hardening_meta:
-                            file_dict.update(hardening_meta)
-                        code_files.append(file_dict)
-                    except Exception as e:
-                        logger.debug(f"Failed to read {rs_file}: {e}")
+            if not src_dir.exists():
+                continue
+            rs_files = list(src_dir.rglob("*.rs"))
+            for rs_file in rs_files:
+                if rs_file in seen_files:
+                    continue
+                seen_files.add(rs_file)
+                total_rs_files += 1
+                try:
+                    content = rs_file.read_text(encoding="utf-8", errors="ignore")
+                    file_dict: dict[str, Any] = {
+                        "path": str(rs_file.relative_to(crate_dir)),
+                        "code": content,
+                        "crate_name": crate_name,
+                        "crate_dir": str(crate_dir),  # used later for error injection
+                    }
+                    # Add hardening metadata if enabled
+                    if hardening_meta:
+                        file_dict.update(hardening_meta)
+                    code_files.append(file_dict)
+                except Exception as e:
+                    logger.debug(f"Failed to read {rs_file}: {e}")
 
         if source_dirs:
             logger.debug(
-                f"{crate_name}: Found {total_rs_files} .rs files in {[str(d.relative_to(crate_dir)) for d in source_dirs]}"
+                f"{crate_name}: Found {total_rs_files} .rs files in "
+                f"{[str(d.relative_to(crate_dir)) for d in source_dirs]}"
             )
         else:
-            logger.warning(
-                f"{crate_name}: No source directories found in {crate_dir}"
-            )
-
-        # Filter code files (now returns generator)
-        filter_start = time.time()
-        filtered_files = list(filter.filter_code_files(code_files, config))
-        filter_time = time.time() - filter_start
-        logger.debug(f"{crate_name}: Filtering took {filter_time:.2f}s")
-
-        # Chunk files if in Phase-2 mode
-        if config.prompt_mode == "instruct":
-            from . import chunker
-
-            chunked_files = []
-            for file_dict in filtered_files:
-                try:
-                    chunks = chunker.chunk_rust_file(
-                        file_dict["code"],
-                        max_lines=config.max_sft_lines,
-                        max_chars=config.max_sft_chars,
-                    )
-                    for chunk in chunks:
-                        chunk_dict = {
-                            "path": file_dict["path"],
-                            "code": chunk["code"],
-                            "chunk_type": chunk["type"],
-                            "crate_name": file_dict["crate_name"],
-                            "crate_dir": str(crate_dir),  # For error injection
-                        }
-                        # Preserve hardening metadata in chunks
-                        for key in file_dict:
-                            if key.startswith("_hardening") or key.startswith("_clippy") or key.startswith("_rustfmt"):
-                                chunk_dict[key] = file_dict[key]
-                        chunked_files.append(chunk_dict)
-                except Exception as e:
-                    logger.debug(f"Failed to chunk {file_dict['path']}: {e}")
-                    # Fallback: use original file if chunking fails
-                    chunked_files.append(file_dict)
-
-            filtered_files = chunked_files
-            logger.debug(f"{crate_name}: Chunked into {len(chunked_files)} snippets")
+            logger.warning(f"{crate_name}: No source directories found in {crate_dir}")
 
         total_time = time.time() - crate_start_time
         logger.info(
-            f"{crate_name}: {len(filtered_files)}/{len(code_files)} files passed filters "
-            f"(total: {total_time:.2f}s, fetch: {fetch_time:.2f}s, analyze: {analyze_time:.2f}s, filter: {filter_time:.2f}s)"
+            f"{crate_name}: collected {len(code_files)} raw code files "
+            f"(total: {total_time:.2f}s, fetch: {fetch_time:.2f}s, analyze: {analyze_time:.2f}s)"
         )
 
-        return filtered_files, None
+        # No filtering or chunking here; that is handled in the streaming stage
+        return code_files, None
 
     except Exception as e:
         total_time = time.time() - crate_start_time
@@ -292,13 +259,11 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                     "Proceeding anyway, but results may be inconsistent."
                 )
             # Filter out already-processed crates (both accepted and rejected)
-            # Note: Resuming skips already-processed crates to avoid duplicates.
-            # To include samples from previous run, manually merge the datasets.
             crates = checkpoint_manager.filter_unprocessed(crates)
         else:
             logger.info("No checkpoint found, starting fresh run")
 
-    # Initialize metrics tracking (Priority 5.1)
+    # Initialize metrics tracking
     processed_count = 0
     skipped_count = 0
     reason_counts: Counter[str] = Counter()
@@ -330,8 +295,8 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
         with utils.TempDir(
             prefix="sigil_crates_", cleanup=cleanup_temp, resume_path=resume_temp_dir
         ) as temp_dir:
-            # Setup shared cargo target directory if enabled (Priority 3.1)
-            cargo_env = {}
+            # Setup shared cargo target directory if enabled
+            cargo_env: dict[str, str] = {}
             if cfg.reuse_cargo_target:
                 if cfg.cargo_target_dir:
                     target_dir = Path(cfg.cargo_target_dir)
@@ -341,6 +306,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 target_dir.mkdir(parents=True, exist_ok=True)
                 cargo_env["CARGO_TARGET_DIR"] = str(target_dir.resolve())
                 logger.info(f"Using shared cargo target directory: {target_dir}")
+
             # Process crates with concurrency control
             semaphore = asyncio.Semaphore(cfg.max_threads)
 
@@ -348,141 +314,30 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 async with semaphore:
                     return await process_crate(crate_name, cfg, temp_dir, cargo_env)
 
-            # Create tasks with crate name mapping
-            task_to_crate = {}
-            tasks = []
+            tasks: list[asyncio.Task[Any]] = []
+            task_to_crate: dict[int, str] = {}
             for crate in crates:
                 task = asyncio.create_task(process_with_semaphore(crate))
-                task_to_crate[task] = crate
+                task_id = id(task)
+                task_to_crate[task_id] = crate
                 tasks.append(task)
 
-            # Process crates and collect results with reason tracking (Priority 2.1 - Streaming Architecture)
-            # Use asyncio.as_completed to process as crates complete
-            crate_file_generator_parts = []
-            # as_completed yields futures/tasks as they complete, we need to track which is which
-            pending = {task: crate for task, crate in zip(tasks, crates)}
+            crate_file_generator_parts: list[list[dict]] = []
+
             for completed_task in asyncio.as_completed(tasks):
+                crate_name = task_to_crate.get(id(completed_task), "unknown")
                 try:
-                    result = await completed_task
-                    # Find crate name from pending dict
-                    crate_name = pending.pop(completed_task, "unknown")
-                    if isinstance(result, Exception):
-                        logger.error(f"Task failed with exception: {result}")
-                        skipped_count += 1
-                        reason_counts["processing_error"] += 1
-                        metrics_collector.increment(
-                            "crates_rejected_total",
-                            labels={"reason": "processing_error"},
-                            help_text="Total crates rejected by reason",
-                        )
-                        # Mark as processed (rejected due to error)
-                        if checkpoint_manager:
-                            checkpoint_manager.mark_processed(
-                                crate_name, "rejected", "processing_error"
-                            )
-                            processed_crates[crate_name] = {
-                                "status": "rejected",
-                                "reason": "processing_error",
-                                "file_count": 0,
-                            }
-                    elif result[0] is None:
-                        # Crate was filtered out
-                        skipped_count += 1
-                        reason = result[1] or "unknown"
-                        # Normalize reason for metrics (Priority 5.1)
-                        if "edition" in reason:
-                            reason_counts["edition"] += 1
-                            normalized_reason = "edition"
-                        elif "clippy" in reason:
-                            reason_counts["clippy"] += 1
-                            normalized_reason = "clippy"
-                        elif (
-                            "documentation" in reason
-                            or "docs" in reason
-                            or "no documentation" in reason
-                        ):
-                            reason_counts["docs"] += 1
-                            normalized_reason = "docs"
-                        elif "license" in reason:
-                            reason_counts["license"] += 1
-                            normalized_reason = "license"
-                        elif "unsafe" in reason:
-                            reason_counts["unsafe"] += 1
-                            normalized_reason = "unsafe"
-                        elif "outdated" in reason:
-                            reason_counts["outdated"] += 1
-                            normalized_reason = "outdated"
-                        elif "deny" in reason or "advisory" in reason:
-                            reason_counts["deny"] += 1
-                            normalized_reason = "deny"
-                        elif "platform" in reason:
-                            reason_counts["platform"] += 1
-                            normalized_reason = "platform"
-                        elif "fetch_failed" in reason:
-                            reason_counts["fetch_failed"] += 1
-                            normalized_reason = "fetch_failed"
-                        else:
-                            reason_counts["other"] += 1
-                            normalized_reason = "other"
-
-                        metrics_collector.increment(
-                            "crates_rejected_total",
-                            labels={"reason": normalized_reason},
-                            help_text="Total crates rejected by reason",
-                        )
-                        # Mark as processed (rejected)
-                        if checkpoint_manager:
-                            checkpoint_manager.mark_processed(
-                                crate_name, "rejected", reason
-                            )
-                            processed_crates[crate_name] = {
-                                "status": "rejected",
-                                "reason": reason,
-                                "file_count": 0,
-                            }
-                    else:
-                        # Crate accepted
-                        file_list, _ = result
-                        processed_count += 1
-                        crate_file_generator_parts.append(file_list)
-                        metrics_collector.increment(
-                            "crates_accepted_total",
-                            help_text="Total crates accepted",
-                        )
-                        if file_list:
-                            metrics_collector.histogram(
-                                "crate_file_count",
-                                float(len(file_list)),
-                                help_text="Number of files per accepted crate",
-                            )
-                        # Mark as processed (accepted)
-                        if checkpoint_manager:
-                            checkpoint_manager.mark_processed(
-                                crate_name, "accepted", None, file_list
-                            )
-                            processed_crates[crate_name] = {
-                                "status": "accepted",
-                                "reason": None,
-                                "file_count": len(file_list) if file_list else 0,
-                            }
-
-                    # Save checkpoint periodically
-                    if (
-                        checkpoint_manager
-                        and (processed_count + skipped_count) % cfg.checkpoint_interval
-                        == 0
-                    ):
-                        config_hash = utils.compute_config_hash(cfg)
-                        checkpoint_manager.save(processed_crates, temp_dir, config_hash)
-                        logger.debug(
-                            f"Checkpoint saved ({processed_count + skipped_count} crates processed)"
-                        )
-
+                    file_list, reason = await completed_task
                 except Exception as e:
+                    # Hard failure in the task itself
                     logger.error(f"Error processing {crate_name}: {e}", exc_info=True)
                     skipped_count += 1
                     reason_counts["processing_error"] += 1
-                    # Mark as processed (rejected due to error)
+                    metrics_collector.increment(
+                        "crates_rejected_total",
+                        labels={"reason": "processing_error"},
+                        help_text="Total crates rejected by reason",
+                    )
                     if checkpoint_manager:
                         checkpoint_manager.mark_processed(
                             crate_name, "rejected", "processing_error"
@@ -492,41 +347,173 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                             "reason": "processing_error",
                             "file_count": 0,
                         }
+                    continue
+
+                if file_list is None:
+                    # Crate was rejected by quality filters / fetch errors
+                    skipped_count += 1
+                    reason = reason or "unknown"
+
+                    # Normalize reason for metrics
+                    if "edition" in reason:
+                        reason_counts["edition"] += 1
+                        normalized_reason = "edition"
+                    elif "clippy" in reason:
+                        reason_counts["clippy"] += 1
+                        normalized_reason = "clippy"
+                    elif (
+                        "documentation" in reason
+                        or "docs" in reason
+                        or "no documentation" in reason
+                    ):
+                        reason_counts["docs"] += 1
+                        normalized_reason = "docs"
+                    elif "license" in reason:
+                        reason_counts["license"] += 1
+                        normalized_reason = "license"
+                    elif "unsafe" in reason:
+                        reason_counts["unsafe"] += 1
+                        normalized_reason = "unsafe"
+                    elif "outdated" in reason:
+                        reason_counts["outdated"] += 1
+                        normalized_reason = "outdated"
+                    elif "deny" in reason or "advisory" in reason:
+                        reason_counts["deny"] += 1
+                        normalized_reason = "deny"
+                    elif "platform" in reason:
+                        reason_counts["platform"] += 1
+                        normalized_reason = "platform"
+                    elif "fetch_failed" in reason:
+                        reason_counts["fetch_failed"] += 1
+                        normalized_reason = "fetch_failed"
+                    else:
+                        reason_counts["other"] += 1
+                        normalized_reason = "other"
+
+                    metrics_collector.increment(
+                        "crates_rejected_total",
+                        labels={"reason": normalized_reason},
+                        help_text="Total crates rejected by reason",
+                    )
+
+                    if checkpoint_manager:
+                        checkpoint_manager.mark_processed(
+                            crate_name, "rejected", reason
+                        )
+                        processed_crates[crate_name] = {
+                            "status": "rejected",
+                            "reason": reason,
+                            "file_count": 0,
+                        }
+                else:
+                    # Crate accepted
+                    processed_count += 1
+                    crate_file_generator_parts.append(file_list)
+                    metrics_collector.increment(
+                        "crates_accepted_total",
+                        help_text="Total crates accepted",
+                    )
+                    if file_list:
+                        metrics_collector.histogram(
+                            "crate_file_count",
+                            float(len(file_list)),
+                            help_text="Number of files per accepted crate (pre-filter)",
+                        )
+
+                    if checkpoint_manager:
+                        checkpoint_manager.mark_processed(
+                            crate_name, "accepted", None, file_list
+                        )
+                        processed_crates[crate_name] = {
+                            "status": "accepted",
+                            "reason": None,
+                            "file_count": len(file_list),
+                        }
+
+                # Save checkpoint periodically
+                if (
+                    checkpoint_manager
+                    and (processed_count + skipped_count) % cfg.checkpoint_interval == 0
+                ):
+                    config_hash = utils.compute_config_hash(cfg)
+                    checkpoint_manager.save(processed_crates, temp_dir, config_hash)
+                    logger.debug(
+                        f"Checkpoint saved ({processed_count + skipped_count} crates processed)"
+                    )
 
             logger.info(
                 f"Processed {processed_count} crates, skipped {skipped_count}, "
-                f"collected {sum(len(files) for files in crate_file_generator_parts)} code files"
+                f"collected {sum(len(files) for files in crate_file_generator_parts)} raw code files"
             )
 
-            # Create unified generator for all files (Priority 2.1 - Streaming Architecture)
+            # Unified generator: raw code files from crates + optional Stack
             def iter_all_code_files() -> Iterator[dict]:
-                """Unified generator for all code files (crates + Stack)."""
-                # Yield from processed crates
+                """Unified generator for raw code files (no filtering/chunking)."""
+                # From accepted crates
                 for file_list in crate_file_generator_parts:
                     for file_dict in file_list:
                         yield file_dict
 
-                # Yield from Stack dataset if enabled (streaming, not materialized)
+                # From Stack dataset if enabled
                 if cfg.include_stack_dataset:
-                    logger.info("Processing Stack dataset files...")
-                    stack_count = 0
-                    stack_filtered = 0
+                    logger.info("Streaming Stack dataset files...")
                     for file_dict in crawler.iter_stack_files(
                         cfg.stack_dataset_path,
                         use_streaming=cfg.stack_dataset_use_streaming,
                         hf_dataset_name=cfg.stack_dataset_hf_name,
                     ):
-                        stack_count += 1
-                        # Filter using generator-based filter
-                        filtered_iter = filter.filter_code_files([file_dict], cfg)
-                        filtered_list = list(filtered_iter)
-                        if filtered_list:
-                            yield filtered_list[0]
-                        else:
-                            stack_filtered += 1
-                    logger.info(
-                        f"Stack dataset: {stack_count - stack_filtered}/{stack_count} files passed filters"
-                    )
+                        # Stack files are raw here; filtering is applied later
+                        yield file_dict
+
+            # Streaming stage: filter + optional chunking
+            def iter_filtered_and_chunked_files() -> Iterator[dict]:
+                """
+                files -> filter.filter_code_files -> optional chunker -> file dicts
+
+                This replaces:
+                  * per-crate filtering in process_crate
+                  * second global filtering pass
+                """
+                base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
+
+                # Phase-1 compatible / non-instruct mode: just yield filtered files
+                if cfg.prompt_mode != "instruct":
+                    yield from base_iter
+                    return
+
+                # In Phase-2 / instruct mode, chunk after filtering
+                from . import chunker
+
+                for file_dict in base_iter:
+                    try:
+                        chunks = chunker.chunk_rust_file(
+                            file_dict["code"],
+                            max_lines=cfg.max_sft_lines,
+                            max_chars=cfg.max_sft_chars,
+                        )
+                        for chunk in chunks:
+                            chunk_dict: dict[str, Any] = {
+                                "path": file_dict["path"],
+                                "code": chunk["code"],
+                                "chunk_type": chunk["type"],
+                                "crate_name": file_dict.get("crate_name"),
+                                "crate_dir": file_dict.get("crate_dir"),
+                            }
+                            # Preserve hardening / analysis metadata
+                            for key, value in file_dict.items():
+                                if (
+                                    key.startswith("_hardening")
+                                    or key.startswith("_clippy")
+                                    or key.startswith("_rustfmt")
+                                ):
+                                    chunk_dict[key] = value
+                            yield chunk_dict
+                    except Exception as e:
+                        logger.debug(
+                            f"Failed to chunk {file_dict.get('path', '<unknown>')}: {e}"
+                        )
+                        # Fallback: emit original file if chunking fails
+                        yield file_dict
 
             # Build dataset entries with format validation (streaming)
             logger.info("Building dataset entries...")
@@ -538,10 +525,8 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 default_spec = Path("docs/phase1_format_spec.json")
                 phase1_spec_path = default_spec if default_spec.exists() else None
 
-            # Chain generators: files -> filtered -> dataset entries -> JSONL (Priority 2.1)
-            filtered_files = filter.filter_code_files(iter_all_code_files(), cfg)
             samples = dataset_builder.build_dataset_entries(
-                filtered_files,
+                iter_filtered_and_chunked_files(),
                 validate_format=cfg.validate_format,
                 phase1_spec_path=phase1_spec_path,
                 prompt_mode=cfg.prompt_mode,
@@ -568,7 +553,6 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             )
 
             # Export JSONL directly from generator (streaming write)
-            # If train/val split is enabled, keep metadata for splitting
             remove_metadata = not cfg.create_train_val_split
             logger.info(f"Writing dataset to {cfg.output_path}...")
             sample_count = exporter.write_jsonl(
@@ -691,14 +675,14 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 help_text="Total crates skipped",
             )
 
-            # Write metrics with granular filter breakdown (Priority 5.1)
+            # Write metrics with granular filter breakdown
             metrics.update(
                 {
                     "total_samples": sample_count,
                     "crates_processed": processed_count,
                     "crates_skipped": skipped_count,
                     "total_crates": len(crates),
-                    "filter_breakdown": dict(reason_counts),  # Granular filter reasons
+                    "filter_breakdown": dict(reason_counts),
                     "stack_dataset": {
                         "enabled": cfg.include_stack_dataset,
                     },
@@ -857,7 +841,11 @@ def main():
     parser.add_argument(
         "--task-mix",
         type=str,
-        help='Task type distribution as JSON (e.g., \'{"code_generation": 0.7, "transformations": 0.15, "error_fixing": 0.1, "explanations": 0.05}\')',
+        help=(
+            "Task type distribution as JSON, e.g. "
+            '\'{"code_generation": 0.7, "transformations": 0.15, '
+            '"error_fixing": 0.1, "explanations": 0.05}\''
+        ),
     )
     parser.add_argument(
         "--phase1-phase2-ratio",
@@ -933,97 +921,3 @@ def main():
         help="Minimum Rust edition for hardening mode (default: 2024)",
     )
 
-    args = parser.parse_args()
-
-    # Load config
-    if args.config:
-        cfg_path = Path(args.config)
-        if cfg_path.suffix == ".yaml" or cfg_path.suffix == ".yml":
-            cfg = config.PipelineConfig.from_yaml(cfg_path)
-        else:
-            cfg = config.PipelineConfig.from_json(cfg_path)
-    else:
-        cfg = config.PipelineConfig()
-
-    # Override with command-line args
-    if args.crates:
-        cfg.crates = args.crates
-    if args.crate_list:
-        cfg.crate_list_path = args.crate_list
-    if args.output:
-        cfg.output_path = args.output
-    if args.max_threads:
-        cfg.max_threads = args.max_threads
-    if args.limit:
-        cfg.limit = args.limit
-    if args.log_level:
-        cfg.log_level = args.log_level
-    if args.stack_dataset_path:
-        cfg.stack_dataset_path = args.stack_dataset_path
-    if args.stack_dataset_streaming:
-        cfg.stack_dataset_use_streaming = True
-    if args.stack_dataset_hf_name:
-        cfg.stack_dataset_hf_name = args.stack_dataset_hf_name
-    if args.merge_with_phase1:
-        cfg.merge_with_phase1 = True
-    if args.phase1_dataset_path:
-        cfg.phase1_dataset_path = args.phase1_dataset_path
-    if args.phase1_spec_path:
-        cfg.phase1_spec_path = args.phase1_spec_path
-    if getattr(args, "include_stack_dataset", None) is not None:
-        cfg.include_stack_dataset = args.include_stack_dataset
-    if hasattr(args, "require_docs") and args.require_docs is not None:
-        cfg.require_docs = args.require_docs
-    if hasattr(args, "prompt_mode"):
-        cfg.prompt_mode = args.prompt_mode
-    if hasattr(args, "max_sft_lines"):
-        cfg.max_sft_lines = args.max_sft_lines
-    if hasattr(args, "max_sft_chars"):
-        cfg.max_sft_chars = args.max_sft_chars
-    if hasattr(args, "task_mix") and args.task_mix:
-        import json
-
-        try:
-            cfg.task_type_mix = json.loads(args.task_mix)
-        except json.JSONDecodeError as e:
-            logger.error(f"Invalid JSON for --task-mix: {e}")
-            raise
-    if getattr(args, "error_injection_timeout", None) is not None:
-        cfg.error_injection_timeout = args.error_injection_timeout
-    if hasattr(args, "phase1_phase2_ratio") and args.phase1_phase2_ratio:
-        cfg.phase1_phase2_ratio = args.phase1_phase2_ratio
-    if hasattr(args, "auto_upsample_phase2"):
-        cfg.auto_upsample_phase2 = args.auto_upsample_phase2
-    if hasattr(args, "create_train_val_split"):
-        cfg.create_train_val_split = args.create_train_val_split
-    if hasattr(args, "val_ratio"):
-        cfg.val_ratio = args.val_ratio
-    if hasattr(args, "extra_phase2_shards") and args.extra_phase2_shards:
-        cfg.extra_phase2_shards = args.extra_phase2_shards
-    if hasattr(args, "checkpoint_path") and args.checkpoint_path:
-        cfg.checkpoint_path = args.checkpoint_path
-    if hasattr(args, "enable_checkpointing"):
-        cfg.enable_checkpointing = args.enable_checkpointing
-    if hasattr(args, "checkpoint_interval"):
-        cfg.checkpoint_interval = args.checkpoint_interval
-
-    # Dataset hardening overrides
-    if getattr(args, "dataset_hardening", False):
-        cfg.dataset_hardening = True
-    if hasattr(args, "hardening_strict_clippy"):
-        cfg.hardening_strict_clippy = args.hardening_strict_clippy
-    if hasattr(args, "hardening_require_rustfmt"):
-        cfg.hardening_require_rustfmt = args.hardening_require_rustfmt
-    if hasattr(args, "hardening_reject_unsafe"):
-        cfg.hardening_reject_unsafe = args.hardening_reject_unsafe
-    if hasattr(args, "hardening_deny_antipatterns"):
-        cfg.hardening_deny_antipatterns = args.hardening_deny_antipatterns
-    if getattr(args, "hardening_min_edition", None):
-        cfg.hardening_min_edition = args.hardening_min_edition
-
-    # Run pipeline
-    asyncio.run(run_pipeline(cfg))
-
-
-if __name__ == "__main__":
-    main()
