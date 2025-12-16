@@ -2,7 +2,9 @@
 
 ## Overview
 
-The Sigil Pipeline generates JSONL (JSON Lines) datasets where each line is a JSON object representing a training sample. The schema varies slightly between Phase-1 compatible mode and Phase-2 instruct mode.
+The Sigil Pipeline generates JSONL (JSON Lines) datasets where each line is a JSON object representing a training sample. The pipeline now exclusively uses Phase-2 instruct mode for generating high-quality instruction-following datasets.
+
+**Note:** Phase-1 compatible mode is deprecated and no longer supported. All references to Phase-1 in this document are for historical context only.
 
 ## Core Schema
 
@@ -55,7 +57,9 @@ The `_task_type` field is an enum with the following values:
 
 **Normalization Rule:** Any fallback or ambiguous cases MUST be normalized to `"code_generation"`. This ensures downstream consumers won't encounter surprise values like `"transform"` vs `"transformations"`.
 
-## Phase-1 Compatible Mode
+## Phase-1 Compatible Mode (DEPRECATED)
+
+**⚠️ This mode is deprecated and no longer supported. The information below is for historical reference only.**
 
 **Prompt Format:**
 - Fixed prompt: `"Write a Rust code snippet. Output only the code."`
@@ -140,9 +144,11 @@ The `_task_type` field is an enum with the following values:
 - Task type diversity
 - Semantic chunking (functions, impl blocks, modules)
 
-## Merged Datasets
+## Merged Datasets (DEPRECATED)
 
-When merging Phase-1 and Phase-2 datasets, additional metadata is preserved:
+**⚠️ Phase-1/Phase-2 merging is no longer supported. This section is for historical reference only.**
+
+When merging Phase-1 and Phase-2 datasets, additional metadata was preserved:
 
 **Phase-1 Samples:**
 ```json
@@ -205,10 +211,8 @@ The pipeline validates samples against:
 
 ## Example Files
 
-- **Phase-1**: `datasets/phase1_full.jsonl`
 - **Phase-2**: `datasets/test_phase2_100crates.jsonl`
-- **Upscaled Phase-1**: `datasets/phase1_upscaled.jsonl`
-- **Merged**: `datasets/merged_phase1_phase2.jsonl`
+- **Phase-2 (production)**: `datasets/sigil_phase2_dataset.jsonl`
 
 ## Training Format
 
@@ -334,13 +338,14 @@ Prometheus-format metrics for monitoring dashboards. Enabled via `enable_prometh
 
 ## Schema Evolution
 
-**Schema Version: 2.2**
+**Schema Version: 2.3**
 
 Version history:
-- **v1.0** (Phase-1): Fixed prompt format, library-sized modules
+- **v1.0** (Phase-1): Fixed prompt format, library-sized modules **[DEPRECATED]**
 - **v2.0** (Phase-2): Instruct-style prompts, task diversity, semantic chunking
 - **v2.1**: Added `_task_type`, `_source` metadata fields, and explicit `split` field
-- **v2.2** (Current): Added `_async_runtime` metadata, environment fingerprinting, Prometheus metrics
+- **v2.2**: Added `_async_runtime` metadata, environment fingerprinting, Prometheus metrics
+- **v2.3** (Current): Phase-2 instruct is now the only supported mode; Phase-1 compatibility removed
 
-**Note:** When shipping datasets to HuggingFace, include `schema_version: "2.2"` in the dataset card or README.md, referencing this documentation.
+**Note:** When shipping datasets to HuggingFace, include `schema_version: "2.3"` in the dataset card or README.md, referencing this documentation.
 

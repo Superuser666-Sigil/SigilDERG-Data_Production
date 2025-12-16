@@ -13,41 +13,7 @@ class TestFormatValidatorInit:
     def test_init_without_spec(self):
         """Test initialization without spec."""
         validator = FormatValidator()
-        assert validator.phase1_spec is None or isinstance(validator.phase1_spec, dict)
-
-    def test_init_with_spec_path(self, phase1_spec):
-        """Test initialization with spec path."""
-        validator = FormatValidator(phase1_spec)
-        assert validator.phase1_spec is not None
-        assert "format_requirements" in validator.phase1_spec
-
-    def test_init_with_nonexistent_spec(self, tmp_path):
-        """Test initialization with non-existent spec."""
-        nonexistent = tmp_path / "nonexistent.json"
-        validator = FormatValidator(nonexistent)
-        # Should handle gracefully
-        assert validator.phase1_spec is None or isinstance(validator.phase1_spec, dict)
-
-
-class TestLoadPhase1Spec:
-    """Test load_phase1_spec method."""
-
-    def test_load_valid_spec(self, phase1_spec):
-        """Test loading valid Phase 1 spec."""
-        validator = FormatValidator()
-        validator.load_phase1_spec(phase1_spec)
-        assert validator.phase1_spec is not None
-        assert "format_requirements" in validator.phase1_spec
-
-    def test_load_invalid_json(self, tmp_path):
-        """Test loading invalid JSON spec."""
-        invalid_spec = tmp_path / "invalid.json"
-        invalid_spec.write_text("invalid json content")
-
-        validator = FormatValidator()
-        # Should handle error gracefully
-        validator.load_phase1_spec(invalid_spec)
-        # May set to None or keep previous value
+        assert validator is not None
 
 
 class TestValidateSample:
@@ -85,23 +51,14 @@ class TestValidateSample:
         assert is_valid is False
         assert len(errors) > 0
 
-    def test_prompt_style_validation(self, phase1_spec):
-        """Test prompt style validation."""
-        validator = FormatValidator(phase1_spec)
-        # Very long prompt
-        sample = {"prompt": "a" * 1000, "gen": "code"}
-        is_valid, errors = validator.validate_sample(sample)
-        # May warn but not necessarily invalid
-        assert isinstance(is_valid, bool)
-
-    def test_code_formatting_validation(self, phase1_spec):
-        """Test code formatting validation."""
-        validator = FormatValidator(phase1_spec)
-        # Code with backticks when spec says no backticks
-        sample = {"prompt": "Write code", "gen": "```rust\nfn main() {}\n```"}
-        is_valid, errors = validator.validate_sample(sample)
-        # Should detect backticks mismatch
-        assert isinstance(is_valid, bool)
+    def test_code_length_validation(self):
+        """Test code length validation with max limits."""
+        validator = FormatValidator()
+        # Code exceeding character limit
+        sample = {"prompt": "Write code", "gen": "a" * 10000}
+        is_valid, errors = validator.validate_sample(sample, max_chars=8000)
+        assert is_valid is False
+        assert any("max_chars" in str(e) for e in errors)
 
     def test_empty_sample(self):
         """Test validation of empty sample."""

@@ -158,9 +158,6 @@ Install the project with optional dependencies:
 # Basic installation
 pip install -e .
 
-# With HuggingFace datasets support (for Stack dataset integration)
-pip install -e ".[datasets]"
-
 # With observability features (structured logging, OpenTelemetry)
 pip install -e ".[observability]"
 
@@ -252,74 +249,6 @@ This will:
 - Requires Xcode Command Line Tools
 - Some tools may need Homebrew-installed dependencies
 - Ensure `~/.cargo/bin` is in your PATH
-
-## Stack Dataset Setup
-
-The pipeline can use the Stack Rust dataset from either:
-1. **Local cache** (recommended for performance): Place dataset in `datasets/the-stack-rust-clean/`
-2. **HuggingFace streaming** (optional fallback): Enable with `--stack-dataset-streaming`
-
-### Local Dataset Cache
-
-1. Create the datasets directory (if it doesn't exist):
-   ```bash
-   mkdir -p datasets
-   ```
-
-2. Download or copy the Stack Rust dataset to `datasets/the-stack-rust-clean/`
-   - The directory should contain `.rs` files (recursively)
-   - The pipeline will automatically scan for all `.rs` files
-
-3. The `datasets/` directory is in `.gitignore` and won't be committed to Git
-
-### Streaming from HuggingFace
-
-If you want to stream from HuggingFace instead (or as fallback):
-- Use `--stack-dataset-streaming` flag
-- Requires `pip install datasets huggingface-hub`
-- Slower but doesn't require local storage
-
-## Phase 1 Dataset Processing
-
-The pipeline can process Phase 1 datasets (in JSONL or parquet format) for merging or validation:
-
-### JSONL Format
-
-Phase 1 datasets in JSONL format can be directly used:
-```bash
-python -m sigil_pipeline.main \
-  --merge-with-phase1 \
-  --phase1-dataset-path "datasets/phase1.jsonl"
-```
-
-### Parquet Format
-
-If your Phase 1 dataset is in parquet format (e.g., from HuggingFace), you'll need to convert it first:
-```python
-import pandas as pd
-from pathlib import Path
-
-# Read parquet files
-df = pd.read_parquet("datasets/data/train-*.parquet")
-
-# Convert to JSONL
-with open("datasets/phase1.jsonl", "w") as f:
-    for _, row in df.iterrows():
-        # Adjust field names as needed
-        sample = {
-            "prompt": row.get("prompt") or row.get("instruction", ""),
-            "gen": row.get("gen") or row.get("output") or row.get("content", "")
-        }
-        f.write(json.dumps(sample) + "\n")
-```
-
-Or use the HuggingFace datasets library:
-```python
-from datasets import load_dataset
-
-dataset = load_dataset("your-dataset-name", split="train")
-dataset.to_json("datasets/phase1.jsonl")
-```
 
 ## Next Steps
 

@@ -30,14 +30,14 @@ When ``remove_metadata=False``, additional fields are included:
 * ``_source_crate`` (string): Name of the source crate
 * ``_source_file`` (string): Path to the source file
 * ``_task_type`` (string): Task type (code_generation, transformations, error_fixing, explanations)
-* ``_source`` (string): Dataset source identifier (phase2, phase1_compat, etc.)
+* ``_source`` (string): Dataset source identifier (phase2, etc.)
 
 The ``split`` field (train/val) is preserved even when metadata is removed.
 
 Task Types
 ----------
 
-The Phase-2 instruct mode generates diverse task types:
+The pipeline generates diverse task types:
 
 Code Generation (70%)
 ~~~~~~~~~~~~~~~~~~~~~
@@ -92,20 +92,11 @@ Explain code functionality:
      "gen": "This function takes a list of numbers and returns the sum..."
    }
 
-Format Compatibility
---------------------
+Format Details
+--------------
 
-Phase-1 Compatible Mode
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Uses the exact Phase 1 format:
-
-* Fixed prompt: "Write a Rust code snippet. Output only the code."
-* No backticks in code
-* No metadata fields
-
-Phase-2 Instruct Mode
-~~~~~~~~~~~~~~~~~~~~~
+Prompt Styles
+~~~~~~~~~~~~~
 
 Uses natural language prompts:
 
@@ -116,8 +107,8 @@ Uses natural language prompts:
 File Size and Chunking
 ----------------------
 
-Phase-2 Mode Limits
-~~~~~~~~~~~~~~~~~~~
+Chunking Limits
+~~~~~~~~~~~~~~~
 
 * ``max_sft_lines``: Maximum lines per snippet (default: 200)
 * ``max_sft_chars``: Maximum characters per snippet (default: 8000)

@@ -63,11 +63,10 @@ def is_crate_acceptable(
             reason = f"platform-specific crate (detected: {platform_specific}, current: {current_platform_name})"
             return _reject(report, reason)
 
-    # Check Rust edition
-    if not config.allow_edition_2018:
-        if report.edition and int(report.edition) < 2021:
-            reason = f"edition {report.edition} < 2021"
-            return _reject(report, reason)
+    # Check Rust edition (minimum 2021, editions below 2021 not supported)
+    if report.edition and int(report.edition) < 2021:
+        reason = f"edition {report.edition} < 2021 (minimum required: 2021)"
+        return _reject(report, reason)
 
     # Check Clippy warnings - filter by category, not total count
     # Only reject on "bad_code" warnings (unsafe code, memory safety, logic errors)

@@ -29,45 +29,11 @@ class PipelineConfig:
     crate_list_path: str | None = None
     """Path to file containing crate names (one per line). If None, uses default."""
 
-    # Dataset integration
-    include_stack_dataset: bool = False
-    """Whether to include files from the Stack Rust dataset (disabled by default)."""
-
-    stack_dataset_path: str = "datasets/the-stack-rust-clean"
-    """Path to the Stack Rust dataset (local directory, defaults to datasets/)."""
-
-    stack_dataset_use_streaming: bool = False
-    """Whether to stream from HuggingFace if local dataset not found. Default: False (local only)."""
-
-    stack_dataset_hf_name: str | None = "ammarnasr/the-stack-rust-clean"
-    """HuggingFace dataset name to use if streaming is enabled and local path not found."""
-
     extra_phase2_shards: list[str] = field(default_factory=list)
     """Additional Phase-2 style JSONL shards to append after generation (e.g., experimental upscales)."""
 
-    phase1_dataset_path: str | None = None
-    """Path to Phase 1 dataset JSONL file or HuggingFace dataset name to merge with Phase 2 output."""
-
-    phase1_spec_path: str | None = None
-    """Path to Phase 1 format specification JSON file (for validation)."""
-
     validate_format: bool = True
-    """Validate Phase 2 samples against Phase 1 format specification."""
-
-    merge_with_phase1: bool = False
-    """Whether to merge Phase 2 output with Phase 1 dataset."""
-
-    shuffle_merged: bool = True
-    """Shuffle merged dataset (recommended for training)."""
-
-    phase2_weight: float = 1.0
-    """Weight for Phase 2 samples in weighted sampling (1.0 = equal weight with Phase 1)."""
-
-    phase1_phase2_ratio: float | None = None
-    """Target ratio of Phase-1:Phase-2 samples (e.g., 10.0 = 10:1 ratio). None = use phase2_weight instead."""
-
-    auto_upsample_phase2: bool = True
-    """Automatically up-sample Phase-2 if it's small relative to Phase-1 (prioritizes instruct behavior)."""
+    """Validate Phase-2 samples against dataset schema specification."""
 
     # Train/val split configuration
     create_train_val_split: bool = False
@@ -87,8 +53,8 @@ class PipelineConfig:
     output_dir: str = "output"
     """Directory for output files."""
 
-    # Quality thresholds
-    allow_edition_2018: bool = False
+    # Quality thresholds (minimum edition is 2021)
+    # Edition 2021 is the minimum supported - 2018 and below are rejected
     """Allow Rust 2018 edition crates. Default: False (only 2021+)."""
 
     max_clippy_warnings: int | None = None
@@ -174,10 +140,7 @@ class PipelineConfig:
     verbose: bool = False
     """Enable verbose logging output."""
 
-    # Phase-2 configuration
-    prompt_mode: str = "phase1_compat"
-    """Prompt generation mode: 'phase1_compat' (backwards compatible) or 'instruct' (Phase-2)."""
-
+    # Phase-2 configuration (only mode now)
     max_sft_lines: int = 200
     """Maximum lines per snippet for Phase-2 dataset (default: 200)."""
 
@@ -240,12 +203,12 @@ class PipelineConfig:
     # Dataset Hardening Mode (Rust 2024 Benchmark Quality)
     # See ADR-013 and docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md for details
     dataset_hardening: bool = False
-    """Enable strict Rust 2024 dataset hardening mode. When enabled, applies additional
+    """Enable strict Rust 2021+ dataset hardening mode. When enabled, applies additional
     quality gates: strict Clippy (pedantic/nursery), rustfmt validation, unsafe block
-    rejection. Requires rustc 1.85+ for full edition 2024 support. Default: False."""
+    rejection. Requires rustc 1.56+ for edition 2021 support. Default: False."""
 
-    hardening_min_edition: str = "2024"
-    """Minimum Rust edition required for hardened samples. Default: '2024'.
+    hardening_min_edition: str = "2021"
+    """Minimum Rust edition required for hardened samples. Default: '2021'.
     Crates with older editions will be filtered out in hardening mode."""
 
     hardening_strict_clippy: bool = True
@@ -295,15 +258,10 @@ class PipelineConfig:
         return {
             "crates": self.crates,
             "crate_list_path": self.crate_list_path,
-            "include_stack_dataset": self.include_stack_dataset,
-            "stack_dataset_path": self.stack_dataset_path,
-            "stack_dataset_use_streaming": self.stack_dataset_use_streaming,
-            "stack_dataset_hf_name": self.stack_dataset_hf_name,
             "extra_phase2_shards": self.extra_phase2_shards,
             "max_threads": self.max_threads,
             "output_path": self.output_path,
             "output_dir": self.output_dir,
-            "allow_edition_2018": self.allow_edition_2018,
             "max_clippy_warnings": self.max_clippy_warnings,
             "max_bad_code_warnings": self.max_bad_code_warnings,
             "require_docs": self.require_docs,
@@ -322,13 +280,7 @@ class PipelineConfig:
             "limit": self.limit,
             "log_level": self.log_level,
             "verbose": self.verbose,
-            "phase1_dataset_path": self.phase1_dataset_path,
-            "phase1_spec_path": self.phase1_spec_path,
             "validate_format": self.validate_format,
-            "merge_with_phase1": self.merge_with_phase1,
-            "shuffle_merged": self.shuffle_merged,
-            "phase2_weight": self.phase2_weight,
-            "prompt_mode": self.prompt_mode,
             "max_sft_lines": self.max_sft_lines,
             "max_sft_chars": self.max_sft_chars,
             "task_type_mix": self.task_type_mix,
@@ -338,8 +290,6 @@ class PipelineConfig:
             "cache_dir": self.cache_dir,
             "enable_caching": self.enable_caching,
             "max_line_length_hard_cap": self.max_line_length_hard_cap,
-            "phase1_phase2_ratio": self.phase1_phase2_ratio,
-            "auto_upsample_phase2": self.auto_upsample_phase2,
             "create_train_val_split": self.create_train_val_split,
             "val_ratio": self.val_ratio,
             "prompt_seed": self.prompt_seed,

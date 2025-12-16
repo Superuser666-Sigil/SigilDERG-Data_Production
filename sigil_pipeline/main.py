@@ -454,35 +454,16 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                     for file_dict in file_list:
                         yield file_dict
 
-                # From Stack dataset if enabled
-                if cfg.include_stack_dataset:
-                    logger.info("Streaming Stack dataset files...")
-                    for file_dict in crawler.iter_stack_files(
-                        cfg.stack_dataset_path,
-                        use_streaming=cfg.stack_dataset_use_streaming,
-                        hf_dataset_name=cfg.stack_dataset_hf_name,
-                    ):
-                        # Stack files are raw here; filtering is applied later
-                        yield file_dict
-
-            # Streaming stage: filter + optional chunking
+            # Streaming stage: filter + chunking
             def iter_filtered_and_chunked_files() -> Iterator[dict]:
                 """
-                files -> filter.filter_code_files -> optional chunker -> file dicts
+                files -> filter.filter_code_files -> chunker -> file dicts
 
-                This replaces:
-                  * per-crate filtering in process_crate
-                  * second global filtering pass
+                Phase-2 instruct mode with semantic chunking.
                 """
-                base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
-
-                # Phase-1 compatible / non-instruct mode: just yield filtered files
-                if cfg.prompt_mode != "instruct":
-                    yield from base_iter
-                    return
-
-                # In Phase-2 / instruct mode, chunk after filtering
                 from . import chunker
+
+                base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
 
                 for file_dict in base_iter:
                     try:
@@ -517,39 +498,16 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
 
             # Build dataset entries with format validation (streaming)
             logger.info("Building dataset entries...")
-            phase1_spec_path = getattr(cfg, "phase1_spec_path", None)
-            if phase1_spec_path:
-                phase1_spec_path = Path(phase1_spec_path)
-            else:
-                # Try default location
-                default_spec = Path("docs/phase1_format_spec.json")
-                phase1_spec_path = default_spec if default_spec.exists() else None
 
             samples = dataset_builder.build_dataset_entries(
                 iter_filtered_and_chunked_files(),
                 validate_format=cfg.validate_format,
-                phase1_spec_path=phase1_spec_path,
-                prompt_mode=cfg.prompt_mode,
-                task_type_mix=(
-                    cfg.task_type_mix if cfg.prompt_mode == "instruct" else None
-                ),
-                enable_error_injection=(
-                    cfg.enable_error_injection
-                    if cfg.prompt_mode == "instruct"
-                    else False
-                ),
-                error_injection_method=(
-                    cfg.error_injection_method
-                    if cfg.prompt_mode == "instruct"
-                    else "simulate"
-                ),
+                task_type_mix=cfg.task_type_mix,
+                enable_error_injection=cfg.enable_error_injection,
+                error_injection_method=cfg.error_injection_method,
                 error_injection_timeout=cfg.error_injection_timeout,
-                max_sft_lines=(
-                    cfg.max_sft_lines if cfg.prompt_mode == "instruct" else None
-                ),
-                max_sft_chars=(
-                    cfg.max_sft_chars if cfg.prompt_mode == "instruct" else None
-                ),
+                max_sft_lines=cfg.max_sft_lines,
+                max_sft_chars=cfg.max_sft_chars,
             )
 
             # Export JSONL directly from generator (streaming write)
@@ -584,37 +542,8 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             # Initialize metrics
             metrics: dict[str, Any] = {"extra_phase2_shards": extra_phase2_metrics}
 
-            # Optionally merge with Phase 1 data if specified
+            # Final dataset path is the output path
             final_dataset_path = cfg.output_path
-            if cfg.merge_with_phase1 and cfg.phase1_dataset_path:
-                logger.info(f"Merging with Phase 1 dataset: {cfg.phase1_dataset_path}")
-                merged_path = str(
-                    Path(cfg.output_path).parent / "merged_phase1_phase2.jsonl"
-                )
-                merged_count = exporter.merge_phase1_phase2(
-                    phase1_path=cfg.phase1_dataset_path,
-                    phase2_path=cfg.output_path,
-                    output_path=merged_path,
-                    shuffle=cfg.shuffle_merged,
-                    phase2_weight=cfg.phase2_weight,
-                    phase1_phase2_ratio=cfg.phase1_phase2_ratio,
-                    auto_upsample_phase2=cfg.auto_upsample_phase2,
-                )
-                logger.info(f"Merged {merged_count} total samples to {merged_path}")
-                final_dataset_path = merged_path
-                metrics["merged_with_phase1"] = {
-                    "enabled": True,
-                    "phase1_path": cfg.phase1_dataset_path,
-                    "phase2_samples": sample_count,
-                    "total_samples": merged_count,
-                    "merged_path": merged_path,
-                    "shuffled": cfg.shuffle_merged,
-                    "phase2_weight": cfg.phase2_weight,
-                    "phase1_phase2_ratio": cfg.phase1_phase2_ratio,
-                    "auto_upsample_phase2": cfg.auto_upsample_phase2,
-                }
-            else:
-                metrics["merged_with_phase1"] = {"enabled": False}
 
             # Create train/val split if requested
             if cfg.create_train_val_split:
@@ -683,9 +612,6 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                     "crates_skipped": skipped_count,
                     "total_crates": len(crates),
                     "filter_breakdown": dict(reason_counts),
-                    "stack_dataset": {
-                        "enabled": cfg.include_stack_dataset,
-                    },
                     "config": cfg.to_dict(),
                 }
             )
@@ -770,45 +696,6 @@ def main():
         help="Save checkpoint every N crates processed (default: 10)",
     )
     parser.add_argument(
-        "--stack-dataset-path",
-        help="Path to local Stack dataset directory (default: datasets/the-stack-rust-clean)",
-    )
-    parser.add_argument(
-        "--stack-dataset-streaming",
-        action="store_true",
-        help="Enable streaming from HuggingFace if local dataset not found",
-    )
-    parser.add_argument(
-        "--stack-dataset-hf-name",
-        help="HuggingFace dataset name for streaming (default: ammarnasr/the-stack-rust-clean)",
-    )
-    parser.add_argument(
-        "--merge-with-phase1",
-        action="store_true",
-        help="Merge Phase 2 output with Phase 1 dataset",
-    )
-    parser.add_argument(
-        "--phase1-dataset-path",
-        help="Path to Phase 1 dataset JSONL file or HuggingFace dataset name",
-    )
-    parser.add_argument(
-        "--phase1-spec-path",
-        help="Path to Phase 1 format specification JSON file (for validation)",
-    )
-    parser.add_argument(
-        "--include-stack-dataset",
-        dest="include_stack_dataset",
-        action="store_true",
-        help="Include Stack dataset files (default: disabled)",
-    )
-    parser.add_argument(
-        "--no-include-stack-dataset",
-        dest="include_stack_dataset",
-        action="store_false",
-        help="Exclude Stack dataset files",
-    )
-    parser.set_defaults(include_stack_dataset=None)
-    parser.add_argument(
         "--require-docs",
         action="store_true",
         default=None,
@@ -819,12 +706,6 @@ def main():
         dest="require_docs",
         action="store_false",
         help="Do not require documentation comments in code",
-    )
-    parser.add_argument(
-        "--prompt-mode",
-        choices=["phase1_compat", "instruct"],
-        default="phase1_compat",
-        help="Prompt generation mode: 'phase1_compat' (backwards compatible) or 'instruct' (Phase-2)",
     )
     parser.add_argument(
         "--max-sft-lines",
@@ -846,17 +727,6 @@ def main():
             '\'{"code_generation": 0.7, "transformations": 0.15, '
             '"error_fixing": 0.1, "explanations": 0.05}\''
         ),
-    )
-    parser.add_argument(
-        "--phase1-phase2-ratio",
-        type=float,
-        help="Target ratio of Phase-1:Phase-2 samples (e.g., 10.0 = 10:1 ratio). Overrides phase2_weight.",
-    )
-    parser.add_argument(
-        "--no-auto-upsample-phase2",
-        dest="auto_upsample_phase2",
-        action="store_false",
-        help="Disable automatic up-sampling of Phase-2 when small relative to Phase-1",
     )
     parser.add_argument(
         "--create-train-val-split",
@@ -917,7 +787,71 @@ def main():
     )
     parser.add_argument(
         "--hardening-min-edition",
-        default="2024",
-        help="Minimum Rust edition for hardening mode (default: 2024)",
+        default="2021",
+        help="Minimum Rust edition for hardening mode (default: 2021, editions below 2021 not supported)",
     )
 
+    args = parser.parse_args()
+
+    # Load config from file if specified
+    if args.config:
+        cfg = config.PipelineConfig.from_file(args.config)
+    else:
+        cfg = config.PipelineConfig()
+
+    # Override config with command-line arguments
+    if args.crates:
+        cfg.crates = args.crates
+    if args.crate_list:
+        cfg.crate_list_path = args.crate_list
+    if args.output:
+        cfg.output_path = args.output
+    if args.max_threads:
+        cfg.max_threads = args.max_threads
+    if args.limit:
+        cfg.limit = args.limit
+    if args.log_level:
+        cfg.log_level = args.log_level
+    if args.checkpoint_path:
+        cfg.checkpoint_path = args.checkpoint_path
+    if hasattr(args, "enable_checkpointing"):
+        cfg.enable_checkpointing = args.enable_checkpointing
+    if args.checkpoint_interval:
+        cfg.checkpoint_interval = args.checkpoint_interval
+    if args.require_docs is not None:
+        cfg.require_docs = args.require_docs
+    if args.max_sft_lines:
+        cfg.max_sft_lines = args.max_sft_lines
+    if args.max_sft_chars:
+        cfg.max_sft_chars = args.max_sft_chars
+    if args.task_mix:
+        import json
+
+        cfg.task_type_mix = json.loads(args.task_mix)
+    if args.create_train_val_split:
+        cfg.create_train_val_split = args.create_train_val_split
+    if args.val_ratio:
+        cfg.val_ratio = args.val_ratio
+    if args.extra_phase2_shards:
+        cfg.extra_phase2_shards = args.extra_phase2_shards
+    if args.error_injection_timeout:
+        cfg.error_injection_timeout = args.error_injection_timeout
+    if args.dataset_hardening:
+        cfg.dataset_hardening = args.dataset_hardening
+    if hasattr(args, "hardening_strict_clippy"):
+        cfg.hardening_strict_clippy = args.hardening_strict_clippy
+    if hasattr(args, "hardening_require_rustfmt"):
+        cfg.hardening_require_rustfmt = args.hardening_require_rustfmt
+    if hasattr(args, "hardening_reject_unsafe"):
+        cfg.hardening_reject_unsafe = args.hardening_reject_unsafe
+    if hasattr(args, "hardening_deny_antipatterns"):
+        cfg.hardening_deny_antipatterns = args.hardening_deny_antipatterns
+    if args.hardening_min_edition:
+        cfg.hardening_min_edition = args.hardening_min_edition
+
+    # Run pipeline
+    asyncio.run(run_pipeline(cfg))
+
+
+if __name__ == "__main__":
+    main()

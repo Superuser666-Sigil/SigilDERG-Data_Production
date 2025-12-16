@@ -32,6 +32,63 @@ from .utils import (
 logger = logging.getLogger(__name__)
 
 
+def parse_assistant_json_output(text: str) -> dict[str, Any]:
+    """
+    Robustly parse assistant output that is intended to be a single JSON object.
+
+    Strategy:
+    1. Try json.loads on the whole text.
+    2. If that fails, search for the first balanced `{...}` substring and parse it.
+    3. If still fails, attempt to extract code fences and assemble a minimal object.
+
+    Returns a dict (possibly empty) with parsed keys.
+    """
+    # 1) Try full JSON
+    try:
+        return json.loads(text)
+    except Exception:
+        pass
+
+    # 2) Find balanced braces substring
+    stack = []
+    start = None
+    for i, ch in enumerate(text):
+        if ch == "{":
+            if start is None:
+                start = i
+            stack.append(i)
+        elif ch == "}":
+            if stack:
+                stack.pop()
+                if not stack and start is not None:
+                    candidate = text[start : i + 1]
+                    try:
+                        return json.loads(candidate)
+                    except Exception:
+                        # continue searching for next candidate
+                        start = None
+                        continue
+
+    # 3) Fallback: extract code blocks and key-like prefixes
+    result: dict[str, Any] = {}
+    # Extract code fences ```...``` or ```rust
+    code_blocks = re.findall(r"```(?:rust\n)?([\s\S]*?)```", text)
+    if code_blocks:
+        # Put first block into 'code_after' and raw into 'code'
+        result["code_after"] = code_blocks[0].strip()
+    # Extract lines like 'Explanation: ...' or 'Rationale: ...'
+    for key in ("explanation", "rationale", "review_comment", "test"):
+        m = re.search(rf"{key.capitalize()}:\s*(.+)", text)
+        if m:
+            result[key] = m.group(1).strip()
+
+    # If nothing found, put whole assistant text into 'assistant' key
+    if not result:
+        result["assistant"] = text.strip()
+
+    return result
+
+
 def get_crate_source_paths(crate_dir: Path) -> list[Path]:
     """
     Get the source directories for a Rust crate by parsing Cargo.toml.

@@ -194,33 +194,18 @@ def _format_params(params: list[tuple[str, str]]) -> str:
     return ", ".join(f"{name}: {ptype}" for name, ptype in params)
 
 
-def format_code_for_gen(code: str, phase1_spec: dict[str, Any] | None = None) -> str:
+def format_code_for_gen(code: str) -> str:
     """
-    Format code for the 'gen' field to match Phase 1 format.
+    Format code for the 'gen' field.
 
     Args:
         code: Raw code content
-        phase1_spec: Phase 1 format specification (optional)
 
     Returns:
         Formatted code string
     """
     # Strip and dedent code
     formatted = textwrap.dedent(code).strip()
-
-    # Check Phase 1 spec for backticks requirement
-    if phase1_spec:
-        code_formatting = phase1_spec.get("format_requirements", {}).get(
-            "code_formatting", {}
-        )
-        has_backticks = code_formatting.get("has_backticks", False)
-
-        # If Phase 1 didn't use backticks, ensure we don't have them
-        if not has_backticks:
-            # Remove any triple backticks and language tags
-            formatted = re.sub(r"```rust\n?", "", formatted)
-            formatted = re.sub(r"```\n?", "", formatted)
-            formatted = formatted.strip()
 
     # Ensure consistent line endings (Unix-style)
     formatted = formatted.replace("\r\n", "\n").replace("\r", "\n")
@@ -231,8 +216,6 @@ def format_code_for_gen(code: str, phase1_spec: dict[str, Any] | None = None) ->
 def build_dataset_entries(
     files: Iterable[dict],
     validate_format: bool = True,
-    phase1_spec_path: Path | None = None,
-    prompt_mode: str = "phase1_compat",
     task_type_mix: dict[str, float] | None = None,
     enable_error_injection: bool = True,
     error_injection_method: str = "both",
@@ -245,23 +228,23 @@ def build_dataset_entries(
     """
     Convert an iterable of code files into dataset samples (prompt-gen pairs).
 
-    Matches Phase 1 format exactly: {"prompt": "...", "gen": "..."}
+    Uses Phase-2 instruct mode exclusively.
     Refactored to accept Iterable and yield (Priority 2.1 - Streaming Architecture).
 
     Args:
         files: Iterable of file dicts with 'path', 'code', and optionally 'crate_name'
-        validate_format: Whether to validate samples against Phase 1 format
-        phase1_spec_path: Path to Phase 1 format specification (optional)
-        prompt_mode: Prompt generation mode ('phase1_compat' or 'instruct')
-        task_type_mix: Task type distribution dictionary (for Phase-2)
-        enable_error_injection: Enable error-fixing tasks (for Phase-2)
+        validate_format: Whether to validate Phase-2 samples
+        task_type_mix: Task type distribution dictionary
+        enable_error_injection: Enable error-fixing tasks
         error_injection_method: Error injection method ('real_compile', 'simulate', 'both')
         error_injection_timeout: Timeout (seconds) for cargo-based error injection
+        max_sft_lines: Maximum lines per snippet (for validation)
+        max_sft_chars: Maximum characters per snippet (for validation)
         prompt_seed: RNG seed for prompt template randomization (for reproducibility)
         enable_prompt_randomization: Enable template randomization for prompt diversity
 
     Yields:
-        Dicts with 'prompt' and 'gen' keys matching Phase 1 format
+        Dicts with 'prompt' and 'gen' keys
     """
     # Initialize prompt RNG with seed for reproducibility
     actual_seed = initialize_prompt_rng(prompt_seed)
@@ -269,11 +252,8 @@ def build_dataset_entries(
 
     # Load format validator if needed
     validator = None
-    phase1_spec = None
     if validate_format:
-        validator = FormatValidator(phase1_spec_path, prompt_mode=prompt_mode)
-        if validator.phase1_spec:
-            phase1_spec = validator.phase1_spec
+        validator = FormatValidator()
 
     validation_errors = []
     sample_count = 0
@@ -284,71 +264,72 @@ def build_dataset_entries(
         if not code:
             continue
 
-        # Format code for gen field (match Phase 1 format)
-        formatted_code = format_code_for_gen(code, phase1_spec)
+        # Format code for gen field
+        formatted_code = format_code_for_gen(code)
 
-        # Generate prompt and gen based on mode and task type
+        # Generate prompt and gen based on task type
         crate_name = file_info.get("crate_name")
         file_path = file_info.get("path")
         crate_dir = file_info.get("crate_dir")  # Optional, for error injection
 
-        if prompt_mode == "instruct" and task_type_mix:
-            patterns = detect_code_patterns(formatted_code)
-            doc_comment = extract_description_from_docs(formatted_code)
+        # Phase-2 instruct mode with task generation
+        patterns = detect_code_patterns(formatted_code)
+        doc_comment = extract_description_from_docs(formatted_code)
 
-            capabilities = determine_task_capabilities(
-                formatted_code,
-                patterns,
-                doc_comment,
-                enable_error_injection=enable_error_injection,
-                error_injection_method=error_injection_method,
-            )
+        capabilities = determine_task_capabilities(
+            formatted_code,
+            patterns,
+            doc_comment,
+            enable_error_injection=enable_error_injection,
+            error_injection_method=error_injection_method,
+        )
 
-            available_tasks = set(capabilities)
-            sample_dict = None
-            selected_task: str | None = None
+        available_tasks = set(capabilities)
+        sample_dict = None
+        selected_task: str | None = None
 
-            def build_sample(task_name: str) -> dict[str, Any] | None:
-                if task_name == "code_generation":
-                    prompt_local = create_prompt_from_code(
-                        formatted_code,
-                        crate_name,
-                        file_path,
-                        enable_randomization=enable_prompt_randomization,
-                    )
-                    return {
-                        "prompt": prompt_local,
-                        "gen": formatted_code,
-                        "_task_type": "code_generation",
-                    }
+        def build_sample(task_name: str) -> dict[str, Any] | None:
+            if task_name == "code_generation":
+                prompt_local = create_prompt_from_code(
+                    formatted_code,
+                    crate_name,
+                    file_path,
+                    enable_randomization=enable_prompt_randomization,
+                )
+                return {
+                    "prompt": prompt_local,
+                    "gen": formatted_code,
+                    "_task_type": "code_generation",
+                }
 
-                if task_name == "transformations":
-                    result = generate_transformation_task(formatted_code, patterns)
-                    if result:
-                        result["_task_type"] = "transformations"
-                    return result
+            if task_name == "transformations":
+                result = generate_transformation_task(formatted_code, patterns)
+                if result:
+                    result["_task_type"] = "transformations"
+                return result
 
-                if task_name == "error_fixing" and enable_error_injection:
-                    crate_path = Path(crate_dir) if crate_dir else None
-                    result = generate_error_fixing_task(
-                        formatted_code,
-                        error_injection_method,
-                        crate_path,
-                        error_injection_timeout,
-                    )
-                    if result:
-                        result["_task_type"] = "error_fixing"
-                    return result
+            if task_name == "error_fixing" and enable_error_injection:
+                crate_path = Path(crate_dir) if crate_dir else None
+                result = generate_error_fixing_task(
+                    formatted_code,
+                    error_injection_method,
+                    crate_path,
+                    error_injection_timeout,
+                )
+                if result:
+                    result["_task_type"] = "error_fixing"
+                return result
 
-                if task_name == "explanations":
-                    result = generate_explanation_task(formatted_code, doc_comment)
-                    if result:
-                        result["_task_type"] = "explanations"
-                    return result
+            if task_name == "explanations":
+                result = generate_explanation_task(formatted_code, doc_comment)
+                if result:
+                    result["_task_type"] = "explanations"
+                return result
 
-                return None
+            return None
 
-            while available_tasks and task_type_mix:
+        if task_type_mix:
+            while available_tasks:
                 selected_task = select_task_type_with_quota(
                     task_type_mix, available_tasks, task_counts
                 )
@@ -357,44 +338,30 @@ def build_dataset_entries(
                     break
                 available_tasks.discard(selected_task)
 
-            if not sample_dict:
-                sample_dict = build_sample("code_generation")
-                selected_task = "code_generation"
+        if not sample_dict:
+            sample_dict = build_sample("code_generation")
+            selected_task = "code_generation"
 
-            sample = sample_dict or {
-                "prompt": create_prompt_from_code(
-                    formatted_code,
-                    crate_name,
-                    file_path,
-                    enable_randomization=enable_prompt_randomization,
-                ),
-                "gen": formatted_code,
-                "_task_type": "code_generation",
-            }
+        sample = sample_dict or {
+            "prompt": create_prompt_from_code(
+                formatted_code,
+                crate_name,
+                file_path,
+                enable_randomization=enable_prompt_randomization,
+            ),
+            "gen": formatted_code,
+            "_task_type": "code_generation",
+        }
 
-            sample["_source_crate"] = crate_name
-            sample["_source_file"] = file_path
-            sample["_source"] = "phase2"
-            sample["_prompt_seed"] = actual_seed
+        sample["_source_crate"] = crate_name
+        sample["_source_file"] = file_path
+        sample["_source"] = "phase2"
+        sample["_prompt_seed"] = actual_seed
 
-            if sample["_task_type"]:
-                task_counts[sample["_task_type"]] += 1
-            else:
-                task_counts["code_generation"] += 1
-
+        if sample["_task_type"]:
+            task_counts[sample["_task_type"]] += 1
         else:
-            # Phase 1 compatible mode (no randomization - fixed prompt format)
-            prompt = generate_prompt_for_code(
-                formatted_code, crate_name, None, file_path
-            )
-            sample = {
-                "prompt": prompt,
-                "gen": formatted_code,
-                "_source_crate": crate_name,
-                "_source_file": file_path,
-                "_source": "phase1_compat",  # Mark as Phase-1 compatible source
-                "_prompt_seed": actual_seed,  # Store seed for reproducibility tracking
-            }
+            task_counts["code_generation"] += 1
 
         # Copy hardening metadata from file_info to sample (if present)
         for key in file_info:

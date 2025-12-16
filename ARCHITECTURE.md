@@ -181,39 +181,19 @@ python -m sigil_pipeline.main --help
 | `--crates` | - | Specific crate names to process |
 | `--crate-list` | `data/crate_list.txt` | Path to crate list file |
 | `--output` | `output/sigil_phase2_dataset.jsonl` | Output JSONL path |
-| `--prompt-mode` | `phase1_compat` | `phase1_compat` or `instruct` |
-| `--max-sft-lines` | `200` | Max lines per snippet (Phase-2) |
-| `--max-sft-chars` | `8000` | Max chars per snippet (Phase-2) |
+| `--max-sft-lines` | `200` | Max lines per snippet |
+| `--max-sft-chars` | `8000` | Max chars per snippet |
 | `--max-threads` | `4` | Parallel processing threads |
 | `--limit` | - | Limit number of crates |
 | `--create-train-val-split` | `false` | Create train/val split |
 | `--val-ratio` | `0.1` | Validation set ratio |
 | `--config` | - | Path to YAML/JSON config file |
 
-### Output Modes
-
-#### Phase-1 Compatible Mode
+### Output Format
 
 ```bash
 python -m sigil_pipeline.main \
     --crate-list data/crate_list.txt \
-    --prompt-mode phase1_compat \
-    --output datasets/phase1_full.jsonl
-```
-
-**Characteristics:**
-
-- Fixed prompt: `"Write a Rust code snippet. Output only the code."`
-- Library-sized modules (can be very large, up to ~1MB per sample)
-- Average gen length: ~12,279 characters
-- Median gen length: ~3,671 characters
-
-#### Phase-2 Instruct Mode (Recommended)
-
-```bash
-python -m sigil_pipeline.main \
-    --crate-list data/crate_list.txt \
-    --prompt-mode instruct \
     --max-sft-lines 200 \
     --max-sft-chars 8000 \
     --output datasets/phase2_full.jsonl \
@@ -623,7 +603,6 @@ Each result includes:
 cd SigilDERG-Data_Production
 python -m sigil_pipeline.main \
     --crate-list data/crate_list.txt \
-    --prompt-mode instruct \
     --max-sft-lines 200 \
     --max-sft-chars 8000 \
     --output datasets/phase2_full.jsonl \

@@ -84,18 +84,18 @@ df -h .
 ### Basic Execution
 
 ```bash
-# Phase-1 compatible mode
+# Phase-2 instruct mode (only supported mode)
+python -m sigil_pipeline.main \
+    --crate-list data/crate_list.txt \
+    --output output/phase2_dataset.jsonl \
+    --log-level INFO \
+    --max-sft-lines 200
+
+# With custom task mix
 python -m sigil_pipeline.main \
     --crate-list data/crate_list.txt \
     --output output/dataset.jsonl \
-    --log-level INFO
-
-# Phase-2 instruct mode
-python -m sigil_pipeline.main \
-    --crate-list data/crate_list.txt \
-    --prompt-mode instruct \
-    --max-sft-lines 200 \
-    --output output/phase2_dataset.jsonl
+    --task-type-mix '{"code_generation":0.70,"transformations":0.15,"error_fixing":0.10,"explanations":0.05}'
 ```
 
 ### With Checkpointing (Recommended for Large Runs)

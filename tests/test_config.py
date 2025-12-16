@@ -20,7 +20,7 @@ class TestPipelineConfig:
         assert config.crates == []
         assert config.max_threads == 4
         assert config.output_path == "output/sigil_phase2_dataset.jsonl"
-        assert config.allow_edition_2018 is False
+
         assert config.max_clippy_warnings is None
         assert config.max_bad_code_warnings == 0
         assert config.require_docs is True
@@ -32,13 +32,12 @@ class TestPipelineConfig:
             "crates": ["test_crate"],
             "max_threads": 2,
             "output_path": "custom/output.jsonl",
-            "allow_edition_2018": True,
+
         }
         config = PipelineConfig.from_dict(data)
         assert config.crates == ["test_crate"]
         assert config.max_threads == 2
         assert config.output_path == "custom/output.jsonl"
-        assert config.allow_edition_2018 is True
 
     def test_configuration_from_json_file(self, tmp_path):
         """Test loading config from JSON file."""
@@ -94,7 +93,7 @@ class TestPipelineConfig:
         assert isinstance(config.crates, list)
         assert isinstance(config.max_threads, int)
         assert isinstance(config.output_path, str)
-        assert isinstance(config.allow_edition_2018, bool)
+
         assert config.max_clippy_warnings is None or isinstance(
             config.max_clippy_warnings, int
         )
@@ -118,12 +117,12 @@ class TestPipelineConfig:
         """Test edge cases with None values."""
         config = PipelineConfig(
             crate_list_path=None,
-            phase1_dataset_path=None,
-            phase1_spec_path=None,
+            cache_dir=None,
+            checkpoint_path=None,
         )
         assert config.crate_list_path is None
-        assert config.phase1_dataset_path is None
-        assert config.phase1_spec_path is None
+        assert config.cache_dir is None
+        assert config.checkpoint_path is None
 
     def test_invalid_paths(self):
         """Test handling of invalid paths."""
@@ -183,32 +182,24 @@ class TestPipelineConfig:
         assert config.min_alphabetic_ratio == 0.4
         assert config.max_line_length_hard_cap == 600
 
-    def test_stack_dataset_config(self):
-        """Test Stack dataset configuration."""
+    def test_phase2_configuration(self):
+        """Test Phase-2 instruct mode configuration (now the only mode)."""
         config = PipelineConfig(
-            include_stack_dataset=True,
-            stack_dataset_path="custom/path",
-            stack_dataset_use_streaming=True,
-            stack_dataset_hf_name="custom/dataset",
+            max_sft_lines=150,
+            max_sft_chars=6000,
+            task_type_mix={
+                "code_generation": 0.60,
+                "transformations": 0.20,
+                "error_fixing": 0.15,
+                "explanations": 0.05,
+            },
+            enable_error_injection=True,
+            error_injection_method="both",
+            enable_prompt_randomization=True,
         )
-        assert config.include_stack_dataset is True
-        assert config.stack_dataset_path == "custom/path"
-        assert config.stack_dataset_use_streaming is True
-        assert config.stack_dataset_hf_name == "custom/dataset"
-
-    def test_phase1_merging_config(self):
-        """Test Phase 1 merging configuration."""
-        config = PipelineConfig(
-            merge_with_phase1=True,
-            phase1_dataset_path="phase1.jsonl",
-            phase1_spec_path="spec.json",
-            validate_format=True,
-            shuffle_merged=True,
-            phase2_weight=1.5,
-        )
-        assert config.merge_with_phase1 is True
-        assert config.phase1_dataset_path == "phase1.jsonl"
-        assert config.phase1_spec_path == "spec.json"
-        assert config.validate_format is True
-        assert config.shuffle_merged is True
-        assert config.phase2_weight == 1.5
+        assert config.max_sft_lines == 150
+        assert config.max_sft_chars == 6000
+        assert config.task_type_mix["code_generation"] == 0.60
+        assert config.enable_error_injection is True
+        assert config.error_injection_method == "both"
+        assert config.enable_prompt_randomization is True

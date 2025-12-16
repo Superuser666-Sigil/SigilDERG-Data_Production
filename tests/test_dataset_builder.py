@@ -188,22 +188,12 @@ pub fn add(a: i32, b: i32) -> i32 {
 class TestFormatCodeForGen:
     """Test format_code_for_gen function."""
 
-    def test_backticks_removal_with_phase1_spec(self):
-        """Test backticks removal when Phase 1 spec doesn't use them."""
-        code = "```rust\nfn main() {}\n```"
-        phase1_spec = {
-            "format_requirements": {"code_formatting": {"has_backticks": False}}
-        }
-        formatted = format_code_for_gen(code, phase1_spec)
-        assert "```" not in formatted
-        assert "fn main() {}" in formatted
-
-    def test_backticks_preserved_without_spec(self):
-        """Test backticks preserved when no spec provided."""
-        code = "```rust\nfn main() {}\n```"
-        formatted = format_code_for_gen(code, None)
-        # May or may not preserve - depends on implementation
+    def test_basic_code_formatting(self):
+        """Test basic code formatting without spec."""
+        code = "fn main() {}"
+        formatted = format_code_for_gen(code)
         assert len(formatted) > 0
+        assert "fn main() {}" in formatted
 
     def test_line_ending_normalization(self):
         """Test line ending normalization."""
@@ -248,7 +238,6 @@ class TestBuildDatasetEntries:
             build_dataset_entries(
                 files,
                 validate_format=True,
-                phase1_spec_path=phase1_spec,
             )
         )
         assert len(samples) == 1
@@ -279,19 +268,18 @@ class TestBuildDatasetEntries:
         files = [
             {
                 "path": "test.rs",
-                "code": "```rust\nfn main() {}\n```",
+                "code": "fn main() {}",
             }
         ]
         samples = list(
             build_dataset_entries(
                 files,
                 validate_format=True,
-                phase1_spec_path=phase1_spec,
             )
         )
         assert len(samples) == 1
-        # Code should be formatted according to Phase 1 spec
-        assert "```" not in samples[0]["gen"]
+        # Code should be formatted (dedented and normalized)
+        assert "fn main() {}" in samples[0]["gen"]
 
     def test_prompt_generation_integration(self):
         """Test prompt generation integration."""
@@ -352,7 +340,6 @@ class TestBuildDatasetEntries:
             build_dataset_entries(
                 files,
                 validate_format=False,
-                prompt_mode="instruct",
                 task_type_mix={"code_generation": 1.0},
                 prompt_seed=42,
                 enable_prompt_randomization=True,
@@ -363,7 +350,6 @@ class TestBuildDatasetEntries:
             build_dataset_entries(
                 files,
                 validate_format=False,
-                prompt_mode="instruct",
                 task_type_mix={"code_generation": 1.0},
                 prompt_seed=42,
                 enable_prompt_randomization=True,
@@ -382,7 +368,6 @@ class TestBuildDatasetEntries:
             build_dataset_entries(
                 files,
                 validate_format=False,
-                prompt_mode="instruct",
                 task_type_mix={"code_generation": 1.0},
                 enable_prompt_randomization=False,
             )
@@ -392,7 +377,6 @@ class TestBuildDatasetEntries:
             build_dataset_entries(
                 files,
                 validate_format=False,
-                prompt_mode="instruct",
                 task_type_mix={"code_generation": 1.0},
                 enable_prompt_randomization=False,
             )

@@ -16,43 +16,12 @@ logger = logging.getLogger(__name__)
 
 
 class FormatValidator:
-    """Validates Phase 2 dataset format against Phase 1 specification."""
+    """Validates Phase-2 dataset format and structure."""
 
-    def __init__(
-        self,
-        phase1_spec_path: Path | None = None,
-        prompt_mode: str = "phase1_compat",
-    ):
+    def __init__(self):
         """
-        Initialize format validator.
-
-        Args:
-            phase1_spec_path: Path to Phase 1 format specification JSON file
-            prompt_mode: Validation mode ('phase1_compat' or 'instruct')
+        Initialize format validator for Phase-2 instruct mode.
         """
-        self.prompt_mode = prompt_mode
-        self.phase1_spec: dict[str, Any] | None = None
-        if phase1_spec_path and phase1_spec_path.exists():
-            self.load_phase1_spec(phase1_spec_path)
-        else:
-            # Use default spec if available
-            default_spec = Path("docs/phase1_format_spec.json")
-            if default_spec.exists():
-                self.load_phase1_spec(default_spec)
-            else:
-                logger.warning(
-                    "No Phase 1 format spec found. Using basic validation only."
-                )
-
-    def load_phase1_spec(self, spec_path: Path) -> None:
-        """Load Phase 1 format specification from JSON file."""
-        try:
-            with open(spec_path, "r", encoding="utf-8") as f:
-                self.phase1_spec = json.load(f)
-            logger.info(f"Loaded Phase 1 format spec from {spec_path}")
-        except Exception as e:
-            logger.error(f"Failed to load Phase 1 spec: {e}")
-            self.phase1_spec = None
 
     def validate_sample(
         self,
@@ -99,97 +68,20 @@ class FormatValidator:
         if gen_value.strip() == "":
             errors.append("Field 'gen' must not be empty")
 
-        # Phase-2 specific validation (snippet size limits)
-        if self.prompt_mode == "instruct":
-            if max_lines and sample.get("gen"):
-                gen_lines = sample["gen"].count("\n") + 1
-                if gen_lines > max_lines:
-                    errors.append(
-                        f"Gen field exceeds max_lines limit: {gen_lines} > {max_lines}"
-                    )
-
-            if max_chars and sample.get("gen"):
-                gen_chars = len(sample["gen"])
-                if gen_chars > max_chars:
-                    errors.append(
-                        f"Gen field exceeds max_chars limit: {gen_chars} > {max_chars}"
-                    )
-
-        # Phase-1 validation (only if in phase1_compat mode)
-        if self.prompt_mode == "phase1_compat":
-            # Check for extra fields (Phase 1 might only have prompt and gen)
-            if self.phase1_spec:
-                required_fields = self.phase1_spec.get("format_requirements", {}).get(
-                    "required_fields", ["prompt", "gen"]
-                )
-                allowed_fields = set(required_fields)
-                # Allow metadata fields for debugging but warn
-                extra_fields = set(sample.keys()) - allowed_fields
-                if extra_fields:
-                    logger.debug(
-                        f"Sample has extra fields (will be ignored): {extra_fields}"
-                    )
-
-            # Validate prompt style (if spec available) - only for Phase-1 mode
-            prompt_characteristics: dict[str, Any] = {}
-            if self.phase1_spec and "prompt" in sample:
-                prompt = prompt_value
-                prompt_characteristics = self.phase1_spec.get(
-                    "prompt_characteristics", {}
+        # Phase-2 validation (snippet size limits)
+        if max_lines and sample.get("gen"):
+            gen_lines = sample["gen"].count("\n") + 1
+            if gen_lines > max_lines:
+                errors.append(
+                    f"Gen field exceeds max_lines limit: {gen_lines} > {max_lines}"
                 )
 
-                # Check for required prompt patterns (Phase 1 uses "Write a Rust code snippet. Output only the code.")
-                common_patterns = prompt_characteristics.get("common_patterns", {})
-                if common_patterns:
-                    # Check if prompt contains expected patterns
-                    has_write_rust = "Write a Rust" in prompt
-                    has_output_only = "Output only" in prompt
-
-                    # If Phase 1 had these patterns in 100% of samples, we should enforce them
-                    write_rust_ratio = common_patterns.get("Write a Rust", 0) / max(
-                        prompt_characteristics.get("total_prompts", 1), 1
-                    )
-                    if write_rust_ratio > 0.9 and not has_write_rust:
-                        errors.append(
-                            "Prompt missing 'Write a Rust' pattern (required in Phase 1 format)"
-                        )
-                    if write_rust_ratio > 0.9 and not has_output_only:
-                        errors.append(
-                            "Prompt missing 'Output only' pattern (required in Phase 1 format)"
-                        )
-
-            # Check prompt length (warn if very different)
-            length_stats = prompt_characteristics.get("length_stats", {})
-            if length_stats:
-                avg_length = length_stats.get("avg", 0)
-                if avg_length > 0:
-                    current_length = len(prompt)
-                    # Warn if more than 2x or less than 0.5x average
-                    if current_length > avg_length * 2:
-                        logger.debug(
-                            f"Prompt length {current_length} is much longer than Phase 1 average {avg_length}"
-                        )
-                    elif current_length < avg_length * 0.5:
-                        logger.debug(
-                            f"Prompt length {current_length} is much shorter than Phase 1 average {avg_length}"
-                        )
-
-        # Validate code formatting (backticks are optional in Phase 1 - 6.7% had them)
-        if self.phase1_spec and "gen" in sample:
-            gen = sample["gen"]
-            code_formatting = self.phase1_spec.get("format_requirements", {}).get(
-                "code_formatting", {}
-            )
-            backticks_ratio = code_formatting.get("backticks_ratio", 0.0)
-            has_backticks_current = "```" in gen
-
-            # Phase 1 allows backticks (6.7% of samples had them), so both are valid
-            # Only warn if backticks are present but Phase 1 had very few (suggests format drift)
-            if has_backticks_current and backticks_ratio < 0.05:
-                logger.debug(
-                    f"Code contains backticks but Phase 1 had very few ({backticks_ratio*100:.1f}%)"
+        if max_chars and sample.get("gen"):
+            gen_chars = len(sample["gen"])
+            if gen_chars > max_chars:
+                errors.append(
+                    f"Gen field exceeds max_chars limit: {gen_chars} > {max_chars}"
                 )
-            # Don't error on backticks - they're valid in Phase 1 format
 
         is_valid = len(errors) == 0
         return is_valid, errors

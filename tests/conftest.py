@@ -79,7 +79,7 @@ def sample_config():
         max_threads=1,
         output_path="output/test_output.jsonl",
         output_dir="output",
-        allow_edition_2018=False,
+
         max_clippy_warnings=0,
         require_docs=True,
         enable_license_scan=False,  # Disable for faster tests

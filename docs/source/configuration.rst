@@ -48,7 +48,6 @@ Unsafe Code Filtering
 Phase-2 Configuration
 ~~~~~~~~~~~~~~~~~~~~~
 
-* ``prompt_mode`` - Prompt generation mode ("phase1_compat" or "instruct")
 * ``max_sft_lines`` - Maximum lines per snippet (default: 200)
 * ``max_sft_chars`` - Maximum characters per snippet (default: 8000)
 * ``task_type_mix`` - Task type distribution dictionary

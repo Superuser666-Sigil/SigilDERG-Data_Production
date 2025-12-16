@@ -61,24 +61,12 @@ def test_format_validator():
 
 
 def test_code_formatting():
-    """Test code formatting matches Phase 1 (no backticks if Phase 1 didn't use them)."""
+    """Test code formatting (Phase-2 always preserves backticks)."""
     code_with_backticks = "```rust\nfn main() {}\n```"
 
-    # Format without Phase 1 spec (should preserve backticks)
-    formatted1 = format_code_for_gen(code_with_backticks, None)
-    assert "```" in formatted1
-
-    # Format with Phase 1 spec that doesn't use backticks
-    phase1_spec_no_backticks = {
-        "format_requirements": {
-            "code_formatting": {
-                "has_backticks": False,
-            }
-        }
-    }
-    formatted2 = format_code_for_gen(code_with_backticks, phase1_spec_no_backticks)
-    assert "```" not in formatted2
-    assert "fn main() {}" in formatted2
+    # Format code (should preserve backticks in Phase-2)
+    formatted = format_code_for_gen(code_with_backticks)
+    assert "```" in formatted
 
 
 def test_jsonl_file_validation():

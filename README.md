@@ -55,21 +55,16 @@ The pipeline generates JSONL datasets with prompt-generation pairs that can be u
 
 ### Dataset Generation
 
-- **Prompt Generation**: Creates instruction prompts from code and documentation
-  - **Phase 1 Compatible Mode**: Uses exact Phase 1 prompt format for backwards compatibility
-  - **Instruct Mode (Phase-2)**: Generates natural language instructions based on code patterns and doc comments
+- **Prompt Generation**: Creates instruction prompts from code and documentation based on code patterns and doc comments
 - **Semantic Chunking**: Splits large files into snippet-sized chunks (functions, impl blocks, modules) for Phase-2
 - **Task Type Diversity**: Generates multiple task types for Phase-2:
   - Code generation (70% default)
   - Transformations (15% default): sync→async, match→?, iterator conversions
   - Error fixing (10% default): fix compiler errors in broken code with improved fallback to simulated errors when real compilation times out
   - Explanations (5% default): explain code functionality
-- **Format Validation**: Ensures consistent dataset structure matching Phase 1 format
-- **Stack Dataset Integration**: Streams files from HuggingFace datasets or uses local cache
+- **Format Validation**: Ensures consistent dataset structure
 - **Dataset Merging**: Combines multiple datasets with shuffle and weighting options
-  - **Phase-1:Phase-2 Ratio Control**: Set target ratio (e.g., 10:1) for QLoRA training
-  - **Auto Up-sampling**: Automatically up-samples Phase-2 if small relative to Phase-1 (prioritizes instruct behavior)
-- **Extra Phase-2 Shards**: Append pre-generated instruct-style shards (e.g., experimental upscales) via CLI without moving files
+- **Extra Shards**: Append pre-generated instruct-style shards (e.g., experimental upscales) via CLI without moving files
 - **Train/Val Split by Source**: Splits datasets keeping whole crates/files together (tests true generalization)
 - **Streaming Architecture**: Generator-based pipeline for memory-efficient processing of large datasets
 - **Granular Metrics**: Detailed filter reason breakdown for observability
@@ -133,50 +128,18 @@ python -m sigil_pipeline.main \
   --max-sft-chars 8000 \
   --output output/phase2_dataset.jsonl
 
-# Custom task type distribution for Phase-2
+# Custom task type distribution
 python -m sigil_pipeline.main \
-  --prompt-mode instruct \
   --task-mix '{"code_generation": 0.7, "transformations": 0.15, "error_fixing": 0.1, "explanations": 0.05}'
 
-# Include Stack dataset (from local cache)
+# Append experimental / pre-generated shards after generation
 python -m sigil_pipeline.main \
-  --include-stack-dataset \
-  --stack-dataset-path "datasets/the-stack-rust-clean" \
-  --output output/dataset.jsonl
-
-# Include Stack dataset with streaming fallback
-python -m sigil_pipeline.main \
-  --include-stack-dataset \
-  --stack-dataset-path "datasets/the-stack-rust-clean" \
-  --stack-dataset-streaming \
-  --output output/dataset.jsonl
-
-# Merge with existing dataset
-python -m sigil_pipeline.main \
-  --merge-with-phase1 \
-  --phase1-dataset-path "data/phase1.jsonl" \
-  --shuffle-merged \
-  --output output/merged.jsonl
-
-# Merge with Phase-1:Phase-2 ratio control (10:1 ratio, auto up-sample Phase-2 if small)
-python -m sigil_pipeline.main \
-  --merge-with-phase1 \
-  --phase1-dataset-path "data/phase1.jsonl" \
-  --phase1-phase2-ratio 10.0 \
-  --create-train-val-split \
-  --val-ratio 0.1 \
-  --output output/phase2.jsonl
-
-# Append experimental / pre-generated Phase-2 shards after generation
-python -m sigil_pipeline.main \
-  --prompt-mode instruct \
   --crate-list data/crate_list.txt \
-  --extra-phase2-shard experimental/phase1_upscaled.jsonl \
+  --extra-phase2-shard experimental/experimental_shard.jsonl \
   --output datasets/phase2_full.jsonl
 
 # Allow longer real error injection (e.g., 3 minutes for cargo check)
 python -m sigil_pipeline.main \
-  --prompt-mode instruct \
   --error-injection-timeout 180 \
   --output datasets/phase2_full.jsonl
 
@@ -216,7 +179,6 @@ from sigil_pipeline.main import run_pipeline
 async def main():
     config = PipelineConfig(
         crates=["serde", "tokio"],
-        include_stack_dataset=False,  # Opt-in when Stack is available locally
         output_path="output/dataset.jsonl",
     )
     
@@ -238,10 +200,6 @@ config = PipelineConfig(
     crates=["serde", "tokio"],
     crate_list_path="data/crate_list.txt",  # Or specify individual crates
     
-    # Stack dataset integration (opt-in)
-    include_stack_dataset=False,
-    stack_dataset_path="ammarnasr/the-stack-rust-clean",
-    
     # Quality thresholds
     allow_edition_2018=False,  # Only 2021+ edition
     max_bad_code_warnings=0,  # Strict filter for critical lints (style lints ignored)
@@ -253,15 +211,9 @@ config = PipelineConfig(
     enable_deny_scan=False,  # Optional: cargo-deny security auditing
     
     # File filtering
-    max_line_length=100,  # Matches Stack dataset criteria
+    max_line_length=100,
     min_alphabetic_ratio=0.3,  # Filters minified code
     
-    # Dataset merging
-    merge_with_phase1=False,
-    phase1_dataset_path=None,
-    shuffle_merged=True,
-    phase2_weight=1.0,
-
     # Error injection controls
     enable_error_injection=True,
     error_injection_method="both",

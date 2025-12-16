@@ -17,7 +17,6 @@ import tarfile
 import tempfile
 import time
 from pathlib import Path
-from typing import Iterator
 
 import requests
 from tenacity import (
@@ -50,15 +49,6 @@ def _rate_limit_sync() -> None:
         time.sleep(CRATES_IO_RATE_LIMIT_SECONDS - elapsed)
     _last_request_time = time.monotonic()
 
-
-# Optional HuggingFace datasets library
-try:
-    from datasets import load_dataset  # type: ignore[import-untyped]
-
-    HF_DATASETS_AVAILABLE = True
-except ImportError:
-    HF_DATASETS_AVAILABLE = False
-    load_dataset = None  # type: ignore[assignment]
 
 # Constants
 CRATES_IO_API_URL = "https://crates.io/api/v1/crates"
@@ -351,16 +341,15 @@ def fetch_crate(
         # Clean up crate file
         crate_file.unlink()
 
-        # Verify edition
-        if config and not config.allow_edition_2018:
-            from .utils import get_crate_edition
+        # Verify edition (always require 2021+)
+        from .utils import get_crate_edition
 
-            edition = get_crate_edition(extract_path)
-            if edition and int(edition) < 2021:
-                logger.info(
-                    f"Skipping {crate_name} v{version}: edition {edition} < 2021"
-                )
-                return None
+        edition = get_crate_edition(extract_path)
+        if edition and int(edition) < 2021:
+            logger.info(
+                f"Skipping {crate_name} v{version}: edition {edition} < 2021"
+            )
+            return None
 
         logger.info(f"Successfully extracted {crate_name} v{version} to {extract_path}")
         return extract_path
@@ -508,115 +497,3 @@ def ensure_crate_dependencies_available(
         except Exception as e:
             logger.warning(f"Error ensuring dependencies: {e}")
             return False
-
-
-def iter_stack_files_hf(dataset_name: str, split: str | None = None) -> Iterator[dict]:
-    """
-    Iterate through code files from HuggingFace Stack Rust dataset.
-
-    Streams files from HuggingFace without downloading entire dataset.
-
-    Args:
-        dataset_name: HuggingFace dataset name (e.g., "ammarnasr/the-stack-rust-clean")
-        split: Dataset split to use (default: None, uses default split)
-
-    Yields:
-        Dictionary with 'path' and 'code' keys for each Rust file
-    """
-    if not HF_DATASETS_AVAILABLE or load_dataset is None:
-        logger.warning(
-            "HuggingFace datasets library not available. "
-            "Install with: pip install datasets"
-        )
-        return
-
-    try:
-        logger.info(f"Loading HuggingFace dataset: {dataset_name}")
-        dataset = load_dataset(dataset_name, split=split, streaming=True)
-
-        for item in dataset:
-            # Stack dataset items are dictionaries
-            if not isinstance(item, dict):
-                continue
-
-            # Stack dataset typically has 'content' or 'text' field with code
-            code = item.get("content") or item.get("text") or item.get("code", "")
-
-            if not code:
-                continue
-
-            # Get file path/name if available
-            file_path = (
-                item.get("path")
-                or item.get("file_name")
-                or item.get("id", "unknown.rs")
-            )
-
-            # Ensure it's a .rs file
-            if not file_path.endswith(".rs"):
-                continue
-
-            yield {
-                "path": file_path,
-                "code": code,
-                "source": "huggingface",
-                "dataset": dataset_name,
-            }
-
-    except Exception as e:
-        logger.error(f"Failed to load HuggingFace dataset {dataset_name}: {e}")
-        return
-
-
-def iter_stack_files(
-    dataset_path: str,
-    use_streaming: bool = False,
-    hf_dataset_name: str | None = None,
-) -> Iterator[dict]:
-    """
-    Iterate through code files from the Stack Rust dataset.
-
-    Checks local directory first, then optionally falls back to HuggingFace streaming.
-
-    Args:
-        dataset_path: Path to local Stack dataset directory
-        use_streaming: Whether to stream from HuggingFace if local path not found
-        hf_dataset_name: HuggingFace dataset name to use if streaming (e.g., "ammarnasr/the-stack-rust-clean")
-
-    Yields:
-        Dictionary with 'path' and 'code' keys for each Rust file
-    """
-    # First, try local directory
-    dataset_dir = Path(dataset_path)
-
-    if dataset_dir.exists() and dataset_dir.is_dir():
-        logger.info(f"Using local Stack dataset: {dataset_path}")
-        # Recursively find all .rs files
-        for file_path in dataset_dir.rglob("*.rs"):
-            try:
-                content = file_path.read_text(encoding="utf-8", errors="ignore")
-                yield {
-                    "path": str(file_path.relative_to(dataset_dir)),
-                    "code": content,
-                    "full_path": str(file_path),
-                    "source": "local",
-                }
-            except Exception as e:
-                logger.warning(f"Failed to read {file_path}: {e}")
-                continue
-        return  # Return after processing all local files
-
-    # Local path doesn't exist - check if streaming is enabled
-    if use_streaming and hf_dataset_name:
-        logger.info(
-            f"Local dataset not found at {dataset_path}. "
-            f"Streaming from HuggingFace: {hf_dataset_name}"
-        )
-        yield from iter_stack_files_hf(hf_dataset_name)
-        return
-
-    # No local path and streaming not enabled
-    logger.warning(
-        f"Stack dataset path does not exist: {dataset_path}. "
-        f"Set use_streaming=True to stream from HuggingFace."
-    )

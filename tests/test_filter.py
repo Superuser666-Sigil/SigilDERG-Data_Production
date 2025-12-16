@@ -30,7 +30,7 @@ class TestIsCrateAcceptable:
 
     def test_edition_filtering_2018(self, sample_crate_dir):
         """Test edition filtering (2018 vs 2021+)."""
-        config = PipelineConfig(allow_edition_2018=False)
+        config = PipelineConfig()
         report = CrateAnalysisReport(
             crate_name="test",
             crate_dir=sample_crate_dir,
@@ -43,7 +43,7 @@ class TestIsCrateAcceptable:
 
     def test_edition_filtering_2021(self, sample_crate_dir):
         """Test edition 2021 is allowed."""
-        config = PipelineConfig(allow_edition_2018=False, require_docs=False)
+        config = PipelineConfig(require_docs=False)
         report = CrateAnalysisReport(
             crate_name="test",
             crate_dir=sample_crate_dir,
@@ -248,7 +248,7 @@ class TestIsCrateAcceptable:
     def test_multiple_filters_combined(self, sample_crate_dir):
         """Test multiple filters combined."""
         config = PipelineConfig(
-            allow_edition_2018=False,
+
             max_clippy_warnings=0,
             require_docs=True,
         )

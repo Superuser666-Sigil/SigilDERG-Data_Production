@@ -504,3 +504,68 @@ def build_error_handling_prompt(
         return f"{action} {fn_phrase} `{fn_name}`{context_phrase} {error_phrase}."
 
     return f"{action} {fn_phrase}{context_phrase} {error_phrase}."
+
+
+def build_final_prompt(
+    prompt_body: str,
+    required_output_keys: list[str] | None = None,
+    include_example: bool = True,
+    max_token_hint: int | None = None,
+) -> str:
+    """
+    Wrap a prompt body with strict output formatting instructions to encourage
+    high-quality, machine-parseable assistant responses.
+
+    This appends a short instruction block that asks the assistant to return a
+    single valid JSON object with the given keys. It also provides a tiny
+    example to reduce hallucinated or free-form outputs.
+
+    Args:
+        prompt_body: The main natural-language prompt (task description).
+        required_output_keys: List of keys that must appear in the JSON output.
+        include_example: Whether to append a one-shot example JSON.
+        max_token_hint: Optional hint about expected maximum token length for
+            the assistant response.
+
+    Returns:
+        The prompt body appended with a strict output instruction block.
+    """
+
+    keys = required_output_keys or [
+        "code",
+        "code_after",
+        "explanation",
+        "rationale",
+        "review_comment",
+        "test",
+    ]
+
+    instruction_lines = [
+        "IMPORTANT: Respond with a single valid JSON object and nothing else.",
+        "The JSON object MUST contain the following keys (use null for missing):",
+        f"{keys}",
+        "Do not include additional top-level keys. Keep values as strings or nested JSON as appropriate.",
+        "If you include code, put code in the `code` (original) or `code_after` (modified) fields as raw strings, not markdown fences.",
+    ]
+
+    if max_token_hint:
+        instruction_lines.append(f"Response length hint: keep the output under {max_token_hint} tokens.")
+
+    instruction = "\n".join(instruction_lines)
+
+    example = ""
+    if include_example:
+        example_obj = {
+            "code": "fn add(a: i32, b: i32) -> i32 { a + b }",
+            "code_after": "fn add(a: i32, b: i32) -> i32 { a.checked_add(b).unwrap_or(0) }",
+            "explanation": "Replaced direct addition with checked_add to avoid overflow.",
+            "rationale": "Safer behaviour; preserves original semantics for common cases.",
+            "review_comment": "Consider returning Result instead of unwrap in library code.",
+            "test": "",
+        }
+        # minimal compact JSON example
+        import json
+
+        example = "\nExample JSON:\n" + json.dumps(example_obj, ensure_ascii=False)
+
+    return f"{prompt_body}\n\n{instruction}{example}\n"

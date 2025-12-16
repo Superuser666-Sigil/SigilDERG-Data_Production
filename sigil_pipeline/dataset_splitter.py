@@ -136,10 +136,15 @@ def split_by_source(
                 f.write(json_line + "\n")
                 val_count += 1
 
-    logger.info(
-        f"Split complete: {train_count} train samples, {val_count} val samples "
-        f"({val_count / (train_count + val_count) * 100:.1f}% validation)"
-    )
+    total_samples = train_count + val_count
+    if total_samples > 0:
+        val_percentage = val_count / total_samples * 100
+        logger.info(
+            f"Split complete: {train_count} train samples, {val_count} val samples "
+            f"({val_percentage:.1f}% validation)"
+        )
+    else:
+        logger.warning("Split complete: 0 train samples, 0 val samples (no data to split)")
 
     return train_count, val_count
 

@@ -65,7 +65,6 @@ async def test_pipeline_with_mock_crate(mock_crate_dir, tmp_path):
         output_dir=str(tmp_path),
         max_threads=1,
         limit=1,
-        include_stack_dataset=False,  # Skip Stack for this test
         enable_license_scan=False,  # Skip license check for speed
         require_docs=False,  # Relax requirements for test
         max_clippy_warnings=100,  # Allow warnings in test

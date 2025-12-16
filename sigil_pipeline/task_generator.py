@@ -21,6 +21,9 @@ from typing import Any
 
 logger = logging.getLogger(__name__)
 
+# Import prompt helper to produce structured-output prompts
+from .prompt_templates import build_final_prompt
+
 
 def generate_transformation_task(
     code: str, patterns: dict[str, Any] | None = None
@@ -66,6 +69,7 @@ def generate_transformation_task(
                     transformed = "#[tokio::main]\n" + transformed
 
                 prompt = f"Convert this synchronous function {fn_name} into an async version using Tokio."
+                prompt = build_final_prompt(prompt)
                 return {"prompt": prompt, "gen": transformed.strip()}
 
     # Match -> ? operator transformation
@@ -89,6 +93,7 @@ def generate_transformation_task(
             )
 
             prompt = "Convert this match expression to use the ? operator for error handling."
+            prompt = build_final_prompt(prompt)
             return {"prompt": prompt, "gen": transformed.strip()}
 
     # unwrap() -> explicit match propagation
@@ -104,6 +109,7 @@ def generate_transformation_task(
             )
             transformed = code.replace(f"{expr}.unwrap()", replacement, 1)
             prompt = "Replace unwrap calls with explicit error propagation using match blocks."
+            prompt = build_final_prompt(prompt)
             return {"prompt": prompt, "gen": transformed.strip()}
 
     # Iterator transformation (loops -> iterator chains)
@@ -130,6 +136,7 @@ def generate_transformation_task(
                 transformed = transformed.replace("}", "})")
 
                 prompt = "Convert this for loop to use iterator methods."
+                prompt = build_final_prompt(prompt)
                 return {"prompt": prompt, "gen": transformed.strip()}
 
     return None
@@ -162,6 +169,7 @@ def generate_error_fixing_task(
             prompt = (
                 f"This Rust code fails with error {error_code}: {error_type}. Fix it."
             )
+            prompt = build_final_prompt(prompt)
             simulated_result = {"prompt": prompt, "gen": code.strip()}
             # If method is "simulate" only, return immediately
             if method == "simulate":
@@ -175,6 +183,7 @@ def generate_error_fixing_task(
             )
             if error_type and broken_code:
                 prompt = f"This Rust code fails with error {error_code}: {error_type}. Fix it."
+                prompt = build_final_prompt(prompt)
                 return {"prompt": prompt, "gen": code.strip()}
         except Exception as e:
             logger.debug(f"Real error injection failed: {e}")
@@ -357,6 +366,7 @@ def generate_explanation_task(
         # Variation 1: Simple explanation
         if random.random() < 0.7:
             prompt = f"Explain this Rust function in simple terms:\n\n{code}"
+            prompt = build_final_prompt(prompt)
             return {"prompt": prompt, "gen": explanation}
 
         # Variation 2: Explanation + usage example
@@ -375,6 +385,7 @@ def generate_explanation_task(
                 )
                 gen = f"{explanation}\n\n{usage_example}"
                 prompt = f"Explain what this Rust function does, then show how to use it in a small example:\n\n{code}"
+                prompt = build_final_prompt(prompt)
                 return {"prompt": prompt, "gen": gen}
 
     return None

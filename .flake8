@@ -1,12 +1,62 @@
 [flake8]
-max-line-length = 120
-extend-ignore = E501,E203,W503
+# Line length set to 100 (common for modern Python projects)
+max-line-length = 100
+
+# Complexity
+max-complexity = 10
+
+# Exclude common directories
 exclude =
-    vcpkg,
-    venv,
+    .git,
+    __pycache__,
     .venv,
+    venv,
+    env,
+    .eggs,
+    *.egg,
     build,
-    dist
+    dist,
+    .tox,
+    .mypy_cache,
+    .pytest_cache,
+    .ruff_cache,
+    node_modules
+
+# Ignore certain error codes (industry standard ignores)
+extend-ignore =
+    # E203: whitespace before ':' (not PEP 8 compliant, conflicts with Black)
+    E203,
+    # W503: line break before binary operator (outdated, conflicts with PEP 8)
+    W503,
+    # E501: line too long (handled by max-line-length)
+    E501,
+    # E701: multiple statements on one line (sometimes useful for simple cases)
+    E701,
+    # E704: multiple statements on one line (def) - allow for simple property methods
+    E704,
+    # C901: function is too complex (complexity handled by max-complexity threshold)
+    C901
+
+# Enable warnings that are disabled by default
+enable-extensions =
+    # G: Logging format checker (if using flake8-logging-format plugin)
+    # You can add more as needed
+
+# Per-file ignores
 per-file-ignores =
-    scripts/*:E402
-    tests/*:E402
+    # __init__.py files can have unused imports (F401) and import violations
+    __init__.py:F401,F403
+    # Test files can be more lenient
+    tests/*:E501,F841
+    # Configuration files
+    setup.py:E501
+
+# Docstring conventions (requires pep257 or flake8-docstrings)
+docstring-convention = google
+
+# Import order checking (requires flake8-import-order plugin)
+import-order-style = google
+application-import-names = sigil_mcp_server
+
+# Inline comments should be at least 2 spaces away
+inline-quotes = single
