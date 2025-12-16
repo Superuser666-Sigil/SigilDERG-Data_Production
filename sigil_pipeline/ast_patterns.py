@@ -106,6 +106,37 @@ def _extract_node_text(code: str, node: Any) -> str:
     return code[node.start_byte : node.end_byte]
 
 
+def extract_file_context(code: str) -> str:
+    """
+    Extracts imports, structs, and enums to provide context for a function.
+    This creates the 'code_context' field seen in high-quality datasets.
+    """
+    parser = _get_parser()
+    tree = parser.parse(bytes(code, "utf8"))
+    root = tree.root_node
+
+    context_parts = []
+    
+    # query to find imports and type definitions
+    # We want full text for imports, but maybe just signatures for structs?
+    # For now, let's grab full definitions to be safe, but skip function bodies.
+    for child in root.children:
+        text = _extract_node_text(code, child)
+        
+        if child.type == "use_declaration":
+            context_parts.append(text)
+        elif child.type in ("struct_item", "enum_item", "type_item", "const_item"):
+            # Optimization: You could strip bodies here to save tokens
+            # But getting the full struct definition is usually better.
+            context_parts.append(text)
+        elif child.type == "macro_definition" and "macro_rules!" in text:
+             context_parts.append(text)
+        elif child.type == "static_item":
+            context_parts.append(text)
+             
+    return "\n".join(context_parts)
+
+
 def check_function_in_code(code: str, signature: str) -> bool:
     """
     Fast regex-based check if a function signature exists in code.
