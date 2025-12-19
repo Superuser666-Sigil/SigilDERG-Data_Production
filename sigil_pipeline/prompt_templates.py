@@ -9,7 +9,6 @@ Version: 2.5.0
 """
 
 import logging
-from typing import Any
 
 from jinja2 import Environment, select_autoescape
 

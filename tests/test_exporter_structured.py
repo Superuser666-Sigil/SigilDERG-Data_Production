@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 
 from sigil_pipeline.exporter import write_jsonl
 

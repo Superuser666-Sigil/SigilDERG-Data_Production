@@ -25,6 +25,20 @@ def extract_context_header(code: str) -> str:
     Returns:
         String containing all use statements, structs, enums, constants, and macros.
     """
+    # Local helpers for tree-sitter parsing are provided in this module.
+    # Import here to avoid heavy dependency at module import time in tests.
+    import tree_sitter_rust as tst_rust
+    from tree_sitter import Language, Parser
+
+    def _get_parser() -> Parser:
+        """Create and return a Rust parser instance."""
+        rust_language = Language(tst_rust.language())
+        return Parser(rust_language)
+
+    def _extract_node_text(code_str: str, node) -> str:
+        """Extract the source text for a given AST node."""
+        return code_str[node.start_byte : node.end_byte]
+
     parser = _get_parser()
     tree = parser.parse(bytes(code, "utf8"))
     root = tree.root_node
