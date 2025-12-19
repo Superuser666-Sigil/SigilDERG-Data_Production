@@ -313,3 +313,21 @@ class PipelineConfig:
             "hardening_require_rustfmt": self.hardening_require_rustfmt,
             "hardening_reject_unsafe": self.hardening_reject_unsafe,
         }
+
+    @classmethod
+    def from_file(cls, path: str | Path) -> "PipelineConfig":
+        """Load config from a file, selecting parser by extension.
+
+        Supports JSON and YAML files. If the extension is unknown the method
+        will try JSON first and fall back to YAML.
+        """
+        p = Path(path)
+        if p.suffix.lower() in (".yml", ".yaml"):
+            return cls.from_yaml(p)
+        if p.suffix.lower() == ".json":
+            return cls.from_json(p)
+        # Unknown extension: try JSON then YAML
+        try:
+            return cls.from_json(p)
+        except Exception:
+            return cls.from_yaml(p)

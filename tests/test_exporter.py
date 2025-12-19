@@ -6,11 +6,7 @@ Tests JSONL export and merging functionality.
 
 import json
 
-from sigil_pipeline.exporter import (
-    merge_jsonl_files,
-    write_jsonl,
-    write_metrics,
-)
+from sigil_pipeline.exporter import merge_jsonl_files, write_jsonl, write_metrics
 
 
 class TestWriteJsonl:

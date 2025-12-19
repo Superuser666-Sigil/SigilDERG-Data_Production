@@ -1555,7 +1555,8 @@ async def analyze_crate(
                 )
             )
         else:
-            hardening_tasks.append(asyncio.coroutine(lambda: None)())  # Placeholder
+            # Use asyncio.sleep(0) as a lightweight coroutine that returns None
+            hardening_tasks.append(asyncio.sleep(0))  # Placeholder
 
         # Add rustfmt check if enabled
         if getattr(config, "hardening_require_rustfmt", True):
@@ -1569,7 +1570,8 @@ async def analyze_crate(
                 )
             )
         else:
-            hardening_tasks.append(asyncio.coroutine(lambda: None)())  # Placeholder
+            # Use asyncio.sleep(0) as a lightweight coroutine that returns None
+            hardening_tasks.append(asyncio.sleep(0))  # Placeholder
 
         hardening_results = await asyncio.gather(
             *hardening_tasks, return_exceptions=True

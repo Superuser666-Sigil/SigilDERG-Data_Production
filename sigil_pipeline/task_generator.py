@@ -197,6 +197,7 @@ def _inject_real_error(
             logger.warning(f"Failed to restore {target_file}: {exc}")
 
 
+
 def generate_explanation_task(
     code: str, doc_comment: str | None = None
 ) -> dict[str, Any] | None:
@@ -221,8 +222,6 @@ def generate_explanation_task(
 
 
 # Stub functions required by imports but not used in new logic
-
-
 def determine_task_capabilities(*args, **kwargs):
     return {"code_generation"}
 

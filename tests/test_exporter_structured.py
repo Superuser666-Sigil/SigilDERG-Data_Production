@@ -1,7 +1,7 @@
 import json
-from sigil_pipeline.exporter import write_jsonl
 from pathlib import Path
 
+from sigil_pipeline.exporter import write_jsonl
 
 def test_write_jsonl_legacy_and_structured(tmp_path):
     samples = [
