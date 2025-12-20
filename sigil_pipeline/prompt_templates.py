@@ -11,9 +11,12 @@ Version: 2.5.0
 import logging
 from typing import Any
 
-from jinja2 import Template
+from jinja2 import Environment, select_autoescape
 
 logger = logging.getLogger(__name__)
+
+# Jinja2 environment with autoescaping enabled to avoid unsafe template rendering.
+jinji_env = Environment(autoescape=select_autoescape(default=True))
 
 # Standard System Prompt
 SYSTEM_PROMPT = "You are a Rust engineering assistant. Output valid JSON."
@@ -21,7 +24,7 @@ SYSTEM_PROMPT = "You are a Rust engineering assistant. Output valid JSON."
 # Template for Code Generation
 # Input: context, instruction, code_signature
 # Output: JSON with 'code' key
-CODE_GEN_TEMPLATE = Template(
+CODE_GEN_TEMPLATE = jinji_env.from_string(
     """
 You are a Rust engineering assistant.
 Context:
@@ -39,7 +42,7 @@ Return a JSON object with keys: ['code'].
 # Template for Error Fixing
 # Input: context, instruction, broken_code
 # Output: JSON with 'fixed_code' and 'explanation' keys
-ERROR_FIX_TEMPLATE = Template(
+ERROR_FIX_TEMPLATE = jinji_env.from_string(
     """
 You are a Rust engineering assistant.
 Context:
@@ -57,7 +60,7 @@ Return a JSON object with keys: ['fixed_code', 'explanation'].
 # Template for Explanations
 # Input: context, instruction, code
 # Output: JSON with 'explanation' key
-EXPLANATION_TEMPLATE = Template(
+EXPLANATION_TEMPLATE = jinji_env.from_string(
     """
 You are a Rust engineering assistant.
 Context:
