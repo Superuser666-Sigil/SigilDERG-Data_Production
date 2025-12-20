@@ -144,7 +144,9 @@ def split_by_source(
             f"({val_percentage:.1f}% validation)"
         )
     else:
-        logger.warning("Split complete: 0 train samples, 0 val samples (no data to split)")
+        logger.warning(
+            "Split complete: 0 train samples, 0 val samples (no data to split)"
+        )
 
     return train_count, val_count
 

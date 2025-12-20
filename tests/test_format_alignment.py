@@ -17,7 +17,7 @@ from sigil_pipeline.format_validator import FormatValidator
 
 
 def test_sample_structure():
-    """Test that samples have correct structure (prompt and gen fields)."""
+    """Test that samples have correct structure (input_data/output_data fields)."""
     files = [
         {
             "path": "test.rs",
@@ -26,34 +26,31 @@ def test_sample_structure():
         }
     ]
 
-    # build_dataset_entries returns a generator; consume it into a list
     samples = list(build_dataset_entries(files, validate_format=False))
 
     assert len(samples) == 1
     sample = samples[0]
 
-    assert "prompt" in sample
-    assert "gen" in sample
-    assert isinstance(sample["prompt"], str)
-    assert isinstance(sample["gen"], str)
+    assert "input_data" in sample
+    assert "output_data" in sample
+    assert isinstance(sample["input_data"], dict)
+    assert isinstance(sample["output_data"], dict)
 
 
 def test_format_validator():
     """Test format validator with valid and invalid samples."""
     validator = FormatValidator()
 
-    # Valid sample
     valid_sample = {
-        "prompt": "Write a Rust program",
-        "gen": "fn main() {}",
+        "input_data": {"prompt": "Write a Rust program", "code": "fn main() {}"},
+        "output_data": {"code": "fn main() {}"},
     }
     is_valid, errors = validator.validate_sample(valid_sample)
     assert is_valid
     assert len(errors) == 0
 
-    # Invalid sample (missing gen)
     invalid_sample = {
-        "prompt": "Write a Rust program",
+        "input_data": {"prompt": "Write a Rust program"},
     }
     is_valid, errors = validator.validate_sample(invalid_sample)
     assert not is_valid
@@ -61,25 +58,27 @@ def test_format_validator():
 
 
 def test_code_formatting():
-    """Test code formatting (Phase-2 always preserves backticks)."""
+    """Test code formatting removes backticks."""
     code_with_backticks = "```rust\nfn main() {}\n```"
 
-    # Format code (should preserve backticks in Phase-2)
     formatted = format_code_for_gen(code_with_backticks)
-    assert "```" in formatted
+    assert "```" not in formatted
 
 
 def test_jsonl_file_validation():
     """Test validation of a JSONL file."""
     validator = FormatValidator()
 
-    # Create temporary JSONL file
     with tempfile.NamedTemporaryFile(mode="w", suffix=".jsonl", delete=False) as f:
-        # Write valid sample
-        json.dump({"prompt": "Write code", "gen": "fn main() {}"}, f)
+        json.dump(
+            {
+                "input_data": {"prompt": "Write code", "code": "fn main() {}"},
+                "output_data": {"code": "fn main() {}"},
+            },
+            f,
+        )
         f.write("\n")
-        # Write invalid sample (missing gen)
-        json.dump({"prompt": "Write code"}, f)
+        json.dump({"input_data": {"prompt": "Write code"}}, f)
         f.write("\n")
         temp_path = Path(f.name)
 
@@ -92,19 +91,6 @@ def test_jsonl_file_validation():
         assert len(report["errors"]) > 0
     finally:
         temp_path.unlink()
-
-
-def test_prompt_generation_style():
-    """Test that prompts match Phase 1 style (direct instruction)."""
-    from sigil_pipeline.dataset_builder import generate_prompt_for_code
-
-    code = 'fn main() {\n    println!("Hello");\n}'
-    prompt = generate_prompt_for_code(code)
-
-    # Should start with instruction verb
-    assert prompt.startswith(("Write", "Create", "Implement", "Demonstrate"))
-    # Should not have personal tone
-    assert "you" not in prompt.lower() or "your" not in prompt.lower()
 
 
 if __name__ == "__main__":

@@ -75,13 +75,12 @@ def write_jsonl(
                         "task_category": sample.get("task_category", "unknown"),
                         "test": sample.get("test", ""),
                     }
-                elif (
-                    "input_data" in sample
-                    and "output_data" in sample
-                ):
+                elif "input_data" in sample and "output_data" in sample:
                     structured = sample
                 else:
-                    logger.warning(f"Skipping invalid sample (missing expected keys): {list(sample.keys())}")
+                    logger.warning(
+                        f"Skipping invalid sample (missing expected keys): {list(sample.keys())}"
+                    )
                     continue
 
                 # Defensive filter: drop any comment_generation samples (case-insensitive)
@@ -89,13 +88,20 @@ def write_jsonl(
                 def _is_comment_sample(obj: dict) -> bool:
                     try:
                         tc = obj.get("task_category") if isinstance(obj, dict) else None
-                        if isinstance(tc, str) and tc.strip().lower() == "comment_generation":
+                        if (
+                            isinstance(tc, str)
+                            and tc.strip().lower() == "comment_generation"
+                        ):
                             return True
                         # Inspect nested input/output for legacy labels
                         for key in ("input_data", "output_data"):
                             nested = obj.get(key)
                             if isinstance(nested, dict):
-                                if nested.get("task_category") and str(nested.get("task_category")).strip().lower() == "comment_generation":
+                                if (
+                                    nested.get("task_category")
+                                    and str(nested.get("task_category")).strip().lower()
+                                    == "comment_generation"
+                                ):
                                     return True
                                 if "commented_code" in nested:
                                     return True
@@ -104,13 +110,17 @@ def write_jsonl(
                     return False
 
                 if _is_comment_sample(structured):
-                    logger.info("Skipping sample with task_category=comment_generation or legacy commented_code")
+                    logger.info(
+                        "Skipping sample with task_category=comment_generation or legacy commented_code"
+                    )
                     continue
 
                 # Remove metadata keys if requested (preserve top-level structured fields)
                 if remove_metadata and isinstance(structured, dict):
                     structured = {
-                        k: v for k, v in structured.items() if not str(k).startswith("_")
+                        k: v
+                        for k, v in structured.items()
+                        if not str(k).startswith("_")
                     }
 
                 # Write as JSON line
@@ -208,12 +218,19 @@ def merge_phase2_shards(
                 # Defensive filter similar to write_jsonl()
                 def _is_comment_sample_obj(obj: dict) -> bool:
                     tc = obj.get("task_category") if isinstance(obj, dict) else None
-                    if isinstance(tc, str) and tc.strip().lower() == "comment_generation":
+                    if (
+                        isinstance(tc, str)
+                        and tc.strip().lower() == "comment_generation"
+                    ):
                         return True
                     for key in ("input_data", "output_data"):
                         nested = obj.get(key)
                         if isinstance(nested, dict):
-                            if nested.get("task_category") and str(nested.get("task_category")).strip().lower() == "comment_generation":
+                            if (
+                                nested.get("task_category")
+                                and str(nested.get("task_category")).strip().lower()
+                                == "comment_generation"
+                            ):
                                 return True
                             if "commented_code" in nested:
                                 return True
@@ -307,7 +324,9 @@ def merge_jsonl_files(
                         all_samples.append(sample)
                         file_count += 1
                     else:
-                        logger.warning(f"Invalid sample in {input_file}: missing expected keys")
+                        logger.warning(
+                            f"Invalid sample in {input_file}: missing expected keys"
+                        )
                         continue
 
                 except json.JSONDecodeError as e:

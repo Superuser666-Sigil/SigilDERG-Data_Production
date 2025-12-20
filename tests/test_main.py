@@ -98,8 +98,12 @@ async def test_pipeline_with_mock_crate(mock_crate_dir, tmp_path):
             if line:
                 try:
                     sample = json.loads(line)
-                    assert "prompt" in sample, "Sample should have 'prompt' field"
-                    assert "gen" in sample, "Sample should have 'gen' field"
+                    assert (
+                        "input_data" in sample
+                    ), "Sample should have 'input_data' field"
+                    assert (
+                        "output_data" in sample
+                    ), "Sample should have 'output_data' field"
                     samples.append(sample)
                 except json.JSONDecodeError as e:
                     pytest.fail(f"Invalid JSON in output: {e}")

@@ -21,13 +21,18 @@ def test_prompt_gen_to_eval_format():
     """Test conversion from pipeline format to evaluation format."""
     from sigil_pipeline.converters import prompt_gen_to_eval_format
 
-    # Create test JSONL with pipeline format
     with tempfile.NamedTemporaryFile(mode="w", suffix=".jsonl", delete=False) as infile:
         samples = [
-            {"prompt": "Write a function", "gen": "pub fn test() {}"},
             {
-                "prompt": "Write another",
-                "gen": "pub fn test2() {}",
+                "input_data": {
+                    "prompt": "Write a function",
+                    "code": "pub fn test() {}",
+                },
+                "output_data": {"code": "pub fn test() {}"},
+            },
+            {
+                "input_data": {"prompt": "Write another", "code": "pub fn test2() {}"},
+                "output_data": {"code": "pub fn test2() {}"},
                 "task_id": "custom_id",
             },
         ]
@@ -35,7 +40,6 @@ def test_prompt_gen_to_eval_format():
             infile.write(json.dumps(sample) + "\n")
         infile_path = infile.name
 
-    # Convert to evaluation format
     with tempfile.NamedTemporaryFile(
         mode="w", suffix=".jsonl", delete=False
     ) as outfile:
@@ -50,7 +54,6 @@ def test_prompt_gen_to_eval_format():
 
         assert count == 2
 
-        # Verify output format
         with open(outfile_path, "r") as f:
             lines = f.readlines()
             assert len(lines) == 2
@@ -75,17 +78,22 @@ def test_jsonl_loader_format():
     except ImportError:
         pytest.skip("sigilderg-finetuner not available")
 
-    # Create test JSONL
     with tempfile.NamedTemporaryFile(mode="w", suffix=".jsonl", delete=False) as f:
         samples = [
-            {"prompt": "Write a function", "gen": "pub fn test() {}"},
+            {
+                "input_data": {
+                    "prompt": "Write a function",
+                    "code": "pub fn test() {}",
+                },
+                "output_data": {"code": "pub fn test() {}"},
+            },
         ]
         for sample in samples:
             f.write(json.dumps(sample) + "\n")
         jsonl_path = f.name
 
     try:
-        # Mock tokenizer (minimal interface)
+
         class MockTokenizer:
             def apply_chat_template(
                 self, messages, tokenize=False, add_generation_prompt=False
@@ -94,7 +102,6 @@ def test_jsonl_loader_format():
 
         tokenizer = MockTokenizer()
 
-        # Load samples
         samples = list(
             load_prompt_gen_jsonl(
                 jsonl_path=jsonl_path,
@@ -112,37 +119,33 @@ def test_jsonl_loader_format():
 
 def test_format_compatibility():
     """Test that pipeline format is compatible with finetuner expectations."""
-    # Pipeline format
     pipeline_sample = {
-        "prompt": "Write a Rust function",
-        "gen": "pub fn example() -> i32 { 42 }",
+        "input_data": {"prompt": "Write a Rust function", "code": "fn main() {}"},
+        "output_data": {"code": "pub fn example() -> i32 { 42 }"},
         "split": "train",
     }
 
-    # Should be convertible to finetuner format
-    finetuner_text = f"{pipeline_sample['prompt']}\n\n{pipeline_sample['gen']}"
+    finetuner_text = (
+        f"{pipeline_sample['input_data']['prompt']}\n\n"
+        f"{pipeline_sample['output_data']['code']}"
+    )
     assert "Write a Rust function" in finetuner_text
     assert "pub fn example() -> i32 { 42 }" in finetuner_text
 
-    # Should be convertible to evaluation format
     eval_sample = {
         "task_id": "test_123",
-        "completion": pipeline_sample["gen"],
+        "completion": pipeline_sample["output_data"]["code"],
     }
-    assert eval_sample["completion"] == pipeline_sample["gen"]
+    assert eval_sample["completion"] == pipeline_sample["output_data"]["code"]
 
 
 @pytest.mark.skip(reason="Requires actual finetuner installation")
 def test_finetuner_jsonl_loading():
     """Test that finetuner can load pipeline JSONL files."""
-    # This would require actual finetuner installation
-    # Skip for now, but structure is here for future testing
     pass
 
 
 @pytest.mark.skip(reason="Requires actual human-eval-rust installation")
 def test_humaneval_integration():
     """Test human-eval-rust integration with finetuner."""
-    # This would require actual human-eval-rust installation
-    # Skip for now, but structure is here for future testing
     pass

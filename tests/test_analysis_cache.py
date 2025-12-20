@@ -363,9 +363,8 @@ class TestCacheWithCustomSourcePaths:
         hash2 = cache.compute_crate_hash(crate_dir)
 
         # Modify file in standard path
-        (crate_dir / "src" / "main.rs").write_text("fn main() { println!(\"hi\"); }")
+        (crate_dir / "src" / "main.rs").write_text('fn main() { println!("hi"); }')
         hash3 = cache.compute_crate_hash(crate_dir)
 
         assert hash1 != hash2
         assert hash2 != hash3
-

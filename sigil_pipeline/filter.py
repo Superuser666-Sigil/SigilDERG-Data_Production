@@ -7,6 +7,7 @@ Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
 Version: 2.5.0
 """
 
+import hashlib
 import logging
 import platform
 from typing import Iterable, Iterator
@@ -86,7 +87,17 @@ def is_crate_acceptable(
             return _reject(report, reason, detail)
 
     # Check documentation
-    if config.require_docs:
+    require_docs = config.require_docs
+    if require_docs and config.require_docs_ratio < 1.0:
+        ratio = max(0.0, min(1.0, config.require_docs_ratio))
+        if ratio == 0.0:
+            require_docs = False
+        else:
+            digest = hashlib.sha256(report.crate_name.encode("utf-8")).hexdigest()
+            sample_value = int(digest, 16) / float(2**256)
+            require_docs = sample_value < ratio
+
+    if require_docs:
         if not report.docs or not report.docs.has_docs:
             reason = "no documentation found"
             return _reject(report, reason)
@@ -137,7 +148,9 @@ def is_crate_acceptable(
         if report.edition:
             try:
                 if int(report.edition) < int(hardening_min_edition):
-                    reason = f"hardening: edition {report.edition} < {hardening_min_edition}"
+                    reason = (
+                        f"hardening: edition {report.edition} < {hardening_min_edition}"
+                    )
                     return _reject(report, reason)
             except ValueError:
                 pass  # Can't parse edition, skip check

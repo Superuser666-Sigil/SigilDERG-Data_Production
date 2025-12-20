@@ -568,9 +568,7 @@ class TestRunDocCheckWithMultipleSources:
             '[package]\nname = "multi"\nversion = "1.0.0"\n\n'
             '[lib]\npath = "binding_rust/lib.rs"\n'
         )
-        (crate_dir / "src" / "main.rs").write_text(
-            "/// Main function\nfn main() {}\n"
-        )
+        (crate_dir / "src" / "main.rs").write_text("/// Main function\nfn main() {}\n")
         (crate_dir / "binding_rust" / "lib.rs").write_text(
             "//! Library docs\n\n/// Helper\npub fn helper() {}\n"
         )
@@ -579,4 +577,3 @@ class TestRunDocCheckWithMultipleSources:
         assert result.total_files == 2
         assert result.files_with_docs == 2
         assert result.has_docs is True
-

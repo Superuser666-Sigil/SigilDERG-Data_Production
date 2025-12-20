@@ -248,7 +248,6 @@ class TestIsCrateAcceptable:
     def test_multiple_filters_combined(self, sample_crate_dir):
         """Test multiple filters combined."""
         config = PipelineConfig(
-
             max_clippy_warnings=0,
             require_docs=True,
         )

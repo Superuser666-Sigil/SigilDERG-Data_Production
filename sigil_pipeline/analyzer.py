@@ -647,14 +647,16 @@ async def run_clippy_strict(
 
     # Add deny flags for anti-patterns
     if deny_antipatterns:
-        cmd_args.extend([
-            "-D",
-            "clippy::unwrap_used",
-            "-D",
-            "clippy::expect_used",
-            "-D",
-            "clippy::panic",
-        ])
+        cmd_args.extend(
+            [
+                "-D",
+                "clippy::unwrap_used",
+                "-D",
+                "clippy::expect_used",
+                "-D",
+                "clippy::panic",
+            ]
+        )
 
     cmd = build_cargo_command(*cmd_args)
 
