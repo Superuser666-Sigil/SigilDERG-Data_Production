@@ -14,9 +14,7 @@ import sys
 from pathlib import Path
 
 
-def run_command(
-    cmd: list[str], description: str, timeout: int | None = None
-) -> bool:
+def run_command(cmd: list[str], description: str, timeout: int | None = None) -> bool:
     """Run a command and return True if successful.
 
     Args:
@@ -97,7 +95,9 @@ def run_safety_scan_from_requirements(timeout: int = 120) -> bool:
                 print(result.stdout)
             if result.stderr:
                 print(result.stderr)
-            print(f"[WARN] safety found vulnerabilities (exit code {result.returncode})")
+            print(
+                f"[WARN] safety found vulnerabilities (exit code {result.returncode})"
+            )
             # Return True anyway - treat as advisory in local CI
             return True
 
@@ -195,18 +195,14 @@ def main():
         if bandit_result.returncode in (0, 1):
             print(f"\n{separator}")
             print("Running: bandit security scan")
-            print(
-                "Command: bandit -r sigil_pipeline -f json -o bandit-report.json"
-            )
+            print("Command: bandit -r sigil_pipeline -f json -o bandit-report.json")
             print(separator)
             print("[OK] bandit security scan passed (report written)")
             results.append(True)
         else:
             print(f"\n{separator}")
             print("Running: bandit security scan")
-            print(
-                "Command: bandit -r sigil_pipeline -f json -o bandit-report.json"
-            )
+            print("Command: bandit -r sigil_pipeline -f json -o bandit-report.json")
             print(separator)
             print(
                 f"[FAIL] bandit security scan failed with exit code {bandit_result.returncode}"

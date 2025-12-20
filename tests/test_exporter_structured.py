@@ -2,6 +2,7 @@ import json
 from sigil_pipeline.exporter import write_jsonl
 from pathlib import Path
 
+
 def test_write_jsonl_legacy_and_structured(tmp_path):
     samples = [
         {"prompt": "Write code", "gen": "fn main() {}"},

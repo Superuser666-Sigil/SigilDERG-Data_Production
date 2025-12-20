@@ -307,20 +307,16 @@ class TestDatasetBuilderProperties:
 
     @given(st.text(min_size=1, max_size=2000))
     @settings(max_examples=50)
-    def test_prompt_generation_never_crashes(self, code: str) -> None:
-        """Prompt generation should never crash on any input."""
-        from sigil_pipeline.dataset_builder import (
-            create_prompt_from_code,
-            extract_description_from_docs,
+    def test_dataset_entry_generation_never_crashes(self, code: str) -> None:
+        """Dataset entry generation should never crash on any input."""
+        from sigil_pipeline.dataset_builder import build_dataset_entries
+
+        samples = list(
+            build_dataset_entries(
+                [{"path": "test.rs", "code": code}], validate_format=False
+            )
         )
-
-        # Should not raise any exception
-        desc = extract_description_from_docs(code)
-        assert desc is None or isinstance(desc, str)
-
-        prompt = create_prompt_from_code(code)
-        assert isinstance(prompt, str)
-        assert len(prompt) > 0
+        assert isinstance(samples, list)
 
     @given(st.text(min_size=1, max_size=2000))
     @settings(max_examples=50)
@@ -334,14 +330,9 @@ class TestDatasetBuilderProperties:
 
     @given(st.text(min_size=1, max_size=1000))
     @settings(max_examples=30)
-    def test_pattern_detection_never_crashes(self, code: str) -> None:
-        """Pattern detection should never crash on any input."""
-        from sigil_pipeline.dataset_builder import detect_code_patterns
+    def test_doc_extraction_never_crashes(self, code: str) -> None:
+        """Doc extraction should never crash on any input."""
+        from sigil_pipeline.dataset_builder import extract_description_from_docs
 
-        # Should not raise any exception
-        patterns = detect_code_patterns(code)
-        assert isinstance(patterns, dict)
-        # Should always have expected keys
-        assert "has_main" in patterns
-        assert "has_async" in patterns
-        assert "has_error_handling" in patterns
+        desc = extract_description_from_docs(code)
+        assert desc is None or isinstance(desc, str)

@@ -346,9 +346,7 @@ def fetch_crate(
 
         edition = get_crate_edition(extract_path)
         if edition and int(edition) < 2021:
-            logger.info(
-                f"Skipping {crate_name} v{version}: edition {edition} < 2021"
-            )
+            logger.info(f"Skipping {crate_name} v{version}: edition {edition} < 2021")
             return None
 
         logger.info(f"Successfully extracted {crate_name} v{version} to {extract_path}")

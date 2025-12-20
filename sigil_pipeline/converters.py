@@ -16,6 +16,22 @@ from typing import Any, Dict, Optional
 logger = logging.getLogger(__name__)
 
 
+def _extract_completion(sample: dict[str, Any]) -> str | None:
+    if "gen" in sample:
+        return str(sample["gen"])
+
+    output_data = sample.get("output_data")
+    if isinstance(output_data, dict) and output_data:
+        for key in ("code", "fixed_code", "explanation", "docstring"):
+            if key in output_data:
+                return str(output_data[key])
+        if len(output_data) == 1:
+            return str(next(iter(output_data.values())))
+        return json.dumps(output_data, ensure_ascii=False)
+
+    return None
+
+
 def prompt_gen_to_eval_format(
     jsonl_path: str,
     output_path: str,
@@ -25,11 +41,11 @@ def prompt_gen_to_eval_format(
     """
     Convert pipeline samples to human-eval-rust format.
 
-    Pipeline format: {"prompt": "...", "gen": "..."}
+    Pipeline format: structured or legacy
     Evaluation format: {"task_id": "...", "completion": "..."}
 
     Args:
-        jsonl_path: Path to input JSONL file with prompt/gen format
+        jsonl_path: Path to input JSONL file
         output_path: Path to output JSONL file with task_id/completion format
         task_id_prefix: Prefix for task IDs (default: "task")
         max_samples: Maximum number of samples to convert (None for all)
@@ -51,7 +67,6 @@ def prompt_gen_to_eval_format(
         open(jsonl_file, "r", encoding="utf-8") as infile,
         open(output_file, "w", encoding="utf-8") as outfile,
     ):
-
         for line_num, line in enumerate(infile, 1):
             line = line.strip()
             if not line:
@@ -63,30 +78,28 @@ def prompt_gen_to_eval_format(
                 logger.warning(f"Invalid JSON on line {line_num}: {e}")
                 continue
 
-            # Validate required fields
-            if "gen" not in sample:
+            completion = _extract_completion(sample)
+            if completion is None:
                 logger.warning(
-                    f"Skipping sample on line {line_num} - missing gen field"
+                    f"Skipping sample on line {line_num} - missing completion field"
                 )
                 continue
 
-            # Convert to evaluation format
             task_id = sample.get("task_id")
             if not task_id:
-                # Generate task_id from prompt or use index
-                prompt = sample.get("prompt", "")
+                prompt = sample.get("prompt")
+                if not prompt and isinstance(sample.get("input_data"), dict):
+                    prompt = sample["input_data"].get("prompt")
                 if prompt:
-                    # Use first 50 chars of prompt as task identifier
                     task_id = f"{task_id_prefix}_{hash(prompt) % 1000000}"
                 else:
                     task_id = f"{task_id_prefix}_{line_num}"
 
             eval_sample = {
                 "task_id": str(task_id),
-                "completion": str(sample["gen"]),
+                "completion": completion,
             }
 
-            # Preserve any additional metadata that might be useful
             if "_source_crate" in sample:
                 eval_sample["_source_crate"] = sample["_source_crate"]
             if "_task_type" in sample:
@@ -185,10 +198,8 @@ def hf_dataset_to_prompt_gen(
         sys.path.insert(0, str(tools_path))
         from convert_parquet_to_jsonl import convert_parquet_to_jsonl
 
-    # Note: convert_parquet_to_jsonl expects a directory, not a single file
     parquet_file = Path(parquet_path)
     if parquet_file.is_file():
-        # Create a temporary directory structure
         import shutil
         import tempfile
 
@@ -198,17 +209,15 @@ def hf_dataset_to_prompt_gen(
             convert_parquet_to_jsonl(
                 parquet_dir=str(tmpdir),
                 output_path=output_path,
+                prompt_field=prompt_field,
+                gen_field=gen_field,
             )
-    else:
-        convert_parquet_to_jsonl(
-            parquet_dir=parquet_path,
-            output_path=output_path,
-        )
+            return 1
 
-    # Count samples in output
-    count = 0
-    with open(output_path, "r", encoding="utf-8") as f:
-        for _ in f:
-            count += 1
-
-    return count
+    convert_parquet_to_jsonl(
+        parquet_dir=parquet_path,
+        output_path=output_path,
+        prompt_field=prompt_field,
+        gen_field=gen_field,
+    )
+    return 1

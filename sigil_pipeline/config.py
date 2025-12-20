@@ -66,6 +66,9 @@ class PipelineConfig:
     require_docs: bool = True
     """Require documentation comments. Default: True."""
 
+    require_docs_ratio: float = 1.0
+    """Fraction of crates that must satisfy documentation requirements (0.0-1.0)."""
+
     min_doc_coverage: float = 0.0
     """Minimum documentation coverage ratio (0.0-1.0). Default: 0.0 (any docs)."""
 
@@ -265,6 +268,7 @@ class PipelineConfig:
             "max_clippy_warnings": self.max_clippy_warnings,
             "max_bad_code_warnings": self.max_bad_code_warnings,
             "require_docs": self.require_docs,
+            "require_docs_ratio": self.require_docs_ratio,
             "min_doc_coverage": self.min_doc_coverage,
             "allowed_licenses": self.allowed_licenses,
             "enable_license_scan": self.enable_license_scan,

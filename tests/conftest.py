@@ -79,7 +79,6 @@ def sample_config():
         max_threads=1,
         output_path="output/test_output.jsonl",
         output_dir="output",
-
         max_clippy_warnings=0,
         require_docs=True,
         enable_license_scan=False,  # Disable for faster tests
@@ -99,10 +98,19 @@ def sample_jsonl_file(tmp_path):
     """Create a sample JSONL dataset file."""
     jsonl_file = tmp_path / "sample.jsonl"
     samples = [
-        {"prompt": "Write a Rust program", "gen": "fn main() {}"},
         {
-            "prompt": "Write a function",
-            "gen": "fn add(a: i32, b: i32) -> i32 { a + b }",
+            "input_data": {
+                "prompt": "Write a Rust program",
+                "code": "fn main() {}",
+            },
+            "output_data": {"code": "fn main() {}"},
+        },
+        {
+            "input_data": {
+                "prompt": "Write a function",
+                "code": "fn add(a: i32, b: i32) -> i32 { a + b }",
+            },
+            "output_data": {"code": "fn add(a: i32, b: i32) -> i32 { a + b }"},
         },
     ]
     with open(jsonl_file, "w", encoding="utf-8") as f:

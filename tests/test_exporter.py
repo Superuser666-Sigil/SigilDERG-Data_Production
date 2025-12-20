@@ -30,12 +30,11 @@ class TestWriteJsonl:
         assert count == 2
         assert output_path.exists()
 
-        # Verify content
         with open(output_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
             assert len(lines) == 2
             sample1 = json.loads(lines[0])
-            assert sample1["prompt"] == "Write code"
+            assert sample1["input_data"]["prompt"] == "Write code"
 
     def test_streaming_large_dataset(self, tmp_path):
         """Test streaming write for large dataset."""
@@ -43,7 +42,10 @@ class TestWriteJsonl:
 
         def sample_generator():
             for i in range(1000):
-                yield {"prompt": f"Prompt {i}", "gen": f"code {i}"}
+                yield {
+                    "input_data": {"prompt": f"Prompt {i}", "code": f"code {i}"},
+                    "output_data": {"code": f"code {i}"},
+                }
 
         count = write_jsonl(sample_generator(), str(output_path))
         assert count == 1000
@@ -55,21 +57,19 @@ class TestWriteJsonl:
         samples = iter(
             [
                 {"prompt": "Valid", "gen": "code"},
-                {"invalid": "sample"},  # Missing required fields
+                {"invalid": "sample"},
                 {"prompt": "Valid2", "gen": "code2"},
             ]
         )
 
         count = write_jsonl(samples, str(output_path))
-        assert count == 2  # Only valid samples written
+        assert count == 2
 
     def test_error_handling_permissions(self, tmp_path):
         """Test error handling for permission issues."""
-        # Create a directory to simulate permission error
         output_path = tmp_path / "nonexistent" / "output.jsonl"
         samples = iter([{"prompt": "test", "gen": "code"}])
 
-        # Should create parent directory
         count = write_jsonl(samples, str(output_path))
         assert count == 1
 
@@ -79,16 +79,19 @@ class TestMergeJsonlFiles:
 
     def test_basic_merging(self, tmp_path):
         """Test basic file merging."""
-        # Create input files
         file1 = tmp_path / "file1.jsonl"
         file2 = tmp_path / "file2.jsonl"
         output_path = tmp_path / "merged.jsonl"
 
         with open(file1, "w", encoding="utf-8") as f:
-            f.write('{"prompt": "test1", "gen": "code1"}\n')
+            f.write(
+                '{"input_data": {"prompt": "test1", "code": "code1"}, "output_data": {"code": "code1"}}\n'
+            )
 
         with open(file2, "w", encoding="utf-8") as f:
-            f.write('{"prompt": "test2", "gen": "code2"}\n')
+            f.write(
+                '{"input_data": {"prompt": "test2", "code": "code2"}, "output_data": {"code": "code2"}}\n'
+            )
 
         count = merge_jsonl_files(
             [str(file1), str(file2)], str(output_path), shuffle=False
@@ -104,11 +107,15 @@ class TestMergeJsonlFiles:
 
         with open(file1, "w", encoding="utf-8") as f:
             for i in range(5):
-                f.write(f'{{"prompt": "test{i}", "gen": "code{i}"}}\n')
+                f.write(
+                    f'{{"input_data": {{"prompt": "test{i}", "code": "code{i}"}}, "output_data": {{"code": "code{i}"}}}}\n'
+                )
 
         with open(file2, "w", encoding="utf-8") as f:
             for i in range(5, 10):
-                f.write(f'{{"prompt": "test{i}", "gen": "code{i}"}}\n')
+                f.write(
+                    f'{{"input_data": {{"prompt": "test{i}", "code": "code{i}"}}, "output_data": {{"code": "code{i}"}}}}\n'
+                )
 
         count = merge_jsonl_files(
             [str(file1), str(file2)], str(output_path), shuffle=True
@@ -122,10 +129,14 @@ class TestMergeJsonlFiles:
         output_path = tmp_path / "merged.jsonl"
 
         with open(file1, "w", encoding="utf-8") as f:
-            f.write('{"prompt": "test1", "gen": "code1"}\n')
+            f.write(
+                '{"input_data": {"prompt": "test1", "code": "code1"}, "output_data": {"code": "code1"}}\n'
+            )
 
         with open(file2, "w", encoding="utf-8") as f:
-            f.write('{"prompt": "test2", "gen": "code2"}\n')
+            f.write(
+                '{"input_data": {"prompt": "test2", "code": "code2"}, "output_data": {"code": "code2"}}\n'
+            )
 
         count = merge_jsonl_files(
             [str(file1), str(file2)],
@@ -133,7 +144,6 @@ class TestMergeJsonlFiles:
             shuffle=False,
             weights=[2.0, 1.0],
         )
-        # With weight 2.0, file1 samples should be repeated
         assert count >= 2
 
     def test_merging_nonexistent_file(self, tmp_path):
@@ -142,14 +152,16 @@ class TestMergeJsonlFiles:
         output_path = tmp_path / "merged.jsonl"
 
         with open(file1, "w", encoding="utf-8") as f:
-            f.write('{"prompt": "test", "gen": "code"}\n')
+            f.write(
+                '{"input_data": {"prompt": "test", "code": "code"}, "output_data": {"code": "code"}}\n'
+            )
 
         count = merge_jsonl_files(
             [str(file1), "/nonexistent/file.jsonl"],
             str(output_path),
             shuffle=False,
         )
-        assert count == 1  # Only valid file processed
+        assert count == 1
 
 
 class TestWriteMetrics:

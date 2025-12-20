@@ -17,19 +17,19 @@ class TrainingSample:
     Represents a single training sample for the model.
     Matches the "good" dataset schema.
     """
-    
+
     system: str
     """System prompt (e.g. "You are a Rust expert...")."""
-    
+
     instruction: str
     """The task instruction (e.g. "Fix this code...")."""
-    
+
     input_context: str
     """Context information: Imports, Structs, Enums, etc."""
-    
+
     input_code: str
     """The target function signature (for code gen) or broken code (for fixing)."""
-    
+
     output_json: dict[str, Any]
     """The expected JSON response containing the code and/or explanation."""
 

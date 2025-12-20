@@ -33,54 +33,62 @@ class FormatValidator:
         Validate a single sample against format specification.
 
         Args:
-            sample: Sample dictionary with 'prompt' and 'gen' keys
-            max_lines: Maximum lines for gen field (Phase-2 validation)
-            max_chars: Maximum characters for gen field (Phase-2 validation)
+            sample: Sample dictionary with structured schema
+            max_lines: Maximum lines for input code field
+            max_chars: Maximum characters for input code field
 
         Returns:
             Tuple of (is_valid, list_of_errors)
         """
         errors = []
 
-        # Check required fields
-        if "prompt" not in sample:
-            errors.append("Missing required field: 'prompt'")
-        if "gen" not in sample:
-            errors.append("Missing required field: 'gen'")
+        if "input_data" not in sample:
+            errors.append("Missing required field: 'input_data'")
+        if "output_data" not in sample:
+            errors.append("Missing required field: 'output_data'")
 
         if errors:
             return False, errors
 
-        # Validate field types
-        prompt_value = sample.get("prompt")
-        gen_value = sample.get("gen")
+        input_data = sample.get("input_data")
+        output_data = sample.get("output_data")
+
+        if not isinstance(input_data, dict):
+            errors.append("Field 'input_data' must be a dict")
+            input_data = {}
+        if not isinstance(output_data, dict):
+            errors.append("Field 'output_data' must be a dict")
+            output_data = {}
+
+        prompt_value = input_data.get("prompt")
+        code_value = input_data.get("code")
 
         if not isinstance(prompt_value, str):
-            errors.append("Field 'prompt' must be a string")
+            errors.append("Field 'input_data.prompt' must be a string")
             prompt_value = ""
-        if not isinstance(gen_value, str):
-            errors.append("Field 'gen' must be a string")
-            gen_value = ""
+        if not isinstance(code_value, str):
+            errors.append("Field 'input_data.code' must be a string")
+            code_value = ""
 
-        # Validate non-empty
         if prompt_value.strip() == "":
-            errors.append("Field 'prompt' must not be empty")
-        if gen_value.strip() == "":
-            errors.append("Field 'gen' must not be empty")
+            errors.append("Field 'input_data.prompt' must not be empty")
+        if code_value.strip() == "":
+            errors.append("Field 'input_data.code' must not be empty")
+        if not output_data:
+            errors.append("Field 'output_data' must not be empty")
 
-        # Phase-2 validation (snippet size limits)
-        if max_lines and sample.get("gen"):
-            gen_lines = sample["gen"].count("\n") + 1
-            if gen_lines > max_lines:
+        if max_lines and code_value:
+            code_lines = code_value.count("\n") + 1
+            if code_lines > max_lines:
                 errors.append(
-                    f"Gen field exceeds max_lines limit: {gen_lines} > {max_lines}"
+                    f"input_data.code exceeds max_lines limit: {code_lines} > {max_lines}"
                 )
 
-        if max_chars and sample.get("gen"):
-            gen_chars = len(sample["gen"])
-            if gen_chars > max_chars:
+        if max_chars and code_value:
+            code_chars = len(code_value)
+            if code_chars > max_chars:
                 errors.append(
-                    f"Gen field exceeds max_chars limit: {gen_chars} > {max_chars}"
+                    f"input_data.code exceeds max_chars limit: {code_chars} > {max_chars}"
                 )
 
         is_valid = len(errors) == 0
@@ -90,7 +98,7 @@ class FormatValidator:
         self, file_path: Path, max_samples: int = 100
     ) -> dict[str, Any]:
         """
-        Validate a JSONL file against Phase 1 format.
+        Validate a JSONL file against Phase 2 format.
 
         Args:
             file_path: Path to JSONL file to validate
@@ -149,7 +157,6 @@ class FormatValidator:
                         }
                     )
 
-        # Calculate validation rate
         if report["total_samples"] > 0:
             report["validation_rate"] = (
                 report["valid_samples"] / report["total_samples"]
@@ -196,97 +203,47 @@ class FormatValidator:
 
         logger.info(f"Comparing formats: {phase1_file} vs {phase2_file}")
 
-        # Load samples
         phase1_samples = []
         phase2_samples = []
 
-        with open(phase1_file, "r", encoding="utf-8") as f:
-            for line in f:
+        with open(phase1_file, "r", encoding="utf-8") as f1:
+            for i, line in enumerate(f1):
+                if i >= max_samples:
+                    break
                 line = line.strip()
-                if line:
-                    try:
-                        phase1_samples.append(json.loads(line))
-                        if len(phase1_samples) >= max_samples:
-                            break
-                    except json.JSONDecodeError:
-                        continue
+                if not line:
+                    continue
+                try:
+                    phase1_samples.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
 
-        with open(phase2_file, "r", encoding="utf-8") as f:
-            for line in f:
+        with open(phase2_file, "r", encoding="utf-8") as f2:
+            for i, line in enumerate(f2):
+                if i >= max_samples:
+                    break
                 line = line.strip()
-                if line:
-                    try:
-                        phase2_samples.append(json.loads(line))
-                        if len(phase2_samples) >= max_samples:
-                            break
-                    except json.JSONDecodeError:
-                        continue
+                if not line:
+                    continue
+                try:
+                    phase2_samples.append(json.loads(line))
+                except json.JSONDecodeError:
+                    continue
 
-        # Compare structures
-        if phase1_samples and phase2_samples:
-            phase1_fields = set(phase1_samples[0].keys())
-            phase2_fields = set(phase2_samples[0].keys())
+        for p1, p2 in zip(phase1_samples, phase2_samples):
+            comparison["samples_compared"] += 1
 
-            if phase1_fields != phase2_fields:
+            p1_prompt = p1.get("prompt")
+            p2_prompt = p2.get("input_data", {}).get("prompt")
+
+            if isinstance(p1_prompt, str) and isinstance(p2_prompt, str):
+                comparison["format_matches"] += 1
+            else:
                 comparison["differences"].append(
                     {
-                        "type": "field_mismatch",
-                        "phase1_fields": list(phase1_fields),
-                        "phase2_fields": list(phase2_fields),
-                        "missing_in_phase2": list(phase1_fields - phase2_fields),
-                        "extra_in_phase2": list(phase2_fields - phase1_fields),
+                        "type": "prompt_style",
+                        "issue": "Phase 2 sample missing input_data.prompt",
                     }
                 )
-
-            # Compare sample structures
-            for i, (p1, p2) in enumerate(zip(phase1_samples[:10], phase2_samples[:10])):
-                comparison["samples_compared"] += 1
-
-                # Check field types
-                for field in phase1_fields & phase2_fields:
-                    p1_type = type(p1[field]).__name__
-                    p2_type = type(p2[field]).__name__
-                    if p1_type != p2_type:
-                        comparison["differences"].append(
-                            {
-                                "type": "type_mismatch",
-                                "sample": i,
-                                "field": field,
-                                "phase1_type": p1_type,
-                                "phase2_type": p2_type,
-                            }
-                        )
-
-                # Check prompt style similarity
-                if "prompt" in p1 and "prompt" in p2:
-                    p1_prompt = p1["prompt"]
-                    p2_prompt = p2["prompt"]
-
-                    # Check for common patterns
-                    if "Write a Rust" in p1_prompt and "Write a Rust" not in p2_prompt:
-                        comparison["differences"].append(
-                            {
-                                "type": "prompt_style",
-                                "sample": i,
-                                "issue": "Phase 2 prompt missing 'Write a Rust' pattern",
-                            }
-                        )
-
-                # Check code formatting
-                if "gen" in p1 and "gen" in p2:
-                    p1_has_backticks = "```" in p1["gen"]
-                    p2_has_backticks = "```" in p2["gen"]
-                    if p1_has_backticks != p2_has_backticks:
-                        comparison["differences"].append(
-                            {
-                                "type": "code_formatting",
-                                "sample": i,
-                                "issue": f"Backticks mismatch: Phase 1={p1_has_backticks}, Phase 2={p2_has_backticks}",
-                            }
-                        )
-
-        comparison["format_matches"] = comparison["samples_compared"] - len(
-            comparison["differences"]
-        )
 
         return comparison

@@ -32,7 +32,6 @@ class TestPipelineConfig:
             "crates": ["test_crate"],
             "max_threads": 2,
             "output_path": "custom/output.jsonl",
-
         }
         config = PipelineConfig.from_dict(data)
         assert config.crates == ["test_crate"]

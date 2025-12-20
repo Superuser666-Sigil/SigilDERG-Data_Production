@@ -21,7 +21,8 @@ SYSTEM_PROMPT = "You are a Rust engineering assistant. Output valid JSON."
 # Template for Code Generation
 # Input: context, instruction, code_signature
 # Output: JSON with 'code' key
-CODE_GEN_TEMPLATE = Template("""
+CODE_GEN_TEMPLATE = Template(
+    """
 You are a Rust engineering assistant.
 Context:
 {{ context }}
@@ -32,12 +33,14 @@ Input Code:
 {{ code }}
 
 Return a JSON object with keys: ['code'].
-""".strip())
+""".strip()
+)
 
 # Template for Error Fixing
 # Input: context, instruction, broken_code
 # Output: JSON with 'fixed_code' and 'explanation' keys
-ERROR_FIX_TEMPLATE = Template("""
+ERROR_FIX_TEMPLATE = Template(
+    """
 You are a Rust engineering assistant.
 Context:
 {{ context }}
@@ -48,12 +51,14 @@ Input Code:
 {{ code }}
 
 Return a JSON object with keys: ['fixed_code', 'explanation'].
-""".strip())
+""".strip()
+)
 
 # Template for Explanations
 # Input: context, instruction, code
 # Output: JSON with 'explanation' key
-EXPLANATION_TEMPLATE = Template("""
+EXPLANATION_TEMPLATE = Template(
+    """
 You are a Rust engineering assistant.
 Context:
 {{ context }}
@@ -64,31 +69,26 @@ Input Code:
 {{ code }}
 
 Return a JSON object with keys: ['explanation'].
-""".strip())
+""".strip()
+)
 
 
 def render_code_gen_prompt(context: str, instruction: str, signature: str) -> str:
     """Render the prompt for code generation tasks."""
     return CODE_GEN_TEMPLATE.render(
-        context=context,
-        instruction=instruction,
-        code=signature
+        context=context, instruction=instruction, code=signature
     )
 
 
 def render_error_fix_prompt(context: str, instruction: str, broken_code: str) -> str:
     """Render the prompt for error fixing tasks."""
     return ERROR_FIX_TEMPLATE.render(
-        context=context,
-        instruction=instruction,
-        code=broken_code
+        context=context, instruction=instruction, code=broken_code
     )
 
 
 def render_explanation_prompt(context: str, instruction: str, code: str) -> str:
     """Render the prompt for explanation tasks."""
     return EXPLANATION_TEMPLATE.render(
-        context=context,
-        instruction=instruction,
-        code=code
+        context=context, instruction=instruction, code=code
     )

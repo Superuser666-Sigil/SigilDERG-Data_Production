@@ -462,11 +462,16 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 Phase-2 instruct mode with semantic chunking.
                 """
                 from . import chunker
+                from .ast_patterns import extract_context_header
 
                 base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
 
                 for file_dict in base_iter:
                     try:
+                        try:
+                            file_context = extract_context_header(file_dict["code"])
+                        except Exception:
+                            file_context = ""
                         chunks = chunker.chunk_rust_file(
                             file_dict["code"],
                             max_lines=cfg.max_sft_lines,
@@ -479,6 +484,9 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                                 "chunk_type": chunk["type"],
                                 "crate_name": file_dict.get("crate_name"),
                                 "crate_dir": file_dict.get("crate_dir"),
+                                "file_context": file_context,
+                                "start_line": chunk.get("start_line"),
+                                "end_line": chunk.get("end_line"),
                             }
                             # Preserve hardening / analysis metadata
                             for key, value in file_dict.items():

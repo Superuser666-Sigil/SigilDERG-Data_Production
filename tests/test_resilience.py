@@ -155,7 +155,10 @@ class TestResourceResilience:
         output_path = tmp_path / "output.jsonl"
 
         def sample_generator():
-            yield {"prompt": "test", "gen": "test"}
+            yield {
+                "input_data": {"prompt": "test", "code": "test"},
+                "output_data": {"code": "test"},
+            }
 
         with patch("builtins.open") as mock_open:
             mock_file = MagicMock()
