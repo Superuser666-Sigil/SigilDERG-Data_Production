@@ -206,7 +206,11 @@ class PipelineConfig:
     """Enable error-fixing task generation for Phase-2 dataset."""
 
     error_injection_method: str = "both"
-    """Error injection method: 'real_compile', 'simulate', or 'both'."""
+    """Error injection method: 'real_compile', 'simulate', or 'both'.
+    Simulated injection is ignored unless allow_simulated_error_fixing is True."""
+
+    allow_simulated_error_fixing: bool = False
+    """Allow simulated (regex-based) error injection for error-fixing tasks. Default: False."""
 
     error_injection_timeout: int = 120
     """Timeout (seconds) for cargo-based real error injection attempts."""
@@ -242,6 +246,9 @@ class PipelineConfig:
     prometheus_output_path: str | None = None
     """Path to Prometheus metrics file. If None, uses output_dir/metrics.prom."""
 
+    max_json_parse_failure_rate: float | None = 0.05
+    """Maximum tolerated JSON parse failure rate before aborting the run. None disables."""
+
     capture_environment: bool = True
     """Capture and log environment fingerprint at startup. Default: True."""
 
@@ -256,6 +263,9 @@ class PipelineConfig:
     """Minimum Rust edition required for hardened samples. Default: '2021'.
     Crates with older editions will be filtered out in hardening mode."""
 
+    hardening_style_edition: str | None = None
+    """Rustfmt style_edition to enforce in hardening mode. Defaults to hardening_min_edition."""
+
     hardening_strict_clippy: bool = True
     """Enable strict Clippy linting with pedantic and nursery lint groups.
     This is slower than default Clippy but catches more issues. Default: True."""
@@ -265,7 +275,7 @@ class PipelineConfig:
     Code containing these patterns will be rejected in hardening mode. Default: True."""
 
     hardening_require_rustfmt: bool = True
-    """Require code to pass `cargo fmt --check` with style_edition 2024.
+    """Require code to pass `cargo fmt --check` with the configured style_edition.
     Unformatted code will be rejected in hardening mode. Default: True."""
 
     hardening_reject_unsafe: bool = True
@@ -346,6 +356,7 @@ class PipelineConfig:
             "github_mining_require_tests": self.github_mining_require_tests,
             "enable_error_injection": self.enable_error_injection,
             "error_injection_method": self.error_injection_method,
+            "allow_simulated_error_fixing": self.allow_simulated_error_fixing,
             "error_injection_timeout": self.error_injection_timeout,
             "cache_dir": self.cache_dir,
             "enable_caching": self.enable_caching,
@@ -361,9 +372,11 @@ class PipelineConfig:
             "json_logs": self.json_logs,
             "enable_prometheus_output": self.enable_prometheus_output,
             "prometheus_output_path": self.prometheus_output_path,
+            "max_json_parse_failure_rate": self.max_json_parse_failure_rate,
             "capture_environment": self.capture_environment,
             "dataset_hardening": self.dataset_hardening,
             "hardening_min_edition": self.hardening_min_edition,
+            "hardening_style_edition": self.hardening_style_edition,
             "hardening_strict_clippy": self.hardening_strict_clippy,
             "hardening_deny_antipatterns": self.hardening_deny_antipatterns,
             "hardening_require_rustfmt": self.hardening_require_rustfmt,

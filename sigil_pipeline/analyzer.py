@@ -21,6 +21,7 @@ from typing import Any
 
 from .analysis_cache import AnalysisCache, get_cache
 from . import sandbox
+from .observability import get_metrics
 
 # Import OS-agnostic cargo utilities from sigil_pipeline.utils
 from .utils import (
@@ -90,6 +91,30 @@ def parse_assistant_json_output(text: str) -> dict[str, Any]:
     """
     text = text or ""
     stripped = text.strip()
+    metrics = get_metrics()
+    parse_success = False
+    used_fallback = False
+
+    def record_result() -> None:
+        metrics.increment(
+            "llm_json_parse_total",
+            help_text="Total LLM JSON parse attempts",
+        )
+        if parse_success:
+            metrics.increment(
+                "llm_json_parse_success",
+                help_text="LLM JSON parse successes",
+            )
+        else:
+            metrics.increment(
+                "llm_json_parse_failure",
+                help_text="LLM JSON parse failures",
+            )
+        if used_fallback:
+            metrics.increment(
+                "llm_json_parse_fallback",
+                help_text="LLM JSON parse fallbacks to non-JSON extraction",
+            )
 
     def parse_json_object(candidate: str, allow_empty: bool) -> dict[str, Any] | None:
         try:
@@ -146,6 +171,8 @@ def parse_assistant_json_output(text: str) -> dict[str, Any]:
     try:
         parsed = json.loads(stripped)
         if isinstance(parsed, dict):
+            parse_success = True
+            record_result()
             return parsed
     except Exception:
         pass
@@ -163,16 +190,21 @@ def parse_assistant_json_output(text: str) -> dict[str, Any]:
         code_blocks.append(content)
         parsed = extract_json_object(content, allow_empty)
         if parsed is not None:
+            parse_success = True
+            record_result()
             return parsed
 
     # 3) Search for JSON outside of code fences
     text_without_fences = re.sub(r"```[\s\S]*?```", "", text)
     parsed = extract_json_object(text_without_fences, allow_empty)
     if parsed is not None:
+        parse_success = True
+        record_result()
         return parsed
 
     # 4) Fallback: extract code blocks and key-like prefixes
     result: dict[str, Any] = {}
+    used_fallback = True
     # Extract code fences ```...```
     if code_blocks:
         # Put first block into 'code_after' and raw into 'code'
@@ -187,6 +219,7 @@ def parse_assistant_json_output(text: str) -> dict[str, Any]:
     if not result:
         result["assistant"] = text.strip()
 
+    record_result()
     return result
 
 
@@ -875,7 +908,7 @@ async def run_rustfmt_check(
     timeout: int = 120,
     env: dict[str, str] | None = None,
     crate_name: str | None = None,
-    style_edition: str = "2024",
+    style_edition: str | None = None,
     sandbox_mode: str = "auto",
 ) -> RustfmtResult:
     """
@@ -888,7 +921,7 @@ async def run_rustfmt_check(
         timeout: Command timeout in seconds
         env: Environment variables for cargo
         crate_name: Crate name for logging
-        style_edition: Target style edition (default: "2024")
+        style_edition: Target style edition (optional)
 
     Returns:
         RustfmtResult with formatting check results
@@ -897,26 +930,27 @@ async def run_rustfmt_check(
         logger.error("cargo is not available")
         return RustfmtResult(success=False)
 
-    # Create temporary rustfmt.toml with style_edition if not present
+    # Create temporary rustfmt.toml with style_edition if requested
     rustfmt_toml = crate_dir / ".rustfmt.toml"
     rustfmt_toml_existed = rustfmt_toml.exists()
     temp_rustfmt_created = False
 
     try:
-        # Check if .rustfmt.toml already has style_edition
-        if rustfmt_toml_existed:
-            content = rustfmt_toml.read_text(encoding="utf-8")
-            if "style_edition" not in content:
-                # Append style_edition to existing config
-                with open(rustfmt_toml, "a", encoding="utf-8") as f:
-                    f.write(f'\nstyle_edition = "{style_edition}"\n')
+        if style_edition:
+            # Check if .rustfmt.toml already has style_edition
+            if rustfmt_toml_existed:
+                content = rustfmt_toml.read_text(encoding="utf-8")
+                if "style_edition" not in content:
+                    # Append style_edition to existing config
+                    with open(rustfmt_toml, "a", encoding="utf-8") as f:
+                        f.write(f'\nstyle_edition = "{style_edition}"\n')
+                    temp_rustfmt_created = True
+            else:
+                # Create new config with style_edition
+                rustfmt_toml.write_text(
+                    f'style_edition = "{style_edition}"\n', encoding="utf-8"
+                )
                 temp_rustfmt_created = True
-        else:
-            # Create new config with style_edition
-            rustfmt_toml.write_text(
-                f'style_edition = "{style_edition}"\n', encoding="utf-8"
-            )
-            temp_rustfmt_created = True
 
         cmd = build_cargo_command("fmt", "--check")
 
@@ -971,7 +1005,7 @@ async def run_rustfmt_check(
         return RustfmtResult(success=False)
     finally:
         # Clean up temporary rustfmt.toml modifications
-        if temp_rustfmt_created:
+        if temp_rustfmt_created and style_edition:
             try:
                 if rustfmt_toml_existed:
                     # Restore original file by removing our addition
@@ -1696,7 +1730,13 @@ async def analyze_crate(
 
         # Add rustfmt check if enabled
         if getattr(config, "hardening_require_rustfmt", True):
-            style_edition = "2024"  # Always use 2024 for hardening
+            style_edition = getattr(config, "hardening_style_edition", None)
+            if not style_edition:
+                style_edition = getattr(config, "hardening_min_edition", None)
+            if style_edition:
+                style_edition = str(style_edition).strip()
+                if style_edition.lower() in ("none", "null", ""):
+                    style_edition = None
             hardening_tasks.append(
                 run_rustfmt_check(
                     crate_dir,

@@ -226,7 +226,9 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     # Validate hardening toolchain if hardening mode is enabled
     if cfg.dataset_hardening:
         logger.info("Dataset hardening mode enabled - validating toolchain...")
-        validate_hardening_toolchain_or_exit(cfg.hardening_min_edition)
+        validate_hardening_toolchain_or_exit(
+            cfg.hardening_min_edition, cfg.hardening_style_edition
+        )
         logger.info(
             f"Hardening settings: strict_clippy={cfg.hardening_strict_clippy}, "
             f"deny_antipatterns={cfg.hardening_deny_antipatterns}, "
@@ -558,6 +560,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 task_type_mix=cfg.task_type_mix,
                 enable_error_injection=cfg.enable_error_injection,
                 error_injection_method=cfg.error_injection_method,
+                allow_simulated_error_fixing=cfg.allow_simulated_error_fixing,
                 error_injection_timeout=cfg.error_injection_timeout,
                 max_sft_lines=cfg.max_sft_lines,
                 max_sft_chars=cfg.max_sft_chars,
@@ -744,6 +747,34 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                     )
                 )
 
+            # Track JSON parse failure rates for structured outputs (if used)
+            parse_total = metrics_collector.get_counter("llm_json_parse_total")
+            parse_success = metrics_collector.get_counter("llm_json_parse_success")
+            parse_fail = metrics_collector.get_counter("llm_json_parse_failure")
+            parse_fallback = metrics_collector.get_counter("llm_json_parse_fallback")
+            parse_failure_rate = (
+                parse_fail / parse_total if parse_total > 0 else 0.0
+            )
+            metrics["json_parse"] = {
+                "total": int(parse_total),
+                "success": int(parse_success),
+                "failure": int(parse_fail),
+                "fallback": int(parse_fallback),
+                "failure_rate": parse_failure_rate,
+            }
+            json_parse_rate_exceeded = False
+            if (
+                cfg.max_json_parse_failure_rate is not None
+                and parse_total > 0
+                and parse_failure_rate > cfg.max_json_parse_failure_rate
+            ):
+                json_parse_rate_exceeded = True
+                logger.error(
+                    "JSON parse failure rate %.2f%% exceeds threshold %.2f%%",
+                    parse_failure_rate * 100,
+                    cfg.max_json_parse_failure_rate * 100,
+                )
+
             # Include environment fingerprint if captured
             if env_fingerprint:
                 metrics["environment"] = env_fingerprint.to_dict()
@@ -766,6 +797,9 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 with open(prom_path, "w", encoding="utf-8") as f:
                     f.write(metrics_collector.export_prometheus())
                 logger.info(f"Prometheus metrics: {prom_path}")
+
+            if json_parse_rate_exceeded:
+                raise SystemExit(1)
 
             logger.info("Pipeline completed successfully")
             logger.info(f"Output: {cfg.output_path}")
@@ -963,6 +997,20 @@ def main():
         help="Timeout in seconds for cargo-based error injection (default: 120)",
     )
     parser.add_argument(
+        "--allow-simulated-error-fixing",
+        dest="allow_simulated_error_fixing",
+        action="store_true",
+        default=None,
+        help="Allow regex-based simulated error injection for error-fixing tasks",
+    )
+    parser.add_argument(
+        "--no-allow-simulated-error-fixing",
+        dest="allow_simulated_error_fixing",
+        action="store_false",
+        default=None,
+        help="Disallow simulated error injection for error-fixing tasks (default)",
+    )
+    parser.add_argument(
         "--enable-github-mining",
         dest="enable_github_mining",
         action="store_true",
@@ -1046,6 +1094,17 @@ def main():
         default="2021",
         help="Minimum Rust edition for hardening mode (default: 2021, editions below 2021 not supported)",
     )
+    parser.add_argument(
+        "--hardening-style-edition",
+        default=None,
+        help="Rustfmt style_edition to enforce in hardening mode (defaults to hardening_min_edition)",
+    )
+    parser.add_argument(
+        "--max-json-parse-failure-rate",
+        type=float,
+        default=None,
+        help="Abort run if JSON parse failure rate exceeds this fraction (default: 0.05)",
+    )
 
     args = parser.parse_args()
 
@@ -1109,6 +1168,8 @@ def main():
         cfg.extra_phase2_shards = args.extra_phase2_shards
     if args.error_injection_timeout:
         cfg.error_injection_timeout = args.error_injection_timeout
+    if args.allow_simulated_error_fixing is not None:
+        cfg.allow_simulated_error_fixing = args.allow_simulated_error_fixing
     if args.enable_github_mining is not None:
         cfg.enable_github_mining = args.enable_github_mining
     if args.github_mining_labels:
@@ -1133,6 +1194,10 @@ def main():
         cfg.hardening_deny_antipatterns = args.hardening_deny_antipatterns
     if args.hardening_min_edition:
         cfg.hardening_min_edition = args.hardening_min_edition
+    if args.hardening_style_edition:
+        cfg.hardening_style_edition = args.hardening_style_edition
+    if args.max_json_parse_failure_rate is not None:
+        cfg.max_json_parse_failure_rate = args.max_json_parse_failure_rate
 
     if cfg.enable_rejection_log:
         if not cfg.rejection_log_path:

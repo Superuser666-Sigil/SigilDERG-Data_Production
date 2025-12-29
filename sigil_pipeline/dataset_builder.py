@@ -173,17 +173,40 @@ def _normalize_task_type(name: str) -> str | None:
     return _TASK_TYPE_ALIASES.get(key)
 
 
+def _error_fixing_enabled(
+    *,
+    enable_error_injection: bool,
+    error_injection_method: str | None,
+    allow_simulated_error_fixing: bool,
+) -> bool:
+    if not enable_error_injection:
+        return False
+    method = (error_injection_method or "").strip().lower()
+    if method in ("real", "real_compile"):
+        return True
+    if method in ("both", "simulate", ""):
+        return allow_simulated_error_fixing
+    return allow_simulated_error_fixing
+
+
 def _normalize_task_mix(
     task_type_mix: Dict[str, float],
     *,
     enable_error_injection: bool,
+    error_injection_method: str | None,
+    allow_simulated_error_fixing: bool,
 ) -> Dict[str, float]:
     normalized: Dict[str, float] = {}
+    allow_error_fixing = _error_fixing_enabled(
+        enable_error_injection=enable_error_injection,
+        error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
+    )
     for key, weight in task_type_mix.items():
         norm = _normalize_task_type(key)
         if not norm:
             continue
-        if not enable_error_injection and norm == "error_fixing":
+        if norm == "error_fixing" and not allow_error_fixing:
             continue
         normalized[norm] = normalized.get(norm, 0.0) + float(weight)
     return normalized
@@ -221,14 +244,21 @@ def _available_task_types(
     file_info: Dict[str, Any],
     *,
     enable_error_injection: bool,
+    error_injection_method: str | None,
+    allow_simulated_error_fixing: bool,
     allow_explanations: bool,
 ) -> set[str]:
     chunk_type = file_info.get("chunk_type")
     available: set[str] = set()
+    allow_error_fixing = _error_fixing_enabled(
+        enable_error_injection=enable_error_injection,
+        error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
+    )
     if chunk_type == "function":
         available.add("code_generation")
         available.add("transformations")
-        if enable_error_injection:
+        if allow_error_fixing:
             available.add("error_fixing")
         if allow_explanations:
             available.add("explanations")
@@ -477,6 +507,7 @@ async def _process_file(
     sandbox_mode: str,
     enable_error_injection: bool,
     error_injection_method: str,
+    allow_simulated_error_fixing: bool,
     error_injection_timeout: int,
     allow_explanations: bool,
     prompt_seed: int | None = None,
@@ -541,6 +572,8 @@ async def _process_file(
     available = _available_task_types(
         file_info,
         enable_error_injection=enable_error_injection,
+        error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
         allow_explanations=allow_explanations,
     )
     if available is not None and not available:
@@ -877,6 +910,7 @@ async def _iter_samples_async(
     sandbox_mode: str,
     enable_error_injection: bool,
     error_injection_method: str,
+    allow_simulated_error_fixing: bool,
     error_injection_timeout: int,
     allow_explanations: bool,
     prompt_seed: int | None = None,
@@ -903,6 +937,7 @@ async def _iter_samples_async(
             sandbox_mode=sandbox_mode,
             enable_error_injection=enable_error_injection,
             error_injection_method=error_injection_method,
+            allow_simulated_error_fixing=allow_simulated_error_fixing,
             error_injection_timeout=error_injection_timeout,
             allow_explanations=allow_explanations,
             prompt_seed=prompt_seed,
@@ -932,6 +967,7 @@ async def iter_dataset_entries_async(
     allow_explanations: bool = True,
     enable_error_injection: bool = True,
     error_injection_method: str = "both",
+    allow_simulated_error_fixing: bool = False,
     error_injection_timeout: int = 120,
     prompt_seed: int | None = None,
     max_sft_lines: int | None = None,
@@ -947,7 +983,10 @@ async def iter_dataset_entries_async(
 
     mix = task_type_mix or DEFAULT_TASK_TYPE_MIX.copy()
     normalized_mix = _normalize_task_mix(
-        mix, enable_error_injection=enable_error_injection
+        mix,
+        enable_error_injection=enable_error_injection,
+        error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
     )
     if not normalized_mix:
         normalized_mix = {"code_generation": 1.0}
@@ -964,6 +1003,7 @@ async def iter_dataset_entries_async(
         sandbox_mode=sandbox_mode,
         enable_error_injection=enable_error_injection,
         error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
         error_injection_timeout=error_injection_timeout,
         allow_explanations=allow_explanations,
         prompt_seed=prompt_seed,
@@ -1040,6 +1080,7 @@ async def build_dataset_entries_async(
     allow_explanations: bool = True,
     enable_error_injection: bool = True,
     error_injection_method: str = "both",
+    allow_simulated_error_fixing: bool = False,
     error_injection_timeout: int = 120,
     prompt_seed: int | None = None,
     max_sft_lines: int | None = None,
@@ -1064,6 +1105,7 @@ async def build_dataset_entries_async(
             allow_explanations=allow_explanations,
             enable_error_injection=enable_error_injection,
             error_injection_method=error_injection_method,
+            allow_simulated_error_fixing=allow_simulated_error_fixing,
             error_injection_timeout=error_injection_timeout,
             prompt_seed=prompt_seed,
             max_sft_lines=max_sft_lines,
@@ -1107,6 +1149,7 @@ def build_dataset_entries(
     allow_explanations: bool = True,
     enable_error_injection: bool = True,
     error_injection_method: str = "both",
+    allow_simulated_error_fixing: bool = False,
     error_injection_timeout: int = 120,
     prompt_seed: int | None = None,
     max_sft_lines: int | None = None,
@@ -1129,6 +1172,7 @@ def build_dataset_entries(
         allow_explanations=allow_explanations,
         enable_error_injection=enable_error_injection,
         error_injection_method=error_injection_method,
+        allow_simulated_error_fixing=allow_simulated_error_fixing,
         error_injection_timeout=error_injection_timeout,
         prompt_seed=prompt_seed,
         max_sft_lines=max_sft_lines,

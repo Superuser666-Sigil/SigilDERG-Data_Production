@@ -13,6 +13,7 @@ import platform
 import shutil
 import subprocess
 import sys
+import re
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -399,8 +400,6 @@ def _parse_rustc_version(version_str: str | None) -> tuple[int | None, bool]:
     Returns:
         Tuple of (minor_version, is_nightly)
     """
-    import re
-
     if not version_str:
         return None, False
 
@@ -416,17 +415,42 @@ def _parse_rustc_version(version_str: str | None) -> tuple[int | None, bool]:
     return minor, is_nightly
 
 
-def check_hardening_toolchain(min_edition: str = "2024") -> HardeningToolchainResult:
+def _parse_rustfmt_version(version_str: str | None) -> tuple[int, int, int] | None:
+    if not version_str:
+        return None
+    match = re.search(r"rustfmt\s+(\d+)\.(\d+)\.(\d+)", version_str)
+    if not match:
+        return None
+    return (int(match.group(1)), int(match.group(2)), int(match.group(3)))
+
+
+def _rustfmt_supports_style_edition(
+    style_edition: str, rustfmt_version: str | None
+) -> bool:
+    if not style_edition:
+        return True
+    if style_edition != "2024":
+        return True
+    parsed = _parse_rustfmt_version(rustfmt_version)
+    if not parsed:
+        return False
+    return parsed >= (1, 8, 0)
+
+
+def check_hardening_toolchain(
+    min_edition: str = "2024", style_edition: str | None = None
+) -> HardeningToolchainResult:
     """
     Validate that the Rust toolchain supports dataset hardening features.
 
     Checks:
     1. rustc version >= 1.85 (required for edition 2024)
-    2. rustfmt supports style_edition = "2024"
+    2. rustfmt supports the requested style_edition (2024 requires rustfmt 1.8+)
     3. Clippy is available
 
     Args:
         min_edition: Minimum required edition (default: "2024")
+        style_edition: Rustfmt style_edition to validate (defaults to min_edition)
 
     Returns:
         HardeningToolchainResult with validation results
@@ -470,7 +494,7 @@ def check_hardening_toolchain(min_edition: str = "2024") -> HardeningToolchainRe
         )
         return result
 
-    # Check rustfmt availability and style_edition 2024 support
+    # Check rustfmt availability and style_edition support
     rustfmt_version = _run_version_command(["rustfmt", "--version"])
     if not rustfmt_version:
         result.error_message = (
@@ -481,8 +505,20 @@ def check_hardening_toolchain(min_edition: str = "2024") -> HardeningToolchainRe
         return result
 
     # rustfmt with style_edition 2024 requires rustfmt 1.8+ (ships with rustc 1.85+)
-    # If we passed the rustc version check, rustfmt should support it
-    result.rustfmt_supports_2024_style = result.rustc_minor >= MIN_RUSTC_MINOR_FOR_2024
+    effective_style = (style_edition or min_edition or "").strip()
+    if effective_style.lower() in ("none", "null", ""):
+        effective_style = ""
+    result.rustfmt_supports_2024_style = _rustfmt_supports_style_edition(
+        "2024", rustfmt_version
+    )
+    if effective_style == "2024" and not result.rustfmt_supports_2024_style:
+        result.error_message = (
+            "rustfmt does not appear to support style_edition = \"2024\".\n"
+            f"Detected rustfmt: {rustfmt_version}\n\n"
+            "Update rustfmt (via rustup) or set hardening_style_edition to 2021.\n"
+            "See: docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md"
+        )
+        return result
 
     # Check Clippy availability
     clippy_available = _check_cargo_tool("clippy")
@@ -506,7 +542,9 @@ def check_hardening_toolchain(min_edition: str = "2024") -> HardeningToolchainRe
     return result
 
 
-def validate_hardening_toolchain_or_exit(min_edition: str = "2024") -> None:
+def validate_hardening_toolchain_or_exit(
+    min_edition: str = "2024", style_edition: str | None = None
+) -> None:
     """
     Validate hardening toolchain and exit with clear error if not supported.
 
@@ -516,11 +554,12 @@ def validate_hardening_toolchain_or_exit(min_edition: str = "2024") -> None:
 
     Args:
         min_edition: Minimum required edition (default: "2024")
+        style_edition: Rustfmt style_edition to validate (defaults to min_edition)
 
     Raises:
         SystemExit: If toolchain does not support hardening features
     """
-    result = check_hardening_toolchain(min_edition)
+    result = check_hardening_toolchain(min_edition, style_edition)
 
     if not result.supported:
         logger.error("=" * 70)
