@@ -42,54 +42,102 @@ class FormatValidator:
         """
         errors = []
 
-        if "input_data" not in sample:
-            errors.append("Missing required field: 'input_data'")
-        if "output_data" not in sample:
-            errors.append("Missing required field: 'output_data'")
+        if not isinstance(sample, dict):
+            return False, ["Sample must be a dict"]
 
-        if errors:
-            return False, errors
+        has_legacy = "input_data" in sample or "output_data" in sample
+        has_prompt_gen = "prompt" in sample or "gen" in sample
 
-        input_data = sample.get("input_data")
-        output_data = sample.get("output_data")
+        if has_prompt_gen and not has_legacy:
+            prompt_value = sample.get("prompt")
+            gen_value = sample.get("gen")
 
-        if not isinstance(input_data, dict):
-            errors.append("Field 'input_data' must be a dict")
-            input_data = {}
-        if not isinstance(output_data, dict):
-            errors.append("Field 'output_data' must be a dict")
-            output_data = {}
+            if not isinstance(prompt_value, str):
+                errors.append("Field 'prompt' must be a string")
+                prompt_value = ""
+            if not isinstance(gen_value, str):
+                errors.append("Field 'gen' must be a string")
+                gen_value = ""
 
-        prompt_value = input_data.get("prompt")
-        code_value = input_data.get("code")
+            if prompt_value.strip() == "":
+                errors.append("Field 'prompt' must not be empty")
+            if gen_value.strip() == "":
+                errors.append("Field 'gen' must not be empty")
 
-        if not isinstance(prompt_value, str):
-            errors.append("Field 'input_data.prompt' must be a string")
-            prompt_value = ""
-        if not isinstance(code_value, str):
-            errors.append("Field 'input_data.code' must be a string")
-            code_value = ""
+            if max_lines and prompt_value:
+                prompt_lines = prompt_value.count("\n") + 1
+                if prompt_lines > max_lines:
+                    errors.append(
+                        f"prompt exceeds max_lines limit: {prompt_lines} > {max_lines}"
+                    )
+            if max_chars and prompt_value:
+                prompt_chars = len(prompt_value)
+                if prompt_chars > max_chars:
+                    errors.append(
+                        f"prompt exceeds max_chars limit: {prompt_chars} > {max_chars}"
+                    )
 
-        if prompt_value.strip() == "":
-            errors.append("Field 'input_data.prompt' must not be empty")
-        if code_value.strip() == "":
-            errors.append("Field 'input_data.code' must not be empty")
-        if not output_data:
-            errors.append("Field 'output_data' must not be empty")
+            if max_lines and gen_value:
+                gen_lines = gen_value.count("\n") + 1
+                if gen_lines > max_lines:
+                    errors.append(
+                        f"gen exceeds max_lines limit: {gen_lines} > {max_lines}"
+                    )
+            if max_chars and gen_value:
+                gen_chars = len(gen_value)
+                if gen_chars > max_chars:
+                    errors.append(
+                        f"gen exceeds max_chars limit: {gen_chars} > {max_chars}"
+                    )
+        else:
+            if "input_data" not in sample:
+                errors.append("Missing required field: 'input_data'")
+            if "output_data" not in sample:
+                errors.append("Missing required field: 'output_data'")
 
-        if max_lines and code_value:
-            code_lines = code_value.count("\n") + 1
-            if code_lines > max_lines:
-                errors.append(
-                    f"input_data.code exceeds max_lines limit: {code_lines} > {max_lines}"
-                )
+            if errors:
+                return False, errors
 
-        if max_chars and code_value:
-            code_chars = len(code_value)
-            if code_chars > max_chars:
-                errors.append(
-                    f"input_data.code exceeds max_chars limit: {code_chars} > {max_chars}"
-                )
+            input_data = sample.get("input_data")
+            output_data = sample.get("output_data")
+
+            if not isinstance(input_data, dict):
+                errors.append("Field 'input_data' must be a dict")
+                input_data = {}
+            if not isinstance(output_data, dict):
+                errors.append("Field 'output_data' must be a dict")
+                output_data = {}
+
+            prompt_value = input_data.get("prompt")
+            code_value = input_data.get("code")
+
+            if not isinstance(prompt_value, str):
+                errors.append("Field 'input_data.prompt' must be a string")
+                prompt_value = ""
+            if not isinstance(code_value, str):
+                errors.append("Field 'input_data.code' must be a string")
+                code_value = ""
+
+            if prompt_value.strip() == "":
+                errors.append("Field 'input_data.prompt' must not be empty")
+            if code_value.strip() == "":
+                errors.append("Field 'input_data.code' must not be empty")
+            if not output_data:
+                errors.append("Field 'output_data' must not be empty")
+
+            if max_lines and code_value:
+                code_lines = code_value.count("\n") + 1
+                if code_lines > max_lines:
+                    errors.append(
+                        f"input_data.code exceeds max_lines limit: {code_lines} > {max_lines}"
+                    )
+
+            if max_chars and code_value:
+                code_chars = len(code_value)
+                if code_chars > max_chars:
+                    errors.append(
+                        f"input_data.code exceeds max_chars limit: {code_chars} > {max_chars}"
+                    )
 
         is_valid = len(errors) == 0
         return is_valid, errors
@@ -234,7 +282,12 @@ class FormatValidator:
             comparison["samples_compared"] += 1
 
             p1_prompt = p1.get("prompt")
-            p2_prompt = p2.get("input_data", {}).get("prompt")
+            if not p1_prompt and isinstance(p1.get("input_data"), dict):
+                p1_prompt = p1["input_data"].get("prompt")
+
+            p2_prompt = p2.get("prompt")
+            if not p2_prompt and isinstance(p2.get("input_data"), dict):
+                p2_prompt = p2["input_data"].get("prompt")
 
             if isinstance(p1_prompt, str) and isinstance(p2_prompt, str):
                 comparison["format_matches"] += 1
@@ -242,7 +295,7 @@ class FormatValidator:
                 comparison["differences"].append(
                     {
                         "type": "prompt_style",
-                        "issue": "Phase 2 sample missing input_data.prompt",
+                        "issue": "Sample missing prompt field",
                     }
                 )
 

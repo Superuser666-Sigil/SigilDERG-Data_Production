@@ -69,14 +69,13 @@ python -m sigil_pipeline.main \
     --max-sft-lines 200 \
     --max-sft-chars 8000 \
     --output datasets/phase2_full.jsonl \
-    --create-train-val-split \
     --val-ratio 0.1
 ```
 
 This creates:
 
 - `datasets/phase2_full.jsonl` - Training dataset with `{"prompt": "...", "gen": "..."}` format
-- Train/val split is created automatically (samples include `"split": "train"` or `"split": "val"`)
+- Train/val split is created automatically (samples include `"split": "train"` or `"split": "val"`). Use `--no-create-train-val-split` to disable.
 
 ### Step 2: Fine-tune Model
 
@@ -322,4 +321,3 @@ Check that:
 - **Pipeline**: <https://github.com/Superuser666-Sigil/SigilDERG-Data_Production>
 - **Finetuner**: <https://github.com/Superuser666-Sigil/SigilDERG-Finetuner>
 - **Evaluation**: <https://github.com/Superuser666-Sigil/human-eval-Rust>
-

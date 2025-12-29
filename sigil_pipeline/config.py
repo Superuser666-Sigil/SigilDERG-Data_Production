@@ -35,9 +35,45 @@ class PipelineConfig:
     validate_format: bool = True
     """Validate Phase-2 samples against dataset schema specification."""
 
+    strict_validation: bool = True
+    """Fail the pipeline on any sample validation error (default: True)."""
+
+    deduplicate_prompts: bool = True
+    """Deduplicate samples by prompt text before writing (default: True)."""
+
+    validate_outputs: bool = False
+    """Validate LLM outputs by compile-checking generated code (default: False)."""
+
+    output_validation_timeout: int = 160
+    """Timeout (seconds) for output validation cargo checks/tests (default: 160)."""
+
+    enable_explanations: bool = True
+    """Enable explanation task generation for Phase-2 dataset (default: True)."""
+
+    sandbox_mode: str = "auto"
+    """Sandbox mode for running untrusted code: 'auto', 'firejail', or 'none'."""
+
+    enable_github_mining: bool = False
+    """Enable GitHub bug-fix mining for error-fixing samples (default: False)."""
+
+    github_mining_labels: list[str] = field(default_factory=lambda: ["bug", "fix"])
+    """Labels used to discover bug-fix PRs for mining."""
+
+    github_mining_max_prs_per_crate: int = 5
+    """Maximum number of PRs to scan per crate when mining."""
+
+    github_mining_max_samples_per_pr: int = 5
+    """Maximum number of bug-fix samples to emit per PR."""
+
+    github_mining_timeout: int = 160
+    """Timeout (seconds) for mining validations (cargo test/check)."""
+
+    github_mining_require_tests: bool = True
+    """Require cargo test (if tests exist) for mined samples."""
+
     # Train/val split configuration
-    create_train_val_split: bool = False
-    """Whether to create train/val split after dataset generation."""
+    create_train_val_split: bool = True
+    """Whether to create train/val split after dataset generation (default: True)."""
 
     val_ratio: float = 0.1
     """Ratio of sources (crates/files) to put in validation set (default: 0.1 = 10%)."""
@@ -52,6 +88,12 @@ class PipelineConfig:
 
     output_dir: str = "output"
     """Directory for output files."""
+
+    enable_rejection_log: bool = True
+    """Enable logging of rejected LLM outputs for debugging. Default: True."""
+
+    rejection_log_path: str | None = None
+    """Path to write rejected LLM outputs (JSONL). Defaults to output_dir/rejected_samples.jsonl when enabled."""
 
     # Quality thresholds (minimum edition is 2021)
     # Edition 2021 is the minimum supported - 2018 and below are rejected
@@ -265,6 +307,8 @@ class PipelineConfig:
             "max_threads": self.max_threads,
             "output_path": self.output_path,
             "output_dir": self.output_dir,
+            "enable_rejection_log": self.enable_rejection_log,
+            "rejection_log_path": self.rejection_log_path,
             "max_clippy_warnings": self.max_clippy_warnings,
             "max_bad_code_warnings": self.max_bad_code_warnings,
             "require_docs": self.require_docs,
@@ -285,9 +329,21 @@ class PipelineConfig:
             "log_level": self.log_level,
             "verbose": self.verbose,
             "validate_format": self.validate_format,
+            "strict_validation": self.strict_validation,
+            "deduplicate_prompts": self.deduplicate_prompts,
+            "validate_outputs": self.validate_outputs,
+            "output_validation_timeout": self.output_validation_timeout,
             "max_sft_lines": self.max_sft_lines,
             "max_sft_chars": self.max_sft_chars,
             "task_type_mix": self.task_type_mix,
+            "enable_explanations": self.enable_explanations,
+            "sandbox_mode": self.sandbox_mode,
+            "enable_github_mining": self.enable_github_mining,
+            "github_mining_labels": self.github_mining_labels,
+            "github_mining_max_prs_per_crate": self.github_mining_max_prs_per_crate,
+            "github_mining_max_samples_per_pr": self.github_mining_max_samples_per_pr,
+            "github_mining_timeout": self.github_mining_timeout,
+            "github_mining_require_tests": self.github_mining_require_tests,
             "enable_error_injection": self.enable_error_injection,
             "error_injection_method": self.error_injection_method,
             "error_injection_timeout": self.error_injection_timeout,

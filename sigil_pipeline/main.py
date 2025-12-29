@@ -14,7 +14,17 @@ from collections import Counter
 from pathlib import Path
 from typing import Any, Iterator
 
-from . import analyzer, config, crawler, dataset_builder, exporter, filter, utils
+from . import (
+    analyzer,
+    config,
+    crawler,
+    dataset_builder,
+    exporter,
+    filter,
+    github_miner,
+    prompt_templates,
+    utils,
+)
 from .analyzer import get_crate_source_paths
 from .environment import (
     EnvironmentFingerprint,
@@ -202,6 +212,17 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
 
+    prompt_seed: int | None = None
+    if cfg.enable_prompt_randomization:
+        prompt_templates.set_prompt_randomization(True)
+        prompt_seed = prompt_templates.initialize_prompt_rng(cfg.prompt_seed)
+        logger.info(f"Prompt randomization enabled (seed={prompt_seed})")
+    else:
+        prompt_templates.set_prompt_randomization(False)
+        if cfg.prompt_seed is not None:
+            prompt_seed = prompt_templates.initialize_prompt_rng(cfg.prompt_seed)
+        logger.info("Prompt randomization disabled")
+
     # Validate hardening toolchain if hardening mode is enabled
     if cfg.dataset_hardening:
         logger.info("Dataset hardening mode enabled - validating toolchain...")
@@ -241,6 +262,8 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     # Create output directory
     output_dir = Path(cfg.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
+    if cfg.enable_rejection_log and not cfg.rejection_log_path:
+        cfg.rejection_log_path = str(output_dir / "rejected_samples.jsonl")
 
     # Initialize checkpoint manager
     checkpoint_manager: utils.CheckpointManager | None = None
@@ -267,6 +290,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     processed_count = 0
     skipped_count = 0
     reason_counts: Counter[str] = Counter()
+    rejection_tracker: dataset_builder.RejectionTracker | None = None
 
     # Set up metrics collector gauges
     metrics_collector.gauge(
@@ -323,6 +347,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 tasks.append(task)
 
             crate_file_generator_parts: list[list[dict]] = []
+            accepted_crates_for_mining: list[github_miner.CrateInfo] = []
 
             for completed_task in asyncio.as_completed(tasks):
                 crate_name = task_to_crate.get(id(completed_task), "unknown")
@@ -419,6 +444,13 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                             float(len(file_list)),
                             help_text="Number of files per accepted crate (pre-filter)",
                         )
+                        crate_dir_value = file_list[0].get("crate_dir")
+                        if crate_dir_value:
+                            accepted_crates_for_mining.append(
+                                github_miner.CrateInfo(
+                                    name=crate_name, crate_dir=Path(crate_dir_value)
+                                )
+                            )
 
                     if checkpoint_manager:
                         checkpoint_manager.mark_processed(
@@ -467,11 +499,9 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
 
                 for file_dict in base_iter:
+                    context_header = ""
                     try:
-                        try:
-                            file_context = extract_context_header(file_dict["code"])
-                        except Exception:
-                            file_context = ""
+                        context_header = extract_context_header(file_dict["code"])
                         chunks = chunker.chunk_rust_file(
                             file_dict["code"],
                             max_lines=cfg.max_sft_lines,
@@ -484,10 +514,11 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                                 "chunk_type": chunk["type"],
                                 "crate_name": file_dict.get("crate_name"),
                                 "crate_dir": file_dict.get("crate_dir"),
-                                "file_context": file_context,
                                 "start_line": chunk.get("start_line"),
                                 "end_line": chunk.get("end_line"),
                             }
+                            if context_header:
+                                chunk_dict["file_context"] = context_header
                             # Preserve hardening / analysis metadata
                             for key, value in file_dict.items():
                                 if (
@@ -502,26 +533,79 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                             f"Failed to chunk {file_dict.get('path', '<unknown>')}: {e}"
                         )
                         # Fallback: emit original file if chunking fails
+                        if context_header:
+                            file_dict["file_context"] = context_header
                         yield file_dict
 
             # Build dataset entries with format validation (streaming)
             logger.info("Building dataset entries...")
+            rejection_tracker = dataset_builder.RejectionTracker(
+                dump_path=Path(cfg.rejection_log_path)
+                if cfg.rejection_log_path
+                else None
+            )
 
-            samples = dataset_builder.build_dataset_entries(
+            samples = dataset_builder.iter_dataset_entries_async(
                 iter_filtered_and_chunked_files(),
                 validate_format=cfg.validate_format,
+                validate_outputs=cfg.validate_outputs,
+                validation_timeout=cfg.output_validation_timeout,
+                cargo_env=cargo_env,
+                require_rustfmt=cfg.dataset_hardening
+                and cfg.hardening_require_rustfmt,
+                allow_explanations=cfg.enable_explanations,
+                sandbox_mode=cfg.sandbox_mode,
                 task_type_mix=cfg.task_type_mix,
                 enable_error_injection=cfg.enable_error_injection,
                 error_injection_method=cfg.error_injection_method,
                 error_injection_timeout=cfg.error_injection_timeout,
                 max_sft_lines=cfg.max_sft_lines,
                 max_sft_chars=cfg.max_sft_chars,
+                prompt_seed=prompt_seed if cfg.enable_prompt_randomization else None,
+                rejection_tracker=rejection_tracker,
             )
+
+            if cfg.enable_github_mining and accepted_crates_for_mining:
+                base_samples = samples
+
+                async def iter_all_samples():
+                    async for sample in base_samples:
+                        yield sample
+                    async for sample in github_miner.iter_bugfix_samples_async(
+                        accepted_crates_for_mining,
+                        allowed_labels=cfg.github_mining_labels,
+                        max_prs_per_crate=cfg.github_mining_max_prs_per_crate,
+                        max_samples_per_pr=cfg.github_mining_max_samples_per_pr,
+                        timeout=cfg.github_mining_timeout,
+                        require_tests=cfg.github_mining_require_tests,
+                        max_lines=cfg.max_sft_lines,
+                        max_chars=cfg.max_sft_chars,
+                        cargo_env=cargo_env,
+                        sandbox_mode=cfg.sandbox_mode,
+                    ):
+                        yield sample
+
+                samples = iter_all_samples()
+
+            seen_prompts: set[str] | None = None
+            if cfg.deduplicate_prompts:
+                seen_prompts = set()
+            if cfg.strict_validation or cfg.deduplicate_prompts:
+                samples = dataset_builder.enforce_sample_gates_async(
+                    samples,
+                    validate_format=cfg.validate_format,
+                    max_lines=cfg.max_sft_lines,
+                    max_chars=cfg.max_sft_chars,
+                    strict_validation=cfg.strict_validation,
+                    deduplicate_prompts=cfg.deduplicate_prompts,
+                    seen_prompts=seen_prompts,
+                    rejection_tracker=rejection_tracker,
+                )
 
             # Export JSONL directly from generator (streaming write)
             remove_metadata = not cfg.create_train_val_split
             logger.info(f"Writing dataset to {cfg.output_path}...")
-            sample_count = exporter.write_jsonl(
+            sample_count = await exporter.write_jsonl_async(
                 samples, cfg.output_path, remove_metadata=remove_metadata
             )
 
@@ -531,9 +615,26 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             }
             if cfg.extra_phase2_shards:
                 logger.info("Appending extra Phase-2 shards...")
+                extra_validator = (
+                    dataset_builder.FormatValidator() if cfg.validate_format else None
+                )
+
+                def _validate_extra(sample: dict[str, Any]) -> tuple[bool, list[str]]:
+                    errors = dataset_builder.strict_sample_errors(
+                        sample,
+                        validator=extra_validator,
+                        max_lines=cfg.max_sft_lines,
+                        max_chars=cfg.max_sft_chars,
+                    )
+                    return (len(errors) == 0, errors)
+
                 added_samples, per_file_counts = exporter.merge_phase2_shards(
                     primary_path=cfg.output_path,
                     extra_paths=cfg.extra_phase2_shards,
+                    validate_sample=_validate_extra,
+                    strict=cfg.strict_validation,
+                    deduplicate_prompts=cfg.deduplicate_prompts,
+                    seen_prompts=seen_prompts,
                 )
                 sample_count += added_samples
                 extra_phase2_metrics.update(
@@ -549,6 +650,10 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
 
             # Initialize metrics
             metrics: dict[str, Any] = {"extra_phase2_shards": extra_phase2_metrics}
+            metrics["prompt_seed"] = (
+                prompt_seed if cfg.enable_prompt_randomization else None
+            )
+            metrics["enable_prompt_randomization"] = cfg.enable_prompt_randomization
 
             # Final dataset path is the output path
             final_dataset_path = cfg.output_path
@@ -624,6 +729,21 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 }
             )
 
+            rejection_summary = rejection_tracker.summary()
+            if rejection_summary.get("counts"):
+                metrics["sample_rejections"] = rejection_summary
+                top_rejections = sorted(
+                    rejection_summary["counts"].items(),
+                    key=lambda item: item[1],
+                    reverse=True,
+                )
+                logger.info(
+                    "Sample rejection summary (top 10): "
+                    + ", ".join(
+                        f"{reason}={count}" for reason, count in top_rejections[:10]
+                    )
+                )
+
             # Include environment fingerprint if captured
             if env_fingerprint:
                 metrics["environment"] = env_fingerprint.to_dict()
@@ -660,6 +780,8 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 )
 
     finally:
+        if rejection_tracker:
+            rejection_tracker.close()
         cleaned = utils.cleanup_temp_artifacts(prefixes=temp_cleanup_prefixes)
         if cleaned:
             logger.info(
@@ -680,6 +802,18 @@ def main():
         "--output",
         default="output/sigil_phase2_dataset.jsonl",
         help="Output JSONL path",
+    )
+    parser.add_argument(
+        "--rejection-log",
+        dest="rejection_log_path",
+        help="Path to write rejected LLM outputs (JSONL). Defaults to output_dir/rejected_samples.jsonl.",
+    )
+    parser.add_argument(
+        "--no-rejection-log",
+        dest="enable_rejection_log",
+        action="store_false",
+        default=None,
+        help="Disable rejected LLM output logging",
     )
     parser.add_argument(
         "--max-threads", type=int, default=4, help="Max parallel threads"
@@ -728,6 +862,67 @@ def main():
         help="Maximum characters per snippet for Phase-2 dataset (default: 8000)",
     )
     parser.add_argument(
+        "--strict-validation",
+        dest="strict_validation",
+        action="store_true",
+        default=None,
+        help="Fail pipeline on any sample validation error or duplicate prompt",
+    )
+    parser.add_argument(
+        "--no-strict-validation",
+        dest="strict_validation",
+        action="store_false",
+        default=None,
+        help="Disable strict sample validation",
+    )
+    parser.add_argument(
+        "--dedup-prompts",
+        dest="deduplicate_prompts",
+        action="store_true",
+        default=None,
+        help="Deduplicate samples by prompt text before writing",
+    )
+    parser.add_argument(
+        "--no-dedup-prompts",
+        dest="deduplicate_prompts",
+        action="store_false",
+        default=None,
+        help="Disable prompt-level deduplication",
+    )
+    parser.add_argument(
+        "--validate-outputs",
+        dest="validate_outputs",
+        action="store_true",
+        default=None,
+        help="Enable compile-check validation of LLM outputs (default: False)",
+    )
+    parser.add_argument(
+        "--no-validate-outputs",
+        dest="validate_outputs",
+        action="store_false",
+        default=None,
+        help="Disable compile-check validation of LLM outputs",
+    )
+    parser.add_argument(
+        "--output-validation-timeout",
+        type=int,
+        default=None,
+        help="Timeout in seconds for output validation cargo checks/tests (default: 160)",
+    )
+    parser.add_argument(
+        "--no-explanations",
+        dest="enable_explanations",
+        action="store_false",
+        default=None,
+        help="Disable explanation task generation",
+    )
+    parser.add_argument(
+        "--sandbox-mode",
+        choices=["auto", "firejail", "none"],
+        default=None,
+        help="Sandbox mode for running untrusted code (auto, firejail, none)",
+    )
+    parser.add_argument(
         "--task-mix",
         type=str,
         help=(
@@ -739,7 +934,15 @@ def main():
     parser.add_argument(
         "--create-train-val-split",
         action="store_true",
-        help="Create train/val split by source (keeps whole crates/files together)",
+        default=None,
+        help="Enable train/val split by source (keeps whole crates/files together)",
+    )
+    parser.add_argument(
+        "--no-create-train-val-split",
+        dest="create_train_val_split",
+        action="store_false",
+        default=None,
+        help="Disable train/val split creation (enabled by default)",
     )
     parser.add_argument(
         "--val-ratio",
@@ -758,6 +961,51 @@ def main():
         type=int,
         default=None,
         help="Timeout in seconds for cargo-based error injection (default: 120)",
+    )
+    parser.add_argument(
+        "--enable-github-mining",
+        dest="enable_github_mining",
+        action="store_true",
+        default=None,
+        help="Enable GitHub bug-fix mining for error-fixing samples",
+    )
+    parser.add_argument(
+        "--no-github-mining",
+        dest="enable_github_mining",
+        action="store_false",
+        default=None,
+        help="Disable GitHub bug-fix mining",
+    )
+    parser.add_argument(
+        "--github-mining-label",
+        dest="github_mining_labels",
+        action="append",
+        help="Label to use when mining bug-fix PRs (can repeat)",
+    )
+    parser.add_argument(
+        "--github-mining-max-prs",
+        type=int,
+        default=None,
+        help="Maximum PRs to scan per crate when mining (default: 5)",
+    )
+    parser.add_argument(
+        "--github-mining-max-samples",
+        type=int,
+        default=None,
+        help="Maximum samples to emit per PR when mining (default: 5)",
+    )
+    parser.add_argument(
+        "--github-mining-timeout",
+        type=int,
+        default=None,
+        help="Timeout in seconds for mining validations (default: 160)",
+    )
+    parser.add_argument(
+        "--no-github-mining-require-tests",
+        dest="github_mining_require_tests",
+        action="store_false",
+        default=None,
+        help="Allow mined samples without requiring cargo test when tests exist",
     )
 
     # Dataset Hardening Mode (Rust 2024 Benchmark Quality)
@@ -814,6 +1062,11 @@ def main():
         cfg.crate_list_path = args.crate_list
     if args.output:
         cfg.output_path = args.output
+    if args.enable_rejection_log is not None:
+        cfg.enable_rejection_log = args.enable_rejection_log
+    if args.rejection_log_path:
+        cfg.rejection_log_path = args.rejection_log_path
+        cfg.enable_rejection_log = True
     if args.max_threads:
         cfg.max_threads = args.max_threads
     if args.limit:
@@ -832,11 +1085,23 @@ def main():
         cfg.max_sft_lines = args.max_sft_lines
     if args.max_sft_chars:
         cfg.max_sft_chars = args.max_sft_chars
+    if args.strict_validation is not None:
+        cfg.strict_validation = args.strict_validation
+    if args.deduplicate_prompts is not None:
+        cfg.deduplicate_prompts = args.deduplicate_prompts
+    if args.validate_outputs is not None:
+        cfg.validate_outputs = args.validate_outputs
+    if args.output_validation_timeout is not None:
+        cfg.output_validation_timeout = args.output_validation_timeout
+    if args.enable_explanations is not None:
+        cfg.enable_explanations = args.enable_explanations
+    if args.sandbox_mode is not None:
+        cfg.sandbox_mode = args.sandbox_mode
     if args.task_mix:
         import json
 
         cfg.task_type_mix = json.loads(args.task_mix)
-    if args.create_train_val_split:
+    if args.create_train_val_split is not None:
         cfg.create_train_val_split = args.create_train_val_split
     if args.val_ratio:
         cfg.val_ratio = args.val_ratio
@@ -844,6 +1109,18 @@ def main():
         cfg.extra_phase2_shards = args.extra_phase2_shards
     if args.error_injection_timeout:
         cfg.error_injection_timeout = args.error_injection_timeout
+    if args.enable_github_mining is not None:
+        cfg.enable_github_mining = args.enable_github_mining
+    if args.github_mining_labels:
+        cfg.github_mining_labels = args.github_mining_labels
+    if args.github_mining_max_prs is not None:
+        cfg.github_mining_max_prs_per_crate = args.github_mining_max_prs
+    if args.github_mining_max_samples is not None:
+        cfg.github_mining_max_samples_per_pr = args.github_mining_max_samples
+    if args.github_mining_timeout is not None:
+        cfg.github_mining_timeout = args.github_mining_timeout
+    if args.github_mining_require_tests is not None:
+        cfg.github_mining_require_tests = args.github_mining_require_tests
     if args.dataset_hardening:
         cfg.dataset_hardening = args.dataset_hardening
     if hasattr(args, "hardening_strict_clippy"):
@@ -856,6 +1133,14 @@ def main():
         cfg.hardening_deny_antipatterns = args.hardening_deny_antipatterns
     if args.hardening_min_edition:
         cfg.hardening_min_edition = args.hardening_min_edition
+
+    if cfg.enable_rejection_log:
+        if not cfg.rejection_log_path:
+            cfg.rejection_log_path = str(
+                Path(cfg.output_dir) / "rejected_samples.jsonl"
+            )
+    else:
+        cfg.rejection_log_path = None
 
     # Run pipeline
     asyncio.run(run_pipeline(cfg))

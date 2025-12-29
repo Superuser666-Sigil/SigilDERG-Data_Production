@@ -173,7 +173,7 @@ When merging Phase-1 and Phase-2 datasets, additional metadata was preserved:
 
 ## Train/Val Split Metadata
 
-When `--create-train-val-split` is enabled:
+By default the pipeline creates a train/val split by source. Use `--no-create-train-val-split` to disable.
 
 - `_source_crate` is used to group samples by crate for splitting
 - Entire crates are kept together (no mixing train/val)
@@ -348,4 +348,3 @@ Version history:
 - **v2.3** (Current): Phase-2 instruct is now the only supported mode; Phase-1 compatibility removed
 
 **Note:** When shipping datasets to HuggingFace, include `schema_version: "2.3"` in the dataset card or README.md, referencing this documentation.
-

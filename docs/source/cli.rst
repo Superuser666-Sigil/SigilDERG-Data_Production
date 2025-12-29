@@ -32,6 +32,12 @@ Output Options
 ``--output PATH``
     Output JSONL file path (default: output/sigil_phase2_dataset.jsonl).
 
+``--rejection-log PATH``
+    Write rejected LLM outputs to a JSONL debug file (default: output_dir/rejected_samples.jsonl).
+
+``--no-rejection-log``
+    Disable rejected LLM output logging.
+
 ``--log-level LEVEL``
     Logging level: DEBUG, INFO, WARNING, ERROR (default: INFO).
 
@@ -51,7 +57,10 @@ Train/Val Split
 ~~~~~~~~~~~~~~~
 
 ``--create-train-val-split``
-    Create train/val split by source.
+    Enable train/val split by source (enabled by default).
+
+``--no-create-train-val-split``
+    Disable train/val split creation.
 
 ``--val-ratio RATIO``
     Ratio of sources for validation set (default: 0.1).
@@ -88,8 +97,6 @@ Generate Dataset
        --max-sft-lines 200 \
        --max-sft-chars 8000 \
        --output datasets/phase2_full.jsonl
-
-
 
 
 

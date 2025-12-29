@@ -16,11 +16,9 @@ from typing import Any, Iterator
 try:
     from datasets import Dataset
 except ImportError:
-    print(
-        "Error: Required libraries not installed. Install with: "
-        "pip install pyarrow datasets"
+    raise ImportError(
+        "Required libraries not installed. Install with: pip install pyarrow datasets"
     )
-    sys.exit(1)
 
 
 def _sample_generator(

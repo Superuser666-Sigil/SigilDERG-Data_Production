@@ -194,13 +194,26 @@ impl SomeStruct {{
         @task(5)
         def test_prompt_generation(self) -> None:
             """Load test prompt generation."""
-            from sigil_pipeline.dataset_builder import create_prompt_from_code
+            from sigil_pipeline.ast_patterns import (
+                detect_code_patterns_ast,
+                extract_function_signature,
+            )
+            from sigil_pipeline.prompt_templates import build_combined_prompt
 
             code = random.choice(self.sample_codes)
 
             start_time = time.perf_counter()
             try:
-                prompt = create_prompt_from_code(code)
+                sig = extract_function_signature(code)
+                fn_name = sig.name if sig else None
+                return_type = sig.return_type if sig else None
+                patterns = detect_code_patterns_ast(code)
+                prompt = build_combined_prompt(
+                    fn_name=fn_name,
+                    params_str=None,
+                    return_type=return_type,
+                    patterns=patterns,
+                )
                 duration = time.perf_counter() - start_time
 
                 events.request.fire(
@@ -306,9 +319,13 @@ def run_quick_test() -> None:
 
     from sigil_pipeline.chunker import chunk_rust_file
     from sigil_pipeline.config import PipelineConfig
-    from sigil_pipeline.dataset_builder import create_prompt_from_code
+    from sigil_pipeline.ast_patterns import (
+        detect_code_patterns_ast,
+        extract_function_signature,
+    )
     from sigil_pipeline.filter import has_doc_comments, meets_size_sanity_criteria
     from sigil_pipeline.observability import MetricsCollector
+    from sigil_pipeline.prompt_templates import build_combined_prompt
 
     sample_code = """
 /// A sample function
@@ -330,7 +347,16 @@ pub fn sample() -> i32 {
     assert len(chunks) > 0
     print("✓ chunker works")
 
-    prompt = create_prompt_from_code(sample_code)
+    sig = extract_function_signature(sample_code)
+    fn_name = sig.name if sig else None
+    return_type = sig.return_type if sig else None
+    patterns = detect_code_patterns_ast(sample_code)
+    prompt = build_combined_prompt(
+        fn_name=fn_name,
+        params_str=None,
+        return_type=return_type,
+        patterns=patterns,
+    )
     assert len(prompt) > 0
     print("✓ prompt generation works")
 

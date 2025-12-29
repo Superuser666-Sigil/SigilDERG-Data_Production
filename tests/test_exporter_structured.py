@@ -2,7 +2,8 @@ import json
 
 from sigil_pipeline.exporter import write_jsonl
 
-def test_write_jsonl_legacy_and_structured(tmp_path):
+
+def test_write_jsonl_prompt_gen_only(tmp_path):
     samples = [
         {"prompt": "Write code", "gen": "fn main() {}"},
         {
@@ -16,13 +17,10 @@ def test_write_jsonl_legacy_and_structured(tmp_path):
 
     out = tmp_path / "out.jsonl"
     count = write_jsonl(iter(samples), str(out))
-    assert count == 2
+    assert count == 1
 
     lines = out.read_text(encoding="utf-8").splitlines()
-    assert len(lines) == 2
+    assert len(lines) == 1
 
     first = json.loads(lines[0])
-    # legacy converted to structured
-    assert "input_data" in first and "output_data" in first
-    second = json.loads(lines[1])
-    assert second.get("crate_name") == "foo"
+    assert set(first.keys()) == {"prompt", "gen"}

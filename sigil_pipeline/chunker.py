@@ -43,12 +43,23 @@ def chunk_rust_file(
     root_node = tree.root_node
 
     chunks: list[dict[str, Any]] = []
+    code_bytes = code.encode("utf-8")
 
     def extract_node_text(node: Any) -> str:
         """Extract text for a node."""
         start_byte = node.start_byte
         end_byte = node.end_byte
-        return code[start_byte:end_byte]
+        if start_byte < 0:
+            start_byte = 0
+        if end_byte < start_byte:
+            end_byte = start_byte
+        if end_byte > len(code_bytes):
+            end_byte = len(code_bytes)
+        chunk = code_bytes[start_byte:end_byte]
+        try:
+            return chunk.decode("utf-8")
+        except UnicodeDecodeError:
+            return chunk.decode("utf-8", errors="ignore")
 
     def get_line_range(node: Any) -> tuple[int, int]:
         """Get line range for a node (1-indexed)."""

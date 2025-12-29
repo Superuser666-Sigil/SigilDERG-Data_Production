@@ -149,7 +149,7 @@ class TestResourceResilience:
     """Test resilience to resource constraints."""
 
     def test_handles_disk_full_on_export(self, tmp_path: Path) -> None:
-        """Pipeline should handle disk full errors during export gracefully."""
+        """Exporter should surface disk full errors."""
         from sigil_pipeline.exporter import write_jsonl
 
         output_path = tmp_path / "output.jsonl"
@@ -160,16 +160,9 @@ class TestResourceResilience:
                 "output_data": {"code": "test"},
             }
 
-        with patch("builtins.open") as mock_open:
-            mock_file = MagicMock()
-            mock_file.write.side_effect = OSError("No space left on device")
-            mock_open.return_value.__enter__.return_value = mock_file
-
-            # The exporter logs the error gracefully rather than crashing
-            # This is the expected behavior - graceful degradation
-            count = write_jsonl(sample_generator(), str(output_path))
-            # Should return 0 samples written due to error
-            assert count == 0
+        with patch("pathlib.Path.open", side_effect=OSError("No space left on device")):
+            with pytest.raises(OSError):
+                write_jsonl(sample_generator(), str(output_path))
 
     def test_handles_memory_pressure_in_chunker(self) -> None:
         """Chunker should handle very large files without OOM."""
@@ -185,6 +178,17 @@ class TestResourceResilience:
 
         # Should produce chunks
         assert len(chunks) > 0
+
+    def test_chunker_preserves_unicode_boundaries(self) -> None:
+        """Chunker should not truncate tokens when Unicode appears before a node."""
+        from sigil_pipeline.chunker import chunk_rust_file
+
+        code = "/// Emoji prefix \u2603\nimpl Foo {\n    fn bar(&self) {}\n}\n"
+        chunks = chunk_rust_file(code, max_lines=200, max_chars=8000)
+
+        impl_chunks = [c for c in chunks if c.get("type") == "impl_block"]
+        assert impl_chunks, "Expected an impl_block chunk"
+        assert impl_chunks[0]["code"].startswith("impl Foo")
 
 
 class TestSubprocessResilience:

@@ -20,6 +20,7 @@ from pathlib import Path
 from typing import Any
 
 from .analysis_cache import AnalysisCache, get_cache
+from . import sandbox
 
 # Import OS-agnostic cargo utilities from sigil_pipeline.utils
 from .utils import (
@@ -32,47 +33,147 @@ from .utils import (
 logger = logging.getLogger(__name__)
 
 
+def _build_sandbox_options(
+    crate_dir: Path,
+    *,
+    env: dict[str, str] | None,
+    sandbox_mode: str,
+    network_enabled: bool,
+) -> sandbox.SandboxOptions:
+    options = sandbox.SandboxOptions(
+        mode=sandbox_mode,
+        network_enabled=network_enabled,
+        extra_whitelist=[crate_dir],
+    )
+    if env:
+        target_dir = env.get("CARGO_TARGET_DIR")
+        if target_dir:
+            options.extra_whitelist.append(Path(target_dir))
+    return options
+
+
+async def _prefetch_dependencies(
+    crate_dir: Path,
+    *,
+    env: dict[str, str] | None,
+    timeout: int,
+    sandbox_mode: str,
+) -> None:
+    """Fetch crate dependencies with networking enabled before sandboxed builds."""
+    cmd = build_cargo_command("fetch")
+    options = _build_sandbox_options(
+        crate_dir, env=env, sandbox_mode=sandbox_mode, network_enabled=True
+    )
+    try:
+        await sandbox.run_sandboxed_command_async(
+            cmd,
+            cwd=crate_dir,
+            timeout=timeout,
+            env=env,
+            options=options,
+        )
+    except Exception as exc:
+        logger.debug(f"Dependency prefetch failed for {crate_dir}: {exc}")
+
+
 def parse_assistant_json_output(text: str) -> dict[str, Any]:
     """
     Robustly parse assistant output that is intended to be a single JSON object.
 
     Strategy:
     1. Try json.loads on the whole text.
-    2. If that fails, search for the first balanced `{...}` substring and parse it.
-    3. If still fails, attempt to extract code fences and assemble a minimal object.
+    2. If that fails, try parsing JSON blocks from code fences.
+    3. If still fails, search for a balanced `{...}` substring outside code fences.
+    4. If still fails, attempt to extract code fences and assemble a minimal object.
 
     Returns a dict (possibly empty) with parsed keys.
     """
+    text = text or ""
+    stripped = text.strip()
+
+    def parse_json_object(candidate: str, allow_empty: bool) -> dict[str, Any] | None:
+        try:
+            parsed = json.loads(candidate)
+        except Exception:
+            return None
+        if not isinstance(parsed, dict):
+            return None
+        if parsed or allow_empty:
+            return parsed
+        return None
+
+    def looks_like_json_object(candidate: str, allow_empty: bool) -> bool:
+        if candidate.strip() == "{}":
+            return allow_empty
+        if ":" not in candidate:
+            return False
+        return bool(re.search(r'"[^"]+"\s*:', candidate))
+
+    def iter_brace_candidates(payload: str) -> list[str]:
+        stack: list[int] = []
+        start = None
+        candidates: list[str] = []
+        for i, ch in enumerate(payload):
+            if ch == "{":
+                if start is None:
+                    start = i
+                stack.append(i)
+            elif ch == "}":
+                if stack:
+                    stack.pop()
+                    if not stack and start is not None:
+                        candidates.append(payload[start : i + 1])
+                        start = None
+        return candidates
+
+    def extract_json_object(payload: str, allow_empty: bool) -> dict[str, Any] | None:
+        candidate = payload.strip()
+        if candidate:
+            parsed = parse_json_object(candidate, allow_empty)
+            if parsed is not None:
+                return parsed
+        for brace_candidate in iter_brace_candidates(payload):
+            if not looks_like_json_object(brace_candidate, allow_empty):
+                continue
+            parsed = parse_json_object(brace_candidate, allow_empty)
+            if parsed is not None:
+                return parsed
+        return None
+
+    allow_empty = stripped == "{}"
+
     # 1) Try full JSON
     try:
-        return json.loads(text)
+        parsed = json.loads(stripped)
+        if isinstance(parsed, dict):
+            return parsed
     except Exception:
         pass
 
-    # 2) Find balanced braces substring
-    stack = []
-    start = None
-    for i, ch in enumerate(text):
-        if ch == "{":
-            if start is None:
-                start = i
-            stack.append(i)
-        elif ch == "}":
-            if stack:
-                stack.pop()
-                if not stack and start is not None:
-                    candidate = text[start : i + 1]
-                    try:
-                        return json.loads(candidate)
-                    except Exception:
-                        # continue searching for next candidate
-                        start = None
-                        continue
+    # 2) Try JSON in code fences
+    code_blocks: list[str] = []
+    for match in re.finditer(
+        r"```(?P<lang>[A-Za-z0-9_+-]+)?\s*\n(?P<content>[\s\S]*?)```",
+        text,
+        flags=re.IGNORECASE,
+    ):
+        content = match.group("content").strip()
+        if not content:
+            continue
+        code_blocks.append(content)
+        parsed = extract_json_object(content, allow_empty)
+        if parsed is not None:
+            return parsed
 
-    # 3) Fallback: extract code blocks and key-like prefixes
+    # 3) Search for JSON outside of code fences
+    text_without_fences = re.sub(r"```[\s\S]*?```", "", text)
+    parsed = extract_json_object(text_without_fences, allow_empty)
+    if parsed is not None:
+        return parsed
+
+    # 4) Fallback: extract code blocks and key-like prefixes
     result: dict[str, Any] = {}
-    # Extract code fences ```...``` or ```rust
-    code_blocks = re.findall(r"```(?:rust\n)?([\s\S]*?)```", text)
+    # Extract code fences ```...```
     if code_blocks:
         # Put first block into 'code_after' and raw into 'code'
         result["code_after"] = code_blocks[0].strip()
@@ -506,6 +607,7 @@ async def run_clippy(
     timeout: int = 300,
     env: dict[str, str] | None = None,
     crate_name: str | None = None,
+    sandbox_mode: str = "auto",
 ) -> ClippyResult:
     """
     Run cargo clippy on a crate and parse the results.
@@ -531,11 +633,15 @@ async def run_clippy(
     )
 
     try:
-        result = await run_command_async(
+        options = _build_sandbox_options(
+            crate_dir, env=env, sandbox_mode=sandbox_mode, network_enabled=False
+        )
+        result = await sandbox.run_sandboxed_command_async(
             cmd,
             cwd=crate_dir,
             timeout=timeout,
             env=env,
+            options=options,
         )
         # Decode bytes to string if needed
         if isinstance(result.stdout, bytes):
@@ -610,6 +716,7 @@ async def run_clippy_strict(
     env: dict[str, str] | None = None,
     crate_name: str | None = None,
     deny_antipatterns: bool = True,
+    sandbox_mode: str = "auto",
 ) -> StrictClippyResult:
     """
     Run cargo clippy with strict settings for dataset hardening.
@@ -661,11 +768,15 @@ async def run_clippy_strict(
     cmd = build_cargo_command(*cmd_args)
 
     try:
-        result = await run_command_async(
+        options = _build_sandbox_options(
+            crate_dir, env=env, sandbox_mode=sandbox_mode, network_enabled=False
+        )
+        result = await sandbox.run_sandboxed_command_async(
             cmd,
             cwd=crate_dir,
             timeout=timeout,
             env=env,
+            options=options,
         )
 
         # Decode bytes to string if needed
@@ -765,6 +876,7 @@ async def run_rustfmt_check(
     env: dict[str, str] | None = None,
     crate_name: str | None = None,
     style_edition: str = "2024",
+    sandbox_mode: str = "auto",
 ) -> RustfmtResult:
     """
     Run cargo fmt --check to verify code formatting.
@@ -808,11 +920,15 @@ async def run_rustfmt_check(
 
         cmd = build_cargo_command("fmt", "--check")
 
-        result = await run_command_async(
+        options = _build_sandbox_options(
+            crate_dir, env=env, sandbox_mode=sandbox_mode, network_enabled=False
+        )
+        result = await sandbox.run_sandboxed_command_async(
             cmd,
             cwd=crate_dir,
             timeout=timeout,
             env=env,
+            options=options,
         )
 
         # Decode output
@@ -876,6 +992,7 @@ async def run_geiger(
     timeout: int = 300,
     env: dict[str, str] | None = None,
     crate_name: str | None = None,
+    sandbox_mode: str = "auto",
 ) -> GeigerResult | None:
     """
     Run cargo geiger on a crate and parse the results.
@@ -894,11 +1011,15 @@ async def run_geiger(
     cmd = build_cargo_subcommand_command("geiger", "--format=json")
 
     try:
-        result = await run_command_async(
+        options = _build_sandbox_options(
+            crate_dir, env=env, sandbox_mode=sandbox_mode, network_enabled=False
+        )
+        result = await sandbox.run_sandboxed_command_async(
             cmd,
             cwd=crate_dir,
             timeout=timeout,
             env=env,
+            options=options,
         )
         # Decode bytes to string if needed
         if isinstance(result.stdout, bytes):
@@ -1448,7 +1569,19 @@ async def analyze_crate(
     edition = get_crate_edition(crate_dir)
 
     # STEP 2: Run clippy first (async) - early exit if too many warnings
-    clippy_result = await run_clippy(crate_dir, env=env, crate_name=crate_name)
+    sandbox_mode = getattr(config, "sandbox_mode", "auto") if config else "auto"
+    try:
+        resolved_mode = sandbox.resolve_mode(sandbox_mode)
+    except Exception:
+        resolved_mode = "none"
+    if resolved_mode == "firejail":
+        prefetch_timeout = 300
+        await _prefetch_dependencies(
+            crate_dir, env=env, timeout=prefetch_timeout, sandbox_mode=sandbox_mode
+        )
+    clippy_result = await run_clippy(
+        crate_dir, env=env, crate_name=crate_name, sandbox_mode=sandbox_mode
+    )
 
     # Early exit check: If clippy has too many bad_code warnings, skip expensive analysis
     # Use max_bad_code_warnings if set, otherwise fall back to max_clippy_warnings for backward compatibility
@@ -1488,7 +1621,9 @@ async def analyze_crate(
 
     # Run remaining analysis tools in parallel
     task_list = [
-        run_geiger(crate_dir, env=env, crate_name=crate_name),
+        run_geiger(
+            crate_dir, env=env, crate_name=crate_name, sandbox_mode=sandbox_mode
+        ),
         run_outdated(crate_dir, env=env, crate_name=crate_name),
     ]
 
@@ -1552,6 +1687,7 @@ async def analyze_crate(
                     env=env,
                     crate_name=crate_name,
                     deny_antipatterns=deny_antipatterns,
+                    sandbox_mode=sandbox_mode,
                 )
             )
         else:
@@ -1567,6 +1703,7 @@ async def analyze_crate(
                     env=env,
                     crate_name=crate_name,
                     style_edition=style_edition,
+                    sandbox_mode=sandbox_mode,
                 )
             )
         else:
