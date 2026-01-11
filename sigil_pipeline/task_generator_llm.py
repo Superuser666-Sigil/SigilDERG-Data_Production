@@ -576,18 +576,50 @@ def prompt_multi_gpu_setup() -> tuple[bool, int]:
         Tuple of (enabled, gpu_count)
     """
     gpu_count = detect_cuda_devices()
-    if gpu_count <= 1:
-        if gpu_count == 1:
-            gpu_info = get_gpu_info()
-            if gpu_info:
-                logger.info(
-                    f"Single GPU detected: {gpu_info[0]['name']} "
-                    f"({gpu_info[0]['memory_total_gb']}GB), using single-GPU inference"
-                )
-            else:
-                logger.info("Single GPU detected, using single-GPU inference")
+
+    if gpu_count == 0:
+        # No GPUs detected - offer to run setup
+        logger.info("No GPUs detected")
+        print("\n" + "=" * 60)
+        print("  No NVIDIA GPUs Detected")
+        print("=" * 60)
+        print("  GPU inference requires NVIDIA GPU with proper drivers.")
+        print("")
+
+        try:
+            response = (
+                input("Run GPU setup to check/install drivers? [y/N]: ").strip().lower()
+            )
+            if response in ("y", "yes"):
+                try:
+                    from . import gpu_setup
+
+                    gpu_setup.run_gpu_setup()
+                    # Re-check after setup
+                    gpu_count = detect_cuda_devices()
+                    if gpu_count == 0:
+                        print("\nNo GPUs available after setup. Using CPU inference.")
+                        return False, 0
+                except ImportError:
+                    print(
+                        "GPU setup module not available. Install with: pip install sigil-pipeline[gpu]"
+                    )
+                    return False, 0
+        except (EOFError, KeyboardInterrupt):
+            pass
+
+        print("\nUsing CPU inference.")
+        return False, 0
+
+    if gpu_count == 1:
+        gpu_info = get_gpu_info()
+        if gpu_info:
+            logger.info(
+                f"Single GPU detected: {gpu_info[0]['name']} "
+                f"({gpu_info[0]['memory_total_gb']}GB), using single-GPU inference"
+            )
         else:
-            logger.info("No GPUs detected, using CPU inference")
+            logger.info("Single GPU detected, using single-GPU inference")
         return False, gpu_count
 
     # Get detailed GPU info for display

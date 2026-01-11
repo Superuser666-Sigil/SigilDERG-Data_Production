@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sigil-pipeline"
-version = "2.6.1"
+version = "2.6.2"
 description = "Static analysis pipeline for generating high-quality Rust code datasets for model fine-tuning. Phase 2 dataset generation with Phase 1 format alignment."
 readme = "README.md"
 license = "MIT"
@@ -312,6 +312,7 @@ Repository = "https://github.com/Superuser666-Sigil/SigilDERG-Data_Production"
 [project.scripts]
 sigil-pipeline = "sigil_pipeline.main:main"
 sigil-ecosystem = "sigil_pipeline.cli.ecosystem:main"
+sigil-gpu-setup = "sigil_pipeline.gpu_setup:setup_cli"
 
 [tool.setuptools]
 packages = [
