@@ -213,6 +213,12 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
 
+    # Capture and log environment fingerprint FIRST for visibility
+    env_fingerprint: EnvironmentFingerprint | None = None
+    if cfg.capture_environment:
+        env_fingerprint = capture_environment()
+        log_environment_summary(env_fingerprint)
+
     # Initialize multi-GPU inference if configured
     from . import task_generator_llm
 
@@ -254,12 +260,6 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             f"require_rustfmt={cfg.hardening_require_rustfmt}, "
             f"reject_unsafe={cfg.hardening_reject_unsafe}"
         )
-
-    # Capture and log environment fingerprint for reproducibility
-    env_fingerprint: EnvironmentFingerprint | None = None
-    if cfg.capture_environment:
-        env_fingerprint = capture_environment()
-        log_environment_summary(env_fingerprint)
 
     # Initialize metrics collector
     metrics_collector = get_metrics()
