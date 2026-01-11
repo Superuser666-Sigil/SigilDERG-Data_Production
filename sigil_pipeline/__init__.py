@@ -7,4 +7,4 @@ high-quality datasets for fine-tuning code models.
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
 """
 
-__version__ = "2.6.2"
+__version__ = "2.6.3"

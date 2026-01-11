@@ -4,7 +4,7 @@ Main pipeline orchestration module.
 Coordinates the entire pipeline: crawl → analyze → filter → build → export.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.6.0
+Version: 2.6.3
 """
 
 import asyncio
@@ -213,12 +213,6 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
 
-    # Capture and log environment fingerprint FIRST for visibility
-    env_fingerprint: EnvironmentFingerprint | None = None
-    if cfg.capture_environment:
-        env_fingerprint = capture_environment()
-        log_environment_summary(env_fingerprint)
-
     # Initialize multi-GPU inference if configured
     from . import task_generator_llm
 
@@ -260,6 +254,12 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             f"require_rustfmt={cfg.hardening_require_rustfmt}, "
             f"reject_unsafe={cfg.hardening_reject_unsafe}"
         )
+
+    # Capture and log environment fingerprint for reproducibility
+    env_fingerprint: EnvironmentFingerprint | None = None
+    if cfg.capture_environment:
+        env_fingerprint = capture_environment()
+        log_environment_summary(env_fingerprint)
 
     # Initialize metrics collector
     metrics_collector = get_metrics()
@@ -356,27 +356,35 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             semaphore = asyncio.Semaphore(cfg.max_threads)
 
             async def process_with_semaphore(crate_name: str):
+                """Process crate with semaphore, returning crate name with result.
+
+                Returns tuple of (crate_name, result, error) where error is None
+                on success or the exception on failure.
+                """
                 async with semaphore:
-                    return await process_crate(crate_name, cfg, temp_dir, cargo_env)
+                    try:
+                        result = await process_crate(crate_name, cfg, temp_dir, cargo_env)
+                        return (crate_name, result, None)
+                    except Exception as e:
+                        return (crate_name, (None, None), e)
 
             tasks: list[asyncio.Task[Any]] = []
-            task_to_crate: dict[int, str] = {}
             for crate in crates:
                 task = asyncio.create_task(process_with_semaphore(crate))
-                task_id = id(task)
-                task_to_crate[task_id] = crate
                 tasks.append(task)
 
             crate_file_generator_parts: list[list[dict]] = []
             accepted_crates_for_mining: list[github_miner.CrateInfo] = []
 
             for completed_task in asyncio.as_completed(tasks):
-                crate_name = task_to_crate.get(id(completed_task), "unknown")
-                try:
-                    file_list, reason = await completed_task
-                except Exception as e:
+                # Unpack crate name from result (fixes asyncio.as_completed id mismatch)
+                crate_name, (file_list, reason), task_error = await completed_task
+
+                if task_error is not None:
                     # Hard failure in the task itself
-                    logger.error(f"Error processing {crate_name}: {e}", exc_info=True)
+                    logger.error(
+                        f"Error processing {crate_name}: {task_error}", exc_info=True
+                    )
                     skipped_count += 1
                     reason_counts["processing_error"] += 1
                     metrics_collector.increment(

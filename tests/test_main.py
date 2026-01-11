@@ -68,6 +68,7 @@ async def test_pipeline_with_mock_crate(mock_crate_dir, tmp_path):
         enable_license_scan=False,  # Skip license check for speed
         require_docs=False,  # Relax requirements for test
         max_clippy_warnings=100,  # Allow warnings in test
+        multi_gpu_enabled=False,  # Disable GPU prompt for tests
     )
 
     # Note: This test requires cargo and Rust toolchain to be installed
