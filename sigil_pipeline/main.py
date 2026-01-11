@@ -737,6 +737,147 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             else:
                 metrics["train_val_split"] = {"enabled": False}
 
+            # Run quality analysis on generated datasets
+            quality_gate_failed = False
+            if cfg.enable_quality_analysis:
+                from .duplicate_detection import DuplicateDetector
+                from .quality_scoring import QualityScorer
+
+                logger.info("Running quality analysis on generated datasets...")
+                
+                detector = DuplicateDetector(
+                    similarity_threshold=cfg.quality_analysis_similarity_threshold
+                )
+                scorer = QualityScorer()
+                
+                # Determine which datasets to analyze
+                datasets_to_analyze = []
+                if cfg.create_train_val_split:
+                    datasets_to_analyze = [
+                        ("train", train_path, train_count),
+                        ("val", val_path, val_count),
+                    ]
+                else:
+                    datasets_to_analyze = [
+                        ("full", final_dataset_path, sample_count)
+                    ]
+                
+                quality_reports = {}
+                for dataset_name, dataset_path, dataset_size in datasets_to_analyze:
+                    logger.info(f"Analyzing {dataset_name} dataset ({dataset_size} samples)...")
+                    
+                    # Load samples
+                    samples = []
+                    max_samples = cfg.quality_analysis_max_samples
+                    with open(dataset_path, "r", encoding="utf-8") as f:
+                        for i, line in enumerate(f):
+                            if max_samples and i >= max_samples:
+                                break
+                            samples.append(exporter.parse_json_line(line))
+                    
+                    # Run duplicate detection
+                    duplicates = detector.find_duplicates(samples)
+                    exact_dupes = duplicates["exact_duplicates"]
+                    near_dupes = duplicates["near_duplicates"]
+                    
+                    # Calculate duplicate rates
+                    exact_dupe_count = sum(len(group) for group in exact_dupes.values())
+                    near_dupe_count = len(near_dupes)
+                    total_analyzed = len(samples)
+                    exact_dupe_rate = exact_dupe_count / total_analyzed if total_analyzed > 0 else 0.0
+                    near_dupe_rate = near_dupe_count / total_analyzed if total_analyzed > 0 else 0.0
+                    
+                    # Run quality scoring
+                    quality_scores = [scorer.score_sample(s) for s in samples]
+                    avg_quality = sum(quality_scores) / len(quality_scores) if quality_scores else 0.0
+                    
+                    # Count quality tiers
+                    from .quality_scoring import QUALITY_TIERS
+                    tier_counts = {tier: 0 for tier in QUALITY_TIERS.keys()}
+                    for score in quality_scores:
+                        for tier_name, (min_score, max_score) in QUALITY_TIERS.items():
+                            if min_score <= score <= max_score:
+                                tier_counts[tier_name] += 1
+                                break
+                    
+                    premium_rate = tier_counts["premium"] / total_analyzed if total_analyzed > 0 else 0.0
+                    
+                    # Store report
+                    quality_report = {
+                        "samples_analyzed": total_analyzed,
+                        "average_quality_score": round(avg_quality, 2),
+                        "quality_tiers": tier_counts,
+                        "premium_quality_rate": round(premium_rate, 4),
+                        "exact_duplicates": {
+                            "groups": len(exact_dupes),
+                            "samples": exact_dupe_count,
+                            "rate": round(exact_dupe_rate, 4),
+                        },
+                        "near_duplicates": {
+                            "pairs": near_dupe_count,
+                            "rate": round(near_dupe_rate, 4),
+                        },
+                        "similarity_threshold": cfg.quality_analysis_similarity_threshold,
+                    }
+                    quality_reports[dataset_name] = quality_report
+                    
+                    logger.info(
+                        f"{dataset_name.capitalize()} quality: "
+                        f"{avg_quality:.1f}/100 avg, "
+                        f"{premium_rate*100:.1f}% premium, "
+                        f"{exact_dupe_rate*100:.1f}% exact dupes, "
+                        f"{near_dupe_rate*100:.1f}% near dupes"
+                    )
+                    
+                    # Save detailed report if requested
+                    if cfg.quality_analysis_save_reports:
+                        report_path = output_dir / f"{dataset_name}_quality_report.json"
+                        exporter.write_metrics(quality_report, str(report_path))
+                        logger.info(f"Quality report saved: {report_path}")
+                    
+                    # Check quality gates
+                    if cfg.enable_quality_gates:
+                        violations = []
+                        
+                        if cfg.min_quality_score is not None and avg_quality < cfg.min_quality_score:
+                            violations.append(
+                                f"Average quality score {avg_quality:.2f} below minimum {cfg.min_quality_score}"
+                            )
+                        
+                        total_dupe_rate = exact_dupe_rate + near_dupe_rate
+                        if cfg.max_duplicate_rate is not None and total_dupe_rate > cfg.max_duplicate_rate:
+                            violations.append(
+                                f"Duplicate rate {total_dupe_rate:.4f} exceeds maximum {cfg.max_duplicate_rate}"
+                            )
+                        
+                        if cfg.min_premium_quality_rate is not None and premium_rate < cfg.min_premium_quality_rate:
+                            violations.append(
+                                f"Premium quality rate {premium_rate:.4f} below minimum {cfg.min_premium_quality_rate}"
+                            )
+                        
+                        if violations:
+                            quality_gate_failed = True
+                            logger.error(f"Quality gate violations in {dataset_name} dataset:")
+                            for violation in violations:
+                                logger.error(f"  - {violation}")
+                
+                # Add quality metrics to main metrics
+                metrics["quality_analysis"] = {
+                    "enabled": True,
+                    "reports": quality_reports,
+                    "similarity_threshold": cfg.quality_analysis_similarity_threshold,
+                    "gates_enabled": cfg.enable_quality_gates,
+                    "gates_passed": not quality_gate_failed,
+                }
+                
+                if cfg.enable_quality_gates:
+                    if quality_gate_failed:
+                        metrics["quality_analysis"]["gate_violations"] = True
+                    else:
+                        logger.info("All quality gates passed")
+            else:
+                metrics["quality_analysis"] = {"enabled": False}
+
             # Add performance metrics
             total_time = time.time() - start_time
             metrics["performance"] = {
@@ -843,6 +984,10 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 logger.info(f"Prometheus metrics: {prom_path}")
 
             if json_parse_rate_exceeded:
+                raise SystemExit(1)
+
+            if quality_gate_failed:
+                logger.error("Pipeline failed: Quality gate violations detected")
                 raise SystemExit(1)
 
             logger.info("Pipeline completed successfully")
@@ -1155,6 +1300,66 @@ def main():
         help="Abort run if JSON parse failure rate exceeds this fraction (default: 0.05)",
     )
 
+    # Quality analysis configuration
+    parser.add_argument(
+        "--enable-quality-analysis",
+        action="store_true",
+        default=None,
+        help="Enable automatic quality analysis after dataset generation (default: True)",
+    )
+    parser.add_argument(
+        "--no-quality-analysis",
+        dest="enable_quality_analysis",
+        action="store_false",
+        default=None,
+        help="Disable automatic quality analysis",
+    )
+    parser.add_argument(
+        "--quality-similarity-threshold",
+        dest="quality_analysis_similarity_threshold",
+        type=float,
+        default=None,
+        help="Similarity threshold for near-duplicate detection (0.0-1.0, default: 0.90)",
+    )
+    parser.add_argument(
+        "--quality-max-samples",
+        dest="quality_analysis_max_samples",
+        type=int,
+        default=None,
+        help="Maximum samples to analyze for quality (default: all samples)",
+    )
+    parser.add_argument(
+        "--no-quality-reports",
+        dest="quality_analysis_save_reports",
+        action="store_false",
+        default=None,
+        help="Disable saving quality analysis reports as JSON files",
+    )
+    parser.add_argument(
+        "--enable-quality-gates",
+        action="store_true",
+        default=None,
+        help="Enable quality validation gates that fail pipeline if thresholds not met",
+    )
+    parser.add_argument(
+        "--min-quality-score",
+        type=float,
+        default=None,
+        help="Minimum average quality score (0-100) required. Pipeline fails if below.",
+    )
+    parser.add_argument(
+        "--max-duplicate-rate",
+        type=float,
+        default=None,
+        help="Maximum allowed duplicate rate (0.0-1.0). Pipeline fails if exceeded.",
+    )
+    parser.add_argument(
+        "--min-premium-quality-rate",
+        type=float,
+        default=None,
+        help="Minimum required rate of premium quality samples (0.0-1.0).",
+    )
+
     # Multi-GPU configuration
     parser.add_argument(
         "--multi-gpu",
@@ -1280,6 +1485,24 @@ def main():
         cfg.rustfmt_style_edition = args.rustfmt_style_edition
     if args.max_json_parse_failure_rate is not None:
         cfg.max_json_parse_failure_rate = args.max_json_parse_failure_rate
+
+    # Quality analysis configuration
+    if args.enable_quality_analysis is not None:
+        cfg.enable_quality_analysis = args.enable_quality_analysis
+    if args.quality_analysis_similarity_threshold is not None:
+        cfg.quality_analysis_similarity_threshold = args.quality_analysis_similarity_threshold
+    if args.quality_analysis_max_samples is not None:
+        cfg.quality_analysis_max_samples = args.quality_analysis_max_samples
+    if args.quality_analysis_save_reports is not None:
+        cfg.quality_analysis_save_reports = args.quality_analysis_save_reports
+    if args.enable_quality_gates is not None:
+        cfg.enable_quality_gates = args.enable_quality_gates
+    if args.min_quality_score is not None:
+        cfg.min_quality_score = args.min_quality_score
+    if args.max_duplicate_rate is not None:
+        cfg.max_duplicate_rate = args.max_duplicate_rate
+    if args.min_premium_quality_rate is not None:
+        cfg.min_premium_quality_rate = args.min_premium_quality_rate
 
     # Multi-GPU configuration
     if args.multi_gpu_enabled is not None:

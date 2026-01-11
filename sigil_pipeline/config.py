@@ -303,6 +303,37 @@ class PipelineConfig:
     """Reject code containing `unsafe` blocks (not just crate-level Geiger metrics).
     Uses tree-sitter to detect unsafe blocks at the sample level. Default: True."""
 
+    # Dataset Quality Analysis Configuration
+    enable_quality_analysis: bool = True
+    """Enable automatic quality analysis after dataset generation. Runs duplicate
+    detection and quality scoring on generated datasets. Default: True."""
+
+    quality_analysis_similarity_threshold: float = 0.90
+    """Similarity threshold for near-duplicate detection (0.0-1.0). Default: 0.90."""
+
+    quality_analysis_max_samples: int | None = None
+    """Maximum samples to analyze for quality (None = all). Default: None."""
+
+    quality_analysis_save_reports: bool = True
+    """Save quality analysis reports as JSON files in output_dir. Default: True."""
+
+    # Quality Validation Gates
+    enable_quality_gates: bool = False
+    """Enable quality validation gates that fail the pipeline if thresholds not met.
+    Requires enable_quality_analysis=True. Default: False."""
+
+    min_quality_score: float | None = None
+    """Minimum average quality score (0-100) required. Pipeline fails if below threshold.
+    None = no validation. Example: 80.0 for minimum 80/100 average quality."""
+
+    max_duplicate_rate: float | None = None
+    """Maximum allowed duplicate rate (0.0-1.0). Pipeline fails if exceeded.
+    None = no validation. Example: 0.05 for maximum 5% duplicates."""
+
+    min_premium_quality_rate: float | None = None
+    """Minimum required rate of premium quality samples (0.0-1.0). Pipeline fails if below.
+    None = no validation. Example: 0.90 for minimum 90% premium quality."""
+
     @classmethod
     def from_dict(cls, data: dict) -> "PipelineConfig":
         """Create config from dictionary."""
@@ -403,6 +434,14 @@ class PipelineConfig:
             "hardening_deny_antipatterns": self.hardening_deny_antipatterns,
             "hardening_require_rustfmt": self.hardening_require_rustfmt,
             "hardening_reject_unsafe": self.hardening_reject_unsafe,
+            "enable_quality_analysis": self.enable_quality_analysis,
+            "quality_analysis_similarity_threshold": self.quality_analysis_similarity_threshold,
+            "quality_analysis_max_samples": self.quality_analysis_max_samples,
+            "quality_analysis_save_reports": self.quality_analysis_save_reports,
+            "enable_quality_gates": self.enable_quality_gates,
+            "min_quality_score": self.min_quality_score,
+            "max_duplicate_rate": self.max_duplicate_rate,
+            "min_premium_quality_rate": self.min_premium_quality_rate,
         }
 
     @classmethod

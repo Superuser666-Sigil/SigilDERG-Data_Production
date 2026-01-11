@@ -51,15 +51,15 @@ def run_command(
             )
 
         if result.returncode == 0:
-            print(f"✅ {description} completed successfully")
-            return True
+        print(f"✅ {description} completed successfully")
+        return True
         else:
             print(f"❌ {description} failed (exit code {result.returncode})")
             if result.stdout:
                 print(f"stdout: {result.stdout}")
             if result.stderr:
                 print(f"stderr: {result.stderr}")
-            return False
+        return False
     except FileNotFoundError:
         print(f"❌ Command not found: {cmd[0] if isinstance(cmd, list) else cmd}")
         return False
@@ -325,9 +325,9 @@ mod tests {
                 (["cargo", "outdated", "--depth", "1"], "cargo outdated"),
                 (["cargo", "license"], "cargo license"),
             ]:
-                try:
+        try:
                     run_command(tool_cmd, tool_name, env=merged_env)
-                except Exception:
+        except Exception:
                     print(f"⚠️  {tool_name} not available (optional)")
 
         finally:
