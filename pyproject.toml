@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sigil-pipeline"
-version = "2.5.0"
+version = "2.6.0"
 description = "Static analysis pipeline for generating high-quality Rust code datasets for model fine-tuning. Phase 2 dataset generation with Phase 1 format alignment."
 readme = "README.md"
 license = "MIT"
@@ -79,7 +79,7 @@ dependencies = [
     "toml>=0.10.0,<1.0.0",
     
     # Rust code parsing (required for AST-based prompt generation)
-    "tree-sitter>=0.20.0,<1.0.0",
+    "tree-sitter>=0.22.0,<1.0.0",
     "tree-sitter-rust>=0.20.0,<1.0.0",
 ]
 
@@ -402,4 +402,3 @@ dict_synonyms = ["Struct", "NamedStruct"]
 min_rounds = 5
 disable_gc = true
 warmup = true
-

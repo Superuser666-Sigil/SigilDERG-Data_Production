@@ -4,7 +4,7 @@ Shared pytest fixtures for Sigil Pipeline tests.
 Provides reusable test fixtures for creating mock crates, configs, and test data.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import json

@@ -3,7 +3,7 @@
 Analyze pipeline failures: identify license rejections and analyze clippy warnings.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import json

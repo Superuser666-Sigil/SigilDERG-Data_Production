@@ -5,7 +5,7 @@ Provides subprocess wrappers, file I/O, temporary directory management,
 and OS-agnostic cargo command construction.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import asyncio

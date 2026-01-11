@@ -77,6 +77,66 @@ sudo dnf install gcc
 xcode-select --install
 ```
 
+## Multi-GPU Inference (Optional)
+
+The pipeline supports multi-GPU inference for significantly faster LLM-based task generation. When multiple NVIDIA GPUs are available, the pipeline can distribute inference across GPUs using round-robin scheduling.
+
+### GPU Requirements
+
+- NVIDIA CUDA-capable GPUs
+- NVIDIA drivers installed
+- `nvidia-smi` available in PATH (for GPU detection)
+
+### Memory Requirements per GPU
+
+For the [Strand-Rust-Coder-14B-v1](https://huggingface.co/Fortytwo-Network/Strand-Rust-Coder-14B-v1-GGUF) model:
+
+| Quantization | VRAM per GPU |
+|-------------|--------------|
+| BF16 (16-bit) | 29.5 GB |
+| Q8_0 (8-bit) | 15.7 GB |
+| Q6_K (6-bit) | 12.1 GB |
+| Q5_K_M (5-bit) | 10.5 GB |
+| Q4_K_M (4-bit) | 8.99 GB |
+
+### Configuration
+
+**Runtime prompt (default):**
+By default, the pipeline will prompt you at startup to enable multi-GPU inference if multiple GPUs are detected.
+
+**CLI flags:**
+```bash
+# Enable multi-GPU (skip prompt)
+sigil-pipeline --multi-gpu --gpu-count 8
+
+# Disable multi-GPU (skip prompt)
+sigil-pipeline --no-multi-gpu
+
+# Specify model path for multi-GPU
+sigil-pipeline --multi-gpu --multi-gpu-model /path/to/model.gguf
+```
+
+**Configuration file:**
+```yaml
+multi_gpu_enabled: true
+multi_gpu_count: 8
+multi_gpu_model_path: /path/to/model.gguf
+multi_gpu_batch_size: 8
+```
+
+**Environment variables:**
+```bash
+export LLAMA_CPP_MODEL_PATH=/path/to/model.gguf
+export LLAMA_CPP_N_CTX=8192
+```
+
+### Performance
+
+With 8× V100 32GB GPUs:
+- ~8× throughput compared to single GPU
+- Process 800+ samples/hour
+- Cost-effective at ~$1.20/hr (spot pricing)
+
 ## Required Cargo Subcommands
 
 The pipeline uses several cargo subcommands for static analysis. Install them with:

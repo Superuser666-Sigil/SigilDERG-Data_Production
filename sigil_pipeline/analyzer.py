@@ -5,7 +5,7 @@ Provides functions to run Clippy, Geiger, outdated, and documentation checks.
 Includes optional caching of analysis results to avoid re-running expensive tools.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import json
@@ -1730,9 +1730,7 @@ async def analyze_crate(
 
         # Add rustfmt check if enabled
         if getattr(config, "hardening_require_rustfmt", True):
-            style_edition = getattr(config, "hardening_style_edition", None)
-            if not style_edition:
-                style_edition = getattr(config, "hardening_min_edition", None)
+            style_edition = getattr(config, "rustfmt_style_edition", None)
             if style_edition:
                 style_edition = str(style_edition).strip()
                 if style_edition.lower() in ("none", "null", ""):

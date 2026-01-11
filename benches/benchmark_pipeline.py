@@ -8,7 +8,7 @@ Requires pytest-benchmark:
     pip install pytest-benchmark
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import json

@@ -4,11 +4,12 @@ Main pipeline orchestration module.
 Coordinates the entire pipeline: crawl → analyze → filter → build → export.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import asyncio
 import logging
+import random
 import time
 from collections import Counter
 from pathlib import Path
@@ -212,6 +213,24 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     logger.info("Starting Sigil Pipeline")
     logger.info(f"Configuration: {cfg.to_dict()}")
 
+    # Initialize multi-GPU inference if configured
+    from . import task_generator_llm
+
+    if cfg.multi_gpu_enabled is not None:
+        # Explicit setting in config
+        task_generator_llm.initialize_multi_gpu(
+            model_path=cfg.multi_gpu_model_path,
+            gpu_count=cfg.multi_gpu_count,
+            force_enabled=cfg.multi_gpu_enabled,
+        )
+    else:
+        # Prompt user at runtime
+        task_generator_llm.initialize_multi_gpu(
+            model_path=cfg.multi_gpu_model_path,
+            gpu_count=cfg.multi_gpu_count,
+            force_enabled=None,  # Will prompt
+        )
+
     prompt_seed: int | None = None
     if cfg.enable_prompt_randomization:
         prompt_templates.set_prompt_randomization(True)
@@ -227,7 +246,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
     if cfg.dataset_hardening:
         logger.info("Dataset hardening mode enabled - validating toolchain...")
         validate_hardening_toolchain_or_exit(
-            cfg.hardening_min_edition, cfg.hardening_style_edition
+            cfg.hardening_min_edition, cfg.rustfmt_style_edition
         )
         logger.info(
             f"Hardening settings: strict_clippy={cfg.hardening_strict_clippy}, "
@@ -494,11 +513,19 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 files -> filter.filter_code_files -> chunker -> file dicts
 
                 Phase-2 instruct mode with semantic chunking.
+
+                Prioritizes function chunks to enable better task diversity (code_gen,
+                FIM, error_fixing, transformations) since non-function chunks can only
+                do explanations.
                 """
                 from . import chunker
                 from .ast_patterns import extract_context_header
 
                 base_iter = filter.filter_code_files(iter_all_code_files(), cfg)
+
+                # Collect chunks into two categories for prioritization
+                function_chunks: list[dict] = []
+                other_chunks: list[dict] = []
 
                 for file_dict in base_iter:
                     context_header = ""
@@ -529,7 +556,11 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                                     or key.startswith("_rustfmt")
                                 ):
                                     chunk_dict[key] = value
-                            yield chunk_dict
+                            # Categorize by chunk type
+                            if chunk["type"] == "function":
+                                function_chunks.append(chunk_dict)
+                            else:
+                                other_chunks.append(chunk_dict)
                     except Exception as e:
                         logger.debug(
                             f"Failed to chunk {file_dict.get('path', '<unknown>')}: {e}"
@@ -537,14 +568,22 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                         # Fallback: emit original file if chunking fails
                         if context_header:
                             file_dict["file_context"] = context_header
-                        yield file_dict
+                        other_chunks.append(file_dict)
+
+                # Shuffle within categories for variety
+                random.shuffle(function_chunks)
+                random.shuffle(other_chunks)
+
+                # Yield function chunks first (enables code_gen, FIM, refactor, error_fix)
+                yield from function_chunks
+                yield from other_chunks
 
             # Build dataset entries with format validation (streaming)
             logger.info("Building dataset entries...")
             rejection_tracker = dataset_builder.RejectionTracker(
-                dump_path=Path(cfg.rejection_log_path)
-                if cfg.rejection_log_path
-                else None
+                dump_path=(
+                    Path(cfg.rejection_log_path) if cfg.rejection_log_path else None
+                )
             )
 
             samples = dataset_builder.iter_dataset_entries_async(
@@ -553,8 +592,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
                 validate_outputs=cfg.validate_outputs,
                 validation_timeout=cfg.output_validation_timeout,
                 cargo_env=cargo_env,
-                require_rustfmt=cfg.dataset_hardening
-                and cfg.hardening_require_rustfmt,
+                require_rustfmt=cfg.dataset_hardening and cfg.hardening_require_rustfmt,
                 allow_explanations=cfg.enable_explanations,
                 sandbox_mode=cfg.sandbox_mode,
                 task_type_mix=cfg.task_type_mix,
@@ -752,9 +790,7 @@ async def run_pipeline(cfg: config.PipelineConfig) -> None:
             parse_success = metrics_collector.get_counter("llm_json_parse_success")
             parse_fail = metrics_collector.get_counter("llm_json_parse_failure")
             parse_fallback = metrics_collector.get_counter("llm_json_parse_fallback")
-            parse_failure_rate = (
-                parse_fail / parse_total if parse_total > 0 else 0.0
-            )
+            parse_failure_rate = parse_fail / parse_total if parse_total > 0 else 0.0
             metrics["json_parse"] = {
                 "total": int(parse_total),
                 "success": int(parse_success),
@@ -982,7 +1018,7 @@ def main():
         "--val-ratio",
         type=float,
         default=0.1,
-        help="Ratio of sources for validation set (default: 0.1 = 10%)",
+        help="Ratio of sources for validation set (default: 0.1 = 10%%)",
     )
     parser.add_argument(
         "--extra-phase2-shard",
@@ -1100,10 +1136,44 @@ def main():
         help="Rustfmt style_edition to enforce in hardening mode (defaults to hardening_min_edition)",
     )
     parser.add_argument(
+        "--rustfmt-style-edition",
+        default=None,
+        help="Rustfmt style_edition to enforce (default: 2021)",
+    )
+    parser.add_argument(
         "--max-json-parse-failure-rate",
         type=float,
         default=None,
         help="Abort run if JSON parse failure rate exceeds this fraction (default: 0.05)",
+    )
+
+    # Multi-GPU configuration
+    parser.add_argument(
+        "--multi-gpu",
+        action="store_true",
+        dest="multi_gpu_enabled",
+        default=None,
+        help="Enable multi-GPU inference (skips runtime prompt)",
+    )
+    parser.add_argument(
+        "--no-multi-gpu",
+        action="store_false",
+        dest="multi_gpu_enabled",
+        help="Disable multi-GPU inference (skips runtime prompt)",
+    )
+    parser.add_argument(
+        "--gpu-count",
+        type=int,
+        default=None,
+        dest="multi_gpu_count",
+        help="Number of GPUs to use for multi-GPU inference (default: auto-detect)",
+    )
+    parser.add_argument(
+        "--multi-gpu-model",
+        type=str,
+        default=None,
+        dest="multi_gpu_model_path",
+        help="Path to GGUF model for multi-GPU inference",
     )
 
     args = parser.parse_args()
@@ -1196,8 +1266,20 @@ def main():
         cfg.hardening_min_edition = args.hardening_min_edition
     if args.hardening_style_edition:
         cfg.hardening_style_edition = args.hardening_style_edition
+        if not args.rustfmt_style_edition:
+            cfg.rustfmt_style_edition = args.hardening_style_edition
+    if args.rustfmt_style_edition:
+        cfg.rustfmt_style_edition = args.rustfmt_style_edition
     if args.max_json_parse_failure_rate is not None:
         cfg.max_json_parse_failure_rate = args.max_json_parse_failure_rate
+
+    # Multi-GPU configuration
+    if args.multi_gpu_enabled is not None:
+        cfg.multi_gpu_enabled = args.multi_gpu_enabled
+    if args.multi_gpu_count is not None:
+        cfg.multi_gpu_count = args.multi_gpu_count
+    if args.multi_gpu_model_path is not None:
+        cfg.multi_gpu_model_path = args.multi_gpu_model_path
 
     if cfg.enable_rejection_log:
         if not cfg.rejection_log_path:

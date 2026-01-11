@@ -4,7 +4,7 @@ Configuration module for the Sigil Pipeline.
 Defines PipelineConfig dataclass with all configurable settings.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 from dataclasses import dataclass, field
@@ -41,8 +41,8 @@ class PipelineConfig:
     deduplicate_prompts: bool = True
     """Deduplicate samples by prompt text before writing (default: True)."""
 
-    validate_outputs: bool = False
-    """Validate LLM outputs by compile-checking generated code (default: False)."""
+    validate_outputs: bool = True
+    """Validate LLM outputs by compile-checking generated code (default: True)."""
 
     output_validation_timeout: int = 160
     """Timeout (seconds) for output validation cargo checks/tests (default: 160)."""
@@ -194,10 +194,11 @@ class PipelineConfig:
 
     task_type_mix: dict[str, float] = field(
         default_factory=lambda: {
-            "code_generation": 0.70,
+            "code_generation": 0.30,
+            "fill_in_middle": 0.25,
+            "error_fixing": 0.20,
             "transformations": 0.15,
-            "error_fixing": 0.10,
-            "explanations": 0.05,
+            "explanations": 0.10,
         }
     )
     """Task type distribution for Phase-2 dataset. Must sum to 1.0."""
@@ -209,8 +210,8 @@ class PipelineConfig:
     """Error injection method: 'real_compile', 'simulate', or 'both'.
     Simulated injection is ignored unless allow_simulated_error_fixing is True."""
 
-    allow_simulated_error_fixing: bool = False
-    """Allow simulated (regex-based) error injection for error-fixing tasks. Default: False."""
+    allow_simulated_error_fixing: bool = True
+    """Allow simulated (AST/regex-based) error injection for error-fixing tasks. Default: True."""
 
     error_injection_timeout: int = 120
     """Timeout (seconds) for cargo-based real error injection attempts."""
@@ -252,6 +253,23 @@ class PipelineConfig:
     capture_environment: bool = True
     """Capture and log environment fingerprint at startup. Default: True."""
 
+    # Multi-GPU LLM Inference Configuration
+    multi_gpu_enabled: bool | None = None
+    """Enable multi-GPU inference for LLM tasks. When True, spawns separate model
+    instances across available GPUs for parallel inference. When None (default),
+    prompts user at runtime. When False, uses single GPU/CPU inference."""
+
+    multi_gpu_count: int | None = None
+    """Number of GPUs to use for multi-GPU inference. If None, auto-detects
+    available CUDA devices. Ignored if multi_gpu_enabled is False."""
+
+    multi_gpu_model_path: str | None = None
+    """Path to GGUF model for multi-GPU inference. If None, uses LLAMA_CPP_MODEL_PATH
+    or SIGIL_LLM_MODEL_PATH environment variable."""
+
+    multi_gpu_batch_size: int = 8
+    """Number of inference requests to batch per GPU worker. Default: 8."""
+
     # Dataset Hardening Mode (Rust 2024 Benchmark Quality)
     # See ADR-013 and docs/runbooks/RUST_2024_TOOLCHAIN_SETUP.md for details
     dataset_hardening: bool = False
@@ -262,6 +280,9 @@ class PipelineConfig:
     hardening_min_edition: str = "2021"
     """Minimum Rust edition required for hardened samples. Default: '2021'.
     Crates with older editions will be filtered out in hardening mode."""
+
+    rustfmt_style_edition: str = "2021"
+    """Rustfmt style_edition to enforce when running rustfmt checks. Default: "2021"."""
 
     hardening_style_edition: str | None = None
     """Rustfmt style_edition to enforce in hardening mode. Defaults to hardening_min_edition."""
@@ -376,6 +397,7 @@ class PipelineConfig:
             "capture_environment": self.capture_environment,
             "dataset_hardening": self.dataset_hardening,
             "hardening_min_edition": self.hardening_min_edition,
+            "rustfmt_style_edition": self.rustfmt_style_edition,
             "hardening_style_edition": self.hardening_style_edition,
             "hardening_strict_clippy": self.hardening_strict_clippy,
             "hardening_deny_antipatterns": self.hardening_deny_antipatterns,

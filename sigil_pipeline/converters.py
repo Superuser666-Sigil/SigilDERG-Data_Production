@@ -5,7 +5,7 @@ Converts between pipeline format (prompt/gen JSONL) and other formats
 needed for fine-tuning and evaluation.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import json
