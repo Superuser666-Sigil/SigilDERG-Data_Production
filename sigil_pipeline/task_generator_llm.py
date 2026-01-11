@@ -486,7 +486,26 @@ _MULTI_GPU_INITIALIZED: bool = False
 
 
 def detect_cuda_devices() -> int:
-    """Detect number of available CUDA GPUs."""
+    """Detect number of available CUDA GPUs.
+
+    Uses multiple detection methods in order of preference:
+    1. pynvml (most reliable, direct NVIDIA library)
+    2. nvidia-smi subprocess
+    3. PyTorch CUDA
+    """
+    # Method 1: pynvml (most reliable)
+    try:
+        import pynvml
+
+        pynvml.nvmlInit()
+        count = pynvml.nvmlDeviceGetCount()
+        pynvml.nvmlShutdown()
+        if count > 0:
+            return count
+    except Exception:
+        pass
+
+    # Method 2: nvidia-smi subprocess
     try:
         import subprocess
 
@@ -502,11 +521,12 @@ def detect_cuda_devices() -> int:
                 for line in result.stdout.strip().split("\n")
                 if line.strip()
             ]
-            return len(gpus)
+            if gpus:
+                return len(gpus)
     except Exception:
         pass
 
-    # Fallback: try torch
+    # Method 3: PyTorch CUDA
     try:
         import torch
 
@@ -518,6 +538,37 @@ def detect_cuda_devices() -> int:
     return 0
 
 
+def get_gpu_info() -> list[dict]:
+    """Get detailed information about available GPUs.
+
+    Returns list of dicts with keys: index, name, memory_total_gb, memory_free_gb
+    """
+    gpus: list[dict] = []
+    try:
+        import pynvml
+
+        pynvml.nvmlInit()
+        count = pynvml.nvmlDeviceGetCount()
+        for i in range(count):
+            handle = pynvml.nvmlDeviceGetHandleByIndex(i)
+            name = pynvml.nvmlDeviceGetName(handle)
+            if isinstance(name, bytes):
+                name = name.decode("utf-8")
+            mem_info = pynvml.nvmlDeviceGetMemoryInfo(handle)
+            gpus.append(
+                {
+                    "index": i,
+                    "name": name,
+                    "memory_total_gb": round(mem_info.total / (1024**3), 1),
+                    "memory_free_gb": round(mem_info.free / (1024**3), 1),
+                }
+            )
+        pynvml.nvmlShutdown()
+    except Exception as e:
+        logger.debug(f"Could not get GPU info via pynvml: {e}")
+    return gpus
+
+
 def prompt_multi_gpu_setup() -> tuple[bool, int]:
     """Prompt user at runtime for multi-GPU configuration.
 
@@ -527,15 +578,32 @@ def prompt_multi_gpu_setup() -> tuple[bool, int]:
     gpu_count = detect_cuda_devices()
     if gpu_count <= 1:
         if gpu_count == 1:
-            logger.info("Single GPU detected, using single-GPU inference")
+            gpu_info = get_gpu_info()
+            if gpu_info:
+                logger.info(
+                    f"Single GPU detected: {gpu_info[0]['name']} "
+                    f"({gpu_info[0]['memory_total_gb']}GB), using single-GPU inference"
+                )
+            else:
+                logger.info("Single GPU detected, using single-GPU inference")
         else:
             logger.info("No GPUs detected, using CPU inference")
         return False, gpu_count
 
+    # Get detailed GPU info for display
+    gpu_info = get_gpu_info()
+
     print("\n" + "=" * 60)
     print("  Multi-GPU Inference Setup")
     print("=" * 60)
-    print(f"  Detected {gpu_count} CUDA GPUs")
+    print(f"  Detected {gpu_count} CUDA GPUs:")
+    if gpu_info:
+        for gpu in gpu_info:
+            print(
+                f"    GPU {gpu['index']}: {gpu['name']} "
+                f"({gpu['memory_free_gb']}/{gpu['memory_total_gb']} GB free)"
+            )
+    print("")
     print("  Multi-GPU mode enables parallel LLM inference across GPUs")
     print("  for significantly faster dataset generation.")
     print("=" * 60)

@@ -81,11 +81,62 @@ xcode-select --install
 
 The pipeline supports multi-GPU inference for significantly faster LLM-based task generation. When multiple NVIDIA GPUs are available, the pipeline can distribute inference across GPUs using round-robin scheduling.
 
-### GPU Requirements
+### System Requirements
 
-- NVIDIA CUDA-capable GPUs
-- NVIDIA drivers installed
+- NVIDIA CUDA-capable GPUs (Volta architecture or newer recommended)
+- NVIDIA drivers installed (version 535+ recommended)
+- CUDA Toolkit 12.x installed
 - `nvidia-smi` available in PATH (for GPU detection)
+
+### Installing with GPU/CUDA Support
+
+**Step 1: Install base package with GPU extras**
+```bash
+pip install sigil-pipeline[gpu]
+```
+
+**Step 2: Install llama-cpp-python with CUDA support**
+
+The default `llama-cpp-python` from PyPI is CPU-only. You **must** reinstall it with CUDA:
+
+```bash
+# For CUDA 12.x (recommended)
+CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+
+# For CUDA 11.x
+CMAKE_ARGS="-DGGML_CUDA=on -DCMAKE_CUDA_ARCHITECTURES=all" pip install llama-cpp-python --force-reinstall --no-cache-dir
+```
+
+**Step 3: Install PyTorch with CUDA (optional, for enhanced GPU detection)**
+```bash
+# For CUDA 12.1
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# For CUDA 11.8
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+```
+
+**Step 4: Verify CUDA installation**
+```bash
+# Check nvidia-smi
+nvidia-smi
+
+# Check llama-cpp-python CUDA support
+python -c "from llama_cpp import Llama; print('CUDA available')"
+
+# Check GPU detection
+python -c "from sigil_pipeline.task_generator_llm import detect_cuda_devices; print(f'GPUs: {detect_cuda_devices()}')"
+```
+
+### One-liner for cloud GPU instances
+
+```bash
+pip install sigil-pipeline[gpu] && \
+CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python --force-reinstall --no-cache-dir && \
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+### GPU Requirements
 
 ### Memory Requirements per GPU
 
