@@ -22,7 +22,7 @@ from typing import Optional
 
 
 def run_command(
-    cmd: list,
+    cmd: list | str,
     description: str,
     env: Optional[dict] = None,
     shell: bool = False,
