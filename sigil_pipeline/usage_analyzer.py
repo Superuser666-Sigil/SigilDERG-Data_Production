@@ -5,7 +5,7 @@ Analyzes Rust code to detect API usage patterns without requiring LLM calls.
 Uses static analysis, pattern matching, and AST traversal.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import logging

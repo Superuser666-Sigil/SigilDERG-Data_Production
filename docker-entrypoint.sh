@@ -6,7 +6,7 @@
 # Supports multiple execution modes: bash shell, test mode, help, and normal pipeline execution.
 #
 # Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-# Version: 2.5.0
+# Version: 2.6.0
 #
 # Usage:
 #   docker run sigil-pipeline [OPTIONS]     # Run pipeline with options

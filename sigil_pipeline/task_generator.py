@@ -9,16 +9,114 @@ from pathlib import Path
 from typing import Any
 
 logger = logging.getLogger(__name__)
+_TS_PARSER = None
 
 
-def generate_transformation_task(
-    code: str, patterns: dict[str, Any] | None = None
-) -> dict[str, Any] | None:
-    """
-    DISABLED: Regex transformations generate invalid Rust code.
-    Returns None to prevent generation of broken training data.
-    """
+def _get_ts_parser():
+    global _TS_PARSER
+    if _TS_PARSER is not None:
+        return _TS_PARSER
+    try:
+        import tree_sitter_rust as tst_rust
+        from tree_sitter import Language, Parser
+    except Exception:
+        return None
+    try:
+        rust_language = Language(tst_rust.language())
+        try:
+            parser = Parser(rust_language)
+        except TypeError:
+            parser = Parser()
+            parser.set_language(rust_language)
+        _TS_PARSER = parser
+        return _TS_PARSER
+    except Exception:
+        return None
+
+
+def _iter_nodes(node: Any):
+    stack = [node]
+    while stack:
+        current = stack.pop()
+        yield current
+        children = getattr(current, "children", None)
+        if children:
+            stack.extend(reversed(children))
+
+
+def _find_function_block(code: str) -> Any | None:
+    parser = _get_ts_parser()
+    if parser is None:
+        return None
+    try:
+        tree = parser.parse(code.encode("utf-8"))
+    except Exception:
+        return None
+    root = tree.root_node
+    if getattr(root, "has_error", False):
+        return None
+    for node in _iter_nodes(root):
+        if node.type != "function_item":
+            continue
+        block_node = None
+        if hasattr(node, "child_by_field_name"):
+            block_node = node.child_by_field_name("body")
+        if block_node is None:
+            block_node = next(
+                (child for child in node.children if child.type == "block"), None
+            )
+        if block_node is not None:
+            return block_node
     return None
+
+
+def _block_inner_indent(code: str, block_node: Any) -> str:
+    code_bytes = code.encode("utf-8")
+    block_bytes = code_bytes[block_node.start_byte : block_node.end_byte]
+    block_text = block_bytes.decode("utf-8", errors="ignore")
+    lines = block_text.splitlines()
+    for line in lines[1:]:
+        stripped = line.lstrip()
+        if not stripped or stripped == "}":
+            continue
+        return line[: len(line) - len(stripped)]
+    return "    "
+
+
+def _unique_ident(code: str, base: str) -> str:
+    if base not in code:
+        return base
+    idx = 1
+    while f"{base}_{idx}" in code:
+        idx += 1
+    return f"{base}_{idx}"
+
+
+def _inject_ast_borrow_conflict(code: str) -> str | None:
+    block_node = _find_function_block(code)
+    if block_node is None:
+        return None
+    code_bytes = code.encode("utf-8")
+    insert_pos = code_bytes.rfind(b"}", block_node.start_byte, block_node.end_byte)
+    if insert_pos == -1:
+        return None
+    indent = _block_inner_indent(code, block_node)
+    value_name = _unique_ident(code, "__sigil_value")
+    ref_name = _unique_ident(code, "__sigil_ref")
+    mut_ref_name = _unique_ident(code, "__sigil_mut_ref")
+    injection_lines = [
+        f"let mut {value_name} = 1;",
+        f"let {ref_name} = &{value_name};",
+        f"let {mut_ref_name} = &mut {value_name};",
+        f"let _ = {ref_name};",
+        f"let _ = {mut_ref_name};",
+    ]
+    injection = "\n" + "\n".join(
+        f"{indent}{line}" for line in injection_lines
+    ) + "\n"
+    injection_bytes = injection.encode("utf-8")
+    updated = code_bytes[:insert_pos] + injection_bytes + code_bytes[insert_pos:]
+    return updated.decode("utf-8", errors="ignore")
 
 
 def generate_error_fixing_task(
@@ -30,9 +128,9 @@ def generate_error_fixing_task(
     """Generate an error-fixing task.
 
     If method is 'simulate' we attempt simulated error injection. If
-    'real_compile' and a crate_dir is provided, attempt to run a real
-    compilation-based injection (disabled in this lightweight impl). 'both'
-    will try real first then fallback to simulated.
+    'real_compile' and a crate_dir is provided, attempt an AST-guided
+    borrow-checker injection. 'both' will try real first then fallback
+    to simulated.
     """
     method = (method or "").lower()
     if method == "real_compile":
@@ -70,12 +168,18 @@ def _inject_real_error(
     code: str, crate_dir: Path, timeout: int
 ) -> tuple[str | None, str | None, str | None]:
     """
-    Injects a temporary breakage and runs cargo check.
-    Currently disabled (returns None) until AST-based breakage is implemented
-    to ensure we don't just generate syntax errors.
+    Injects an AST-guided borrow-checker error into the function body.
     """
-    # Placeholder: Implement AST-based lifetime deletion here.
-    return None, None, None
+    _ = crate_dir
+    _ = timeout
+    broken = _inject_ast_borrow_conflict(code)
+    if not broken or broken == code:
+        return None, None, None
+    return (
+        "cannot borrow value as mutable because it is also borrowed as immutable",
+        broken,
+        "E0502",
+    )
 
 
 # --- Simulated error injection helpers (regex-based, best-effort) ---

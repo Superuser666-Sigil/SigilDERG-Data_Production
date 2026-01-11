@@ -1,8 +1,7 @@
 """
 Tests for sigil_pipeline.task_generator module.
 
-Tests task type generation including transformation tasks,
-error fixing tasks, and explanation tasks.
+Tests task type generation including error fixing tasks and explanation tasks.
 """
 
 from sigil_pipeline.task_generator import (
@@ -18,92 +17,9 @@ from sigil_pipeline.task_generator import (
     determine_task_capabilities,
     generate_error_fixing_task,
     generate_explanation_task,
-    generate_transformation_task,
     select_task_type,
     select_task_type_with_quota,
 )
-
-
-class TestGenerateTransformationTask:
-    """Test generate_transformation_task function."""
-
-    def test_sync_to_async_transformation(self):
-        """Test transforming sync function to async."""
-        code = """pub fn read_file(path: &str) -> String {
-    std::fs::read_to_string(path).unwrap()
-}"""
-        patterns = {"has_async": False, "has_io": True}
-
-        result = generate_transformation_task(code, patterns)
-
-        if result:
-            assert "async" in result["prompt"].lower() or "async" in result["gen"]
-
-    def test_no_transformation_for_async_code(self):
-        """Test that already async code doesn't get transformed."""
-        code = """pub async fn fetch_data() -> String {
-    tokio::fs::read_to_string("file.txt").await.unwrap()
-}"""
-        patterns = {"has_async": True, "has_io": True}
-
-        result = generate_transformation_task(code, patterns)
-
-        # Should not transform already async code
-        assert result is None
-
-    def test_unwrap_to_match_transformation(self):
-        """Test transforming unwrap to explicit match."""
-        code = """fn process() -> Result<String, Error> {
-    let content = std::fs::read_to_string("file.txt").unwrap();
-    Ok(content)
-}"""
-        patterns = {}
-
-        result = generate_transformation_task(code, patterns)
-
-        if result:
-            assert "unwrap" in result["prompt"].lower() or "match" in result["gen"]
-
-    def test_match_to_question_mark(self):
-        """Test transforming match to ? operator."""
-        code = """fn process() -> Result<i32, Error> {
-    let value = match compute() {
-        Ok(v) => v,
-        Err(e) => return Err(e),
-    };
-    Ok(value * 2)
-}"""
-        patterns = {}
-
-        result = generate_transformation_task(code, patterns)
-
-        if result:
-            assert "?" in result["prompt"] or "?" in result["gen"]
-
-    def test_no_transformation_simple_code(self):
-        """Test that simple code without patterns returns None."""
-        code = """fn add(a: i32, b: i32) -> i32 {
-    a + b
-}"""
-        patterns = {"has_async": False, "has_io": False}
-
-        result = generate_transformation_task(code, patterns)
-
-        # Simple math function shouldn't have transformation
-        # May or may not return None depending on other patterns
-        assert result is None or isinstance(result, dict)
-
-    def test_transformation_detects_patterns(self):
-        """Test that patterns are detected if not provided."""
-        code = """pub fn fetch() -> String {
-    std::fs::read_to_string("file.txt").unwrap()
-}"""
-
-        # Don't provide patterns, should detect them
-        result = generate_transformation_task(code, None)
-
-        # Should handle missing patterns gracefully
-        assert result is None or isinstance(result, dict)
 
 
 class TestGenerateErrorFixingTask:
@@ -321,17 +237,11 @@ class TestTaskGeneratorIntegration:
     let content = std::fs::read_to_string(path).unwrap();
     Ok(content)
 }"""
-
-        # Try transformation
-        patterns = {"has_async": False, "has_io": True}
-        transform_result = generate_transformation_task(code, patterns)
-
         # Try error fixing
         error_result = generate_error_fixing_task(code, method="simulate")
 
-        # At least one should work - verify they return expected types
-        _ = [r for r in [transform_result, error_result] if r is not None]
         # May or may not generate tasks depending on code structure
+        assert error_result is None or isinstance(error_result, dict)
 
     def test_task_output_format(self):
         """Test that generated tasks have correct format."""
@@ -357,9 +267,6 @@ class TestTaskGeneratorEdgeCases:
 
     def test_empty_code(self):
         """Test handling of empty code."""
-        result = generate_transformation_task("", {})
-        assert result is None
-
         result = generate_error_fixing_task("", method="simulate")
         # Empty code should not crash
 
@@ -368,7 +275,7 @@ class TestTaskGeneratorEdgeCases:
         malformed = "fn { let x = ; }"
 
         # Should not crash
-        result = generate_transformation_task(malformed, {})
+        result = generate_error_fixing_task(malformed, method="simulate")
         assert result is None or isinstance(result, dict)
 
     def test_unicode_in_code(self):
@@ -378,7 +285,7 @@ class TestTaskGeneratorEdgeCases:
     println!("{}", msg);
 }"""
 
-        _ = generate_transformation_task(code, {})
+        _ = generate_error_fixing_task(code, method="simulate")
         # Should handle unicode gracefully
 
     def test_very_long_code(self):
@@ -386,7 +293,7 @@ class TestTaskGeneratorEdgeCases:
         code = "fn process() {\n" + "    let x = 42;\n" * 1000 + "}"
 
         # Should not hang or crash
-        result = generate_transformation_task(code, {})
+        result = generate_error_fixing_task(code, method="simulate")
         assert result is None or isinstance(result, dict)
 
 

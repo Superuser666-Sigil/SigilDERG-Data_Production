@@ -4,7 +4,7 @@ Schema definitions for the Sigil pipeline.
 Defines the structure of training samples and output formats.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 from dataclasses import dataclass

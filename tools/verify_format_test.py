@@ -2,7 +2,7 @@
 Quick script to verify generated samples match Phase 1 format.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import argparse

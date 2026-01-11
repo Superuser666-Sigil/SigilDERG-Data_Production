@@ -9,7 +9,7 @@ Usage example:
         --target-mix code_generation=0.4,error_fixing=0.3,transformations=0.2,explanations=0.1
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 from __future__ import annotations

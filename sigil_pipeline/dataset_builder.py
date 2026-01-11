@@ -37,7 +37,16 @@ import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, AsyncIterable, AsyncIterator, Dict, Iterable, List, Optional, TextIO
+from typing import (
+    Any,
+    AsyncIterable,
+    AsyncIterator,
+    Dict,
+    Iterable,
+    List,
+    Optional,
+    TextIO,
+)
 
 from .format_validator import FormatValidator
 from . import output_validator
@@ -46,19 +55,20 @@ from .task_generator_llm import (
     generate_bug_fixing_task,
     generate_code_generation_task,
     generate_documentation_task,
+    generate_fim_task,
     generate_refactoring_task,
 )
-
 
 
 # Default mixture of task types.  The values represent relative weights.  They
 # need not sum to one.  If all values are zero or the dictionary is empty the
 # builder will always fall back to ``code_generation``.
 DEFAULT_TASK_TYPE_MIX: Dict[str, float] = {
-    "code_generation": 0.70,
+    "code_generation": 0.30,
+    "fill_in_middle": 0.25,
+    "error_fixing": 0.20,
     "transformations": 0.15,
-    "error_fixing": 0.10,
-    "explanations": 0.05,
+    "explanations": 0.10,
 }
 
 _TASK_TYPE_ALIASES = {
@@ -72,6 +82,9 @@ _TASK_TYPE_ALIASES = {
     "explanation": "explanations",
     "explanations": "explanations",
     "code_generation": "code_generation",
+    "fill_in_middle": "fill_in_middle",
+    "fim": "fill_in_middle",
+    "infill": "fill_in_middle",
 }
 
 
@@ -257,12 +270,17 @@ def _available_task_types(
     )
     if chunk_type == "function":
         available.add("code_generation")
+        available.add("fill_in_middle")
         available.add("transformations")
         if allow_error_fixing:
             available.add("error_fixing")
         if allow_explanations:
             available.add("explanations")
-    elif chunk_type in ("impl_block", "module", "struct", "enum", "trait", "type"):
+    elif chunk_type in ("impl_block", "module"):
+        # impl_blocks and modules can have explanations
+        if allow_explanations:
+            available.add("explanations")
+    elif chunk_type in ("struct", "enum", "trait", "type"):
         if allow_explanations:
             available.add("explanations")
     else:
@@ -272,9 +290,7 @@ def _available_task_types(
 
 
 _EXPLANATION_BULLET_RE = re.compile(r"^\s*(?:[-*•]|\d+[.)])\s+")
-_EXPLANATION_JOKE_START_RE = re.compile(
-    r"^\s*(?:what a|wow|haha|lol)\b", re.IGNORECASE
-)
+_EXPLANATION_JOKE_START_RE = re.compile(r"^\s*(?:what a|wow|haha|lol)\b", re.IGNORECASE)
 _EXPLANATION_PREAMBLE_RE = re.compile(
     r"^\s*(?:here\s+(?:is|are)|in\s+summary|summary:)\b", re.IGNORECASE
 )
@@ -315,7 +331,7 @@ def _code_mentions_nightly(code: str | None) -> bool:
         return True
     if re.search(r"#\s*\[\s*feature\b", code):
         return True
-    if "feature(" in code or "feature =" in code or "feature=\"" in code:
+    if "feature(" in code or "feature =" in code or 'feature="' in code:
         return True
     return False
 
@@ -466,13 +482,18 @@ async def enforce_sample_gates_async(
             key = _prompt_key(sample)
             if not key:
                 if strict_validation:
-                    raise ValueError("Strict validation failed: missing prompt for dedup")
+                    raise ValueError(
+                        "Strict validation failed: missing prompt for dedup"
+                    )
                 if rejection_tracker:
                     rejection_tracker.record(
                         "sample_prompt_missing_for_dedup",
                         sample,
                         sample.get("_task_type"),
-                        payload={"prompt": sample.get("prompt"), "gen": sample.get("gen")},
+                        payload={
+                            "prompt": sample.get("prompt"),
+                            "gen": sample.get("gen"),
+                        },
                     )
                 continue
             if key in prompt_cache:
@@ -481,7 +502,10 @@ async def enforce_sample_gates_async(
                         "sample_duplicate_prompt",
                         sample,
                         sample.get("_task_type"),
-                        payload={"prompt": sample.get("prompt"), "gen": sample.get("gen")},
+                        payload={
+                            "prompt": sample.get("prompt"),
+                            "gen": sample.get("gen"),
+                        },
                     )
                 if strict_validation:
                     location = sample.get("_file_path") or "<unknown>"
@@ -629,7 +653,18 @@ async def _process_file(
         if not candidate:
             reject("codegen_llm_empty", payload=llm_payload(llm_result))
             return None
-        extracted = output_validator.extract_function_item(candidate, original_code=code)
+        # Apply post-processing to fix common LLM issues
+        candidate = output_validator.postprocess_llm_output(candidate)
+        # Early rejection for placeholder code (before expensive cargo check)
+        if output_validator.is_placeholder_code(candidate):
+            reject(
+                "codegen_placeholder_code",
+                payload=llm_payload(llm_result, candidate=candidate),
+            )
+            return None
+        extracted = output_validator.extract_function_item(
+            candidate, original_code=code
+        )
         if extracted:
             candidate = extracted
         if not output_validator.has_single_top_level_item(
@@ -674,6 +709,15 @@ async def _process_file(
                     payload=llm_payload(llm_result, candidate=candidate),
                 )
                 return None
+        # Check for common hallucination patterns
+        hallucinations = output_validator.detect_hallucinations(candidate)
+        if hallucinations:
+            reject(
+                "codegen_hallucination_detected",
+                ";".join(hallucinations),
+                payload=llm_payload(llm_result, candidate=candidate),
+            )
+            return None
         llm_result["gen"] = candidate
         result = llm_result
 
@@ -689,7 +733,18 @@ async def _process_file(
         if not candidate:
             reject("transform_llm_empty", payload=llm_payload(llm_result))
             return None
-        extracted = output_validator.extract_function_item(candidate, original_code=code)
+        # Apply post-processing to fix common LLM issues
+        candidate = output_validator.postprocess_llm_output(candidate)
+        # Early rejection for placeholder code (before expensive cargo check)
+        if output_validator.is_placeholder_code(candidate):
+            reject(
+                "transform_placeholder_code",
+                payload=llm_payload(llm_result, candidate=candidate),
+            )
+            return None
+        extracted = output_validator.extract_function_item(
+            candidate, original_code=code
+        )
         if extracted:
             candidate = extracted
         if not output_validator.has_single_top_level_item(
@@ -736,6 +791,22 @@ async def _process_file(
                     payload=llm_payload(llm_result, candidate=candidate),
                 )
                 return None
+        # Reject identity transformations (refactor must actually change something)
+        if candidate.strip() == code.strip():
+            reject(
+                "transform_no_change",
+                payload=llm_payload(llm_result, candidate=candidate),
+            )
+            return None
+        # Check for common hallucination patterns
+        hallucinations = output_validator.detect_hallucinations(candidate)
+        if hallucinations:
+            reject(
+                "transform_hallucination_detected",
+                ";".join(hallucinations),
+                payload=llm_payload(llm_result, candidate=candidate),
+            )
+            return None
         llm_result["gen"] = candidate
         result = llm_result
 
@@ -791,7 +862,20 @@ async def _process_file(
                 payload=llm_payload(llm_result, broken_code=broken_code),
             )
             return None
-        extracted = output_validator.extract_function_item(candidate, original_code=code)
+        # Apply post-processing to fix common LLM issues
+        candidate = output_validator.postprocess_llm_output(candidate)
+        # Early rejection for placeholder code (before expensive cargo check)
+        if output_validator.is_placeholder_code(candidate):
+            reject(
+                "error_fix_placeholder_code",
+                payload=llm_payload(
+                    llm_result, candidate=candidate, broken_code=broken_code
+                ),
+            )
+            return None
+        extracted = output_validator.extract_function_item(
+            candidate, original_code=code
+        )
         if extracted:
             candidate = extracted
         if not output_validator.has_single_top_level_item(
@@ -849,9 +933,38 @@ async def _process_file(
                     ),
                 )
                 return None
+        # Check for common hallucination patterns
+        hallucinations = output_validator.detect_hallucinations(candidate)
+        if hallucinations:
+            reject(
+                "error_fix_hallucination_detected",
+                ";".join(hallucinations),
+                payload=llm_payload(
+                    llm_result, candidate=candidate, broken_code=broken_code
+                ),
+            )
+            return None
         llm_result["gen"] = candidate
         llm_result["_broken_code"] = broken_code
         result = llm_result
+
+    elif task_type == "fill_in_middle":
+        if chunk_type != "function":
+            reject("fim_invalid_chunk_type", str(chunk_type))
+            return None
+        # FIM tasks don't use LLM - they're deterministic extractions
+        fim_result = await generate_fim_task(code, context)
+        if not fim_result:
+            reject("fim_extraction_failed")
+            return None
+        # Validate the FIM structure
+        prompt = fim_result.get("prompt", "")
+        gen = fim_result.get("gen", "")
+        if not prompt or not gen:
+            reject("fim_empty_result", payload={"prompt": prompt, "gen": gen})
+            return None
+        # FIM doesn't need cargo check - the code is already known to compile
+        result = fim_result
 
     elif task_type == "explanations":
         if not _explanation_code_is_substantial(code):
@@ -887,7 +1000,10 @@ async def _process_file(
         result["_file_path"] = file_path
     if file_info.get("crate_name"):
         result["_source_crate"] = file_info["crate_name"]
-    if file_info.get("start_line") is not None and file_info.get("end_line") is not None:
+    if (
+        file_info.get("start_line") is not None
+        and file_info.get("end_line") is not None
+    ):
         result["_start_line"] = file_info["start_line"]
         result["_end_line"] = file_info["end_line"]
     if chunk_type:
@@ -1031,7 +1147,10 @@ async def iter_dataset_entries_async(
                 )
             continue
         # Enforce line and character limits.
-        if prompt.count("\n") > effective_max_lines or len(prompt) > effective_max_chars:
+        if (
+            prompt.count("\n") > effective_max_lines
+            or len(prompt) > effective_max_chars
+        ):
             if rejection_tracker:
                 rejection_tracker.record(
                     "sample_prompt_too_long",
@@ -1061,7 +1180,10 @@ async def iter_dataset_entries_async(
                         "sample_format_invalid",
                         sample,
                         sample.get("_task_type"),
-                        payload={"prompt": sample.get("prompt"), "gen": sample.get("gen")},
+                        payload={
+                            "prompt": sample.get("prompt"),
+                            "gen": sample.get("gen"),
+                        },
                     )
                 continue
         yield sample

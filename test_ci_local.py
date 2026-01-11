@@ -6,7 +6,7 @@ Runs the same checks as CI locally without needing Docker or GitHub Actions.
 This is faster than using `act` for quick validation.
 
 Copyright (c) 2025 Dave Tofflemire, SigilDERG Project
-Version: 2.5.0
+Version: 2.6.0
 """
 
 import subprocess

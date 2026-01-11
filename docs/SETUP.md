@@ -77,6 +77,117 @@ sudo dnf install gcc
 xcode-select --install
 ```
 
+## Multi-GPU Inference (Optional)
+
+The pipeline supports multi-GPU inference for significantly faster LLM-based task generation. When multiple NVIDIA GPUs are available, the pipeline can distribute inference across GPUs using round-robin scheduling.
+
+### System Requirements
+
+- NVIDIA CUDA-capable GPUs (Volta architecture or newer recommended)
+- NVIDIA drivers installed (version 535+ recommended)
+- CUDA Toolkit 12.x installed
+- `nvidia-smi` available in PATH (for GPU detection)
+
+### Installing with GPU/CUDA Support
+
+**Step 1: Install base package with GPU extras**
+```bash
+pip install sigil-pipeline[gpu]
+```
+
+**Step 2: Install llama-cpp-python with CUDA support**
+
+The default `llama-cpp-python` from PyPI is CPU-only. You **must** reinstall it with CUDA:
+
+```bash
+# For CUDA 12.x (recommended)
+CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python --force-reinstall --no-cache-dir
+
+# For CUDA 11.x
+CMAKE_ARGS="-DGGML_CUDA=on -DCMAKE_CUDA_ARCHITECTURES=all" pip install llama-cpp-python --force-reinstall --no-cache-dir
+```
+
+**Step 3: Install PyTorch with CUDA (optional, for enhanced GPU detection)**
+```bash
+# For CUDA 12.1
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+
+# For CUDA 11.8
+pip install torch --index-url https://download.pytorch.org/whl/cu118
+```
+
+**Step 4: Verify CUDA installation**
+```bash
+# Check nvidia-smi
+nvidia-smi
+
+# Check llama-cpp-python CUDA support
+python -c "from llama_cpp import Llama; print('CUDA available')"
+
+# Check GPU detection
+python -c "from sigil_pipeline.task_generator_llm import detect_cuda_devices; print(f'GPUs: {detect_cuda_devices()}')"
+```
+
+### One-liner for cloud GPU instances
+
+```bash
+pip install sigil-pipeline[gpu] && \
+CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python --force-reinstall --no-cache-dir && \
+pip install torch --index-url https://download.pytorch.org/whl/cu121
+```
+
+### GPU Requirements
+
+### Memory Requirements per GPU
+
+For the [Strand-Rust-Coder-14B-v1](https://huggingface.co/Fortytwo-Network/Strand-Rust-Coder-14B-v1-GGUF) model:
+
+| Quantization | VRAM per GPU |
+|-------------|--------------|
+| BF16 (16-bit) | 29.5 GB |
+| Q8_0 (8-bit) | 15.7 GB |
+| Q6_K (6-bit) | 12.1 GB |
+| Q5_K_M (5-bit) | 10.5 GB |
+| Q4_K_M (4-bit) | 8.99 GB |
+
+### Configuration
+
+**Runtime prompt (default):**
+By default, the pipeline will prompt you at startup to enable multi-GPU inference if multiple GPUs are detected.
+
+**CLI flags:**
+```bash
+# Enable multi-GPU (skip prompt)
+sigil-pipeline --multi-gpu --gpu-count 8
+
+# Disable multi-GPU (skip prompt)
+sigil-pipeline --no-multi-gpu
+
+# Specify model path for multi-GPU
+sigil-pipeline --multi-gpu --multi-gpu-model /path/to/model.gguf
+```
+
+**Configuration file:**
+```yaml
+multi_gpu_enabled: true
+multi_gpu_count: 8
+multi_gpu_model_path: /path/to/model.gguf
+multi_gpu_batch_size: 8
+```
+
+**Environment variables:**
+```bash
+export LLAMA_CPP_MODEL_PATH=/path/to/model.gguf
+export LLAMA_CPP_N_CTX=8192
+```
+
+### Performance
+
+With 8× V100 32GB GPUs:
+- ~8× throughput compared to single GPU
+- Process 800+ samples/hour
+- Cost-effective at ~$1.20/hr (spot pricing)
+
 ## Required Cargo Subcommands
 
 The pipeline uses several cargo subcommands for static analysis. Install them with:
